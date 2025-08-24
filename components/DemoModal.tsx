@@ -34,7 +34,7 @@ const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, project }) => {
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
                 >
-                    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" />
+                    <div className="fixed inset-0 bg-black/70" />
                 </Transition.Child>
 
                 <div className="fixed inset-0 overflow-y-auto">
@@ -48,14 +48,14 @@ const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, project }) => {
                             leaveFrom="opacity-100 scale-100"
                             leaveTo="opacity-0 scale-95"
                         >
-                            <Dialog.Panel className="w-full max-w-6xl h-[80vh] transform overflow-hidden rounded-2xl bg-white p-2 text-left align-middle shadow-xl transition-all flex flex-col">
-                                <div className="flex items-center justify-between p-4 border-b">
-                                    <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-gray-900">
+                            <Dialog.Panel className="w-full max-w-6xl h-[80vh] transform overflow-hidden rounded-lg bg-white p-2 text-left align-middle shadow-xl transition-all flex flex-col">
+                                <div className="flex items-center justify-between p-4 border-b border-slate-200">
+                                    <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-slate-900">
                                         {project ? t(project.titleKey) : 'Demo'}
                                     </Dialog.Title>
                                     <button
                                         type="button"
-                                        className="inline-flex justify-center rounded-md p-2 text-sm font-medium text-gray-500 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
+                                        className="inline-flex justify-center rounded-md p-2 text-sm font-medium text-slate-500 hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2"
                                         onClick={onClose}
                                     >
                                         <i className="fas fa-times text-xl"></i>
@@ -64,13 +64,13 @@ const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, project }) => {
                                 <div className="mt-2 flex-grow relative">
                                     {isLoading && (
                                         <div className="absolute inset-0 flex items-center justify-center bg-white z-10">
-                                            <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-indigo-500"></div>
+                                            <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-slate-500"></div>
                                         </div>
                                     )}
                                     <iframe
                                         src={project?.demoUrl}
                                         title={project ? t(project.titleKey) : 'Demo'}
-                                        className={`w-full h-full border-0 rounded-b-lg ${isLoading ? 'opacity-0' : 'opacity-100'}`}
+                                        className={`w-full h-full border-0 rounded-b-md ${isLoading ? 'opacity-0' : 'opacity-100'}`}
                                         onLoad={() => setIsLoading(false)}
                                     />
                                 </div>

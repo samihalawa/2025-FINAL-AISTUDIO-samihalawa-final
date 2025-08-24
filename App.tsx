@@ -14,7 +14,7 @@ import Footer from './components/Footer';
 const App: React.FC = () => {
     return (
         <LanguageProvider>
-            <div className="bg-gray-50 text-gray-800">
+            <div className="bg-white text-slate-800">
                 <Header />
                 <main id="main-content">
                     <Hero />
@@ -28,7 +28,7 @@ const App: React.FC = () => {
                 </main>
                 <Footer />
                 <a href="https://wa.me/34679794037"
-                   className="whatsapp-float fixed bottom-6 right-6 bg-green-500 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg hover:shadow-xl transition-transform transform hover:scale-110 z-40"
+                   className="whatsapp-float fixed bottom-6 right-6 bg-slate-900 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg hover:bg-slate-800 transition-all transform hover:scale-110 z-40"
                    target="_blank"
                    rel="noopener noreferrer"
                    aria-label="Contact via WhatsApp">

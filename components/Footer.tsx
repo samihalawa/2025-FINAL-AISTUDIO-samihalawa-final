@@ -11,17 +11,17 @@ const Footer: React.FC = () => {
     ];
 
     return (
-        <footer role="contentinfo" className="bg-gray-100 border-t border-gray-200 py-8">
-            <div className="container mx-auto px-6 text-center text-gray-600">
+        <footer role="contentinfo" className="bg-slate-50 border-t border-slate-200 py-8">
+            <div className="container mx-auto px-6 text-center text-slate-600">
                 <div className="flex justify-center space-x-6 mb-6">
                     {socialLinks.map(link => (
-                        <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-indigo-600 transition-colors duration-300" aria-label={link.label}>
+                        <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-slate-900 transition-colors duration-300" aria-label={link.label}>
                             <i className={`${link.icon} text-2xl`}></i>
                         </a>
                     ))}
                 </div>
                 <p className="text-sm">{t('footer.copyright')}</p>
-                <p className="text-xs text-gray-500 mt-4 max-w-2xl mx-auto">{t('footer.disclaimer')}</p>
+                <p className="text-xs text-slate-500 mt-4 max-w-2xl mx-auto">{t('footer.disclaimer')}</p>
             </div>
         </footer>
     );

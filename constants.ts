@@ -22,11 +22,11 @@ export const TECHNICAL_SKILLS: Skill[] = [
 ];
 
 export const TOOLS: Tool[] = [
-    { nameKey: 'skills.toolReactNext' },
-    { nameKey: 'skills.toolNodeExpress' },
-    { nameKey: 'skills.toolDjangoFlask' },
-    { nameKey: 'skills.toolTailwindSass' },
-    { nameKey: 'skills.toolDockerK8s' },
+    { nameKey: 'skills.toolReactNext', icon: 'fab fa-react' },
+    { nameKey: 'skills.toolNodeExpress', icon: 'fab fa-node-js' },
+    { nameKey: 'skills.toolDjangoFlask', icon: 'fab fa-python' },
+    { nameKey: 'skills.toolTailwindSass', icon: 'fab fa-sass' },
+    { nameKey: 'skills.toolDockerK8s', icon: 'fas fa-server' },
 ];
 
 export const PROJECTS: Project[] = [
@@ -39,7 +39,6 @@ export const PROJECTS: Project[] = [
         featuresTitleKey: 'projects.autoclient.featuresTitle',
         features: ['projects.autoclient.feature1', 'projects.autoclient.feature2', 'projects.autoclient.feature3', 'projects.autoclient.feature4'],
         summaryKey: 'projects.autoclient.summary',
-        color: 'indigo',
         hasChat: true
     },
     {
@@ -51,7 +50,6 @@ export const PROJECTS: Project[] = [
         featuresTitleKey: 'projects.spreadsheet.featuresTitle',
         features: ['projects.spreadsheet.feature1', 'projects.spreadsheet.feature2', 'projects.spreadsheet.feature3', 'projects.spreadsheet.feature4'],
         summaryKey: 'projects.spreadsheet.summary',
-        color: 'purple',
     },
     {
         id: 'cryptoagent',
@@ -62,7 +60,6 @@ export const PROJECTS: Project[] = [
         featuresTitleKey: 'projects.cryptoagent.featuresTitle',
         features: ['projects.cryptoagent.feature1', 'projects.cryptoagent.feature2', 'projects.cryptoagent.feature3', 'projects.cryptoagent.feature4'],
         summaryKey: 'projects.cryptoagent.summary',
-        color: 'yellow',
         hasChat: true
     },
     {
@@ -74,7 +71,6 @@ export const PROJECTS: Project[] = [
         featuresTitleKey: 'projects.banking.featuresTitle',
         features: ['projects.banking.feature1', 'projects.banking.feature2', 'projects.banking.feature3', 'projects.banking.feature4'],
         summaryKey: 'projects.banking.summary',
-        color: 'blue',
     },
     {
         id: 'apollomedical',
@@ -85,7 +81,6 @@ export const PROJECTS: Project[] = [
         featuresTitleKey: 'projects.apollomedical.featuresTitle',
         features: ['projects.apollomedical.feature1', 'projects.apollomedical.feature2', 'projects.apollomedical.feature3', 'projects.apollomedical.feature4'],
         summaryKey: 'projects.apollomedical.summary',
-        color: 'teal',
     },
     {
         id: 'autosite',
@@ -96,18 +91,17 @@ export const PROJECTS: Project[] = [
         featuresTitleKey: 'projects.autosite.featuresTitle',
         features: ['projects.autosite.feature1', 'projects.autosite.feature2', 'projects.autosite.feature3'],
         summaryKey: 'projects.autosite.summary',
-        color: 'cyan',
     }
 ];
 
 export const ADDITIONAL_PROJECTS: AdditionalProject[] = [
-    { icon: 'fas fa-bug-slash text-purple-500 mr-3', titleKey: 'additionalProjects.vuda.title', descriptionKey: 'additionalProjects.vuda.description' },
-    { icon: 'fas fa-video text-red-500 mr-3', titleKey: 'additionalProjects.autovideo.title', descriptionKey: 'additionalProjects.autovideo.description' },
-    { icon: 'fas fa-hospital-user text-blue-500 mr-3', titleKey: 'additionalProjects.apollomedical.title', descriptionKey: 'additionalProjects.apollomedical.description' },
-    { icon: 'fas fa-user-md text-pink-500 mr-3', titleKey: 'additionalProjects.autodetectsurgery.title', descriptionKey: 'additionalProjects.autodetectsurgery.description' },
-    { icon: 'fas fa-desktop text-green-500 mr-3', titleKey: 'additionalProjects.autocomputer.title', descriptionKey: 'additionalProjects.autocomputer.description' },
-    { icon: 'fas fa-globe text-indigo-500 mr-3', titleKey: 'additionalProjects.autobrowser.title', descriptionKey: 'additionalProjects.autobrowser.description' },
-    { icon: 'fas fa-user-tie text-yellow-500 mr-3', titleKey: 'additionalProjects.autoclient.title', descriptionKey: 'additionalProjects.autoclient.description' }
+    { icon: 'fas fa-bug-slash text-slate-500 mr-3', titleKey: 'additionalProjects.vuda.title', descriptionKey: 'additionalProjects.vuda.description' },
+    { icon: 'fas fa-video text-slate-500 mr-3', titleKey: 'additionalProjects.autovideo.title', descriptionKey: 'additionalProjects.autovideo.description' },
+    { icon: 'fas fa-hospital-user text-slate-500 mr-3', titleKey: 'additionalProjects.apollomedical.title', descriptionKey: 'additionalProjects.apollomedical.description' },
+    { icon: 'fas fa-user-md text-slate-500 mr-3', titleKey: 'additionalProjects.autodetectsurgery.title', descriptionKey: 'additionalProjects.autodetectsurgery.description' },
+    { icon: 'fas fa-desktop text-slate-500 mr-3', titleKey: 'additionalProjects.autocomputer.title', descriptionKey: 'additionalProjects.autocomputer.description' },
+    { icon: 'fas fa-globe text-slate-500 mr-3', titleKey: 'additionalProjects.autobrowser.title', descriptionKey: 'additionalProjects.autobrowser.description' },
+    { icon: 'fas fa-user-tie text-slate-500 mr-3', titleKey: 'additionalProjects.autoclient.title', descriptionKey: 'additionalProjects.autoclient.description' }
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
@@ -159,8 +153,8 @@ export const EXPERIENCE: Experience[] = [
 ];
 
 export const CONTACT_INFO: ContactInfo[] = [
-    { icon: 'fas fa-envelope text-indigo-600', labelKey: 'contact.emailLabel', value: 'sami@samihalawa.com', href: 'mailto:sami@samihalawa.com' },
-    { icon: 'fas fa-phone text-indigo-600', labelKey: 'contact.phoneLabel', value: '+34 679 794 037', href: 'tel:+34679794037' },
-    { icon: 'fas fa-map-marker-alt text-indigo-600', labelKey: 'contact.locationLabel', value: 'Madrid, Spain', href: 'https://maps.google.com/?q=Madrid,Spain' },
-    { icon: 'fab fa-linkedin text-indigo-600', labelKey: 'contact.linkedinLabel', value: 'linkedin.com/in/samihalawa', href: 'https://www.linkedin.com/in/samihalawa/' }
+    { icon: 'fas fa-envelope text-slate-500', labelKey: 'contact.emailLabel', value: 'sami@samihalawa.com', href: 'mailto:sami@samihalawa.com' },
+    { icon: 'fas fa-phone text-slate-500', labelKey: 'contact.phoneLabel', value: '+34 679 794 037', href: 'tel:+34679794037' },
+    { icon: 'fas fa-map-marker-alt text-slate-500', labelKey: 'contact.locationLabel', value: 'Madrid, Spain', href: 'https://maps.google.com/?q=Madrid,Spain' },
+    { icon: 'fab fa-linkedin text-slate-500', labelKey: 'contact.linkedinLabel', value: 'linkedin.com/in/samihalawa', href: 'https://www.linkedin.com/in/samihalawa/' }
 ];

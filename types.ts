@@ -17,6 +17,7 @@ export interface Skill {
 
 export interface Tool {
     nameKey: TranslationKey;
+    icon: string;
 }
 
 export interface Project {
@@ -29,7 +30,6 @@ export interface Project {
     featuresTitleKey: TranslationKey;
     features: TranslationKey[];
     summaryKey: TranslationKey;
-    color: string;
     hasChat?: boolean;
 }
 
