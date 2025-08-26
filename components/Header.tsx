@@ -11,22 +11,42 @@ const Header: React.FC = () => {
     useEffect(() => {
         const handleScroll = () => {
             const sections = NAV_LINKS.map(link => document.querySelector(link.href));
-            const scrollPosition = window.scrollY + 150;
+            const scrollPosition = window.scrollY + 100; // Offset for highlighting
 
+            // Handle being at the top of the page
+            if (window.scrollY < 200) {
+                setActiveSection('');
+                return;
+            }
+
+            // Handle being at the bottom
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 50) {
+                 setActiveSection('contact');
+                 return;
+            }
+
+            // Find and set active section
             for (const section of sections) {
                 if (section && scrollPosition >= (section as HTMLElement).offsetTop && scrollPosition < (section as HTMLElement).offsetTop + section.clientHeight) {
                     setActiveSection(section.id);
                     return;
                 }
             }
-            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 50) {
-                 setActiveSection('contact');
-            }
         };
 
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+    
+    const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+        // Clean up the URL hash
+        window.history.pushState("", document.title, window.location.pathname + window.location.search);
+    };
 
     const LanguageSelector: React.FC<{mobile?: boolean}> = ({ mobile = false }) => (
         <Listbox value={language} onChange={setLanguage}>
@@ -76,7 +96,7 @@ const Header: React.FC = () => {
         <header role="banner" className="sticky top-0 w-full bg-white/95 backdrop-blur-sm border-b border-slate-200 z-50">
             <div className="container mx-auto px-6 py-3">
                 <div className="flex items-center justify-between">
-                    <a href="#" className="text-2xl font-bold text-slate-900">Sami Halawa</a>
+                    <a href="#" onClick={scrollToTop} className="text-2xl font-bold text-slate-900">Sami Halawa</a>
                     
                     <nav aria-label="Primary navigation" className="hidden md:flex space-x-1 items-center">
                         {NAV_LINKS.map(link => (

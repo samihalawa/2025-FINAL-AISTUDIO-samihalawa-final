@@ -1,10 +1,12 @@
-import { NavLink, Language, Skill, Tool, Project, Testimonial, Experience, ContactInfo, AdditionalProject } from './types';
+import { NavLink, Language, Skill, Tool, Project, Testimonial, Experience, ContactInfo, AdditionalProject, TrainingProgram, Partner } from './types';
 
 export const NAV_LINKS: NavLink[] = [
     { href: '#about', key: 'nav.about' },
-    { href: '#skills', key: 'nav.skills' },
+    { href: '#corporate', key: 'nav.corporate' },
     { href: '#projects', key: 'nav.projects' },
+    { href: '#skills', key: 'nav.skills' },
     { href: '#experience', key: 'nav.experience' },
+    { href: '#blog', key: 'nav.blog' },
     { href: '#contact', key: 'nav.contact' },
 ];
 
@@ -13,6 +15,38 @@ export const LANGUAGES: Language[] = [
     { code: 'es', name: 'Español' },
     { code: 'fr', name: 'Français' },
     { code: 'zh', name: '中文' },
+];
+
+export const BLOG_POSTS: string[] = [
+    'why-ai-is-the-future',
+    'getting-started-with-gemini',
+];
+
+export const TRAINING_PROGRAMS: TrainingProgram[] = [
+    {
+        icon: 'fas fa-chalkboard-teacher',
+        titleKey: 'corporate.program1.title',
+        descriptionKey: 'corporate.program1.description',
+        audienceKey: 'corporate.program1.audience'
+    },
+    {
+        icon: 'fas fa-cogs',
+        titleKey: 'corporate.program2.title',
+        descriptionKey: 'corporate.program2.description',
+        audienceKey: 'corporate.program2.audience'
+    },
+    {
+        icon: 'fas fa-robot',
+        titleKey: 'corporate.program3.title',
+        descriptionKey: 'corporate.program3.description',
+        audienceKey: 'corporate.program3.audience'
+    }
+];
+
+export const PARTNERS: Partner[] = [
+    { icon: 'fab fa-aws', name: 'AWS' },
+    { icon: 'fab fa-google', name: 'Google Cloud' },
+    { icon: 'fab fa-microsoft', name: 'Microsoft Azure' }
 ];
 
 export const TECHNICAL_SKILLS: Skill[] = [

@@ -46,7 +46,7 @@ const Contact: React.FC = () => {
     );
 
     return (
-        <section id="contact" className="py-20 bg-white" aria-label="Contact">
+        <section id="contact" className="py-20 bg-white scroll-mt-20" aria-label="Contact">
             <div className="container mx-auto px-6">
                 <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-slate-900">{t('contact.title')}</h2>
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">

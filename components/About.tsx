@@ -13,7 +13,7 @@ const About: React.FC = () => {
     const languages = ['about.languageEn' as const, 'about.languageEs' as const, 'about.languageFr' as const, 'about.languageZh' as const];
 
     return (
-        <section id="about" className="py-20 bg-slate-50" aria-label="About Sami Halawa">
+        <section id="about" className="py-20 bg-slate-50 scroll-mt-20" aria-label="About Sami Halawa">
             <div className="container mx-auto px-6">
                 <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-slate-900">{t('about.title')}</h2>
                 <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16">

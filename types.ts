@@ -59,3 +59,24 @@ export interface ContactInfo {
     value: string;
     href: string;
 }
+
+export interface TrainingProgram {
+    icon: string;
+    titleKey: TranslationKey;
+    descriptionKey: TranslationKey;
+    audienceKey: TranslationKey;
+}
+
+export interface Partner {
+    icon: string;
+    name: string;
+}
+
+export interface Article {
+    slug: string;
+    title: string;
+    date: string;
+    summary: string;
+    author: string;
+    content: string;
+}

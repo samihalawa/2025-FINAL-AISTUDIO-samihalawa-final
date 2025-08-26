@@ -3,11 +3,13 @@ import { LanguageProvider } from './i18n/LanguageContext';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
+import Corporate from './components/Corporate';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import AdditionalProjects from './components/AdditionalProjects';
 import Testimonials from './components/Testimonials';
 import Experience from './components/Experience';
+import Blog from './components/Blog';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -19,11 +21,13 @@ const App: React.FC = () => {
                 <main id="main-content">
                     <Hero />
                     <About />
+                    <Corporate />
                     <Skills />
                     <Projects />
                     <AdditionalProjects />
                     <Testimonials />
                     <Experience />
+                    <Blog />
                     <Contact />
                 </main>
                 <Footer />

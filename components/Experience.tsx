@@ -5,7 +5,7 @@ import { EXPERIENCE } from '../constants';
 const Experience: React.FC = () => {
     const { t } = useTranslation();
     return (
-        <section id="experience" className="py-20 bg-slate-50" aria-label="Professional Experience">
+        <section id="experience" className="py-20 bg-slate-50 scroll-mt-20" aria-label="Professional Experience">
             <div className="container mx-auto px-6">
                 <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-slate-900">{t('experience.title')}</h2>
                 <div className="relative max-w-3xl mx-auto">
