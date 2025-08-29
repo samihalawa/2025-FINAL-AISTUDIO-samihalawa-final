@@ -20,6 +20,19 @@ export const LANGUAGES: Language[] = [
 export const BLOG_POSTS: string[] = [
     'why-ai-is-the-future',
     'getting-started-with-gemini',
+    '2025-guide-ai-agent-orchestration',
+    'deep-dive-attio-api',
+    'maximizing-learning-with-ai',
+    'building-rag-with-gemini-langchain',
+    'finetuning-vs-prompt-engineering',
+    'ethics-of-ai-bias-fairness',
+    'deploying-ml-models-docker-kubernetes',
+    'multimodal-ai-explained',
+    'ai-agents-automating-workflows',
+    'react-server-vs-client-components',
+    'securing-llm-powered-applications',
+    'rise-of-ai-first-development',
+    'ai-powered-code-generation-debugging',
 ];
 
 export const TRAINING_PROGRAMS: TrainingProgram[] = [

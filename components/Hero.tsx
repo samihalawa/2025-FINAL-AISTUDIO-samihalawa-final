@@ -3,6 +3,19 @@ import { useTranslation } from '../i18n/LanguageContext';
 
 const Hero: React.FC = () => {
     const { t } = useTranslation();
+
+    const handleScrollLink = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        e.preventDefault();
+        const targetElement = document.querySelector(href);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+            // Safely update the URL hash without creating a new history entry
+            if (history.replaceState) {
+                history.replaceState(null, '', href);
+            }
+        }
+    };
+
     return (
         <section className="py-20 md:py-32 bg-white text-center">
             <div className="container mx-auto px-6">
@@ -28,7 +41,7 @@ const Hero: React.FC = () => {
                         >
                             {t('hero.contactButton')}
                         </button>
-                        <a href="#projects" className="inline-block bg-white text-slate-700 px-8 py-3 rounded-md text-lg font-semibold hover:bg-slate-100 transition-colors duration-300 border border-slate-300 shadow-sm">
+                        <a href="#projects" onClick={(e) => handleScrollLink(e, '#projects')} className="inline-block bg-white text-slate-700 px-8 py-3 rounded-md text-lg font-semibold hover:bg-slate-100 transition-colors duration-300 border border-slate-300 shadow-sm">
                             {t('hero.projectsButton')}
                         </a>
                     </div>
