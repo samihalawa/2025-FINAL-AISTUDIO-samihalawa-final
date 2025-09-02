@@ -1,20 +1,16 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Sami Halawa - AI Expert Portfolio
 
-# Run and deploy your AI Studio app
+This is the portfolio website for Sami Halawa, showcasing AI expertise and projects.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/drive/1iSmMG5wYRC1zG-dHb1HIfFURHy6mWz_O
+- Multi-language support (English/Spanish)
+- Interactive project demos
+- Contact form integration
+- Responsive design
 
-## Run Locally
+## Deployment
 
-**Prerequisites:**  Node.js
+This site is deployed on Netlify with automatic builds from GitHub.
 
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Last updated: 2025-01-15
