@@ -1,6 +1,5 @@
 import React, { Fragment, useState, useEffect, useRef } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import { GoogleGenAI, Chat } from '@google/genai';
 import { useTranslation } from '../i18n/LanguageContext';
 import { Project } from '../types';
 
@@ -21,7 +20,6 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose, project }) => {
     const [input, setInput] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
-    const chatRef = useRef<Chat | null>(null);
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
     const scrollToBottom = () => {
@@ -34,68 +32,41 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose, project }) => {
         if (isOpen && project) {
             setMessages([]);
             setError(null);
-            setIsLoading(true);
-
-            try {
-                const ai = new GoogleGenAI({ apiKey: process.env.API_KEY! });
-                
-                const projectFeatures = project.features.map(f => `- ${t(f)}`).join('\n');
-                const systemInstruction = `You are a helpful and friendly AI assistant for Sami Halawa's portfolio. You are an expert on his projects. You are currently discussing the project "${t(project.titleKey)}".
-                
-Project Description: ${t(project.descriptionKey)}
-Project Summary: ${t(project.summaryKey)}
-Key Features:
-${projectFeatures}
-                
-Your role is to answer questions from a visitor about this specific project. Be concise, professional, and engaging. Do not go off-topic. If you don't know something, say you don't have that information.`;
-
-                chatRef.current = ai.chats.create({
-                    model: 'gemini-2.5-flash',
-                    config: {
-                        systemInstruction,
-                    },
-                });
-
-                const initialGreeting = `Hello! I'm an AI assistant. Feel free to ask me anything about the "${t(project.titleKey)}" project.`;
-                setMessages([{ sender: 'ai', text: initialGreeting }]);
-
-            } catch (e) {
-                console.error("Failed to initialize AI Chat:", e);
-                setError("Sorry, the AI chat couldn't be initialized. Please check the API key configuration.");
-            } finally {
-                setIsLoading(false);
-            }
+            const initialGreeting = `Hello! I'm an AI assistant. Feel free to ask me anything about the "${t(project.titleKey)}" project.`;
+            setMessages([{ sender: 'ai', text: initialGreeting }]);
         }
     }, [isOpen, project, t]);
 
     const handleSendMessage = async (e: React.FormEvent) => {
         e.preventDefault();
-        if (!input.trim() || isLoading || !chatRef.current) return;
+        if (!input.trim() || isLoading) return;
 
         const userMessage: Message = { sender: 'user', text: input };
         setMessages(prev => [...prev, userMessage]);
         setInput('');
         setIsLoading(true);
         setError(null);
-
         try {
-            const responseStream = await chatRef.current.sendMessageStream({ message: input });
-            
-            let aiResponseText = '';
-            setMessages(prev => [...prev, { sender: 'ai', text: '' }]);
+            const res = await fetch('/.netlify/functions/genai-chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    message: userMessage.text,
+                    projectTitle: project ? t(project.titleKey) : undefined,
+                    description: project ? t(project.descriptionKey) : undefined,
+                    summary: project ? t(project.summaryKey) : undefined,
+                    features: project ? project.features.map(f=>t(f)) : undefined,
+                }),
+            });
 
-            for await (const chunk of responseStream) {
-                aiResponseText += chunk.text;
-                setMessages(prev => {
-                    const newMessages = [...prev];
-                    newMessages[newMessages.length - 1] = { sender: 'ai', text: aiResponseText };
-                    return newMessages;
-                });
+            if (!res.ok) {
+                throw new Error(await res.text());
             }
-
+            const data = await res.json();
+            setMessages(prev => [...prev, { sender: 'ai', text: data.text || 'No response.' }]);
         } catch (e) {
-            console.error("AI chat error:", e);
-            const errorMessage = "Sorry, something went wrong while getting a response. Please try again.";
+            console.error('AI chat error:', e);
+            const errorMessage = 'Sorry, something went wrong while getting a response. Please try again.';
             setError(errorMessage);
             setMessages(prev => [...prev, { sender: 'ai', text: errorMessage }]);
         } finally {
