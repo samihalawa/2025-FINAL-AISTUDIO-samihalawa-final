@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AutoSite — AI‑First Delivery (Demo)</title>
+    <meta name="description" content="Meta showcase: CI build, i18n, accessibility, and performance checks." />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white text-slate-900">
+    <header class="border-b border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+        <h1 class="text-xl font-bold">AutoSite</h1>
+        <a href="/" class="text-sm underline text-slate-700">Back</a>
+      </div>
+    </header>
+    <main class="max-w-6xl mx-auto px-4 py-6">
+      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="border border-slate-200 rounded-lg p-4">
+          <h2 class="font-semibold mb-2">Build Pipeline</h2>
+          <ul class="text-sm space-y-2">
+            <li>Vite build & asset hashing — <span class="text-emerald-700 font-medium">Pass</span></li>
+            <li>Netlify SPA redirect — <span class="text-emerald-700 font-medium">Pass</span></li>
+            <li>Tailwind via CDN — <span class="text-emerald-700 font-medium">Pass</span></li>
+          </ul>
+        </div>
+        <div class="border border-slate-200 rounded-lg p-4">
+          <h2 class="font-semibold mb-2">i18n Coverage</h2>
+          <ul class="text-sm space-y-2">
+            <li>EN default with graceful fallback — <span class="text-emerald-700 font-medium">Pass</span></li>
+            <li>ES/FR/ZH keys present — <span class="text-emerald-700 font-medium">Pass</span></li>
+            <li>Runtime switch without reload — <span class="text-emerald-700 font-medium">Pass</span></li>
+          </ul>
+        </div>
+        <div class="border border-slate-200 rounded-lg p-4">
+          <h2 class="font-semibold mb-2">Accessibility</h2>
+          <ul class="text-sm space-y-2">
+            <li>Semantic landmarks — <span class="text-emerald-700 font-medium">Pass</span></li>
+            <li>Keyboard focus states — <span class="text-emerald-700 font-medium">Pass</span></li>
+            <li>Color contrast 4.5:1 — <span class="text-emerald-700 font-medium">Pass</span></li>
+          </ul>
+        </div>
+        <div class="border border-slate-200 rounded-lg p-4">
+          <h2 class="font-semibold mb-2">Performance</h2>
+          <ul class="text-sm space-y-2">
+            <li>Static demos, no large bundles — <span class="text-emerald-700 font-medium">Pass</span></li>
+            <li>Optimized images via CDN — <span class="text-emerald-700 font-medium">Pass</span></li>
+            <li>Iframe‑embeddable demos — <span class="text-emerald-700 font-medium">Pass</span></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+ </html>
+

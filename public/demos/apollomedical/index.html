@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ApolloMedical — Clinical Decision Support (Demo)</title>
+    <meta name="description" content="Triage and decision support with structured evidence and concise summary." />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white text-slate-900">
+    <header class="border-b border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+        <h1 class="text-xl font-bold">ApolloMedical</h1>
+        <a href="/" class="text-sm underline text-slate-700">Back</a>
+      </div>
+    </header>
+    <main class="max-w-6xl mx-auto px-4 py-6 space-y-6">
+      <section class="rounded-lg border border-slate-200 p-4">
+        <div class="flex flex-wrap items-center gap-4 text-sm">
+          <div><span class="text-slate-500">MRN</span> <span class="font-medium">A102938</span></div>
+          <div><span class="text-slate-500">Age</span> <span class="font-medium">54</span></div>
+          <div><span class="text-slate-500">Sex</span> <span class="font-medium">F</span></div>
+          <div><span class="text-slate-500">BP</span> <span class="font-medium">132/84</span></div>
+          <div><span class="text-slate-500">HR</span> <span class="font-medium">88</span></div>
+          <div><span class="text-slate-500">SpO2</span> <span class="font-medium">97%</span></div>
+          <div><span class="text-slate-500">Allergies</span> <span class="font-medium">NKDA</span></div>
+        </div>
+      </section>
+
+      <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="lg:col-span-1 border border-slate-200 rounded-lg p-4">
+          <h2 class="font-semibold mb-3">Differential</h2>
+          <ul id="diff" class="space-y-2 text-sm"></ul>
+        </div>
+        <div class="lg:col-span-2 border border-slate-200 rounded-lg p-4">
+          <h2 class="font-semibold mb-3">Evidence</h2>
+          <div id="evidence" class="space-y-3 text-sm"></div>
+          <div class="mt-4 flex gap-2">
+            <button id="summary" class="px-3 py-2 rounded-md bg-slate-900 text-white text-sm">Generate Summary</button>
+            <button class="px-3 py-2 rounded-md bg-white border border-slate-300 text-sm" onclick="alert('Order placed (demo).')">Order Labs</button>
+            <button class="px-3 py-2 rounded-md bg-white border border-slate-300 text-sm" onclick="alert('Admit pathway initiated (demo).')">Admit</button>
+            <button class="px-3 py-2 rounded-md bg-white border border-slate-300 text-sm" onclick="alert('Discharge checklist started (demo).')">Discharge</button>
+          </div>
+          <div id="note" class="mt-4 p-3 rounded-md bg-slate-50 border border-slate-200 text-sm hidden"></div>
+        </div>
+      </section>
+    </main>
+    <script>
+      const differentials = [
+        {k:'Community-acquired pneumonia', p:0.42},
+        {k:'Acute bronchitis', p:0.28},
+        {k:'COVID-19', p:0.18},
+        {k:'Pulmonary embolism', p:0.12}
+      ];
+      function renderDiff(){
+        const ul=document.getElementById('diff'); ul.innerHTML='';
+        differentials.forEach((d,i)=>{
+          const li=document.createElement('li');
+          li.innerHTML = `<button class='w-full text-left p-3 rounded-md border ${i===0?'border-emerald-300 bg-emerald-50':'border-slate-200 hover:bg-slate-50'}' onclick=select(${i})><div class='font-medium'>${d.k}</div><div class='text-xs text-slate-500'>Likelihood ${(d.p*100).toFixed(0)}%</div></button>`;
+          ul.appendChild(li);
+        });
+      }
+      function select(i){
+        const ev=document.getElementById('evidence'); ev.innerHTML='';
+        const blocks=[
+          `<div><span class='text-slate-500'>HPI:</span> 4 days cough, fever 38.3°C, pleuritic chest pain.</div>`,
+          `<div><span class='text-slate-500'>Exam:</span> Crackles at RLL, mild tachypnea.</div>`,
+          `<div class='flex items-start gap-3'><img alt='Chest X-ray AP view' class='w-40 h-28 object-cover rounded border border-slate-200' src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Chest_Xray_PA_3-8-2010.png/512px-Chest_Xray_PA_3-8-2010.png'/><div><div class='text-slate-500'>Imaging:</div> RLL consolidation compatible with pneumonia.</div></div>`,
+          `<div><span class='text-slate-500'>Labs:</span> WBC 12.4k, CRP 48 mg/L.</div>`
+        ];
+        blocks.forEach(b=>{ const d=document.createElement('div'); d.innerHTML=b; ev.appendChild(d);});
+      }
+      function generate(){
+        const note=document.getElementById('note');
+        note.classList.remove('hidden');
+        note.innerText = 'Assessment: 54F with fever, productive cough, RLL crackles and consolidation on CXR. Most likely CAP. Plan: Start amoxicillin-clavulanate, PO fluids, follow-up in 48h or earlier if worsening; safety netting provided.';
+      }
+      document.getElementById('summary').addEventListener('click', generate);
+      renderDiff(); select(0);
+    </script>
+  </body>
+ </html>
+

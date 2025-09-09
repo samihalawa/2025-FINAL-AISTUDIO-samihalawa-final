@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Spreadsheet Assistant (Demo)</title>
+    <meta name="description" content="Natural language to formulas with anomaly flags and insights." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>html{scroll-behavior:smooth} .cell{min-width:5rem}</style>
+  </head>
+  <body class="bg-white text-slate-900">
+    <header class="border-b border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+        <h1 class="text-xl font-bold">AI Spreadsheet Assistant</h1>
+        <a href="/" class="text-sm underline text-slate-700">Back</a>
+      </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-6 space-y-6">
+      <section class="rounded-lg border border-slate-200 p-4">
+        <label class="block text-sm text-slate-600 mb-2" for="prompt">Instruction</label>
+        <div class="flex gap-2">
+          <input id="prompt" class="flex-1 px-3 py-2 border border-slate-300 rounded-md" value="Show monthly MRR growth and flag anomalies where churn > 4%."/>
+          <button id="explain" class="px-3 py-2 bg-white border border-slate-300 rounded-md text-sm">Explain</button>
+          <button id="insert" class="px-3 py-2 bg-slate-900 text-white rounded-md text-sm">Insert Formula</button>
+        </div>
+      </section>
+
+      <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="lg:col-span-2">
+          <div class="overflow-auto border border-slate-200 rounded-lg">
+            <table class="min-w-full text-sm">
+              <thead class="bg-slate-50 text-slate-600">
+                <tr><th class="px-3 py-2">Month</th><th class="px-3 py-2">MRR</th><th class="px-3 py-2">Churn %</th><th class="px-3 py-2">Growth %</th></tr>
+              </thead>
+              <tbody id="grid"></tbody>
+            </table>
+          </div>
+        </div>
+        <aside class="lg:col-span-1 border border-slate-200 rounded-lg p-4 h-fit">
+          <h2 class="font-semibold">Insights</h2>
+          <ul id="insights" class="mt-2 space-y-3 text-sm"></ul>
+        </aside>
+      </section>
+    </main>
+
+    <script>
+      const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      const data = [
+        {m:'Jan', mrr:42000, churn:0.032},
+        {m:'Feb', mrr:43800, churn:0.029},
+        {m:'Mar', mrr:45700, churn:0.041},
+        {m:'Apr', mrr:47200, churn:0.028},
+        {m:'May', mrr:49150, churn:0.051},
+        {m:'Jun', mrr:50500, churn:0.023}
+      ];
+      function pct(n){ return (n*100).toFixed(1)+'%'; }
+      function growth(prev,cur){ return ((cur-prev)/prev); }
+      function render(){
+        const tbody = document.getElementById('grid');
+        tbody.innerHTML = '';
+        data.forEach((r,i)=>{
+          const g = i===0? 0 : growth(data[i-1].mrr, r.mrr);
+          const tr = document.createElement('tr');
+          const isAnom = r.churn>0.04;
+          tr.className = 'border-t border-slate-200 '+(isAnom?'bg-red-50':'');
+          tr.innerHTML = `<td class='px-3 py-2'>${r.m}</td><td class='px-3 py-2'>$${r.mrr.toLocaleString()}</td><td class='px-3 py-2'>${pct(r.churn)}</td><td class='px-3 py-2 ${g<0?'text-red-600':'text-emerald-700'}'>${pct(g)}</td>`;
+          tbody.appendChild(tr);
+        })
+      }
+      function explain(){
+        alert('This assistant computes month-over-month growth and flags anomalies where churn exceeds 4%. Formulas are inserted into the Growth % column using prior row as baseline.');
+      }
+      function insert(){
+        // Deterministic: data already includes values; this simulates formula application.
+        const ins = document.getElementById('insights');
+        ins.innerHTML = '';
+        const avgGrowth = (data.slice(1).reduce((s,_,i)=> s + (data[i+1].mrr-data[i].mrr)/data[i].mrr, 0) / (data.length-1));
+        const anomalies = data.filter(d=>d.churn>0.04).map(d=>d.m);
+        const li1 = document.createElement('li'); li1.textContent = `Trend: Average MoM growth ${ (avgGrowth*100).toFixed(1) }% with consistent expansion.`; ins.appendChild(li1);
+        const li2 = document.createElement('li'); li2.textContent = anomalies.length? `Anomaly: Elevated churn in ${anomalies.join(', ')} (> 4%).` : 'No churn anomalies detected.'; ins.appendChild(li2);
+        const li3 = document.createElement('li'); li3.textContent = 'Forecast: Sustain current pipeline to reach ~$52k MRR next month.'; ins.appendChild(li3);
+      }
+      document.getElementById('explain').addEventListener('click', explain);
+      document.getElementById('insert').addEventListener('click', insert);
+      render(); insert();
+    </script>
+  </body>
+ </html>
+

@@ -79,10 +79,10 @@ export const TOOLS: Tool[] = [
 export const PROJECTS: Project[] = [
     {
         id: 'autoclient',
-        image: 'https://picsum.photos/seed/autoclient/400/300',
+        image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&h=800&q=80',
         titleKey: 'projects.autoclient.title',
         descriptionKey: 'projects.autoclient.description',
-        demoUrl: 'https://aistudio.google.com/app/drive/173S05u8e-MLh-eJ3L27VkWk5naaPEw-n',
+        demoUrl: '/demos/autoclient/index.html',
         featuresTitleKey: 'projects.autoclient.featuresTitle',
         features: ['projects.autoclient.feature1', 'projects.autoclient.feature2', 'projects.autoclient.feature3', 'projects.autoclient.feature4'],
         summaryKey: 'projects.autoclient.summary',
@@ -90,20 +90,20 @@ export const PROJECTS: Project[] = [
     },
     {
         id: 'spreadsheet',
-        image: 'https://picsum.photos/seed/spreadsheet/400/300',
+        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&h=800&q=80',
         titleKey: 'projects.spreadsheet.title',
         descriptionKey: 'projects.spreadsheet.description',
-        demoUrl: 'https://aistudio.google.com/app/drive/1jD88o_uC5a432BCpUvOq6a_uY-3yQ9r4',
+        demoUrl: '/demos/spreadsheet/index.html',
         featuresTitleKey: 'projects.spreadsheet.featuresTitle',
         features: ['projects.spreadsheet.feature1', 'projects.spreadsheet.feature2', 'projects.spreadsheet.feature3', 'projects.spreadsheet.feature4'],
         summaryKey: 'projects.spreadsheet.summary',
     },
     {
         id: 'cryptoagent',
-        image: 'https://picsum.photos/seed/crypto/400/300',
+        image: 'https://images.unsplash.com/photo-1569025690938-a00729c9e9f1?auto=format&fit=crop&w=1200&h=800&q=80',
         titleKey: 'projects.cryptoagent.title',
         descriptionKey: 'projects.cryptoagent.description',
-        demoUrl: 'https://aistudio.google.com/app/drive/1o0F4k4s5f8d9gH7k6j5e4d3c2b1a0z-y',
+        demoUrl: '/demos/cryptoagent/index.html',
         featuresTitleKey: 'projects.cryptoagent.featuresTitle',
         features: ['projects.cryptoagent.feature1', 'projects.cryptoagent.feature2', 'projects.cryptoagent.feature3', 'projects.cryptoagent.feature4'],
         summaryKey: 'projects.cryptoagent.summary',
@@ -111,27 +111,27 @@ export const PROJECTS: Project[] = [
     },
     {
         id: 'banking',
-        image: 'https://picsum.photos/seed/banking/400/300',
+        image: 'https://images.unsplash.com/photo-1556767576-cf63a644b5f2?auto=format&fit=crop&w=1200&h=800&q=80',
         titleKey: 'projects.banking.title',
         descriptionKey: 'projects.banking.description',
-        demoUrl: 'https://aistudio.google.com/app/drive/1z2Y3x4W5v6b7a8c9d0e1f2g3h4j5k-l',
+        demoUrl: '/demos/banking/index.html',
         featuresTitleKey: 'projects.banking.featuresTitle',
         features: ['projects.banking.feature1', 'projects.banking.feature2', 'projects.banking.feature3', 'projects.banking.feature4'],
         summaryKey: 'projects.banking.summary',
     },
     {
         id: 'apollomedical',
-        image: 'https://picsum.photos/seed/medical/400/300',
+        image: 'https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=1200&h=800&q=80',
         titleKey: 'projects.apollomedical.title',
         descriptionKey: 'projects.apollomedical.description',
-        demoUrl: 'https://aistudio.google.com/app/drive/1p2o3i4u5y6t7r8e9w0q-a1s2d3f4g5h',
+        demoUrl: '/demos/apollomedical/index.html',
         featuresTitleKey: 'projects.apollomedical.featuresTitle',
         features: ['projects.apollomedical.feature1', 'projects.apollomedical.feature2', 'projects.apollomedical.feature3', 'projects.apollomedical.feature4'],
         summaryKey: 'projects.apollomedical.summary',
     },
     {
         id: 'autosite',
-        image: 'https://picsum.photos/seed/website/400/300',
+        image: 'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1200&h=800&q=80',
         titleKey: 'projects.autosite.title',
         descriptionKey: 'projects.autosite.description',
         repoUrl: 'https://github.com/samihalawa/2025-FINAL-AUTOSTUDIO-SAMIHALAWA.COM',
@@ -156,19 +156,19 @@ export const TESTIMONIALS: Testimonial[] = [
         quoteKey: 'testimonials.jane.quote',
         nameKey: 'testimonials.jane.name',
         titleKey: 'testimonials.jane.title',
-        image: 'https://randomuser.me/api/portraits/women/44.jpg'
+        image: 'https://images.unsplash.com/photo-1544006659-f0b21884ce1d?auto=format&fit=crop&w=256&h=256&q=80'
     },
     {
         quoteKey: 'testimonials.john.quote',
         nameKey: 'testimonials.john.name',
         titleKey: 'testimonials.john.title',
-        image: 'https://randomuser.me/api/portraits/men/36.jpg'
+        image: 'https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=256&h=256&q=80'
     },
     {
         quoteKey: 'testimonials.emily.quote',
         nameKey: 'testimonials.emily.name',
         titleKey: 'testimonials.emily.title',
-        image: 'https://randomuser.me/api/portraits/women/65.jpg'
+        image: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=256&h=256&q=80'
     },
 ];
 

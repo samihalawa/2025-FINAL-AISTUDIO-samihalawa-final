@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Personal Banking Concierge (Demo)</title>
+    <meta name="description" content="Budget insights, proactive alerts, and contextual transaction review." />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white text-slate-900">
+    <header class="border-b border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+        <h1 class="text-xl font-bold">Banking Concierge</h1>
+        <a href="/" class="text-sm underline text-slate-700">Back</a>
+      </div>
+    </header>
+    <main class="max-w-6xl mx-auto px-4 py-6 space-y-6">
+      <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="border border-slate-200 rounded-lg p-4">
+          <h2 class="font-semibold mb-2 text-sm">Groceries</h2>
+          <div class="text-2xl font-semibold">$482 / $600</div>
+          <div class="text-xs text-slate-500">On track</div>
+        </div>
+        <div class="border border-slate-200 rounded-lg p-4">
+          <h2 class="font-semibold mb-2 text-sm">Dining</h2>
+          <div class="text-2xl font-semibold">$390 / $300</div>
+          <div class="text-xs text-rose-700">Over by $90</div>
+        </div>
+        <div class="border border-slate-200 rounded-lg p-4">
+          <h2 class="font-semibold mb-2 text-sm">Transport</h2>
+          <div class="text-2xl font-semibold">$128 / $180</div>
+          <div class="text-xs text-slate-500">On track</div>
+        </div>
+      </section>
+
+      <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="lg:col-span-2">
+          <h2 class="font-semibold mb-2">Recent Transactions</h2>
+          <div class="overflow-auto border border-slate-200 rounded-lg">
+            <table class="min-w-full text-sm">
+              <thead class="bg-slate-50 text-slate-600"><tr><th class="px-3 py-2">Date</th><th class="px-3 py-2">Merchant</th><th class="px-3 py-2">Category</th><th class="px-3 py-2">Amount</th></tr></thead>
+              <tbody id="tx"></tbody>
+            </table>
+          </div>
+        </div>
+        <aside class="lg:col-span-1 border border-slate-200 rounded-lg p-4 h-fit">
+          <h2 class="font-semibold mb-3">Alerts</h2>
+          <ul id="alerts" class="space-y-3 text-sm"></ul>
+          <h3 class="font-semibold mt-6 mb-2 text-sm">Concierge</h3>
+          <div class="space-y-2 text-sm">
+            <button class="px-3 py-1.5 rounded-md bg-slate-900 text-white" onclick="preset('How can I reduce dining spend by 15%?')">Suggest savings</button>
+            <button class="px-3 py-1.5 rounded-md bg-white border border-slate-300" onclick="preset('Any suspicious transactions this week?')">Check fraud</button>
+            <button class="px-3 py-1.5 rounded-md bg-white border border-slate-300" onclick="preset('Can you move $200 to savings on Friday?')">Automate transfer</button>
+          </div>
+        </aside>
+      </section>
+    </main>
+    <script>
+      const tx = [
+        {d:'2025-09-05', m:'Uber', c:'Transport', a:-18.40},
+        {d:'2025-09-05', m:'Whole Foods', c:'Groceries', a:-84.12},
+        {d:'2025-09-04', m:'Blue Bottle Coffee', c:'Dining', a:-9.75},
+        {d:'2025-09-03', m:'Taco Loco', c:'Dining', a:-24.90},
+        {d:'2025-09-03', m:'Shell', c:'Transport', a:-42.10},
+        {d:'2025-09-02', m:'Trader Joe\'s', c:'Groceries', a:-63.55},
+        {d:'2025-09-01', m:'Spotify', c:'Subscriptions', a:-12.99},
+        {d:'2025-08-31', m:'OpenTable', c:'Dining', a:-38.50},
+        {d:'2025-08-30', m:'Apple', c:'Electronics', a:-219.00},
+        {d:'2025-08-29', m:'DoorDash', c:'Dining', a:-28.25}
+      ];
+      function renderTx(){
+        const tbody=document.getElementById('tx'); tbody.innerHTML='';
+        tx.forEach((t,i)=>{
+          const tr=document.createElement('tr');
+          tr.className='border-t border-slate-200';
+          tr.id='row-'+i;
+          tr.innerHTML = `<td class='px-3 py-2'>${t.d}</td><td class='px-3 py-2'>${t.m}</td><td class='px-3 py-2'>${t.c}</td><td class='px-3 py-2 ${t.a<0?'text-rose-700':'text-emerald-700'}'>$${Math.abs(t.a).toFixed(2)}</td>`;
+          tbody.appendChild(tr);
+        })
+      }
+      function renderAlerts(){
+        const list=document.getElementById('alerts');
+        const diningSpend = tx.filter(t=>t.c==='Dining').reduce((s,t)=>s+Math.abs(t.a),0);
+        const item1=document.createElement('li');
+        item1.innerHTML = `<button class='text-left w-full p-3 rounded-md border border-slate-200 hover:bg-slate-50' onclick=highlight('Dining')>Dining is $${diningSpend.toFixed(2)} this week (over plan).</button>`;
+        const item2=document.createElement('li');
+        item2.innerHTML = `<button class='text-left w-full p-3 rounded-md border border-amber-300 bg-amber-50 hover:bg-amber-100' onclick=highlightIndex(8)>Unusual purchase detected: Apple $219.00.</button>`;
+        const item3=document.createElement('li');
+        item3.innerHTML = `<button class='text-left w-full p-3 rounded-md border border-slate-200 hover:bg-slate-50' onclick=highlight('Transport')>Fuel spend trending up in Transport.</button>`;
+        list.append(item1,item2,item3);
+      }
+      function highlight(cat){
+        tx.forEach((t,i)=>{ const el=document.getElementById('row-'+i); el.classList.toggle('bg-yellow-50', t.c===cat); el.scrollIntoView({behavior:'smooth', block:'nearest'});});
+      }
+      function highlightIndex(i){
+        const el=document.getElementById('row-'+i); el.classList.add('bg-yellow-50'); el.scrollIntoView({behavior:'smooth', block:'center'}); setTimeout(()=>el.classList.remove('bg-yellow-50'), 1800);
+      }
+      function preset(msg){ alert(msg+'\n\nThis demo showcases the concierge intent; in production, this would route to your secure assistant.'); }
+      renderTx(); renderAlerts();
+    </script>
+  </body>
+ </html>
+

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CryptoAgent — Paper Trading (Demo)</title>
+    <meta name="description" content="Risk-aware trading assistant with paper positions and sparkline chart." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  </head>
+  <body class="bg-white text-slate-900">
+    <header class="border-b border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+        <h1 class="text-xl font-bold">CryptoAgent</h1>
+        <a href="/" class="text-sm underline text-slate-700">Back</a>
+      </div>
+    </header>
+    <main class="max-w-6xl mx-auto px-4 py-6 space-y-6">
+      <section class="flex items-center gap-3">
+        <label class="text-sm text-slate-600" for="symbol">Symbol</label>
+        <select id="symbol" class="px-3 py-2 border border-slate-300 rounded-md">
+          <option>BTC-USD</option>
+          <option>ETH-USD</option>
+          <option>SOL-USD</option>
+        </select>
+        <div class="ml-auto flex items-center gap-6">
+          <div>
+            <div class="text-xs text-slate-500">Last Price</div>
+            <div class="text-2xl font-semibold" id="last">$64,230</div>
+          </div>
+          <div>
+            <div class="text-xs text-slate-500">24h Change</div>
+            <div class="text-2xl font-semibold" id="chg" aria-live="polite">+2.1%</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="lg:col-span-2 border border-slate-200 rounded-lg p-4">
+          <canvas id="chart" height="120" aria-label="Price chart" role="img"></canvas>
+        </div>
+        <aside class="lg:col-span-1 border border-slate-200 rounded-lg p-4 h-fit">
+          <h2 class="font-semibold mb-3">Trade</h2>
+          <div class="flex items-center gap-2 mb-3">
+            <label class="text-sm text-slate-600" for="qty">Size</label>
+            <input id="qty" type="number" min="0" step="0.01" value="0.10" class="px-3 py-2 border border-slate-300 rounded-md w-28"/>
+            <button id="buy" class="ml-auto px-3 py-2 rounded-md bg-emerald-600 text-white text-sm">Buy</button>
+            <button id="sell" class="px-3 py-2 rounded-md bg-rose-600 text-white text-sm">Sell</button>
+          </div>
+          <h3 class="font-semibold mt-4 mb-2 text-sm">Positions</h3>
+          <div class="overflow-auto border border-slate-200 rounded-lg">
+            <table class="min-w-full text-sm">
+              <thead class="bg-slate-50 text-slate-600">
+                <tr><th class="px-3 py-2">Side</th><th class="px-3 py-2">Qty</th><th class="px-3 py-2">Avg Price</th><th class="px-3 py-2">P/L</th></tr>
+              </thead>
+              <tbody id="pos"></tbody>
+            </table>
+          </div>
+          <p class="text-xs text-slate-500 mt-3">Paper trading only. Not financial advice.</p>
+        </aside>
+      </section>
+    </main>
+    <script>
+      const prices = {
+        'BTC-USD':[64230,64210,64280,64310,64350,64290,64400,64480,64510,64450,64560,64600],
+        'ETH-USD':[3280,3276,3282,3286,3294,3291,3288,3299,3305,3302,3307,3312],
+        'SOL-USD':[152,151.8,151.9,152.2,152.7,152.5,152.9,153.4,153.1,153.8,154.2,154.7]
+      };
+      let symbol = 'BTC-USD';
+      let series = prices[symbol].slice();
+      const ctx = document.getElementById('chart');
+      const chart = new Chart(ctx, { type:'line', data:{ labels:series.map((_,i)=>i), datasets:[{ data:series, borderColor:'#0f172a', tension:.3, pointRadius:0 }]}, options:{ plugins:{legend:{display:false}}, scales:{x:{display:false}, y:{display:true}} }});
+      function refresh(){
+        document.getElementById('last').textContent = `$${series.at(-1).toLocaleString()}`;
+        const chg = ((series.at(-1)-series[0])/series[0])*100; const el=document.getElementById('chg');
+        el.textContent = `${chg>=0?'+':''}${chg.toFixed(1)}%`; el.className = 'text-2xl font-semibold '+(chg>=0?'text-emerald-700':'text-rose-700');
+      }
+      document.getElementById('symbol').addEventListener('change', (e)=>{
+        symbol = e.target.value; series = prices[symbol].slice(); chart.data.datasets[0].data = series; chart.update(); refresh(); positions=[]; renderPos();
+      });
+      let positions = [];
+      function trade(side){
+        const qty = parseFloat(document.getElementById('qty').value || '0');
+        const px = series.at(-1);
+        positions.push({side, qty, avg:px});
+        renderPos();
+      }
+      function renderPos(){
+        const tbody = document.getElementById('pos'); tbody.innerHTML='';
+        const px = series.at(-1);
+        positions.forEach(p=>{
+          const pl = (p.side==='Buy'? (px - p.avg) : (p.avg - px)) * p.qty;
+          const tr=document.createElement('tr');
+          tr.className='border-t border-slate-200';
+          tr.innerHTML = `<td class='px-3 py-2'>${p.side}</td><td class='px-3 py-2'>${p.qty}</td><td class='px-3 py-2'>$${p.avg.toLocaleString()}</td><td class='px-3 py-2 ${pl>=0?'text-emerald-700':'text-rose-700'}'>$${pl.toFixed(2)}</td>`;
+          tbody.appendChild(tr);
+        });
+      }
+      document.getElementById('buy').addEventListener('click', ()=>trade('Buy'));
+      document.getElementById('sell').addEventListener('click', ()=>trade('Sell'));
+      refresh(); renderPos();
+    </script>
+  </body>
+ </html>
+
