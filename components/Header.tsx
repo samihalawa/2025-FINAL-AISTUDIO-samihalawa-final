@@ -11,7 +11,7 @@ const Header: React.FC = () => {
     const LanguageSelector: React.FC<{mobile?: boolean}> = ({ mobile = false }) => (
         <Listbox value={language} onChange={setLanguage}>
             <div className={`relative ${mobile ? 'w-full mt-2' : 'ml-4'}`}>
-                <Listbox.Button className="relative w-full cursor-default rounded-md bg-white py-2 pl-3 pr-10 text-left border border-slate-200 focus:outline-none focus-visible:border-slate-500 focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-300 sm:text-sm">
+                <Listbox.Button role="button" className="relative w-full cursor-default rounded-md bg-white py-2 pl-3 pr-10 text-left border border-slate-200 focus:outline-none focus-visible:border-slate-500 focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-300 sm:text-sm">
                     <span className="block truncate">{selectedLanguage?.name}</span>
                     <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
                         <i className="fas fa-chevron-down text-gray-400" aria-hidden="true" />

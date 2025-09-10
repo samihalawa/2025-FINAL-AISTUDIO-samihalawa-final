@@ -5,6 +5,7 @@ export const NAV_LINKS: NavLink[] = [
     { href: '/services', key: 'nav.services' },
     { href: '/corporate', key: 'nav.corporate' },
     { href: '/projects', key: 'nav.projects' },
+    { href: '/contact', key: 'nav.contact' },
     { href: '/blog', key: 'nav.blog' },
 ];
 
