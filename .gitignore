@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local Netlify folder (keep site linkage tracked)
+.netlify
+!.netlify/state.json
