@@ -1,50 +1,42 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from '../i18n/LanguageContext';
 import { CONTACT_INFO } from '../constants';
 
+const TallyEmbed: React.FC<{ src: string; title: string; height: number }> = ({ src, title, height }) => {
+    useEffect(() => {
+        const w = 'https://tally.so/widgets/embed.js';
+        const d = document;
+        const v = () => {
+            // @ts-ignore
+            if (typeof (window as any).Tally !== 'undefined') (window as any).Tally.loadEmbeds();
+            else d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((e) => { (e as HTMLIFrameElement).src = (e as HTMLIFrameElement).dataset.tallySrc || ''; });
+        };
+        if (d.querySelector(`script[src="${w}"]`) == null) {
+            const s = d.createElement('script');
+            s.src = w;
+            s.onload = v;
+            s.onerror = v;
+            d.body.appendChild(s);
+        } else {
+            v();
+        }
+    }, []);
+    return (
+        <iframe
+            data-tally-src={src}
+            title={title}
+            loading="lazy"
+            width="100%"
+            height={height}
+            frameBorder={0}
+            marginHeight={0}
+            marginWidth={0}
+        />
+    );
+};
+
 const Contact: React.FC = () => {
     const { t } = useTranslation();
-    const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
-    
-    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-        setStatus('sending');
-        const form = event.currentTarget;
-        const data = new FormData(form);
-        
-        try {
-            const response = await fetch('https://api.staticforms.xyz/submit', {
-                method: 'POST',
-                body: data,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            });
-            if (response.ok) {
-                setStatus('success');
-                form.reset();
-                setTimeout(() => setStatus('idle'), 5000);
-            } else {
-                setStatus('error');
-                setTimeout(() => setStatus('idle'), 5000);
-            }
-        } catch (error) {
-            setStatus('error');
-            setTimeout(() => setStatus('idle'), 5000);
-        }
-    };
-
-    const InputField: React.FC<{id: string, name: string, label: string, type?: string, required?: boolean, rows?: number}> = ({ id, name, label, type = 'text', required = false, rows}) => (
-        <div>
-            <label htmlFor={id} className="block text-sm font-medium text-slate-700">{label}</label>
-            {rows ? (
-                <textarea id={id} name={name} required={required} rows={rows} className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-slate-500 focus:ring-1 focus:ring-slate-500" />
-            ) : (
-                <input type={type} id={id} name={name} required={required} className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-slate-500 focus:ring-1 focus:ring-slate-500" />
-            )}
-        </div>
-    );
-
     return (
         <section id="contact" className="py-20 bg-white scroll-mt-20" aria-label="Contact">
             <div className="container mx-auto px-6">
@@ -67,26 +59,24 @@ const Contact: React.FC = () => {
                            ))}
                         </div>
                     </div>
-                    <div className="lg:w-1/2 bg-slate-50 rounded-lg border border-slate-200 p-8">
-                        <form onSubmit={handleSubmit} className="space-y-6">
-                            <input type="hidden" name="accessKey" value="b67e8125-1a1a-4712-9c3a-f2dedb36a100" />
-                            <input type="hidden" name="subject" value="New Contact from Portfolio Website" />
-                            <input type="hidden" name="replyTo" value="@" />
-                            <input type="text" name="honeypot" style={{ display: 'none' }} />
-                            
-                            <InputField id="name" name="name" label={t('contact.form.nameLabel')} required />
-                            <InputField id="email" name="email" label={t('contact.form.emailLabel')} type="email" required />
-                            <InputField id="company" name="$company" label={t('contact.form.companyLabel')} />
-                            <InputField id="message" name="message" label={t('contact.form.messageLabel')} rows={4} required />
 
-                            <div>
-                                <button type="submit" disabled={status === 'sending'} className="w-full flex justify-center py-2.5 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-slate-900 hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-500 transition-colors disabled:bg-slate-500 disabled:cursor-not-allowed">
-                                    {status === 'sending' ? t('contact.form.sendingButton') : t('contact.form.submitButton')}
-                                </button>
-                            </div>
-                            {status === 'success' && <p className="text-center text-green-600 text-sm">{t('contact.form.successMessage')}</p>}
-                            {status === 'error' && <p className="text-center text-red-600 text-sm">{t('contact.form.errorMessage')}</p>}
-                        </form>
+                    <div className="lg:w-1/2 space-y-8">
+                        <div className="bg-slate-50 rounded-lg border border-slate-200 p-6">
+                            <h3 className="text-xl font-semibold mb-4 text-slate-900">Contact Form</h3>
+                            <TallyEmbed
+                                src="https://tally.so/embed/wz9VVq?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                                title="Contact form"
+                                height={320}
+                            />
+                        </div>
+                        <div className="bg-slate-50 rounded-lg border border-slate-200 p-6">
+                            <h3 className="text-xl font-semibold mb-4 text-slate-900">Newsletter</h3>
+                            <TallyEmbed
+                                src="https://tally.so/embed/mY1V66?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                                title="NEWSLETTER"
+                                height={200}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

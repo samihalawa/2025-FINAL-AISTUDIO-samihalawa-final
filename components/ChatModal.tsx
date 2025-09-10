@@ -118,6 +118,7 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose, project }) => {
                                     <button
                                         type="button"
                                         className="inline-flex justify-center rounded-md p-2 text-sm font-medium text-slate-500 hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2"
+                                        aria-label="Close"
                                         onClick={onClose}
                                     >
                                         <i className="fas fa-times text-xl"></i>
