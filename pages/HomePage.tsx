@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Hero from '../components/Hero';
 import About from '../components/About';
+import FeaturedCaseStudies from '../components/FeaturedCaseStudies';
 import Testimonials from '../components/Testimonials';
 
 const HomePage: React.FC = () => {
@@ -13,6 +14,7 @@ const HomePage: React.FC = () => {
       </Helmet>
       <Hero />
       <About />
+      <FeaturedCaseStudies />
       <Testimonials />
     </>
   );
