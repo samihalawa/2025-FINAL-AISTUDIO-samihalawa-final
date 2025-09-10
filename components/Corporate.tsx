@@ -67,6 +67,9 @@ const Corporate: React.FC = () => {
                           </a>
                         ))}
                     </div>
+                    <div className="text-center mt-10">
+                      <a href="/case-studies" className="inline-block bg-slate-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-slate-800">Ver casos de estudio</a>
+                    </div>
                 </div>
             </div>
         </section>

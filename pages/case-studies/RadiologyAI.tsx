@@ -12,11 +12,14 @@ const RadiologyAI: React.FC = () => {
     author: { '@type': 'Person', name: 'Sami Halawa' },
     description,
   };
+  const og = 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&h=630&q=80';
   return (
     <section className="py-16 bg-white">
       <Helmet>
         <title>{title} | Sami Halawa</title>
         <meta name="description" content={description} />
+        <meta property="og:image" content={og} />
+        <meta name="twitter:image" content={og} />
         <link rel="canonical" href="/case-studies/radiology-ai" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
@@ -36,4 +39,3 @@ const RadiologyAI: React.FC = () => {
 };
 
 export default RadiologyAI;
-

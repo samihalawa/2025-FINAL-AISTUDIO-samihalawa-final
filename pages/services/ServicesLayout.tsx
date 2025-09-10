@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Outlet } from 'react-router-dom';
+import HireCTA from '../../components/HireCTA';
 
 const ServicesLayout: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const ServicesLayout: React.FC = () => {
       <div className="container mx-auto px-6 max-w-6xl py-10">
         {/* Render nested service routes (index and children) */}
         <Outlet />
+        <HireCTA />
       </div>
     </>
   );
