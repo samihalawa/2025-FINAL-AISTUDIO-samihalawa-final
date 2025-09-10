@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Outlet } from 'react-router-dom';
 
 const ServicesLayout: React.FC = () => {
   return (
@@ -10,11 +11,11 @@ const ServicesLayout: React.FC = () => {
         <link rel="canonical" href="/services" />
       </Helmet>
       <div className="container mx-auto px-6 max-w-6xl py-10">
-        {/* Renders the nested service pages or index */}
+        {/* Render nested service routes (index and children) */}
+        <Outlet />
       </div>
     </>
   );
 };
 
 export default ServicesLayout;
-
