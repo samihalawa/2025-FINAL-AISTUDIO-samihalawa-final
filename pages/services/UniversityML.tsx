@@ -30,6 +30,15 @@ const UniversityML: React.FC = () => {
     serviceType: 'University ML Tutoring',
     offers: { '@type': 'Offer', availability: 'https://schema.org/InStock' }
   };
+  const jsonLdFaq = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: '¿Nivel requerido?', acceptedAnswer: { '@type': 'Answer', text: 'Desde cero a intermedio. Ajusto el plan según la asignatura.' }},
+      { '@type': 'Question', name: '¿Incluye TFG/TFM?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Apoyo integral: estado del arte, dataset, modelos y memoria.' }},
+      { '@type': 'Question', name: '¿Formato?', acceptedAnswer: { '@type': 'Answer', text: 'Clases 1:1 u online en grupos pequeños con prácticas.' }}
+    ]
+  };
   return (
     <section className="py-16 bg-white">
       <Helmet>
@@ -38,6 +47,7 @@ const UniversityML: React.FC = () => {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
         <link rel="canonical" href="/services/university-ml" />
       </Helmet>
       <div className="container mx-auto px-6 max-w-5xl">
@@ -64,4 +74,3 @@ const UniversityML: React.FC = () => {
 };
 
 export default UniversityML;
-

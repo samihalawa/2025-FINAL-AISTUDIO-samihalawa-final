@@ -29,6 +29,15 @@ const AdvancedAI: React.FC = () => {
     provider: { '@type': 'Person', name: 'Sami Halawa' },
     serviceType: 'Advanced AI Development'
   };
+  const jsonLdFaq = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: '¿Qué stack usas?', acceptedAnswer: { '@type': 'Answer', text: 'Python/TypeScript, LangChain/LlamaIndex, FastAPI/Node, Docker/K8s, Pinecone/Qdrant, AWS/GCP/Azure.' }},
+      { '@type': 'Question', name: '¿Tiempo de entrega?', acceptedAnswer: { '@type': 'Answer', text: 'MVP en 2–4 semanas con sprints semanales y hitos claros.' }},
+      { '@type': 'Question', name: '¿Cómo garantizas calidad?', acceptedAnswer: { '@type': 'Answer', text: 'Evals automáticos, trazas, monitoreo, límites de coste y seguridad de datos.' }}
+    ]
+  };
   return (
     <section className="py-16 bg-white">
       <Helmet>
@@ -37,6 +46,7 @@ const AdvancedAI: React.FC = () => {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
         <link rel="canonical" href="/services/advanced-ai" />
       </Helmet>
       <div className="container mx-auto px-6 max-w-5xl">
@@ -63,4 +73,3 @@ const AdvancedAI: React.FC = () => {
 };
 
 export default AdvancedAI;
-

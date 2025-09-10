@@ -28,6 +28,15 @@ const FamilyAI: React.FC = () => {
     provider: { '@type': 'Person', name: 'Sami Halawa' },
     serviceType: 'Family AI Education'
   };
+  const jsonLdFaq = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: '¿Edades recomendadas?', acceptedAnswer: { '@type': 'Answer', text: 'Programas por tramos: 10–13, 14–17 y adultos.' }},
+      { '@type': 'Question', name: '¿Es seguro?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Contenidos adecuados y control parental con buenas prácticas.' }},
+      { '@type': 'Question', name: '¿Modalidad?', acceptedAnswer: { '@type': 'Answer', text: 'Online o presencial en Madrid. Sesiones individuales o familiares.' }}
+    ]
+  };
   return (
     <section className="py-16 bg-white">
       <Helmet>
@@ -36,6 +45,7 @@ const FamilyAI: React.FC = () => {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
         <link rel="canonical" href="/services/family-ai" />
       </Helmet>
       <div className="container mx-auto px-6 max-w-5xl">
@@ -65,4 +75,3 @@ const FamilyAI: React.FC = () => {
 };
 
 export default FamilyAI;
-

@@ -28,6 +28,15 @@ const NoCodeAI: React.FC = () => {
     provider: { '@type': 'Person', name: 'Sami Halawa' },
     serviceType: 'No-code AI Creation'
   };
+  const jsonLdFaq = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: '¿Necesito saber programar?', acceptedAnswer: { '@type': 'Answer', text: 'No. Todo se hace con herramientas visuales y plantillas.' }},
+      { '@type': 'Question', name: '¿Qué herramientas usaremos?', acceptedAnswer: { '@type': 'Answer', text: 'Midjourney, Runway, ChatGPT/Claude, Zapier/Make para automatizar.' }},
+      { '@type': 'Question', name: '¿Qué me llevo?', acceptedAnswer: { '@type': 'Answer', text: 'Sistema de contenidos, plantillas y un calendario editorial de 90 días.' }}
+    ]
+  };
   return (
     <section className="py-16 bg-white">
       <Helmet>
@@ -36,6 +45,7 @@ const NoCodeAI: React.FC = () => {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
         <link rel="canonical" href="/services/no-code-ai" />
       </Helmet>
       <div className="container mx-auto px-6 max-w-5xl">
@@ -62,4 +72,3 @@ const NoCodeAI: React.FC = () => {
 };
 
 export default NoCodeAI;
-

@@ -28,6 +28,15 @@ const Troubleshooting: React.FC = () => {
     provider: { '@type': 'Person', name: 'Sami Halawa' },
     serviceType: 'AI Troubleshooting'
   };
+  const jsonLdFaq = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: '¿Qué tipo de incidencias?', acceptedAnswer: { '@type': 'Answer', text: 'Fallos de automatización, errores en chains/RAG, permisos API, costes/latencias.' }},
+      { '@type': 'Question', name: '¿Tiempo de respuesta?', acceptedAnswer: { '@type': 'Answer', text: 'Diagnóstico en 24–48h, con plan de acción y estimación.' }},
+      { '@type': 'Question', name: '¿Cómo se entrega?', acceptedAnswer: { '@type': 'Answer', text: 'Correcciones, checklist de hardening y documentación de mantenimiento.' }}
+    ]
+  };
   return (
     <section className="py-16 bg-white">
       <Helmet>
@@ -36,6 +45,7 @@ const Troubleshooting: React.FC = () => {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
         <link rel="canonical" href="/services/troubleshooting" />
       </Helmet>
       <div className="container mx-auto px-6 max-w-5xl">
@@ -62,4 +72,3 @@ const Troubleshooting: React.FC = () => {
 };
 
 export default Troubleshooting;
-

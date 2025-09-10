@@ -51,6 +51,10 @@ const Corporate: React.FC = () => {
                           { href: '/services/family-ai', title: 'Familias y Educación', desc: 'Programas para niños, adolescentes y padres.' },
                           { href: '/services/advanced-ai', title: 'Proyectos Avanzados', desc: 'LangChain, AutoGPT, agentes MCP y despliegue.' },
                           { href: '/services/no-code-ai', title: 'Creador No-Code', desc: 'Contenido y marketing con IA sin código.' },
+                          { href: '/services/prompt-engineering', title: 'Prompt Engineering', desc: 'Buenas prácticas, evaluación y seguridad en LLMs.' },
+                          { href: '/services/rag-langchain', title: 'RAG & LangChain', desc: 'Recuperación aumentada, re-ranking y despliegue.' },
+                          { href: '/services/agents-automation', title: 'Agentes y Automatización', desc: 'Bootcamp para operaciones y ventas.' },
+                          { href: '/services/ai-for-marketing', title: 'IA para Marketing', desc: 'Sistemas de contenido, SEO y anuncios.' },
                           { href: '/services/troubleshooting', title: 'Soporte y Troubleshooting', desc: 'Rescate de proyectos ML, auditoría y arreglos de automatización.' },
                         ].map(card => (
                           <a key={card.href} href={card.href} className="block bg-white p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-0.5 transition-all">

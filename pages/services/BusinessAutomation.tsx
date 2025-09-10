@@ -30,6 +30,15 @@ const BusinessAutomation: React.FC = () => {
     serviceType: 'AI Automation',
     offers: { '@type': 'Offer', availability: 'https://schema.org/InStock' }
   };
+  const jsonLdFaq = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: '¿Necesito desarrolladores?', acceptedAnswer: { '@type': 'Answer', text: 'No. Usamos Zapier/Make/n8n y sólo código cuando aporta valor.' }},
+      { '@type': 'Question', name: '¿Qué CRMs integras?', acceptedAnswer: { '@type': 'Answer', text: 'HubSpot, Salesforce, Pipedrive, Notion, Airtable, Google Workspace y más.' }},
+      { '@type': 'Question', name: '¿Cómo controlamos costes?', acceptedAnswer: { '@type': 'Answer', text: 'Presupuestos por flujo, límites por uso y reportes mensuales de ROI.' }}
+    ]
+  };
   return (
     <section className="py-16 bg-white">
       <Helmet>
@@ -38,6 +47,7 @@ const BusinessAutomation: React.FC = () => {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
         <link rel="canonical" href="/services/business-automation" />
       </Helmet>
       <div className="container mx-auto px-6 max-w-5xl">
@@ -64,4 +74,3 @@ const BusinessAutomation: React.FC = () => {
 };
 
 export default BusinessAutomation;
-

@@ -1,11 +1,45 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Header from './Header';
 import Footer from './Footer';
 
 const Layout: React.FC = () => {
+  const location = useLocation();
+  const siteUrl = 'https://samihalawa.com';
+  const canonical = `${siteUrl}${location.pathname}`;
+  const orgJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Sami Halawa',
+    url: siteUrl,
+    sameAs: [
+      'https://www.linkedin.com/in/samihalawa',
+      'https://github.com/samihalawa'
+    ],
+    jobTitle: 'AI Trainer & Engineer'
+  };
+  const webSiteJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Sami Halawa — AI Training & Solutions',
+    url: siteUrl,
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: `${siteUrl}/search?q={search_term_string}`,
+      'query-input': 'required name=search_term_string'
+    }
+  };
   return (
     <div className="bg-white text-slate-800">
+      <Helmet>
+        <meta name="theme-color" content="#0f172a" />
+        <meta property="og:site_name" content="Sami Halawa" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href={canonical} />
+        <script type="application/ld+json">{JSON.stringify(orgJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(webSiteJsonLd)}</script>
+      </Helmet>
       <Header />
       <main id="main-content">
         <Outlet />
@@ -25,4 +59,3 @@ const Layout: React.FC = () => {
 };
 
 export default Layout;
-

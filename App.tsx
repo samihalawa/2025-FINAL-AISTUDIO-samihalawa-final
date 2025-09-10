@@ -8,12 +8,17 @@ import ServicesPage from './pages/ServicesPage';
 import ProjectsPage from './pages/ProjectsPage';
 import BlogPage from './pages/BlogPage';
 import ContactPage from './pages/ContactPage';
+import TrainingOverview from './pages/TrainingOverview';
 import MedicalAI from './pages/services/MedicalAI';
 import BusinessAutomation from './pages/services/BusinessAutomation';
 import UniversityML from './pages/services/UniversityML';
 import FamilyAI from './pages/services/FamilyAI';
 import AdvancedAI from './pages/services/AdvancedAI';
 import NoCodeAI from './pages/services/NoCodeAI';
+import PromptEngineering from './pages/services/PromptEngineering';
+import RagLangChain from './pages/services/RagLangChain';
+import AgentsAutomation from './pages/services/AgentsAutomation';
+import AIForMarketing from './pages/services/AIForMarketing';
 import ServicesIndex from './pages/services/Index';
 import ServicesLayout from './pages/services/ServicesLayout';
 import Troubleshooting from './pages/services/Troubleshooting';
@@ -27,6 +32,7 @@ const App: React.FC = () => {
                         <Route path="/" element={<Layout />}>
                             <Route index element={<HomePage />} />
                             <Route path="corporate" element={<ServicesPage />} />
+                            <Route path="ai-training" element={<TrainingOverview />} />
                             <Route path="projects" element={<ProjectsPage />} />
                             <Route path="blog" element={<BlogPage />} />
                             <Route path="contact" element={<ContactPage />} />
@@ -38,6 +44,10 @@ const App: React.FC = () => {
                                 <Route path="family-ai" element={<FamilyAI />} />
                                 <Route path="advanced-ai" element={<AdvancedAI />} />
                                 <Route path="no-code-ai" element={<NoCodeAI />} />
+                                <Route path="prompt-engineering" element={<PromptEngineering />} />
+                                <Route path="rag-langchain" element={<RagLangChain />} />
+                                <Route path="agents-automation" element={<AgentsAutomation />} />
+                                <Route path="ai-for-marketing" element={<AIForMarketing />} />
                                 <Route path="troubleshooting" element={<Troubleshooting />} />
                             </Route>
                             <Route path="*" element={<HomePage />} />

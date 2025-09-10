@@ -8,7 +8,11 @@ const cards = [
   { href: '/services/university-ml', title: 'Universidad: Python/ML', desc: 'Apoyo en asignaturas de IA, Python y TFG/TFM.' },
   { href: '/services/family-ai', title: 'IA para Familias', desc: 'Programas para niños, adolescentes y padres.' },
   { href: '/services/advanced-ai', title: 'Proyectos Avanzados', desc: 'LangChain, AutoGPT, agentes MCP y despliegue cloud.' },
-  { href: '/services/no-code-ai', title: 'Creador No-Code', desc: 'Contenido y marketing con Midjourney, Runway, ChatGPT.' }
+  { href: '/services/no-code-ai', title: 'Creador No-Code', desc: 'Contenido y marketing con Midjourney, Runway, ChatGPT.' },
+  { href: '/services/prompt-engineering', title: 'Prompt Engineering', desc: 'Buenas prácticas LLM: prompts, herramientas, evaluación y costes.' },
+  { href: '/services/rag-langchain', title: 'RAG & LangChain', desc: 'Búsqueda con embeddings, chunking y evaluaciones de producción.' },
+  { href: '/services/agents-automation', title: 'Agentes y Automatización', desc: 'Bootcamp para ventas/ops con Zapier/Make/n8n y LLMs.' },
+  { href: '/services/ai-for-marketing', title: 'IA para Marketing', desc: 'Sistemas de contenido, SEO, creatividades de anuncios y analítica.' },
 ];
 
 const ServicesIndex: React.FC = () => {
@@ -33,4 +37,3 @@ const ServicesIndex: React.FC = () => {
 };
 
 export default ServicesIndex;
-

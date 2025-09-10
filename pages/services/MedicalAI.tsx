@@ -30,6 +30,15 @@ const MedicalAI: React.FC = () => {
     serviceType: 'AI Medical Training',
     offers: { '@type': 'Offer', availability: 'https://schema.org/InStock' }
   };
+  const jsonLdFaq = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: '¿Es seguro para datos clínicos?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Separamos entornos, aplicamos anonimización y controles de acceso.' }},
+      { '@type': 'Question', name: '¿Necesito programar?', acceptedAnswer: { '@type': 'Answer', text: 'No. Los flujos son visuales y guiados; el código es opcional.' }},
+      { '@type': 'Question', name: '¿Cuánto dura la formación?', acceptedAnswer: { '@type': 'Answer', text: 'Taller de 1 día o programa de 4 semanas (2h/semana).' }}
+    ]
+  };
   return (
     <section className="py-16 bg-white">
       <Helmet>
@@ -38,6 +47,7 @@ const MedicalAI: React.FC = () => {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
         <link rel="canonical" href="/services/medical-ai" />
       </Helmet>
       <div className="container mx-auto px-6 max-w-5xl">
@@ -63,4 +73,3 @@ const MedicalAI: React.FC = () => {
 };
 
 export default MedicalAI;
-

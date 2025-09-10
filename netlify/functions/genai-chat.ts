@@ -51,7 +51,7 @@ Constraints: Be concise, professional, accurate; if unsure, say you don\'t know.
     })
 
     const result = await chat.sendMessage({ message })
-    const text = result.text()
+    const text = result.text
 
     return {
       statusCode: 200,
