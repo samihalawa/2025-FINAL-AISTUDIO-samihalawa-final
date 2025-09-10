@@ -1,76 +1,12 @@
-import React, { useState, useEffect, Fragment, useRef } from 'react';
+import React, { Fragment } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import { Popover, Transition, Listbox } from '@headlessui/react';
 import { useTranslation } from '../i18n/LanguageContext';
 import { NAV_LINKS, LANGUAGES } from '../constants';
 
 const Header: React.FC = () => {
     const { t, language, setLanguage } = useTranslation();
-    const [activeSection, setActiveSection] = useState('');
     const selectedLanguage = LANGUAGES.find(l => l.code === language);
-    const headerRef = useRef<HTMLElement>(null);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const headerHeight = headerRef.current?.offsetHeight || 80;
-            // The "line" is placed slightly below the header.
-            // A section is "active" if its top has passed this line.
-            const scrollPosition = window.scrollY + headerHeight + 20;
-
-            // Handle being at the bottom of the page, forcing the last link to be active
-            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 20) {
-                setActiveSection('contact');
-                return;
-            }
-            
-            // Find the last section whose top is above the scrollPosition
-            // We iterate from the end of the links to the beginning.
-            for (let i = NAV_LINKS.length - 1; i >= 0; i--) {
-                const link = NAV_LINKS[i];
-                const section = document.querySelector(link.href) as HTMLElement;
-
-                if (section && section.offsetTop <= scrollPosition) {
-                    setActiveSection(section.id);
-                    return; // Found the active section, no need to continue
-                }
-            }
-
-            // If we're above all sections, no section is active.
-            setActiveSection('');
-        };
-
-        // Add event listener and run once on mount
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        handleScroll();
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []); // Empty dependencies, will run once on mount
-    
-    const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
-        e.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-        setActiveSection('');
-        // Clean up the URL hash
-        if (history.replaceState) {
-            history.replaceState(null, '', window.location.pathname + window.location.search);
-        }
-    };
-
-    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-        e.preventDefault();
-        const targetElement = document.querySelector(href);
-        if (targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth' });
-            // Safely update the URL hash without creating a new history entry
-            if (history.replaceState) {
-                history.replaceState(null, '', href);
-            }
-        }
-    };
 
     const LanguageSelector: React.FC<{mobile?: boolean}> = ({ mobile = false }) => (
         <Listbox value={language} onChange={setLanguage}>
@@ -117,16 +53,21 @@ const Header: React.FC = () => {
     );
 
     return (
-        <header ref={headerRef} role="banner" className="sticky top-0 w-full bg-white/95 backdrop-blur-sm border-b border-slate-200 z-50">
+        <header role="banner" className="sticky top-0 w-full bg-white/95 backdrop-blur-sm border-b border-slate-200 z-50">
             <div className="container mx-auto px-6 py-3">
                 <div className="flex items-center justify-between">
-                    <a href="#top" onClick={scrollToTop} className="text-2xl font-bold text-slate-900">Sami Halawa</a>
+                    <Link to="/" className="text-2xl font-bold text-slate-900">Sami Halawa</Link>
                     
                     <nav aria-label="Primary navigation" className="hidden md:flex space-x-1 items-center">
                         {NAV_LINKS.map(link => (
-                            <a key={link.key} href={link.href} onClick={(e) => handleNavClick(e, link.href)} className={`px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${activeSection === link.href.substring(1) ? 'text-slate-900' : 'text-slate-600 hover:text-slate-900'}`}>
+                            <NavLink
+                                key={link.key}
+                                to={link.href}
+                                className={({ isActive }) => `px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${isActive ? 'text-slate-900' : 'text-slate-600 hover:text-slate-900'}`}
+                                end
+                            >
                                 {t(link.key)}
-                            </a>
+                            </NavLink>
                         ))}
                         <LanguageSelector />
                     </nav>
@@ -155,7 +96,7 @@ const Header: React.FC = () => {
                                         <nav className="mt-6">
                                             <div className="grid gap-y-4">
                                                 {NAV_LINKS.map(link => (
-                                                    <a key={link.key} href={link.href} onClick={(e) => { handleNavClick(e, link.href); close(); }} className="text-base font-medium text-slate-700 hover:text-slate-900">{t(link.key)}</a>
+                                                    <Link key={link.key} to={link.href} onClick={() => close()} className="text-base font-medium text-slate-700 hover:text-slate-900">{t(link.key)}</Link>
                                                 ))}
                                                 <LanguageSelector mobile={true} />
                                             </div>

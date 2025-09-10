@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
                         >
                             {t('hero.contactButton')}
                         </button>
-                        <a href="#projects" onClick={(e) => handleScrollLink(e, '#projects')} className="inline-block bg-white text-slate-700 px-8 py-3 rounded-md text-lg font-semibold hover:bg-slate-100 transition-colors duration-300 border border-slate-300 shadow-sm">
+                        <a href="/projects" className="inline-block bg-white text-slate-700 px-8 py-3 rounded-md text-lg font-semibold hover:bg-slate-100 transition-colors duration-300 border border-slate-300 shadow-sm">
                             {t('hero.projectsButton')}
                         </a>
                     </div>

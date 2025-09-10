@@ -1,13 +1,10 @@
 import { NavLink, Language, Skill, Tool, Project, Testimonial, Experience, ContactInfo, AdditionalProject, TrainingProgram, Partner } from './types';
 
 export const NAV_LINKS: NavLink[] = [
-    { href: '#about', key: 'nav.about' },
-    { href: '#corporate', key: 'nav.corporate' },
-    { href: '#projects', key: 'nav.projects' },
-    { href: '#skills', key: 'nav.skills' },
-    { href: '#experience', key: 'nav.experience' },
-    { href: '#blog', key: 'nav.blog' },
-    { href: '#contact', key: 'nav.contact' },
+    { href: '/', key: 'nav.about' },
+    { href: '/corporate', key: 'nav.corporate' },
+    { href: '/projects', key: 'nav.projects' },
+    { href: '/blog', key: 'nav.blog' },
 ];
 
 export const LANGUAGES: Language[] = [

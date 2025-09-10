@@ -59,19 +59,37 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose, project }) => {
                 }),
             });
 
-            if (!res.ok) {
-                throw new Error(await res.text());
+            if (res.ok) {
+                const data = await res.json();
+                setMessages(prev => [...prev, { sender: 'ai', text: data.text || 'No response.' }]);
+            } else {
+                // Graceful local fallback (no server / no API key)
+                const fallback = buildFallbackAnswer(userMessage.text);
+                setMessages(prev => [...prev, { sender: 'ai', text: fallback }]);
             }
-            const data = await res.json();
-            setMessages(prev => [...prev, { sender: 'ai', text: data.text || 'No response.' }]);
         } catch (e) {
             console.error('AI chat error:', e);
-            const errorMessage = 'Sorry, something went wrong while getting a response. Please try again.';
-            setError(errorMessage);
-            setMessages(prev => [...prev, { sender: 'ai', text: errorMessage }]);
+            // Offline/dev fallback ensures the UI still responds
+            const fallback = buildFallbackAnswer(userMessage.text);
+            setError(null);
+            setMessages(prev => [...prev, { sender: 'ai', text: fallback }]);
         } finally {
             setIsLoading(false);
         }
+    };
+
+    const buildFallbackAnswer = (msg: string) => {
+        const title = project ? t(project.titleKey) : 'Project';
+        const summary = project ? t(project.summaryKey) : '';
+        const features = project ? project.features.map(f => `- ${t(f)}`).join('\n') : '';
+        return [
+            `Demo response for "${title}" (local preview).`,
+            summary && `Summary: ${summary}`,
+            features && `Key features:\n${features}`,
+            '',
+            `You said: "${msg}"`,
+            'In production, this uses the Netlify function with Google GenAI.',
+        ].filter(Boolean).join('\n');
     };
 
     return (
