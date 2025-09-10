@@ -42,6 +42,10 @@ const CaseStudiesIndex = lazy(() => import('./pages/case-studies/Index'));
 const RadiologyAI = lazy(() => import('./pages/case-studies/RadiologyAI'));
 const AutoClientCase = lazy(() => import('./pages/case-studies/AutoClient'));
 const AttioSequences = lazy(() => import('./pages/case-studies/AttioSequences'));
+const MadridAIReadiness = lazy(() => import('./pages/locations/services/MadridAIReadiness'));
+const BarcelonaPromptEngineering = lazy(() => import('./pages/locations/services/BarcelonaPromptEngineering'));
+const ValenciaRagLangChain = lazy(() => import('./pages/locations/services/ValenciaRagLangChain'));
+const MadridBusinessAutomation = lazy(() => import('./pages/locations/services/MadridBusinessAutomation'));
 
 const App: React.FC = () => {
     return (
@@ -64,6 +68,10 @@ const App: React.FC = () => {
                             <Route path="locations/valencia" element={<Valencia />} />
                             <Route path="locations/spain" element={<Spain />} />
                             <Route path="locations/online" element={<Online />} />
+                            <Route path="locations/madrid/ai-readiness-audit" element={<MadridAIReadiness />} />
+                            <Route path="locations/barcelona/prompt-engineering" element={<BarcelonaPromptEngineering />} />
+                            <Route path="locations/valencia/rag-langchain" element={<ValenciaRagLangChain />} />
+                            <Route path="locations/madrid/business-automation" element={<MadridBusinessAutomation />} />
                             <Route path="case-studies" element={<CaseStudiesIndex />} />
                             <Route path="case-studies/radiology-ai" element={<RadiologyAI />} />
                             <Route path="case-studies/autoclient" element={<AutoClientCase />} />

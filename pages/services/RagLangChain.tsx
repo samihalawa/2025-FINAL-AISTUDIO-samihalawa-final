@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { useTranslation } from '../../i18n/LanguageContext';
 
 const Section: React.FC<{ title: string, points: string[] }>=({ title, points })=> (
   <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
@@ -12,8 +13,10 @@ const Section: React.FC<{ title: string, points: string[] }>=({ title, points })
 );
 
 const RagLangChain: React.FC = () => {
-  const title = 'RAG & LangChain Workshop — Build Production-Ready Retrieval';
-  const description = 'Two-day workshop to design embeddings, chunking, hybrid search, and evaluators. Deploy a reliable RAG service with LangChain.';
+  const { t } = useTranslation();
+  const title = t('services.ragLangChain.title');
+  const description = t('services.ragLangChain.description');
+  const ogImage = 'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1200&h=630&q=80';
   const jsonLdCourse = {
     '@context': 'https://schema.org',
     '@type': 'Course',
@@ -37,6 +40,8 @@ const RagLangChain: React.FC = () => {
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
+        <meta property="og:image" content={ogImage} />
+        <meta name="twitter:image" content={ogImage} />
         <script type="application/ld+json">{JSON.stringify(jsonLdCourse)}</script>
         <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
         <link rel="canonical" href="/services/rag-langchain" />
@@ -68,4 +73,3 @@ const RagLangChain: React.FC = () => {
 };
 
 export default RagLangChain;
-

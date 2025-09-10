@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { useTranslation } from '../../i18n/LanguageContext';
 
 const Section: React.FC<{ title: string, points: string[] }>=({ title, points })=> (
   <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
@@ -19,8 +20,10 @@ const CTA: React.FC=()=> (
 );
 
 const BusinessAutomation: React.FC = () => {
-  const title = 'Automatización con IA: ChatGPT, Zapier, Make — Productividad 10x sin programar';
-  const description = 'Implementa flujos automáticos de negocio, chatbots 24/7 y dashboards en tiempo real. Resultados en semanas, sin escribir código.';
+  const { t } = useTranslation();
+  const title = t('services.businessAutomation.title');
+  const description = t('services.businessAutomation.description');
+  const ogImage = 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&h=630&q=80';
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -46,6 +49,8 @@ const BusinessAutomation: React.FC = () => {
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
+        <meta property="og:image" content={ogImage} />
+        <meta name="twitter:image" content={ogImage} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
         <link rel="canonical" href="/services/business-automation" />

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { useTranslation } from '../../i18n/LanguageContext';
 
 const Section: React.FC<{ title: string, points: string[] }>=({ title, points })=> (
   <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
@@ -19,8 +20,10 @@ const CTA: React.FC=()=> (
 );
 
 const UniversityML: React.FC = () => {
-  const title = 'Universidad: Python y Machine Learning, apoyo TFG/TFM y estadística aplicada';
-  const description = 'Clases prácticas de IA/ML para universitarios: Python, Scikit-learn, TensorFlow, redes neuronales y apoyo integral para TFG/TFM.';
+  const { t } = useTranslation();
+  const title = t('services.universityML.title');
+  const description = t('services.universityML.description');
+  const ogImage = 'https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&h=630&q=80';
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -46,6 +49,8 @@ const UniversityML: React.FC = () => {
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
+        <meta property="og:image" content={ogImage} />
+        <meta name="twitter:image" content={ogImage} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
         <link rel="canonical" href="/services/university-ml" />

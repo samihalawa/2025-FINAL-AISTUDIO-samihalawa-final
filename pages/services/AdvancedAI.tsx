@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { useTranslation } from '../../i18n/LanguageContext';
 
 const Section: React.FC<{ title: string, points: string[] }>=({ title, points })=> (
   <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
@@ -19,8 +20,10 @@ const CTA: React.FC=()=> (
 );
 
 const AdvancedAI: React.FC = () => {
-  const title = 'Proyectos IA Avanzados: LangChain, AutoGPT, Agentes MCP, Vector Databases';
-  const description = 'Diseño y desarrollo de soluciones IA de vanguardia: RAG, agentes autónomos, pipelines ML productivos y despliegue en cloud.';
+  const { t } = useTranslation();
+  const title = t('services.advancedAI.title');
+  const description = t('services.advancedAI.description');
+  const ogImage = 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=80';
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -45,6 +48,8 @@ const AdvancedAI: React.FC = () => {
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
+        <meta property="og:image" content={ogImage} />
+        <meta name="twitter:image" content={ogImage} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
         <link rel="canonical" href="/services/advanced-ai" />

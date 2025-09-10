@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { useTranslation } from '../../i18n/LanguageContext';
 
 const Section: React.FC<{ title: string, points: string[] }>=({ title, points })=> (
   <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
@@ -12,8 +13,10 @@ const Section: React.FC<{ title: string, points: string[] }>=({ title, points })
 );
 
 const AIReadinessAudit: React.FC = () => {
-  const title = 'Enterprise AI Readiness Audit — Evals, Safety & Cost Controls';
-  const description = 'A structured audit of your AI stack: prompts, chains, evals, guardrails, observability and cost/performance budgets with a hardening plan.';
+  const { t } = useTranslation();
+  const title = t('services.aiReadinessAudit.title');
+  const description = t('services.aiReadinessAudit.description');
+  const ogImage = 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&h=630&q=80';
   const jsonLd = { '@context': 'https://schema.org', '@type': 'Service', name: title, serviceType: 'AI Audit', provider: { '@type': 'Person', name: 'Sami Halawa' } };
   const faq = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
     { '@type': 'Question', name: 'What’s evaluated?', acceptedAnswer: { '@type': 'Answer', text: 'Prompt design, tool-calling, eval datasets, metrics, safety guardrails, logs and dashboards.' }},
@@ -25,6 +28,8 @@ const AIReadinessAudit: React.FC = () => {
         <title>{title} | Sami Halawa</title>
         <meta name="description" content={description} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <meta property="og:image" content={ogImage} />
+        <meta name="twitter:image" content={ogImage} />
         <script type="application/ld+json">{JSON.stringify(faq)}</script>
         <link rel="canonical" href="/services/ai-readiness-audit" />
       </Helmet>
@@ -45,4 +50,3 @@ const AIReadinessAudit: React.FC = () => {
 };
 
 export default AIReadinessAudit;
-

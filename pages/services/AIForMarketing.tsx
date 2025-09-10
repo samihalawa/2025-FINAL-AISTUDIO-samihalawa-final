@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { useTranslation } from '../../i18n/LanguageContext';
 
 const Section: React.FC<{ title: string, points: string[] }>=({ title, points })=> (
   <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
@@ -12,8 +13,10 @@ const Section: React.FC<{ title: string, points: string[] }>=({ title, points })
 );
 
 const AIForMarketing: React.FC = () => {
-  const title = 'AI for Marketing Teams — Content, SEO, Ads & Analytics';
-  const description = 'Practical training to build content systems, SEO briefs, ad creatives and reporting dashboards with AI. Templates included.';
+  const { t } = useTranslation();
+  const title = t('services.aiForMarketing.title');
+  const description = t('services.aiForMarketing.description');
+  const ogImage = 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&h=630&q=80';
   const jsonLdService = {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -38,6 +41,8 @@ const AIForMarketing: React.FC = () => {
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
+        <meta property="og:image" content={ogImage} />
+        <meta name="twitter:image" content={ogImage} />
         <script type="application/ld+json">{JSON.stringify(jsonLdService)}</script>
         <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
         <link rel="canonical" href="/services/ai-for-marketing" />
@@ -69,4 +74,3 @@ const AIForMarketing: React.FC = () => {
 };
 
 export default AIForMarketing;
-
