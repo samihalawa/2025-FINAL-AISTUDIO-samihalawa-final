@@ -1,14 +1,17 @@
 import React from 'react';
 import CityPage from './CityPage';
+import { useTranslation } from '../../i18n/LanguageContext';
 
-const Online: React.FC = () => (
-  <CityPage
-    city="Online"
-    title="Online AI Training — Remote Workshops for Global Teams"
-    description="Remote-first delivery of AI workshops and programs worldwide. Live, interactive and hands-on with templates and labs."
-    canonical="/locations/online"
-  />
-);
+const Online: React.FC = () => {
+  const { t } = useTranslation();
+  return (
+    <CityPage
+      city="Online"
+      title={t('locations.online.title')}
+      description={t('locations.online.description')}
+      canonical="/locations/online"
+    />
+  );
+};
 
 export default Online;
-

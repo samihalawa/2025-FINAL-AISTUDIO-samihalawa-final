@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { useTranslation } from '../i18n/LanguageContext';
 
 const Section: React.FC<{ title: string; children: React.ReactNode }>=({ title, children }) => (
   <section className="mb-10">
@@ -10,8 +11,9 @@ const Section: React.FC<{ title: string; children: React.ReactNode }>=({ title, 
 );
 
 const TrainingOverview: React.FC = () => {
-  const title = 'AI Training Programs for Teams — Workshops, Bootcamps & Consulting';
-  const description = 'Comprehensive AI training across prompting, RAG, agents, no‑code, marketing, medical and university programs. Onsite in Madrid or remote.';
+  const { t } = useTranslation();
+  const title = t('trainingOverview.title');
+  const description = t('trainingOverview.description');
   const itemListJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
@@ -115,4 +117,3 @@ const TrainingOverview: React.FC = () => {
 };
 
 export default TrainingOverview;
-

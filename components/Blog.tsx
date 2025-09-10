@@ -46,6 +46,14 @@ const Blog: React.FC = () => {
     const openArticleModal = (article: Article) => setSelectedArticle(article);
     const closeArticleModal = () => setSelectedArticle(null);
 
+    const relatedMap: Record<string, { href: string; label: string }[]> = {
+        'building-rag-with-gemini-langchain': [ { href: '/services/rag-langchain', label: 'RAG & LangChain' } ],
+        '2025-guide-ai-agent-orchestration': [ { href: '/services/agents-automation', label: 'AI Agents & Automation' } ],
+        'finetuning-vs-prompt-engineering': [ { href: '/services/prompt-engineering', label: 'Prompt Engineering' } ],
+        'ai-agents-automating-workflows': [ { href: '/services/agents-automation', label: 'AI Agents & Automation' }, { href: '/services/business-automation', label: 'Business Automation' } ],
+        'deep-dive-attio-api': [ { href: '/case-studies/attio-sequences', label: 'Attio Sequences Case' } ],
+    };
+
     return (
         <>
             <section id="blog" className="py-20 bg-slate-50 scroll-mt-20" aria-label="Blog">
@@ -69,6 +77,14 @@ const Blog: React.FC = () => {
                                             <p className="text-sm text-slate-500 mb-2">{new Date(article.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</p>
                                             <h3 className="text-xl font-bold mb-3 text-slate-900">{article.title}</h3>
                                             <p className="text-slate-600 mb-4 flex-grow">{article.summary || ' '}</p>
+                                            {relatedMap[article.slug] && (
+                                                <div className="text-sm text-slate-600 mb-3">
+                                                    <span className="font-semibold">Related:</span>
+                                                    {relatedMap[article.slug].map((r) => (
+                                                        <a key={r.href} href={r.href} className="ml-2 underline hover:no-underline">{r.label}</a>
+                                                    ))}
+                                                </div>
+                                            )}
                                             <div className="mt-auto">
                                                 <button onClick={() => openArticleModal(article)} className="font-semibold text-slate-800 hover:text-slate-900 transition-colors duration-300 group text-sm">
                                                     {t('blog.readMore')} <i className="fas fa-arrow-right ml-1 transform group-hover:translate-x-1 transition-transform"></i>

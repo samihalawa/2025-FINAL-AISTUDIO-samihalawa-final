@@ -1,14 +1,17 @@
 import React from 'react';
 import CityPage from './CityPage';
+import { useTranslation } from '../../i18n/LanguageContext';
 
-const Madrid: React.FC = () => (
-  <CityPage
-    city="Madrid"
-    title="AI Training in Madrid — Workshops & Consulting"
-    description="Onsite AI programs for teams in Madrid: prompting, RAG, agents, automation, and marketing. Spanish/English."
-    canonical="/locations/madrid"
-  />
-);
+const Madrid: React.FC = () => {
+  const { t } = useTranslation();
+  return (
+    <CityPage
+      city="Madrid"
+      title={t('locations.madrid.title')}
+      description={t('locations.madrid.description')}
+      canonical="/locations/madrid"
+    />
+  );
+};
 
 export default Madrid;
-

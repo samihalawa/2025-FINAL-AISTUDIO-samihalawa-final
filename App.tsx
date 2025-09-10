@@ -9,6 +9,7 @@ import ProjectsPage from './pages/ProjectsPage';
 import BlogPage from './pages/BlogPage';
 import ContactPage from './pages/ContactPage';
 import TrainingOverview from './pages/TrainingOverview';
+import SearchPage from './pages/SearchPage';
 import MedicalAI from './pages/services/MedicalAI';
 import BusinessAutomation from './pages/services/BusinessAutomation';
 import UniversityML from './pages/services/UniversityML';
@@ -52,6 +53,7 @@ const App: React.FC = () => {
                             <Route index element={<HomePage />} />
                             <Route path="corporate" element={<ServicesPage />} />
                             <Route path="ai-training" element={<TrainingOverview />} />
+                            <Route path="search" element={<SearchPage />} />
                             <Route path="projects" element={<ProjectsPage />} />
                             <Route path="blog" element={<BlogPage />} />
                             <Route path="contact" element={<ContactPage />} />
