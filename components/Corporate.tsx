@@ -55,6 +55,10 @@ const Corporate: React.FC = () => {
                           { href: '/services/rag-langchain', title: 'RAG & LangChain', desc: 'Recuperación aumentada, re-ranking y despliegue.' },
                           { href: '/services/agents-automation', title: 'Agentes y Automatización', desc: 'Bootcamp para operaciones y ventas.' },
                           { href: '/services/ai-for-marketing', title: 'IA para Marketing', desc: 'Sistemas de contenido, SEO y anuncios.' },
+                          { href: '/services/ai-readiness-audit', title: 'AI Readiness Audit', desc: 'Evals, guardrails y control de costes.' },
+                          { href: '/services/ai-competitive-research', title: 'Investigación Competitiva', desc: 'Reverse engineering y blueprints.' },
+                          { href: '/services/ai-funding-grants', title: 'Financiación y Subvenciones', desc: 'Oportunidades y redacción de propuestas.' },
+                          { href: '/services/accelerator-readiness', title: 'Aceleradoras & Pitch', desc: 'Deck, demo y narrativa ganadora.' },
                           { href: '/services/troubleshooting', title: 'Soporte y Troubleshooting', desc: 'Rescate de proyectos ML, auditoría y arreglos de automatización.' },
                         ].map(card => (
                           <a key={card.href} href={card.href} className="block bg-white p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-0.5 transition-all">

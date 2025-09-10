@@ -13,6 +13,15 @@ const cards = [
   { href: '/services/rag-langchain', title: 'RAG & LangChain', desc: 'Búsqueda con embeddings, chunking y evaluaciones de producción.' },
   { href: '/services/agents-automation', title: 'Agentes y Automatización', desc: 'Bootcamp para ventas/ops con Zapier/Make/n8n y LLMs.' },
   { href: '/services/ai-for-marketing', title: 'IA para Marketing', desc: 'Sistemas de contenido, SEO, creatividades de anuncios y analítica.' },
+  { href: '/services/ai-readiness-audit', title: 'Auditoría AI Readiness', desc: 'Evals, seguridad, observabilidad y costes con plan de acción.' },
+  { href: '/services/ai-competitive-research', title: 'Investigación Competitiva', desc: 'Reverse engineering y blueprints para productos de éxito.' },
+  { href: '/services/ai-funding-grants', title: 'Financiación y Subvenciones', desc: 'Mapeo de oportunidades y redacción de propuestas para IA.' },
+  { href: '/services/ai-ip-patents', title: 'Patentes e IP', desc: 'Estrategia de patentes, claims y materiales para abogado.' },
+  { href: '/services/accelerator-readiness', title: 'Aceleradoras & Pitch', desc: 'Deck, demo y narrativa para selección e inversión.' },
+  { href: '/services/data-science-training', title: 'Formación Data Science', desc: 'Estadística y ML con Python, evaluación y proyectos.' },
+  { href: '/services/proptech-analytics', title: 'PropTech Analytics', desc: 'Pipelines inmobiliarios, valoración y dashboards.' },
+  { href: '/services/airbnb-analytics', title: 'Airbnb Intelligence', desc: 'Pricing y ocupación con benchmarking y alertas.' },
+  { href: '/services/ai-language-learning', title: 'Idiomas con IA', desc: 'Plan personalizado con SRS, conversación y progreso.' },
 ];
 
 const ServicesIndex: React.FC = () => {
