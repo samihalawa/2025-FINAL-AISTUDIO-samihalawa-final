@@ -8,6 +8,7 @@ const Layout: React.FC = () => {
   const location = useLocation();
   const siteUrl = 'https://samihalawa.com';
   const canonical = `${siteUrl}${location.pathname}`;
+  const defaultOg = 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&h=630&q=80';
   const orgJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',
@@ -36,6 +37,8 @@ const Layout: React.FC = () => {
         <meta name="theme-color" content="#0f172a" />
         <meta property="og:site_name" content="Sami Halawa" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta property="og:image" content={defaultOg} />
+        <meta name="twitter:image" content={defaultOg} />
         <link rel="canonical" href={canonical} />
         <script type="application/ld+json">{JSON.stringify(orgJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(webSiteJsonLd)}</script>
