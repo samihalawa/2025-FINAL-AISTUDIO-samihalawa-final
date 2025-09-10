@@ -41,6 +41,21 @@ const ServicesIndex: React.FC = () => {
           </Link>
         ))}
       </div>
+      <div className="mt-12">
+        <h2 className="text-2xl font-bold text-slate-900 mb-4">Casos de estudio destacados</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            { href: '/case-studies/autoclient', title: 'AutoClient — Outreach & CRM Automation', desc: 'Agente de prospección y sincronización con CRM.' },
+            { href: '/case-studies/radiology-ai', title: 'RadiologyAI — Informes & Triaje', desc: 'Plantillas clínicas y automatización de informes.' },
+            { href: '/case-studies/banking-assistant', title: 'Banking Assistant — Autoservicio', desc: 'Asistente bancario con métricas y guardrails.' },
+          ].map(cs => (
+            <a key={cs.href} href={cs.href} className="block bg-white p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-0.5 transition-all">
+              <h3 className="text-lg font-semibold text-slate-900 mb-2">{cs.title}</h3>
+              <p className="text-slate-700">{cs.desc}</p>
+            </a>
+          ))}
+        </div>
+      </div>
     </section>
   );
 };
