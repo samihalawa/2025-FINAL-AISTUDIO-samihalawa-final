@@ -18,6 +18,10 @@ const LocationsIndex: React.FC = () => {
       <Helmet>
         <title>{t('locations.title')} | Sami Halawa</title>
         <meta name="description" content={t('locations.description')} />
+        <meta property="og:title" content={t('locations.title')} />
+        <meta property="og:description" content={t('locations.description')} />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=1200&h=630&q=80" />
+        <meta name="twitter:image" content="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=1200&h=630&q=80" />
         <link rel="canonical" href="/locations" />
       </Helmet>
       <div className="container mx-auto px-6 max-w-5xl">

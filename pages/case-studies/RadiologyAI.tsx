@@ -1,4 +1,5 @@
 import React from 'react';
+import HireCTA from '../../components/HireCTA';
 import { Helmet } from 'react-helmet-async';
 
 const RadiologyAI: React.FC = () => {
@@ -33,6 +34,10 @@ const RadiologyAI: React.FC = () => {
           <li>Imaging support groundwork (PACS compatibility)</li>
           <li>Patent application prep and IP strategy</li>
         </ul>
+        <div className="mt-8">
+          <p className="text-sm text-slate-600">Related services: <a className="underline" href="/services/medical-ai">Medical AI</a> · <a className="underline" href="/services/advanced-ai">Advanced AI Projects</a></p>
+          <HireCTA />
+        </div>
       </div>
     </section>
   );

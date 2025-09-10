@@ -1,4 +1,5 @@
 import React from 'react';
+import HireCTA from '../../components/HireCTA';
 import { Helmet } from 'react-helmet-async';
 
 const AutoClientCase: React.FC = () => {
@@ -33,6 +34,10 @@ const AutoClientCase: React.FC = () => {
           <li>CRM sync and dashboards</li>
           <li>QA, test plans and hardening checklist</li>
         </ul>
+        <div className="mt-8">
+          <p className="text-sm text-slate-600">Related services: <a className="underline" href="/services/agents-automation">AI Agents & Automation</a> · <a className="underline" href="/services/business-automation">Business Automation</a></p>
+          <HireCTA />
+        </div>
       </div>
     </section>
   );

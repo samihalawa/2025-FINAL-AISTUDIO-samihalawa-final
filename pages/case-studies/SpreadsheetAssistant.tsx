@@ -1,4 +1,5 @@
 import React from 'react';
+import HireCTA from '../../components/HireCTA';
 import { Helmet } from 'react-helmet-async';
 
 const SpreadsheetAssistant: React.FC = () => {
@@ -28,10 +29,13 @@ const SpreadsheetAssistant: React.FC = () => {
           <li>Anomaly flags and explanations</li>
           <li>Adoption playbook and training sessions</li>
         </ul>
+        <div className="mt-8">
+          <p className="text-sm text-slate-600">Related services: <a className="underline" href="/services/rag-langchain">RAG & LangChain</a> · <a className="underline" href="/services/prompt-engineering">Prompt Engineering</a></p>
+          <HireCTA />
+        </div>
       </div>
     </section>
   );
 };
 
 export default SpreadsheetAssistant;
-

@@ -1,4 +1,5 @@
 import React from 'react';
+import HireCTA from '../../components/HireCTA';
 import { Helmet } from 'react-helmet-async';
 
 const AttioSequences: React.FC = () => {
@@ -33,6 +34,10 @@ const AttioSequences: React.FC = () => {
           <li>API specs with examples</li>
           <li>MVP scope and milestones</li>
         </ul>
+        <div className="mt-8">
+          <p className="text-sm text-slate-600">Related services: <a className="underline" href="/services/ai-competitive-research">AI Competitive Research</a> · <a className="underline" href="/services/ai-readiness-audit">AI Readiness Audit</a></p>
+          <HireCTA />
+        </div>
       </div>
     </section>
   );

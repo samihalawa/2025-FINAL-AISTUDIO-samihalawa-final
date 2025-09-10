@@ -18,6 +18,10 @@ const CaseStudiesIndex: React.FC = () => {
       <Helmet>
         <title>AI Case Studies | Sami Halawa</title>
         <meta name="description" content="Selected AI case studies across healthcare, sales automation and product research with measurable impact and deliverables." />
+        <meta property="og:title" content="AI Case Studies | Sami Halawa" />
+        <meta property="og:description" content="Selected AI case studies across healthcare, sales automation and product research with measurable impact and deliverables." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1200&h=630&q=80" />
+        <meta name="twitter:image" content="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1200&h=630&q=80" />
         <link rel="canonical" href="/case-studies" />
       </Helmet>
       <div className="container mx-auto px-6 max-w-5xl">

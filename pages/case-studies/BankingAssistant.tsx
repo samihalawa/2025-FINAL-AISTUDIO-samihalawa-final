@@ -1,4 +1,5 @@
 import React from 'react';
+import HireCTA from '../../components/HireCTA';
 import { Helmet } from 'react-helmet-async';
 
 const BankingAssistant: React.FC = () => {
@@ -32,10 +33,13 @@ const BankingAssistant: React.FC = () => {
           <li>Secure integration with banking APIs</li>
           <li>Evaluation pipeline and cost controls</li>
         </ul>
+        <div className="mt-8">
+          <p className="text-sm text-slate-600">Related services: <a className="underline" href="/services/business-automation">Business Automation</a> · <a className="underline" href="/services/ai-readiness-audit">AI Readiness Audit</a></p>
+          <HireCTA />
+        </div>
       </div>
     </section>
   );
 };
 
 export default BankingAssistant;
-

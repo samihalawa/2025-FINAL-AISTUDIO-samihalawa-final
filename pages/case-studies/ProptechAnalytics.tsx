@@ -1,4 +1,5 @@
 import React from 'react';
+import HireCTA from '../../components/HireCTA';
 import { Helmet } from 'react-helmet-async';
 
 const ProptechAnalytics: React.FC = () => {
@@ -28,10 +29,13 @@ const ProptechAnalytics: React.FC = () => {
           <li>Market trends and geo insights</li>
           <li>Dashboards and alerting playbooks</li>
         </ul>
+        <div className="mt-8">
+          <p className="text-sm text-slate-600">Related services: <a className="underline" href="/services/proptech-analytics">PropTech Analytics</a> · <a className="underline" href="/services/airbnb-analytics">Airbnb Intelligence</a></p>
+          <HireCTA />
+        </div>
       </div>
     </section>
   );
 };
 
 export default ProptechAnalytics;
-
