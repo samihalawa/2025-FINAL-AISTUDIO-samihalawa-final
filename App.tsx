@@ -46,6 +46,8 @@ const BankingAssistant = lazy(() => import('./pages/case-studies/BankingAssistan
 const SpreadsheetAssistant = lazy(() => import('./pages/case-studies/SpreadsheetAssistant'));
 const ProptechCase = lazy(() => import('./pages/case-studies/ProptechAnalytics'));
 const AirbnbCase = lazy(() => import('./pages/case-studies/AirbnbIntelligence'));
+const AutofundingGrants = lazy(() => import('./pages/case-studies/AutofundingGrants'));
+const LanzaderaReadiness = lazy(() => import('./pages/case-studies/LanzaderaReadiness'));
 const MadridAIReadiness = lazy(() => import('./pages/locations/services/MadridAIReadiness'));
 const BarcelonaPromptEngineering = lazy(() => import('./pages/locations/services/BarcelonaPromptEngineering'));
 const ValenciaRagLangChain = lazy(() => import('./pages/locations/services/ValenciaRagLangChain'));
@@ -84,6 +86,8 @@ const App: React.FC = () => {
                             <Route path="case-studies/spreadsheet-assistant" element={<SpreadsheetAssistant />} />
                             <Route path="case-studies/proptech-analytics" element={<ProptechCase />} />
                             <Route path="case-studies/airbnb-intelligence" element={<AirbnbCase />} />
+                            <Route path="case-studies/autofunding-grants" element={<AutofundingGrants />} />
+                            <Route path="case-studies/lanzadera-readiness" element={<LanzaderaReadiness />} />
                             <Route path="services" element={<ServicesLayout />}>
                                 <Route index element={<ServicesIndex />} />
                                 <Route path="medical-ai" element={<MedicalAI />} />

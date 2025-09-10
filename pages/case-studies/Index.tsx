@@ -10,6 +10,8 @@ const cases = [
   { href: '/case-studies/spreadsheet-assistant', title: 'AI Spreadsheet Assistant — NL to Formulas', desc: 'Natural language transforms with evals and anomaly flags.' },
   { href: '/case-studies/proptech-analytics', title: 'PropTech Analytics — Pipelines & Valuation', desc: 'Data pipelines, valuation models and dashboards.' },
   { href: '/case-studies/airbnb-intelligence', title: 'Airbnb Intelligence — Pricing & Occupancy', desc: 'Market intelligence and dashboards for STR portfolios.' },
+  { href: '/case-studies/autofunding-grants', title: 'Funding & Grants — Non‑Dilutive Wins', desc: 'Scouting, narratives, budgets and submission support.' },
+  { href: '/case-studies/lanzadera-readiness', title: 'Accelerator Readiness — Lanzadera', desc: 'Deck, demo, narrative and GTM with KPIs.' },
 ];
 
 const CaseStudiesIndex: React.FC = () => {
