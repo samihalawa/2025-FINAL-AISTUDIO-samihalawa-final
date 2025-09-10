@@ -30,16 +30,25 @@ const Projects: React.FC = () => {
             <section id="projects" className="py-20 bg-white scroll-mt-20" aria-label="Featured Projects">
                 <div className="container mx-auto px-6">
                     <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-slate-900">{t('projects.title')}</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {PROJECTS.map((project) => (
-                           <ProjectCard 
-                                key={project.id} 
-                                project={project} 
-                                onDemoClick={() => openDemoModal(project)}
-                                onChatClick={() => openChatModal(project)}
-                            />
-                        ))}
-                    </div>
+                    {PROJECTS.length ? (
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {PROJECTS.map((project) => (
+                               <ProjectCard 
+                                    key={project.id} 
+                                    project={project} 
+                                    onDemoClick={() => openDemoModal(project)}
+                                    onChatClick={() => openChatModal(project)}
+                                />
+                            ))}
+                        </div>
+                    ) : (
+                        <div className="max-w-2xl mx-auto bg-slate-50 border border-slate-200 rounded-lg p-6 text-center">
+                            <p className="text-slate-700">
+                                {t('projects.title')} are being updated. In the meantime, explore more on
+                                {' '}<a className="font-semibold underline" href="https://github.com/samihalawa" target="_blank" rel="noopener noreferrer">GitHub</a>.
+                            </p>
+                        </div>
+                    )}
                 </div>
             </section>
             

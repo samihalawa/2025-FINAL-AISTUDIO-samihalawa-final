@@ -4,6 +4,7 @@ import { TESTIMONIALS } from '../constants';
 
 const Testimonials: React.FC = () => {
     const { t } = useTranslation();
+    if (!TESTIMONIALS.length) return null;
     return (
         <section id="testimonials" className="py-20 bg-white" aria-label="Testimonials">
             <div className="container mx-auto px-6">
