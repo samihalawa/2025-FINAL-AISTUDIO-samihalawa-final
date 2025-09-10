@@ -6,14 +6,14 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "test:e2e": "playwright test"
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "^18.3.1",
     "@headlessui/react": "^2.0.0",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.2",
+    "react-helmet-async": "^2.0.5",
     "@google/genai": "latest",
     "marked": "^12.0.2",
     "gray-matter": "^4.0.3"
@@ -22,7 +22,6 @@
     "@types/node": "^22.14.0",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
-    "@playwright/test": "^1.47.2",
     "@vitejs/plugin-react": "^4.2.1",
     "typescript": "~5.8.2",
     "vite": "^6.2.0"

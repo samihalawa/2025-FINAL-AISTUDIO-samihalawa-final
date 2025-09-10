@@ -40,6 +40,25 @@ const Corporate: React.FC = () => {
                         ))}
                     </div>
                 </div>
+
+                <div className="mt-20">
+                    <h3 className="text-2xl md:text-3xl font-bold text-center mb-8 text-slate-900">Servicios destacados</h3>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {[
+                          { href: '/services/medical-ai', title: 'IA Médica', desc: 'ChatGPT clínico, informes automáticos y diagnóstico asistido.' },
+                          { href: '/services/business-automation', title: 'Automatización con IA', desc: 'Flujos 24/7 con ChatGPT, Zapier y Make, sin programar.' },
+                          { href: '/services/university-ml', title: 'Universidad: ML y TFG/TFM', desc: 'Python, ML y apoyo integral a proyectos.' },
+                          { href: '/services/family-ai', title: 'Familias y Educación', desc: 'Programas para niños, adolescentes y padres.' },
+                          { href: '/services/advanced-ai', title: 'Proyectos Avanzados', desc: 'LangChain, AutoGPT, agentes MCP y despliegue.' },
+                          { href: '/services/no-code-ai', title: 'Creador No-Code', desc: 'Contenido y marketing con IA sin código.' },
+                        ].map(card => (
+                          <a key={card.href} href={card.href} className="block bg-white p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-0.5 transition-all">
+                            <h4 className="text-lg font-semibold text-slate-900 mb-2">{card.title}</h4>
+                            <p className="text-slate-700">{card.desc}</p>
+                          </a>
+                        ))}
+                    </div>
+                </div>
             </div>
         </section>
     );
