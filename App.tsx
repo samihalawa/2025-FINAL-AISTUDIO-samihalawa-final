@@ -14,6 +14,8 @@ import UniversityML from './pages/services/UniversityML';
 import FamilyAI from './pages/services/FamilyAI';
 import AdvancedAI from './pages/services/AdvancedAI';
 import NoCodeAI from './pages/services/NoCodeAI';
+import ServicesIndex from './pages/services/Index';
+import ServicesLayout from './pages/services/ServicesLayout';
 
 const App: React.FC = () => {
     return (
@@ -27,7 +29,8 @@ const App: React.FC = () => {
                             <Route path="projects" element={<ProjectsPage />} />
                             <Route path="blog" element={<BlogPage />} />
                             <Route path="contact" element={<ContactPage />} />
-                            <Route path="services">
+                            <Route path="services" element={<ServicesLayout />}>
+                                <Route index element={<ServicesIndex />} />
                                 <Route path="medical-ai" element={<MedicalAI />} />
                                 <Route path="business-automation" element={<BusinessAutomation />} />
                                 <Route path="university-ml" element={<UniversityML />} />

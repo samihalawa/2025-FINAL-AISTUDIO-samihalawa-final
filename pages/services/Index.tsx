@@ -1,0 +1,36 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+
+const cards = [
+  { href: '/services/medical-ai', title: 'IA Médica', desc: 'Informes automáticos, triaje y diagnóstico asistido con IA clínica.' },
+  { href: '/services/business-automation', title: 'Automatización con IA', desc: 'Flujos 24/7 con ChatGPT, Zapier y Make. Sin programar.' },
+  { href: '/services/university-ml', title: 'Universidad: Python/ML', desc: 'Apoyo en asignaturas de IA, Python y TFG/TFM.' },
+  { href: '/services/family-ai', title: 'IA para Familias', desc: 'Programas para niños, adolescentes y padres.' },
+  { href: '/services/advanced-ai', title: 'Proyectos Avanzados', desc: 'LangChain, AutoGPT, agentes MCP y despliegue cloud.' },
+  { href: '/services/no-code-ai', title: 'Creador No-Code', desc: 'Contenido y marketing con Midjourney, Runway, ChatGPT.' }
+];
+
+const ServicesIndex: React.FC = () => {
+  return (
+    <section className="py-8">
+      <Helmet>
+        <title>Servicios de IA | Sami Halawa</title>
+        <meta name="description" content="Explora todos mis servicios: IA médica, automatización sin código, universidad (Python/ML), familias, proyectos avanzados y creación no-code." />
+      </Helmet>
+      <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">Servicios de Inteligencia Artificial</h1>
+      <p className="text-slate-700 mb-8 max-w-3xl">Formación y desarrollo práctico para principiantes, empresas, médicos, universitarios y creadores. Elige tu camino y empezamos hoy.</p>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {cards.map(card => (
+          <Link key={card.href} to={card.href} className="block bg-white p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-0.5 transition-all">
+            <h2 className="text-lg font-semibold text-slate-900 mb-2">{card.title}</h2>
+            <p className="text-slate-700">{card.desc}</p>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default ServicesIndex;
+
