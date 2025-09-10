@@ -1,53 +1,54 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { LanguageProvider } from './i18n/LanguageContext';
 import Layout from './components/Layout';
-import HomePage from './pages/HomePage';
-import ServicesPage from './pages/ServicesPage';
-import ProjectsPage from './pages/ProjectsPage';
-import BlogPage from './pages/BlogPage';
-import ContactPage from './pages/ContactPage';
-import TrainingOverview from './pages/TrainingOverview';
-import SearchPage from './pages/SearchPage';
-import MedicalAI from './pages/services/MedicalAI';
-import BusinessAutomation from './pages/services/BusinessAutomation';
-import UniversityML from './pages/services/UniversityML';
-import FamilyAI from './pages/services/FamilyAI';
-import AdvancedAI from './pages/services/AdvancedAI';
-import NoCodeAI from './pages/services/NoCodeAI';
-import PromptEngineering from './pages/services/PromptEngineering';
-import RagLangChain from './pages/services/RagLangChain';
-import AgentsAutomation from './pages/services/AgentsAutomation';
-import AIForMarketing from './pages/services/AIForMarketing';
-import AIFundingGrants from './pages/services/AIFundingGrants';
-import AIPatentsIP from './pages/services/AIPatentsIP';
-import AcceleratorReadiness from './pages/services/AcceleratorReadiness';
-import AIReadinessAudit from './pages/services/AIReadinessAudit';
-import AICompetitiveResearch from './pages/services/AICompetitiveResearch';
-import DataScienceTraining from './pages/services/DataScienceTraining';
-import ProptechAnalytics from './pages/services/ProptechAnalytics';
-import AirbnbAnalytics from './pages/services/AirbnbAnalytics';
-import AILanguageLearning from './pages/services/AILanguageLearning';
-import ServicesIndex from './pages/services/Index';
-import ServicesLayout from './pages/services/ServicesLayout';
-import Troubleshooting from './pages/services/Troubleshooting';
-import LocationsIndex from './pages/locations/Index';
-import Madrid from './pages/locations/Madrid';
-import Barcelona from './pages/locations/Barcelona';
-import Valencia from './pages/locations/Valencia';
-import Spain from './pages/locations/Spain';
-import Online from './pages/locations/Online';
-import CaseStudiesIndex from './pages/case-studies/Index';
-import RadiologyAI from './pages/case-studies/RadiologyAI';
-import AutoClientCase from './pages/case-studies/AutoClient';
-import AttioSequences from './pages/case-studies/AttioSequences';
+const HomePage = lazy(() => import('./pages/HomePage'));
+const ServicesPage = lazy(() => import('./pages/ServicesPage'));
+const ProjectsPage = lazy(() => import('./pages/ProjectsPage'));
+const BlogPage = lazy(() => import('./pages/BlogPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+const TrainingOverview = lazy(() => import('./pages/TrainingOverview'));
+const SearchPage = lazy(() => import('./pages/SearchPage'));
+const MedicalAI = lazy(() => import('./pages/services/MedicalAI'));
+const BusinessAutomation = lazy(() => import('./pages/services/BusinessAutomation'));
+const UniversityML = lazy(() => import('./pages/services/UniversityML'));
+const FamilyAI = lazy(() => import('./pages/services/FamilyAI'));
+const AdvancedAI = lazy(() => import('./pages/services/AdvancedAI'));
+const NoCodeAI = lazy(() => import('./pages/services/NoCodeAI'));
+const PromptEngineering = lazy(() => import('./pages/services/PromptEngineering'));
+const RagLangChain = lazy(() => import('./pages/services/RagLangChain'));
+const AgentsAutomation = lazy(() => import('./pages/services/AgentsAutomation'));
+const AIForMarketing = lazy(() => import('./pages/services/AIForMarketing'));
+const AIFundingGrants = lazy(() => import('./pages/services/AIFundingGrants'));
+const AIPatentsIP = lazy(() => import('./pages/services/AIPatentsIP'));
+const AcceleratorReadiness = lazy(() => import('./pages/services/AcceleratorReadiness'));
+const AIReadinessAudit = lazy(() => import('./pages/services/AIReadinessAudit'));
+const AICompetitiveResearch = lazy(() => import('./pages/services/AICompetitiveResearch'));
+const DataScienceTraining = lazy(() => import('./pages/services/DataScienceTraining'));
+const ProptechAnalytics = lazy(() => import('./pages/services/ProptechAnalytics'));
+const AirbnbAnalytics = lazy(() => import('./pages/services/AirbnbAnalytics'));
+const AILanguageLearning = lazy(() => import('./pages/services/AILanguageLearning'));
+const ServicesIndex = lazy(() => import('./pages/services/Index'));
+const ServicesLayout = lazy(() => import('./pages/services/ServicesLayout'));
+const Troubleshooting = lazy(() => import('./pages/services/Troubleshooting'));
+const LocationsIndex = lazy(() => import('./pages/locations/Index'));
+const Madrid = lazy(() => import('./pages/locations/Madrid'));
+const Barcelona = lazy(() => import('./pages/locations/Barcelona'));
+const Valencia = lazy(() => import('./pages/locations/Valencia'));
+const Spain = lazy(() => import('./pages/locations/Spain'));
+const Online = lazy(() => import('./pages/locations/Online'));
+const CaseStudiesIndex = lazy(() => import('./pages/case-studies/Index'));
+const RadiologyAI = lazy(() => import('./pages/case-studies/RadiologyAI'));
+const AutoClientCase = lazy(() => import('./pages/case-studies/AutoClient'));
+const AttioSequences = lazy(() => import('./pages/case-studies/AttioSequences'));
 
 const App: React.FC = () => {
     return (
         <LanguageProvider>
             <HelmetProvider>
                 <BrowserRouter>
+                    <Suspense fallback={<div className="p-6 text-slate-600">Loading…</div>}>
                     <Routes>
                         <Route path="/" element={<Layout />}>
                             <Route index element={<HomePage />} />
@@ -93,6 +94,7 @@ const App: React.FC = () => {
                             <Route path="*" element={<HomePage />} />
                         </Route>
                     </Routes>
+                    </Suspense>
                 </BrowserRouter>
             </HelmetProvider>
         </LanguageProvider>
