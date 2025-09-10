@@ -67,6 +67,10 @@ const RagLangChain: React.FC = () => {
           <Link to="/contact" className="inline-block bg-slate-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-slate-800">Book a workshop</Link>
           <Link to="/services/advanced-ai" className="inline-block bg-white text-slate-700 px-6 py-3 rounded-md border border-slate-300 font-semibold hover:bg-slate-100">See advanced AI</Link>
         </div>
+        <div className="mt-8 text-sm text-slate-700">
+          <span className="font-semibold">Related case study:</span>
+          <a className="ml-2 underline" href="/case-studies/spreadsheet-assistant">AI Spreadsheet Assistant — NL to Formulas</a>
+        </div>
       </div>
     </section>
   );

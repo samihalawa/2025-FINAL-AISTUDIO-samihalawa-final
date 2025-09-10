@@ -72,6 +72,10 @@ const MedicalAI: React.FC = () => {
           ]} />
         </div>
         <CTA />
+        <div className="mt-8 text-sm text-slate-700">
+          <span className="font-semibold">Related case study:</span>
+          <a className="ml-2 underline" href="/case-studies/radiology-ai">RadiologyAI — Clinical Reporting & Triage</a>
+        </div>
       </div>
     </section>
   );

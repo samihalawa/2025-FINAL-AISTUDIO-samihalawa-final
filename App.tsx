@@ -42,6 +42,10 @@ const CaseStudiesIndex = lazy(() => import('./pages/case-studies/Index'));
 const RadiologyAI = lazy(() => import('./pages/case-studies/RadiologyAI'));
 const AutoClientCase = lazy(() => import('./pages/case-studies/AutoClient'));
 const AttioSequences = lazy(() => import('./pages/case-studies/AttioSequences'));
+const BankingAssistant = lazy(() => import('./pages/case-studies/BankingAssistant'));
+const SpreadsheetAssistant = lazy(() => import('./pages/case-studies/SpreadsheetAssistant'));
+const ProptechCase = lazy(() => import('./pages/case-studies/ProptechAnalytics'));
+const AirbnbCase = lazy(() => import('./pages/case-studies/AirbnbIntelligence'));
 const MadridAIReadiness = lazy(() => import('./pages/locations/services/MadridAIReadiness'));
 const BarcelonaPromptEngineering = lazy(() => import('./pages/locations/services/BarcelonaPromptEngineering'));
 const ValenciaRagLangChain = lazy(() => import('./pages/locations/services/ValenciaRagLangChain'));
@@ -76,6 +80,10 @@ const App: React.FC = () => {
                             <Route path="case-studies/radiology-ai" element={<RadiologyAI />} />
                             <Route path="case-studies/autoclient" element={<AutoClientCase />} />
                             <Route path="case-studies/attio-sequences" element={<AttioSequences />} />
+                            <Route path="case-studies/banking-assistant" element={<BankingAssistant />} />
+                            <Route path="case-studies/spreadsheet-assistant" element={<SpreadsheetAssistant />} />
+                            <Route path="case-studies/proptech-analytics" element={<ProptechCase />} />
+                            <Route path="case-studies/airbnb-intelligence" element={<AirbnbCase />} />
                             <Route path="services" element={<ServicesLayout />}>
                                 <Route index element={<ServicesIndex />} />
                                 <Route path="medical-ai" element={<MedicalAI />} />

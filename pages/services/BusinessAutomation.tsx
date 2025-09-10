@@ -73,6 +73,10 @@ const BusinessAutomation: React.FC = () => {
           ]} />
         </div>
         <CTA />
+        <div className="mt-8 text-sm text-slate-700">
+          <span className="font-semibold">Related case study:</span>
+          <a className="ml-2 underline" href="/case-studies/autoclient">AutoClient — Outreach & CRM Automation</a>
+        </div>
       </div>
     </section>
   );

@@ -44,6 +44,12 @@ const AIReadinessAudit: React.FC = () => {
           <Link to="/contact" className="inline-block bg-slate-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-slate-800">Book an audit</Link>
           <Link to="/services/troubleshooting" className="inline-block bg-white text-slate-700 px-6 py-3 rounded-md border border-slate-300 font-semibold hover:bg-slate-100">See troubleshooting</Link>
         </div>
+        <div className="mt-8 text-sm text-slate-700">
+          <span className="font-semibold">Related case studies:</span>
+          <a className="ml-2 underline" href="/case-studies/attio-sequences">Attio Sequences — Reverse Engineering</a>
+          <span className="mx-1">·</span>
+          <a className="underline" href="/case-studies/autoclient">AutoClient — Outreach & CRM Automation</a>
+        </div>
       </div>
     </section>
   );

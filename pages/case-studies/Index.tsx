@@ -6,6 +6,10 @@ const cases = [
   { href: '/case-studies/radiology-ai', title: 'RadiologyAI — Clinical Reporting & Triage', desc: 'Reduced report time by 70% with clinical ChatGPT and imaging support.' },
   { href: '/case-studies/autoclient', title: 'AutoClient — Outreach & CRM Automation', desc: 'Automated prospecting, outreach and CRM sync with an AI agent.' },
   { href: '/case-studies/attio-sequences', title: 'Attio Sequences — Reverse Engineering', desc: 'Deep-dive analysis and replication roadmap for a sequencing platform.' },
+  { href: '/case-studies/banking-assistant', title: 'Banking Assistant — Self‑Service & Personalization', desc: 'Conversational banking to increase self‑service and NPS.' },
+  { href: '/case-studies/spreadsheet-assistant', title: 'AI Spreadsheet Assistant — NL to Formulas', desc: 'Natural language transforms with evals and anomaly flags.' },
+  { href: '/case-studies/proptech-analytics', title: 'PropTech Analytics — Pipelines & Valuation', desc: 'Data pipelines, valuation models and dashboards.' },
+  { href: '/case-studies/airbnb-intelligence', title: 'Airbnb Intelligence — Pricing & Occupancy', desc: 'Market intelligence and dashboards for STR portfolios.' },
 ];
 
 const CaseStudiesIndex: React.FC = () => {
@@ -32,4 +36,3 @@ const CaseStudiesIndex: React.FC = () => {
 };
 
 export default CaseStudiesIndex;
-

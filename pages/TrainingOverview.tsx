@@ -74,6 +74,8 @@ const TrainingOverview: React.FC = () => {
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1200&h=630&q=80" />
+        <meta name="twitter:image" content="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1200&h=630&q=80" />
         <link rel="canonical" href="/ai-training" />
         <script type="application/ld+json">{JSON.stringify(itemListJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
