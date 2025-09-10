@@ -2,10 +2,10 @@ import { NavLink, Language, Skill, Tool, Project, Testimonial, Experience, Conta
 
 export const NAV_LINKS: NavLink[] = [
     { href: '/', key: 'nav.about' },
+    { href: '/services', key: 'nav.services' },
     { href: '/corporate', key: 'nav.corporate' },
     { href: '/projects', key: 'nav.projects' },
     { href: '/blog', key: 'nav.blog' },
-    { href: '/contact', key: 'nav.contact' },
 ];
 
 export const LANGUAGES: Language[] = [

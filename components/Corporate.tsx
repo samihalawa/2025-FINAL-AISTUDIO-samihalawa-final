@@ -51,6 +51,7 @@ const Corporate: React.FC = () => {
                           { href: '/services/family-ai', title: 'Familias y Educación', desc: 'Programas para niños, adolescentes y padres.' },
                           { href: '/services/advanced-ai', title: 'Proyectos Avanzados', desc: 'LangChain, AutoGPT, agentes MCP y despliegue.' },
                           { href: '/services/no-code-ai', title: 'Creador No-Code', desc: 'Contenido y marketing con IA sin código.' },
+                          { href: '/services/troubleshooting', title: 'Soporte y Troubleshooting', desc: 'Rescate de proyectos ML, auditoría y arreglos de automatización.' },
                         ].map(card => (
                           <a key={card.href} href={card.href} className="block bg-white p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-0.5 transition-all">
                             <h4 className="text-lg font-semibold text-slate-900 mb-2">{card.title}</h4>

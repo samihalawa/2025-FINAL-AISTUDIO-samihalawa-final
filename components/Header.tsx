@@ -60,14 +60,56 @@ const Header: React.FC = () => {
                     
                     <nav aria-label="Primary navigation" className="hidden md:flex space-x-1 items-center">
                         {NAV_LINKS.map(link => (
-                            <NavLink
-                                key={link.key}
-                                to={link.href}
-                                className={({ isActive }) => `px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${isActive ? 'text-slate-900' : 'text-slate-600 hover:text-slate-900'}`}
-                                end
-                            >
-                                {t(link.key)}
-                            </NavLink>
+                            link.href === '/services' ? (
+                                <Popover key={link.key} className="relative">
+                                    <Popover.Button className="px-4 py-2 rounded-md text-sm font-medium text-slate-600 hover:text-slate-900 focus:outline-none">
+                                        {t(link.key)} <i className="fas fa-chevron-down ml-1 text-xs" />
+                                    </Popover.Button>
+                                    <Transition
+                                        as={Fragment}
+                                        enter="transition ease-out duration-150"
+                                        enterFrom="opacity-0 translate-y-1"
+                                        enterTo="opacity-100 translate-y-0"
+                                        leave="transition ease-in duration-100"
+                                        leaveFrom="opacity-100 translate-y-0"
+                                        leaveTo="opacity-0 translate-y-1"
+                                    >
+                                        <Popover.Panel className="absolute left-0 mt-2 w-[560px] bg-white border border-slate-200 rounded-lg shadow-lg p-6 z-50">
+                                            <div className="grid grid-cols-2 gap-6">
+                                                <div>
+                                                    <div className="text-xs uppercase tracking-wide text-slate-500 mb-2">Training</div>
+                                                    <div className="flex flex-col space-y-2">
+                                                        <Link to="/services/university-ml" className="text-sm text-slate-700 hover:text-slate-900">Universidad: Python/ML</Link>
+                                                        <Link to="/services/no-code-ai" className="text-sm text-slate-700 hover:text-slate-900">Creador No-Code</Link>
+                                                        <Link to="/services/family-ai" className="text-sm text-slate-700 hover:text-slate-900">IA para Familias</Link>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div className="text-xs uppercase tracking-wide text-slate-500 mb-2">Delivery & Support</div>
+                                                    <div className="flex flex-col space-y-2">
+                                                        <Link to="/services/business-automation" className="text-sm text-slate-700 hover:text-slate-900">Automatización con IA</Link>
+                                                        <Link to="/services/advanced-ai" className="text-sm text-slate-700 hover:text-slate-900">Proyectos Avanzados</Link>
+                                                        <Link to="/services/medical-ai" className="text-sm text-slate-700 hover:text-slate-900">IA Médica</Link>
+                                                        <Link to="/services/troubleshooting" className="text-sm text-slate-700 hover:text-slate-900">Troubleshooting</Link>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="mt-4 text-right">
+                                                <Link to="/services" className="text-sm font-medium text-slate-700 hover:text-slate-900">Ver todos</Link>
+                                            </div>
+                                        </Popover.Panel>
+                                    </Transition>
+                                </Popover>
+                            ) : (
+                                <NavLink
+                                    key={link.key}
+                                    to={link.href}
+                                    className={({ isActive }) => `px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${isActive ? 'text-slate-900' : 'text-slate-600 hover:text-slate-900'}`}
+                                    end
+                                >
+                                    {t(link.key)}
+                                </NavLink>
+                            )
                         ))}
                         <LanguageSelector />
                     </nav>
@@ -96,7 +138,22 @@ const Header: React.FC = () => {
                                         <nav className="mt-6">
                                             <div className="grid gap-y-4">
                                                 {NAV_LINKS.map(link => (
-                                                    <Link key={link.key} to={link.href} onClick={() => close()} className="text-base font-medium text-slate-700 hover:text-slate-900">{t(link.key)}</Link>
+                                                    link.href === '/services' ? (
+                                                        <div key={link.key} className="space-y-2">
+                                                            <Link to="/services" onClick={() => close()} className="text-base font-semibold text-slate-800">{t(link.key)}</Link>
+                                                            <div className="ml-2 grid grid-cols-1 gap-2">
+                                                                <Link to="/services/university-ml" onClick={() => close()} className="text-sm text-slate-700">Universidad: Python/ML</Link>
+                                                                <Link to="/services/no-code-ai" onClick={() => close()} className="text-sm text-slate-700">Creador No-Code</Link>
+                                                                <Link to="/services/family-ai" onClick={() => close()} className="text-sm text-slate-700">IA para Familias</Link>
+                                                                <Link to="/services/business-automation" onClick={() => close()} className="text-sm text-slate-700">Automatización con IA</Link>
+                                                                <Link to="/services/advanced-ai" onClick={() => close()} className="text-sm text-slate-700">Proyectos Avanzados</Link>
+                                                                <Link to="/services/medical-ai" onClick={() => close()} className="text-sm text-slate-700">IA Médica</Link>
+                                                                <Link to="/services/troubleshooting" onClick={() => close()} className="text-sm text-slate-700">Troubleshooting</Link>
+                                                            </div>
+                                                        </div>
+                                                    ) : (
+                                                        <Link key={link.key} to={link.href} onClick={() => close()} className="text-base font-medium text-slate-700 hover:text-slate-900">{t(link.key)}</Link>
+                                                    )
                                                 ))}
                                                 <LanguageSelector mobile={true} />
                                             </div>

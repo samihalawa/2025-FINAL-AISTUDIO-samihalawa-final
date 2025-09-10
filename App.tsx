@@ -16,6 +16,7 @@ import AdvancedAI from './pages/services/AdvancedAI';
 import NoCodeAI from './pages/services/NoCodeAI';
 import ServicesIndex from './pages/services/Index';
 import ServicesLayout from './pages/services/ServicesLayout';
+import Troubleshooting from './pages/services/Troubleshooting';
 
 const App: React.FC = () => {
     return (
@@ -37,6 +38,7 @@ const App: React.FC = () => {
                                 <Route path="family-ai" element={<FamilyAI />} />
                                 <Route path="advanced-ai" element={<AdvancedAI />} />
                                 <Route path="no-code-ai" element={<NoCodeAI />} />
+                                <Route path="troubleshooting" element={<Troubleshooting />} />
                             </Route>
                             <Route path="*" element={<HomePage />} />
                         </Route>
