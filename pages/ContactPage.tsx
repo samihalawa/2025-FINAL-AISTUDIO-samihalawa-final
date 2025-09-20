@@ -1,13 +1,15 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Contact from '../components/Contact';
+import { usePageMeta } from '../hooks/usePageMeta';
 
 const ContactPage: React.FC = () => {
+  const { title, description } = usePageMeta('contact');
   return (
     <>
       <Helmet>
-        <title>Contact | AI Training & Consulting | Sami Halawa</title>
-        <meta name="description" content="Book a free consultation for AI training, workshops and automation projects. Available in Madrid and online." />
+        <title>{title}</title>
+        <meta name="description" content={description} />
         <link rel="canonical" href="/contact" />
       </Helmet>
       <Contact />

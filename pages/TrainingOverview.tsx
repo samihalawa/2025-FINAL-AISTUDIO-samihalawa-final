@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../i18n/LanguageContext';
+import { usePageMeta } from '../hooks/usePageMeta';
 
 const Section: React.FC<{ title: string; children: React.ReactNode }>=({ title, children }) => (
   <section className="mb-10">
@@ -12,6 +13,7 @@ const Section: React.FC<{ title: string; children: React.ReactNode }>=({ title, 
 
 const TrainingOverview: React.FC = () => {
   const { t } = useTranslation();
+  const { title: metaTitle, description: metaDescription } = usePageMeta('training');
   const title = t('trainingOverview.title');
   const description = t('trainingOverview.description');
   const itemListJsonLd = {
@@ -70,10 +72,10 @@ const TrainingOverview: React.FC = () => {
   return (
     <section className="py-16 bg-white">
       <Helmet>
-        <title>{title} | Sami Halawa</title>
-        <meta name="description" content={description} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDescription} />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDescription} />
         <meta property="og:image" content="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1200&h=630&q=80" />
         <meta name="twitter:image" content="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1200&h=630&q=80" />
         <link rel="canonical" href="/ai-training" />

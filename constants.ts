@@ -1,4 +1,4 @@
-import { NavLink, Language, Skill, Tool, Project, Testimonial, Experience, ContactInfo, AdditionalProject, TrainingProgram, Partner } from './types';
+import { NavLink, Language, Skill, Tool, Project, Testimonial, Experience, ContactInfo, AdditionalProject, TrainingProgram, Partner, ServiceMenuSection } from './types';
 
 export const NAV_LINKS: NavLink[] = [
     { href: '/', key: 'nav.about' },
@@ -17,6 +17,43 @@ export const LANGUAGES: Language[] = [
     { code: 'es', name: 'Español' },
     { code: 'fr', name: 'Français' },
     { code: 'zh', name: '中文' },
+];
+
+export const SERVICE_MENU_SECTIONS: ServiceMenuSection[] = [
+    {
+        titleKey: 'header.services.core',
+        items: [
+            { href: '/services/prompt-engineering', labelKey: 'services.promptEngineering.name' },
+            { href: '/services/rag-langchain', labelKey: 'services.ragLangChain.name' },
+            { href: '/services/agents-automation', labelKey: 'services.agentsAutomation.name' },
+            { href: '/services/ai-readiness-audit', labelKey: 'services.aiReadinessAudit.name' },
+        ]
+    },
+    {
+        titleKey: 'header.services.business',
+        items: [
+            { href: '/services/ai-for-marketing', labelKey: 'services.aiForMarketing.name' },
+            { href: '/services/business-automation', labelKey: 'services.businessAutomation.name' },
+            { href: '/services/accelerator-readiness', labelKey: 'services.acceleratorReadiness.name' },
+            { href: '/services/ai-funding-grants', labelKey: 'services.aiFundingGrants.name' },
+        ]
+    },
+    {
+        titleKey: 'header.services.specialized',
+        items: [
+            { href: '/services/advanced-ai', labelKey: 'services.advancedAI.name' },
+            { href: '/services/medical-ai', labelKey: 'services.medicalAI.name' },
+            { href: '/services/family-ai', labelKey: 'services.familyAI.name' },
+            { href: '/services/university-ml', labelKey: 'services.universityML.name' },
+            { href: '/services/no-code-ai', labelKey: 'services.noCodeAI.name' },
+            { href: '/services/proptech-analytics', labelKey: 'services.proptechAnalytics.name' },
+            { href: '/services/airbnb-analytics', labelKey: 'services.airbnbAnalytics.name' },
+            { href: '/services/ai-language-learning', labelKey: 'services.aiLanguageLearning.name' },
+            { href: '/services/ai-competitive-research', labelKey: 'services.aiCompetitiveResearch.name' },
+            { href: '/services/ai-ip-patents', labelKey: 'services.aiPatentsIP.name' },
+            { href: '/services/troubleshooting', labelKey: 'services.troubleshooting.name' },
+        ]
+    }
 ];
 
 export const BLOG_POSTS: string[] = [

@@ -2,32 +2,34 @@ import React, { useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from '../i18n/LanguageContext';
+import { usePageMeta } from '../hooks/usePageMeta';
+import type { TranslationKey } from '../i18n/translations';
 
-type Item = { href: string; title: string; description: string; category: string };
+type Item = { href: string; titleKey: TranslationKey; descriptionKey: TranslationKey; categoryKey: TranslationKey };
 
 const ITEMS: Item[] = [
-  { href: '/ai-training', title: 'AI Training Overview', description: 'All programs and workshops', category: 'Overview' },
-  { href: '/services/prompt-engineering', title: 'Prompt Engineering', description: 'Prompts, tools, evals, guardrails', category: 'Services' },
-  { href: '/services/rag-langchain', title: 'RAG & LangChain', description: 'Retrieval, chunking, hybrid search', category: 'Services' },
-  { href: '/services/agents-automation', title: 'AI Agents & Automation', description: 'Workflows and orchestration', category: 'Services' },
-  { href: '/services/ai-for-marketing', title: 'AI for Marketing', description: 'Content, SEO, ads and analytics', category: 'Services' },
-  { href: '/services/ai-readiness-audit', title: 'AI Readiness Audit', description: 'Evals, safety and budgets', category: 'Services' },
-  { href: '/services/ai-competitive-research', title: 'Competitive Research', description: 'Reverse engineering & blueprints', category: 'Services' },
-  { href: '/services/ai-funding-grants', title: 'Funding & Grants', description: 'Non-dilutive financing support', category: 'Services' },
-  { href: '/services/ai-ip-patents', title: 'Patents & IP', description: 'Claims, drafting and readiness', category: 'Services' },
-  { href: '/services/accelerator-readiness', title: 'Accelerator Readiness', description: 'Deck, demo and narrative', category: 'Services' },
-  { href: '/services/data-science-training', title: 'Data Science Training', description: 'Stats, ML and evaluation', category: 'Services' },
-  { href: '/services/proptech-analytics', title: 'PropTech Analytics', description: 'Pipelines and valuation', category: 'Services' },
-  { href: '/services/airbnb-analytics', title: 'Airbnb Intelligence', description: 'Pricing and occupancy', category: 'Services' },
-  { href: '/services/ai-language-learning', title: 'AI Language Learning', description: 'SRS and conversation partners', category: 'Services' },
-  { href: '/case-studies/radiology-ai', title: 'Case Study — RadiologyAI', description: 'Clinical reporting & triage', category: 'Case Studies' },
-  { href: '/case-studies/autoclient', title: 'Case Study — AutoClient', description: 'Outreach & CRM automation', category: 'Case Studies' },
-  { href: '/case-studies/attio-sequences', title: 'Case Study — Attio Sequences', description: 'Reverse engineering sequences', category: 'Case Studies' },
-  { href: '/locations/madrid', title: 'Madrid', description: 'Onsite delivery in Madrid', category: 'Locations' },
-  { href: '/locations/barcelona', title: 'Barcelona', description: 'Workshops in Barcelona', category: 'Locations' },
-  { href: '/locations/valencia', title: 'Valencia', description: 'Startups & Lanzadera', category: 'Locations' },
-  { href: '/locations/spain', title: 'Spain', description: 'Nationwide delivery', category: 'Locations' },
-  { href: '/locations/online', title: 'Online', description: 'Remote-first worldwide', category: 'Locations' },
+  { href: '/ai-training', titleKey: 'search.item.trainingOverview.title', descriptionKey: 'search.item.trainingOverview.description', categoryKey: 'search.category.overview' },
+  { href: '/services/prompt-engineering', titleKey: 'search.item.promptEngineering.title', descriptionKey: 'search.item.promptEngineering.description', categoryKey: 'search.category.services' },
+  { href: '/services/rag-langchain', titleKey: 'search.item.ragLangChain.title', descriptionKey: 'search.item.ragLangChain.description', categoryKey: 'search.category.services' },
+  { href: '/services/agents-automation', titleKey: 'search.item.agentsAutomation.title', descriptionKey: 'search.item.agentsAutomation.description', categoryKey: 'search.category.services' },
+  { href: '/services/ai-for-marketing', titleKey: 'search.item.aiForMarketing.title', descriptionKey: 'search.item.aiForMarketing.description', categoryKey: 'search.category.services' },
+  { href: '/services/ai-readiness-audit', titleKey: 'search.item.aiReadinessAudit.title', descriptionKey: 'search.item.aiReadinessAudit.description', categoryKey: 'search.category.services' },
+  { href: '/services/ai-competitive-research', titleKey: 'search.item.aiCompetitiveResearch.title', descriptionKey: 'search.item.aiCompetitiveResearch.description', categoryKey: 'search.category.services' },
+  { href: '/services/ai-funding-grants', titleKey: 'search.item.aiFundingGrants.title', descriptionKey: 'search.item.aiFundingGrants.description', categoryKey: 'search.category.services' },
+  { href: '/services/ai-ip-patents', titleKey: 'search.item.aiPatentsIP.title', descriptionKey: 'search.item.aiPatentsIP.description', categoryKey: 'search.category.services' },
+  { href: '/services/accelerator-readiness', titleKey: 'search.item.acceleratorReadiness.title', descriptionKey: 'search.item.acceleratorReadiness.description', categoryKey: 'search.category.services' },
+  { href: '/services/data-science-training', titleKey: 'search.item.dataScienceTraining.title', descriptionKey: 'search.item.dataScienceTraining.description', categoryKey: 'search.category.services' },
+  { href: '/services/proptech-analytics', titleKey: 'search.item.proptechAnalytics.title', descriptionKey: 'search.item.proptechAnalytics.description', categoryKey: 'search.category.services' },
+  { href: '/services/airbnb-analytics', titleKey: 'search.item.airbnbAnalytics.title', descriptionKey: 'search.item.airbnbAnalytics.description', categoryKey: 'search.category.services' },
+  { href: '/services/ai-language-learning', titleKey: 'search.item.aiLanguageLearning.title', descriptionKey: 'search.item.aiLanguageLearning.description', categoryKey: 'search.category.services' },
+  { href: '/case-studies/radiology-ai', titleKey: 'search.item.caseRadiology.title', descriptionKey: 'search.item.caseRadiology.description', categoryKey: 'search.category.caseStudies' },
+  { href: '/case-studies/autoclient', titleKey: 'search.item.caseAutoclient.title', descriptionKey: 'search.item.caseAutoclient.description', categoryKey: 'search.category.caseStudies' },
+  { href: '/case-studies/attio-sequences', titleKey: 'search.item.caseAttio.title', descriptionKey: 'search.item.caseAttio.description', categoryKey: 'search.category.caseStudies' },
+  { href: '/locations/madrid', titleKey: 'search.item.locationMadrid.title', descriptionKey: 'search.item.locationMadrid.description', categoryKey: 'search.category.locations' },
+  { href: '/locations/barcelona', titleKey: 'search.item.locationBarcelona.title', descriptionKey: 'search.item.locationBarcelona.description', categoryKey: 'search.category.locations' },
+  { href: '/locations/valencia', titleKey: 'search.item.locationValencia.title', descriptionKey: 'search.item.locationValencia.description', categoryKey: 'search.category.locations' },
+  { href: '/locations/spain', titleKey: 'search.item.locationSpain.title', descriptionKey: 'search.item.locationSpain.description', categoryKey: 'search.category.locations' },
+  { href: '/locations/online', titleKey: 'search.item.locationOnline.title', descriptionKey: 'search.item.locationOnline.description', categoryKey: 'search.category.locations' },
 ];
 
 function useQuery() {
@@ -37,19 +39,31 @@ function useQuery() {
 
 const SearchPage: React.FC = () => {
   const { t } = useTranslation();
+  const { title, description } = usePageMeta('search');
+  const localizedItems = useMemo(
+    () =>
+      ITEMS.map(item => ({
+        ...item,
+        title: t(item.titleKey),
+        description: t(item.descriptionKey),
+        category: t(item.categoryKey),
+      })),
+    [t]
+  );
+
   const q = useQuery().get('q')?.trim().toLowerCase() || '';
   const results = useMemo(() => {
-    if (!q) return ITEMS;
-    return ITEMS.filter(item =>
+    if (!q) return localizedItems;
+    return localizedItems.filter(item =>
       [item.title, item.description, item.category, item.href].join(' ').toLowerCase().includes(q)
     );
-  }, [q]);
+  }, [q, localizedItems]);
 
   return (
     <section className="py-16 bg-white">
       <Helmet>
-        <title>{t('search.title')} | Sami Halawa</title>
-        <meta name="description" content={t('search.description')} />
+        <title>{title}</title>
+        <meta name="description" content={description} />
         <link rel="canonical" href="/search" />
       </Helmet>
       <div className="container mx-auto px-6 max-w-5xl">
@@ -82,4 +96,3 @@ const SearchPage: React.FC = () => {
 };
 
 export default SearchPage;
-

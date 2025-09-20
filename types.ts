@@ -72,6 +72,16 @@ export interface Partner {
     name: string;
 }
 
+export interface ServiceMenuItem {
+    href: string;
+    labelKey: TranslationKey;
+}
+
+export interface ServiceMenuSection {
+    titleKey: TranslationKey;
+    items: ServiceMenuItem[];
+}
+
 export interface Article {
     slug: string;
     title: string;

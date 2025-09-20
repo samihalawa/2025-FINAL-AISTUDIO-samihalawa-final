@@ -4,13 +4,15 @@ import Hero from '../components/Hero';
 import About from '../components/About';
 import FeaturedCaseStudies from '../components/FeaturedCaseStudies';
 import Testimonials from '../components/Testimonials';
+import { usePageMeta } from '../hooks/usePageMeta';
 
 const HomePage: React.FC = () => {
+  const { title, description } = usePageMeta('home');
   return (
     <>
       <Helmet>
-        <title>AI Training & Solutions | Sami Halawa</title>
-        <meta name="description" content="AI training for teams, hands-on workshops, and custom automation projects. Learn ChatGPT, RAG, LangChain, agents and no-code workflows." />
+        <title>{title}</title>
+        <meta name="description" content={description} />
       </Helmet>
       <Hero />
       <About />

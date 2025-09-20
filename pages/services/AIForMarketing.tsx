@@ -69,7 +69,7 @@ const AIForMarketing: React.FC = () => {
           <Link to="/services/no-code-ai" className="inline-block bg-white text-slate-700 px-6 py-3 rounded-md border border-slate-300 font-semibold hover:bg-slate-100">See no-code creator</Link>
         </div>
         <div className="mt-8 text-sm text-slate-700">
-          <span className="font-semibold">Related case study:</span>
+          <span className="font-semibold">{t('services.relatedCaseStudy')}</span>
           <a className="ml-2 underline" href="/case-studies/autoclient">AutoClient — Outreach & CRM Automation</a>
         </div>
       </div>

@@ -3,9 +3,11 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Header from './Header';
 import Footer from './Footer';
+import { useTranslation } from '../i18n/LanguageContext';
 
 const Layout: React.FC = () => {
   const location = useLocation();
+  const { language } = useTranslation();
   const siteUrl = 'https://samihalawa.com';
   const canonical = `${siteUrl}${location.pathname}`;
   const defaultOg = 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&h=630&q=80';
@@ -39,6 +41,7 @@ const Layout: React.FC = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="og:image" content={defaultOg} />
         <meta name="twitter:image" content={defaultOg} />
+        <meta property="og:locale" content={language === 'en' ? 'en_US' : language === 'es' ? 'es_ES' : language === 'fr' ? 'fr_FR' : 'zh_CN'} />
         <link rel="canonical" href={canonical} />
         <script type="application/ld+json">{JSON.stringify(orgJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(webSiteJsonLd)}</script>

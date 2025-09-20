@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Popover, Transition, Listbox } from '@headlessui/react';
 import { useTranslation } from '../i18n/LanguageContext';
-import { NAV_LINKS, LANGUAGES } from '../constants';
+import { NAV_LINKS, LANGUAGES, SERVICE_MENU_SECTIONS } from '../constants';
 
 const Header: React.FC = () => {
     const { t, language, setLanguage } = useTranslation();
@@ -76,43 +76,22 @@ const Header: React.FC = () => {
                                     >
                                         <Popover.Panel className="absolute left-0 mt-2 w-[820px] bg-white border border-slate-200 rounded-lg shadow-lg p-6 z-50">
                                             <div className="grid grid-cols-3 gap-6">
-                                                <div>
-                                                    <div className="text-xs uppercase tracking-wide text-slate-500 mb-2">Core AI</div>
-                                                    <div className="flex flex-col space-y-2">
-                                                        <Link to="/services/prompt-engineering" className="text-sm text-slate-700 hover:text-slate-900">Prompt Engineering</Link>
-                                                        <Link to="/services/rag-langchain" className="text-sm text-slate-700 hover:text-slate-900">RAG & LangChain</Link>
-                                                        <Link to="/services/agents-automation" className="text-sm text-slate-700 hover:text-slate-900">Agentes y Automatización</Link>
-                                                        <Link to="/services/ai-readiness-audit" className="text-sm text-slate-700 hover:text-slate-900">AI Readiness Audit</Link>
+                                                {SERVICE_MENU_SECTIONS.map(section => (
+                                                    <div key={section.titleKey}>
+                                                        <div className="text-xs uppercase tracking-wide text-slate-500 mb-2">{t(section.titleKey)}</div>
+                                                        <div className="flex flex-col space-y-2">
+                                                            {section.items.map(item => (
+                                                                <Link key={item.href} to={item.href} className="text-sm text-slate-700 hover:text-slate-900">
+                                                                    {t(item.labelKey)}
+                                                                </Link>
+                                                            ))}
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div>
-                                                    <div className="text-xs uppercase tracking-wide text-slate-500 mb-2">Business</div>
-                                                    <div className="flex flex-col space-y-2">
-                                                        <Link to="/services/ai-for-marketing" className="text-sm text-slate-700 hover:text-slate-900">IA para Marketing</Link>
-                                                        <Link to="/services/business-automation" className="text-sm text-slate-700 hover:text-slate-900">Automatización con IA</Link>
-                                                        <Link to="/services/accelerator-readiness" className="text-sm text-slate-700 hover:text-slate-900">Aceleradoras & Pitch</Link>
-                                                        <Link to="/services/ai-funding-grants" className="text-sm text-slate-700 hover:text-slate-900">Financiación & Subvenciones</Link>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <div className="text-xs uppercase tracking-wide text-slate-500 mb-2">Specialized</div>
-                                                    <div className="flex flex-col space-y-2">
-                                                        <Link to="/services/university-ml" className="text-sm text-slate-700 hover:text-slate-900">Universidad: Python/ML</Link>
-                                                        <Link to="/services/no-code-ai" className="text-sm text-slate-700 hover:text-slate-900">Creador No-Code</Link>
-                                                        <Link to="/services/medical-ai" className="text-sm text-slate-700 hover:text-slate-900">IA Médica</Link>
-                                                        <Link to="/services/proptech-analytics" className="text-sm text-slate-700 hover:text-slate-900">PropTech Analytics</Link>
-                                                        <Link to="/services/airbnb-analytics" className="text-sm text-slate-700 hover:text-slate-900">Airbnb Intelligence</Link>
-                                                        <Link to="/services/ai-language-learning" className="text-sm text-slate-700 hover:text-slate-900">Idiomas con IA</Link>
-                                                        <Link to="/services/ai-competitive-research" className="text-sm text-slate-700 hover:text-slate-900">Investigación Competitiva</Link>
-                                                        <Link to="/services/ai-ip-patents" className="text-sm text-slate-700 hover:text-slate-900">Patentes e IP</Link>
-                                                        <Link to="/services/troubleshooting" className="text-sm text-slate-700 hover:text-slate-900">Troubleshooting</Link>
-                                                        <Link to="/services/advanced-ai" className="text-sm text-slate-700 hover:text-slate-900">Proyectos Avanzados</Link>
-                                                    </div>
-                                                </div>
+                                                ))}
                                             </div>
                                             <div className="mt-4 flex justify-between">
-                                                <Link to="/ai-training" className="text-sm font-medium text-slate-700 hover:text-slate-900">Programas de Formación</Link>
-                                                <Link to="/services" className="text-sm font-medium text-slate-700 hover:text-slate-900">Ver todos</Link>
+                                                <Link to="/ai-training" className="text-sm font-medium text-slate-700 hover:text-slate-900">{t('header.services.training')}</Link>
+                                                <Link to="/services" className="text-sm font-medium text-slate-700 hover:text-slate-900">{t('header.services.viewAll')}</Link>
                                             </div>
                                         </Popover.Panel>
                                     </Transition>
@@ -158,26 +137,28 @@ const Header: React.FC = () => {
                                                     link.href === '/services' ? (
                                                         <div key={link.key} className="space-y-2">
                                                             <Link to="/services" onClick={() => close()} className="text-base font-semibold text-slate-800">{t(link.key)}</Link>
-                                                            <div className="ml-2 grid grid-cols-1 gap-2">
-                                                                <Link to="/services/prompt-engineering" onClick={() => close()} className="text-sm text-slate-700">Prompt Engineering</Link>
-                                                                <Link to="/services/rag-langchain" onClick={() => close()} className="text-sm text-slate-700">RAG & LangChain</Link>
-                                                                <Link to="/services/agents-automation" onClick={() => close()} className="text-sm text-slate-700">Agentes y Automatización</Link>
-                                                                <Link to="/services/ai-for-marketing" onClick={() => close()} className="text-sm text-slate-700">IA para Marketing</Link>
-                                                                <Link to="/services/business-automation" onClick={() => close()} className="text-sm text-slate-700">Automatización con IA</Link>
-                                                                <Link to="/services/advanced-ai" onClick={() => close()} className="text-sm text-slate-700">Proyectos Avanzados</Link>
-                                                                <Link to="/services/medical-ai" onClick={() => close()} className="text-sm text-slate-700">IA Médica</Link>
-                                                                <Link to="/services/university-ml" onClick={() => close()} className="text-sm text-slate-700">Universidad: Python/ML</Link>
-                                                                <Link to="/services/no-code-ai" onClick={() => close()} className="text-sm text-slate-700">Creador No-Code</Link>
-                                                                <Link to="/services/family-ai" onClick={() => close()} className="text-sm text-slate-700">IA para Familias</Link>
-                                                                <Link to="/services/ai-readiness-audit" onClick={() => close()} className="text-sm text-slate-700">AI Readiness Audit</Link>
-                                                                <Link to="/services/ai-competitive-research" onClick={() => close()} className="text-sm text-slate-700">Investigación Competitiva</Link>
-                                                                <Link to="/services/ai-funding-grants" onClick={() => close()} className="text-sm text-slate-700">Financiación & Subvenciones</Link>
-                                                                <Link to="/services/ai-ip-patents" onClick={() => close()} className="text-sm text-slate-700">Patentes e IP</Link>
-                                                                <Link to="/services/accelerator-readiness" onClick={() => close()} className="text-sm text-slate-700">Aceleradoras & Pitch</Link>
-                                                                <Link to="/services/proptech-analytics" onClick={() => close()} className="text-sm text-slate-700">PropTech Analytics</Link>
-                                                                <Link to="/services/airbnb-analytics" onClick={() => close()} className="text-sm text-slate-700">Airbnb Intelligence</Link>
-                                                                <Link to="/services/ai-language-learning" onClick={() => close()} className="text-sm text-slate-700">Idiomas con IA</Link>
-                                                                <Link to="/services/troubleshooting" onClick={() => close()} className="text-sm text-slate-700">Troubleshooting</Link>
+                                                            <div className="ml-2 grid grid-cols-1 gap-4">
+                                                                {SERVICE_MENU_SECTIONS.map(section => (
+                                                                    <div key={section.titleKey}>
+                                                                        <div className="text-xs uppercase tracking-wide text-slate-500 mb-1">{t(section.titleKey)}</div>
+                                                                        <div className="flex flex-col gap-1">
+                                                                            {section.items.map(item => (
+                                                                                <Link
+                                                                                    key={item.href}
+                                                                                    to={item.href}
+                                                                                    onClick={() => close()}
+                                                                                    className="text-sm text-slate-700"
+                                                                                >
+                                                                                    {t(item.labelKey)}
+                                                                                </Link>
+                                                                            ))}
+                                                                        </div>
+                                                                    </div>
+                                                                ))}
+                                                                <div className="pt-2 border-t border-slate-200 mt-3">
+                                                                    <Link to="/ai-training" onClick={() => close()} className="text-sm font-medium text-slate-700 block mb-2">{t('header.services.training')}</Link>
+                                                                    <Link to="/services" onClick={() => close()} className="text-sm font-medium text-slate-700 block">{t('header.services.viewAll')}</Link>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     ) : (
