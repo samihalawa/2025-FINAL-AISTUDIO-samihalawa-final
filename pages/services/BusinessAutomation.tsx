@@ -24,6 +24,10 @@ const BusinessAutomation: React.FC = () => {
   const title = t('services.businessAutomation.title');
   const description = t('services.businessAutomation.description');
   const ogImage = 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&h=630&q=80';
+  const relatedCaseStudies = [
+    { href: '/case-studies/autoclient', label: t('caseStudies.index.case.autoclient.title') },
+    { href: '/case-studies/banking-assistant', label: t('caseStudies.index.case.banking.title') }
+  ];
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -74,8 +78,14 @@ const BusinessAutomation: React.FC = () => {
         </div>
         <CTA />
         <div className="mt-8 text-sm text-slate-700">
-          <span className="font-semibold">{t('services.relatedCaseStudy')}</span>
-          <a className="ml-2 underline" href="/case-studies/autoclient">AutoClient — Outreach & CRM Automation</a>
+          <span className="font-semibold">{t('services.relatedCaseStudies')}</span>
+          <ul className="mt-2 list-disc list-inside space-y-1">
+            {relatedCaseStudies.map(cs => (
+              <li key={cs.href}>
+                <a className="underline" href={cs.href}>{cs.label}</a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

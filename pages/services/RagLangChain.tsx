@@ -17,6 +17,10 @@ const RagLangChain: React.FC = () => {
   const title = t('services.ragLangChain.title');
   const description = t('services.ragLangChain.description');
   const ogImage = 'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1200&h=630&q=80';
+  const relatedCaseStudies = [
+    { href: '/case-studies/spreadsheet-assistant', label: t('caseStudies.index.case.spreadsheet.title') },
+    { href: '/case-studies/attio-sequences', label: t('caseStudies.index.case.attio.title') }
+  ];
   const jsonLdCourse = {
     '@context': 'https://schema.org',
     '@type': 'Course',
@@ -68,8 +72,14 @@ const RagLangChain: React.FC = () => {
           <Link to="/services/advanced-ai" className="inline-block bg-white text-slate-700 px-6 py-3 rounded-md border border-slate-300 font-semibold hover:bg-slate-100">See advanced AI</Link>
         </div>
         <div className="mt-8 text-sm text-slate-700">
-          <span className="font-semibold">{t('services.relatedCaseStudy')}</span>
-          <a className="ml-2 underline" href="/case-studies/spreadsheet-assistant">AI Spreadsheet Assistant — NL to Formulas</a>
+          <span className="font-semibold">{t('services.relatedCaseStudies')}</span>
+          <ul className="mt-2 list-disc list-inside space-y-1">
+            {relatedCaseStudies.map(cs => (
+              <li key={cs.href}>
+                <a className="underline" href={cs.href}>{cs.label}</a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

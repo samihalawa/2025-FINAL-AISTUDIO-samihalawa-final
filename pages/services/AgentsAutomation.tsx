@@ -17,6 +17,10 @@ const AgentsAutomation: React.FC = () => {
   const title = t('services.agentsAutomation.title');
   const description = t('services.agentsAutomation.description');
   const ogImage = 'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1200&h=630&q=80';
+  const relatedCaseStudies = [
+    { href: '/case-studies/autoclient', label: t('caseStudies.index.case.autoclient.title') },
+    { href: '/case-studies/banking-assistant', label: t('caseStudies.index.case.banking.title') }
+  ];
   const jsonLdCourse = {
     '@context': 'https://schema.org',
     '@type': 'Course',
@@ -66,6 +70,16 @@ const AgentsAutomation: React.FC = () => {
         <div className="mt-10 flex flex-col sm:flex-row gap-4">
           <Link to="/contact" className="inline-block bg-slate-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-slate-800">Get a proposal</Link>
           <Link to="/services/business-automation" className="inline-block bg-white text-slate-700 px-6 py-3 rounded-md border border-slate-300 font-semibold hover:bg-slate-100">See automation service</Link>
+        </div>
+        <div className="mt-8 text-sm text-slate-700">
+          <span className="font-semibold">{t('services.relatedCaseStudies')}</span>
+          <ul className="mt-2 list-disc list-inside space-y-1">
+            {relatedCaseStudies.map(cs => (
+              <li key={cs.href}>
+                <a className="underline" href={cs.href}>{cs.label}</a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

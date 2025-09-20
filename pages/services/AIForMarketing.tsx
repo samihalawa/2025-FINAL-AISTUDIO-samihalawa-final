@@ -17,6 +17,10 @@ const AIForMarketing: React.FC = () => {
   const title = t('services.aiForMarketing.title');
   const description = t('services.aiForMarketing.description');
   const ogImage = 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&h=630&q=80';
+  const relatedCaseStudies = [
+    { href: '/case-studies/autoclient', label: t('caseStudies.index.case.autoclient.title') },
+    { href: '/case-studies/airbnb-intelligence', label: t('caseStudies.index.case.airbnb.title') }
+  ];
   const jsonLdService = {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -69,8 +73,14 @@ const AIForMarketing: React.FC = () => {
           <Link to="/services/no-code-ai" className="inline-block bg-white text-slate-700 px-6 py-3 rounded-md border border-slate-300 font-semibold hover:bg-slate-100">See no-code creator</Link>
         </div>
         <div className="mt-8 text-sm text-slate-700">
-          <span className="font-semibold">{t('services.relatedCaseStudy')}</span>
-          <a className="ml-2 underline" href="/case-studies/autoclient">AutoClient — Outreach & CRM Automation</a>
+          <span className="font-semibold">{t('services.relatedCaseStudies')}</span>
+          <ul className="mt-2 list-disc list-inside space-y-1">
+            {relatedCaseStudies.map(cs => (
+              <li key={cs.href}>
+                <a className="underline" href={cs.href}>{cs.label}</a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

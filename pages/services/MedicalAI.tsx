@@ -24,6 +24,9 @@ const MedicalAI: React.FC = () => {
   const title = t('services.medicalAI.title');
   const description = t('services.medicalAI.description');
   const ogImage = 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&h=630&q=80';
+  const relatedCaseStudies = [
+    { href: '/case-studies/radiology-ai', label: t('caseStudies.index.case.radiology.title') }
+  ];
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -73,8 +76,14 @@ const MedicalAI: React.FC = () => {
         </div>
         <CTA />
         <div className="mt-8 text-sm text-slate-700">
-          <span className="font-semibold">{t('services.relatedCaseStudy')}</span>
-          <a className="ml-2 underline" href="/case-studies/radiology-ai">RadiologyAI — Clinical Reporting & Triage</a>
+          <span className="font-semibold">{t('services.relatedCaseStudies')}</span>
+          <ul className="mt-2 list-disc list-inside space-y-1">
+            {relatedCaseStudies.map((cs) => (
+              <li key={cs.href}>
+                <a className="underline" href={cs.href}>{cs.label}</a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
