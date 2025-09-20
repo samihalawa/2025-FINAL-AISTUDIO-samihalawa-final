@@ -2,8 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../../i18n/LanguageContext';
+import type { TranslationKey } from '../../i18n/translations';
 
-const Section: React.FC<{ title: string, points: string[] }>=({ title, points })=> (
+const Section: React.FC<{ title: string; points: string[] }> = ({ title, points }) => (
   <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
     <h3 className="text-xl font-bold mb-3 text-slate-900">{title}</h3>
     <ul className="list-disc list-inside text-slate-700 space-y-2">
@@ -21,6 +22,20 @@ const AgentsAutomation: React.FC = () => {
     { href: '/case-studies/autoclient', label: t('caseStudies.index.case.autoclient.title') },
     { href: '/case-studies/banking-assistant', label: t('caseStudies.index.case.banking.title') }
   ];
+  const bootcampKeys: TranslationKey[] = [
+    'services.agentsAutomation.bootcamp1',
+    'services.agentsAutomation.bootcamp2',
+    'services.agentsAutomation.bootcamp3',
+    'services.agentsAutomation.bootcamp4'
+  ];
+  const impactKeys: TranslationKey[] = [
+    'services.agentsAutomation.impact1',
+    'services.agentsAutomation.impact2',
+    'services.agentsAutomation.impact3',
+    'services.agentsAutomation.impact4'
+  ];
+  const bootcampPoints = bootcampKeys.map((key) => t(key));
+  const impactPoints = impactKeys.map((key) => t(key));
   const jsonLdCourse = {
     '@context': 'https://schema.org',
     '@type': 'Course',
@@ -52,24 +67,14 @@ const AgentsAutomation: React.FC = () => {
       </Helmet>
       <div className="container mx-auto px-6 max-w-5xl">
         <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">{title}</h1>
-        <p className="text-lg text-slate-700 mb-8">Ship reliable automations for marketing, sales and ops. With or without code — documented and observable.</p>
+        <p className="text-lg text-slate-700 mb-8">{t('services.agentsAutomation.intro')}</p>
         <div className="grid md:grid-cols-2 gap-6">
-          <Section title="Bootcamp" points={[
-            'Agent patterns: planner, worker, reviewer',
-            'Human-in-the-loop approvals and SLAs',
-            'Zapier/Make/n8n for orchestration',
-            'Observability, retries and budgets'
-          ]} />
-          <Section title="Business impact" points={[
-            'Reduce manual work 50–80%',
-            'Improve speed and data quality',
-            'Track ROI with dashboards',
-            'Documented runbooks for ops'
-          ]} />
+          <Section title={t('services.agentsAutomation.section.bootcamp')} points={bootcampPoints} />
+          <Section title={t('services.agentsAutomation.section.impact')} points={impactPoints} />
         </div>
         <div className="mt-10 flex flex-col sm:flex-row gap-4">
-          <Link to="/contact" className="inline-block bg-slate-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-slate-800">Get a proposal</Link>
-          <Link to="/services/business-automation" className="inline-block bg-white text-slate-700 px-6 py-3 rounded-md border border-slate-300 font-semibold hover:bg-slate-100">See automation service</Link>
+          <Link to="/contact" className="inline-block bg-slate-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-slate-800">{t('cta.requestProposal')}</Link>
+          <Link to="/services/business-automation" className="inline-block bg-white text-slate-700 px-6 py-3 rounded-md border border-slate-300 font-semibold hover:bg-slate-100">{t('services.businessAutomation.name')}</Link>
         </div>
         <div className="mt-8 text-sm text-slate-700">
           <span className="font-semibold">{t('services.relatedCaseStudies')}</span>
