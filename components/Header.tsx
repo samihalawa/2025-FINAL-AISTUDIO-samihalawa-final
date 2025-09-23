@@ -107,6 +107,19 @@ const Header: React.FC = () => {
                                 </NavLink>
                             )
                         ))}
+                        {/* Quick search (desktop) */}
+                        <form action="/search" className="ml-3 relative">
+                            <input
+                              type="search"
+                              name="q"
+                              placeholder="Search…"
+                              aria-label="Search"
+                              className="w-48 border border-slate-200 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-slate-500"
+                            />
+                            <button type="submit" className="absolute right-1 top-1.5 text-slate-500" aria-label="Submit search">
+                              <i className="fas fa-search"></i>
+                            </button>
+                        </form>
                         <LanguageSelector />
                     </nav>
                     
@@ -131,6 +144,22 @@ const Header: React.FC = () => {
                                                 <i className="fas fa-times w-6 h-6"></i>
                                             </Popover.Button>
                                         </div>
+                                        {/* Quick search (mobile) */}
+                                        <form action="/search" className="mt-4">
+                                          <label htmlFor="m-search" className="sr-only">Search</label>
+                                          <div className="relative">
+                                            <input
+                                              id="m-search"
+                                              type="search"
+                                              name="q"
+                                              placeholder="Search…"
+                                              className="w-full border border-slate-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-slate-500"
+                                            />
+                                            <button type="submit" className="absolute right-2 top-2 text-slate-500" aria-label="Submit search">
+                                              <i className="fas fa-search"></i>
+                                            </button>
+                                          </div>
+                                        </form>
                                         <nav className="mt-6">
                                             <div className="grid gap-y-4">
                                                 {NAV_LINKS.map(link => (

@@ -24,6 +24,10 @@ const Hero: React.FC = () => {
                      <img 
                         src="https://cdn-avatars.huggingface.co/v1/production/uploads/65d00458fff501149572827f/E6nxYRxqRmBGRf9wSQq4Y.jpeg" 
                         alt="Sami Halawa - AI Expert" 
+                        width="128" 
+                        height="128" 
+                        fetchpriority="high"
+                        decoding="async"
                         className="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-slate-100 shadow-sm"
                     />
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 tracking-tight text-slate-900">{t('hero.title')}</h1>

@@ -35,7 +35,14 @@ const Layout: React.FC = () => {
   };
   return (
     <div className="bg-white text-slate-800">
-      <Helmet>
+      {/* Skip link for keyboard users */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-slate-900 focus:text-white focus:px-4 focus:py-2 focus:rounded-md"
+      >
+        Skip to content
+      </a>
+      <Helmet defaultTitle="Sami Halawa — AI Training & Solutions" titleTemplate="%s — Sami Halawa">
         <meta name="theme-color" content="#0f172a" />
         <meta property="og:site_name" content="Sami Halawa" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -47,7 +54,7 @@ const Layout: React.FC = () => {
         <script type="application/ld+json">{JSON.stringify(webSiteJsonLd)}</script>
       </Helmet>
       <Header />
-      <main id="main-content">
+      <main id="main-content" role="main" tabIndex={-1}>
         <Outlet />
       </main>
       <Footer />
