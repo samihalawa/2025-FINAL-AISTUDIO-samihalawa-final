@@ -11,17 +11,19 @@ const Footer: React.FC = () => {
     ];
 
     return (
-        <footer role="contentinfo" className="bg-slate-50 border-t border-slate-200 py-8">
-            <div className="container mx-auto px-6 text-center text-slate-600">
-                <div className="flex justify-center space-x-6 mb-6">
+        <footer role="contentinfo" className="relative mt-24 border-t border-white/60 bg-white/70">
+            <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-200 to-transparent"></div>
+            <div className="container flex flex-col items-center gap-6 py-10 text-center text-slate-600">
+                <div className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">{t('footer.tagline')}</div>
+                <div className="flex flex-wrap justify-center gap-4">
                     {socialLinks.map(link => (
-                        <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-slate-900 transition-colors duration-300" aria-label={link.label}>
-                            <i className={`${link.icon} text-2xl`}></i>
+                        <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white/80 text-slate-500 shadow-sm transition hover:-translate-y-1 hover:text-brand-600" aria-label={link.label}>
+                            <i className={`${link.icon} text-xl`}></i>
                         </a>
                     ))}
                 </div>
-                <p className="text-sm">{t('footer.copyright')}</p>
-                <p className="text-xs text-slate-500 mt-4 max-w-2xl mx-auto">{t('footer.disclaimer')}</p>
+                <p className="text-xs text-slate-500 max-w-2xl">{t('footer.disclaimer')}</p>
+                <p className="text-sm text-slate-400">{t('footer.copyright')}</p>
             </div>
         </footer>
     );

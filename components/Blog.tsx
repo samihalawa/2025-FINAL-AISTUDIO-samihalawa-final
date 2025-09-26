@@ -12,6 +12,8 @@ const Blog: React.FC = () => {
     const [loading, setLoading] = useState<boolean>(true);
     const [selectedArticle, setSelectedArticle] = useState<Article | null>(null);
     const [errored, setErrored] = useState<boolean>(false);
+    const [activeCategory, setActiveCategory] = useState<'all' | ReturnType<typeof getCategoryKey>>('all');
+    const [query, setQuery] = useState('');
 
     useEffect(() => {
         const fetchArticles = async () => {
@@ -112,103 +114,154 @@ const Blog: React.FC = () => {
         }))
     ), [t]);
 
-    const list = articles.length ? articles : fallbackArticles;
+    const categoryOrder: ReturnType<typeof getCategoryKey>[] = ['automation', 'architecture', 'devops', 'safety', 'education', 'development', 'insights'];
+
+    const categoryFilters = useMemo(() => {
+        const present = new Set(articles.map(article => getCategoryKey(article.slug)));
+        return categoryOrder.filter(key => present.has(key));
+    }, [articles]);
+
+    const filteredArticles = useMemo(() => {
+        const lowered = query.trim().toLowerCase();
+        return articles.filter(article => {
+            const categoryMatch = activeCategory === 'all' || getCategoryKey(article.slug) === activeCategory;
+            if (!categoryMatch) return false;
+            if (!lowered) return true;
+            const haystack = [article.title, article.summary, article.author, article.content]
+                .filter(Boolean)
+                .join(' ')
+                .toLowerCase();
+            return haystack.includes(lowered);
+        });
+    }, [articles, activeCategory, query]);
+
+    const displayArticles = articles.length ? filteredArticles : fallbackArticles;
+    const usingFallback = !articles.length;
+    const isDataReady = !usingFallback && !loading && !errored;
+    const resultLabel = isDataReady
+        ? t('blog.resultCount').replace('{count}', filteredArticles.length.toString())
+        : t('blog.loadingButton');
 
     return (
         <>
             <section id="blog" className="py-20 bg-gradient-to-br from-slate-50 to-white scroll-mt-20" aria-label="Blog" aria-busy={loading}>
                 <div className="container mx-auto px-6">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">{t('blog.title')}</h2>
-                        <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                    <div className="mb-12 text-center">
+                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900">{t('blog.title')}</h2>
+                        <p className="mt-3 text-lg text-slate-600 max-w-2xl mx-auto">
                             {t('blog.intro')}
                         </p>
                     </div>
-                    {
-                        (() => (
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                                    {list.map((article) => {
-                                        const categoryKey = getCategoryKey(article.slug);
-                                        const categoryLabel = t(categoryTranslationMap[categoryKey]);
-                                        const categoryColorClass = getCategoryColor(categoryKey);
-                                        const readingTime = Math.max(1, Math.ceil(article.content.split(' ').length / 200));
 
-                                        return (
-                                            <article key={article.slug} className="bg-white rounded-xl border border-slate-200 shadow-sm transition-all duration-300 hover:shadow-xl hover:border-slate-300 flex flex-col overflow-hidden group">
-                                                {/* Category Badge */}
-                                                <div className="px-6 pt-6">
-                                                    <span className={`inline-block px-3 py-1 text-xs font-semibold rounded-full ${categoryColorClass}`}>
-                                                        {categoryLabel}
-                                                    </span>
-                                                </div>
+                    <div className="glass-panel mx-auto max-w-6xl p-6 shadow-soft-xl">
+                        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                            <div className="relative w-full md:max-w-md">
+                                <label htmlFor="blog-search" className="sr-only">{t('blog.searchPlaceholder')}</label>
+                                <input
+                                    id="blog-search"
+                                    type="search"
+                                    value={query}
+                                    onChange={(e) => setQuery(e.target.value)}
+                                    placeholder={t('blog.searchPlaceholder')}
+                                    disabled={usingFallback}
+                                    className="w-full rounded-full border border-slate-200 bg-white/80 px-4 py-3 pr-11 text-sm text-slate-600 shadow-sm transition focus:outline-none focus:ring-2 focus:ring-brand-500 disabled:cursor-not-allowed disabled:opacity-60"
+                                />
+                                <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-slate-400">
+                                    <i className="fas fa-search"></i>
+                                </span>
+                            </div>
+                            <div className="flex flex-wrap gap-2">
+                                <button
+                                    type="button"
+                                    onClick={() => setActiveCategory('all')}
+                                    disabled={usingFallback}
+                                    className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition ${activeCategory === 'all' ? 'border-transparent bg-gradient-to-r from-brand-600 to-brand-500 text-white shadow-brand' : 'border-slate-200 bg-white/80 text-slate-600 hover:border-brand-200 hover:text-brand-700'} ${usingFallback ? 'cursor-not-allowed opacity-60' : ''}`}
+                                >
+                                    {t('blog.filter.all')}
+                                </button>
+                                {categoryFilters.map(category => (
+                                    <button
+                                        key={category}
+                                        type="button"
+                                        onClick={() => setActiveCategory(category)}
+                                        disabled={usingFallback}
+                                        className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition ${activeCategory === category ? 'border-transparent bg-gradient-to-r from-brand-600 to-brand-500 text-white shadow-brand' : 'border-slate-200 bg-white/80 text-slate-600 hover:border-brand-200 hover:text-brand-700'} ${usingFallback ? 'cursor-not-allowed opacity-60' : ''}`}
+                                    >
+                                        {t(categoryTranslationMap[category])}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="mt-4 text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">
+                            {resultLabel}
+                        </div>
+                    </div>
 
-                                                {/* Content */}
-                                                <div className="px-6 py-4 flex-grow flex flex-col">
-                                                    {/* Meta Information */}
-                                                    <div className="flex items-center text-sm text-slate-500 mb-3 gap-3">
-                                                        <time dateTime={article.date}>
-                                                            {new Date(article.date).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })}
-                                                        </time>
-                                                        <span className="text-slate-300">•</span>
-                                                        <span>{t('blog.readTime').replace('{minutes}', readingTime.toString())}</span>
-                                                    </div>
-
-                                                    {/* Title */}
-                                                    <h3 className="text-xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition-colors line-clamp-2">
-                                                        {article.title}
-                                                    </h3>
-
-                                                    {/* Summary */}
-                                                    <p className="text-slate-600 mb-4 flex-grow line-clamp-3">
-                                                        {article.summary || t('blog.fallbackSummary')}
-                                                    </p>
-
-                                                    {/* Author */}
-                                                    <div className="flex items-center mb-4">
-                                                        <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
-                                                            {article.author?.charAt(0) || 'S'}
-                                                        </div>
-                                                        <span className="ml-2 text-sm text-slate-600">{article.author || 'Sami Halawa'}</span>
-                                                    </div>
-
-                                                    {/* Related Links */}
-                                                    {relatedMap[article.slug] && (
-                                                        <div className="mb-4 pt-3 border-t border-slate-100">
-                                                            <div className="flex flex-wrap gap-2">
-                                                                {relatedMap[article.slug].map((r) => (
-                                                                    <a
-                                                                        key={r.href}
-                                                                        href={r.href}
-                                                                        className="inline-block px-3 py-1 text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-md transition-colors"
-                                                                    >
-                                                                        {t(r.labelKey)}
-                                                                    </a>
-                                                                ))}
-                                                            </div>
-                                                        </div>
-                                                    )}
-                                                </div>
-
-                                                {/* Read More Button */}
-                                                <div className="px-6 pb-6 mt-auto">
-                                                    <button
-                                                        onClick={() => openArticleModal(article)}
-                                                        className="w-full py-2 px-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 group flex items-center justify-center"
-                                                    >
-                                                        {t('blog.readMore')}
-                                                        <i className="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
-                                                    </button>
-                                                </div>
-                                            </article>
-                                        );
-                                    })}
-                                </div>
-                            ))()
-                    }
                     {!loading && errored && (
                         <p className="mt-10 text-center text-sm text-red-600" role="alert">
                             {t('blog.error')}
                         </p>
+                    )}
+
+                    {displayArticles.length === 0 && !usingFallback ? (
+                        <p className="mt-16 text-center text-slate-500">{t('blog.emptyState')}</p>
+                    ) : (
+                        <div className="mt-12 grid max-w-7xl mx-auto grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                            {displayArticles.map((article) => {
+                                const categoryKey = getCategoryKey(article.slug);
+                                const categoryLabel = t(categoryTranslationMap[categoryKey]);
+                                const categoryColorClass = getCategoryColor(categoryKey);
+                                const readingTime = Math.max(1, Math.ceil(article.content.split(' ').length / 200));
+
+                                return (
+                                    <article key={article.slug} className="glass-panel flex h-full flex-col overflow-hidden p-6 transition hover:-translate-y-1">
+                                        <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
+                                            <span>{categoryLabel}</span>
+                                            <time dateTime={article.date} className="text-slate-400">
+                                                {new Date(article.date).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })}
+                                            </time>
+                                        </div>
+                                        <h3 className="mt-4 text-xl font-semibold text-slate-900 transition-colors group-hover:text-brand-600 line-clamp-2">
+                                            {article.title}
+                                        </h3>
+                                        <p className="mt-3 text-sm text-slate-600 line-clamp-3">
+                                            {article.summary || t('blog.fallbackSummary')}
+                                        </p>
+                                        <div className="mt-4 flex items-center justify-between text-sm text-slate-500">
+                                            <span>{t('blog.readTime').replace('{minutes}', readingTime.toString())}</span>
+                                            <span className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold ${categoryColorClass}`}>
+                                                <i className="fas fa-hashtag"></i>
+                                                {categoryLabel}
+                                            </span>
+                                        </div>
+                                        {relatedMap[article.slug] && (
+                                            <div className="mt-5 border-t border-slate-100 pt-4">
+                                                <div className="flex flex-wrap gap-2">
+                                                    {relatedMap[article.slug].map((r) => (
+                                                        <a
+                                                            key={r.href}
+                                                            href={r.href}
+                                                            className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-xs text-slate-600 transition hover:border-brand-200 hover:text-brand-700"
+                                                        >
+                                                            <i className="fas fa-up-right-from-square text-[10px]"></i>
+                                                            {t(r.labelKey)}
+                                                        </a>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        )}
+                                        <button
+                                            onClick={() => openArticleModal(article)}
+                                            disabled={usingFallback}
+                                            className={`mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-600 to-brand-500 px-4 py-2 text-sm font-semibold text-white shadow-brand transition hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60`}
+                                        >
+                                            {usingFallback ? t('blog.loadingButton') : t('blog.readMore')}
+                                            {!usingFallback && <i className="fas fa-arrow-right text-xs"></i>}
+                                        </button>
+                                    </article>
+                                );
+                            })}
+                        </div>
                     )}
                 </div>
             </section>

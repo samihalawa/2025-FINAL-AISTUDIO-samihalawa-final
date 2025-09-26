@@ -24,7 +24,7 @@ const BackToTop: React.FC = () => {
     <button
       type="button"
       onClick={scrollTop}
-      className="fixed bottom-24 right-6 z-40 bg-white text-slate-700 border border-slate-300 rounded-full w-12 h-12 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all focus:outline-none focus:ring-2 focus:ring-slate-500 flex items-center justify-center"
+      className="fixed bottom-24 right-6 z-40 inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/60 bg-slate-900 text-white shadow-lg shadow-brand-900/40 transition hover:-translate-y-1 hover:scale-[1.03] focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2"
       aria-label={t('ui.backToTop')}
     >
       <i className="fas fa-arrow-up"></i>

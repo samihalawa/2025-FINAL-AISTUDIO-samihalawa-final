@@ -1,9 +1,22 @@
 import React from 'react';
 import { useTranslation } from '../i18n/LanguageContext';
 import { TRAINING_PROGRAMS, PARTNERS } from '../constants';
+import type { TranslationKey } from '../i18n/translations';
 
 const Corporate: React.FC = () => {
     const { t } = useTranslation();
+
+    const featuredServices: { href: string; key: 'medicalAI' | 'businessAutomation' | 'promptEngineering' | 'ragLangChain' | 'agentsAutomation' | 'aiReadinessAudit' | 'aiForMarketing' | 'acceleratorReadiness' | 'aiFundingGrants' }[] = [
+        { href: '/services/medical-ai', key: 'medicalAI' },
+        { href: '/services/business-automation', key: 'businessAutomation' },
+        { href: '/services/prompt-engineering', key: 'promptEngineering' },
+        { href: '/services/rag-langchain', key: 'ragLangChain' },
+        { href: '/services/agents-automation', key: 'agentsAutomation' },
+        { href: '/services/ai-readiness-audit', key: 'aiReadinessAudit' },
+        { href: '/services/ai-for-marketing', key: 'aiForMarketing' },
+        { href: '/services/accelerator-readiness', key: 'acceleratorReadiness' },
+        { href: '/services/ai-funding-grants', key: 'aiFundingGrants' },
+    ];
 
     return (
         <section id="corporate" className="py-20 bg-slate-50 scroll-mt-20" aria-label="Corporate Training">
@@ -42,33 +55,28 @@ const Corporate: React.FC = () => {
                 </div>
 
                 <div className="mt-20">
-                    <h3 className="text-2xl md:text-3xl font-bold text-center mb-8 text-slate-900">Servicios destacados</h3>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {[
-                          { href: '/services/medical-ai', title: 'IA Médica', desc: 'ChatGPT clínico, informes automáticos y diagnóstico asistido.' },
-                          { href: '/services/business-automation', title: 'Automatización con IA', desc: 'Flujos 24/7 con ChatGPT, Zapier y Make, sin programar.' },
-                          { href: '/services/university-ml', title: 'Universidad: ML y TFG/TFM', desc: 'Python, ML y apoyo integral a proyectos.' },
-                          { href: '/services/family-ai', title: 'Familias y Educación', desc: 'Programas para niños, adolescentes y padres.' },
-                          { href: '/services/advanced-ai', title: 'Proyectos Avanzados', desc: 'LangChain, AutoGPT, agentes MCP y despliegue.' },
-                          { href: '/services/no-code-ai', title: 'Creador No-Code', desc: 'Contenido y marketing con IA sin código.' },
-                          { href: '/services/prompt-engineering', title: 'Prompt Engineering', desc: 'Buenas prácticas, evaluación y seguridad en LLMs.' },
-                          { href: '/services/rag-langchain', title: 'RAG & LangChain', desc: 'Recuperación aumentada, re-ranking y despliegue.' },
-                          { href: '/services/agents-automation', title: 'Agentes y Automatización', desc: 'Bootcamp para operaciones y ventas.' },
-                          { href: '/services/ai-for-marketing', title: 'IA para Marketing', desc: 'Sistemas de contenido, SEO y anuncios.' },
-                          { href: '/services/ai-readiness-audit', title: 'AI Readiness Audit', desc: 'Evals, guardrails y control de costes.' },
-                          { href: '/services/ai-competitive-research', title: 'Investigación Competitiva', desc: 'Reverse engineering y blueprints.' },
-                          { href: '/services/ai-funding-grants', title: 'Financiación y Subvenciones', desc: 'Oportunidades y redacción de propuestas.' },
-                          { href: '/services/accelerator-readiness', title: 'Aceleradoras & Pitch', desc: 'Deck, demo y narrativa ganadora.' },
-                          { href: '/services/troubleshooting', title: 'Soporte y Troubleshooting', desc: 'Rescate de proyectos ML, auditoría y arreglos de automatización.' },
-                        ].map(card => (
-                          <a key={card.href} href={card.href} className="block bg-white p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-0.5 transition-all">
-                            <h4 className="text-lg font-semibold text-slate-900 mb-2">{card.title}</h4>
-                            <p className="text-slate-700">{card.desc}</p>
-                          </a>
-                        ))}
+                    <h3 className="text-2xl md:text-3xl font-bold text-center text-slate-900">{t('corporate.featuredTitle')}</h3>
+                    <p className="mt-3 text-center text-slate-600 max-w-2xl mx-auto">{t('corporate.featuredSubtitle')}</p>
+                    <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {featuredServices.map((service) => {
+                            const nameKey = `services.${service.key}.name` as TranslationKey;
+                            const descriptionKey = `services.${service.key}.description` as TranslationKey;
+                            return (
+                                <a key={service.key} href={service.href} className="glass-panel flex h-full flex-col justify-between p-6 shadow-soft-xl transition hover:-translate-y-1">
+                                    <div>
+                                        <h4 className="text-lg font-semibold text-slate-900">{t(nameKey)}</h4>
+                                        <p className="mt-3 text-sm text-slate-600 line-clamp-3">{t(descriptionKey)}</p>
+                                    </div>
+                                    <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-600">
+                                        {t('home.servicesShowcase.learnMore')}
+                                        <i className="fas fa-arrow-right"></i>
+                                    </span>
+                                </a>
+                            );
+                        })}
                     </div>
                     <div className="text-center mt-10">
-                      <a href="/case-studies" className="inline-block bg-slate-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-slate-800">Ver casos de estudio</a>
+                      <a href="/case-studies" className="btn-secondary">{t('corporate.featuredCta')}</a>
                     </div>
                 </div>
             </div>

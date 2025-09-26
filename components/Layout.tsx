@@ -35,11 +35,10 @@ const Layout: React.FC = () => {
     }
   };
   return (
-    <div className="bg-white text-slate-800">
-      {/* Skip link for keyboard users */}
+    <div className="relative min-h-screen text-slate-800">
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-slate-900 focus:text-white focus:px-4 focus:py-2 focus:rounded-md"
+        className="sr-only focus-visible:fixed focus-visible:top-4 focus-visible:left-4 focus-visible:z-[200] focus-visible:rounded-full focus-visible:bg-slate-900 focus-visible:px-4 focus-visible:py-2 focus-visible:text-white focus-visible:no-underline"
       >
         Skip to content
       </a>
@@ -54,20 +53,33 @@ const Layout: React.FC = () => {
         <script type="application/ld+json">{JSON.stringify(orgJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(webSiteJsonLd)}</script>
       </Helmet>
+
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 -z-10 overflow-hidden">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="relative pt-24">
+            <div className="absolute -top-48 left-1/2 h-[520px] w-[110%] -translate-x-1/2 rounded-[180px] bg-white/60 shadow-soft-xl backdrop-blur-3xl mask-gradient"></div>
+            <div className="absolute top-0 left-1/2 h-[560px] w-[560px] -translate-x-1/2 rounded-full bg-brand-500/15 blur-3xl animate-pulseGlow"></div>
+            <div className="absolute -right-10 top-24 h-64 w-64 rounded-full bg-emerald-400/20 blur-3xl animate-float"></div>
+          </div>
+        </div>
+      </div>
+
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 -z-20 h-[720px] bg-grid-slate opacity-40" />
+
       <Header />
-      <main id="main-content" role="main" tabIndex={-1}>
+      <main id="main-content" role="main" tabIndex={-1} className="relative z-10">
         <Outlet />
       </main>
       <Footer />
       <BackToTop />
       <a
         href="https://wa.me/34679794037"
-        className="whatsapp-float fixed bottom-6 right-6 bg-slate-900 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg hover:bg-slate-800 transition-all transform hover:scale-110 z-40"
+        className="fixed bottom-6 right-6 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full bg-slate-900 text-white shadow-lg shadow-brand-900/30 transition-all hover:-translate-y-1 hover:scale-105 hover:bg-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contact via WhatsApp"
       >
-        <i className="fab fa-whatsapp text-3xl"></i>
+        <i className="fab fa-whatsapp text-2xl"></i>
       </a>
     </div>
   );

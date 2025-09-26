@@ -6,25 +6,43 @@ const Testimonials: React.FC = () => {
     const { t } = useTranslation();
     if (!TESTIMONIALS.length) return null;
     return (
-        <section id="testimonials" className="py-20 bg-white" aria-label="Testimonials">
-            <div className="container mx-auto px-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-slate-900">{t('testimonials.title')}</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <section id="testimonials" className="relative py-24" aria-label="Testimonials">
+            <div className="container">
+                <div className="mx-auto max-w-2xl text-center">
+                    <span className="badge-pill inline-flex items-center gap-2 text-brand-700">
+                        <i className="fas fa-comment-dots"></i>
+                        {t('testimonials.badge')}
+                    </span>
+                    <h2 className="section-heading mt-4">{t('testimonials.title')}</h2>
+                    <p className="section-subtitle mx-auto mt-3">{t('testimonials.subtitle')}</p>
+                </div>
+
+                <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
                     {TESTIMONIALS.map((testimonial, index) => (
-                        <div key={index} className="bg-slate-50 p-8 rounded-lg border border-slate-200 flex flex-col">
-                            <div className="flex-grow">
-                                <i className="fas fa-quote-left text-slate-300 text-3xl mb-4"></i>
-                                <p className="text-slate-700 italic mb-6">"{t(testimonial.quoteKey)}"</p>
+                        <article key={index} className="glass-panel flex h-full flex-col justify-between p-8 shadow-soft-xl">
+                            <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">
+                                <i className="fas fa-quote-left text-brand-500"></i>
+                                {t('testimonials.reviewLabel')}
                             </div>
-                            <div className="flex items-center mt-auto">
-                                <img src={testimonial.image} alt={t(testimonial.nameKey)} className="w-14 h-14 rounded-full mr-4 border-2 border-slate-200" />
+                            <blockquote className="mt-4 flex-grow text-slate-700">
+                                <p className="text-lg leading-relaxed">{`"${t(testimonial.quoteKey)}"`}</p>
+                            </blockquote>
+                            <footer className="mt-8 flex items-center gap-4">
+                                <img src={testimonial.image} alt={t(testimonial.nameKey)} className="h-14 w-14 rounded-2xl border border-white/70 shadow-brand" loading="lazy" />
                                 <div>
-                                    <p className="font-semibold text-slate-900">{t(testimonial.nameKey)}</p>
+                                    <p className="text-base font-semibold text-slate-900">{t(testimonial.nameKey)}</p>
                                     <p className="text-sm text-slate-500">{t(testimonial.titleKey)}</p>
                                 </div>
-                            </div>
-                        </div>
+                            </footer>
+                        </article>
                     ))}
+                </div>
+
+                <div className="mt-12 flex flex-col items-center gap-4 text-center">
+                    <p className="text-sm text-slate-500">{t('testimonials.meta')}</p>
+                    <a href="/case-studies" className="btn-secondary">
+                        {t('testimonials.cta')}
+                    </a>
                 </div>
             </div>
         </section>

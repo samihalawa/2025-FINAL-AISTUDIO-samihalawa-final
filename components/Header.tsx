@@ -10,11 +10,14 @@ const Header: React.FC = () => {
 
     const LanguageSelector: React.FC<{mobile?: boolean}> = ({ mobile = false }) => (
         <Listbox value={language} onChange={setLanguage}>
-            <div className={`relative ${mobile ? 'w-full mt-2' : 'ml-4'}`}>
-                <Listbox.Button role="button" className="relative w-full cursor-default rounded-md bg-white py-2 pl-3 pr-10 text-left border border-slate-200 focus:outline-none focus-visible:border-slate-500 focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-300 sm:text-sm">
+            <div className={`relative ${mobile ? 'w-full mt-4' : 'ml-4'}`}>
+                <Listbox.Button
+                    role="button"
+                    className={`relative w-full cursor-default rounded-full border border-slate-200 bg-white/80 pl-4 pr-12 text-left text-sm font-medium text-slate-600 shadow-sm transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white ${mobile ? 'py-3' : 'py-2'}`}
+                >
                     <span className="block truncate">{selectedLanguage?.name}</span>
-                    <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
-                        <i className="fas fa-chevron-down text-gray-400" aria-hidden="true" />
+                    <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-slate-400">
+                        <i className="fas fa-chevron-down text-xs" aria-hidden="true" />
                     </span>
                 </Listbox.Button>
                 <Transition
@@ -23,12 +26,12 @@ const Header: React.FC = () => {
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
                 >
-                    <Listbox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm z-20">
+                    <Listbox.Options className="absolute mt-2 max-h-60 w-full overflow-auto rounded-2xl border border-slate-100 bg-white/95 py-2 text-base shadow-soft-xl ring-1 ring-black/5 backdrop-blur-xl focus:outline-none sm:text-sm z-20">
                         {LANGUAGES.map((lang) => (
                             <Listbox.Option
                                 key={lang.code}
                                 className={({ active }) =>
-                                    `relative cursor-default select-none py-2 pl-10 pr-4 ${active ? 'bg-slate-100 text-slate-900' : 'text-gray-900'}`
+                                    `relative cursor-default select-none rounded-xl px-4 py-2 ${active ? 'bg-brand-50 text-brand-700' : 'text-slate-700 hover:bg-slate-100'}`
                                 }
                                 value={lang.code}
                             >
@@ -53,45 +56,82 @@ const Header: React.FC = () => {
     );
 
     return (
-        <header role="banner" className="sticky top-0 w-full bg-white/95 backdrop-blur-sm border-b border-slate-200 z-50">
-            <div className="container mx-auto px-6 py-3">
-                <div className="flex items-center justify-between">
-                    <Link to="/" className="text-2xl font-bold text-slate-900">Sami Halawa</Link>
-                    
-                    <nav aria-label="Primary navigation" className="hidden md:flex space-x-1 items-center">
+        <header role="banner" className="sticky top-0 z-50 w-full border-b border-transparent bg-white/85 backdrop-blur-xl">
+            <div className="hidden lg:block border-b border-white/60 bg-white/40">
+                <div className="container flex items-center justify-center gap-4 py-2 text-sm text-slate-600">
+                    <span className="badge-pill">{t('header.announcement.badge')}</span>
+                    <p className="hidden md:block">{t('header.announcement.copy')}</p>
+                    <Link to="/ai-training" className="font-semibold text-brand-600 hover:text-brand-700">
+                        {t('header.announcement.link')} <i className="fas fa-arrow-right-long ml-2"></i>
+                    </Link>
+                </div>
+            </div>
+            <div className="container flex h-20 items-center justify-between gap-6">
+                    <Link to="/" className="flex items-center gap-3 text-slate-900">
+                        <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-600 via-brand-500 to-brand-700 text-lg font-semibold text-white shadow-brand">
+                            SH
+                        </span>
+                        <span className="flex flex-col leading-tight">
+                            <span className="text-lg font-semibold tracking-tight">Sami Halawa</span>
+                            <span className="text-xs uppercase tracking-[0.24em] text-slate-500">AI Training & Solutions</span>
+                        </span>
+                    </Link>
+
+                    <nav aria-label="Primary navigation" className="hidden md:flex items-center gap-1">
                         {NAV_LINKS.map(link => (
                             link.href === '/services' ? (
                                 <Popover key={link.key} className="relative">
-                                    <Popover.Button className="px-4 py-2 rounded-md text-sm font-medium text-slate-600 hover:text-slate-900 focus:outline-none">
-                                        {t(link.key)} <i className="fas fa-chevron-down ml-1 text-xs" />
+                                    <Popover.Button className="group inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white">
+                                        {t(link.key)}
+                                        <i className="fas fa-chevron-down text-xs transition-transform group-data-[headlessui-state=open]:rotate-180" />
                                     </Popover.Button>
                                     <Transition
                                         as={Fragment}
                                         enter="transition ease-out duration-150"
-                                        enterFrom="opacity-0 translate-y-1"
+                                        enterFrom="opacity-0 translate-y-2"
                                         enterTo="opacity-100 translate-y-0"
                                         leave="transition ease-in duration-100"
                                         leaveFrom="opacity-100 translate-y-0"
-                                        leaveTo="opacity-0 translate-y-1"
+                                        leaveTo="opacity-0 translate-y-2"
                                     >
-                                        <Popover.Panel className="absolute left-0 mt-2 w-[820px] bg-white border border-slate-200 rounded-lg shadow-lg p-6 z-50">
-                                            <div className="grid grid-cols-3 gap-6">
-                                                {SERVICE_MENU_SECTIONS.map(section => (
-                                                    <div key={section.titleKey}>
-                                                        <div className="text-xs uppercase tracking-wide text-slate-500 mb-2">{t(section.titleKey)}</div>
-                                                        <div className="flex flex-col space-y-2">
-                                                            {section.items.map(item => (
-                                                                <Link key={item.href} to={item.href} className="text-sm text-slate-700 hover:text-slate-900">
-                                                                    {t(item.labelKey)}
-                                                                </Link>
-                                                            ))}
+                                        <Popover.Panel className="absolute left-1/2 z-50 mt-6 w-[960px] max-w-[95vw] -translate-x-1/2 rounded-3xl border border-white/70 bg-white/95 p-8 shadow-soft-xl ring-1 ring-black/5 backdrop-blur-xl">
+                                            <div className="flex flex-col gap-8 lg:flex-row">
+                                                <div className="grid flex-1 grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                                                    {SERVICE_MENU_SECTIONS.map(section => (
+                                                        <div key={section.titleKey} className="rounded-2xl border border-slate-100 bg-white/80 p-5 shadow-sm transition hover:-translate-y-1 hover:border-brand-100 hover:shadow-brand">
+                                                            <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">{t(section.titleKey)}</p>
+                                                            <div className="mt-3 space-y-2">
+                                                                {section.items.map(item => (
+                                                                    <Link
+                                                                        key={item.href}
+                                                                        to={item.href}
+                                                                        className="group flex items-center justify-between rounded-xl px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-brand-50 hover:text-brand-700"
+                                                                    >
+                                                                        <span>{t(item.labelKey)}</span>
+                                                                        <i className="fas fa-arrow-up-right-from-square text-xs opacity-0 transition group-hover:opacity-100" />
+                                                                    </Link>
+                                                                ))}
+                                                            </div>
                                                         </div>
+                                                    ))}
+                                                </div>
+                                                <div className="hidden w-full max-w-xs flex-col justify-between rounded-3xl bg-gradient-to-br from-brand-600 via-brand-500 to-brand-700 p-6 text-white shadow-brand lg:flex">
+                                                    <div>
+                                                        <p className="text-sm font-semibold uppercase tracking-[0.35em] text-white/70">{t('header.services.spotlight')}</p>
+                                                        <h3 className="mt-3 text-2xl font-semibold leading-tight">{t('header.services.ctaTitle')}</h3>
+                                                        <p className="mt-2 text-sm text-white/80">{t('header.services.ctaSubtitle')}</p>
                                                     </div>
-                                                ))}
-                                            </div>
-                                            <div className="mt-4 flex justify-between">
-                                                <Link to="/ai-training" className="text-sm font-medium text-slate-700 hover:text-slate-900">{t('header.services.training')}</Link>
-                                                <Link to="/services" className="text-sm font-medium text-slate-700 hover:text-slate-900">{t('header.services.viewAll')}</Link>
+                                                    <div className="mt-6 flex flex-col gap-2">
+                                                        <Link to="/ai-training" className="btn-primary w-full justify-between rounded-full bg-white/15 px-4 py-2 text-sm font-semibold text-white shadow-none hover:bg-white/25">
+                                                            {t('header.services.training')}
+                                                            <i className="fas fa-arrow-right text-xs"></i>
+                                                        </Link>
+                                                        <Link to="/services" className="btn-secondary w-full justify-between border-white/30 bg-white/10 text-white hover:border-white/60 hover:bg-white/20">
+                                                            {t('header.services.viewAll')}
+                                                            <i className="fas fa-grip"></i>
+                                                        </Link>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </Popover.Panel>
                                     </Transition>
@@ -100,7 +140,7 @@ const Header: React.FC = () => {
                                 <NavLink
                                     key={link.key}
                                     to={link.href}
-                                    className={({ isActive }) => `px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${isActive ? 'text-slate-900' : 'text-slate-600 hover:text-slate-900'}`}
+                                    className={({ isActive }) => `inline-flex items-center rounded-full px-4 py-2 text-sm font-medium transition-colors ${isActive ? 'bg-brand-50 text-brand-700 shadow-inner' : 'text-slate-600 hover:text-slate-900 hover:bg-white/60'}`}
                                     end
                                 >
                                     {t(link.key)}
@@ -108,24 +148,28 @@ const Header: React.FC = () => {
                             )
                         ))}
                         {/* Quick search (desktop) */}
-                        <form action="/search" className="ml-3 relative">
+                        <form action="/search" className="relative ml-4 hidden lg:block">
                             <input
-                              type="search"
-                              name="q"
-                              placeholder="Search…"
-                              aria-label="Search"
-                              className="w-48 border border-slate-200 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-slate-500"
+                                type="search"
+                                name="q"
+                                placeholder={t('header.searchPlaceholder')}
+                                aria-label={t('header.searchPlaceholder')}
+                                className="w-56 rounded-full border border-slate-200 bg-white/80 px-4 py-2 pr-11 text-sm text-slate-600 shadow-sm transition focus:outline-none focus:ring-2 focus:ring-brand-500"
                             />
-                            <button type="submit" className="absolute right-1 top-1.5 text-slate-500" aria-label="Submit search">
-                              <i className="fas fa-search"></i>
+                            <button type="submit" className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400" aria-label="Submit search">
+                                <i className="fas fa-search"></i>
                             </button>
                         </form>
                         <LanguageSelector />
+                        <Link to="/contact" className="ml-4 hidden lg:inline-flex btn-primary">
+                            {t('header.cta')}
+                            <i className="fas fa-wand-magic-sparkles text-sm"></i>
+                        </Link>
                     </nav>
-                    
+
                     <div className="md:hidden">
                         <Popover className="relative">
-                            <Popover.Button className="p-2 rounded-md text-slate-600 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-slate-500">
+                            <Popover.Button className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white/80 p-2 text-slate-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
                                 <span className="sr-only">Open menu</span>
                                 <i className="fas fa-bars w-6 h-6"></i>
                             </Popover.Button>
@@ -134,12 +178,12 @@ const Header: React.FC = () => {
                                 enter="duration-200 ease-out" enterFrom="opacity-0 scale-95" enterTo="opacity-100 scale-100"
                                 leave="duration-100 ease-in" leaveFrom="opacity-100 scale-100" leaveTo="opacity-0 scale-95"
                             >
-                                <Popover.Panel className="absolute right-0 mt-2 w-64 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black/5 focus:outline-none">
+                                <Popover.Panel className="absolute right-0 mt-4 w-72 origin-top-right rounded-3xl border border-white/70 bg-white/95 p-6 shadow-soft-xl ring-1 ring-black/5 backdrop-blur-xl focus:outline-none">
                                   {({ close }) => (
-                                    <div className="px-5 pt-5 pb-6">
+                                    <div className="space-y-6">
                                         <div className="flex items-center justify-between">
-                                            <div className="text-xl font-bold text-slate-900">Sami Halawa</div>
-                                            <Popover.Button className="-mr-2 p-2 rounded-md text-slate-500 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-slate-500">
+                                            <div className="text-lg font-semibold text-slate-900">Sami Halawa</div>
+                                            <Popover.Button className="-mr-1 inline-flex items-center justify-center rounded-full border border-slate-200 bg-white/70 p-2 text-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500">
                                                 <span className="sr-only">Close menu</span>
                                                 <i className="fas fa-times w-6 h-6"></i>
                                             </Popover.Button>
@@ -152,10 +196,10 @@ const Header: React.FC = () => {
                                               id="m-search"
                                               type="search"
                                               name="q"
-                                              placeholder="Search…"
-                                              className="w-full border border-slate-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-slate-500"
+                                              placeholder={t('header.searchPlaceholder')}
+                                              className="w-full rounded-full border border-slate-200 bg-white/75 px-4 py-2 text-sm text-slate-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-500"
                                             />
-                                            <button type="submit" className="absolute right-2 top-2 text-slate-500" aria-label="Submit search">
+                                            <button type="submit" className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500" aria-label="Submit search">
                                               <i className="fas fa-search"></i>
                                             </button>
                                           </div>
@@ -191,10 +235,14 @@ const Header: React.FC = () => {
                                                             </div>
                                                         </div>
                                                     ) : (
-                                                        <Link key={link.key} to={link.href} onClick={() => close()} className="text-base font-medium text-slate-700 hover:text-slate-900">{t(link.key)}</Link>
+                                                        <Link key={link.key} to={link.href} onClick={() => close()} className="rounded-xl bg-white/70 px-4 py-2 text-base font-medium text-slate-700 shadow-sm transition hover:bg-brand-50 hover:text-brand-700">{t(link.key)}</Link>
                                                     )
                                                 ))}
                                                 <LanguageSelector mobile={true} />
+                                                <Link to="/contact" onClick={() => close()} className="btn-primary justify-center">
+                                                    {t('header.cta')}
+                                                    <i className="fas fa-wand-magic-sparkles text-sm"></i>
+                                                </Link>
                                             </div>
                                         </nav>
                                     </div>
@@ -204,7 +252,6 @@ const Header: React.FC = () => {
                         </Popover>
                     </div>
                 </div>
-            </div>
         </header>
     );
 };
