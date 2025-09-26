@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import Corporate from '../components/Corporate';
 import Skills from '../components/Skills';
 import Experience from '../components/Experience';
+import HireCTA from '../components/HireCTA';
 import { usePageMeta } from '../hooks/usePageMeta';
 
 const ServicesPage: React.FC = () => {
@@ -17,6 +18,9 @@ const ServicesPage: React.FC = () => {
       <Corporate />
       <Skills />
       <Experience />
+      <div className="container mx-auto px-6">
+        <HireCTA />
+      </div>
     </>
   );
 };

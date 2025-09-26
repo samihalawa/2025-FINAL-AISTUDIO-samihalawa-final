@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import Header from './Header';
 import Footer from './Footer';
 import { useTranslation } from '../i18n/LanguageContext';
+import BackToTop from './BackToTop';
 
 const Layout: React.FC = () => {
   const location = useLocation();
@@ -58,6 +59,7 @@ const Layout: React.FC = () => {
         <Outlet />
       </main>
       <Footer />
+      <BackToTop />
       <a
         href="https://wa.me/34679794037"
         className="whatsapp-float fixed bottom-6 right-6 bg-slate-900 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg hover:bg-slate-800 transition-all transform hover:scale-110 z-40"

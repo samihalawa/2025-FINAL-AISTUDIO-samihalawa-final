@@ -493,7 +493,12 @@ const en = {
     'cta.readPosts': 'Read related posts',
     'services.relatedCaseStudy': 'Related case study:',
     'footer.copyright': '© 2024 Sami Halawa. All rights reserved.',
-    'footer.disclaimer': 'This portfolio was designed and developed with the assistance of AI tools, reflecting my expertise in leveraging cutting-edge technology.'
+'footer.disclaimer': 'This portfolio was designed and developed with the assistance of AI tools, reflecting my expertise in leveraging cutting-edge technology.',
+// UI utility
+'ui.backToTop': 'Back to top',
+// Home services showcase
+'home.servicesShowcase.title': 'Explore Services',
+'home.servicesShowcase.description': 'Popular offerings to get results fast.'
 };
 
 const es: typeof en = {
@@ -994,7 +999,12 @@ const es: typeof en = {
     'cta.readPosts': 'Leer artículos relacionados',
     'services.relatedCaseStudy': 'Caso relacionado:',
     'footer.copyright': '© 2024 Sami Halawa. Todos los derechos reservados.',
-    'footer.disclaimer': 'Este portafolio fue diseñado y desarrollado con la ayuda de herramientas de IA, reflejando mi experiencia en el aprovechamiento de tecnología de punta.'
+'footer.disclaimer': 'Este portafolio fue diseñado y desarrollado con la ayuda de herramientas de IA, reflejando mi experiencia en el aprovechamiento de tecnología de punta.',
+// UI utility
+'ui.backToTop': 'Volver arriba',
+// Home services showcase
+'home.servicesShowcase.title': 'Explora Servicios',
+'home.servicesShowcase.description': 'Ofertas populares para resultados rápidos.'
 };
 
 const fr: typeof en = {
@@ -1495,7 +1505,12 @@ const fr: typeof en = {
     'cta.readPosts': 'Lire les articles associés',
     'services.relatedCaseStudy': 'Étude de cas associée :',
     'footer.copyright': '© 2024 Sami Halawa. Tous les droits sont réservés.',
-    'footer.disclaimer': "Ce portfolio a été conçu et développé avec l'aide d'outils d'IA, reflétant mon expertise dans l'exploitation des technologies de pointe."
+'footer.disclaimer': "Ce portfolio a été conçu et développé avec l'aide d'outils d'IA, reflétant mon expertise dans l'exploitation des technologies de pointe.",
+// UI utility
+'ui.backToTop': 'Haut de page',
+// Home services showcase
+'home.servicesShowcase.title': 'Explorer les services',
+'home.servicesShowcase.description': 'Offres populaires pour des résultats rapides.'
 };
 
 const zh: typeof en = {
@@ -1963,7 +1978,12 @@ const zh: typeof en = {
     'cta.readPosts': '阅读相关文章',
     'services.relatedCaseStudy': '相关案例：',
     'footer.copyright': '© 2024 Sami Halawa. 版权所有。',
-    'footer.disclaimer': '本作品集是在人工智能工具的协助下设计和开发的，反映了我在利用尖端技术方面的专业知识。'
+'footer.disclaimer': '本作品集是在人工智能工具的协助下设计和开发的，反映了我在利用尖端技术方面的专业知识。',
+// UI utility
+'ui.backToTop': '返回顶部',
+// Home services showcase
+'home.servicesShowcase.title': '浏览服务',
+'home.servicesShowcase.description': '热门服务，快速见效。'
 };
 
 export const translations = { en, es, fr, zh };
