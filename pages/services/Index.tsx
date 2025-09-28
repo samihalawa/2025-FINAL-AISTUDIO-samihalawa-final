@@ -47,6 +47,7 @@ const ServicesIndex: React.FC = () => {
         <meta property="og:description" content={description} />
         <meta property="og:image" content={ogImage} />
         <meta name="twitter:image" content={ogImage} />
+        <link rel="canonical" href="/services" />
       </Helmet>
       <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">{t('services.index.title')}</h1>
       <p className="text-slate-700 mb-8 max-w-3xl">{t('services.index.description')}</p>

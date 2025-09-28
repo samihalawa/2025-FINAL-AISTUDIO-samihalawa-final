@@ -45,11 +45,23 @@ const Layout: React.FC = () => {
       <Helmet defaultTitle="Sami Halawa — AI Training & Solutions" titleTemplate="%s — Sami Halawa">
         <meta name="theme-color" content="#0f172a" />
         <meta property="og:site_name" content="Sami Halawa" />
+        <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="og:image" content={defaultOg} />
         <meta name="twitter:image" content={defaultOg} />
         <meta property="og:locale" content={language === 'en' ? 'en_US' : language === 'es' ? 'es_ES' : language === 'fr' ? 'fr_FR' : 'zh_CN'} />
+        {/* Alternate locales for social previews */}
+        <meta property="og:locale:alternate" content="en_US" />
+        <meta property="og:locale:alternate" content="es_ES" />
+        <meta property="og:locale:alternate" content="fr_FR" />
+        <meta property="og:locale:alternate" content="zh_CN" />
+        {/* Canonical and hreflang alternates */}
         <link rel="canonical" href={canonical} />
+        <link rel="alternate" hrefLang="x-default" href={canonical} />
+        <link rel="alternate" hrefLang="en" href={canonical} />
+        <link rel="alternate" hrefLang="es" href={canonical} />
+        <link rel="alternate" hrefLang="fr" href={canonical} />
+        <link rel="alternate" hrefLang="zh" href={canonical} />
         <script type="application/ld+json">{JSON.stringify(orgJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(webSiteJsonLd)}</script>
       </Helmet>
