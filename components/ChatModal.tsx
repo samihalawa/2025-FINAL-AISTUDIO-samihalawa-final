@@ -32,7 +32,8 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose, project }) => {
         if (isOpen && project) {
             setMessages([]);
             setError(null);
-            const initialGreeting = `Hello! I'm an AI assistant. Feel free to ask me anything about the "${t(project.titleKey)}" project.`;
+            const projectName = t(project.titleKey);
+            const initialGreeting = t('chatModal.initialGreeting').replace('{project}', projectName);
             setMessages([{ sender: 'ai', text: initialGreeting }]);
         }
     }, [isOpen, project, t]);
@@ -61,7 +62,7 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose, project }) => {
 
             if (res.ok) {
                 const data = await res.json();
-                setMessages(prev => [...prev, { sender: 'ai', text: data.text || 'No response.' }]);
+                setMessages(prev => [...prev, { sender: 'ai', text: data.text || t('chatModal.noResponse') }]);
             } else {
                 // Graceful local fallback (no server / no API key)
                 const fallback = buildFallbackAnswer(userMessage.text);
@@ -79,18 +80,23 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose, project }) => {
     };
 
     const buildFallbackAnswer = (msg: string) => {
-        const title = project ? t(project.titleKey) : 'Project';
+        const title = project ? t(project.titleKey) : t('chatModal.defaultProjectName');
         const summary = project ? t(project.summaryKey) : '';
         const features = project ? project.features.map(f => `- ${t(f)}`).join('\n') : '';
-        return [
-            `Demo response for "${title}" (local preview).`,
-            summary && `Summary: ${summary}`,
-            features && `Key features:\n${features}`,
+        const lines = [
+            t('chatModal.fallbackTitle').replace('{project}', title),
+            summary ? t('chatModal.fallbackSummary').replace('{summary}', summary) : '',
+            features ? t('chatModal.fallbackFeatures').replace('{features}', features) : '',
             '',
-            `You said: "${msg}"`,
-            'In production, this uses the Netlify function with Google GenAI.',
-        ].filter(Boolean).join('\n');
+            t('chatModal.fallbackEcho').replace('{message}', msg),
+            t('chatModal.fallbackInfo'),
+        ];
+        return lines.filter(Boolean).join('\n');
     };
+
+    const titleText = project
+        ? t('chatModal.title').replace('{project}', t(project.titleKey))
+        : t('chatModal.defaultTitle');
 
     return (
         <Transition appear show={isOpen} as={Fragment}>
@@ -113,12 +119,12 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose, project }) => {
                             <Dialog.Panel className="w-full max-w-2xl h-[80vh] transform overflow-hidden rounded-lg bg-white text-left align-middle shadow-xl transition-all flex flex-col">
                                 <div className="flex items-center justify-between p-4 border-b border-slate-200">
                                     <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-slate-900">
-                                        Chat about {project ? `"${t(project.titleKey)}"`: 'Project'}
+                                        {titleText}
                                     </Dialog.Title>
                                     <button
                                         type="button"
                                         className="inline-flex justify-center rounded-md p-2 text-sm font-medium text-slate-500 hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2"
-                                        aria-label="Close"
+                                        aria-label={t('ui.close')}
                                         onClick={onClose}
                                     >
                                         <i className="fas fa-times text-xl"></i>
@@ -143,12 +149,12 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose, project }) => {
                                             type="text"
                                             value={input}
                                             onChange={(e) => setInput(e.target.value)}
-                                            placeholder={t('projects.commonChatButton') + '...'}
+                                            placeholder={t('chatModal.inputPlaceholder')}
                                             className="flex-grow block w-full px-4 py-2 border border-slate-300 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-slate-500"
                                             disabled={isLoading}
-                                            aria-label="Chat message input"
+                                            aria-label={t('chatModal.inputAria')}
                                         />
-                                        <button type="submit" aria-label="Send message" disabled={isLoading || !input.trim()} className="bg-slate-900 text-white rounded-full w-10 h-10 flex items-center justify-center shrink-0 disabled:bg-slate-400 disabled:cursor-not-allowed transition-colors">
+                                        <button type="submit" aria-label={t('chatModal.sendAria')} disabled={isLoading || !input.trim()} className="bg-slate-900 text-white rounded-full w-10 h-10 flex items-center justify-center shrink-0 disabled:bg-slate-400 disabled:cursor-not-allowed transition-colors">
                                             {isLoading ? <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div> : <i className="fas fa-paper-plane"></i>}
                                         </button>
                                     </form>

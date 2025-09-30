@@ -2,6 +2,7 @@ import React, { Fragment, useMemo } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { marked } from 'marked';
 import { Article } from '../types';
+import { useTranslation, LanguageCode } from '../i18n/LanguageContext';
 
 interface ArticleModalProps {
     isOpen: boolean;
@@ -9,7 +10,15 @@ interface ArticleModalProps {
     article: Article | null;
 }
 
+const localeMap: Record<LanguageCode, string> = {
+    en: 'en-US',
+    es: 'es-ES',
+    fr: 'fr-FR',
+    zh: 'zh-CN',
+};
+
 const ArticleModal: React.FC<ArticleModalProps> = ({ isOpen, onClose, article }) => {
+    const { t, language } = useTranslation();
     
     const parsedContent = useMemo(() => {
         if (article?.content) {
@@ -18,6 +27,21 @@ const ArticleModal: React.FC<ArticleModalProps> = ({ isOpen, onClose, article })
         }
         return '';
     }, [article]);
+
+    const formattedDate = useMemo(() => {
+        if (!article?.date) {
+            return '';
+        }
+        const parsedDate = new Date(article.date);
+        if (Number.isNaN(parsedDate.getTime())) {
+            return '';
+        }
+        return new Intl.DateTimeFormat(localeMap[language], {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+        }).format(parsedDate);
+    }, [article, language]);
 
     return (
         <Transition appear show={isOpen} as={Fragment}>
@@ -48,22 +72,22 @@ const ArticleModal: React.FC<ArticleModalProps> = ({ isOpen, onClose, article })
                             <Dialog.Panel className="w-full max-w-4xl transform overflow-hidden rounded-lg bg-white text-left align-middle shadow-xl transition-all flex flex-col">
                                 <div className="flex items-center justify-between p-6 border-b border-slate-200">
                                     <Dialog.Title as="h3" className="text-xl font-bold leading-6 text-slate-900">
-                                        {article?.title}
+                                        {article?.title || t('blog.untitled')}
                                     </Dialog.Title>
                                     <button
                                         type="button"
                                         className="inline-flex justify-center rounded-md p-2 text-sm font-medium text-slate-500 hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2"
                                         onClick={onClose}
-                                        aria-label="Close"
+                                        aria-label={t('ui.close')}
                                     >
                                         <i className="fas fa-times text-xl"></i>
                                     </button>
                                 </div>
                                 <div className="p-6 md:p-8 flex-grow overflow-y-auto max-h-[75vh]">
                                     <div className="flex items-center text-sm text-slate-500 mb-6">
-                                        <span>{article?.author}</span>
+                                        <span>{article?.author || t('blog.defaultAuthor')}</span>
                                         <span className="mx-2">&bull;</span>
-                                        <span>{article?.date}</span>
+                                        <span>{formattedDate || t('blog.dateUnknown')}</span>
                                     </div>
                                     <article 
                                         className="prose max-w-none"

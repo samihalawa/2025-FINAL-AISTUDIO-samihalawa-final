@@ -73,11 +73,11 @@ const Header: React.FC = () => {
                         </span>
                         <span className="flex flex-col leading-tight">
                             <span className="text-lg font-semibold tracking-tight">Sami Halawa</span>
-                            <span className="text-xs uppercase tracking-[0.24em] text-slate-500">AI Training & Solutions</span>
+                            <span className="text-xs uppercase tracking-[0.24em] text-slate-500">{t('header.tagline')}</span>
                         </span>
                     </Link>
 
-                    <nav aria-label="Primary navigation" className="hidden md:flex items-center gap-1">
+                    <nav aria-label={t('header.primaryNavAria')} className="hidden md:flex items-center gap-1">
                         {NAV_LINKS.map(link => (
                             link.href === '/services' ? (
                                 <Popover key={link.key} className="relative">
@@ -149,14 +149,16 @@ const Header: React.FC = () => {
                         ))}
                         {/* Quick search (desktop) */}
                         <form action="/search" className="relative ml-4 hidden lg:block">
+                            <label htmlFor="desktop-search" className="sr-only">{t('ui.searchLabel')}</label>
                             <input
                                 type="search"
+                                id="desktop-search"
                                 name="q"
                                 placeholder={t('header.searchPlaceholder')}
                                 aria-label={t('header.searchPlaceholder')}
                                 className="w-56 rounded-full border border-slate-200 bg-white/80 px-4 py-2 pr-11 text-sm text-slate-600 shadow-sm transition focus:outline-none focus:ring-2 focus:ring-brand-500"
                             />
-                            <button type="submit" className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400" aria-label="Submit search">
+                            <button type="submit" className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400" aria-label={t('ui.submitSearch')}>
                                 <i className="fas fa-search"></i>
                             </button>
                         </form>
@@ -170,7 +172,7 @@ const Header: React.FC = () => {
                     <div className="md:hidden">
                         <Popover className="relative">
                             <Popover.Button className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white/80 p-2 text-slate-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
-                                <span className="sr-only">Open menu</span>
+                                <span className="sr-only">{t('ui.openMenu')}</span>
                                 <i className="fas fa-bars w-6 h-6"></i>
                             </Popover.Button>
                             <Transition
@@ -184,13 +186,13 @@ const Header: React.FC = () => {
                                         <div className="flex items-center justify-between">
                                             <div className="text-lg font-semibold text-slate-900">Sami Halawa</div>
                                             <Popover.Button className="-mr-1 inline-flex items-center justify-center rounded-full border border-slate-200 bg-white/70 p-2 text-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500">
-                                                <span className="sr-only">Close menu</span>
+                                                <span className="sr-only">{t('ui.closeMenu')}</span>
                                                 <i className="fas fa-times w-6 h-6"></i>
                                             </Popover.Button>
                                         </div>
                                         {/* Quick search (mobile) */}
                                         <form action="/search" className="mt-4">
-                                          <label htmlFor="m-search" className="sr-only">Search</label>
+                                          <label htmlFor="m-search" className="sr-only">{t('ui.searchLabel')}</label>
                                           <div className="relative">
                                             <input
                                               id="m-search"
@@ -199,7 +201,7 @@ const Header: React.FC = () => {
                                               placeholder={t('header.searchPlaceholder')}
                                               className="w-full rounded-full border border-slate-200 bg-white/75 px-4 py-2 text-sm text-slate-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-500"
                                             />
-                                            <button type="submit" className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500" aria-label="Submit search">
+                                            <button type="submit" className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500" aria-label={t('ui.submitSearch')}>
                                               <i className="fas fa-search"></i>
                                             </button>
                                           </div>

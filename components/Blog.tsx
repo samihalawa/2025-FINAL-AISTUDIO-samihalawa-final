@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import matter from 'gray-matter';
-import { useTranslation } from '../i18n/LanguageContext';
+import { useTranslation, LanguageCode } from '../i18n/LanguageContext';
 import { BLOG_POSTS } from '../constants';
 import { Article } from '../types';
 import ArticleModal from './ArticleModal';
 import type { TranslationKey } from '../i18n/translations';
 
 const Blog: React.FC = () => {
-    const { t } = useTranslation();
+    const { t, language } = useTranslation();
     const [articles, setArticles] = useState<Article[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [selectedArticle, setSelectedArticle] = useState<Article | null>(null);
@@ -26,10 +26,10 @@ const Blog: React.FC = () => {
                         const { data, content } = matter(text);
                         return {
                             slug,
-                            title: data.title || 'Untitled',
+                            title: data.title || t('blog.untitled'),
                             date: data.date || '',
                             summary: data.summary || '',
-                            author: data.author || 'Sami Halawa',
+                            author: data.author || t('blog.defaultAuthor'),
                             content,
                         };
                     })
@@ -47,7 +47,7 @@ const Blog: React.FC = () => {
         };
 
         fetchArticles();
-    }, []);
+    }, [language]);
     
     const openArticleModal = (article: Article) => setSelectedArticle(article);
     const closeArticleModal = () => setSelectedArticle(null);
@@ -109,10 +109,23 @@ const Blog: React.FC = () => {
             title: t('blog.loadingTitle'),
             date: new Date().toISOString().slice(0, 10),
             summary: t('blog.loadingSummary'),
-            author: 'Sami Halawa',
+            author: t('blog.defaultAuthor'),
             content: t('blog.loadingContent')
         }))
     ), [t]);
+
+    const localeMap: Record<LanguageCode, string> = {
+        en: 'en-US',
+        es: 'es-ES',
+        fr: 'fr-FR',
+        zh: 'zh-CN',
+    };
+
+    const dateFormatter = useMemo(() => new Intl.DateTimeFormat(localeMap[language], {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+    }), [language]);
 
     const categoryOrder: ReturnType<typeof getCategoryKey>[] = ['automation', 'architecture', 'devops', 'safety', 'education', 'development', 'insights'];
 
@@ -144,7 +157,7 @@ const Blog: React.FC = () => {
 
     return (
         <>
-            <section id="blog" className="py-20 bg-gradient-to-br from-slate-50 to-white scroll-mt-20" aria-label="Blog" aria-busy={loading}>
+            <section id="blog" className="py-20 bg-gradient-to-br from-slate-50 to-white scroll-mt-20" aria-label={t('blog.title')} aria-busy={loading}>
                 <div className="container mx-auto px-6">
                     <div className="mb-12 text-center">
                         <h2 className="text-3xl md:text-4xl font-bold text-slate-900">{t('blog.title')}</h2>
@@ -212,17 +225,22 @@ const Blog: React.FC = () => {
                                 const categoryLabel = t(categoryTranslationMap[categoryKey]);
                                 const categoryColorClass = getCategoryColor(categoryKey);
                                 const readingTime = Math.max(1, Math.ceil(article.content.split(' ').length / 200));
+                                const displayTitle = article.title || t('blog.untitled');
+                                const parsedDate = article.date ? new Date(article.date) : null;
+                                const displayDate = parsedDate && !Number.isNaN(parsedDate.getTime())
+                                    ? dateFormatter.format(parsedDate)
+                                    : t('blog.dateUnknown');
 
                                 return (
                                     <article key={article.slug} className="glass-panel flex h-full flex-col overflow-hidden p-6 transition hover:-translate-y-1">
                                         <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
                                             <span>{categoryLabel}</span>
                                             <time dateTime={article.date} className="text-slate-400">
-                                                {new Date(article.date).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })}
+                                                {displayDate}
                                             </time>
                                         </div>
                                         <h3 className="mt-4 text-xl font-semibold text-slate-900 transition-colors group-hover:text-brand-600 line-clamp-2">
-                                            {article.title}
+                                            {displayTitle}
                                         </h3>
                                         <p className="mt-3 text-sm text-slate-600 line-clamp-3">
                                             {article.summary || t('blog.fallbackSummary')}

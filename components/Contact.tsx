@@ -37,8 +37,10 @@ const TallyEmbed: React.FC<{ src: string; title: string; height: number }> = ({ 
 
 const Contact: React.FC = () => {
     const { t } = useTranslation();
+    const formTitle = t('contact.formTitle');
+    const newsletterTitle = t('contact.newsletterTitle');
     return (
-        <section id="contact" className="py-20 bg-white scroll-mt-20" aria-label="Contact">
+        <section id="contact" className="py-20 bg-white scroll-mt-20" aria-label={t('contact.title')}>
             <div className="container mx-auto px-6">
                 <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-slate-900">{t('contact.title')}</h2>
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
@@ -46,34 +48,37 @@ const Contact: React.FC = () => {
                         <h3 className="text-2xl font-bold mb-4 text-slate-800">{t('contact.heading')}</h3>
                         <p className="text-slate-700 mb-8 max-w-lg">{t('contact.description')}</p>
                         <div className="space-y-6">
-                           {CONTACT_INFO.map(item => (
+                           {CONTACT_INFO.map(item => {
+                                const value = item.valueKey ? t(item.valueKey) : item.value;
+                                return (
                                 <a key={item.labelKey} href={item.href} target="_blank" rel="noopener noreferrer" className="flex items-center group">
                                     <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full mr-4">
                                         <i className={`${item.icon} text-xl`}></i>
                                     </div>
                                     <div>
                                         <h4 className="font-semibold text-slate-800">{t(item.labelKey)}</h4>
-                                        <p className="text-slate-600 group-hover:text-slate-900 transition-colors duration-300">{item.value}</p>
+                                        <p className="text-slate-600 group-hover:text-slate-900 transition-colors duration-300">{value}</p>
                                     </div>
                                 </a>
-                           ))}
+                                );
+                           })}
                         </div>
                     </div>
 
                     <div className="lg:w-1/2 space-y-8">
                         <div className="bg-slate-50 rounded-lg border border-slate-200 p-6">
-                            <h3 className="text-xl font-semibold mb-4 text-slate-900">Contact Form</h3>
+                            <h3 className="text-xl font-semibold mb-4 text-slate-900">{formTitle}</h3>
                             <TallyEmbed
                                 src="https://tally.so/embed/wz9VVq?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                                title="Contact form"
+                                title={formTitle}
                                 height={320}
                             />
                         </div>
                         <div className="bg-slate-50 rounded-lg border border-slate-200 p-6">
-                            <h3 className="text-xl font-semibold mb-4 text-slate-900">Newsletter</h3>
+                            <h3 className="text-xl font-semibold mb-4 text-slate-900">{newsletterTitle}</h3>
                             <TallyEmbed
                                 src="https://tally.so/embed/mY1V66?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                                title="NEWSLETTER"
+                                title={newsletterTitle}
                                 height={200}
                             />
                         </div>

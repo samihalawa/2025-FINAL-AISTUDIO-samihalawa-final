@@ -4,10 +4,10 @@ import { useTranslation } from '../i18n/LanguageContext';
 const Footer: React.FC = () => {
     const { t } = useTranslation();
     const socialLinks = [
-        { href: 'https://www.linkedin.com/in/samihalawa/', icon: 'fab fa-linkedin', label: 'LinkedIn' },
-        { href: 'https://github.com/samihalawa', icon: 'fab fa-github', label: 'GitHub' },
-        { href: 'https://twitter.com/samihalawa', icon: 'fab fa-twitter', label: 'Twitter' },
-        { href: 'mailto:sami@samihalawa.com', icon: 'fas fa-envelope', label: 'Email' }
+        { href: 'https://www.linkedin.com/in/samihalawa/', icon: 'fab fa-linkedin', labelKey: 'social.linkedin' },
+        { href: 'https://github.com/samihalawa', icon: 'fab fa-github', labelKey: 'social.github' },
+        { href: 'https://twitter.com/samihalawa', icon: 'fab fa-twitter', labelKey: 'social.twitter' },
+        { href: 'mailto:sami@samihalawa.com', icon: 'fas fa-envelope', labelKey: 'social.email' }
     ];
 
     return (
@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
                 <div className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">{t('footer.tagline')}</div>
                 <div className="flex flex-wrap justify-center gap-4">
                     {socialLinks.map(link => (
-                        <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white/80 text-slate-500 shadow-sm transition hover:-translate-y-1 hover:text-brand-600" aria-label={link.label}>
+                        <a key={link.labelKey} href={link.href} target="_blank" rel="noopener noreferrer" className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white/80 text-slate-500 shadow-sm transition hover:-translate-y-1 hover:text-brand-600" aria-label={t(link.labelKey)}>
                             <i className={`${link.icon} text-xl`}></i>
                         </a>
                     ))}

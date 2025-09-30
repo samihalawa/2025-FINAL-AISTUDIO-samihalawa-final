@@ -8,10 +8,14 @@ import BackToTop from './BackToTop';
 
 const Layout: React.FC = () => {
   const location = useLocation();
-  const { language } = useTranslation();
+  const { language, t } = useTranslation();
   const siteUrl = 'https://samihalawa.com';
   const canonical = `${siteUrl}${location.pathname}`;
   const defaultOg = 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&h=630&q=80';
+  const defaultTitle = t('layout.defaultTitle');
+  const titleTemplate = t('layout.titleTemplate');
+  const siteName = t('layout.siteName');
+  const jobTitle = t('layout.jobTitle');
   const orgJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',
@@ -21,12 +25,12 @@ const Layout: React.FC = () => {
       'https://www.linkedin.com/in/samihalawa',
       'https://github.com/samihalawa'
     ],
-    jobTitle: 'AI Trainer & Engineer'
+    jobTitle,
   };
   const webSiteJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Sami Halawa — AI Training & Solutions',
+    name: siteName,
     url: siteUrl,
     potentialAction: {
       '@type': 'SearchAction',
@@ -40,9 +44,9 @@ const Layout: React.FC = () => {
         href="#main-content"
         className="sr-only focus-visible:fixed focus-visible:top-4 focus-visible:left-4 focus-visible:z-[200] focus-visible:rounded-full focus-visible:bg-slate-900 focus-visible:px-4 focus-visible:py-2 focus-visible:text-white focus-visible:no-underline"
       >
-        Skip to content
+        {t('ui.skipToContent')}
       </a>
-      <Helmet defaultTitle="Sami Halawa — AI Training & Solutions" titleTemplate="%s — Sami Halawa">
+      <Helmet defaultTitle={defaultTitle} titleTemplate={titleTemplate}>
         <meta name="theme-color" content="#0f172a" />
         <meta property="og:site_name" content="Sami Halawa" />
         <meta property="og:type" content="website" />
@@ -89,7 +93,7 @@ const Layout: React.FC = () => {
         className="fixed bottom-6 right-6 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full bg-slate-900 text-white shadow-lg shadow-brand-900/30 transition-all hover:-translate-y-1 hover:scale-105 hover:bg-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Contact via WhatsApp"
+        aria-label={t('ui.contactViaWhatsApp')}
       >
         <i className="fab fa-whatsapp text-2xl"></i>
       </a>
