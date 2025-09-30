@@ -47,7 +47,7 @@ const Blog: React.FC = () => {
         };
 
         fetchArticles();
-    }, [t]);
+    }, [language]);
     
     const openArticleModal = (article: Article) => setSelectedArticle(article);
     const closeArticleModal = () => setSelectedArticle(null);
