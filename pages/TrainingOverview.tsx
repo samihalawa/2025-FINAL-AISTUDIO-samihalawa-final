@@ -16,55 +16,56 @@ const TrainingOverview: React.FC = () => {
   const { title: metaTitle, description: metaDescription } = usePageMeta('training');
   const title = t('trainingOverview.title');
   const description = t('trainingOverview.description');
+  const intro = t('trainingOverview.intro');
   const itemListJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, url: '/services/prompt-engineering', name: 'Prompt Engineering' },
-      { '@type': 'ListItem', position: 2, url: '/services/rag-langchain', name: 'RAG & LangChain' },
-      { '@type': 'ListItem', position: 3, url: '/services/agents-automation', name: 'AI Agents & Automation' },
-      { '@type': 'ListItem', position: 4, url: '/services/ai-for-marketing', name: 'AI for Marketing' },
-      { '@type': 'ListItem', position: 5, url: '/services/business-automation', name: 'Business Automation' },
-      { '@type': 'ListItem', position: 6, url: '/services/no-code-ai', name: 'No-code Creator' },
-      { '@type': 'ListItem', position: 7, url: '/services/medical-ai', name: 'Medical AI' },
-      { '@type': 'ListItem', position: 8, url: '/services/university-ml', name: 'University ML' },
-      { '@type': 'ListItem', position: 9, url: '/services/family-ai', name: 'Family AI' },
-      { '@type': 'ListItem', position: 10, url: '/services/advanced-ai', name: 'Advanced AI Projects' },
-      { '@type': 'ListItem', position: 11, url: '/services/troubleshooting', name: 'AI Troubleshooting' },
+      { '@type': 'ListItem', position: 1, url: '/services/prompt-engineering', name: t('services.promptEngineering.name') },
+      { '@type': 'ListItem', position: 2, url: '/services/rag-langchain', name: t('services.ragLangChain.name') },
+      { '@type': 'ListItem', position: 3, url: '/services/agents-automation', name: t('services.agentsAutomation.name') },
+      { '@type': 'ListItem', position: 4, url: '/services/ai-for-marketing', name: t('services.aiForMarketing.name') },
+      { '@type': 'ListItem', position: 5, url: '/services/business-automation', name: t('services.businessAutomation.name') },
+      { '@type': 'ListItem', position: 6, url: '/services/no-code-ai', name: t('services.noCodeAI.name') },
+      { '@type': 'ListItem', position: 7, url: '/services/medical-ai', name: t('services.medicalAI.name') },
+      { '@type': 'ListItem', position: 8, url: '/services/university-ml', name: t('services.universityML.name') },
+      { '@type': 'ListItem', position: 9, url: '/services/family-ai', name: t('services.familyAI.name') },
+      { '@type': 'ListItem', position: 10, url: '/services/advanced-ai', name: t('services.advancedAI.name') },
+      { '@type': 'ListItem', position: 11, url: '/services/troubleshooting', name: t('services.troubleshooting.name') },
     ]
   };
   const faqJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Delivery formats?', acceptedAnswer: { '@type': 'Answer', text: 'Onsite in Madrid or remote. 1–2 day workshops or multi-week programs.' }},
-      { '@type': 'Question', name: 'Pricing?', acceptedAnswer: { '@type': 'Answer', text: 'Fixed price per workshop; multi-week programs are packaged by module/team size.' }},
-      { '@type': 'Question', name: 'Languages?', acceptedAnswer: { '@type': 'Answer', text: 'Spanish and English. Materials available in both.' }}
+      { '@type': 'Question', name: t('trainingOverview.faq.delivery.question'), acceptedAnswer: { '@type': 'Answer', text: t('trainingOverview.faq.delivery.answer') }},
+      { '@type': 'Question', name: t('trainingOverview.faq.pricing.question'), acceptedAnswer: { '@type': 'Answer', text: t('trainingOverview.faq.pricing.answer') }},
+      { '@type': 'Question', name: t('trainingOverview.faq.languages.question'), acceptedAnswer: { '@type': 'Answer', text: t('trainingOverview.faq.languages.answer') }}
     ]
   };
   const groups: Array<{name: string; items: Array<{href: string; title: string; desc: string}>}> = [
     {
-      name: 'Core AI Skills',
+      name: t('trainingOverview.group.core'),
       items: [
-        { href: '/services/prompt-engineering', title: 'Prompt Engineering', desc: 'System prompts, tool-calling, evals and guardrails.' },
-        { href: '/services/rag-langchain', title: 'RAG & LangChain', desc: 'Hybrid search, chunking, re‑ranking and evaluation.' },
-        { href: '/services/agents-automation', title: 'AI Agents & Automation', desc: 'Patterns, orchestration and ops with no‑code tools.' },
+        { href: '/services/prompt-engineering', title: t('services.promptEngineering.name'), desc: t('trainingOverview.item.prompt.desc') },
+        { href: '/services/rag-langchain', title: t('services.ragLangChain.name'), desc: t('trainingOverview.item.rag.desc') },
+        { href: '/services/agents-automation', title: t('services.agentsAutomation.name'), desc: t('trainingOverview.item.agents.desc') },
       ]
     },
     {
-      name: 'Business & Marketing',
+      name: t('trainingOverview.group.business'),
       items: [
-        { href: '/services/ai-for-marketing', title: 'AI for Marketing', desc: 'Content/SEO systems, ad creatives and analytics.' },
-        { href: '/services/business-automation', title: 'Business Automation', desc: 'Lead gen, outreach, CRM and reporting automation.' },
-        { href: '/services/no-code-ai', title: 'No-code Creator', desc: 'Create images, video and copy. Automate publishing.' },
+        { href: '/services/ai-for-marketing', title: t('services.aiForMarketing.name'), desc: t('trainingOverview.item.marketing.desc') },
+        { href: '/services/business-automation', title: t('services.businessAutomation.name'), desc: t('trainingOverview.item.automation.desc') },
+        { href: '/services/no-code-ai', title: t('services.noCodeAI.name'), desc: t('trainingOverview.item.noCode.desc') },
       ]
     },
     {
-      name: 'Specialized Programs',
+      name: t('trainingOverview.group.specialized'),
       items: [
-        { href: '/services/medical-ai', title: 'Medical AI', desc: 'Clinical ChatGPT, reporting, triage and imaging support.' },
-        { href: '/services/university-ml', title: 'University ML', desc: 'Python, ML and TFG/TFM guidance with deliverables.' },
-        { href: '/services/family-ai', title: 'Family AI', desc: 'Safe, age‑appropriate AI education for families.' },
+        { href: '/services/medical-ai', title: t('services.medicalAI.name'), desc: t('trainingOverview.item.medical.desc') },
+        { href: '/services/university-ml', title: t('services.universityML.name'), desc: t('trainingOverview.item.university.desc') },
+        { href: '/services/family-ai', title: t('services.familyAI.name'), desc: t('trainingOverview.item.family.desc') },
       ]
     }
   ];
@@ -84,7 +85,7 @@ const TrainingOverview: React.FC = () => {
       </Helmet>
       <div className="container mx-auto px-6 max-w-6xl">
         <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">{title}</h1>
-        <p className="text-lg text-slate-700 mb-8">Choose a ready‑to‑run workshop or a tailored program. All trainings include hands‑on labs, templates, and optional consulting to ship your first wins.</p>
+        <p className="text-lg text-slate-700 mb-8">{intro}</p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {groups.flatMap(g => g.items.map(item => (
             <Link key={item.href} to={item.href} className="block bg-white p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-0.5 transition-all">
@@ -94,26 +95,26 @@ const TrainingOverview: React.FC = () => {
           )))}
         </div>
         <div className="mt-12 grid md:grid-cols-2 gap-8">
-          <Section title="Delivery & Formats">
+          <Section title={t('trainingOverview.section.delivery')}>
             <ul className="list-disc list-inside space-y-1">
-              <li>Onsite in Madrid or remote via Zoom</li>
-              <li>1–2 day workshops or 4–6 week programs</li>
-              <li>Spanish or English materials</li>
-              <li>Templates, checklists and handoff docs included</li>
+              <li>{t('trainingOverview.delivery.onsite')}</li>
+              <li>{t('trainingOverview.delivery.duration')}</li>
+              <li>{t('trainingOverview.delivery.languages')}</li>
+              <li>{t('trainingOverview.delivery.materials')}</li>
             </ul>
           </Section>
-          <Section title="Outcomes & ROI">
+          <Section title={t('trainingOverview.section.outcomes')}>
             <ul className="list-disc list-inside space-y-1">
-              <li>Measured impact (cost, latency, quality)</li>
-              <li>Repeatable playbooks and prompt libraries</li>
-              <li>Evals and safety guardrails in place</li>
-              <li>Path to production with support options</li>
+              <li>{t('trainingOverview.outcomes.impact')}</li>
+              <li>{t('trainingOverview.outcomes.playbooks')}</li>
+              <li>{t('trainingOverview.outcomes.guardrails')}</li>
+              <li>{t('trainingOverview.outcomes.production')}</li>
             </ul>
           </Section>
         </div>
         <div className="mt-8 flex flex-col sm:flex-row gap-4">
-          <Link to="/contact" className="inline-block bg-slate-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-slate-800">Get a training proposal</Link>
-          <Link to="/services" className="inline-block bg-white text-slate-700 px-6 py-3 rounded-md border border-slate-300 font-semibold hover:bg-slate-100">Browse all services</Link>
+          <Link to="/contact" className="inline-block bg-slate-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-slate-800">{t('trainingOverview.cta.primary')}</Link>
+          <Link to="/services" className="inline-block bg-white text-slate-700 px-6 py-3 rounded-md border border-slate-300 font-semibold hover:bg-slate-100">{t('trainingOverview.cta.secondary')}</Link>
         </div>
       </div>
     </section>

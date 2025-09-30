@@ -6,7 +6,7 @@ const Testimonials: React.FC = () => {
     const { t } = useTranslation();
     if (!TESTIMONIALS.length) return null;
     return (
-        <section id="testimonials" className="relative py-24" aria-label="Testimonials">
+        <section id="testimonials" className="relative py-24" aria-label={t('testimonials.title')}>
             <div className="container">
                 <div className="mx-auto max-w-2xl text-center">
                     <span className="badge-pill inline-flex items-center gap-2 text-brand-700">

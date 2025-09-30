@@ -22,6 +22,9 @@ const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, project }) => {
         }
     }, [isOpen]);
 
+    const fallbackTitle = t('demoModal.fallbackTitle');
+    const modalTitle = project ? t(project.titleKey) : fallbackTitle;
+
     return (
         <Transition appear show={isOpen} as={Fragment}>
             <Dialog as="div" className="relative z-50" onClose={onClose}>
@@ -51,12 +54,12 @@ const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, project }) => {
                             <Dialog.Panel className="w-full max-w-6xl h-[80vh] transform overflow-hidden rounded-lg bg-white p-2 text-left align-middle shadow-xl transition-all flex flex-col">
                                 <div className="flex items-center justify-between p-4 border-b border-slate-200">
                                     <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-slate-900">
-                                        {project ? t(project.titleKey) : 'Demo'}
+                                        {modalTitle}
                                     </Dialog.Title>
                                     <button
                                         type="button"
                                         className="inline-flex justify-center rounded-md p-2 text-sm font-medium text-slate-500 hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2"
-                                        aria-label="Close"
+                                        aria-label={t('ui.close')}
                                         onClick={onClose}
                                     >
                                         <i className="fas fa-times text-xl"></i>
@@ -70,7 +73,7 @@ const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, project }) => {
                                     )}
                                     <iframe
                                         src={project?.demoUrl}
-                                        title={project ? t(project.titleKey) : 'Demo'}
+                                        title={modalTitle}
                                         className={`w-full h-full border-0 rounded-b-md ${isLoading ? 'opacity-0' : 'opacity-100'}`}
                                         onLoad={() => setIsLoading(false)}
                                     />

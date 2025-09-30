@@ -14,7 +14,7 @@ const About: React.FC = () => {
     const toolKeys = ['skills.toolReactNext', 'skills.toolNodeExpress', 'skills.toolDockerK8s'] as const;
 
     return (
-        <section id="about" className="relative scroll-mt-24 py-24" aria-label="About Sami Halawa">
+        <section id="about" className="relative scroll-mt-24 py-24" aria-label={t('about.title')}>
             <div className="container">
                 <div className="mx-auto max-w-3xl text-center lg:max-w-4xl">
                     <span className="badge-pill mb-4 inline-flex items-center gap-2 text-brand-700">

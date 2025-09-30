@@ -19,7 +19,7 @@ const Corporate: React.FC = () => {
     ];
 
     return (
-        <section id="corporate" className="py-20 bg-slate-50 scroll-mt-20" aria-label="Corporate Training">
+        <section id="corporate" className="py-20 bg-slate-50 scroll-mt-20" aria-label={t('corporate.title')}>
             <div className="container mx-auto px-6">
                 <div className="text-center max-w-3xl mx-auto">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">{t('corporate.title')}</h2>

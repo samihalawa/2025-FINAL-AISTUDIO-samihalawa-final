@@ -10,6 +10,9 @@ const Projects: React.FC = () => {
     const { t } = useTranslation();
     const [demoProject, setDemoProject] = useState<Project | null>(null);
     const [chatProject, setChatProject] = useState<Project | null>(null);
+    const fallbackMessage = t('projects.emptyState')
+        .replace('{title}', t('projects.title'))
+        .replace('{platform}', t('social.github'));
 
     const openDemoModal = (project: Project) => {
         if (project.demoUrl) {
@@ -27,7 +30,7 @@ const Projects: React.FC = () => {
 
     return (
         <>
-            <section id="projects" className="py-20 bg-white scroll-mt-20" aria-label="Featured Projects">
+            <section id="projects" className="py-20 bg-white scroll-mt-20" aria-label={t('projects.title')}>
                 <div className="container mx-auto px-6">
                     <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-slate-900">{t('projects.title')}</h2>
                     {PROJECTS.length ? (
@@ -44,8 +47,8 @@ const Projects: React.FC = () => {
                     ) : (
                         <div className="max-w-2xl mx-auto bg-slate-50 border border-slate-200 rounded-lg p-6 text-center">
                             <p className="text-slate-700">
-                                {t('projects.title')} are being updated. In the meantime, explore more on
-                                {' '}<a className="font-semibold underline" href="https://github.com/samihalawa" target="_blank" rel="noopener noreferrer">GitHub</a>.
+                                {fallbackMessage}{' '}
+                                <a className="font-semibold underline" href="https://github.com/samihalawa" target="_blank" rel="noopener noreferrer">{t('social.github')}</a>.
                             </p>
                         </div>
                     )}

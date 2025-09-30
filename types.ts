@@ -58,6 +58,7 @@ export interface ContactInfo {
     labelKey: TranslationKey;
     value: string;
     href: string;
+    valueKey?: TranslationKey;
 }
 
 export interface TrainingProgram {
