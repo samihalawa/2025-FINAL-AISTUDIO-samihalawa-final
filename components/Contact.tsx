@@ -35,6 +35,38 @@ const TallyEmbed: React.FC<{ src: string; title: string; height: number }> = ({ 
     );
 };
 
+const CalendarEmbed: React.FC = () => {
+    useEffect(() => {
+        const script = document.createElement('script');
+        script.src = 'https://app.cal.com/embed/embed.js';
+        script.async = true;
+
+        script.onload = () => {
+            // @ts-ignore
+            const Cal = (window as any).Cal;
+            if (Cal) {
+                Cal("init", "schedule", { origin: "https://app.cal.com" });
+                Cal.ns.schedule("inline", {
+                    elementOrSelector: "#my-cal-inline-schedule",
+                    config: { layout: "month_view", theme: "auto" },
+                    calLink: "samihalawa/schedule",
+                });
+                Cal.ns.schedule("ui", { hideEventTypeDetails: false, layout: "month_view" });
+            }
+        };
+
+        document.head.appendChild(script);
+
+        return () => {
+            if (document.head.contains(script)) {
+                document.head.removeChild(script);
+            }
+        };
+    }, []);
+
+    return <div id="my-cal-inline-schedule" style={{ width: '100%', height: '600px', overflow: 'scroll' }} />;
+};
+
 const Contact: React.FC = () => {
     const { t } = useTranslation();
     const formTitle = t('contact.formTitle');
@@ -81,6 +113,10 @@ const Contact: React.FC = () => {
                                 title={newsletterTitle}
                                 height={200}
                             />
+                        </div>
+                        <div className="bg-slate-50 rounded-lg border border-slate-200 p-6">
+                            <h3 className="text-xl font-semibold mb-4 text-slate-900">Schedule a Meeting</h3>
+                            <CalendarEmbed />
                         </div>
                     </div>
                 </div>
