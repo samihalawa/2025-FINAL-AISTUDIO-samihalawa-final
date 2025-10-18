@@ -1,10 +1,42 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import matter from 'gray-matter';
 import { useTranslation, LanguageCode } from '../i18n/LanguageContext';
 import { BLOG_POSTS } from '../constants';
 import { Article } from '../types';
 import ArticleModal from './ArticleModal';
 import type { TranslationKey } from '../i18n/translations';
+
+// Simple front-matter parser
+function parseFrontMatter(content: string): { data: Record<string, any>; content: string } {
+    const frontMatterRegex = /^---\n([\s\S]*?)\n---\n([\s\S]*)$/;
+    const match = content.match(frontMatterRegex);
+    
+    if (!match) {
+        return { data: {}, content };
+    }
+    
+    const [, frontMatterStr, body] = match;
+    const data: Record<string, any> = {};
+    
+    // Parse YAML-like front matter
+    const lines = frontMatterStr.split('\n');
+    for (const line of lines) {
+        const colonIndex = line.indexOf(':');
+        if (colonIndex > -1) {
+            const key = line.substring(0, colonIndex).trim();
+            let value = line.substring(colonIndex + 1).trim();
+            
+            // Remove quotes if present
+            if ((value.startsWith('"') && value.endsWith('"')) || 
+                (value.startsWith("'") && value.endsWith("'"))) {
+                value = value.slice(1, -1);
+            }
+            
+            data[key] = value;
+        }
+    }
+    
+    return { data, content: body };
+}
 
 const Blog: React.FC = () => {
     const { t, language } = useTranslation();
@@ -41,8 +73,7 @@ const Blog: React.FC = () => {
                         }
                         
                         try {
-                            const parsed = matter(text);
-                            const { data, content } = parsed;
+                            const { data, content } = parseFrontMatter(text);
                             
                             if (!data || !content) {
                                 console.error(`Invalid parsed data for ${slug}:`, { data, content });
