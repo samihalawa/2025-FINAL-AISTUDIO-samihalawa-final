@@ -1,5 +1,10 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import matter from 'gray-matter';
+
+// For debugging purposes, make matter globally accessible
+if (typeof window !== 'undefined') {
+    (window as any).matter = matter;
+}
 import { useTranslation, LanguageCode } from '../i18n/LanguageContext';
 import { BLOG_POSTS } from '../constants';
 import { Article } from '../types';
