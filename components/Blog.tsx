@@ -1,10 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import matter from 'gray-matter';
-
-// For debugging purposes, make matter globally accessible
-if (typeof window !== 'undefined') {
-    (window as any).matter = matter;
-}
 import { useTranslation, LanguageCode } from '../i18n/LanguageContext';
 import { BLOG_POSTS } from '../constants';
 import { Article } from '../types';
@@ -17,6 +12,7 @@ const Blog: React.FC = () => {
     const [loading, setLoading] = useState<boolean>(true);
     const [selectedArticle, setSelectedArticle] = useState<Article | null>(null);
     const [errored, setErrored] = useState<boolean>(false);
+    const [errorMessage, setErrorMessage] = useState<string>('');
     const [activeCategory, setActiveCategory] = useState<'all' | ReturnType<typeof getCategoryKey>>('all');
     const [query, setQuery] = useState('');
 
@@ -24,31 +20,73 @@ const Blog: React.FC = () => {
         const fetchArticles = async () => {
             setLoading(true);
             setErrored(false);
+            setErrorMessage('');
             try {
-                const fetchedArticles = await Promise.all(
-                    BLOG_POSTS.map(async (slug) => {
+                const fetchedArticles: Article[] = [];
+                
+                for (const slug of BLOG_POSTS) {
+                    try {
                         const response = await fetch(`/blog/${slug}.md`);
-                        console.log(`Fetching /blog/${slug}.md`, response.status, response.ok);
+                        
                         if (!response.ok) {
-                            throw new Error(`Failed to fetch article: ${slug} - ${response.status} ${response.statusText}`);
+                            console.error(`Failed to fetch ${slug}: ${response.status} ${response.statusText}`);
+                            continue;
                         }
+                        
                         const text = await response.text();
-                        const { data, content } = matter(text);
-                        return {
-                            slug,
-                            title: data.title || t('blog.untitled'),
-                            date: data.date || '',
-                            summary: data.summary || '',
-                            author: data.author || t('blog.defaultAuthor'),
-                            content,
-                        };
-                    })
-                );
-                fetchedArticles.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+                        
+                        if (!text || text.trim().length === 0) {
+                            console.error(`Empty response for ${slug}`);
+                            continue;
+                        }
+                        
+                        try {
+                            const parsed = matter(text);
+                            const { data, content } = parsed;
+                            
+                            if (!data || !content) {
+                                console.error(`Invalid parsed data for ${slug}:`, { data, content });
+                                continue;
+                            }
+                            
+                            fetchedArticles.push({
+                                slug,
+                                title: data.title || t('blog.untitled'),
+                                date: data.date || new Date().toISOString().slice(0, 10),
+                                summary: data.summary || t('blog.loadingSummary'),
+                                author: data.author || t('blog.defaultAuthor'),
+                                content: content || '',
+                            });
+                        } catch (parseError) {
+                            console.error(`Error parsing ${slug}:`, parseError);
+                            continue;
+                        }
+                    } catch (fetchError) {
+                        console.error(`Error fetching ${slug}:`, fetchError);
+                        continue;
+                    }
+                }
+                
+                if (fetchedArticles.length === 0) {
+                    setErrored(true);
+                    setErrorMessage('No articles could be loaded. Please try again later.');
+                    setLoading(false);
+                    return;
+                }
+                
+                // Sort articles by date, newest first
+                fetchedArticles.sort((a, b) => {
+                    const dateA = new Date(a.date).getTime();
+                    const dateB = new Date(b.date).getTime();
+                    return dateB - dateA;
+                });
+                
                 setArticles(fetchedArticles);
+                setErrored(false);
             } catch (error) {
-                console.error("Failed to fetch articles:", error);
+                console.error("Unexpected error fetching articles:", error);
                 setErrored(true);
+                setErrorMessage('An unexpected error occurred while loading articles.');
             } finally {
                 setLoading(false);
             }
@@ -111,17 +149,6 @@ const Blog: React.FC = () => {
         return colors[categoryKey] || colors.insights;
     };
 
-    const fallbackArticles = useMemo<Article[]>(() => (
-        Array.from({ length: 6 }).map((_, index) => ({
-            slug: `placeholder-${index}`,
-            title: t('blog.loadingTitle'),
-            date: new Date().toISOString().slice(0, 10),
-            summary: t('blog.loadingSummary'),
-            author: t('blog.defaultAuthor'),
-            content: t('blog.loadingContent')
-        }))
-    ), [t]);
-
     const localeMap: Record<LanguageCode, string> = {
         en: 'en-US',
         es: 'es-ES',
@@ -156,8 +183,7 @@ const Blog: React.FC = () => {
         });
     }, [articles, activeCategory, query]);
 
-    const displayArticles = loading ? fallbackArticles : filteredArticles;
-    const isDataReady = !loading && !errored;
+    const isDataReady = !loading && !errored && articles.length > 0;
     const resultLabel = isDataReady
         ? t('blog.resultCount').replace('{count}', filteredArticles.length.toString())
         : t('blog.loadingButton');
@@ -213,49 +239,73 @@ const Blog: React.FC = () => {
                         </div>
 
                         <div className="mt-4 text-sm text-slate-500" aria-live="polite">
-                            {isDataReady ? resultLabel : <span className="animate-pulse">{resultLabel}</span>}
+                            {loading ? <span className="animate-pulse">{t('blog.loadingButton')}</span> : resultLabel}
                         </div>
 
                         {errored && (
                             <div className="mt-8 text-center text-red-600 bg-red-50 p-4 rounded-lg">
-                                <p>{t('blog.error')}</p>
+                                <p>{errorMessage || t('blog.error')}</p>
                             </div>
                         )}
 
-                        <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                            {displayArticles.map((article, index) => (
-                                <div
-                                    key={article.slug}
-                                    className={`rounded-xl bg-white shadow-lg transition-transform duration-300 hover:-translate-y-1 ${loading ? 'animate-pulse' : ''}`}
-                                    onClick={() => !loading && openArticleModal(article)}
-                                    onKeyPress={(e) => e.key === 'Enter' && !loading && openArticleModal(article)}
-                                    role="button"
-                                    tabIndex={0}
-                                    aria-label={loading ? t('blog.loadingTitle') : `Read article: ${article.title}`}
-                                >
-                                    <div className="p-6">
-                                        <div className="mb-4 flex items-center justify-between text-xs text-slate-500">
-                                            <span className={`${getCategoryColor(getCategoryKey(article.slug))} rounded-full px-3 py-1 text-xs font-semibold`}>
-                                                {loading ? <span className="w-16 h-4 inline-block bg-gray-200 rounded-md"></span> : t(categoryTranslationMap[getCategoryKey(article.slug)])}
-                                            </span>
-                                            <span>{loading ? <span className="w-20 h-4 inline-block bg-gray-200 rounded-md"></span> : dateFormatter.format(new Date(article.date))}</span>
-                                        </div>
-                                        <h3 className="mb-2 text-lg font-bold text-slate-800">
-                                            {loading ? <span className="w-full h-6 inline-block bg-gray-200 rounded-md"></span> : article.title}
-                                        </h3>
-                                        <p className="text-sm text-slate-600 line-clamp-3">
-                                            {loading ? <>
-                                                <span className="w-full h-4 inline-block bg-gray-200 rounded-md mb-1"></span>
-                                                <span className="w-5/6 h-4 inline-block bg-gray-200 rounded-md"></span>
-                                            </> : article.summary}
-                                        </p>
-                                        <div className="mt-4 text-sm font-semibold text-brand-600 hover:text-brand-700">
-                                            {loading ? <span className="w-24 h-4 inline-block bg-gray-200 rounded-md"></span> : t('blog.readMore')}
+                        {loading && (
+                            <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                                {Array.from({ length: 6 }).map((_, index) => (
+                                    <div key={index} className="rounded-xl bg-white shadow-lg animate-pulse">
+                                        <div className="p-6">
+                                            <div className="mb-4 flex items-center justify-between">
+                                                <div className="w-16 h-4 bg-gray-200 rounded-md"></div>
+                                                <div className="w-20 h-4 bg-gray-200 rounded-md"></div>
+                                            </div>
+                                            <div className="w-full h-6 bg-gray-200 rounded-md mb-2"></div>
+                                            <div className="w-5/6 h-4 bg-gray-200 rounded-md mb-1"></div>
+                                            <div className="w-full h-4 bg-gray-200 rounded-md mb-4"></div>
+                                            <div className="w-24 h-4 bg-gray-200 rounded-md"></div>
                                         </div>
                                     </div>
-                                </div>
-                            ))}
-                        </div>
+                                ))}
+                            </div>
+                        )}
+
+                        {!loading && !errored && articles.length > 0 && (
+                            <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                                {filteredArticles.map((article) => (
+                                    <div
+                                        key={article.slug}
+                                        className="rounded-xl bg-white shadow-lg transition-transform duration-300 hover:-translate-y-1 cursor-pointer"
+                                        onClick={() => openArticleModal(article)}
+                                        onKeyPress={(e) => e.key === 'Enter' && openArticleModal(article)}
+                                        role="button"
+                                        tabIndex={0}
+                                        aria-label={`Read article: ${article.title}`}
+                                    >
+                                        <div className="p-6">
+                                            <div className="mb-4 flex items-center justify-between text-xs text-slate-500">
+                                                <span className={`${getCategoryColor(getCategoryKey(article.slug))} rounded-full px-3 py-1 text-xs font-semibold`}>
+                                                    {t(categoryTranslationMap[getCategoryKey(article.slug)])}
+                                                </span>
+                                                <span>{dateFormatter.format(new Date(article.date))}</span>
+                                            </div>
+                                            <h3 className="mb-2 text-lg font-bold text-slate-800">
+                                                {article.title}
+                                            </h3>
+                                            <p className="text-sm text-slate-600 line-clamp-3">
+                                                {article.summary}
+                                            </p>
+                                            <div className="mt-4 text-sm font-semibold text-brand-600 hover:text-brand-700">
+                                                {t('blog.readMore')}
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+
+                        {!loading && !errored && articles.length > 0 && filteredArticles.length === 0 && (
+                            <div className="mt-8 text-center text-slate-600">
+                                <p>{t('blog.noResults')}</p>
+                            </div>
+                        )}
                     </div>
                 </div>
             </section>
