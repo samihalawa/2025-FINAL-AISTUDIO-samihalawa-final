@@ -5,6 +5,7 @@ import { useTranslation } from '../../i18n/LanguageContext';
 import { usePageMeta } from '../../hooks/usePageMeta';
 
 const CASES = [
+  { href: '/case-studies/apolo-medical-framework', titleKey: 'caseStudies.index.case.apolo.title', descKey: 'caseStudies.index.case.apolo.description' },
   { href: '/case-studies/radiology-ai', titleKey: 'caseStudies.index.case.radiology.title', descKey: 'caseStudies.index.case.radiology.description' },
   { href: '/case-studies/autoclient', titleKey: 'caseStudies.index.case.autoclient.title', descKey: 'caseStudies.index.case.autoclient.description' },
   { href: '/case-studies/attio-sequences', titleKey: 'caseStudies.index.case.attio.title', descKey: 'caseStudies.index.case.attio.description' },

@@ -450,6 +450,8 @@ const en = {
     'services.index.caseStudy.banking.description': 'Conversational banking assistant with guardrails, analytics, and handoffs.',
     'caseStudies.index.title': 'AI Case Studies',
     'caseStudies.index.description': 'Selected engagements across healthcare, automation and product research with ROI and deliverables.',
+    'caseStudies.index.case.apolo.title': 'Apolo — Privacy-Preserving Medical Image Analysis',
+    'caseStudies.index.case.apolo.description': 'Two-stage framework with fine-tuned open-source models for explainable, privacy-preserving medical imaging.',
     'caseStudies.index.case.radiology.title': 'RadiologyAI — Clinical Reporting & Triage',
     'caseStudies.index.case.radiology.description': 'Reduced report time by 70% with clinical ChatGPT and imaging support.',
     'caseStudies.index.case.autoclient.title': 'AutoClient — Outreach & CRM Automation',
