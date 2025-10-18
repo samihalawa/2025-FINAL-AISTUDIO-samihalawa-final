@@ -10,10 +10,10 @@ const Header: React.FC = () => {
 
     const LanguageSelector: React.FC<{mobile?: boolean}> = ({ mobile = false }) => (
         <Listbox value={language} onChange={setLanguage}>
-            <div className={`relative ${mobile ? 'w-full mt-4' : 'ml-4'}`}>
+            <div className={`relative ${mobile ? 'w-full mt-4' : ''}`}>
                 <Listbox.Button
                     role="button"
-                    className={`relative w-full cursor-default rounded-full border border-slate-200 bg-white/80 pl-4 pr-12 text-left text-sm font-medium text-slate-600 shadow-sm transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white ${mobile ? 'py-3' : 'py-2'}`}
+                    className={`relative cursor-default rounded-full border border-slate-200 bg-white/80 pl-4 pr-10 text-left text-sm font-medium text-slate-600 shadow-sm transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white ${mobile ? 'w-full py-3' : 'py-2'}`}
                 >
                     <span className="block truncate">{selectedLanguage?.name}</span>
                     <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-slate-400">
@@ -57,8 +57,8 @@ const Header: React.FC = () => {
 
     return (
         <header role="banner" className="sticky top-0 z-50 w-full border-b border-slate-100 bg-white/90 backdrop-blur-xl shadow-sm">
-            <div className="container flex h-16 items-center justify-between gap-6">
-                    <Link to="/" className="flex items-center gap-3 text-slate-900">
+            <div className="container flex h-16 items-center justify-between gap-4 px-4">
+                    <Link to="/" className="flex items-center gap-3 text-slate-900 flex-shrink-0">
                         <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-600 via-brand-500 to-brand-700 text-lg font-semibold text-white shadow-brand">
                             SH
                         </span>
@@ -68,11 +68,11 @@ const Header: React.FC = () => {
                         </span>
                     </Link>
 
-                    <nav aria-label={t('header.primaryNavAria')} className="hidden md:flex items-center gap-1">
+                    <nav aria-label={t('header.primaryNavAria')} className="hidden md:flex items-center gap-2 flex-1 justify-center">
                         {NAV_LINKS.map(link => (
                             link.href === '/services' ? (
                                 <Popover key={link.key} className="relative">
-                                    <Popover.Button className="group inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white">
+                                    <Popover.Button className="group inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white">
                                         {t(link.key)}
                                         <i className="fas fa-chevron-down text-xs transition-transform group-data-[headlessui-state=open]:rotate-180" />
                                     </Popover.Button>
@@ -111,92 +111,78 @@ const Header: React.FC = () => {
                                 <NavLink
                                     key={link.key}
                                     to={link.href}
-                                    className={({ isActive }) => `inline-flex items-center rounded-full px-4 py-2 text-sm font-medium transition-colors ${isActive ? 'bg-brand-50 text-brand-700 shadow-inner' : 'text-slate-600 hover:text-slate-900 hover:bg-white/60'}`}
+                                    className={({ isActive }) => `inline-flex items-center rounded-full px-3 py-2 text-sm font-medium transition-colors ${isActive ? 'bg-brand-50 text-brand-700 shadow-inner' : 'text-slate-600 hover:text-slate-900 hover:bg-white/60'}`}
                                     end
                                 >
                                     {t(link.key)}
                                 </NavLink>
                             )
                         ))}
-                        {/* Quick search (desktop) */}
-                        <form action="/search" className="relative ml-4 hidden lg:block">
-                            <label htmlFor="desktop-search" className="sr-only">{t('ui.searchLabel')}</label>
-                            <input
-                                type="search"
-                                id="desktop-search"
-                                name="q"
-                                placeholder={t('header.searchPlaceholder')}
-                                aria-label={t('header.searchPlaceholder')}
-                                className="w-56 rounded-full border border-slate-200 bg-white/80 px-4 py-2 pr-11 text-sm text-slate-600 shadow-sm transition focus:outline-none focus:ring-2 focus:ring-brand-500"
-                            />
-                            <button type="submit" className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400" aria-label={t('ui.submitSearch')}>
-                                <i className="fas fa-search"></i>
-                            </button>
-                        </form>
-                        <LanguageSelector />
-                        <Link to="/contact" className="ml-4 hidden lg:inline-flex btn-primary">
-                            {t('header.cta')}
-                            <i className="fas fa-wand-magic-sparkles text-sm"></i>
-                        </Link>
                     </nav>
 
-                    <div className="md:hidden">
-                        <Popover className="relative">
-                            <Popover.Button className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white/80 p-2 text-slate-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
-                                <span className="sr-only">{t('ui.openMenu')}</span>
-                                <i className="fas fa-bars w-6 h-6"></i>
-                            </Popover.Button>
-                            <Transition
-                                as={Fragment}
-                                enter="duration-200 ease-out" enterFrom="opacity-0 scale-95" enterTo="opacity-100 scale-100"
-                                leave="duration-100 ease-in" leaveFrom="opacity-100 scale-100" leaveTo="opacity-0 scale-95"
-                            >
-                                <Popover.Panel className="absolute right-0 mt-4 w-72 origin-top-right rounded-3xl border border-white/70 bg-white/95 p-6 shadow-soft-xl ring-1 ring-black/5 backdrop-blur-xl focus:outline-none">
-                                  {({ close }) => (
-                                    <div className="space-y-6">
-                                        <div className="flex items-center justify-between">
-                                            <div className="text-lg font-semibold text-slate-900">Sami Halawa</div>
-                                            <Popover.Button className="-mr-1 inline-flex items-center justify-center rounded-full border border-slate-200 bg-white/70 p-2 text-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500">
-                                                <span className="sr-only">{t('ui.closeMenu')}</span>
-                                                <i className="fas fa-times w-6 h-6"></i>
-                                            </Popover.Button>
-                                        </div>
-                                        {/* Quick search (mobile) */}
-                                        <form action="/search" className="mt-4">
-                                          <label htmlFor="m-search" className="sr-only">{t('ui.searchLabel')}</label>
-                                          <div className="relative">
-                                            <input
-                                              id="m-search"
-                                              type="search"
-                                              name="q"
-                                              placeholder={t('header.searchPlaceholder')}
-                                              className="w-full rounded-full border border-slate-200 bg-white/75 px-4 py-2 text-sm text-slate-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-500"
-                                            />
-                                            <button type="submit" className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500" aria-label={t('ui.submitSearch')}>
-                                              <i className="fas fa-search"></i>
-                                            </button>
-                                          </div>
-                                        </form>
-                                        <nav className="mt-6">
-                                            <div className="space-y-2">
-                                                {NAV_LINKS.map(link => (
-                                                    <Link key={link.key} to={link.href} onClick={() => close()} className="block rounded-xl bg-white/70 px-4 py-3 text-base font-medium text-slate-700 shadow-sm transition hover:bg-brand-50 hover:text-brand-700">
-                                                        {t(link.key)}
-                                                    </Link>
-                                                ))}
-                                                <div className="pt-4 mt-4 border-t border-slate-200 space-y-2">
-                                                    <Link to="/ai-training" onClick={() => close()} className="block rounded-xl bg-white/70 px-4 py-3 text-sm font-medium text-slate-700 shadow-sm">
-                                                        {t('nav.training')}
-                                                    </Link>
-                                                    <LanguageSelector mobile={true} />
-                                                </div>
+                    <div className="flex items-center gap-3 ml-auto">
+                        {/* Language Selector - Desktop */}
+                        <div className="hidden lg:block">
+                            <LanguageSelector />
+                        </div>
+
+                        {/* CTA Button - Icon only on desktop to prevent overflow */}
+                        <Link 
+                            to="/contact" 
+                            className="hidden md:inline-flex items-center justify-center h-10 w-10 rounded-full bg-gradient-to-r from-brand-600 to-brand-500 text-white shadow-brand transition hover:shadow-lg hover:scale-105"
+                            title={t('header.cta')}
+                            aria-label={t('header.cta')}
+                        >
+                            <i className="fas fa-wand-magic-sparkles text-sm"></i>
+                        </Link>
+
+                        {/* Mobile Menu */}
+                        <div className="md:hidden">
+                            <Popover className="relative">
+                                <Popover.Button className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white/80 p-2 text-slate-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+                                    <span className="sr-only">{t('ui.openMenu')}</span>
+                                    <i className="fas fa-bars w-6 h-6"></i>
+                                </Popover.Button>
+                                <Transition
+                                    as={Fragment}
+                                    enter="duration-200 ease-out" enterFrom="opacity-0 scale-95" enterTo="opacity-100 scale-100"
+                                    leave="duration-100 ease-in" leaveFrom="opacity-100 scale-100" leaveTo="opacity-0 scale-95"
+                                >
+                                    <Popover.Panel className="absolute right-0 mt-4 w-72 origin-top-right rounded-3xl border border-white/70 bg-white/95 p-6 shadow-soft-xl ring-1 ring-black/5 backdrop-blur-xl focus:outline-none">
+                                      {({ close }) => (
+                                        <div className="space-y-6">
+                                            <div className="flex items-center justify-between">
+                                                <div className="text-lg font-semibold text-slate-900">Sami Halawa</div>
+                                                <Popover.Button className="-mr-1 inline-flex items-center justify-center rounded-full border border-slate-200 bg-white/70 p-2 text-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                                                    <span className="sr-only">{t('ui.closeMenu')}</span>
+                                                    <i className="fas fa-times w-6 h-6"></i>
+                                                </Popover.Button>
                                             </div>
-                                        </nav>
-                                    </div>
-                                  )}
-                                </Popover.Panel>
-                            </Transition>
-                        </Popover>
+                                            <nav className="mt-6">
+                                                <div className="space-y-2">
+                                                    {NAV_LINKS.map(link => (
+                                                        <Link key={link.key} to={link.href} onClick={() => close()} className="block rounded-xl bg-white/70 px-4 py-3 text-base font-medium text-slate-700 shadow-sm transition hover:bg-brand-50 hover:text-brand-700">
+                                                            {t(link.key)}
+                                                        </Link>
+                                                    ))}
+                                                    <div className="pt-4 mt-4 border-t border-slate-200 space-y-2">
+                                                        <Link to="/ai-training" onClick={() => close()} className="block rounded-xl bg-white/70 px-4 py-3 text-sm font-medium text-slate-700 shadow-sm">
+                                                            {t('nav.training')}
+                                                        </Link>
+                                                        <Link to="/contact" onClick={() => close()} className="block rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-4 py-3 text-sm font-semibold text-white shadow-brand transition hover:shadow-lg">
+                                                            {t('header.cta')}
+                                                            <i className="fas fa-wand-magic-sparkles text-sm ml-2"></i>
+                                                        </Link>
+                                                        <LanguageSelector mobile={true} />
+                                                    </div>
+                                                </div>
+                                            </nav>
+                                        </div>
+                                      )}
+                                    </Popover.Panel>
+                                </Transition>
+                            </Popover>
+                        </div>
                     </div>
                 </div>
         </header>
@@ -204,3 +190,4 @@ const Header: React.FC = () => {
 };
 
 export default Header;
+
