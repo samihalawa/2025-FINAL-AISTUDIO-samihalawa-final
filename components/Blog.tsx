@@ -22,7 +22,8 @@ const Blog: React.FC = () => {
             try {
                 const fetchedArticles = await Promise.all(
                     BLOG_POSTS.map(async (slug) => {
-                        const response = await fetch(`/blog/${slug}.md`); // Use relative path
+                        const response = await fetch(`/blog/${slug}.md`);
+                        console.log(`Fetching /blog/${slug}.md`, response.status, response.ok);
                         if (!response.ok) {
                             throw new Error(`Failed to fetch article: ${slug} - ${response.status} ${response.statusText}`);
                         }
