@@ -18,10 +18,14 @@ const Blog: React.FC = () => {
     useEffect(() => {
         const fetchArticles = async () => {
             setLoading(true);
+            setErrored(false);
             try {
                 const fetchedArticles = await Promise.all(
                     BLOG_POSTS.map(async (slug) => {
-                        const response = await fetch(`${window.location.origin}/blog/${slug}.md`);
+                        const response = await fetch(`/blog/${slug}.md`); // Use relative path
+                        if (!response.ok) {
+                            throw new Error(`Failed to fetch article: ${slug} - ${response.status} ${response.statusText}`);
+                        }
                         const text = await response.text();
                         const { data, content } = matter(text);
                         return {
@@ -34,10 +38,8 @@ const Blog: React.FC = () => {
                         };
                     })
                 );
-                // Sort articles by date, newest first
                 fetchedArticles.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
                 setArticles(fetchedArticles);
-                setErrored(false);
             } catch (error) {
                 console.error("Failed to fetch articles:", error);
                 setErrored(true);
@@ -47,7 +49,7 @@ const Blog: React.FC = () => {
         };
 
         fetchArticles();
-    }, [language]);
+    }, [t, language]);
     
     const openArticleModal = (article: Article) => setSelectedArticle(article);
     const closeArticleModal = () => setSelectedArticle(null);
@@ -104,8 +106,8 @@ const Blog: React.FC = () => {
     };
 
     const fallbackArticles = useMemo<Article[]>(() => (
-        BLOG_POSTS.slice(0, 6).map((slug, index) => ({
-            slug: `placeholder-${slug}-${index}`,
+        Array.from({ length: 6 }).map((_, index) => ({
+            slug: `placeholder-${index}`,
             title: t('blog.loadingTitle'),
             date: new Date().toISOString().slice(0, 10),
             summary: t('blog.loadingSummary'),
@@ -121,7 +123,7 @@ const Blog: React.FC = () => {
         zh: 'zh-CN',
     };
 
-    const dateFormatter = useMemo(() => new Intl.DateTimeFormat(localeMap[language], {
+    const dateFormatter = useMemo(() => new Intl.DateTimeFormat(localeMap[language] || 'en-US', {
         year: 'numeric',
         month: 'short',
         day: 'numeric',
@@ -148,16 +150,15 @@ const Blog: React.FC = () => {
         });
     }, [articles, activeCategory, query]);
 
-    const displayArticles = articles.length ? filteredArticles : fallbackArticles;
-    const usingFallback = !articles.length;
-    const isDataReady = !usingFallback && !loading && !errored;
+    const displayArticles = loading ? fallbackArticles : filteredArticles;
+    const isDataReady = !loading && !errored;
     const resultLabel = isDataReady
         ? t('blog.resultCount').replace('{count}', filteredArticles.length.toString())
         : t('blog.loadingButton');
 
     return (
         <>
-            <section id="blog" className="py-20 bg-gradient-to-br from-slate-50 to-white scroll-mt-20" aria-label={t('blog.title')} aria-busy={loading}>
+            <section id="blog" className="py-20 bg-gradient-to-br from-slate-50 to-white scroll-mt-20" aria-label={t('blog.title')}>
                 <div className="container mx-auto px-6">
                     <div className="mb-12 text-center">
                         <h2 className="text-3xl md:text-4xl font-bold text-slate-900">{t('blog.title')}</h2>
@@ -176,7 +177,7 @@ const Blog: React.FC = () => {
                                     value={query}
                                     onChange={(e) => setQuery(e.target.value)}
                                     placeholder={t('blog.searchPlaceholder')}
-                                    disabled={usingFallback}
+                                    disabled={!isDataReady}
                                     className="w-full rounded-full border border-slate-200 bg-white/80 px-4 py-3 pr-11 text-sm text-slate-600 shadow-sm transition focus:outline-none focus:ring-2 focus:ring-brand-500 disabled:cursor-not-allowed disabled:opacity-60"
                                 />
                                 <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-slate-400">
@@ -187,107 +188,78 @@ const Blog: React.FC = () => {
                                 <button
                                     type="button"
                                     onClick={() => setActiveCategory('all')}
-                                    disabled={usingFallback}
-                                    className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition ${activeCategory === 'all' ? 'border-transparent bg-gradient-to-r from-brand-600 to-brand-500 text-white shadow-brand' : 'border-slate-200 bg-white/80 text-slate-600 hover:border-brand-200 hover:text-brand-700'} ${usingFallback ? 'cursor-not-allowed opacity-60' : ''}`}
+                                    disabled={!isDataReady}
+                                    className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition ${activeCategory === 'all' ? 'border-transparent bg-gradient-to-r from-brand-600 to-brand-500 text-white shadow-brand' : 'border-slate-200 bg-white/80 text-slate-600 hover:border-brand-200 hover:text-brand-700'} ${!isDataReady ? 'cursor-not-allowed opacity-60' : ''}`}
                                 >
                                     {t('blog.filter.all')}
                                 </button>
-                                {categoryFilters.map(category => (
+                                {isDataReady && categoryFilters.map(category => (
                                     <button
                                         key={category}
                                         type="button"
                                         onClick={() => setActiveCategory(category)}
-                                        disabled={usingFallback}
-                                        className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition ${activeCategory === category ? 'border-transparent bg-gradient-to-r from-brand-600 to-brand-500 text-white shadow-brand' : 'border-slate-200 bg-white/80 text-slate-600 hover:border-brand-200 hover:text-brand-700'} ${usingFallback ? 'cursor-not-allowed opacity-60' : ''}`}
+                                        className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition ${activeCategory === category ? 'border-transparent bg-gradient-to-r from-brand-600 to-brand-500 text-white shadow-brand' : 'border-slate-200 bg-white/80 text-slate-600 hover:border-brand-200 hover:text-brand-700'}`}
                                     >
                                         {t(categoryTranslationMap[category])}
                                     </button>
                                 ))}
                             </div>
                         </div>
-                        <div className="mt-4 text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">
-                            {resultLabel}
+
+                        <div className="mt-4 text-sm text-slate-500" aria-live="polite">
+                            {isDataReady ? resultLabel : <span className="animate-pulse">{resultLabel}</span>}
+                        </div>
+
+                        {errored && (
+                            <div className="mt-8 text-center text-red-600 bg-red-50 p-4 rounded-lg">
+                                <p>{t('blog.error')}</p>
+                            </div>
+                        )}
+
+                        <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                            {displayArticles.map((article, index) => (
+                                <div
+                                    key={article.slug}
+                                    className={`rounded-xl bg-white shadow-lg transition-transform duration-300 hover:-translate-y-1 ${loading ? 'animate-pulse' : ''}`}
+                                    onClick={() => !loading && openArticleModal(article)}
+                                    onKeyPress={(e) => e.key === 'Enter' && !loading && openArticleModal(article)}
+                                    role="button"
+                                    tabIndex={0}
+                                    aria-label={loading ? t('blog.loadingTitle') : `Read article: ${article.title}`}
+                                >
+                                    <div className="p-6">
+                                        <div className="mb-4 flex items-center justify-between text-xs text-slate-500">
+                                            <span className={`${getCategoryColor(getCategoryKey(article.slug))} rounded-full px-3 py-1 text-xs font-semibold`}>
+                                                {loading ? <span className="w-16 h-4 inline-block bg-gray-200 rounded-md"></span> : t(categoryTranslationMap[getCategoryKey(article.slug)])}
+                                            </span>
+                                            <span>{loading ? <span className="w-20 h-4 inline-block bg-gray-200 rounded-md"></span> : dateFormatter.format(new Date(article.date))}</span>
+                                        </div>
+                                        <h3 className="mb-2 text-lg font-bold text-slate-800">
+                                            {loading ? <span className="w-full h-6 inline-block bg-gray-200 rounded-md"></span> : article.title}
+                                        </h3>
+                                        <p className="text-sm text-slate-600 line-clamp-3">
+                                            {loading ? <>
+                                                <span className="w-full h-4 inline-block bg-gray-200 rounded-md mb-1"></span>
+                                                <span className="w-5/6 h-4 inline-block bg-gray-200 rounded-md"></span>
+                                            </> : article.summary}
+                                        </p>
+                                        <div className="mt-4 text-sm font-semibold text-brand-600 hover:text-brand-700">
+                                            {loading ? <span className="w-24 h-4 inline-block bg-gray-200 rounded-md"></span> : t('blog.readMore')}
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
-
-                    {!loading && errored && (
-                        <p className="mt-10 text-center text-sm text-red-600" role="alert">
-                            {t('blog.error')}
-                        </p>
-                    )}
-
-                    {displayArticles.length === 0 && !usingFallback ? (
-                        <p className="mt-16 text-center text-slate-500">{t('blog.emptyState')}</p>
-                    ) : (
-                        <div className="mt-12 grid max-w-7xl mx-auto grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                            {displayArticles.map((article) => {
-                                const categoryKey = getCategoryKey(article.slug);
-                                const categoryLabel = t(categoryTranslationMap[categoryKey]);
-                                const categoryColorClass = getCategoryColor(categoryKey);
-                                const readingTime = Math.max(1, Math.ceil(article.content.split(' ').length / 200));
-                                const displayTitle = article.title || t('blog.untitled');
-                                const parsedDate = article.date ? new Date(article.date) : null;
-                                const displayDate = parsedDate && !Number.isNaN(parsedDate.getTime())
-                                    ? dateFormatter.format(parsedDate)
-                                    : t('blog.dateUnknown');
-
-                                return (
-                                    <article key={article.slug} className="glass-panel flex h-full flex-col overflow-hidden p-6 transition hover:-translate-y-1">
-                                        <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
-                                            <span>{categoryLabel}</span>
-                                            <time dateTime={article.date} className="text-slate-400">
-                                                {displayDate}
-                                            </time>
-                                        </div>
-                                        <h3 className="mt-4 text-xl font-semibold text-slate-900 transition-colors group-hover:text-brand-600 line-clamp-2">
-                                            {displayTitle}
-                                        </h3>
-                                        <p className="mt-3 text-sm text-slate-600 line-clamp-3">
-                                            {article.summary || t('blog.fallbackSummary')}
-                                        </p>
-                                        <div className="mt-4 flex items-center justify-between text-sm text-slate-500">
-                                            <span>{t('blog.readTime').replace('{minutes}', readingTime.toString())}</span>
-                                            <span className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold ${categoryColorClass}`}>
-                                                <i className="fas fa-hashtag"></i>
-                                                {categoryLabel}
-                                            </span>
-                                        </div>
-                                        {relatedMap[article.slug] && (
-                                            <div className="mt-5 border-t border-slate-100 pt-4">
-                                                <div className="flex flex-wrap gap-2">
-                                                    {relatedMap[article.slug].map((r) => (
-                                                        <a
-                                                            key={r.href}
-                                                            href={r.href}
-                                                            className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-xs text-slate-600 transition hover:border-brand-200 hover:text-brand-700"
-                                                        >
-                                                            <i className="fas fa-up-right-from-square text-[10px]"></i>
-                                                            {t(r.labelKey)}
-                                                        </a>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                        )}
-                                        <button
-                                            onClick={() => openArticleModal(article)}
-                                            disabled={usingFallback}
-                                            className={`mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-600 to-brand-500 px-4 py-2 text-sm font-semibold text-white shadow-brand transition hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60`}
-                                        >
-                                            {usingFallback ? t('blog.loadingButton') : t('blog.readMore')}
-                                            {!usingFallback && <i className="fas fa-arrow-right text-xs"></i>}
-                                        </button>
-                                    </article>
-                                );
-                            })}
-                        </div>
-                    )}
                 </div>
             </section>
-            <ArticleModal
-                isOpen={!!selectedArticle}
-                onClose={closeArticleModal}
-                article={selectedArticle}
-            />
+            {selectedArticle && (
+                <ArticleModal 
+                    article={selectedArticle} 
+                    onClose={closeArticleModal} 
+                    relatedLinks={relatedMap[selectedArticle.slug] || []}
+                />
+            )}
         </>
     );
 };
