@@ -10,6 +10,12 @@
   to = "/index.html"
   status = 200
 
+[[redirects]]
+  from = "/blog/*.md"
+  to = "/blog/:splat"
+  status = 200
+  # Ensure direct serving of markdown files
+
 [dev]
   command = "npm run dev"
   port = 5173
