@@ -21,7 +21,7 @@ const Blog: React.FC = () => {
             try {
                 const fetchedArticles = await Promise.all(
                     BLOG_POSTS.map(async (slug) => {
-                        const response = await fetch(`/blog/${slug}.md`);
+                        const response = await fetch(`${window.location.origin}/blog/${slug}.md`);
                         const text = await response.text();
                         const { data, content } = matter(text);
                         return {
