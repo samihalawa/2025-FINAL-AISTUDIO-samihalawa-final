@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from '../i18n/LanguageContext';
 
 const HireCTA: React.FC = () => {
@@ -13,10 +14,10 @@ const HireCTA: React.FC = () => {
           <p className="mt-4 text-sm sm:text-base text-white/80">{t('hireCta.description')}</p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row">
-          <a href="/contact" className="btn-primary bg-white text-slate-900 hover:bg-slate-100">
+          <Link to="/contact" className="btn-primary bg-white text-slate-900 hover:bg-slate-100">
             {t('hireCta.primary')}
             <i className="fas fa-arrow-right text-sm"></i>
-          </a>
+          </Link>
           <a href="https://wa.me/34679794037" target="_blank" rel="noopener noreferrer" className="btn-secondary border-white/60 bg-white/10 text-white hover:bg-white/20">
             {t('hireCta.secondary')}
             <i className="fab fa-whatsapp"></i>

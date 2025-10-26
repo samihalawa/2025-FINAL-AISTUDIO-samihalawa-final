@@ -48,6 +48,7 @@ const ProptechCase = lazy(() => import('./pages/case-studies/ProptechAnalytics')
 const AirbnbCase = lazy(() => import('./pages/case-studies/AirbnbIntelligence'));
 const AutofundingGrants = lazy(() => import('./pages/case-studies/AutofundingGrants'));
 const LanzaderaReadiness = lazy(() => import('./pages/case-studies/LanzaderaReadiness'));
+const ApoloMedicalFramework = lazy(() => import('./pages/case-studies/ApoloMedicalFramework'));
 const MadridAIReadiness = lazy(() => import('./pages/locations/services/MadridAIReadiness'));
 const BarcelonaPromptEngineering = lazy(() => import('./pages/locations/services/BarcelonaPromptEngineering'));
 const ValenciaRagLangChain = lazy(() => import('./pages/locations/services/ValenciaRagLangChain'));
@@ -88,6 +89,7 @@ const App: React.FC = () => {
                             <Route path="case-studies/airbnb-intelligence" element={<AirbnbCase />} />
                             <Route path="case-studies/autofunding-grants" element={<AutofundingGrants />} />
                             <Route path="case-studies/lanzadera-readiness" element={<LanzaderaReadiness />} />
+                            <Route path="case-studies/apolo-medical-framework" element={<ApoloMedicalFramework />} />
                             <Route path="services" element={<ServicesLayout />}>
                                 <Route index element={<ServicesIndex />} />
                                 <Route path="medical-ai" element={<MedicalAI />} />

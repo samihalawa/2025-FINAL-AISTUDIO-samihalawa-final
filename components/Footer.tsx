@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from '../i18n/LanguageContext';
+import type { TranslationKey } from '../i18n/translations';
 
 const Footer: React.FC = () => {
     const { t } = useTranslation();
@@ -17,7 +18,7 @@ const Footer: React.FC = () => {
                 <div className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">{t('footer.tagline')}</div>
                 <div className="flex flex-wrap justify-center gap-4">
                     {socialLinks.map(link => (
-                        <a key={link.labelKey} href={link.href} target="_blank" rel="noopener noreferrer" className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white/80 text-slate-500 shadow-sm transition hover:-translate-y-1 hover:text-brand-600" aria-label={t(link.labelKey)}>
+                        <a key={link.labelKey} href={link.href} target="_blank" rel="noopener noreferrer" className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white/80 text-slate-500 shadow-sm transition hover:-translate-y-1 hover:text-brand-600" aria-label={t(link.labelKey as TranslationKey)}>
                             <i className={`${link.icon} text-xl`}></i>
                         </a>
                     ))}

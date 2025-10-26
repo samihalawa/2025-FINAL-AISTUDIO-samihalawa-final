@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from '../i18n/LanguageContext';
 
 const items = [
@@ -23,7 +24,7 @@ const FeaturedCaseStudies: React.FC = () => {
 
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {items.map(item => (
-            <a key={item.href} href={item.href} className="group glass-panel flex h-full flex-col justify-between overflow-hidden p-6 shadow-soft-xl transition hover:-translate-y-1">
+            <Link key={item.href} to={item.href} className="group glass-panel flex h-full flex-col justify-between overflow-hidden p-6 shadow-soft-xl transition hover:-translate-y-1">
               <div>
                 <div className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{t('home.caseStudies.category')}</div>
                 <h3 className="mt-3 text-xl font-semibold text-slate-900">{t(item.titleKey)}</h3>
@@ -33,7 +34,7 @@ const FeaturedCaseStudies: React.FC = () => {
                 {t('home.caseStudies.learnMore')}
                 <i className="fas fa-arrow-right transition group-hover:translate-x-1"></i>
               </span>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

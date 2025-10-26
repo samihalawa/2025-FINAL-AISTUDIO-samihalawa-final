@@ -15,7 +15,7 @@ const Section: React.FC<{ title: string, points: string[] }>=({ title, points })
 const CTA: React.FC=()=> (
   <div className="mt-10 flex flex-col sm:flex-row gap-4">
     <Link to="/contact" className="inline-block bg-slate-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-slate-800">Plan de estudio</Link>
-    <a href="/blog" className="inline-block bg-white text-slate-700 px-6 py-3 rounded-md border border-slate-300 font-semibold hover:bg-slate-100">Leer artículos</a>
+    <Link to="/blog" className="inline-block bg-white text-slate-700 px-6 py-3 rounded-md border border-slate-300 font-semibold hover:bg-slate-100">Leer artículos</Link>
   </div>
 );
 

@@ -5,9 +5,9 @@ import { Article } from '../types';
 import { useTranslation, LanguageCode } from '../i18n/LanguageContext';
 
 interface ArticleModalProps {
-    isOpen: boolean;
+    article: Article;
     onClose: () => void;
-    article: Article | null;
+    relatedLinks?: Array<{ href: string; labelKey: string }>;
 }
 
 const localeMap: Record<LanguageCode, string> = {
@@ -17,9 +17,9 @@ const localeMap: Record<LanguageCode, string> = {
     zh: 'zh-CN',
 };
 
-const ArticleModal: React.FC<ArticleModalProps> = ({ isOpen, onClose, article }) => {
+const ArticleModal: React.FC<ArticleModalProps> = ({ onClose, article, relatedLinks }) => {
     const { t, language } = useTranslation();
-    
+
     const parsedContent = useMemo(() => {
         if (article?.content) {
             // Configure marked to add classes for styling if needed, or sanitize HTML
@@ -44,7 +44,7 @@ const ArticleModal: React.FC<ArticleModalProps> = ({ isOpen, onClose, article })
     }, [article, language]);
 
     return (
-        <Transition appear show={isOpen} as={Fragment}>
+        <Transition appear show={true} as={Fragment}>
             <Dialog as="div" className="relative z-50" onClose={onClose}>
                 <Transition.Child
                     as={Fragment}

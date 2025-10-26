@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from '../i18n/LanguageContext';
 import { TRAINING_PROGRAMS, PARTNERS } from '../constants';
 import type { TranslationKey } from '../i18n/translations';
@@ -76,7 +77,7 @@ const Corporate: React.FC = () => {
                         })}
                     </div>
                     <div className="text-center mt-10">
-                      <a href="/case-studies" className="btn-secondary">{t('corporate.featuredCta')}</a>
+                      <Link to="/case-studies" className="btn-secondary">{t('corporate.featuredCta')}</Link>
                     </div>
                 </div>
             </div>

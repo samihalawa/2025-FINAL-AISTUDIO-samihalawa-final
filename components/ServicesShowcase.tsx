@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { SERVICE_MENU_SECTIONS } from '../constants';
 import { useTranslation } from '../i18n/LanguageContext';
 
@@ -27,9 +28,9 @@ const ServicesShowcase: React.FC = () => {
 
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {featured.map((item, index) => (
-            <a
+            <Link
               key={item.href}
-              href={item.href}
+              to={item.href}
               className="group glass-panel relative flex h-full flex-col justify-between overflow-hidden p-6 shadow-soft-xl transition hover:-translate-y-1"
             >
               <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
@@ -44,15 +45,15 @@ const ServicesShowcase: React.FC = () => {
                 {t('home.servicesShowcase.learnMore')}
                 <i className="fas fa-arrow-right transition group-hover:translate-x-1"></i>
               </span>
-            </a>
+            </Link>
           ))}
         </div>
 
         <div className="mt-12 flex flex-col items-center gap-4 text-center">
           <p className="text-sm text-slate-600">{t('home.servicesShowcase.meta')}</p>
-          <a href="/services" className="btn-secondary">
+          <Link to="/services" className="btn-secondary">
             {t('home.servicesShowcase.cta')}
-          </a>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from '../i18n/LanguageContext';
 import { TESTIMONIALS } from '../constants';
 
@@ -40,9 +41,9 @@ const Testimonials: React.FC = () => {
 
                 <div className="mt-12 flex flex-col items-center gap-4 text-center">
                     <p className="text-sm text-slate-500">{t('testimonials.meta')}</p>
-                    <a href="/case-studies" className="btn-secondary">
+                    <Link to="/case-studies" className="btn-secondary">
                         {t('testimonials.cta')}
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>

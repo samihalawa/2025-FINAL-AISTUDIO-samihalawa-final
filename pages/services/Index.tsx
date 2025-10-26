@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../../i18n/LanguageContext';
 import { usePageMeta } from '../../hooks/usePageMeta';
+import type { TranslationKey } from '../../i18n/translations';
 
 const SERVICE_CARDS = [
   { href: '/services/medical-ai', titleKey: 'services.medicalAI.name', descKey: 'services.medicalAI.description' },
@@ -54,8 +55,8 @@ const ServicesIndex: React.FC = () => {
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {SERVICE_CARDS.map(card => (
           <Link key={card.href} to={card.href} className="block bg-white p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-0.5 transition-all">
-            <h2 className="text-lg font-semibold text-slate-900 mb-2">{t(card.titleKey)}</h2>
-            <p className="text-slate-700">{t(card.descKey)}</p>
+            <h2 className="text-lg font-semibold text-slate-900 mb-2">{t(card.titleKey as TranslationKey)}</h2>
+            <p className="text-slate-700">{t(card.descKey as TranslationKey)}</p>
           </Link>
         ))}
       </div>
@@ -63,10 +64,10 @@ const ServicesIndex: React.FC = () => {
         <h2 className="text-2xl font-bold text-slate-900 mb-4">{t('services.index.caseStudiesHeading')}</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {FEATURED_CASE_STUDIES.map(cs => (
-            <a key={cs.href} href={cs.href} className="block bg-white p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-0.5 transition-all">
-              <h3 className="text-lg font-semibold text-slate-900 mb-2">{t(cs.titleKey)}</h3>
-              <p className="text-slate-700">{t(cs.descKey)}</p>
-            </a>
+            <Link key={cs.href} to={cs.href} className="block bg-white p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-0.5 transition-all">
+              <h3 className="text-lg font-semibold text-slate-900 mb-2">{t(cs.titleKey as TranslationKey)}</h3>
+              <p className="text-slate-700">{t(cs.descKey as TranslationKey)}</p>
+            </Link>
           ))}
         </div>
       </div>

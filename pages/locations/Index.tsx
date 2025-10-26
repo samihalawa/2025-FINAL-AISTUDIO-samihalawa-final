@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../../i18n/LanguageContext';
 import { usePageMeta } from '../../hooks/usePageMeta';
+import type { TranslationKey } from '../../i18n/translations';
 
 const cities = [
   { href: '/locations/madrid', titleKey: 'city.madrid', descKey: 'locations.index.city.madrid.description' },
@@ -32,8 +33,8 @@ const LocationsIndex: React.FC = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {cities.map(c => (
             <Link key={c.href} to={c.href} className="block bg-white p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-0.5 transition-all">
-              <h2 className="text-lg font-semibold text-slate-900 mb-2">{t(c.titleKey)}</h2>
-              <p className="text-slate-700">{t(c.descKey)}</p>
+              <h2 className="text-lg font-semibold text-slate-900 mb-2">{t(c.titleKey as TranslationKey)}</h2>
+              <p className="text-slate-700">{t(c.descKey as TranslationKey)}</p>
             </Link>
           ))}
         </div>
