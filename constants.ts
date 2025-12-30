@@ -239,8 +239,26 @@ export const EXPERIENCE: Experience[] = [
 ];
 
 export const CONTACT_INFO: ContactInfo[] = [
-    { icon: 'fas fa-envelope text-slate-500', labelKey: 'contact.emailLabel', value: 'sami@samihalawa.com', href: 'mailto:sami@samihalawa.com' },
-    { icon: 'fas fa-phone text-slate-500', labelKey: 'contact.phoneLabel', value: '+34 679 794 037', href: 'tel:+34679794037' },
-    { icon: 'fas fa-map-marker-alt text-slate-500', labelKey: 'contact.locationLabel', value: 'Madrid, Spain', valueKey: 'contact.locationValue', href: 'https://maps.google.com/?q=Madrid,Spain' },
-    { icon: 'fab fa-linkedin text-slate-500', labelKey: 'contact.linkedinLabel', value: 'linkedin.com/in/samihalawa', href: 'https://www.linkedin.com/in/samihalawa/' }
+    { icon: 'fas fa-envelope text-slate-500', labelKey: 'contact.emailLabel', value: 'info@AgentsAI.ltd', href: 'mailto:info@AgentsAI.ltd' },
+    { icon: 'fas fa-phone text-slate-500', labelKey: 'contact.phoneLabel', value: '+44 7883 306011', href: 'tel:+447883306011' },
+    {
+        icon: 'fas fa-map-marker-alt text-slate-500',
+        labelKey: 'contact.locationLabel',
+        value: '27 Old Gloucester Street, London WC1N 3AX, United Kingdom',
+        valueKey: 'contact.locationValue',
+        href: 'https://maps.google.com/?q=27%20Old%20Gloucester%20Street%2C%20London%20WC1N%203AX%2C%20United%20Kingdom'
+    },
+    {
+        icon: 'fas fa-file-contract text-slate-500',
+        labelKey: 'contact.registrationLabel',
+        value: '16570822 (Companies House, 9 July 2025)',
+        valueKey: 'contact.registrationValue',
+        href: 'https://find-and-update.company-information.service.gov.uk/company/16570822'
+    },
+    {
+        icon: 'fas fa-passport text-slate-500',
+        labelKey: 'contact.picLabel',
+        value: '869706366',
+        valueKey: 'contact.picValue'
+    }
 ];

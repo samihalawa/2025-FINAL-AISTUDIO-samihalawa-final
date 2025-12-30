@@ -57,7 +57,7 @@ export interface ContactInfo {
     icon: string;
     labelKey: TranslationKey;
     value: string;
-    href: string;
+    href?: string;
     valueKey?: TranslationKey;
 }
 
