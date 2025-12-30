@@ -3,13 +3,9 @@ import { NavLink, Language, Skill, Tool, Project, Testimonial, Experience, Conta
 export const NAV_LINKS: NavLink[] = [
     { href: '/', key: 'nav.about' },
     { href: '/services', key: 'nav.services' },
-    { href: '/ai-training', key: 'nav.training' },
     { href: '/case-studies', key: 'nav.caseStudies' },
-    { href: '/locations', key: 'nav.locations' },
-    { href: '/corporate', key: 'nav.corporate' },
-    { href: '/projects', key: 'nav.projects' },
-    { href: '/contact', key: 'nav.contact' },
     { href: '/blog', key: 'nav.blog' },
+    { href: '/contact', key: 'nav.contact' },
 ];
 
 export const LANGUAGES: Language[] = [
@@ -32,26 +28,19 @@ export const SERVICE_MENU_SECTIONS: ServiceMenuSection[] = [
     {
         titleKey: 'header.services.business',
         items: [
-            { href: '/services/ai-for-marketing', labelKey: 'services.aiForMarketing.name' },
             { href: '/services/business-automation', labelKey: 'services.businessAutomation.name' },
-            { href: '/services/accelerator-readiness', labelKey: 'services.acceleratorReadiness.name' },
-            { href: '/services/ai-funding-grants', labelKey: 'services.aiFundingGrants.name' },
+            { href: '/services/ai-for-marketing', labelKey: 'services.aiForMarketing.name' },
+            { href: '/services/medical-ai', labelKey: 'services.medicalAI.name' },
+            { href: '/ai-training', labelKey: 'nav.training' },
         ]
     },
     {
         titleKey: 'header.services.specialized',
         items: [
             { href: '/services/advanced-ai', labelKey: 'services.advancedAI.name' },
-            { href: '/services/medical-ai', labelKey: 'services.medicalAI.name' },
-            { href: '/services/family-ai', labelKey: 'services.familyAI.name' },
-            { href: '/services/university-ml', labelKey: 'services.universityML.name' },
             { href: '/services/no-code-ai', labelKey: 'services.noCodeAI.name' },
-            { href: '/services/proptech-analytics', labelKey: 'services.proptechAnalytics.name' },
-            { href: '/services/airbnb-analytics', labelKey: 'services.airbnbAnalytics.name' },
-            { href: '/services/ai-language-learning', labelKey: 'services.aiLanguageLearning.name' },
-            { href: '/services/ai-competitive-research', labelKey: 'services.aiCompetitiveResearch.name' },
-            { href: '/services/ai-ip-patents', labelKey: 'services.aiPatentsIP.name' },
             { href: '/services/troubleshooting', labelKey: 'services.troubleshooting.name' },
+            { href: '/services', labelKey: 'header.services.viewAll' },
         ]
     }
 ];

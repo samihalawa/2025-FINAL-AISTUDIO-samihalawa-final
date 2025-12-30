@@ -49,6 +49,24 @@ const Hero: React.FC = () => {
                         <i className="fas fa-sparkles"></i>
                         {t('hero.badge')}
                     </div>
+                    <div className="mb-6 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs font-medium text-slate-600">
+                        <span className="flex items-center gap-1.5">
+                            <i className="fas fa-check-circle text-emerald-500"></i>
+                            {t('hero.trust.certified')}
+                        </span>
+                        <span className="flex items-center gap-1.5">
+                            <i className="fas fa-check-circle text-emerald-500"></i>
+                            {t('hero.trust.teams')}
+                        </span>
+                        <span className="flex items-center gap-1.5">
+                            <i className="fas fa-check-circle text-emerald-500"></i>
+                            {t('hero.trust.global')}
+                        </span>
+                        <span className="flex items-center gap-1.5">
+                            <i className="fas fa-check-circle text-emerald-500"></i>
+                            {t('hero.trust.satisfaction')}
+                        </span>
+                    </div>
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-slate-900">
                         {t('hero.title')}
                     </h1>

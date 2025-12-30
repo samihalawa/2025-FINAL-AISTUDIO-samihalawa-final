@@ -1,10 +1,42 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import matter from 'gray-matter';
 import { useTranslation, LanguageCode } from '../i18n/LanguageContext';
 import { BLOG_POSTS } from '../constants';
 import { Article } from '../types';
 import ArticleModal from './ArticleModal';
 import type { TranslationKey } from '../i18n/translations';
+
+// Simple front-matter parser
+function parseFrontMatter(content: string): { data: Record<string, any>; content: string } {
+    const frontMatterRegex = /^---\n([\s\S]*?)\n---\n([\s\S]*)$/;
+    const match = content.match(frontMatterRegex);
+    
+    if (!match) {
+        return { data: {}, content };
+    }
+    
+    const [, frontMatterStr, body] = match;
+    const data: Record<string, any> = {};
+    
+    // Parse YAML-like front matter
+    const lines = frontMatterStr.split('\n');
+    for (const line of lines) {
+        const colonIndex = line.indexOf(':');
+        if (colonIndex > -1) {
+            const key = line.substring(0, colonIndex).trim();
+            let value = line.substring(colonIndex + 1).trim();
+            
+            // Remove quotes if present
+            if ((value.startsWith('"') && value.endsWith('"')) || 
+                (value.startsWith("'") && value.endsWith("'"))) {
+                value = value.slice(1, -1);
+            }
+            
+            data[key] = value;
+        }
+    }
+    
+    return { data, content: body };
+}
 
 const Blog: React.FC = () => {
     const { t, language } = useTranslation();
@@ -12,42 +44,87 @@ const Blog: React.FC = () => {
     const [loading, setLoading] = useState<boolean>(true);
     const [selectedArticle, setSelectedArticle] = useState<Article | null>(null);
     const [errored, setErrored] = useState<boolean>(false);
+    const [errorMessage, setErrorMessage] = useState<string>('');
     const [activeCategory, setActiveCategory] = useState<'all' | ReturnType<typeof getCategoryKey>>('all');
     const [query, setQuery] = useState('');
 
     useEffect(() => {
         const fetchArticles = async () => {
             setLoading(true);
+            setErrored(false);
+            setErrorMessage('');
             try {
-                const fetchedArticles = await Promise.all(
-                    BLOG_POSTS.map(async (slug) => {
+                const fetchedArticles: Article[] = [];
+                
+                for (const slug of BLOG_POSTS) {
+                    try {
                         const response = await fetch(`/blog/${slug}.md`);
+                        
+                        if (!response.ok) {
+                            console.error(`Failed to fetch ${slug}: ${response.status} ${response.statusText}`);
+                            continue;
+                        }
+                        
                         const text = await response.text();
-                        const { data, content } = matter(text);
-                        return {
-                            slug,
-                            title: data.title || t('blog.untitled'),
-                            date: data.date || '',
-                            summary: data.summary || '',
-                            author: data.author || t('blog.defaultAuthor'),
-                            content,
-                        };
-                    })
-                );
+                        
+                        if (!text || text.trim().length === 0) {
+                            console.error(`Empty response for ${slug}`);
+                            continue;
+                        }
+                        
+                        try {
+                            const { data, content } = parseFrontMatter(text);
+                            
+                            if (!data || !content) {
+                                console.error(`Invalid parsed data for ${slug}:`, { data, content });
+                                continue;
+                            }
+                            
+                            fetchedArticles.push({
+                                slug,
+                                title: data.title || t('blog.untitled'),
+                                date: data.date || new Date().toISOString().slice(0, 10),
+                                summary: data.summary || t('blog.loadingSummary'),
+                                author: data.author || t('blog.defaultAuthor'),
+                                content: content || '',
+                            });
+                        } catch (parseError) {
+                            console.error(`Error parsing ${slug}:`, parseError);
+                            continue;
+                        }
+                    } catch (fetchError) {
+                        console.error(`Error fetching ${slug}:`, fetchError);
+                        continue;
+                    }
+                }
+                
+                if (fetchedArticles.length === 0) {
+                    setErrored(true);
+                    setErrorMessage('No articles could be loaded. Please try again later.');
+                    setLoading(false);
+                    return;
+                }
+                
                 // Sort articles by date, newest first
-                fetchedArticles.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+                fetchedArticles.sort((a, b) => {
+                    const dateA = new Date(a.date).getTime();
+                    const dateB = new Date(b.date).getTime();
+                    return dateB - dateA;
+                });
+                
                 setArticles(fetchedArticles);
                 setErrored(false);
             } catch (error) {
-                console.error("Failed to fetch articles:", error);
+                console.error("Unexpected error fetching articles:", error);
                 setErrored(true);
+                setErrorMessage('An unexpected error occurred while loading articles.');
             } finally {
                 setLoading(false);
             }
         };
 
         fetchArticles();
-    }, [language]);
+    }, [t, language]);
     
     const openArticleModal = (article: Article) => setSelectedArticle(article);
     const closeArticleModal = () => setSelectedArticle(null);
@@ -103,17 +180,6 @@ const Blog: React.FC = () => {
         return colors[categoryKey] || colors.insights;
     };
 
-    const fallbackArticles = useMemo<Article[]>(() => (
-        BLOG_POSTS.slice(0, 6).map((slug, index) => ({
-            slug: `placeholder-${slug}-${index}`,
-            title: t('blog.loadingTitle'),
-            date: new Date().toISOString().slice(0, 10),
-            summary: t('blog.loadingSummary'),
-            author: t('blog.defaultAuthor'),
-            content: t('blog.loadingContent')
-        }))
-    ), [t]);
-
     const localeMap: Record<LanguageCode, string> = {
         en: 'en-US',
         es: 'es-ES',
@@ -121,7 +187,7 @@ const Blog: React.FC = () => {
         zh: 'zh-CN',
     };
 
-    const dateFormatter = useMemo(() => new Intl.DateTimeFormat(localeMap[language], {
+    const dateFormatter = useMemo(() => new Intl.DateTimeFormat(localeMap[language] || 'en-US', {
         year: 'numeric',
         month: 'short',
         day: 'numeric',
@@ -148,16 +214,14 @@ const Blog: React.FC = () => {
         });
     }, [articles, activeCategory, query]);
 
-    const displayArticles = articles.length ? filteredArticles : fallbackArticles;
-    const usingFallback = !articles.length;
-    const isDataReady = !usingFallback && !loading && !errored;
+    const isDataReady = !loading && !errored && articles.length > 0;
     const resultLabel = isDataReady
         ? t('blog.resultCount').replace('{count}', filteredArticles.length.toString())
         : t('blog.loadingButton');
 
     return (
         <>
-            <section id="blog" className="py-20 bg-gradient-to-br from-slate-50 to-white scroll-mt-20" aria-label={t('blog.title')} aria-busy={loading}>
+            <section id="blog" className="py-20 bg-gradient-to-br from-slate-50 to-white scroll-mt-20" aria-label={t('blog.title')}>
                 <div className="container mx-auto px-6">
                     <div className="mb-12 text-center">
                         <h2 className="text-3xl md:text-4xl font-bold text-slate-900">{t('blog.title')}</h2>
@@ -176,7 +240,7 @@ const Blog: React.FC = () => {
                                     value={query}
                                     onChange={(e) => setQuery(e.target.value)}
                                     placeholder={t('blog.searchPlaceholder')}
-                                    disabled={usingFallback}
+                                    disabled={!isDataReady}
                                     className="w-full rounded-full border border-slate-200 bg-white/80 px-4 py-3 pr-11 text-sm text-slate-600 shadow-sm transition focus:outline-none focus:ring-2 focus:ring-brand-500 disabled:cursor-not-allowed disabled:opacity-60"
                                 />
                                 <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-slate-400">
@@ -187,107 +251,102 @@ const Blog: React.FC = () => {
                                 <button
                                     type="button"
                                     onClick={() => setActiveCategory('all')}
-                                    disabled={usingFallback}
-                                    className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition ${activeCategory === 'all' ? 'border-transparent bg-gradient-to-r from-brand-600 to-brand-500 text-white shadow-brand' : 'border-slate-200 bg-white/80 text-slate-600 hover:border-brand-200 hover:text-brand-700'} ${usingFallback ? 'cursor-not-allowed opacity-60' : ''}`}
+                                    disabled={!isDataReady}
+                                    className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition ${activeCategory === 'all' ? 'border-transparent bg-gradient-to-r from-brand-600 to-brand-500 text-white shadow-brand' : 'border-slate-200 bg-white/80 text-slate-600 hover:border-brand-200 hover:text-brand-700'} ${!isDataReady ? 'cursor-not-allowed opacity-60' : ''}`}
                                 >
                                     {t('blog.filter.all')}
                                 </button>
-                                {categoryFilters.map(category => (
+                                {isDataReady && categoryFilters.map(category => (
                                     <button
                                         key={category}
                                         type="button"
                                         onClick={() => setActiveCategory(category)}
-                                        disabled={usingFallback}
-                                        className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition ${activeCategory === category ? 'border-transparent bg-gradient-to-r from-brand-600 to-brand-500 text-white shadow-brand' : 'border-slate-200 bg-white/80 text-slate-600 hover:border-brand-200 hover:text-brand-700'} ${usingFallback ? 'cursor-not-allowed opacity-60' : ''}`}
+                                        className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition ${activeCategory === category ? 'border-transparent bg-gradient-to-r from-brand-600 to-brand-500 text-white shadow-brand' : 'border-slate-200 bg-white/80 text-slate-600 hover:border-brand-200 hover:text-brand-700'}`}
                                     >
                                         {t(categoryTranslationMap[category])}
                                     </button>
                                 ))}
                             </div>
                         </div>
-                        <div className="mt-4 text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">
-                            {resultLabel}
+
+                        <div className="mt-4 text-sm text-slate-500" aria-live="polite">
+                            {loading ? <span className="animate-pulse">{t('blog.loadingButton')}</span> : resultLabel}
                         </div>
-                    </div>
 
-                    {!loading && errored && (
-                        <p className="mt-10 text-center text-sm text-red-600" role="alert">
-                            {t('blog.error')}
-                        </p>
-                    )}
+                        {errored && (
+                            <div className="mt-8 text-center text-red-600 bg-red-50 p-4 rounded-lg">
+                                <p>{errorMessage || t('blog.error')}</p>
+                            </div>
+                        )}
 
-                    {displayArticles.length === 0 && !usingFallback ? (
-                        <p className="mt-16 text-center text-slate-500">{t('blog.emptyState')}</p>
-                    ) : (
-                        <div className="mt-12 grid max-w-7xl mx-auto grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                            {displayArticles.map((article) => {
-                                const categoryKey = getCategoryKey(article.slug);
-                                const categoryLabel = t(categoryTranslationMap[categoryKey]);
-                                const categoryColorClass = getCategoryColor(categoryKey);
-                                const readingTime = Math.max(1, Math.ceil(article.content.split(' ').length / 200));
-                                const displayTitle = article.title || t('blog.untitled');
-                                const parsedDate = article.date ? new Date(article.date) : null;
-                                const displayDate = parsedDate && !Number.isNaN(parsedDate.getTime())
-                                    ? dateFormatter.format(parsedDate)
-                                    : t('blog.dateUnknown');
-
-                                return (
-                                    <article key={article.slug} className="glass-panel flex h-full flex-col overflow-hidden p-6 transition hover:-translate-y-1">
-                                        <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
-                                            <span>{categoryLabel}</span>
-                                            <time dateTime={article.date} className="text-slate-400">
-                                                {displayDate}
-                                            </time>
-                                        </div>
-                                        <h3 className="mt-4 text-xl font-semibold text-slate-900 transition-colors group-hover:text-brand-600 line-clamp-2">
-                                            {displayTitle}
-                                        </h3>
-                                        <p className="mt-3 text-sm text-slate-600 line-clamp-3">
-                                            {article.summary || t('blog.fallbackSummary')}
-                                        </p>
-                                        <div className="mt-4 flex items-center justify-between text-sm text-slate-500">
-                                            <span>{t('blog.readTime').replace('{minutes}', readingTime.toString())}</span>
-                                            <span className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold ${categoryColorClass}`}>
-                                                <i className="fas fa-hashtag"></i>
-                                                {categoryLabel}
-                                            </span>
-                                        </div>
-                                        {relatedMap[article.slug] && (
-                                            <div className="mt-5 border-t border-slate-100 pt-4">
-                                                <div className="flex flex-wrap gap-2">
-                                                    {relatedMap[article.slug].map((r) => (
-                                                        <a
-                                                            key={r.href}
-                                                            href={r.href}
-                                                            className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-xs text-slate-600 transition hover:border-brand-200 hover:text-brand-700"
-                                                        >
-                                                            <i className="fas fa-up-right-from-square text-[10px]"></i>
-                                                            {t(r.labelKey)}
-                                                        </a>
-                                                    ))}
-                                                </div>
+                        {loading && (
+                            <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                                {Array.from({ length: 6 }).map((_, index) => (
+                                    <div key={index} className="rounded-xl bg-white shadow-lg animate-pulse">
+                                        <div className="p-6">
+                                            <div className="mb-4 flex items-center justify-between">
+                                                <div className="w-16 h-4 bg-gray-200 rounded-md"></div>
+                                                <div className="w-20 h-4 bg-gray-200 rounded-md"></div>
                                             </div>
-                                        )}
-                                        <button
-                                            onClick={() => openArticleModal(article)}
-                                            disabled={usingFallback}
-                                            className={`mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-600 to-brand-500 px-4 py-2 text-sm font-semibold text-white shadow-brand transition hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60`}
-                                        >
-                                            {usingFallback ? t('blog.loadingButton') : t('blog.readMore')}
-                                            {!usingFallback && <i className="fas fa-arrow-right text-xs"></i>}
-                                        </button>
-                                    </article>
-                                );
-                            })}
-                        </div>
-                    )}
+                                            <div className="w-full h-6 bg-gray-200 rounded-md mb-2"></div>
+                                            <div className="w-5/6 h-4 bg-gray-200 rounded-md mb-1"></div>
+                                            <div className="w-full h-4 bg-gray-200 rounded-md mb-4"></div>
+                                            <div className="w-24 h-4 bg-gray-200 rounded-md"></div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+
+                        {!loading && !errored && articles.length > 0 && (
+                            <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                                {filteredArticles.map((article) => (
+                                    <div
+                                        key={article.slug}
+                                        className="rounded-xl bg-white shadow-lg transition-transform duration-300 hover:-translate-y-1 cursor-pointer"
+                                        onClick={() => openArticleModal(article)}
+                                        onKeyPress={(e) => e.key === 'Enter' && openArticleModal(article)}
+                                        role="button"
+                                        tabIndex={0}
+                                        aria-label={`Read article: ${article.title}`}
+                                    >
+                                        <div className="p-6">
+                                            <div className="mb-4 flex items-center justify-between text-xs text-slate-500">
+                                                <span className={`${getCategoryColor(getCategoryKey(article.slug))} rounded-full px-3 py-1 text-xs font-semibold`}>
+                                                    {t(categoryTranslationMap[getCategoryKey(article.slug)])}
+                                                </span>
+                                                <span>{dateFormatter.format(new Date(article.date))}</span>
+                                            </div>
+                                            <h3 className="mb-2 text-lg font-bold text-slate-800">
+                                                {article.title}
+                                            </h3>
+                                            <p className="text-sm text-slate-600 line-clamp-3">
+                                                {article.summary}
+                                            </p>
+                                            <div className="mt-4 text-sm font-semibold text-brand-600 hover:text-brand-700">
+                                                {t('blog.readMore')}
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+
+                        {!loading && !errored && articles.length > 0 && filteredArticles.length === 0 && (
+                            <div className="mt-8 text-center text-slate-600">
+                                <p>{t('blog.noResults')}</p>
+                            </div>
+                        )}
+                    </div>
                 </div>
             </section>
-            <ArticleModal
-                isOpen={!!selectedArticle}
-                onClose={closeArticleModal}
-                article={selectedArticle}
-            />
+            {selectedArticle && (
+                <ArticleModal 
+                    article={selectedArticle} 
+                    onClose={closeArticleModal} 
+                    relatedLinks={relatedMap[selectedArticle.slug] || []}
+                />
+            )}
         </>
     );
 };
