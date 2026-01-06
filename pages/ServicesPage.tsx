@@ -4,6 +4,8 @@ import Corporate from '../components/Corporate';
 import Skills from '../components/Skills';
 import Experience from '../components/Experience';
 import HireCTA from '../components/HireCTA';
+import TrustBar from '../components/TrustBar';
+import LeadMagnets from '../components/LeadMagnets';
 import { usePageMeta } from '../hooks/usePageMeta';
 
 const ServicesPage: React.FC = () => {
@@ -16,9 +18,13 @@ const ServicesPage: React.FC = () => {
         <link rel="canonical" href="/corporate" />
       </Helmet>
       <Corporate />
+      <div className="container mx-auto px-6">
+        <TrustBar />
+      </div>
       <Skills />
       <Experience />
       <div className="container mx-auto px-6">
+        <LeadMagnets />
         <HireCTA />
       </div>
     </>

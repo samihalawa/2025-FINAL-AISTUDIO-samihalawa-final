@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import HireCTA from '../../components/HireCTA';
+import CaseStudyValidation from '../../components/CaseStudyValidation';
 import { useTranslation } from '../../i18n/LanguageContext';
 
 const LanzaderaReadiness: React.FC = () => {
@@ -54,6 +55,7 @@ const LanzaderaReadiness: React.FC = () => {
               </span>
             ))}
           </p>
+          <CaseStudyValidation caseId="lanzadera-readiness" />
           <HireCTA />
         </div>
       </div>

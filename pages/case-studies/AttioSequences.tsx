@@ -1,5 +1,6 @@
 import React from 'react';
 import HireCTA from '../../components/HireCTA';
+import CaseStudyValidation from '../../components/CaseStudyValidation';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from '../../i18n/LanguageContext';
 
@@ -59,6 +60,7 @@ const AttioSequences: React.FC = () => {
               </span>
             ))}
           </p>
+          <CaseStudyValidation caseId="attio-sequences" />
           <HireCTA />
         </div>
       </div>
