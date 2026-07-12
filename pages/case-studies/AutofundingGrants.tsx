@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import HireCTA from '../../components/HireCTA';
+import CaseStudyValidation from '../../components/CaseStudyValidation';
 import { useTranslation } from '../../i18n/LanguageContext';
 
 const AutofundingGrants: React.FC = () => {
@@ -58,6 +59,7 @@ const AutofundingGrants: React.FC = () => {
               </span>
             ))}
           </p>
+          <CaseStudyValidation caseId="autofunding-grants" />
           <HireCTA />
         </div>
       </div>

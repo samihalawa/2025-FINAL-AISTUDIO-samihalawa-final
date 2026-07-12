@@ -1,5 +1,6 @@
 import React from 'react';
 import HireCTA from '../../components/HireCTA';
+import CaseStudyValidation from '../../components/CaseStudyValidation';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from '../../i18n/LanguageContext';
 
@@ -51,6 +52,7 @@ const SpreadsheetAssistant: React.FC = () => {
             {t('caseStudies.relatedServices')} {' '}
             <a className="underline" href="/services/rag-langchain">{t('services.ragLangChain.title')}</a> · <a className="underline" href="/services/prompt-engineering">{t('services.promptEngineering.title')}</a>
           </p>
+          <CaseStudyValidation caseId="spreadsheet-assistant" />
           <HireCTA />
         </div>
       </div>

@@ -7,6 +7,8 @@ import Testimonials from '../components/Testimonials';
 import AdditionalProjects from '../components/AdditionalProjects';
 import HireCTA from '../components/HireCTA';
 import ServicesShowcase from '../components/ServicesShowcase';
+import TrustBar from '../components/TrustBar';
+import LeadMagnets from '../components/LeadMagnets';
 import { usePageMeta } from '../hooks/usePageMeta';
 
 const HomePage: React.FC = () => {
@@ -18,8 +20,14 @@ const HomePage: React.FC = () => {
         <meta name="description" content={description} />
       </Helmet>
       <Hero />
+      <div className="container mx-auto px-6">
+        <TrustBar />
+      </div>
       <About />
       <ServicesShowcase />
+      <div className="container mx-auto px-6">
+        <LeadMagnets />
+      </div>
       <FeaturedCaseStudies />
       <AdditionalProjects />
       <Testimonials />

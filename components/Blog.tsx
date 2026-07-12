@@ -345,6 +345,7 @@ const Blog: React.FC = () => {
                     article={selectedArticle} 
                     onClose={closeArticleModal} 
                     relatedLinks={relatedMap[selectedArticle.slug] || []}
+                    isOpen={Boolean(selectedArticle)}
                 />
             )}
         </>

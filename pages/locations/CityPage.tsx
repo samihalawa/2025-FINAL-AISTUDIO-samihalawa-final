@@ -21,6 +21,16 @@ const highlightServices: Array<{ href: string; labelKey: TranslationKey }> = [
 ];
 
 const siteUrl = 'https://samihalawa.com';
+const cityValueProps: Record<string, { titleKey: TranslationKey; items: TranslationKey[] }> = {
+  madrid: {
+    titleKey: 'locations.city.value.title.madrid',
+    items: ['locations.city.value.madrid1', 'locations.city.value.madrid2', 'locations.city.value.madrid3'],
+  },
+  valencia: {
+    titleKey: 'locations.city.value.title.valencia',
+    items: ['locations.city.value.valencia1', 'locations.city.value.valencia2', 'locations.city.value.valencia3'],
+  },
+};
 
 const CityPage: React.FC<CityPageProps> = ({ cityKey, titleKey, descriptionKey, canonical }) => {
   const { t } = useTranslation();
@@ -63,6 +73,9 @@ const CityPage: React.FC<CityPageProps> = ({ cityKey, titleKey, descriptionKey, 
   const highlightTitle = t('locations.city.highlightsTitle').replace('{city}', city);
   const highlightSubtitle = t('locations.city.highlightsSubtitle').replace('{city}', city);
   const faqTitle = t('locations.city.faqTitle').replace('{city}', city);
+  const citySlug = (cityKey.split('.').pop() || '').toLowerCase();
+  const valueProps = cityValueProps[citySlug] || null;
+  const localizedValues = valueProps?.items.map(item => t(item as TranslationKey)).filter(Boolean) || [];
 
   return (
     <section className="py-16 bg-white">
@@ -119,10 +132,22 @@ const CityPage: React.FC<CityPageProps> = ({ cityKey, titleKey, descriptionKey, 
             ))}
           </div>
         </div>
+        {valueProps && localizedValues.length > 0 && (
+          <div className="mt-12 rounded-2xl border border-slate-200 bg-slate-50/60 p-6">
+            <h2 className="text-2xl font-semibold text-slate-900">{t(valueProps.titleKey)}</h2>
+            <ul className="mt-4 grid gap-3 md:grid-cols-3 text-sm text-slate-700">
+              {localizedValues.map((val) => (
+                <li key={val} className="flex gap-2">
+                  <i className="fas fa-location-dot text-brand-600 mt-1"></i>
+                  <span>{val}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </section>
   );
 };
 
 export default CityPage;
-

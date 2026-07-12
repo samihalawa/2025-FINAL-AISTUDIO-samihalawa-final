@@ -1,5 +1,6 @@
 import React from 'react';
 import HireCTA from '../../components/HireCTA';
+import CaseStudyValidation from '../../components/CaseStudyValidation';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from '../../i18n/LanguageContext';
 
@@ -58,6 +59,7 @@ const BankingAssistant: React.FC = () => {
               </span>
             ))}
           </p>
+          <CaseStudyValidation caseId="banking-assistant" />
           <HireCTA />
         </div>
       </div>

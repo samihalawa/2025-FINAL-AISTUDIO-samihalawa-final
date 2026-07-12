@@ -2,6 +2,7 @@ import React from 'react';
 import HireCTA from '../../components/HireCTA';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from '../../i18n/LanguageContext';
+import CaseStudyValidation from '../../components/CaseStudyValidation';
 
 const ApoloMedicalFramework: React.FC = () => {
   const { t, language } = useTranslation();
@@ -99,6 +100,7 @@ const ApoloMedicalFramework: React.FC = () => {
               </span>
             ))}
           </p>
+          <CaseStudyValidation caseId="apolo-medical-framework" />
           <HireCTA />
         </div>
       </div>
@@ -107,4 +109,3 @@ const ApoloMedicalFramework: React.FC = () => {
 };
 
 export default ApoloMedicalFramework;
-
