@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "blog:manifest": "node scripts/generate-blog-manifest.mjs",
+    "build": "node scripts/generate-blog-manifest.mjs && vite build",
     "preview": "vite preview"
   },
   "dependencies": {

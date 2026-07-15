@@ -1,8 +1,20 @@
 # INDEX
 
+blog content pipeline | hard-coded slug list + modal did not scale to daily hub-fed posts | glob public/blog/**/*.md at build into index.json + sitemap and render /blog/:slug | do not hand-edit constants.ts per post or reintroduce the modal-only flow; hub commits to public/blog/en/<slug>.md | verify live /blog, one /blog/<slug>, and sitemap blog URLs after a hub pages run
 SPA production routes | public asset directories collide with client routes | serve file-shaped URLs as static files and everything else as the SPA shell | do not let Nginx treat route names as directories or leak port 8080 redirects | verify slash and non-slash routes plus real asset MIME types
 Coolify Linux build | macOS lock omitted the Rollup x64 GNU binary | install the matching native Rollup package inside the Linux builder | do not infer deployability from the macOS Vite build | verify Coolify builds the pushed commit and the live routes
 public portfolio | stock imagery and invented social proof replaced source evidence | use dated metrics, real screenshots and public links | do not publish placeholders, arbitrary percentages or unsupported impact | verify exact live route, image load, text and responsive layout
+
+## 2026-07-15 — Blog fed by the central content hub
+
+- **Status:** CURRENT
+- **Project/root:** `PROJECTS_ON_PROCESS/2025-FINAL-AISTUDIO-samihalawa-final`; blog subsystem.
+- **Context:** the blog read `public/blog/<slug>.md` with a hard-coded `BLOG_POSTS` list in `constants.ts` and rendered posts in a modal (no per-article URL) — it could not receive daily hub-delivered posts or be indexed per article.
+- **Superior approach:** the central content hub (`2026-ALL-ACTORS-oupin-huatong-crawlab`) commits English Markdown to `public/blog/en/<slug>.md` (fail-closed on `sites:["samihalawa"]`). A build-time `scripts/generate-blog-manifest.mjs` globs `public/blog/**/*.md`, normalises legacy + hub frontmatter into `public/blog/index.json`, and refreshes the `/blog/<slug>` sitemap URLs. `Blog.tsx` loads the manifest (falls back to `BLOG_POSTS`); `pages/BlogArticlePage.tsx` renders `/blog/:slug` with canonical/OG/BlogPosting JSON-LD.
+- **Evidence:** hub env `CONTENT_HUB_GITHUB_TARGETS` includes `samihalawa|samihalawa/2025-FINAL-AISTUDIO-samihalawa-final|public/blog`; 22 `sites:["samihalawa"]` specs in the hub's `pages.config.json`; daily `content-hub-worker` pages run.
+- **Triggers:** editing the blog reader, adding a post source, changing the build script, or touching the sitemap.
+- **Required verification:** `npm run build` green; live `/blog` lists posts, one `/blog/<slug>` renders real body + correct `<title>`/canonical (Googlebot UA), and `sitemap.xml` contains the article URLs — after a hub pages run has committed to this repo.
+- **Do / don't:** do let the build script + manifest own the post list; don't hand-edit `constants.ts` per post, don't restore the modal-only navigation, and don't feed this blog the Chinese-diaspora news (it is `samihalawa`-scoped, English).
 
 ## 2026-07-15 — SPA routes versus public asset directories
 

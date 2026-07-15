@@ -1,0 +1,137 @@
+[
+  {
+    "slug": "2025-guide-ai-agent-orchestration",
+    "path": "2025-guide-ai-agent-orchestration",
+    "title": "The 2025 Guide to AI Agent Orchestration Frameworks",
+    "date": "2025-08-23",
+    "summary": "A comprehensive analysis of the AI agent orchestration landscape in 2024-2025, from experimental prototypes to enterprise-grade platforms like AutoGen, LangGraph, and CrewAI.",
+    "author": "Sami Halawa",
+    "tags": []
+  },
+  {
+    "slug": "deep-dive-attio-api",
+    "path": "deep-dive-attio-api",
+    "title": "A Deep Dive into Attio's API for CRM Replication",
+    "date": "2025-08-22",
+    "summary": "An investigation into Attio.com's API-first architecture, flexible data model, and API endpoints, exploring how its functionality can be programmatically replicated for deep integration.",
+    "author": "Sami Halawa",
+    "tags": []
+  },
+  {
+    "slug": "maximizing-learning-with-ai",
+    "path": "maximizing-learning-with-ai",
+    "title": "Maximizing Learning with AI-Powered Session Analysis",
+    "date": "2025-08-21",
+    "summary": "A case study on leveraging AI tools like Whisper for transcription and automated analysis to extract key insights and track progress from recorded technical mentorship sessions.",
+    "author": "Sami Halawa",
+    "tags": []
+  },
+  {
+    "slug": "ai-agents-automating-workflows",
+    "path": "ai-agents-automating-workflows",
+    "title": "AI Agents Automating Business Workflows: Cut Manual Work by 70% in 2025",
+    "date": "2025-01-15",
+    "summary": "Autonomous AI agents are eliminating 70% of manual workflows across sales, research, and development. Real examples: AutoClient (CRM automation), competitive analysis agents, and Devin (code generation). Includes LangChain implementation guide.",
+    "author": "Sami Halawa",
+    "tags": []
+  },
+  {
+    "slug": "building-rag-with-gemini-langchain",
+    "path": "building-rag-with-gemini-langchain",
+    "title": "Building Production-Ready RAG Systems: Complete Guide with Gemini Pro & LangChain",
+    "date": "2025-01-15",
+    "summary": "Master Retrieval-Augmented Generation from prototype to production. Learn to build RAG systems that handle 10K+ documents, cost $0.02/query, and achieve 95%+ accuracy with real-world enterprise examples.",
+    "author": "Sami Halawa",
+    "tags": []
+  },
+  {
+    "slug": "ai-powered-code-generation-debugging",
+    "path": "ai-powered-code-generation-debugging",
+    "title": "A Practical Guide to AI-Powered Code Generation and Debugging",
+    "date": "2024-08-18",
+    "summary": "Leverage the power of AI to supercharge your development workflow. This guide covers practical tips and techniques for using tools like Gemini and GitHub Copilot to write better code faster and debug more efficiently.",
+    "author": "Sami Halawa",
+    "tags": []
+  },
+  {
+    "slug": "rise-of-ai-first-development",
+    "path": "rise-of-ai-first-development",
+    "title": "The Rise of AI-First Development: A New Way to Build Software",
+    "date": "2024-08-15",
+    "summary": "The development landscape is undergoing a paradigm shift. AI is no longer just a feature to be added but the core engine of the development process itself. Exploring the principles and impact of the AI-first approach.",
+    "author": "Sami Halawa",
+    "tags": []
+  },
+  {
+    "slug": "securing-llm-powered-applications",
+    "path": "securing-llm-powered-applications",
+    "title": "Securing Your AI: Best Practices for Protecting LLM-Powered Applications",
+    "date": "2024-08-12",
+    "summary": "Large Language Models introduce new and unique security vulnerabilities. Learn how to defend against prompt injection, data leakage, and other emerging threats to build secure and trustworthy AI applications.",
+    "author": "Sami Halawa",
+    "tags": []
+  },
+  {
+    "slug": "react-server-vs-client-components",
+    "path": "react-server-vs-client-components",
+    "title": "React Server Components vs. Client Components: A Modern Web Development Paradigm",
+    "date": "2024-08-08",
+    "summary": "React Server Components (RSCs) are changing how we build web applications. Understand the key differences between server and client components and how to leverage both to build faster, more efficient apps.",
+    "author": "Sami Halawa",
+    "tags": []
+  },
+  {
+    "slug": "multimodal-ai-explained",
+    "path": "multimodal-ai-explained",
+    "title": "Multimodal AI Explained: Beyond Text with Gemini",
+    "date": "2024-08-01",
+    "summary": "What is multimodality in AI, and why is it a game-changer? An introduction to how models like Gemini can understand and process information from text, images, audio, and video simultaneously.",
+    "author": "Sami Halawa",
+    "tags": []
+  },
+  {
+    "slug": "deploying-ml-models-docker-kubernetes",
+    "path": "deploying-ml-models-docker-kubernetes",
+    "title": "From Python to Production: Deploying ML Models with Docker and Kubernetes",
+    "date": "2024-07-28",
+    "summary": "A practical guide on taking a trained machine learning model from a Jupyter Notebook to a scalable, production-ready microservice using FastAPI, Docker, and Kubernetes.",
+    "author": "Sami Halawa",
+    "tags": []
+  },
+  {
+    "slug": "ethics-of-ai-bias-fairness",
+    "path": "ethics-of-ai-bias-fairness",
+    "title": "The Ethics of AI: Navigating Bias and Fairness in Machine Learning",
+    "date": "2024-07-25",
+    "summary": "As AI systems become more integrated into our lives, addressing ethical challenges like bias and fairness is not just a technical problem—it's a societal imperative. An exploration of the sources of bias and strategies for building more equitable AI.",
+    "author": "Sami Halawa",
+    "tags": []
+  },
+  {
+    "slug": "finetuning-vs-prompt-engineering",
+    "path": "finetuning-vs-prompt-engineering",
+    "title": "Fine-Tuning vs. Prompt Engineering: Which is Right for Your AI Project?",
+    "date": "2024-07-22",
+    "summary": "A comparative analysis of two key techniques for customizing Large Language Models. Understand the trade-offs between prompt engineering and fine-tuning to choose the best approach for your needs.",
+    "author": "Sami Halawa",
+    "tags": []
+  },
+  {
+    "slug": "why-ai-is-the-future",
+    "path": "why-ai-is-the-future",
+    "title": "Why AI is the Future of Business",
+    "date": "2024-07-15",
+    "summary": "An in-depth look at how artificial intelligence is reshaping industries and why every business needs an AI strategy to stay competitive.",
+    "author": "Sami Halawa",
+    "tags": []
+  },
+  {
+    "slug": "getting-started-with-gemini",
+    "path": "getting-started-with-gemini",
+    "title": "Getting Started with the Gemini API",
+    "date": "2024-06-28",
+    "summary": "A practical guide for developers looking to integrate Google's powerful Gemini models into their applications for text, image, and chat generation.",
+    "author": "Sami Halawa",
+    "tags": []
+  }
+]
