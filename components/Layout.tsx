@@ -11,7 +11,7 @@ const Layout: React.FC = () => {
   const { language, t } = useTranslation();
   const siteUrl = 'https://samihalawa.com';
   const canonical = `${siteUrl}${location.pathname}`;
-  const defaultOg = 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&h=630&q=80';
+  const defaultOg = `${siteUrl}/portfolio/vuda-annotated.png`;
   const defaultTitle = t('layout.defaultTitle');
   const titleTemplate = t('layout.titleTemplate');
   const siteName = t('layout.siteName');
@@ -23,7 +23,8 @@ const Layout: React.FC = () => {
     url: siteUrl,
     sameAs: [
       'https://www.linkedin.com/in/samihalawa',
-      'https://github.com/samihalawa'
+      'https://github.com/samihalawa',
+      'https://huggingface.co/samihalawa'
     ],
     jobTitle,
   };
@@ -70,17 +71,10 @@ const Layout: React.FC = () => {
         <script type="application/ld+json">{JSON.stringify(webSiteJsonLd)}</script>
       </Helmet>
 
-      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 -z-10 overflow-hidden">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="relative pt-24">
-            <div className="absolute -top-48 left-1/2 h-[520px] w-[110%] -translate-x-1/2 rounded-[180px] bg-white/60 shadow-soft-xl backdrop-blur-3xl mask-gradient"></div>
-            <div className="absolute top-0 left-1/2 h-[560px] w-[560px] -translate-x-1/2 rounded-full bg-brand-500/15 blur-3xl animate-pulseGlow"></div>
-            <div className="absolute -right-10 top-24 h-64 w-64 rounded-full bg-emerald-400/20 blur-3xl animate-float"></div>
-          </div>
-        </div>
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[720px] overflow-hidden">
+        <div className="absolute -right-40 -top-56 h-[620px] w-[620px] rounded-full border-[80px] border-brand-100/60"></div>
+        <div className="absolute left-0 top-0 h-full w-full bg-grid-slate opacity-[0.16]"></div>
       </div>
-
-      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 -z-20 h-[720px] bg-grid-slate opacity-40" />
 
       <Header />
       <main id="main-content" role="main" tabIndex={-1} className="relative z-10">

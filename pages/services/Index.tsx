@@ -30,13 +30,12 @@ const SERVICE_CARDS = [
 const FEATURED_CASE_STUDIES = [
   { href: '/case-studies/autoclient', titleKey: 'services.index.caseStudy.autoclient.title', descKey: 'services.index.caseStudy.autoclient.description' },
   { href: '/case-studies/radiology-ai', titleKey: 'services.index.caseStudy.radiology.title', descKey: 'services.index.caseStudy.radiology.description' },
-  { href: '/case-studies/banking-assistant', titleKey: 'services.index.caseStudy.banking.title', descKey: 'services.index.caseStudy.banking.description' },
 ];
 
 const ServicesIndex: React.FC = () => {
   const { t } = useTranslation();
   const { title, description } = usePageMeta('services');
-  const ogImage = 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&h=630&q=80';
+  const ogImage = 'https://samihalawa.com/portfolio/vuda-annotated.png';
 
   return (
     <section className="py-8">

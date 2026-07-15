@@ -32,7 +32,7 @@ const AICompetitiveResearch: React.FC = () => {
         </div>
         <div className="mt-10 flex gap-4">
           <Link to="/contact" className="inline-block bg-slate-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-slate-800">Request research</Link>
-          <Link to="/case-studies/attio-sequences" className="inline-block bg-white text-slate-700 px-6 py-3 rounded-md border border-slate-300 font-semibold hover:bg-slate-100">See Attio case</Link>
+          <Link to="/projects#autopricing" className="inline-block bg-white text-slate-700 px-6 py-3 rounded-md border border-slate-300 font-semibold hover:bg-slate-100">See AutoPricing evidence</Link>
         </div>
       </div>
     </section>
@@ -40,4 +40,3 @@ const AICompetitiveResearch: React.FC = () => {
 };
 
 export default AICompetitiveResearch;
-

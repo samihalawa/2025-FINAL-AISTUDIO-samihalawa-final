@@ -1,0 +1,101 @@
+SAMI HALAWA RIBAS
+Founding AI Engineer | AI Product and Platform Lead
+
+Madrid, Spain | EU work authorisation
++34 679 794 037 | sami@oulang.ai | samihalawa.com
+linkedin.com/in/samihalawa | github.com/samihalawa | huggingface.co/samihalawa
+
+PROFILE
+Founder-engineer who turns ambiguous business and product ideas into operating AI systems. Full-cycle ownership across product definition, LLM and agent workflows, data and APIs, web and mobile implementation, cloud deployment, observability, growth and customer operations. Strongest at zero-to-one product architecture, multilingual delivery, automation and the complete production system around AI.
+
+VERIFIED PUBLIC SCALE
+- OULANG: 17,262 registered users, 38,857 listings and 89,913 contact reveals as of 3 July 2026; shipped on web, iOS and Android.
+- GitHub: 700 public repositories as of 15 July 2026, including 249 non-forks and 451 forks.
+- VUDA open-source project: 80 GitHub stars and 7 forks at the current snapshot.
+- Hugging Face: 30 posts, 12 articles, 5 collections, 19 Spaces and 1 model.
+- Recorded work archive: 97 valid lesson, meeting and project videos totalling 110.83 hours.
+
+CORE EXPERTISE
+Agentic AI and LLMs: multi-agent orchestration, MCP, tool and function calling, RAG, structured outputs, model routing, prompt and evaluation loops, OpenAI, Anthropic, Gemini and open-source models.
+AI product engineering: Python, FastAPI, TypeScript, Node.js, React, Next.js, Tailwind CSS, REST APIs, SQL, background jobs, OCR and document pipelines, web and mobile delivery, payments and analytics.
+Automation and integrations: research and enrichment pipelines, CRM and ERP integration, email, WhatsApp, messaging and voice workflows, web data collection, evidence and report generation, n8n.
+Cloud and operations: Docker, Linux, CI/CD, Cloudflare, AWS/Azure/GCP exposure, Hetzner, Coolify, deployment, logs, monitoring, product analytics, performance and cost control.
+Leadership and communication: product strategy, architecture decisions, customer discovery, technical direction, client delivery, mentoring, course design and executive communication in Spanish, English and Mandarin.
+
+PROFESSIONAL EXPERIENCE
+
+Founder and AI Product Engineer | Agents AI Ltd | Madrid / London | July 2025-Present
+- Own product discovery, architecture, implementation, deployment, analytics, monetisation and operational handover across founder-led and B2B systems.
+- Built OULANG (欧浪AI) across web, iOS and Android. Reached 17,262 users, 38,857 listings and 89,913 contact reveals by 3 July 2026 with multilingual workflows, search, payments and analytics.
+- Extended the marketplace architecture into Huatong for Chinese communities across Europe and OUPIN for AI-assisted commerce and discovery.
+- Built AutoClient and related research, enrichment, CRM, email, WhatsApp and voice-agent systems; published reusable MCP and developer tooling.
+- Delivered pricing-intelligence and evidence-report workflows combining marketplace data, product matching, price history and inventory or ERP inputs.
+- Prototyped multimodal medical-image review, longitudinal tracking and structured reporting workflows with explicit human review; no clinical deployment claim.
+
+AI Instructor and Independent Technical Consultant | Madrid / Remote | 2022-Present
+- Teach implementation-first AI, agents, MCP, automation, Python and AI product engineering through working applications, live builds and technical curricula.
+- Translate business needs into systems for professionals and teams in Spanish, English and Mandarin.
+- Maintain an accessible archive of 97 valid lesson, meeting and project recordings totalling 110.83 hours.
+
+Senior Full-Stack Engineer | Damehosting | 2019-2023
+- Developed and maintained production web systems.
+- Supported delivery through code review, CI/CD practices, Linux and server operations, and developer mentoring.
+
+Web, Mobile, Growth and Education | Megawebs / Megacursos | 2009-2023
+- Built web and mobile products, produced technical courses, taught digital design and led SEO and acquisition work.
+- Historical first-party record covers more than 70 digital projects; this is presented as portfolio history rather than independently audited business impact.
+
+ADDITIONAL PROFESSIONAL CHRONOLOGY
+Independent web and mobile product builder | 2015-Present
+- Historical first-party record of more than 20 applications across native and cross-platform work; current production proof includes OULANG on both app stores.
+
+Presenter and Live Host | China | 2015-2017
+- Multilingual on-camera communication, live presentation and content production.
+
+Commercial Model and Actor | China | 2013-2017
+- International production, client communication and visual storytelling experience.
+
+Digital Design and Technology Instructor | 2009-2019
+- Taught After Effects, Photoshop, Cinema 4D, web and product skills; produced reusable online course material.
+
+SELECTED PRODUCTS AND PROJECTS
+- OULANG (2026-present): Mandarin-first marketplace and local-life platform for Spain; web, iOS and Android. https://oulang.ai
+- Huatong (2026-present): Chinese-first jobs, housing, classifieds and local-services platform across European markets. https://huatong.eu
+- AutoClient (2024-present): agentic research, enrichment, lead scoring, personalised outreach, conversation tracking and CRM automation.
+- AutoPricing / IWAKY delivery (2025-2026): pricing-intelligence and evidence-report workflows using marketplace data, product matching, price history and inventory or ERP inputs.
+- OUPIN (2026): Chinese-language AI commerce and discovery product with recommendation and trust surfaces.
+- VUDA, Visual UI Debug Agent MCP (2025-present): open-source visual debugging agent with 80 GitHub stars. https://github.com/samihalawa/visual-ui-debug-agent-mcp
+- GOWA WhatsApp API / WhatsApp MCP (2025-2026): Go-based messaging, chat-history and media integration for operational agents.
+- MCP Server SMTP / IMAP (2025): agentic email transport and mailbox integration; 17 stars and 15 forks at current snapshot.
+- Google Jules MCP (2025): open-source bridge for coding-agent workflows; 14 stars and 7 forks at current snapshot.
+- Telnyx agentic tooling (2026): voice-agent, telephony, conversation-state and operational integration work.
+- Codex Chronicle / Screenpipe tooling (2026): history recovery, persistent visual memory and analysis for multi-agent work on macOS.
+- APOLO medical multimodal exploration (2025): public Hugging Face image-text model artifact and architecture exploration based on DeepSeek-VL2-tiny; research and prototyping only. https://huggingface.co/samihalawa/APOLO-medical-multimodal-instruct
+- Ophthalmology review and reporting (2025-2026): multimodal image-review, longitudinal-tracking and PDF-report prototypes with human review.
+- AutoMedical Academy (2025): AI-assisted medical learning and product experimentation.
+- INTLAW AI dashboard (2025): legal-workflow and document or operations prototype developed in a collaboration context.
+- Recipe intelligence platform (2026): product discovery and workflow for converting chef notes and photos into researched, structured, scalable multilingual recipes.
+- Earlier products: MelindaAI, KittyAI, Sharedetect, ZebraMenu, Megacursos and ChinoTotal.
+
+OPEN SOURCE, WRITING AND TEACHING
+- GitHub work spans agents, MCP, automation, browser and UI debugging, messaging, voice, data collection and product delivery.
+- Twelve Hugging Face articles cover browser automation, local Transformers.js, prompting, autonomous-agent repositories, AutoGen, lead generation and VUDA.
+- Verified AI and After Effects tutorials are published on youtube.com/@autoclient-ai.
+- Author: ChinoTotal: Aprende Chino Mandarín desde 0, ISBN 9798873249237.
+
+EDUCATION
+Li Po Chun United World College of Hong Kong | International Baccalaureate, Science and Mathematics | 2010-2012 | Full UWC scholarship
+Shenzhen Institute of Information Technology | Computing and information-technology studies | 2016-2018 | Shenzhen, China
+
+SELECTED CREDENTIALS
+Microsoft Certified: Azure AI Fundamentals (AI-900)
+Adobe Certified Expert, After Effects
+
+LANGUAGES
+Spanish: native
+English: C2 / full professional
+Mandarin Chinese: C2 / full professional
+Cantonese: conversational
+
+TARGET ROLES
+Founding AI Engineer | AI Product Engineer | AI Platform Lead | Head of AI | Staff AI Engineer | Technical Product Lead

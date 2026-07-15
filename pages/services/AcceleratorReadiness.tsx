@@ -13,7 +13,7 @@ const Section: React.FC<{ title: string, points: string[] }>=({ title, points })
 
 const AcceleratorReadiness: React.FC = () => {
   const title = 'Accelerator & Pitch Readiness — Materials, Demo, and Narrative';
-  const description = 'Prepare for accelerators like Lanzadera: investor deck, demo, GTM strategy, and a compelling narrative that passes selection.';
+  const description = 'Prepare accelerator applications with an investor deck, demo, GTM strategy, evidence pack, and a coherent narrative.';
   const jsonLd = { '@context': 'https://schema.org', '@type': 'Service', name: title, serviceType: 'Startup Advisory', provider: { '@type': 'Person', name: 'Sami Halawa' } };
   return (
     <section className="py-16 bg-white">
@@ -25,7 +25,7 @@ const AcceleratorReadiness: React.FC = () => {
       </Helmet>
       <div className="container mx-auto px-6 max-w-5xl">
         <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">{title}</h1>
-        <p className="text-lg text-slate-700 mb-8">We align the product, story and metrics. From deck to prototype, we help you pass selection and raise interest.</p>
+        <p className="text-lg text-slate-700 mb-8">We align the product, story and evidence. From deck to prototype, the work is designed to make an application easier to evaluate without promising a selection outcome.</p>
         <div className="grid md:grid-cols-2 gap-6">
           <Section title="Deliverables" points={[ 'Investor deck and one‑pager', 'Clickable demo or prototype', 'Narrative and Q&A prep', 'GTM and metrics plan' ]} />
           <Section title="Tracks" points={[ 'B2B SaaS / Agents', 'Healthcare AI', 'Automation and ops', 'Developer tools' ]} />
@@ -40,4 +40,3 @@ const AcceleratorReadiness: React.FC = () => {
 };
 
 export default AcceleratorReadiness;
-

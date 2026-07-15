@@ -20,7 +20,7 @@ const AgentsAutomation: React.FC = () => {
   const ogImage = 'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1200&h=630&q=80';
   const relatedCaseStudies = [
     { href: '/case-studies/autoclient', label: t('caseStudies.index.case.autoclient.title') },
-    { href: '/case-studies/banking-assistant', label: t('caseStudies.index.case.banking.title') }
+    { href: '/projects#gowa', label: 'GOWA WhatsApp API / WhatsApp MCP' }
   ];
   const bootcampKeys: TranslationKey[] = [
     'services.agentsAutomation.bootcamp1',

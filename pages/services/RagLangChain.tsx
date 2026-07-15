@@ -19,8 +19,8 @@ const RagLangChain: React.FC = () => {
   const description = t('services.ragLangChain.description');
   const ogImage = 'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1200&h=630&q=80';
   const relatedCaseStudies = [
-    { href: '/case-studies/spreadsheet-assistant', label: t('caseStudies.index.case.spreadsheet.title') },
-    { href: '/case-studies/attio-sequences', label: t('caseStudies.index.case.attio.title') }
+    { href: '/projects#chronicle', label: 'Codex Chronicle / Screenpipe tooling' },
+    { href: '/projects#jules', label: 'Google Jules MCP' }
   ];
   const topicKeys: TranslationKey[] = [
     'services.ragLangChain.topic1',

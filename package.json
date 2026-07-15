@@ -20,7 +20,6 @@
   },
   "devDependencies": {
     "@netlify/functions": "^4.2.5",
-    "@rollup/rollup-linux-x64-gnu": "^4.52.3",
     "@types/node": "^22.14.0",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",

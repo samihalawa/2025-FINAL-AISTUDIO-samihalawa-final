@@ -9,7 +9,7 @@ const RadiologyAI: React.FC = () => {
   const canonical = `${siteUrl}/case-studies/radiology-ai`;
   const title = t('caseStudies.radiology.title');
   const description = t('caseStudies.radiology.description');
-  const og = 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&h=630&q=80';
+  const og = `${siteUrl}/portfolio/apolo-architecture.png`;
   const relatedServices = [
     { href: '/services/medical-ai', label: t('services.medicalAI.title') },
     { href: '/services/advanced-ai', label: t('services.advancedAI.title') }
@@ -18,7 +18,7 @@ const RadiologyAI: React.FC = () => {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
     headline: title,
-    about: 'Medical AI, Radiology, Clinical Reporting',
+    about: 'Medical-image workflow prototypes, structured reporting, human review',
     author: { '@type': 'Person', name: 'Sami Halawa' },
     description,
     inLanguage: language,
@@ -44,10 +44,10 @@ const RadiologyAI: React.FC = () => {
         <p className="text-slate-700 mb-6">{t('caseStudies.radiology.intro')}</p>
         <h2 className="text-xl font-bold text-slate-900 mb-2">Highlights</h2>
         <ul className="list-disc list-inside text-slate-700 space-y-1 mb-6">
-          <li>Structured clinical ChatGPT prompts with guardrails</li>
-          <li>Triage flows integrating hospital processes</li>
-          <li>Imaging support groundwork (PACS compatibility)</li>
-          <li>Patent application prep and IP strategy</li>
+          <li>Structured multimodal prompts and review steps</li>
+          <li>Prototype routing with explicit human-review checkpoints</li>
+          <li>Medical-image workflow architecture</li>
+          <li>Structured report-generation experiments</li>
         </ul>
         <div className="mt-8">
           <p className="text-sm text-slate-600">

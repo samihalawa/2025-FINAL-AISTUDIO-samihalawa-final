@@ -24,7 +24,6 @@ const ITEMS: Item[] = [
   { href: '/services/ai-language-learning', titleKey: 'search.item.aiLanguageLearning.title', descriptionKey: 'search.item.aiLanguageLearning.description', categoryKey: 'search.category.services' },
   { href: '/case-studies/radiology-ai', titleKey: 'search.item.caseRadiology.title', descriptionKey: 'search.item.caseRadiology.description', categoryKey: 'search.category.caseStudies' },
   { href: '/case-studies/autoclient', titleKey: 'search.item.caseAutoclient.title', descriptionKey: 'search.item.caseAutoclient.description', categoryKey: 'search.category.caseStudies' },
-  { href: '/case-studies/attio-sequences', titleKey: 'search.item.caseAttio.title', descriptionKey: 'search.item.caseAttio.description', categoryKey: 'search.category.caseStudies' },
   { href: '/locations/madrid', titleKey: 'search.item.locationMadrid.title', descriptionKey: 'search.item.locationMadrid.description', categoryKey: 'search.category.locations' },
   { href: '/locations/barcelona', titleKey: 'search.item.locationBarcelona.title', descriptionKey: 'search.item.locationBarcelona.description', categoryKey: 'search.category.locations' },
   { href: '/locations/valencia', titleKey: 'search.item.locationValencia.title', descriptionKey: 'search.item.locationValencia.description', categoryKey: 'search.category.locations' },

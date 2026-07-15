@@ -21,7 +21,7 @@ const LanzaderaReadiness: React.FC = () => {
       name: service.label,
       url: `${siteUrl}${service.href}`
     })) };
-  const og = 'https://images.unsplash.com/photo-1455849318743-b2233052fcff?auto=format&fit=crop&w=1200&h=630&q=80';
+  const og = `${siteUrl}/portfolio/autopricing-dashboard.png`;
   return (
     <section className="py-16 bg-white">
       <Helmet>

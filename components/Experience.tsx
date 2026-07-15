@@ -1,32 +1,29 @@
 import React from 'react';
-import { useTranslation } from '../i18n/LanguageContext';
-import { EXPERIENCE } from '../constants';
+import { useTranslation, type LanguageCode } from '../i18n/LanguageContext';
 
-const Experience: React.FC = () => {
-    const { t } = useTranslation();
-    return (
-        <section id="experience" className="py-20 bg-slate-50 scroll-mt-20" aria-label={t('experience.title')}>
-            <div className="container mx-auto px-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-slate-900">{t('experience.title')}</h2>
-                <div className="relative max-w-3xl mx-auto">
-                    <div className="absolute left-0 top-0 w-0.5 h-full bg-slate-200" aria-hidden="true"></div>
-                    <div className="space-y-12">
-                        {EXPERIENCE.map((job, index) => (
-                            <div key={index} className="relative pl-8">
-                                <div className="absolute left-0 top-1.5 -translate-x-1/2 w-4 h-4 bg-slate-900 rounded-full border-4 border-slate-50"></div>
-                                <div className="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
-                                    <p className="bg-slate-100 text-slate-700 px-3 py-1 rounded-md text-sm inline-block mb-2 font-medium">{t(job.durationKey)}</p>
-                                    <h3 className="text-xl font-bold text-slate-900">{t(job.titleKey)}</h3>
-                                    {job.companyKey && <h4 className="text-lg text-slate-600 mb-3 font-semibold">{t(job.companyKey)}</h4>}
-                                    <p className="text-slate-700">{t(job.descriptionKey)}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+const copy: Record<LanguageCode, { title: string; roles: { years: string; title: string; company: string; body: string }[] }> = {
+  en: { title: 'Professional chronology', roles: [
+    { years: 'Jul 2025–present', title: 'Founder & AI Product Engineer', company: 'Agents AI Ltd', body: 'Founder-led platforms, agentic operations and specialist AI product delivery.' },
+    { years: '2022–present', title: 'AI Instructor & Technical Consultant', company: 'Independent', body: 'Implementation-first AI, agents, MCP, automation, Python and product engineering.' },
+    { years: '2019–2023', title: 'Senior Full-Stack Engineer', company: 'Damehosting', body: 'Production web systems, Linux/server operations, CI/CD practices, reviews and mentoring.' },
+    { years: '2009–2023', title: 'Web, Mobile, Growth & Education', company: 'Megawebs / Megacursos', body: 'Products, technical courses, digital-design instruction and acquisition work.' },
+    { years: '2013–2017', title: 'Presenter, Model & Actor', company: 'China', body: 'Multilingual on-camera presentation, commercial production and cross-cultural communication.' }
+  ]},
+  es: { title: 'Cronología profesional', roles: [
+    { years: 'Jul 2025–actualidad', title: 'Fundador e Ingeniero de Producto IA', company: 'Agents AI Ltd', body: 'Plataformas, operaciones agénticas y entrega especializada de producto IA.' },
+    { years: '2022–actualidad', title: 'Profesor de IA y Consultor Técnico', company: 'Independiente', body: 'IA, agentes, MCP, automatización, Python y producto orientados a implementación.' },
+    { years: '2019–2023', title: 'Ingeniero Full-Stack Sénior', company: 'Damehosting', body: 'Web en producción, Linux/servidores, CI/CD, revisiones y mentoring.' },
+    { years: '2009–2023', title: 'Web, Móvil, Growth y Educación', company: 'Megawebs / Megacursos', body: 'Productos, cursos, docencia de diseño digital y adquisición.' },
+    { years: '2013–2017', title: 'Presentador, Modelo y Actor', company: 'China', body: 'Presentación multilingüe, producción comercial y comunicación intercultural.' }
+  ]},
+  fr: { title: 'Chronologie professionnelle', roles: [
+    { years: 'Juil. 2025–présent', title: 'Fondateur & ingénieur produit IA', company: 'Agents AI Ltd', body: 'Plateformes IA et opérations agentiques.' }, { years: '2022–présent', title: 'Formateur IA & consultant', company: 'Indépendant', body: 'Agents, MCP, automatisation, Python et produit.' }, { years: '2019–2023', title: 'Ingénieur full-stack senior', company: 'Damehosting', body: 'Web, Linux, CI/CD et mentoring.' }, { years: '2009–2023', title: 'Web, mobile, croissance & éducation', company: 'Megawebs / Megacursos', body: 'Produits et formation.' }, { years: '2013–2017', title: 'Présentateur, modèle & acteur', company: 'Chine', body: 'Communication multilingue.' }
+  ]},
+  zh: { title: '职业时间线', roles: [
+    { years: '2025-07–至今', title: '创始人与 AI 产品工程师', company: 'Agents AI Ltd', body: 'AI 平台、智能体运营与专业产品交付。' }, { years: '2022–至今', title: 'AI 讲师与技术顾问', company: '独立', body: '智能体、MCP、自动化、Python 与产品工程。' }, { years: '2019–2023', title: '高级全栈工程师', company: 'Damehosting', body: '生产 Web、Linux、CI/CD 与指导。' }, { years: '2009–2023', title: 'Web、移动、增长与教育', company: 'Megawebs / Megacursos', body: '产品与技术课程。' }, { years: '2013–2017', title: '主持、模特与演员', company: '中国', body: '多语言镜头沟通与商业制作。' }
+  ]}
 };
+
+const Experience: React.FC = () => { const { language } = useTranslation(); const c = copy[language]; return <section id="experience" className="py-20"><div className="container"><h2 className="section-heading">{c.title}</h2><div className="mt-10 divide-y divide-slate-200 border-y border-slate-200">{c.roles.map(role => <article key={role.years} className="grid gap-3 py-6 md:grid-cols-[170px_1fr]"><div className="text-sm font-bold text-brand-700">{role.years}</div><div><h3 className="text-lg font-bold text-slate-950">{role.title} <span className="font-normal text-slate-400">·</span> <span className="text-brand-700">{role.company}</span></h3><p className="mt-2 text-slate-600">{role.body}</p></div></article>)}</div></div></section>; };
 
 export default Experience;

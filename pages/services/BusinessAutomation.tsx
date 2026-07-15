@@ -26,8 +26,7 @@ const BusinessAutomation: React.FC = () => {
   const description = t('services.businessAutomation.description');
   const ogImage = 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&h=630&q=80';
   const relatedCaseStudies = [
-    { href: '/case-studies/autoclient', label: t('caseStudies.index.case.autoclient.title') },
-    { href: '/case-studies/banking-assistant', label: t('caseStudies.index.case.banking.title') }
+    { href: '/case-studies/autoclient', label: t('caseStudies.index.case.autoclient.title') }
   ];
   const scopeKeys: TranslationKey[] = [
     'services.businessAutomation.scope1',

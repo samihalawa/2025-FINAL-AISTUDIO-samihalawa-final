@@ -1,0 +1,41 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { useTranslation } from '../i18n/LanguageContext';
+
+interface CVPageProps { edition?: 'en' | 'es' }
+
+const CVPage: React.FC<CVPageProps> = ({ edition }) => {
+  const { language } = useTranslation();
+  const selected = edition || (language === 'es' ? 'es' : 'en');
+  const spanish = selected === 'es';
+  const pdf = spanish ? '/cv/Sami_Halawa_CV_ES.pdf' : '/cv/Sami_Halawa_CV.pdf';
+  const ats = spanish ? '/cv/Sami_Halawa_CV_ES_ATS.txt' : '/cv/Sami_Halawa_CV_ATS.txt';
+  const preview = spanish ? '/cv/Sami_Halawa_CV_ES_preview.png' : '/cv/Sami_Halawa_CV_preview.png';
+  const title = spanish ? 'CV completo de Sami Halawa' : 'Sami Halawa complete CV';
+  const description = spanish
+    ? 'CV maestro de tres páginas con fotografía, cronología, proyectos, open source, docencia y evidencia pública. La versión ATS se ofrece por separado.'
+    : 'Three-page master CV with portrait, chronology, projects, open source, teaching and public evidence. A separate ATS edition is available.';
+  return <>
+    <Helmet><title>{title}</title><meta name="description" content={description} /><link rel="canonical" href={`https://samihalawa.com/cv/${selected}`} /></Helmet>
+    <section className="py-14 sm:py-20">
+      <div className="container">
+        <div className="grid items-end gap-8 lg:grid-cols-[1fr_auto]">
+          <div className="max-w-4xl"><span className="badge-pill">{spanish ? 'CV maestro · versión española' : 'Complete master CV · English edition'}</span><h1 className="mt-5 font-display text-5xl font-bold tracking-[-.05em] text-slate-950 sm:text-6xl">{spanish ? 'La trayectoria completa, no una versión recortada por el ATS.' : 'The complete career—not an ATS-compressed substitute.'}</h1><p className="mt-6 max-w-3xl text-xl leading-relaxed text-slate-600">{description}</p></div>
+          <div className="flex flex-wrap gap-2"><Link to="/cv/en" className={`inline-flex min-h-11 items-center rounded-full px-4 text-sm font-bold ${!spanish ? 'bg-slate-900 text-white' : 'border border-slate-300 bg-white text-slate-700'}`}>English</Link><Link to="/cv/es" className={`inline-flex min-h-11 items-center rounded-full px-4 text-sm font-bold ${spanish ? 'bg-slate-900 text-white' : 'border border-slate-300 bg-white text-slate-700'}`}>Español</Link></div>
+        </div>
+        <div className="mt-10 flex flex-col gap-3 sm:flex-row"><a href={pdf} download className="btn-primary"><i className="fas fa-file-pdf"></i>{spanish ? 'Descargar CV completo PDF' : 'Download complete PDF'}</a><a href={ats} download className="btn-secondary"><i className="fas fa-file-lines"></i>{spanish ? 'Descargar versión ATS' : 'Download ATS edition'}</a><a href="https://www.linkedin.com/in/samihalawa" target="_blank" rel="noopener noreferrer" className="btn-secondary"><i className="fab fa-linkedin"></i>LinkedIn</a></div>
+        <div className="mt-10 overflow-hidden rounded-[1.5rem] border border-slate-200 bg-slate-100 p-3 shadow-sm sm:p-6">
+          <img src={preview} alt={spanish ? 'Primera página del CV completo' : 'First page of the complete CV'} className="mx-auto block w-full max-w-3xl rounded-lg bg-white shadow-sm" />
+          <div className="mx-auto flex max-w-3xl flex-col items-start justify-between gap-3 border-t border-slate-200 px-1 pb-1 pt-5 text-sm text-slate-600 sm:flex-row sm:items-center">
+            <span>{spanish ? 'Vista previa de la página 1 de 3.' : 'Preview of page 1 of 3.'}</span>
+            <a href={pdf} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 font-bold text-brand-700">{spanish ? 'Abrir las tres páginas' : 'Open all three pages'}<i className="fas fa-arrow-up-right-from-square text-xs"></i></a>
+          </div>
+        </div>
+        <div className="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm leading-relaxed text-amber-950">{spanish ? 'Arquitectura del documento: el PDF visual es el registro maestro; el TXT ATS es un derivado sin fotografía para formularios de candidatura. Ambos proceden del mismo ledger de evidencias.' : 'Document architecture: the visual PDF is the master career record; the photo-free ATS text is a derivative for application systems. Both come from the same evidence ledger.'}</div>
+      </div>
+    </section>
+  </>;
+};
+
+export default CVPage;

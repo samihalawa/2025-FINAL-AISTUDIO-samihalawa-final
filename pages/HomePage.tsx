@@ -19,10 +19,10 @@ const HomePage: React.FC = () => {
       </Helmet>
       <Hero />
       <About />
-      <ServicesShowcase />
       <FeaturedCaseStudies />
       <AdditionalProjects />
       <Testimonials />
+      <ServicesShowcase />
       <div className="container mx-auto px-6">
         <HireCTA />
       </div>

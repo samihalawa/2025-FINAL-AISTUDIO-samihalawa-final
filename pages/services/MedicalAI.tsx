@@ -24,7 +24,7 @@ const MedicalAI: React.FC = () => {
   const { t } = useTranslation();
   const title = t('services.medicalAI.title');
   const description = t('services.medicalAI.description');
-  const ogImage = 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&h=630&q=80';
+  const ogImage = '/portfolio/apolo-architecture.png';
   const relatedCaseStudies = [
     { href: '/case-studies/radiology-ai', label: t('caseStudies.index.case.radiology.title') }
   ];

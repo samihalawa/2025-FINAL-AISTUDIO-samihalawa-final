@@ -1,46 +1,30 @@
 import React from 'react';
-import { useTranslation } from '../i18n/LanguageContext';
-import { ADDITIONAL_PROJECTS } from '../constants';
+import { Link } from 'react-router-dom';
+import { useTranslation, type LanguageCode } from '../i18n/LanguageContext';
+import { PORTFOLIO_PROJECTS, getProjectCopy } from '../portfolio';
+
+const copy: Record<LanguageCode, { eyebrow: string; title: string; body: string; all: string }> = {
+  en: { eyebrow: 'Beyond the flagships', title: 'A broader system of work.', body: 'Agent infrastructure, pricing, messaging, medical workflow prototypes, education and multilingual product discovery.', all: 'Open complete project index' },
+  es: { eyebrow: 'Más allá de los principales', title: 'Un sistema de trabajo más amplio.', body: 'Infraestructura de agentes, pricing, mensajería, prototipos médicos, educación y descubrimiento multilingüe.', all: 'Abrir índice completo' },
+  fr: { eyebrow: 'Au-delà des projets phares', title: 'Un système de travail plus large.', body: 'Agents, pricing, messagerie, prototypes médicaux, éducation et découverte multilingue.', all: 'Ouvrir l’index complet' },
+  zh: { eyebrow: '旗舰之外', title: '更完整的工作体系。', body: '智能体基础设施、定价、消息、医疗流程原型、教育与多语言产品发现。', all: '打开完整项目索引' }
+};
 
 const AdditionalProjects: React.FC = () => {
-    const { t } = useTranslation();
-
-    const Card: React.FC<{ children: React.ReactNode, href?: string }> = ({ children, href }) => {
-        const commonClasses = "bg-white p-4 rounded-lg border border-slate-200 shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-300 h-full flex flex-col";
-        if (href) {
-            return (
-                <a href={href} target="_blank" rel="noopener noreferrer" className={commonClasses}>
-                    {children}
-                </a>
-            );
-        }
-        return <div className={commonClasses}>{children}</div>;
-    };
-
-    return (
-        <section className="py-12 bg-slate-50">
-            <div className="container mx-auto px-6">
-                <h3 className="text-2xl md:text-3xl font-bold text-center mb-8 text-slate-900">{t('additionalProjects.title')}</h3>
-                <div id="additional-projects-grid" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                    {ADDITIONAL_PROJECTS.map((project, index) => (
-                        <Card key={index}>
-                            <div className="flex items-center mb-2">
-                                <i className={`${project.icon} text-lg`}></i>
-                                <h4 className="font-semibold text-slate-800">{t(project.titleKey)}</h4>
-                            </div>
-                            <p className="text-slate-600 text-sm">{t(project.descriptionKey)}</p>
-                        </Card>
-                    ))}
-                    <Card href="https://github.com/samihalawa">
-                        <div className="flex-grow flex flex-col items-center justify-center text-center">
-                            <i className="fas fa-arrow-right text-slate-400 text-xl mb-2"></i>
-                            <p className="text-slate-600 text-sm font-medium">{t('additionalProjects.moreLink')}</p>
-                        </div>
-                    </Card>
-                </div>
-            </div>
-        </section>
-    );
+  const { language } = useTranslation();
+  const c = copy[language];
+  const projects = PORTFOLIO_PROJECTS.filter(project => !project.featured).slice(0, 8);
+  return (
+    <section className="py-20 sm:py-24">
+      <div className="container">
+        <div className="max-w-3xl"><span className="badge-pill">{c.eyebrow}</span><h2 className="section-heading mt-5">{c.title}</h2><p className="section-subtitle mt-4">{c.body}</p></div>
+        <div className="mt-10 grid gap-px overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 md:grid-cols-2 xl:grid-cols-4">
+          {projects.map(project => { const text = getProjectCopy(project, language); return <article key={project.id} className="flex min-h-52 flex-col bg-white p-6"><div className="text-xs font-bold uppercase tracking-[.16em] text-brand-700">{project.period}</div><h3 className="mt-3 text-lg font-bold text-slate-950">{project.name}</h3><p className="mt-3 flex-1 text-sm leading-relaxed text-slate-600">{text.description}</p><div className="mt-5 flex flex-wrap gap-2">{project.tags.slice(0, 2).map(tag => <span key={tag} className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-semibold text-slate-600">{tag}</span>)}</div></article>; })}
+        </div>
+        <Link to="/projects" className="btn-secondary mt-8">{c.all}<i className="fas fa-arrow-right text-sm"></i></Link>
+      </div>
+    </section>
+  );
 };
 
 export default AdditionalProjects;

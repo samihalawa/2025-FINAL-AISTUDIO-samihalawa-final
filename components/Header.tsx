@@ -64,11 +64,11 @@ const Header: React.FC = () => {
                         </span>
                         <span className="flex flex-col leading-tight">
                             <span className="text-lg font-semibold tracking-tight">Sami Halawa</span>
-                            <span className="text-xs uppercase tracking-[0.24em] text-slate-500">{t('header.tagline')}</span>
+                            <span className="hidden text-xs uppercase tracking-[0.24em] text-slate-500 2xl:block">{t('header.tagline')}</span>
                         </span>
                     </Link>
 
-                    <nav aria-label={t('header.primaryNavAria')} className="hidden md:flex items-center gap-2 flex-1 justify-center">
+                    <nav aria-label={t('header.primaryNavAria')} className="hidden xl:flex items-center gap-1 flex-1 justify-center">
                         {NAV_LINKS.map(link => (
                             link.href === '/services' ? (
                                 <Popover key={link.key} className="relative">
@@ -129,7 +129,7 @@ const Header: React.FC = () => {
                         {/* CTA Button - Icon only on desktop to prevent overflow */}
                         <Link 
                             to="/contact" 
-                            className="hidden md:inline-flex items-center justify-center h-10 w-10 rounded-full bg-gradient-to-r from-brand-600 to-brand-500 text-white shadow-brand transition hover:shadow-lg hover:scale-105"
+                            className="hidden xl:inline-flex items-center justify-center h-11 w-11 rounded-full bg-slate-900 text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-slate-800"
                             title={t('header.cta')}
                             aria-label={t('header.cta')}
                         >
@@ -137,7 +137,7 @@ const Header: React.FC = () => {
                         </Link>
 
                         {/* Mobile Menu */}
-                        <div className="md:hidden">
+                        <div className="xl:hidden">
                             <Popover className="relative">
                                 <Popover.Button className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white/80 p-2 text-slate-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
                                     <span className="sr-only">{t('ui.openMenu')}</span>
@@ -190,4 +190,3 @@ const Header: React.FC = () => {
 };
 
 export default Header;
-

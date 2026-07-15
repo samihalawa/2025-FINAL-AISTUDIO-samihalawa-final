@@ -23,7 +23,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onDemoClick, onChatC
     };
     
     const IconButton: React.FC<{onClick?: (e: any) => void, icon: string, srText: string}> = ({ onClick, icon, srText }) => (
-         <button onClick={onClick} className="text-slate-500 hover:text-slate-800 transition-colors duration-300 h-9 w-9 rounded-full flex items-center justify-center hover:bg-slate-100">
+         <button onClick={onClick} className="text-slate-500 hover:text-slate-800 transition-colors duration-300 h-11 w-11 rounded-full flex items-center justify-center hover:bg-slate-100">
             <i className={`fas ${icon}`}></i>
             <span className="sr-only">{srText}</span>
         </button>

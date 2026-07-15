@@ -1,162 +1,85 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useTranslation } from '../i18n/LanguageContext';
+import { useTranslation, type LanguageCode } from '../i18n/LanguageContext';
+
+const content: Record<LanguageCode, {
+  eyebrow: string; title: string; intro: string; work: string; cv: string; available: string;
+  proofTitle: string; proofBody: string; now: string; building: string[]; stats: { value: string; label: string }[];
+}> = {
+  en: {
+    eyebrow: 'Founder-engineer · Madrid · Europe',
+    title: 'I build the complete product around AI.',
+    intro: 'From agents and data pipelines to the interface, mobile release, deployment, analytics and customer operations. The work here is shown with real products, dated metrics and public evidence.',
+    work: 'Explore the work', cv: 'Open complete CV', available: 'Open to founding and platform roles',
+    proofTitle: 'Current public proof', proofBody: 'OULANG shipped on web, iOS and Android. VUDA reached 80 GitHub stars. Public work spans 249 non-fork repositories and 12 Hugging Face articles.',
+    now: 'Now building', building: ['Multilingual marketplaces', 'MCP and operational agents', 'Voice, pricing and evidence systems'],
+    stats: [{ value: '17,262', label: 'OULANG users · 3 Jul 2026' }, { value: '249', label: 'public non-fork repositories' }, { value: '80★', label: 'VUDA on GitHub' }, { value: '12', label: 'Hugging Face articles' }]
+  },
+  es: {
+    eyebrow: 'Fundador e ingeniero · Madrid · Europa',
+    title: 'Construyo el producto completo alrededor de la IA.',
+    intro: 'Desde agentes y datos hasta interfaz, app móvil, despliegue, analítica y operaciones. Aquí el trabajo se demuestra con productos reales, métricas fechadas y evidencia pública.',
+    work: 'Ver proyectos', cv: 'Abrir CV completo', available: 'Disponible para roles founding y de plataforma',
+    proofTitle: 'Prueba pública actual', proofBody: 'OULANG está publicado en web, iOS y Android. VUDA alcanzó 80 estrellas. El trabajo público incluye 249 repositorios propios y 12 artículos en Hugging Face.',
+    now: 'Construyendo ahora', building: ['Marketplaces multilingües', 'MCP y agentes operativos', 'Voz, pricing y sistemas de evidencia'],
+    stats: [{ value: '17.262', label: 'usuarios OULANG · 3 jul 2026' }, { value: '249', label: 'repositorios propios públicos' }, { value: '80★', label: 'VUDA en GitHub' }, { value: '12', label: 'artículos en Hugging Face' }]
+  },
+  fr: {
+    eyebrow: 'Fondateur-ingénieur · Madrid · Europe',
+    title: 'Je construis le produit complet autour de l’IA.',
+    intro: 'Des agents et données à l’interface, au mobile, au déploiement, à l’analytique et aux opérations. Chaque preuve est liée à un produit réel.',
+    work: 'Voir les projets', cv: 'Ouvrir le CV complet', available: 'Ouvert aux rôles founding et plateforme',
+    proofTitle: 'Preuves publiques actuelles', proofBody: 'OULANG est en ligne sur web, iOS et Android. VUDA compte 80 étoiles. Le travail public couvre 249 dépôts non-forks et 12 articles Hugging Face.',
+    now: 'En cours', building: ['Marketplaces multilingues', 'MCP et agents opérationnels', 'Voix, pricing et systèmes de preuve'],
+    stats: [{ value: '17 262', label: 'utilisateurs OULANG · 3 juil. 2026' }, { value: '249', label: 'dépôts publics non-forks' }, { value: '80★', label: 'VUDA sur GitHub' }, { value: '12', label: 'articles Hugging Face' }]
+  },
+  zh: {
+    eyebrow: '创始人工程师 · 马德里 · 欧洲',
+    title: '我构建围绕 AI 的完整产品系统。',
+    intro: '从智能体与数据管道，到界面、移动端发布、部署、分析和客户运营。这里展示真实产品、注明日期的数据和公开证据。',
+    work: '查看项目', cv: '打开完整简历', available: '开放创始工程师与平台岗位',
+    proofTitle: '当前公开证据', proofBody: 'OULANG 已发布 Web、iOS 和 Android。VUDA 获得 80 个 GitHub 星标。公开工作包括 249 个非 fork 仓库和 12 篇 Hugging Face 文章。',
+    now: '正在构建', building: ['多语言市场平台', 'MCP 与运营智能体', '语音、定价与证据系统'],
+    stats: [{ value: '17,262', label: 'OULANG 用户 · 2026-07-03' }, { value: '249', label: '公开非 fork 仓库' }, { value: '80★', label: 'VUDA GitHub' }, { value: '12', label: 'Hugging Face 文章' }]
+  }
+};
 
 const Hero: React.FC = () => {
-    const { t } = useTranslation();
+  const { language } = useTranslation();
+  const c = content[language];
 
-    const stats = [
-        { value: '140+', labelKey: 'hero.stats.clients' as const },
-        { value: '18', labelKey: 'hero.stats.countries' as const },
-        { value: '94%', labelKey: 'hero.stats.csat' as const },
-    ];
+  return (
+    <section className="relative overflow-hidden border-b border-slate-200/80 py-16 sm:py-20 lg:py-24">
+      <div className="container grid items-center gap-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(340px,.85fr)] lg:gap-16">
+        <div>
+          <div className="mb-6 flex flex-wrap items-center gap-3">
+            <span className="badge-pill">{c.eyebrow}</span>
+            <span className="inline-flex items-center gap-2 text-sm font-semibold text-brand-800"><span className="h-2 w-2 rounded-full bg-emerald-500"></span>{c.available}</span>
+          </div>
+          <h1 className="max-w-4xl font-display text-5xl font-bold leading-[1.02] tracking-[-0.055em] text-slate-950 sm:text-6xl lg:text-7xl">{c.title}</h1>
+          <p className="mt-7 max-w-3xl text-xl leading-relaxed text-slate-600">{c.intro}</p>
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <Link to="/projects" className="btn-primary">{c.work}<i className="fas fa-arrow-right text-sm"></i></Link>
+            <Link to="/cv" className="btn-secondary">{c.cv}<i className="fas fa-file-lines text-sm"></i></Link>
+          </div>
+          <dl className="mt-11 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 sm:grid-cols-4">
+            {c.stats.map((stat) => <div key={stat.label} className="bg-white px-4 py-5"><dd className="text-2xl font-bold tracking-tight text-slate-950">{stat.value}</dd><dt className="mt-1 text-xs font-semibold leading-tight text-slate-500">{stat.label}</dt></div>)}
+          </dl>
+        </div>
 
-    const highlights = [
-        { icon: 'fas fa-diagram-project', labelKey: 'hero.highlights.automation' as const },
-        { icon: 'fas fa-graduation-cap', labelKey: 'hero.highlights.training' as const },
-        { icon: 'fas fa-shield-halved', labelKey: 'hero.highlights.safety' as const },
-    ];
-
-    const timeline = [
-        { labelKey: 'hero.timeline.diagnose' as const, captionKey: 'hero.timeline.diagnose.caption' as const },
-        { labelKey: 'hero.timeline.design' as const, captionKey: 'hero.timeline.design.caption' as const },
-        { labelKey: 'hero.timeline.deploy' as const, captionKey: 'hero.timeline.deploy.caption' as const },
-    ];
-
-    const handleScrollLink = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-        e.preventDefault();
-        const targetElement = document.querySelector(href);
-        if (targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth' });
-            // Safely update the URL hash without creating a new history entry
-            if (history.replaceState) {
-                history.replaceState(null, '', href);
-            }
-        }
-    };
-
-    return (
-        <section className="relative overflow-hidden py-24 sm:py-28">
-            <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-                <div className="absolute left-1/2 top-0 h-[760px] w-[760px] -translate-x-1/2 rounded-full bg-brand-500/10 blur-3xl"></div>
-                <div className="absolute -right-24 top-16 h-80 w-80 rounded-full bg-emerald-400/20 blur-3xl"></div>
-                <div className="absolute inset-x-0 bottom-0 h-72 bg-radial-fade"></div>
+        <div className="relative mx-auto w-full max-w-lg">
+          <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-4 shadow-soft-xl sm:p-6">
+            <div className="grid grid-cols-[92px_1fr] items-center gap-5 border-b border-slate-200 pb-5">
+              <img src="/portfolio/sami-photo.png" alt="Sami Halawa Ribas" width="184" height="178" className="h-[92px] w-[92px] rounded-2xl object-cover object-top" />
+              <div><p className="text-sm font-bold uppercase tracking-[.18em] text-brand-700">{c.proofTitle}</p><p className="mt-2 text-sm leading-relaxed text-slate-600">{c.proofBody}</p></div>
             </div>
-
-            <div className="container relative flex flex-col items-center gap-16 lg:flex-row lg:items-start">
-                <div className="max-w-xl text-center lg:text-left">
-                    <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-brand-100 bg-white/80 px-4 py-2 text-sm font-semibold text-brand-700 shadow-sm">
-                        <i className="fas fa-sparkles"></i>
-                        {t('hero.badge')}
-                    </div>
-                    <div className="mb-6 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs font-medium text-slate-600">
-                        <span className="flex items-center gap-1.5">
-                            <i className="fas fa-check-circle text-emerald-500"></i>
-                            {t('hero.trust.certified')}
-                        </span>
-                        <span className="flex items-center gap-1.5">
-                            <i className="fas fa-check-circle text-emerald-500"></i>
-                            {t('hero.trust.teams')}
-                        </span>
-                        <span className="flex items-center gap-1.5">
-                            <i className="fas fa-check-circle text-emerald-500"></i>
-                            {t('hero.trust.global')}
-                        </span>
-                        <span className="flex items-center gap-1.5">
-                            <i className="fas fa-check-circle text-emerald-500"></i>
-                            {t('hero.trust.satisfaction')}
-                        </span>
-                    </div>
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-slate-900">
-                        {t('hero.title')}
-                    </h1>
-                    <p className="mt-4 text-xl text-slate-600">{t('hero.subtitle')}</p>
-                    <p className="mt-6 text-lg text-slate-600">{t('hero.description')}</p>
-
-                    <div className="mt-8 flex flex-col sm:flex-row sm:items-center sm:justify-start gap-3">
-                        <Link to="/contact" className="btn-primary">
-                            {t('hero.contactButton')}
-                            <i className="fas fa-arrow-right text-sm"></i>
-                        </Link>
-                        <Link to="/projects" className="btn-secondary">
-                            {t('hero.projectsButton')}
-                        </Link>
-                        <a
-                            href="#case-studies"
-                            onClick={(e) => handleScrollLink(e, '#case-studies')}
-                            className="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 transition hover:text-brand-600"
-                        >
-                            <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-sm">
-                                <i className="fas fa-play text-xs"></i>
-                            </span>
-                            {t('hero.watchCaseStudies')}
-                        </a>
-                    </div>
-
-                    <dl className="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-3">
-                        {stats.map((stat) => (
-                            <div key={stat.labelKey} className="glass-panel px-5 py-4 text-left">
-                                <dt className="text-xs font-semibold uppercase tracking-wide text-slate-500">{t(stat.labelKey)}</dt>
-                                <dd className="mt-2 text-2xl font-semibold text-slate-900">{stat.value}</dd>
-                            </div>
-                        ))}
-                    </dl>
-                </div>
-
-                <div className="relative flex w-full max-w-lg flex-col gap-5">
-                    <div className="glass-panel relative overflow-hidden p-6 text-left shadow-soft-xl">
-                        <div className="flex items-center gap-4">
-                            <img
-                                src="https://cdn-avatars.huggingface.co/v1/production/uploads/65d00458fff501149572827f/E6nxYRxqRmBGRf9wSQq4Y.jpeg"
-                                alt="Sami Halawa"
-                                width="80"
-                                height="80"
-                                className="h-16 w-16 rounded-2xl border border-white/70 shadow-brand"
-                                loading="lazy"
-                            />
-                            <div>
-                                <p className="text-sm font-semibold text-slate-500">{t('hero.profile.title')}</p>
-                                <p className="text-xl font-semibold text-slate-900">{t('hero.profile.name')}</p>
-                                <p className="text-sm text-slate-500">{t('hero.profile.caption')}</p>
-                            </div>
-                        </div>
-                        <ul className="mt-6 space-y-3 text-sm text-slate-600">
-                            {highlights.map((item) => (
-                                <li key={item.labelKey} className="flex items-start gap-3">
-                                    <span className="mt-0.5 inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-brand-50 text-brand-600">
-                                        <i className={`${item.icon} text-sm`}></i>
-                                    </span>
-                                    <span>{t(item.labelKey)}</span>
-                                </li>
-                            ))}
-                        </ul>
-                        <div className="mt-6 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
-                            <i className="fas fa-shield-check"></i>
-                            {t('hero.profile.compliance')}
-                        </div>
-                    </div>
-
-                    <div className="glass-dark relative overflow-hidden p-6 shadow-soft-xl">
-                        <div className="absolute -right-6 -top-6 h-28 w-28 rounded-full bg-brand-500/40 blur-2xl"></div>
-                        <p className="text-sm font-semibold uppercase tracking-[0.35em] text-white/60">{t('hero.timeline.title')}</p>
-                        <ol className="mt-4 space-y-4">
-                            {timeline.map((item, idx) => (
-                                <li key={item.labelKey} className="flex items-center gap-4">
-                                    <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/15 text-white font-semibold">
-                                        {idx + 1}
-                                    </div>
-                                    <div>
-                                        <p className="text-sm font-semibold text-white/80">{t(item.labelKey)}</p>
-                                        <p className="text-xs text-white/60">{t(item.captionKey)}</p>
-                                    </div>
-                                </li>
-                            ))}
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+            <div className="pt-5"><p className="text-xs font-bold uppercase tracking-[.2em] text-slate-500">{c.now}</p><ul className="mt-3 space-y-3">{c.building.map((item, index) => <li key={item} className="flex items-center gap-3"><span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-50 text-xs font-bold text-brand-800">0{index + 1}</span><span className="font-semibold text-slate-800">{item}</span></li>)}</ul></div>
+          </div>
+          <div className="absolute -bottom-5 -right-5 -z-10 h-full w-full rounded-[2rem] border border-brand-200 bg-brand-50"></div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Hero;

@@ -46,7 +46,7 @@ const AIReadinessAudit: React.FC = () => {
         </div>
         <div className="mt-8 text-sm text-slate-700">
           <span className="font-semibold">Related case studies:</span>
-          <a className="ml-2 underline" href="/case-studies/attio-sequences">Attio Sequences — Reverse Engineering</a>
+          <a className="ml-2 underline" href="/projects#autoclient">AutoClient — workflow and CRM automation</a>
           <span className="mx-1">·</span>
           <a className="underline" href="/case-studies/autoclient">AutoClient — Outreach & CRM Automation</a>
         </div>

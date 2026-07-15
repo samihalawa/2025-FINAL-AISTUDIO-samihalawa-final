@@ -1,51 +1,22 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { useTranslation } from '../../i18n/LanguageContext';
-import { usePageMeta } from '../../hooks/usePageMeta';
+import { useTranslation, type LanguageCode } from '../../i18n/LanguageContext';
+import { PORTFOLIO_PROJECTS, getProjectCopy } from '../../portfolio';
 
-const CASES = [
-  { href: '/case-studies/apolo-medical-framework', titleKey: 'caseStudies.index.case.apolo.title', descKey: 'caseStudies.index.case.apolo.description' },
-  { href: '/case-studies/radiology-ai', titleKey: 'caseStudies.index.case.radiology.title', descKey: 'caseStudies.index.case.radiology.description' },
-  { href: '/case-studies/autoclient', titleKey: 'caseStudies.index.case.autoclient.title', descKey: 'caseStudies.index.case.autoclient.description' },
-  { href: '/case-studies/attio-sequences', titleKey: 'caseStudies.index.case.attio.title', descKey: 'caseStudies.index.case.attio.description' },
-  { href: '/case-studies/banking-assistant', titleKey: 'caseStudies.index.case.banking.title', descKey: 'caseStudies.index.case.banking.description' },
-  { href: '/case-studies/spreadsheet-assistant', titleKey: 'caseStudies.index.case.spreadsheet.title', descKey: 'caseStudies.index.case.spreadsheet.description' },
-  { href: '/case-studies/proptech-analytics', titleKey: 'caseStudies.index.case.proptech.title', descKey: 'caseStudies.index.case.proptech.description' },
-  { href: '/case-studies/airbnb-intelligence', titleKey: 'caseStudies.index.case.airbnb.title', descKey: 'caseStudies.index.case.airbnb.description' },
-  { href: '/case-studies/autofunding-grants', titleKey: 'caseStudies.index.case.grants.title', descKey: 'caseStudies.index.case.grants.description' },
-  { href: '/case-studies/lanzadera-readiness', titleKey: 'caseStudies.index.case.lanzadera.title', descKey: 'caseStudies.index.case.lanzadera.description' },
-];
+const headings: Record<LanguageCode, { eyebrow: string; title: string; body: string; open: string }> = {
+  en: { eyebrow: 'Evidence notes', title: 'Case studies without invented outcomes.', body: 'Each entry separates the observed product, the real artifact and the claim boundary. Deeper implementation notes will be added only when the source can support them.', open: 'Open project evidence' },
+  es: { eyebrow: 'Notas de evidencia', title: 'Casos sin resultados inventados.', body: 'Cada entrada separa el producto observado, el artefacto real y el límite de la afirmación.', open: 'Abrir evidencia' },
+  fr: { eyebrow: 'Notes de preuve', title: 'Cas sans résultats inventés.', body: 'Chaque entrée sépare le produit observé, l’artefact réel et la limite de la preuve.', open: 'Ouvrir la preuve' },
+  zh: { eyebrow: '证据说明', title: '不虚构结果的案例。', body: '每个条目分别标注可观察产品、真实工件与声明边界。', open: '打开项目证据' }
+};
+
+const ids = ['oulang', 'huatong', 'vuda', 'autoclient', 'autopricing', 'apolo'];
 
 const CaseStudiesIndex: React.FC = () => {
-  const { t } = useTranslation();
-  const { title, description } = usePageMeta('caseStudies');
-
-  return (
-    <section className="py-16 bg-white">
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1200&h=630&q=80" />
-        <meta name="twitter:image" content="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1200&h=630&q=80" />
-        <link rel="canonical" href="/case-studies" />
-      </Helmet>
-      <div className="container mx-auto px-6 max-w-5xl">
-        <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">{t('caseStudies.index.title')}</h1>
-        <p className="text-slate-700 mb-8 max-w-3xl">{t('caseStudies.index.description')}</p>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {CASES.map(c => (
-            <Link key={c.href} to={c.href} className="block bg-white p-6 rounded-lg border border-slate-200 hover:shadow-lg hover:-translate-y-0.5 transition-all">
-              <h2 className="text-lg font-semibold text-slate-900 mb-2">{t(c.titleKey)}</h2>
-              <p className="text-slate-700">{t(c.descKey)}</p>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+  const { language } = useTranslation(); const h = headings[language];
+  const cases = ids.map(id => PORTFOLIO_PROJECTS.find(project => project.id === id)).filter(Boolean) as typeof PORTFOLIO_PROJECTS;
+  return <section className="py-16 sm:py-20"><Helmet><title>{h.title}</title><meta name="description" content={h.body} /><meta property="og:image" content="https://samihalawa.com/portfolio/vuda-annotated.png" /><meta name="twitter:image" content="https://samihalawa.com/portfolio/vuda-annotated.png" /><link rel="canonical" href="https://samihalawa.com/case-studies" /></Helmet><div className="container"><div className="max-w-4xl"><span className="badge-pill">{h.eyebrow}</span><h1 className="mt-5 font-display text-5xl font-bold tracking-[-.05em] text-slate-950 sm:text-6xl">{h.title}</h1><p className="mt-6 max-w-3xl text-xl leading-relaxed text-slate-600">{h.body}</p></div><div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">{cases.map(project => { const c = getProjectCopy(project, language); return <article key={project.id} className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">{project.image && <div className="h-48 overflow-hidden border-b border-slate-200"><img src={project.image} alt={`${project.name} evidence`} className="h-full w-full object-cover" style={{ objectPosition: project.imagePosition || 'center' }} /></div>}<div className="p-6"><div className="text-xs font-bold uppercase tracking-[.16em] text-brand-700">{project.period}</div><h2 className="mt-2 text-xl font-bold text-slate-950">{project.name}</h2><p className="mt-3 text-sm leading-relaxed text-slate-600">{c.description}</p><div className="mt-4 rounded-xl bg-slate-50 p-4 text-xs leading-relaxed text-slate-600">{c.proof}</div><Link to={`/projects#${project.id}`} className="mt-5 inline-flex min-h-11 items-center gap-2 font-bold text-brand-700">{h.open}<i className="fas fa-arrow-right text-xs"></i></Link></div></article>; })}</div></div></section>;
 };
 
 export default CaseStudiesIndex;

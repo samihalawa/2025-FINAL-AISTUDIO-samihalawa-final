@@ -1,52 +1,34 @@
 import React from 'react';
-import { useTranslation } from '../i18n/LanguageContext';
-import { TESTIMONIALS } from '../constants';
+import { useTranslation, type LanguageCode } from '../i18n/LanguageContext';
+
+const copy: Record<LanguageCode, { eyebrow: string; title: string; body: string; items: { value: string; label: string; href: string }[] }> = {
+  en: { eyebrow: 'Evidence instead of testimonials', title: 'Inspect the work directly.', body: 'This site no longer uses placeholder people or invented quotes. These links expose the public artifacts and current product surfaces.', items: [
+    { value: '700', label: 'public GitHub repositories · 249 non-forks', href: 'https://github.com/samihalawa' },
+    { value: '12', label: 'Hugging Face articles · 30 posts', href: 'https://huggingface.co/samihalawa/posts' },
+    { value: '3', label: 'OULANG production surfaces · web, iOS, Android', href: 'https://oulang.ai' },
+    { value: '97', label: 'verified lesson, meeting and project videos', href: '/cv' }
+  ]},
+  es: { eyebrow: 'Evidencia en vez de testimonios', title: 'Inspecciona el trabajo directamente.', body: 'La web ya no usa personas de relleno ni citas inventadas. Estos enlaces muestran artefactos públicos y productos actuales.', items: [
+    { value: '700', label: 'repositorios públicos · 249 no-forks', href: 'https://github.com/samihalawa' }, { value: '12', label: 'artículos en Hugging Face · 30 posts', href: 'https://huggingface.co/samihalawa/posts' }, { value: '3', label: 'superficies OULANG · web, iOS, Android', href: 'https://oulang.ai' }, { value: '97', label: 'vídeos verificados de clases, reuniones y proyectos', href: '/cv' }
+  ]},
+  fr: { eyebrow: 'Des preuves, pas de faux témoignages', title: 'Inspectez directement le travail.', body: 'Ces liens montrent les artefacts publics et produits actuels.', items: [
+    { value: '700', label: 'dépôts publics · 249 non-forks', href: 'https://github.com/samihalawa' }, { value: '12', label: 'articles Hugging Face · 30 posts', href: 'https://huggingface.co/samihalawa/posts' }, { value: '3', label: 'surfaces OULANG · web, iOS, Android', href: 'https://oulang.ai' }, { value: '97', label: 'vidéos vérifiées', href: '/cv' }
+  ]},
+  zh: { eyebrow: '用证据代替占位推荐语', title: '直接检查工作成果。', body: '这些链接展示公开工件和当前产品，不再使用虚构人物或引语。', items: [
+    { value: '700', label: '公开 GitHub 仓库 · 249 非 fork', href: 'https://github.com/samihalawa' }, { value: '12', label: 'Hugging Face 文章 · 30 条动态', href: 'https://huggingface.co/samihalawa/posts' }, { value: '3', label: 'OULANG 生产端 · Web、iOS、Android', href: 'https://oulang.ai' }, { value: '97', label: '已验证课程、会议与项目视频', href: '/cv' }
+  ]}
+};
 
 const Testimonials: React.FC = () => {
-    const { t } = useTranslation();
-    if (!TESTIMONIALS.length) return null;
-    return (
-        <section id="testimonials" className="relative py-24" aria-label={t('testimonials.title')}>
-            <div className="container">
-                <div className="mx-auto max-w-2xl text-center">
-                    <span className="badge-pill inline-flex items-center gap-2 text-brand-700">
-                        <i className="fas fa-comment-dots"></i>
-                        {t('testimonials.badge')}
-                    </span>
-                    <h2 className="section-heading mt-4">{t('testimonials.title')}</h2>
-                    <p className="section-subtitle mx-auto mt-3">{t('testimonials.subtitle')}</p>
-                </div>
-
-                <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-                    {TESTIMONIALS.map((testimonial, index) => (
-                        <article key={index} className="glass-panel flex h-full flex-col justify-between p-8 shadow-soft-xl">
-                            <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">
-                                <i className="fas fa-quote-left text-brand-500"></i>
-                                {t('testimonials.reviewLabel')}
-                            </div>
-                            <blockquote className="mt-4 flex-grow text-slate-700">
-                                <p className="text-lg leading-relaxed">{`"${t(testimonial.quoteKey)}"`}</p>
-                            </blockquote>
-                            <footer className="mt-8 flex items-center gap-4">
-                                <img src={testimonial.image} alt={t(testimonial.nameKey)} className="h-14 w-14 rounded-2xl border border-white/70 shadow-brand" loading="lazy" />
-                                <div>
-                                    <p className="text-base font-semibold text-slate-900">{t(testimonial.nameKey)}</p>
-                                    <p className="text-sm text-slate-500">{t(testimonial.titleKey)}</p>
-                                </div>
-                            </footer>
-                        </article>
-                    ))}
-                </div>
-
-                <div className="mt-12 flex flex-col items-center gap-4 text-center">
-                    <p className="text-sm text-slate-500">{t('testimonials.meta')}</p>
-                    <a href="/case-studies" className="btn-secondary">
-                        {t('testimonials.cta')}
-                    </a>
-                </div>
-            </div>
-        </section>
-    );
+  const { language } = useTranslation();
+  const c = copy[language];
+  return (
+    <section className="border-y border-slate-800 bg-slate-950 py-20 text-white sm:py-24">
+      <div className="container"><div className="max-w-3xl"><span className="inline-flex rounded-full border border-brand-400/30 bg-brand-400/10 px-3 py-1 text-xs font-bold uppercase tracking-[.15em] text-brand-200">{c.eyebrow}</span><h2 className="mt-5 font-display text-4xl font-bold tracking-[-.035em] text-white sm:text-5xl">{c.title}</h2><p className="mt-4 text-lg leading-relaxed text-slate-300">{c.body}</p></div>
+        <div className="mt-10 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-4">{c.items.map(item => <a key={item.label} href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined} className="group min-h-44 bg-slate-950 p-6 text-white hover:bg-slate-900"><div className="text-4xl font-bold tracking-tight text-brand-200">{item.value}</div><p className="mt-3 text-sm font-semibold leading-relaxed text-slate-300">{item.label}</p><i className="fas fa-arrow-up-right-from-square mt-5 text-xs text-white/40 transition group-hover:text-brand-200"></i></a>)}</div>
+      </div>
+    </section>
+  );
 };
 
 export default Testimonials;

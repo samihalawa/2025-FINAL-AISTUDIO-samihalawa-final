@@ -16,22 +16,22 @@ export default {
     extend: {
       colors: {
         brand: {
-          50: '#eef4ff',
-          100: '#dee6ff',
-          200: '#c2d0ff',
-          300: '#9db1ff',
-          400: '#7c89ff',
-          500: '#4f46e5',
-          600: '#4338ca',
-          700: '#3730a3',
-          800: '#312e81',
-          900: '#1e1b4b'
+          50: '#eef8f7',
+          100: '#d6eeeb',
+          200: '#adddd7',
+          300: '#75c4bc',
+          400: '#3da49d',
+          500: '#21867f',
+          600: '#176b67',
+          700: '#155653',
+          800: '#144542',
+          900: '#123a38'
         },
-        surface: '#f5f7fb'
+        surface: '#f4f1ea'
       },
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
-        display: ['"Plus Jakarta Sans"', ...defaultTheme.fontFamily.sans]
+        sans: ['"Source Sans 3"', ...defaultTheme.fontFamily.sans],
+        display: ['Manrope', ...defaultTheme.fontFamily.sans]
       },
       container: {
         center: true,
@@ -45,7 +45,7 @@ export default {
       },
       backgroundImage: {
         'grid-slate': 'linear-gradient(to right, rgba(15,23,42,0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(15,23,42,0.08) 1px, transparent 1px)',
-        'radial-fade': 'radial-gradient(circle at top, rgba(79,70,229,0.32), transparent 55%)'
+        'radial-fade': 'radial-gradient(circle at top, rgba(33,134,127,0.24), transparent 55%)'
       },
       keyframes: {
         float: {
@@ -67,7 +67,7 @@ export default {
         marquee: 'marquee 30s linear infinite'
       },
       boxShadow: {
-        brand: '0 25px 45px -20px rgba(79, 70, 229, 0.35)',
+        brand: '0 25px 45px -20px rgba(23, 107, 103, 0.35)',
         soft: '0 18px 30px -18px rgba(30, 41, 59, 0.25)'
       },
       borderRadius: {

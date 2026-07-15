@@ -20,7 +20,7 @@ const AIForMarketing: React.FC = () => {
   const ogImage = 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&h=630&q=80';
   const relatedCaseStudies = [
     { href: '/case-studies/autoclient', label: t('caseStudies.index.case.autoclient.title') },
-    { href: '/case-studies/airbnb-intelligence', label: t('caseStudies.index.case.airbnb.title') }
+    { href: '/projects#oulang', label: 'OULANG multilingual growth platform' }
   ];
   const moduleKeys: TranslationKey[] = [
     'services.aiForMarketing.module1',

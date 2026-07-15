@@ -7,8 +7,9 @@ const Footer: React.FC = () => {
     const socialLinks = [
         { href: 'https://www.linkedin.com/in/samihalawa/', icon: 'fab fa-linkedin', labelKey: 'social.linkedin' },
         { href: 'https://github.com/samihalawa', icon: 'fab fa-github', labelKey: 'social.github' },
-        { href: 'https://twitter.com/samihalawa', icon: 'fab fa-twitter', labelKey: 'social.twitter' },
-        { href: 'mailto:info@AgentsAI.ltd', icon: 'fas fa-envelope', labelKey: 'social.email' }
+        { href: 'https://huggingface.co/samihalawa', icon: 'fas fa-face-smile', labelKey: 'social.huggingface' },
+        { href: 'https://www.youtube.com/@autoclient-ai', icon: 'fab fa-youtube', labelKey: 'social.youtube' },
+        { href: 'mailto:sami@oulang.ai', icon: 'fas fa-envelope', labelKey: 'social.email' }
     ];
 
     const contactDetails = CONTACT_INFO.map(item => ({

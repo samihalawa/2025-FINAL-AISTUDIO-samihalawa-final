@@ -8,6 +8,7 @@ const ServicesPage = lazy(() => import('./pages/ServicesPage'));
 const ProjectsPage = lazy(() => import('./pages/ProjectsPage'));
 const BlogPage = lazy(() => import('./pages/BlogPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
+const CVPage = lazy(() => import('./pages/CVPage'));
 const TrainingOverview = lazy(() => import('./pages/TrainingOverview'));
 const SearchPage = lazy(() => import('./pages/SearchPage'));
 const MedicalAI = lazy(() => import('./pages/services/MedicalAI'));
@@ -69,6 +70,9 @@ const App: React.FC = () => {
                             <Route path="projects" element={<ProjectsPage />} />
                             <Route path="blog" element={<BlogPage />} />
                             <Route path="contact" element={<ContactPage />} />
+                            <Route path="cv" element={<CVPage />} />
+                            <Route path="cv/en" element={<CVPage edition="en" />} />
+                            <Route path="cv/es" element={<CVPage edition="es" />} />
                             <Route path="locations" element={<LocationsIndex />} />
                             <Route path="locations/madrid" element={<Madrid />} />
                             <Route path="locations/barcelona" element={<Barcelona />} />

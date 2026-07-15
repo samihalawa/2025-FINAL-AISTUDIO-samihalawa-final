@@ -134,7 +134,7 @@ const Blog: React.FC = () => {
         '2025-guide-ai-agent-orchestration': [ { href: '/services/agents-automation', labelKey: 'services.agentsAutomation.name' } ],
         'finetuning-vs-prompt-engineering': [ { href: '/services/prompt-engineering', labelKey: 'services.promptEngineering.name' } ],
         'ai-agents-automating-workflows': [ { href: '/services/agents-automation', labelKey: 'services.agentsAutomation.name' }, { href: '/services/business-automation', labelKey: 'services.businessAutomation.name' } ],
-        'deep-dive-attio-api': [ { href: '/case-studies/attio-sequences', labelKey: 'caseStudies.index.case.attio.title' } ],
+        'deep-dive-attio-api': [ { href: '/projects#autoclient', labelKey: 'caseStudies.index.case.autoclient.title' } ],
         'ai-powered-code-generation-debugging': [ { href: '/services/advanced-ai', labelKey: 'services.advancedAI.name' } ],
         'deploying-ml-models-docker-kubernetes': [ { href: '/services/troubleshooting', labelKey: 'services.troubleshooting.name' } ],
         'ethics-of-ai-bias-fairness': [ { href: '/services/ai-readiness-audit', labelKey: 'services.aiReadinessAudit.name' } ],

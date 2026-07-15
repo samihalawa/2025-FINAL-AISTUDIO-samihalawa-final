@@ -12,12 +12,12 @@ const Section: React.FC<{ title: string, points: string[] }>=({ title, points })
 );
 
 const AIPatentsIP: React.FC = () => {
-  const title = 'AI IP & Patents — Strategy, Drafting & Readiness';
-  const description = 'Hands-on support for AI IP: prior art scan, claims strategy, drafting assistance and technical diagrams for filings.';
-  const jsonLd = { '@context': 'https://schema.org', '@type': 'Service', name: title, serviceType: 'AI IP Consulting', provider: { '@type': 'Person', name: 'Sami Halawa' } };
+  const title = 'AI Technical Evidence & Research Dossiers';
+  const description = 'Organize prior-art research, architecture diagrams, evaluation notes and implementation evidence for review by product, research or legal specialists.';
+  const jsonLd = { '@context': 'https://schema.org', '@type': 'Service', name: title, serviceType: 'Technical Research Documentation', provider: { '@type': 'Person', name: 'Sami Halawa' } };
   const faq = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What do you cover?', acceptedAnswer: { '@type': 'Answer', text: 'Problem framing, novelty, claims, diagrams and implementation notes.' }},
-    { '@type': 'Question', name: 'Deliverables?', acceptedAnswer: { '@type': 'Answer', text: 'Draft application materials and figures to hand off to your attorney.' }},
+    { '@type': 'Question', name: 'What do you cover?', acceptedAnswer: { '@type': 'Answer', text: 'Problem framing, source research, architecture diagrams, implementation notes and evidence boundaries.' }},
+    { '@type': 'Question', name: 'Deliverables?', acceptedAnswer: { '@type': 'Answer', text: 'A structured technical dossier for review by the appropriate product, research or legal specialist.' }},
     { '@type': 'Question', name: 'Industries?', acceptedAnswer: { '@type': 'Answer', text: 'Healthcare, automation, agents and applied ML.' }} ] };
   return (
     <section className="py-16 bg-white">
@@ -30,14 +30,14 @@ const AIPatentsIP: React.FC = () => {
       </Helmet>
       <div className="container mx-auto px-6 max-w-5xl">
         <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">{title}</h1>
-        <p className="text-lg text-slate-700 mb-8">Align IP with product. We map prior art, shape claims, and assemble technical materials your counsel can file quickly.</p>
+        <p className="text-lg text-slate-700 mb-8">Turn scattered research and implementation artifacts into a traceable dossier. The service prepares technical evidence; it does not replace qualified legal advice or claim a filing outcome.</p>
         <div className="grid md:grid-cols-2 gap-6">
-          <Section title="Scope" points={[ 'Prior art and differentiation', 'Claim strategy and drafting support', 'System diagrams and flows', 'Evidence and evaluation notes' ]} />
-          <Section title="Outcomes" points={[ 'Draft package for counsel', 'Review and iteration cycles', 'Filing readiness checklist', 'Roadmap for continuations' ]} />
+          <Section title="Scope" points={[ 'Prior-art research and source trail', 'Problem and differentiation framing', 'System diagrams and flows', 'Evidence and evaluation notes' ]} />
+          <Section title="Outcomes" points={[ 'Technical dossier for specialist review', 'Review and iteration cycles', 'Claim-to-evidence map', 'Open questions and next-proof checklist' ]} />
         </div>
         <div className="mt-10 flex gap-4">
-          <Link to="/contact" className="inline-block bg-slate-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-slate-800">Discuss your IP</Link>
-          <Link to="/case-studies/radiology-ai" className="inline-block bg-white text-slate-700 px-6 py-3 rounded-md border border-slate-300 font-semibold hover:bg-slate-100">See RadiologyAI</Link>
+          <Link to="/contact" className="inline-block bg-slate-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-slate-800">Discuss the evidence set</Link>
+          <Link to="/case-studies/apolo-medical-framework" className="inline-block bg-white text-slate-700 px-6 py-3 rounded-md border border-slate-300 font-semibold hover:bg-slate-100">See APOLO research</Link>
         </div>
       </div>
     </section>
@@ -45,4 +45,3 @@ const AIPatentsIP: React.FC = () => {
 };
 
 export default AIPatentsIP;
-
