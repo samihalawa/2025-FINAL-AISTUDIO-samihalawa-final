@@ -15,6 +15,7 @@ public portfolio | stock imagery and invented social proof replaced source evide
 - **Triggers:** editing the blog reader, adding a post source, changing the build script, or touching the sitemap.
 - **Required verification:** `npm run build` green; live `/blog` lists posts, one `/blog/<slug>` renders real body + correct `<title>`/canonical (Googlebot UA), and `sitemap.xml` contains the article URLs — after a hub pages run has committed to this repo.
 - **Do / don't:** do let the build script + manifest own the post list; don't hand-edit `constants.ts` per post, don't restore the modal-only navigation, and don't feed this blog the Chinese-diaspora news (it is `samihalawa`-scoped, English).
+- **Helmet caveat (sitewide):** `react-helmet-async` (2.0.4 and 2.0.5 both tried) injects NOTHING into `<head>` at runtime in this app — reproduced in dev + production builds, on `/` and every route (`[data-rh]` count 0, no canonical/OG/JSON-LD). So `BlogArticlePage` sets its SEO tags via a direct-DOM effect (`applyArticleHead`, `data-blog-meta`, idempotent + cleaned up on unmount) rather than `<Helmet>`. Don't "fix" the article page by moving its meta back into `<Helmet>` — it will silently stop rendering. The whole site's per-page meta (services/case-studies/etc. still use `<Helmet>`) is affected by the same bug and should be fixed separately.
 
 ## 2026-07-15 — SPA routes versus public asset directories
 
