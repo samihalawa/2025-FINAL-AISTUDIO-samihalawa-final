@@ -2,7 +2,9 @@
 FROM node:20-slim AS build
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci || npm install
+RUN (npm ci || npm install) \
+    && ROLLUP_VERSION="$(node -p "require('./node_modules/rollup/package.json').version")" \
+    && npm install --no-save --no-package-lock "@rollup/rollup-linux-x64-gnu@$ROLLUP_VERSION"
 COPY . .
 RUN npm run build
 FROM nginx:1.25-alpine
