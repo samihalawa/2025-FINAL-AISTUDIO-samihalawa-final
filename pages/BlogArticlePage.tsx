@@ -1,8 +1,78 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { marked } from 'marked';
 import { useTranslation, LanguageCode } from '../i18n/LanguageContext';
+
+// This site's react-helmet-async does not inject into <head> at runtime
+// (reproduced across dev + production builds, all pages). To guarantee the
+// blog's per-article SEO metadata actually renders, the article page manages
+// its own head tags imperatively. All tags carry data-blog-meta so they are
+// upserted idempotently and removed on unmount.
+function applyArticleHead(meta: {
+  title: string;
+  description: string;
+  canonical: string;
+  ogImage: string;
+  jsonLd: object | null;
+}): () => void {
+  const prevTitle = document.title;
+  document.title = meta.title;
+  const created: HTMLElement[] = [];
+
+  const upsertTag = (
+    selector: string,
+    create: () => HTMLElement,
+    apply: (el: HTMLElement) => void,
+  ) => {
+    let el = document.head.querySelector(selector) as HTMLElement | null;
+    if (!el) {
+      el = create();
+      el.setAttribute('data-blog-meta', '');
+      document.head.appendChild(el);
+      created.push(el);
+    }
+    apply(el);
+  };
+
+  const meta_ = (attr: 'name' | 'property', key: string, content: string) =>
+    upsertTag(`meta[${attr}="${key}"][data-blog-meta]`, () => {
+      const el = document.createElement('meta');
+      el.setAttribute(attr, key);
+      return el;
+    }, (el) => el.setAttribute('content', content));
+
+  meta_('name', 'description', meta.description);
+  meta_('property', 'og:type', 'article');
+  meta_('property', 'og:title', meta.title);
+  meta_('property', 'og:description', meta.description);
+  meta_('property', 'og:url', meta.canonical);
+  meta_('property', 'og:image', meta.ogImage);
+  meta_('name', 'twitter:card', 'summary_large_image');
+  meta_('name', 'twitter:title', meta.title);
+  meta_('name', 'twitter:description', meta.description);
+  meta_('name', 'twitter:image', meta.ogImage);
+
+  upsertTag('link[rel="canonical"][data-blog-meta]', () => {
+    const el = document.createElement('link');
+    el.setAttribute('rel', 'canonical');
+    return el;
+  }, (el) => el.setAttribute('href', meta.canonical));
+
+  if (meta.jsonLd) {
+    upsertTag('script[type="application/ld+json"][data-blog-meta]', () => {
+      const el = document.createElement('script');
+      el.setAttribute('type', 'application/ld+json');
+      return el;
+    }, (el) => {
+      el.textContent = JSON.stringify(meta.jsonLd);
+    });
+  }
+
+  return () => {
+    document.title = prevTitle;
+    document.head.querySelectorAll('[data-blog-meta]').forEach((el) => el.remove());
+  };
+}
 
 interface ManifestEntry {
   slug: string;
@@ -138,24 +208,19 @@ const BlogArticlePage: React.FC = () => {
       }
     : null;
 
+  useEffect(() => {
+    const cleanup = applyArticleHead({
+      title: metaTitle,
+      description: metaDescription,
+      canonical,
+      ogImage,
+      jsonLd: articleJsonLd,
+    });
+    return cleanup;
+  }, [metaTitle, metaDescription, canonical, ogImage, articleJsonLd]);
+
   return (
     <>
-      <Helmet>
-        <title>{metaTitle}</title>
-        <meta name="description" content={metaDescription} />
-        <link rel="canonical" href={canonical} />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content={metaTitle} />
-        <meta property="og:description" content={metaDescription} />
-        <meta property="og:url" content={canonical} />
-        <meta property="og:image" content={ogImage} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={metaTitle} />
-        <meta name="twitter:description" content={metaDescription} />
-        <meta name="twitter:image" content={ogImage} />
-        {articleJsonLd && <script type="application/ld+json">{JSON.stringify(articleJsonLd)}</script>}
-      </Helmet>
-
       <section className="py-16 md:py-20 bg-gradient-to-br from-slate-50 to-white">
         <div className="container mx-auto px-6">
           <div className="mx-auto max-w-3xl">
