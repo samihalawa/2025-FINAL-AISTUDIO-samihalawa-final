@@ -9,7 +9,7 @@ PROFILE
 Founder-engineer who turns ambiguous business and product ideas into operating AI systems. Full-cycle ownership across product definition, LLM and agent workflows, data and APIs, web and mobile implementation, cloud deployment, observability, growth and customer operations. Strongest at zero-to-one product architecture, multilingual delivery, automation and the complete production system around AI.
 
 VERIFIED PUBLIC EVIDENCE SNAPSHOT | 16 JULY 2026
-- 87 evidence-classified project and work entries from 2023 to the current snapshot.
+- 90 evidence-classified project and work entries from 2023 to the current snapshot.
 - GitHub: 700 public repositories, including 249 non-forks and 451 forks; 3 archived repositories.
 - VUDA open-source project: 80 GitHub stars and 7 forks at the current snapshot.
 - Hugging Face: 12 public articles. Current API returns 17 Spaces, 6 collections, 1 model and 0 datasets; UI/API counters conflict, so the API result is stated explicitly.
@@ -78,6 +78,9 @@ CLIENT AND COLLABORATION SYSTEMS
 - San Martín, 2025: HR automation proposal covering birthdays, timesheets/work rules, talent search and an employee portal; client adoption unconfirmed.
 - EA Housing / Radio Inter, 2026: modular separate-company proposals and group option derived from a recorded call; no contract, payment or delivery claim.
 - Tekçe / OULANG-AutoClient, 2026: business-development discussion and demo for qualified Chinese property-buyer lead generation, CRM-auditable lead handling and personalized AI outreach; proposal/demo evidence only.
+- EVA, 2025: AI/admin automation training scoping covering Copilot, prompting, browser-click automation, local file/accounting organization, Microsoft To Do, a 20-30 hour class proposal and FUNDAE/subsidy logistics; proposal/scope evidence only.
+- Mike Lepcsik, 2025: N8N, Close CRM, Lead Feeder, Google Maps/Search enrichment and AutoClient-style lead-enrichment consulting; proposal/consulting evidence only.
+- SOLMADE, 2026: fashion AI/marketing discovery covering website/app rebuild, SEO/blog automation, AI product/model imagery, mockups/tech packs and generated product videos/images; proposal/discovery evidence only.
 
 OPEN SOURCE AND OPERATING INFRASTRUCTURE
 - VUDA, Visual UI Debug Agent MCP: visual evidence capture, annotation and reasoning for live UI diagnosis; 80 stars and 7 forks. github.com/samihalawa/VUDA
@@ -105,8 +108,8 @@ CHRONOLOGICAL PROJECT INDEX | 2023-2026
 2024: Aprende IA; MenuEditorElectron; AI Absolut; email crawler/lead tools; macOS Optimizer; CloudflaredMe; Rafael Botella work; AutoCrypto; audio/transcription tools; KittyTasks/FocusOnTask; AutoClient seed and worker expansion; Pollinations/storage experiments; AutoVideo; MedSAM; AutoTraining; AutoIOL; SpeakingAI; EyeUnit/Fernando Ly; Daniel Parisi; Light Funnels; Hugging Face writing; Colab research archive.
 2025 January-March: SORT/SortBot; AutoHSK; blog/content systems; SMTP MCP; shell/browser/diff tools; ophthalmology workflows.
 2025 April-June: APOLO; VUDA; AutoTutorial/MentorIA/PerfectPrompter; Wordlist Visual; Scope; Fernando Ly medical-AI work; AutoClient expansion; MCP wave; Agents AI Ltd; Lanzadera ecosystem participation.
-2025 July-December: AutoMedical packaging; agent operating utilities; AutoRad backlog; personal/company sites; WhatsApp MCP; IWAKY/AutoPricing; INTLAW; San Martín; Umbramed; AutoDate/AutoTinder design; prototype portfolio wave; poetry site; Lemon AI customization/deployment; 15-hour AI-agent course.
-2026 January-June: OULANG; GOWA; Notion-Drive Sync; Huatong; InfoHuaxin; OUPIN; Crawlab/Apify actors; Chronicle/Screenpipe; Telnyx tools; Desktop Commander utilities; MadridResorts; VibraCode; AutoMedical; company/publishing surfaces; Tasky; AI tutoring/ITE/TusClases operations; OULANG World Cup module; SONMADE.
+2025 July-December: AutoMedical packaging; agent operating utilities; AutoRad backlog; personal/company sites; WhatsApp MCP; IWAKY/AutoPricing; INTLAW; San Martín; Umbramed; AutoDate/AutoTinder design; prototype portfolio wave; poetry site; Lemon AI customization/deployment; 15-hour AI-agent course; EVA AI/admin automation training scoping; Mike Lepcsik lead-generation automation consulting.
+2026 January-June: OULANG; GOWA; Notion-Drive Sync; Huatong; InfoHuaxin; OUPIN; Crawlab/Apify actors; Chronicle/Screenpipe; Telnyx tools; Desktop Commander utilities; MadridResorts; VibraCode; AutoMedical; company/publishing surfaces; Tasky; AI tutoring/ITE/TusClases operations; OULANG World Cup module; SONMADE; SOLMADE fashion AI/marketing discovery.
 2026 July: AutoDate TestFlight; recipe intelligence; Tekçe/OULANG-AutoClient property lead-generation partnership discussion; OULANG native parity; EA Housing/Radio Inter proposals; Chinese soundscapes/tutoring/poetry audio; PIME AI Act pack; additional local product artifacts; career evidence rebuild.
 
 OPEN SOURCE, WRITING AND TEACHING
@@ -133,4 +136,4 @@ TARGET ROLES
 Founding AI Engineer | AI Product Engineer | AI Platform Lead | Head of AI | Staff AI Engineer | Technical Product Lead
 
 EVIDENCE BOUNDARY
-This ATS derivative is generated from the 87-entry evidence ledger refreshed on 16 July 2026. It separates live, TestFlight, proposal, contract, payment, repository, deployed and accepted states. Unsupported patent, clinical-validation, revenue, audience, app-store, infrastructure-count and product-metric claims are excluded. The photo-bearing visual master and complete searchable chronology are available at samihalawa.com/cv and samihalawa.com/projects.
+This ATS derivative is generated from the 90-entry evidence ledger refreshed on 16 July 2026. It separates live, TestFlight, proposal, contract, payment, repository, deployed and accepted states. Unsupported patent, clinical-validation, revenue, audience, app-store, infrastructure-count and product-metric claims are excluded. The photo-bearing visual master and complete searchable chronology are available at samihalawa.com/cv and samihalawa.com/projects.

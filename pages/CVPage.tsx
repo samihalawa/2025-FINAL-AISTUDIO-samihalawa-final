@@ -14,8 +14,8 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
   const preview = spanish ? '/cv/Sami_Halawa_CV_ES_preview.png' : '/cv/Sami_Halawa_CV_preview.png';
   const title = spanish ? 'CV completo de Sami Halawa' : 'Sami Halawa complete CV';
   const description = spanish
-    ? 'CV maestro de cuatro páginas con fotografía, 87 entradas por era, productos, clientes, open source, investigación, docencia y evidencia pública. La versión ATS se ofrece por separado.'
-    : 'Four-page master CV with portrait, 87 era-indexed entries, products, client systems, open source, research, teaching and public evidence. A separate ATS edition is available.';
+    ? 'CV maestro de cuatro páginas con fotografía, 90 entradas por era, productos, clientes, open source, investigación, docencia y evidencia pública. La versión ATS se ofrece por separado.'
+    : 'Four-page master CV with portrait, 90 era-indexed entries, products, client systems, open source, research, teaching and public evidence. A separate ATS edition is available.';
   return <>
     <Helmet><title>{title}</title><meta name="description" content={description} /><link rel="canonical" href={`https://samihalawa.com/cv/${selected}`} /></Helmet>
     <section className="py-14 sm:py-20">
