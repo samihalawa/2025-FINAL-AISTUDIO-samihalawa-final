@@ -6,51 +6,51 @@ Madrid, España | permiso de trabajo UE
 linkedin.com/in/samihalawa | github.com/samihalawa | huggingface.co/samihalawa
 
 PERFIL
-Fundador e ingeniero que convierte ideas ambiguas de negocio y producto en sistemas de IA operativos. Responsabilidad completa sobre definición de producto, LLM y agentes, datos y APIs, implementación web/móvil, cloud, observabilidad, crecimiento y operaciones. Especializado en arquitectura zero-to-one, entrega multilingüe, automatización y el sistema de producción completo que rodea a la IA.
+Fundador e ingeniero que convierte ideas ambiguas de negocio y producto en sistemas de IA operativos. Responsabilidad completa sobre definición, flujos LLM y agentes, datos y APIs, implementación web/móvil, cloud, observabilidad, crecimiento y operaciones. Especializado en arquitectura zero-to-one, entrega multilingüe, automatización y el sistema de producción completo alrededor de la IA.
 
-ESCALA PÚBLICA VERIFICADA
-- OULANG: 17.262 usuarios registrados, 38.857 anuncios y 89.913 revelaciones de contacto a 3 de julio de 2026; publicado en web, iOS y Android.
-- GitHub: 700 repositorios públicos a 15 de julio de 2026, con 249 no-forks y 451 forks.
-- VUDA: 80 estrellas y 7 forks en la instantánea actual de GitHub.
-- Hugging Face: 30 posts, 12 artículos, 5 colecciones, 19 Spaces y 1 modelo.
-- Archivo de trabajo: 97 vídeos válidos de clases, reuniones y proyectos, con 110,83 horas totales.
+INSTANTÁNEA DE EVIDENCIA PÚBLICA VERIFICADA | 16 JULIO 2026
+- 86 entradas de proyectos y trabajo clasificadas por evidencia entre 2023 y la instantánea actual.
+- GitHub: 700 repositorios públicos, 249 no-fork y 451 forks; 3 repositorios archivados.
+- VUDA: 80 estrellas y 7 forks en la instantánea actual.
+- Hugging Face: 12 artículos públicos. La API devuelve 17 Spaces, 6 colecciones, 1 modelo y 0 datasets; hay discrepancia UI/API y se explicita el resultado de API.
+- Archivo de implementación: 97 vídeos válidos de clases, reuniones y proyectos, aproximadamente 110,83 horas.
 
-CAPACIDADES
+CAPACIDADES PRINCIPALES
 IA agéntica y LLM: orquestación multiagente, MCP, tool/function calling, RAG, salidas estructuradas, enrutado de modelos, ciclos de prompts/evaluación, OpenAI, Anthropic, Gemini y modelos abiertos.
-Ingeniería de producto IA: Python, FastAPI, TypeScript, Node.js, React, Next.js, Tailwind, APIs REST, SQL, trabajos en segundo plano, OCR/documentos, web, móvil, pagos y analítica.
+Ingeniería de producto IA: Python, FastAPI, TypeScript, Node.js, React, Next.js, Tailwind, APIs REST, SQL, tareas en segundo plano, OCR/documentos, web, móvil, pagos y analítica.
 Automatización e integraciones: investigación/enriquecimiento, CRM y ERP, email, WhatsApp, mensajería y voz, datos web, evidencias e informes, n8n.
 Cloud y operaciones: Docker, Linux, CI/CD, Cloudflare, experiencia con AWS/Azure/GCP, Hetzner, Coolify, despliegue, logs, monitorización, analítica y costes.
-Liderazgo y comunicación: estrategia de producto, arquitectura, discovery, dirección técnica, entrega a cliente, mentoring, cursos y comunicación ejecutiva en español, inglés y mandarín.
+Liderazgo y comunicación: estrategia de producto, arquitectura, discovery, dirección técnica, entrega a cliente, mentoring, diseño de cursos y comunicación ejecutiva en español, inglés y mandarín.
 
 EXPERIENCIA PROFESIONAL
 
 Fundador e Ingeniero de Producto IA | Agents AI Ltd | Madrid / Londres | Julio 2025-Actualidad
 - Responsable de discovery, arquitectura, implementación, despliegue, analítica, monetización y entrega operativa en productos propios y B2B.
-- Construí OULANG (欧浪AI) para web, iOS y Android. Alcanzó 17.262 usuarios, 38.857 anuncios y 89.913 revelaciones de contacto a 3 de julio de 2026 con flujos multilingües, búsqueda, pagos y analítica.
-- Extendí la arquitectura a Huatong para comunidades chinas en Europa y OUPIN para comercio/descubrimiento asistidos por IA.
+- Construí OULANG (欧浪AI) como marketplace/vida local web multilingüe activo y continué sus repositorios iOS/Android, flujos de tienda, búsqueda, pagos, SEO, analítica y paridad nativa. Métricas de proveedor y etapas exactas de tienda se mantienen fechadas por separado.
+- Extendí el ecosistema a Huatong para comunidades chinas en Europa, OUPIN para discovery asistido y PIME.ai para servicios de IA productizados.
 - Construí AutoClient y sistemas de investigación, enriquecimiento, CRM, email, WhatsApp y agentes de voz; publiqué herramientas MCP reutilizables.
-- Entregué flujos de inteligencia de precios e informes de evidencias con marketplaces, matching, histórico de precios e inventario o ERP.
-- Prototipé flujos multimodales de revisión de imagen médica, seguimiento longitudinal e informes estructurados con revisión humana explícita; sin afirmar despliegue clínico.
+- Entregué flujos de inteligencia de precios e informes de evidencia con marketplaces, matching, histórico de precios e inventario o ERP.
+- Prototipé flujos multimodales de revisión de imagen médica, seguimiento longitudinal e informes estructurados con revisión humana; sin afirmar despliegue clínico.
 
 Profesor de IA y Consultor Técnico Independiente | Madrid / Remoto | 2022-Actualidad
 - Enseño IA práctica, agentes, MCP, automatización, Python e ingeniería de producto mediante aplicaciones reales, construcción en directo y programas técnicos.
 - Convierto necesidades de negocio en sistemas para profesionales y equipos en español, inglés y mandarín.
-- Mantengo un archivo accesible de 97 grabaciones válidas de clases, reuniones y proyectos, con 110,83 horas.
+- Mantengo un archivo verificado por fichero de 97 grabaciones y aproximadamente 110,83 horas; solo grabaciones dirigidas han sido indexadas por contenido.
 
 Ingeniero Full-Stack Sénior | Damehosting | 2019-2023
 - Desarrollo y mantenimiento de sistemas web de producción.
 - Revisión de código, prácticas CI/CD, operación Linux/servidores y mentoring.
 
 Web, Móvil, Growth y Educación | Megawebs / Megacursos | 2009-2023
-- Productos web y móvil, cursos técnicos, docencia de diseño digital y SEO/adquisición.
-- El registro histórico propio cubre más de 70 proyectos digitales; se presenta como trayectoria de portfolio, no como impacto empresarial auditado.
+- Productos web/móvil, cursos técnicos, docencia de diseño digital y SEO/adquisición.
+- El registro histórico propio cubre más de 70 proyectos digitales; es trayectoria de portfolio, no impacto comercial auditado.
 
-CRONOLOGÍA ADICIONAL
+CRONOLOGÍA PROFESIONAL ADICIONAL
 Constructor independiente de productos web y móvil | 2015-Actualidad
-- Registro histórico propio de más de 20 apps; la prueba actual incluye OULANG en App Store y Google Play.
+- Registro propio de más de 20 apps nativas y cross-platform; el estado público/tienda actual se verifica producto por producto.
 
 Presentador y anfitrión en directo | China | 2015-2017
-- Comunicación multilingüe en cámara, presentaciones en directo y producción de contenido.
+- Comunicación multilingüe en cámara, presentación en directo y producción de contenido.
 
 Modelo comercial y actor | China | 2013-2017
 - Producción internacional, comunicación con cliente y narrativa visual.
@@ -58,33 +58,64 @@ Modelo comercial y actor | China | 2013-2017
 Profesor de diseño digital y tecnología | 2009-2019
 - After Effects, Photoshop, Cinema 4D, web/producto y creación de material formativo reutilizable.
 
-PRODUCTOS Y PROYECTOS SELECCIONADOS
-- OULANG (2026-actualidad): marketplace y vida local en España para la comunidad china; web, iOS y Android. https://oulang.ai
-- Huatong (2026-actualidad): empleo, vivienda, clasificados y servicios locales para comunidades chinas en Europa. https://huatong.eu
-- AutoClient (2024-actualidad): investigación agéntica, enriquecimiento, scoring, contacto personalizado, conversación y CRM.
-- AutoPricing / IWAKY (2025-2026): inteligencia de precios e informes de evidencias con datos de marketplaces, matching, históricos e inventario/ERP.
-- OUPIN (2026): comercio y descubrimiento en chino con recomendación y confianza asistidas por IA.
-- VUDA, Visual UI Debug Agent MCP (2025-actualidad): agente visual open source con 80 estrellas. https://github.com/samihalawa/visual-ui-debug-agent-mcp
-- GOWA WhatsApp API / WhatsApp MCP (2025-2026): mensajería, histórico y medios para agentes operativos.
-- MCP Server SMTP / IMAP (2025): email y buzón para agentes; 17 estrellas y 15 forks.
-- Google Jules MCP (2025): puente open source para agentes de código; 14 estrellas y 7 forks.
-- Telnyx agentic (2026): agentes de voz, telefonía, estado conversacional e integraciones.
-- Codex Chronicle / Screenpipe (2026): recuperación de historial, memoria visual persistente y análisis multiagente en macOS.
-- APOLO (2025): artefacto público imagen-texto y arquitectura basada en DeepSeek-VL2-tiny; investigación/prototipado, no validación clínica. https://huggingface.co/samihalawa/APOLO-medical-multimodal-instruct
-- Oftalmología (2025-2026): prototipos de revisión multimodal, seguimiento longitudinal e informes PDF con revisión humana.
-- AutoMedical Academy (2025): aprendizaje médico y experimentación de producto asistidos por IA.
-- INTLAW AI dashboard (2025): prototipo de flujos legales y documentos/operaciones en colaboración.
-- Plataforma de recetas (2026): conversión de notas/fotos de chefs en recetas investigadas, estructuradas y multilingües.
-- Productos anteriores: MelindaAI, KittyAI, Sharedetect, ZebraMenu, Megacursos y ChinoTotal.
+PRODUCTOS ACTIVOS Y CONTINUOS
+- OULANG, 2026-actualidad: marketplace y vida local para la diáspora china en España; web activa y trabajo nativo/tienda continuo. oulang.ai
+- Huatong, 2026-actualidad: empleo, vivienda, clasificados y servicios locales para comunidades chinas en Europa. huatong.eu
+- AutoDate, 2026: web activa e iOS 1.0.14 (39) listo para probar en TestFlight el 14 de julio de 2026; no se representa como lanzamiento App Store. autodate.ai
+- AutoClient, 2024-actualidad: investigación agéntica, enriquecimiento, scoring, outreach, conversación y CRM.
+- PIME.ai pack Ley IA, 2026: análisis multilingüe de aplicabilidad/riesgo, alfabetización IA y hoja de ruta con infraestructura de entrega y campaña. pime.ai
+- AutoMedical, 2025-2026: superficie activa de aprendizaje y flujos multimodales; sin afirmar eficacia, regulación, adopción o resultados. automedical.ai
+- Tasky, 2026: cliente SwiftUI Google Tasks para macOS, iOS y iPadOS con captura, foco, widgets, extensiones, búsqueda y sync; uploads/revisión verificados, lanzamiento no.
+- OUPIN, 2026: discovery asistido para consumo/inmobiliario con identidad e infraestructura compartidas; dominio y métricas no confirmados.
+
+SISTEMAS PARA CLIENTES Y COLABORACIONES
+- IWAKY / AutoPricing, 2025-2026: contrato de EUR35.000 para pricing B2C/B2B, evidencia de marketplaces, matching, WhatsApp privado, comercio ERP y dashboards. Caja registra EUR17.500. Contrato/pago probados; finalización, aceptación y pago final no.
+- InfoHuaxin, 2025-2026: lane cliente/producto verificado por repositorios, web activa y ocho filas de caja; materiales legales sensibles excluidos. infohuaxin.es
+- Umbramed / Valerio, 2025-2026: liderazgo técnico de herramientas Ionic/Capacitor con roadmap, Netlify, Stripe y artefactos EIC. Solicitud no es premio; despliegue no es adopción clínica. umbramed.es
+- INTLAW / Ignacio, 2025-2026: demo legal con prospección, intake por chatbot/WhatsApp/teléfono y análisis multiagente de expedientes; propuestas/piloto no son contrato firmado.
+- Scope / EyeUnit / Fernando Ly, 2024-2025: fusión de listas, cross-sell y scoring clínico-comercial conectado a OCT/IA médica; prototipo demostrado, host actual cerrado.
+- SORT / SortBot, 2025: propuesta y repositorio para convertir PDFs en cursos online, añadir chatbot y publicar por SSH; aceptación/despliegue no confirmados.
+- San Martín, 2025: propuesta RRHH para cumpleaños, partes/horarios, búsqueda de talento y portal de empleado; adopción no confirmada.
+- EA Housing / Radio Inter, 2026: propuestas modulares por empresa y opción de grupo derivadas de llamada grabada; sin afirmar contrato, pago o entrega.
+
+OPEN SOURCE E INFRAESTRUCTURA OPERATIVA
+- VUDA, Visual UI Debug Agent MCP: captura, anotación y razonamiento visual para diagnóstico de interfaces; 80 estrellas y 7 forks. github.com/samihalawa/VUDA
+- SMTP MCP Server: transporte de correo y buzón para agentes; 17 estrellas y 15 forks. github.com/samihalawa/smtp-mcp-server
+- GOWA / automatización WhatsApp: APIs Go de mensajería, histórico y medios; código disponible se separa de prueba de envío real.
+- Notion-Drive Sync: sincronización open source conectada a evidencia del espejo Notion/Drive; 3 estrellas. github.com/samihalawa/notion-drive-sync
+- Telnyx agentic: telefonía, estado de agentes de voz e integraciones; aceptación de cola no se presenta como llamada completada.
+- Codex Chronicle / Screenpipe: reconstrucción entre sesiones, memoria visual persistente y análisis multiagente en macOS.
+- macOS Optimizer: utilidad pública con 13 estrellas y 1 fork.
+- Crawlab / Apify: actores, almacenamiento central y consumidores OULANG/Huatong/OUPIN; sin publicar recuentos de control plane.
+- Archivo completo: 249 repositorios no-fork de MCP, browser/shell/diff, automatización, mensajería, voz, datos y workflow.
+
+INVESTIGACIÓN APLICADA, PROTOTIPOS Y EDUCACIÓN
+- APOLO, 2025: modelo público imagen-texto en Hugging Face basado en DeepSeek-VL2-tiny; investigación/prototipo, no validación clínica.
+- AutoRad, 2025: radiología en estado Backlog de Notion; cifras de financiación, patentes, readiness y mejora siguen como planes no verificados.
+- AutoIOL y oftalmología, 2024-2026: imagen, OCT, seguimiento e informes con revisión humana; sin adopción ni resultados clínicos.
+- Inteligencia de recetas, 2026: discovery para notas/fotos de chef, investigación web, técnica, publicación multilingüe y vídeos opcionales.
+- SONMADE, 2026: prototipo React/TypeScript, FFmpeg y Sharp para escenas/highlights por movimiento, color, borde/texto y fullscreen.
+- AutoCrypto, 2024: exploración de automatización cripto; sin retornos, capital, usuarios o regulación afirmados.
+- Curso de arquitectura de agentes, 2025: programa directo de 15 horas sobre fundamentos, herramientas, memoria, multiagente, RAG, despliegue y observabilidad; fechas/resultados no inventados.
+- ChinoTotal, paisajes sonoros y poesía: producto/libro de mandarín, deck de onomatopeyas, material imprimible, 72 poemas y audio generado. chinototal.com
+
+ÍNDICE CRONOLÓGICO | 2023-2026
+2023: RealSintra; Mi ChatGPT React Español; archivos/experimentos OpenAI-GPT; continuidad DameSender.
+2024: Aprende IA; MenuEditorElectron; AI Absolut; crawler/email; macOS Optimizer; CloudflaredMe; Rafael Botella; AutoCrypto; audio/transcripción; KittyTasks/FocusOnTask; AutoClient inicial y workers; Pollinations/storage; AutoVideo; MedSAM; AutoTraining; AutoIOL; SpeakingAI; EyeUnit/Fernando Ly; Daniel Parisi; Light Funnels; escritura HF; Colab.
+2025 enero-marzo: SORT/SortBot; AutoHSK; blog/contenido; SMTP MCP; shell/browser/diff; oftalmología.
+2025 abril-junio: APOLO; VUDA; AutoTutorial/MentorIA/PerfectPrompter; Wordlist Visual; Scope; Fernando Ly; expansión AutoClient; ola MCP; Agents AI Ltd; ecosistema Lanzadera.
+2025 julio-diciembre: packaging AutoMedical; utilidades; AutoRad backlog; sites; WhatsApp MCP; IWAKY/AutoPricing; INTLAW; San Martín; Umbramed; diseño AutoDate/AutoTinder; ola de prototipos; web de poesía; Lemon AI; curso de agentes.
+2026 enero-junio: OULANG; GOWA; Notion-Drive; Huatong; InfoHuaxin; OUPIN; Crawlab/Apify; Chronicle/Screenpipe; Telnyx; Desktop Commander; MadridResorts; VibraCode; AutoMedical; sites; Tasky; tutoría/ITE/TusClases; módulo Mundial; SONMADE.
+2026 julio: AutoDate TestFlight; recetas; paridad nativa OULANG; propuestas EA Housing/Radio Inter; paisajes sonoros/tutoría/audio; pack Ley IA PIME; artefactos locales; reconstrucción de evidencia.
 
 OPEN SOURCE, ESCRITURA Y DOCENCIA
-- GitHub: agentes, MCP, automatización, depuración web/visual, mensajería, voz, datos y producto.
-- Doce artículos en Hugging Face sobre automatización web, Transformers.js, prompting, agentes, AutoGen, lead generation y VUDA.
-- Tutoriales verificados de IA y After Effects en youtube.com/@autoclient-ai.
+- Doce artículos públicos en Hugging Face: automatización de navegador, Transformers.js local, prompting, repositorios de agentes autónomos, AutoGen, lead generation y VUDA.
+- Auditoría Colab: al menos 112 filas y 58 notebooks con nombres significativos; la carpeta principal alcanzó el límite de 100 filas del conector.
+- Tutoriales verificados de IA y After Effects en youtube.com/@autoclient-ai; sin cifra de suscriptores sin lectura actual del canal.
 - Autor: ChinoTotal: Aprende Chino Mandarín desde 0, ISBN 9798873249237.
 
 EDUCACIÓN
-Li Po Chun United World College of Hong Kong | Bachillerato Internacional, Ciencias y Matemáticas | 2010-2012 | beca completa UWC
+Li Po Chun United World College of Hong Kong | Bachillerato Internacional, Ciencias y Matemáticas | 2010-2012 | Beca completa UWC
 Shenzhen Institute of Information Technology | Estudios de informática y tecnologías de la información | 2016-2018 | Shenzhen, China
 
 CREDENCIALES SELECCIONADAS
@@ -99,3 +130,6 @@ Cantonés: conversacional
 
 ROLES OBJETIVO
 Founding AI Engineer | AI Product Engineer | AI Platform Lead | Head of AI | Staff AI Engineer | Technical Product Lead
+
+FRONTERA DE EVIDENCIA
+Esta versión ATS deriva del ledger de 86 entradas actualizado el 16 de julio de 2026. Separa estados activo, TestFlight, propuesta, contrato, pago, repositorio, desplegado y aceptado. Excluye patentes, validación clínica, ingresos, audiencia, app stores, recuentos de infraestructura y métricas de producto sin prueba actual. El CV maestro con foto y la cronología buscable están en samihalawa.com/cv y samihalawa.com/projects.

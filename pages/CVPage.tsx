@@ -14,8 +14,8 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
   const preview = spanish ? '/cv/Sami_Halawa_CV_ES_preview.png' : '/cv/Sami_Halawa_CV_preview.png';
   const title = spanish ? 'CV completo de Sami Halawa' : 'Sami Halawa complete CV';
   const description = spanish
-    ? 'CV maestro de tres páginas con fotografía, cronología, proyectos, open source, docencia y evidencia pública. La versión ATS se ofrece por separado.'
-    : 'Three-page master CV with portrait, chronology, projects, open source, teaching and public evidence. A separate ATS edition is available.';
+    ? 'CV maestro de cuatro páginas con fotografía, 86 entradas por era, productos, clientes, open source, investigación, docencia y evidencia pública. La versión ATS se ofrece por separado.'
+    : 'Four-page master CV with portrait, 86 era-indexed entries, products, client systems, open source, research, teaching and public evidence. A separate ATS edition is available.';
   return <>
     <Helmet><title>{title}</title><meta name="description" content={description} /><link rel="canonical" href={`https://samihalawa.com/cv/${selected}`} /></Helmet>
     <section className="py-14 sm:py-20">
@@ -28,8 +28,8 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
         <div className="mt-10 overflow-hidden rounded-[1.5rem] border border-slate-200 bg-slate-100 p-3 shadow-sm sm:p-6">
           <img src={preview} alt={spanish ? 'Primera página del CV completo' : 'First page of the complete CV'} className="mx-auto block w-full max-w-3xl rounded-lg bg-white shadow-sm" />
           <div className="mx-auto flex max-w-3xl flex-col items-start justify-between gap-3 border-t border-slate-200 px-1 pb-1 pt-5 text-sm text-slate-600 sm:flex-row sm:items-center">
-            <span>{spanish ? 'Vista previa de la página 1 de 3.' : 'Preview of page 1 of 3.'}</span>
-            <a href={pdf} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 font-bold text-brand-700">{spanish ? 'Abrir las tres páginas' : 'Open all three pages'}<i className="fas fa-arrow-up-right-from-square text-xs"></i></a>
+            <span>{spanish ? 'Vista previa de la página 1 de 4.' : 'Preview of page 1 of 4.'}</span>
+            <a href={pdf} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 font-bold text-brand-700">{spanish ? 'Abrir las cuatro páginas' : 'Open all four pages'}<i className="fas fa-arrow-up-right-from-square text-xs"></i></a>
           </div>
         </div>
         <div className="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm leading-relaxed text-amber-950">{spanish ? 'Arquitectura del documento: el PDF visual es el registro maestro; el TXT ATS es un derivado sin fotografía para formularios de candidatura. Ambos proceden del mismo ledger de evidencias.' : 'Document architecture: the visual PDF is the master career record; the photo-free ATS text is a derivative for application systems. Both come from the same evidence ledger.'}</div>

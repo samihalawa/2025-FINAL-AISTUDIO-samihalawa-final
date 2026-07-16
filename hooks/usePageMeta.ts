@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 import { useTranslation } from '../i18n/LanguageContext';
 import type { TranslationKey } from '../i18n/translations';
 
@@ -25,11 +25,42 @@ export type PageMetaKey = keyof typeof PAGE_META_MAP;
 export const usePageMeta = (page: PageMetaKey) => {
   const { t } = useTranslation();
 
-  return useMemo(() => {
+  const meta = useMemo(() => {
     const config = PAGE_META_MAP[page];
     return {
       title: t(config.title),
       description: t(config.description),
     };
   }, [page, t]);
+
+  useEffect(() => {
+    const setMeta = (selector: string, attribute: 'name' | 'property', key: string, content: string) => {
+      let element = document.head.querySelector<HTMLMetaElement>(selector);
+      if (!element) {
+        element = document.createElement('meta');
+        element.setAttribute(attribute, key);
+        element.dataset.pageMeta = 'true';
+        document.head.appendChild(element);
+      }
+      element.content = content;
+    };
+    const canonicalUrl = `https://samihalawa.com${window.location.pathname}`;
+    let canonical = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      canonical.dataset.pageMeta = 'true';
+      document.head.appendChild(canonical);
+    }
+
+    document.title = meta.title;
+    canonical.href = canonicalUrl;
+    setMeta('meta[name="description"]', 'name', 'description', meta.description);
+    setMeta('meta[property="og:title"]', 'property', 'og:title', meta.title);
+    setMeta('meta[property="og:description"]', 'property', 'og:description', meta.description);
+    setMeta('meta[name="twitter:title"]', 'name', 'twitter:title', meta.title);
+    setMeta('meta[name="twitter:description"]', 'name', 'twitter:description', meta.description);
+  }, [meta]);
+
+  return meta;
 };

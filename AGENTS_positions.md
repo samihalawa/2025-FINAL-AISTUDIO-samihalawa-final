@@ -1,9 +1,20 @@
 # INDEX
 
+portfolio evidence propagation | fixing /projects left stale OULANG and Hugging Face claims in Hero, evidence cards and downloadable ATS text | sweep every public component and CV asset for the same claim strings | do not treat one route or data file as the complete claim surface | verify repo-wide claim grep plus rendered home/projects/CV and downloadable files
 blog content pipeline | hard-coded slug list + modal did not scale to daily hub-fed posts | glob public/blog/**/*.md at build into index.json + sitemap and render /blog/:slug | do not hand-edit constants.ts per post or reintroduce the modal-only flow; hub commits to public/blog/en/<slug>.md | verify live /blog, one /blog/<slug>, and sitemap blog URLs after a hub pages run
 SPA production routes | public asset directories collide with client routes | serve file-shaped URLs as static files and everything else as the SPA shell | do not let Nginx treat route names as directories or leak port 8080 redirects | verify slash and non-slash routes plus real asset MIME types
 Coolify Linux build | macOS lock omitted the Rollup x64 GNU binary | install the matching native Rollup package inside the Linux builder | do not infer deployability from the macOS Vite build | verify Coolify builds the pushed commit and the live routes
 public portfolio | stock imagery and invented social proof replaced source evidence | use dated metrics, real screenshots and public links | do not publish placeholders, arbitrary percentages or unsupported impact | verify exact live route, image load, text and responsive layout
+
+## 2026-07-16 — Portfolio claims are a sitewide surface
+
+- **Status:** CURRENT
+- **Project/root:** `PROJECTS_ON_PROCESS/2025-FINAL-AISTUDIO-samihalawa-final`; home, projects, evidence cards and downloadable CV assets.
+- **Mistake recovered:** the `/projects` ledger removed stale OULANG metrics and corrected Hugging Face counts, but the same unsupported numbers still existed in `Hero.tsx`, `Testimonials.tsx`, translations and both public ATS files.
+- **Superior approach:** propagate every evidence decision by exact-string and concept sweep across all public components, translations, downloadable text/PDF/preview assets and generated pages.
+- **Evidence:** 16 Jul 2026 `rg` found OULANG `17,262 / 38,857 / 89,913`, `30 posts / 19 Spaces / 5 collections`, and app-store completion language outside `/projects`; current master requires provider/store read-back before those claims.
+- **Triggers / verification:** any metric, release state, client outcome, HF counter, CV regeneration or portfolio copy change; run repo-wide claim grep, then render `/`, `/projects`, `/cv` and inspect downloads. PDF/preview binaries must be regenerated, not assumed updated from ATS text.
+- **Do / don't:** do treat the site and CV package as one claim graph; don't close after changing only `portfolio.ts` or one route.
 
 ## 2026-07-15 — Blog fed by the central content hub
 
