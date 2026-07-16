@@ -437,7 +437,7 @@ export const LINKEDIN_MEDIA_ASSETS: LinkedInMediaAsset[] = [
     post: 'Post 19',
     title: copy('Recorded work evidence archive', 'Archivo de trabajo grabado', 'Archive de travail enregistré', '录制工作证据档案'),
     image: '/portfolio/linkedin-post19-recorded-work-archive.png',
-    proof: copy('Aggregate only: 111 valid Meet Recording media files and approximately 125.83 hours inventoried. Content-level indexing is still incomplete.', 'Solo agregado: 111 archivos multimedia válidos de Meet Recordings y aproximadamente 125,83 horas inventariadas. La indexación de contenido sigue incompleta.'),
+    proof: copy('111 valid Meet Recording media files and approximately 125.83 hours are inventoried. A sampled Drive sidecar pass now verifies Chinese lessons, one IWAKY scope meeting and one Valerio/Umbramed advisory session; full content-level indexing is still incomplete.', '111 archivos multimedia válidos de Meet Recordings y aproximadamente 125,83 horas están inventariados. Una muestra de sidecars de Drive ya verifica clases de chino, una reunión de alcance IWAKY y una sesión de asesoría Valerio/Umbramed; la indexación completa de contenido sigue incompleta.'),
   },
   {
     id: 'linkedin-post20',
@@ -470,8 +470,8 @@ export const EVIDENCE_GAPS: EvidenceGap[] = [
   {
     id: 'recordings',
     title: copy('Meet recording contents', 'Contenido de grabaciones Meet', 'Contenu des enregistrements Meet', 'Meet 录制内容'),
-    status: copy('111 valid media files and approximately 125.83 hours are verified at file level, with 271 notes/transcript/chat sidecars and 0 remaining timed-out media candidates; content-level project mapping is incomplete.', '111 archivos multimedia válidos y unas 125,83 horas están verificados a nivel de archivo, con 271 notas/transcripciones/chats auxiliares y 0 candidatos de media con timeout pendientes; falta mapear el contenido por proyecto.'),
-    nextStep: copy('Transcribe and index recordings by project, participant and reusable public-safe clip.', 'Transcribir e indexar por proyecto, participante y clip reutilizable seguro para público.'),
+    status: copy('111 valid media files and approximately 125.83 hours are verified at file level, with 271 notes/transcript/chat sidecars and 0 remaining timed-out media candidates. Four Google sidecars have now been exported/read for Chinese lessons, IWAKY and Valerio/Umbramed; full project mapping remains incomplete.', '111 archivos multimedia válidos y unas 125,83 horas están verificados a nivel de archivo, con 271 notas/transcripciones/chats auxiliares y 0 candidatos de media con timeout pendientes. Ya se han exportado/leído cuatro sidecars de Google para clases de chino, IWAKY y Valerio/Umbramed; falta completar el mapeo por proyecto.'),
+    nextStep: copy('Continue exporting Drive sidecars, then index each recording by project, participant, transcript status and reusable public-safe claim.', 'Seguir exportando sidecars de Drive y después indexar cada grabación por proyecto, participante, estado de transcripción y claim público seguro.'),
   },
   {
     id: 'provider-inventory',
@@ -498,8 +498,8 @@ export const PROGRESSION_PLAN_STEPS: ProgressionPlanStep[] = [
     id: 'recording-index',
     order: 1,
     title: copy('Index the recording archive by claim', 'Indexar las grabaciones por claim', 'Indexer les enregistrements par preuve', '按主张索引录制档案'),
-    currentState: copy('111 valid media files / approximately 125.83 hours are verified at file level; 271 sidecars are inventoried and 0 timed-out candidates remain.', '111 archivos válidos / unas 125,83 horas están verificados a nivel de archivo; hay 271 sidecars inventariados y no quedan candidatos con timeout.'),
-    nextProofAction: copy('Convert/read Drive sidecars, expand the priority index to all 111 media rows and map recordings to project, date, participants, transcript status and public-safe claim.', 'Convertir/leer sidecars de Drive, expandir el índice prioritario a los 111 archivos media y mapear cada grabación a proyecto, fecha, participantes, transcripción y claim público seguro.'),
+    currentState: copy('111 valid media files / approximately 125.83 hours are verified at file level; 271 sidecars are inventoried, 0 timed-out candidates remain and 4 Google sidecars have been read.', '111 archivos válidos / unas 125,83 horas están verificados a nivel de archivo; hay 271 sidecars inventariados, no quedan candidatos con timeout y se han leído 4 sidecars de Google.'),
+    nextProofAction: copy('Continue Drive sidecar export, expand the priority index to all 111 media rows and map recordings to project, date, participants, transcript status and public-safe claim.', 'Continuar exportando sidecars de Drive, expandir el índice prioritario a los 111 archivos media y mapear cada grabación a proyecto, fecha, participantes, transcripción y claim público seguro.'),
     unlocks: copy('Stronger evidence for Valerio/Umbramed, Chinese lessons, IWAKY, recipe intelligence, INTLAW and recorded product work.', 'Evidencia más fuerte para Valerio/Umbramed, clases de chino, IWAKY, recetas inteligentes, INTLAW y trabajo de producto grabado.'),
   },
   {
