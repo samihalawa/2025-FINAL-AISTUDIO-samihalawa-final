@@ -9,7 +9,7 @@ PROFILE
 Founder-engineer who turns ambiguous business and product ideas into operating AI systems. Full-cycle ownership across product definition, LLM and agent workflows, data and APIs, web and mobile implementation, cloud deployment, observability, growth and customer operations. Strongest at zero-to-one product architecture, multilingual delivery, automation and the complete production system around AI.
 
 VERIFIED PUBLIC EVIDENCE SNAPSHOT | 16 JULY 2026
-- 86 evidence-classified project and work entries from 2023 to the current snapshot.
+- 87 evidence-classified project and work entries from 2023 to the current snapshot.
 - GitHub: 700 public repositories, including 249 non-forks and 451 forks; 3 archived repositories.
 - VUDA open-source project: 80 GitHub stars and 7 forks at the current snapshot.
 - Hugging Face: 12 public articles. Current API returns 17 Spaces, 6 collections, 1 model and 0 datasets; UI/API counters conflict, so the API result is stated explicitly.
@@ -28,14 +28,14 @@ Founder and AI Product Engineer | Agents AI Ltd | Madrid / London | July 2025-Pr
 - Own product discovery, architecture, implementation, deployment, analytics, monetisation and operational handover across founder-led and B2B systems.
 - Built OULANG (欧浪AI) as a live multilingual web marketplace/local-life product with public App Store / Google Play listing pages under the legacy com.oulang.classifieds identity, while continuing the separate oulang.app native-wrapper workflow. Provider metrics and exact console stages are kept separately timestamped.
 - Extended the product ecosystem into Huatong for Chinese communities across Europe, OUPIN for AI-assisted discovery and PIME.ai for productised AI services.
-- Built AutoClient and research, enrichment, CRM, email, WhatsApp and voice-agent systems; published reusable MCP and developer tooling.
+- Built AutoClient and research, enrichment, CRM, email, WhatsApp and voice-agent systems; published reusable MCP and developer tooling. A 15 Jul 2026 Tekçe/OULANG-AutoClient Meet sidecar verifies a property lead-generation partnership discussion and demo, bounded as proposal/demo evidence only.
 - Delivered pricing-intelligence and evidence-report workflows combining marketplace data, product matching, price history and inventory or ERP inputs.
 - Prototyped multimodal medical-image review, longitudinal tracking and structured reporting workflows with explicit human review; no clinical deployment claim.
 
 AI Instructor and Independent Technical Consultant | Madrid / Remote | 2022-Present
 - Teach implementation-first AI, agents, MCP, automation, Python and AI product engineering through working applications, live builds and technical curricula.
 - Translate business needs into systems for professionals and teams in Spanish, English and Mandarin.
-- Maintain a file-verified archive of 111 lesson, meeting and project media files totalling approximately 125.83 hours; all rows are now status-indexed, while 14 Google sidecars, 7 local Valerio/Umbramed transcripts, 8 local Valerio/Umbramed chat sidecars and 4 root local chats have been read so far (6 local Valerio transcripts, 1 local Valerio chat and 1 recipe-intelligence Google sidecar are substantive).
+- Maintain a file-verified archive of 111 lesson, meeting and project media files totalling approximately 125.83 hours; all rows are status-indexed, while only targeted recordings have been content-reviewed.
 
 Senior Full-Stack Engineer | Damehosting | 2019-2023
 - Developed and maintained production web systems.
@@ -62,7 +62,7 @@ LIVE AND CONTINUING PRODUCTS
 - OULANG, 2026-present: live Chinese-diaspora marketplace/local-life platform for Spain; web plus continuing native/store work. oulang.ai
 - Huatong, 2026-present: live Chinese-first employment, housing, classifieds and local-services platform across European markets. huatong.eu
 - AutoDate, 2026: live web product and iOS 1.0.14 (39) ready to test in TestFlight on 14 July 2026; not represented as an App Store release. autodate.ai
-- AutoClient, 2024-present: agentic research, enrichment, scoring, outreach, conversation tracking and CRM automation.
+- AutoClient, 2024-present: agentic research, enrichment, scoring, outreach, conversation tracking and CRM automation; current 2026 sidecar evidence verifies qualified Chinese property-buyer lead generation, CRM transparency and personalized AI outreach discussion/demo without signed partnership, payment, revenue or conversion claim.
 - PIME.ai EU AI Act pack, 2026: multilingual applicability/risk analysis, AI-literacy training and roadmap product with delivery and campaign infrastructure. pime.ai
 - AutoMedical, 2025-2026: live medical-learning and multimodal-workflow product surface; no efficacy, regulatory, adoption or patient-outcome claim. automedical.ai
 - Tasky, 2026: native SwiftUI Google Tasks client for macOS, iOS and iPadOS with capture, focus, widgets, extensions, search and sync; upload/review work verified, release not claimed.
@@ -77,6 +77,7 @@ CLIENT AND COLLABORATION SYSTEMS
 - SORT / SortBot, 2025: proposal and repository for converting course PDFs into online courses, adding a chatbot and publishing through SSH; acceptance and deployment unconfirmed.
 - San Martín, 2025: HR automation proposal covering birthdays, timesheets/work rules, talent search and an employee portal; client adoption unconfirmed.
 - EA Housing / Radio Inter, 2026: modular separate-company proposals and group option derived from a recorded call; no contract, payment or delivery claim.
+- Tekçe / OULANG-AutoClient, 2026: business-development discussion and demo for qualified Chinese property-buyer lead generation, CRM-auditable lead handling and personalized AI outreach; proposal/demo evidence only.
 
 OPEN SOURCE AND OPERATING INFRASTRUCTURE
 - VUDA, Visual UI Debug Agent MCP: visual evidence capture, annotation and reasoning for live UI diagnosis; 80 stars and 7 forks. github.com/samihalawa/VUDA
@@ -93,7 +94,7 @@ APPLIED RESEARCH, PROTOTYPES AND EDUCATION
 - APOLO medical multimodal exploration, 2025: public Hugging Face image-text model artifact based on DeepSeek-VL2-tiny; research/prototyping only, not clinical validation.
 - AutoRad, 2025: radiology product in Notion Backlog; funding, patent, readiness and improvement figures remain unverified plans.
 - AutoIOL and ophthalmology workflows, 2024-2026: image review, OCT work, longitudinal tracking and structured reporting prototypes with human review; no adoption or clinical-results claim.
-- Recipe intelligence, 2026: verified 8 Jul Meet sidecar for chef-note/photo ingestion, agentic web/video research, technique preservation, chef-ready and user-facing views, multilingual publishing and optional recipe-video workflows; no shipped-product, payment, traffic or revenue claim.
+- Recipe intelligence, 2026: product discovery for chef-note/photo ingestion, web research, technique preservation, multilingual publishing and optional recipe-video workflows.
 - SONMADE content factory, 2026: React/TypeScript, FFmpeg and Sharp prototype for scene analysis and highlight extraction using motion, colour, edge/text and fullscreen scoring.
 - AutoCrypto, 2024: crypto automation/product exploration; no trading-return, deployed-capital, user or regulatory claim.
 - AI-agent architecture course, 2025: direct 15-hour syllabus covering foundations, tools, memory, multi-agent systems, RAG, deployment and observability; delivery dates and learner outcomes remain unclaimed.
@@ -106,7 +107,7 @@ CHRONOLOGICAL PROJECT INDEX | 2023-2026
 2025 April-June: APOLO; VUDA; AutoTutorial/MentorIA/PerfectPrompter; Wordlist Visual; Scope; Fernando Ly medical-AI work; AutoClient expansion; MCP wave; Agents AI Ltd; Lanzadera ecosystem participation.
 2025 July-December: AutoMedical packaging; agent operating utilities; AutoRad backlog; personal/company sites; WhatsApp MCP; IWAKY/AutoPricing; INTLAW; San Martín; Umbramed; AutoDate/AutoTinder design; prototype portfolio wave; poetry site; Lemon AI customization/deployment; 15-hour AI-agent course.
 2026 January-June: OULANG; GOWA; Notion-Drive Sync; Huatong; InfoHuaxin; OUPIN; Crawlab/Apify actors; Chronicle/Screenpipe; Telnyx tools; Desktop Commander utilities; MadridResorts; VibraCode; AutoMedical; company/publishing surfaces; Tasky; AI tutoring/ITE/TusClases operations; OULANG World Cup module; SONMADE.
-2026 July: AutoDate TestFlight; recipe intelligence; OULANG native parity; EA Housing/Radio Inter proposals; Chinese soundscapes/tutoring/poetry audio; PIME AI Act pack; additional local product artifacts; career evidence rebuild.
+2026 July: AutoDate TestFlight; recipe intelligence; Tekçe/OULANG-AutoClient property lead-generation partnership discussion; OULANG native parity; EA Housing/Radio Inter proposals; Chinese soundscapes/tutoring/poetry audio; PIME AI Act pack; additional local product artifacts; career evidence rebuild.
 
 OPEN SOURCE, WRITING AND TEACHING
 - Twelve public Hugging Face articles cover browser automation, local Transformers.js, prompting, autonomous-agent repositories, AutoGen, lead generation and VUDA.
@@ -132,4 +133,4 @@ TARGET ROLES
 Founding AI Engineer | AI Product Engineer | AI Platform Lead | Head of AI | Staff AI Engineer | Technical Product Lead
 
 EVIDENCE BOUNDARY
-This ATS derivative is generated from the 86-entry evidence ledger refreshed on 16 July 2026. It separates live, TestFlight, proposal, contract, payment, repository, deployed and accepted states. Unsupported patent, clinical-validation, revenue, audience, app-store, infrastructure-count and product-metric claims are excluded. The photo-bearing visual master and complete searchable chronology are available at samihalawa.com/cv and samihalawa.com/projects.
+This ATS derivative is generated from the 87-entry evidence ledger refreshed on 16 July 2026. It separates live, TestFlight, proposal, contract, payment, repository, deployed and accepted states. Unsupported patent, clinical-validation, revenue, audience, app-store, infrastructure-count and product-metric claims are excluded. The photo-bearing visual master and complete searchable chronology are available at samihalawa.com/cv and samihalawa.com/projects.
