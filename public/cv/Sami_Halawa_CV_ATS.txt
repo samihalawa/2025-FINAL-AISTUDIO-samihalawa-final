@@ -13,7 +13,7 @@ VERIFIED PUBLIC EVIDENCE SNAPSHOT | 16 JULY 2026
 - GitHub: 700 public repositories, including 249 non-forks and 451 forks; 3 archived repositories.
 - VUDA open-source project: 80 GitHub stars and 7 forks at the current snapshot.
 - Hugging Face: 12 public articles. Current API returns 17 Spaces, 6 collections, 1 model and 0 datasets; UI/API counters conflict, so the API result is stated explicitly.
-- Recorded implementation archive: 97 valid lesson, meeting and project videos totalling approximately 110.83 hours.
+- Recorded implementation archive: 108 valid lesson, meeting and project media files totalling approximately 122.07 hours.
 
 CORE EXPERTISE
 Agentic AI and LLMs: multi-agent orchestration, MCP, tool and function calling, RAG, structured outputs, model routing, prompt and evaluation loops, OpenAI, Anthropic, Gemini and open-source models.
@@ -35,7 +35,7 @@ Founder and AI Product Engineer | Agents AI Ltd | Madrid / London | July 2025-Pr
 AI Instructor and Independent Technical Consultant | Madrid / Remote | 2022-Present
 - Teach implementation-first AI, agents, MCP, automation, Python and AI product engineering through working applications, live builds and technical curricula.
 - Translate business needs into systems for professionals and teams in Spanish, English and Mandarin.
-- Maintain a file-verified archive of 97 lesson, meeting and project recordings totalling approximately 110.83 hours; only targeted recordings have been content-indexed.
+- Maintain a file-verified archive of 108 lesson, meeting and project media files totalling approximately 122.07 hours; only targeted recordings have been content-indexed.
 
 Senior Full-Stack Engineer | Damehosting | 2019-2023
 - Developed and maintained production web systems.

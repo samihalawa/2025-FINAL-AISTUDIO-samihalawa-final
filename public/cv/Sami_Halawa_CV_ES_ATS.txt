@@ -13,7 +13,7 @@ INSTANTÁNEA DE EVIDENCIA PÚBLICA VERIFICADA | 16 JULIO 2026
 - GitHub: 700 repositorios públicos, 249 no-fork y 451 forks; 3 repositorios archivados.
 - VUDA: 80 estrellas y 7 forks en la instantánea actual.
 - Hugging Face: 12 artículos públicos. La API devuelve 17 Spaces, 6 colecciones, 1 modelo y 0 datasets; hay discrepancia UI/API y se explicita el resultado de API.
-- Archivo de implementación: 97 vídeos válidos de clases, reuniones y proyectos, aproximadamente 110,83 horas.
+- Archivo de implementación: 108 archivos multimedia válidos de clases, reuniones y proyectos, aproximadamente 122,07 horas.
 
 CAPACIDADES PRINCIPALES
 IA agéntica y LLM: orquestación multiagente, MCP, tool/function calling, RAG, salidas estructuradas, enrutado de modelos, ciclos de prompts/evaluación, OpenAI, Anthropic, Gemini y modelos abiertos.
@@ -35,7 +35,7 @@ Fundador e Ingeniero de Producto IA | Agents AI Ltd | Madrid / Londres | Julio 2
 Profesor de IA y Consultor Técnico Independiente | Madrid / Remoto | 2022-Actualidad
 - Enseño IA práctica, agentes, MCP, automatización, Python e ingeniería de producto mediante aplicaciones reales, construcción en directo y programas técnicos.
 - Convierto necesidades de negocio en sistemas para profesionales y equipos en español, inglés y mandarín.
-- Mantengo un archivo verificado por fichero de 97 grabaciones y aproximadamente 110,83 horas; solo grabaciones dirigidas han sido indexadas por contenido.
+- Mantengo un archivo verificado por fichero de 108 archivos multimedia y aproximadamente 122,07 horas; solo grabaciones dirigidas han sido indexadas por contenido.
 
 Ingeniero Full-Stack Sénior | Damehosting | 2019-2023
 - Desarrollo y mantenimiento de sistemas web de producción.

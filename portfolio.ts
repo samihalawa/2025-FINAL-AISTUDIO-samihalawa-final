@@ -428,7 +428,7 @@ export const LINKEDIN_MEDIA_ASSETS: LinkedInMediaAsset[] = [
     post: 'Post 19',
     title: copy('Recorded work evidence archive', 'Archivo de trabajo grabado', 'Archive de travail enregistré', '录制工作证据档案'),
     image: '/portfolio/linkedin-post19-recorded-work-archive.png',
-    proof: copy('Aggregate only: 97 valid Meet Recording videos and approximately 110.83 hours inventoried. Content-level indexing is still incomplete.', 'Solo agregado: 97 vídeos válidos de Meet Recordings y aproximadamente 110,83 horas inventariadas. La indexación de contenido sigue incompleta.'),
+    proof: copy('Aggregate only: 108 valid Meet Recording media files and approximately 122.07 hours inventoried. Content-level indexing is still incomplete.', 'Solo agregado: 108 archivos multimedia válidos de Meet Recordings y aproximadamente 122,07 horas inventariadas. La indexación de contenido sigue incompleta.'),
   },
   {
     id: 'linkedin-post20',
@@ -461,7 +461,7 @@ export const EVIDENCE_GAPS: EvidenceGap[] = [
   {
     id: 'recordings',
     title: copy('Meet recording contents', 'Contenido de grabaciones Meet', 'Contenu des enregistrements Meet', 'Meet 录制内容'),
-    status: copy('97 valid videos and approximately 110.83 hours are verified at file level, but content-level project mapping is incomplete.', '97 vídeos válidos y unas 110,83 horas están verificados a nivel de archivo, pero falta mapear el contenido por proyecto.'),
+    status: copy('108 valid media files and approximately 122.07 hours are verified at file level, with 267 notes/transcript/chat sidecars and 3 timed-out media candidates; content-level project mapping is incomplete.', '108 archivos multimedia válidos y unas 122,07 horas están verificados a nivel de archivo, con 267 notas/transcripciones/chats auxiliares y 3 candidatos de media con timeout; falta mapear el contenido por proyecto.'),
     nextStep: copy('Transcribe and index recordings by project, participant and reusable public-safe clip.', 'Transcribir e indexar por proyecto, participante y clip reutilizable seguro para público.'),
   },
   {
