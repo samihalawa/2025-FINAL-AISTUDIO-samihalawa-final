@@ -93,7 +93,7 @@ const headings: Record<LanguageCode, {
     progressionAction: 'Next proof action',
     progressionUnlocks: 'What it unlocks',
     knownGaps: 'What is still missing',
-    knownGapsBody: 'Deleted or transferred repositories, three unresolved old remote identities, three approximate local family matches, a GitHub public-gist surfacing mismatch, a capped Colab folder, unindexed recording contents, non-Coolify provider exports, authenticated app-store console states, several client outcomes and LinkedIn Posts 2–20 scheduling proof remain open evidence gaps.',
+    knownGapsBody: 'Deleted or transferred repositories, three unresolved old remote identities, three approximate local family matches, a GitHub public-gist surfacing mismatch, a capped Colab folder, recording content-review gaps, non-Coolify provider exports, authenticated app-store console states, several client outcomes and LinkedIn Posts 2–20 scheduling proof remain open evidence gaps.',
     gapStatus: 'Current state',
     gapNextStep: 'Next proof action',
   },
