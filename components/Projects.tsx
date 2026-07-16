@@ -1,10 +1,12 @@
 import React, { useMemo, useState } from 'react';
 import { useTranslation, type LanguageCode } from '../i18n/LanguageContext';
 import {
+  EVIDENCE_GAPS,
   LINKEDIN_MEDIA_ASSETS,
   PORTFOLIO_INVENTORY,
   PORTFOLIO_PROJECTS,
   categoryCopy,
+  getEvidenceGapCopy,
   getInventoryCopy,
   getLinkedInMediaAssetCopy,
   getProjectCopy,
@@ -46,6 +48,8 @@ const headings: Record<LanguageCode, {
   methodologyBody: string;
   knownGaps: string;
   knownGapsBody: string;
+  gapStatus: string;
+  gapNextStep: string;
 }> = {
   en: {
     eyebrow: 'Evidence portfolio · 2023–today',
@@ -76,6 +80,8 @@ const headings: Record<LanguageCode, {
     methodologyBody: 'Primary sources outrank summaries: repositories, direct contracts and messages, queried cashflow rows, official profiles, Drive files, recordings, store emails and current live surfaces. A proposal is not delivery; a contract is not acceptance; a reachable URL is not a product metric.',
     knownGaps: 'What is still missing',
     knownGapsBody: 'Deleted or transferred repositories, three unresolved old remote identities, three approximate local family matches, conflicting gist counters, a capped Colab folder, unindexed recording contents, provider-level infrastructure exports, current app-store states, several client outcomes and LinkedIn Posts 2–20 scheduling proof remain open evidence gaps.',
+    gapStatus: 'Current state',
+    gapNextStep: 'Next proof action',
   },
   es: {
     eyebrow: 'Portfolio con evidencia · 2023–hoy',
@@ -106,6 +112,8 @@ const headings: Record<LanguageCode, {
     methodologyBody: 'Las fuentes primarias mandan: repositorios, contratos y mensajes directos, movimientos consultados, perfiles oficiales, Drive, grabaciones, emails de tienda y sitios actuales. Una propuesta no es una entrega; un contrato no es aceptación; una URL accesible no es una métrica de producto.',
     knownGaps: 'Qué sigue faltando',
     knownGapsBody: 'Siguen abiertos: repositorios borrados o transferidos, tres identidades remotas antiguas sin resolver, tres coincidencias locales aproximadas, contadores de gists en conflicto, Colab limitado, grabaciones sin indexar, inventarios de proveedores y tiendas, resultados de varios clientes y la prueba de programación de los Posts 2–20 de LinkedIn.',
+    gapStatus: 'Estado actual',
+    gapNextStep: 'Siguiente prueba',
   },
   fr: {
     eyebrow: 'Portfolio avec preuves · 2023–aujourd’hui',
@@ -124,6 +132,8 @@ const headings: Record<LanguageCode, {
     search: 'Rechercher projets, clients, outils ou preuves', allLanes: 'Tous les domaines', allStatuses: 'Tous les états', verified: 'Vérifié', approximate: 'Approximatif', source: 'Source et limite', openSource: 'Ouvrir la source primaire', results: 'entrées correspondantes', noResults: 'Aucune entrée ne correspond.',
     methodology: 'Méthode de reconstruction', methodologyBody: 'Les sources primaires priment sur les résumés: dépôts, contrats et messages directs, données interrogées, profils officiels, Drive, enregistrements et surfaces en ligne.',
     knownGaps: 'Ce qui manque encore', knownGapsBody: 'Dépôts supprimés ou transférés, trois anciennes identités distantes non résolues, trois correspondances locales approximatives, compteurs de gists, Colab, enregistrements, inventaires fournisseurs, états des stores, résultats clients et preuve de planification des posts LinkedIn 2–20 restent ouverts.',
+    gapStatus: 'État actuel',
+    gapNextStep: 'Prochaine preuve',
   },
   zh: {
     eyebrow: '证据作品集 · 2023–今天', title: '完整工作记录，并明确区分每种证据的含义。',
@@ -134,6 +144,8 @@ const headings: Record<LanguageCode, {
     search: '搜索项目、客户、工具或证据', allLanes: '全部类型', allStatuses: '全部状态', verified: '已验证', approximate: '近似/待确认', source: '来源边界', openSource: '打开主要来源', results: '条匹配记录', noResults: '没有符合筛选条件的记录。',
     methodology: '重建方法', methodologyBody: '主要来源优先于摘要：仓库、合同与直接消息、查询数据、官方资料、Drive、录音、商店邮件和当前线上页面。',
     knownGaps: '仍缺少的证据', knownGapsBody: '已删除或转移的仓库、3 个未解决的旧远程身份、3 个近似本地项目匹配、gist 计数、Colab、录音索引、基础设施与商店清单、客户结果，以及 LinkedIn 第 2–20 条帖子的排期证明仍需补全。',
+    gapStatus: '当前状态',
+    gapNextStep: '下一步证据',
   },
 };
 
@@ -250,7 +262,40 @@ const Projects: React.FC = () => {
           </div>
         </div>
 
-        <div className="mt-24 rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-10"><div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end"><div><span className="text-xs font-bold uppercase tracking-[.18em] text-amber-700">Evidence debt</span><h2 className="mt-3 font-display text-3xl font-bold tracking-[-.035em] text-slate-950 sm:text-4xl">{h.knownGaps}</h2><p className="mt-4 max-w-4xl leading-relaxed text-slate-600">{h.knownGapsBody}</p></div><div className="flex flex-wrap gap-3"><a className="btn-secondary" href="https://github.com/samihalawa?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub <i className="fas fa-arrow-up-right-from-square text-xs" /></a><a className="btn-secondary" href="https://huggingface.co/samihalawa" target="_blank" rel="noopener noreferrer">Hugging Face <i className="fas fa-arrow-up-right-from-square text-xs" /></a></div></div></div>
+        <div id="evidence-gaps" className="scroll-mt-28 mt-24 rounded-[2rem] border border-amber-200 bg-amber-50/70 p-6 shadow-sm sm:p-10">
+          <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-[.18em] text-amber-700">Evidence debt</span>
+              <h2 className="mt-3 font-display text-3xl font-bold tracking-[-.035em] text-slate-950 sm:text-4xl">{h.knownGaps}</h2>
+              <p className="mt-4 max-w-4xl leading-relaxed text-slate-700">{h.knownGapsBody}</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <a className="btn-secondary" href="https://github.com/samihalawa?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub <i className="fas fa-arrow-up-right-from-square text-xs" /></a>
+              <a className="btn-secondary" href="https://huggingface.co/samihalawa" target="_blank" rel="noopener noreferrer">Hugging Face <i className="fas fa-arrow-up-right-from-square text-xs" /></a>
+            </div>
+          </div>
+          <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {EVIDENCE_GAPS.map((gap, index) => {
+              const c = getEvidenceGapCopy(gap, language);
+              return <article key={gap.id} className="rounded-2xl border border-amber-200 bg-white p-5 shadow-sm">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-amber-100 font-mono text-sm font-bold text-amber-900">{String(index + 1).padStart(2, '0')}</span>
+                  <h3 className="text-lg font-bold text-slate-950">{c.title}</h3>
+                </div>
+                <div className="mt-5 space-y-4">
+                  <div>
+                    <div className="text-[11px] font-bold uppercase tracking-[.14em] text-slate-500">{h.gapStatus}</div>
+                    <p className="mt-1 text-sm leading-relaxed text-slate-600">{c.status}</p>
+                  </div>
+                  <div className="border-l-2 border-amber-300 pl-4">
+                    <div className="text-[11px] font-bold uppercase tracking-[.14em] text-amber-700">{h.gapNextStep}</div>
+                    <p className="mt-1 text-sm leading-relaxed text-amber-950">{c.nextStep}</p>
+                  </div>
+                </div>
+              </article>;
+            })}
+          </div>
+        </div>
       </div>
     </section>
   );

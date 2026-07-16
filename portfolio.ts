@@ -42,6 +42,13 @@ export interface LinkedInMediaAsset {
   proof: LocalizedCopy;
 }
 
+export interface EvidenceGap {
+  id: string;
+  title: LocalizedCopy;
+  status: LocalizedCopy;
+  nextStep: LocalizedCopy;
+}
+
 const copy = (en: string, es: string, fr = en, zh = en): LocalizedCopy => ({ en, es, fr, zh });
 
 export const categoryCopy: Record<PortfolioCategory, LocalizedCopy> = {
@@ -432,6 +439,51 @@ export const LINKEDIN_MEDIA_ASSETS: LinkedInMediaAsset[] = [
   },
 ];
 
+export const EVIDENCE_GAPS: EvidenceGap[] = [
+  {
+    id: 'repo-identities',
+    title: copy('Repository identity edge cases', 'Identidades de repositorios pendientes', 'Identités de dépôts restantes', '仓库身份边界案例'),
+    status: copy('Three old remote identities remain unresolved and three local family matches are still approximate after the 749-root census.', 'Quedan tres identidades remotas antiguas sin resolver y tres coincidencias locales siguen siendo aproximadas tras el censo de 749 raíces.'),
+    nextStep: copy('Investigate only those six rows; do not reopen the 360 directly resolved rows.', 'Investigar solo esas seis filas; no reabrir las 360 ya resueltas.'),
+  },
+  {
+    id: 'gists',
+    title: copy('GitHub gist visibility', 'Visibilidad de GitHub gists', 'Visibilité des gists GitHub', 'GitHub gist 可见性'),
+    status: copy('Profile, public endpoint and authenticated listing disagree: 169 profile count, zero public endpoint rows and 180 mixed-visibility rows.', 'El perfil, el endpoint público y la lista autenticada discrepan: 169 en perfil, cero filas públicas y 180 filas de visibilidad mixta.'),
+    nextStep: copy('Export gists with visibility fields before publishing any exact gist count.', 'Exportar gists con campos de visibilidad antes de publicar un total exacto.'),
+  },
+  {
+    id: 'colab-drive',
+    title: copy('Colab and Drive cap', 'Límite de Colab y Drive', 'Limite Colab et Drive', 'Colab 与 Drive 上限'),
+    status: copy('At least 112 direct Colab rows were observed, but the primary folder hit the 100-row connector cap.', 'Se observaron al menos 112 filas directas de Colab, pero la carpeta principal alcanzó el límite de 100 filas del conector.'),
+    nextStep: copy('Page through narrower folders and date windows; keep all counts as minimums until complete.', 'Paginar por carpetas y fechas más estrechas; mantener los recuentos como mínimos hasta completar.'),
+  },
+  {
+    id: 'recordings',
+    title: copy('Meet recording contents', 'Contenido de grabaciones Meet', 'Contenu des enregistrements Meet', 'Meet 录制内容'),
+    status: copy('97 valid videos and approximately 110.83 hours are verified at file level, but content-level project mapping is incomplete.', '97 vídeos válidos y unas 110,83 horas están verificados a nivel de archivo, pero falta mapear el contenido por proyecto.'),
+    nextStep: copy('Transcribe and index recordings by project, participant and reusable public-safe clip.', 'Transcribir e indexar por proyecto, participante y clip reutilizable seguro para público.'),
+  },
+  {
+    id: 'provider-inventory',
+    title: copy('Infrastructure and app-store states', 'Infraestructura y estados de tiendas', 'Infrastructure et états des stores', '基础设施与应用商店状态'),
+    status: copy('Known domains and providers are a targeted slice; app-store and provider dashboards need current read-back before metrics are public.', 'Los dominios y proveedores conocidos son una muestra dirigida; tiendas y paneles requieren lectura actual antes de publicar métricas.'),
+    nextStep: copy('Query Coolify, Cloudflare, Vercel, Netlify, Google Cloud, App Store Connect and Play Console directly.', 'Consultar directamente Coolify, Cloudflare, Vercel, Netlify, Google Cloud, App Store Connect y Play Console.'),
+  },
+  {
+    id: 'client-outcomes',
+    title: copy('Client delivery and acceptance', 'Entrega y aceptación de clientes', 'Livraison et acceptation client', '客户交付与验收'),
+    status: copy('Contracts, proposals and payments are separated from delivery, deployment, acceptance and measured outcomes.', 'Contratos, propuestas y pagos están separados de entrega, despliegue, aceptación y resultados medidos.'),
+    nextStep: copy('Extract source contracts, invoices, messages and acceptance proof without flattening them into one claim.', 'Extraer contratos, facturas, mensajes y pruebas de aceptación sin mezclarlos en una sola afirmación.'),
+  },
+  {
+    id: 'linkedin-scheduling',
+    title: copy('LinkedIn Posts 2–20', 'Posts 2–20 de LinkedIn', 'Posts LinkedIn 2–20', 'LinkedIn 第 2–20 条'),
+    status: copy('Drafts and media are ready, but scheduling/publication is not authorized or proven.', 'Los borradores y medios están listos, pero la programación/publicación no está autorizada ni probada.'),
+    nextStep: copy('Schedule only after the exact confirmation phrase, then read back every scheduled or published row from LinkedIn.', 'Programar solo tras la frase exacta de confirmación y leer cada fila programada o publicada desde LinkedIn.'),
+  },
+];
+
 export const getInventoryCopy = (item: InventoryItem, language: LanguageCode) => ({
   summary: item.summary[language] || item.summary.en,
   source: item.source[language] || item.source.en,
@@ -445,4 +497,10 @@ export const getProjectCopy = (project: PortfolioProject, language: LanguageCode
 export const getLinkedInMediaAssetCopy = (asset: LinkedInMediaAsset, language: LanguageCode) => ({
   title: asset.title[language] || asset.title.en,
   proof: asset.proof[language] || asset.proof.en,
+});
+
+export const getEvidenceGapCopy = (gap: EvidenceGap, language: LanguageCode) => ({
+  title: gap.title[language] || gap.title.en,
+  status: gap.status[language] || gap.status.en,
+  nextStep: gap.nextStep[language] || gap.nextStep.en,
 });
