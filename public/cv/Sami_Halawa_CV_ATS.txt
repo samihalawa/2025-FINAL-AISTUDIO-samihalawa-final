@@ -35,7 +35,7 @@ Founder and AI Product Engineer | Agents AI Ltd | Madrid / London | July 2025-Pr
 AI Instructor and Independent Technical Consultant | Madrid / Remote | 2022-Present
 - Teach implementation-first AI, agents, MCP, automation, Python and AI product engineering through working applications, live builds and technical curricula.
 - Translate business needs into systems for professionals and teams in Spanish, English and Mandarin.
-- Maintain a file-verified archive of 111 lesson, meeting and project media files totalling approximately 125.83 hours; all rows are now status-indexed, while 12 Google sidecars and 5 local Valerio/Umbramed transcripts have been read so far.
+- Maintain a file-verified archive of 111 lesson, meeting and project media files totalling approximately 125.83 hours; all rows are now status-indexed, while 12 Google sidecars, 5 local Valerio/Umbramed transcripts and 4 root local chats have been read so far.
 
 Senior Full-Stack Engineer | Damehosting | 2019-2023
 - Developed and maintained production web systems.
