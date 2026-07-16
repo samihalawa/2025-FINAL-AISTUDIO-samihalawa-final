@@ -157,10 +157,10 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     tags: ['Python', 'Gemini', 'Reports']
   },
   {
-    id: 'automedical', name: 'AutoMedical Academy', period: '2025', category: 'applied',
-    description: copy('AI-assisted medical learning and product experimentation.', 'Aprendizaje médico y experimentación de producto asistidos por IA.'),
-    proof: copy('Current repository and educational workflow artifacts', 'Repositorio actual y flujos educativos'),
-    tags: ['Education', 'AI workflows']
+    id: 'automedical', name: 'AutoMedical Academy', period: '2025–2026', category: 'applied',
+    description: copy('AI-assisted medical learning and multimodal-workflow product experimentation.', 'Aprendizaje médico y experimentación de flujos multimodales asistidos por IA.'),
+    proof: copy('Live public surface returned 200 on 16 Jul 2026; educational/workflow evidence only, with no clinical efficacy, adoption or patient-outcome claim', 'La superficie pública devolvió 200 el 16 jul 2026; solo evidencia educativa/de flujo, sin afirmar eficacia clínica, adopción ni resultados de pacientes'),
+    tags: ['Education', 'AI workflows'], href: 'https://automedical.ai'
   },
   {
     id: 'intlaw', name: 'INTLAW AI dashboard', period: '2025', category: 'applied',
@@ -183,8 +183,8 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   {
     id: 'earlier', name: 'MelindaAI · KittyAI · Sharedetect · ZebraMenu · Megacursos', period: 'Earlier work', category: 'education',
     description: copy('Historical AI-learning, conversational support, access-control, digital-menu and course-platform work across web and mobile.', 'Trabajo histórico de aprendizaje con IA, soporte conversacional, control de acceso, menú digital y formación en web y móvil.'),
-    proof: copy('Preserved across historical CVs and project archives; detailed impact remains unclaimed', 'Preservado en CVs y archivos; no se afirma impacto sin prueba adicional'),
-    tags: ['Web', 'Mobile', 'Education', 'Product']
+    proof: copy('MelindaAI Netlify sketch returned 200 on 16 Jul 2026 and is treated as historical prototype evidence; detailed impact, current-production and model-performance claims remain excluded', 'El sketch MelindaAI en Netlify devolvió 200 el 16 jul 2026 y se trata como evidencia histórica de prototipo; se excluyen claims de impacto, producción actual y rendimiento de modelo'),
+    tags: ['Web', 'Mobile', 'Education', 'Product'], href: 'https://melindaai.netlify.app'
   },
   {
     id: 'pime', name: 'PIME.ai', period: '2025–present', category: 'platforms', featured: true,
@@ -235,7 +235,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     tags: ['HR', 'Automation', 'Proposal']
   },
   {
-    id: 'scope', name: 'Scope · EyeUnit account intelligence', period: '2025–2026', category: 'applied',
+    id: 'scope', name: 'Fernando Ly / EyeUnit · Scope account intelligence', period: '2025–2026', category: 'applied',
     description: copy('Demonstrated prototype for list merging, cross-sell discovery and account scoring using product and clinical-market signals.', 'Prototipo demostrado para unir listas, descubrir venta cruzada y puntuar cuentas con señales de producto y mercado clínico.'),
     proof: copy('Direct shared-prototype email and reply; host is currently gated, with no clinical-deployment claim', 'Email directo del prototipo y respuesta; el host está restringido, sin afirmar despliegue clínico'),
     tags: ['Scoring', 'Medical markets', 'Prototype']

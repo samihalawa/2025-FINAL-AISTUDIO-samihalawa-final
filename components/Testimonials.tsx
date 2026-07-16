@@ -6,16 +6,16 @@ const copy: Record<LanguageCode, { eyebrow: string; title: string; body: string;
     { value: '700', label: 'public GitHub repositories · 249 non-forks', href: 'https://github.com/samihalawa' },
     { value: '12', label: 'public Hugging Face articles · API lists 17 Spaces', href: 'https://huggingface.co/samihalawa/posts' },
     { value: 'LIVE', label: 'OULANG web product · public store listings and current wrapper identity tracked separately', href: 'https://oulang.ai' },
-    { value: '97', label: 'verified lesson, meeting and project videos', href: '/cv' }
+    { value: '111', label: 'verified lesson, meeting and project media files · 125.83h', href: '/cv' }
   ]},
   es: { eyebrow: 'Evidencia en vez de testimonios', title: 'Inspecciona el trabajo directamente.', body: 'La web ya no usa personas de relleno ni citas inventadas. Estos enlaces muestran artefactos públicos y productos actuales.', items: [
-    { value: '700', label: 'repositorios públicos · 249 no-forks', href: 'https://github.com/samihalawa' }, { value: '12', label: 'artículos públicos · la API lista 17 Spaces', href: 'https://huggingface.co/samihalawa/posts' }, { value: 'LIVE', label: 'producto web OULANG · tiendas públicas e identidad actual separadas', href: 'https://oulang.ai' }, { value: '97', label: 'vídeos verificados de clases, reuniones y proyectos', href: '/cv' }
+    { value: '700', label: 'repositorios públicos · 249 no-forks', href: 'https://github.com/samihalawa' }, { value: '12', label: 'artículos públicos · la API lista 17 Spaces', href: 'https://huggingface.co/samihalawa/posts' }, { value: 'LIVE', label: 'producto web OULANG · tiendas públicas e identidad actual separadas', href: 'https://oulang.ai' }, { value: '111', label: 'media verificados de clases, reuniones y proyectos · 125,83h', href: '/cv' }
   ]},
   fr: { eyebrow: 'Des preuves, pas de faux témoignages', title: 'Inspectez directement le travail.', body: 'Ces liens montrent les artefacts publics et produits actuels.', items: [
-    { value: '700', label: 'dépôts publics · 249 non-forks', href: 'https://github.com/samihalawa' }, { value: '12', label: 'articles publics · l’API liste 17 Spaces', href: 'https://huggingface.co/samihalawa/posts' }, { value: 'LIVE', label: 'produit web OULANG · stores publics et identité actuelle séparés', href: 'https://oulang.ai' }, { value: '97', label: 'vidéos vérifiées', href: '/cv' }
+    { value: '700', label: 'dépôts publics · 249 non-forks', href: 'https://github.com/samihalawa' }, { value: '12', label: 'articles publics · l’API liste 17 Spaces', href: 'https://huggingface.co/samihalawa/posts' }, { value: 'LIVE', label: 'produit web OULANG · stores publics et identité actuelle séparés', href: 'https://oulang.ai' }, { value: '111', label: 'médias cours, réunions et projets vérifiés · 125,83h', href: '/cv' }
   ]},
   zh: { eyebrow: '用证据代替占位推荐语', title: '直接检查工作成果。', body: '这些链接展示公开工件和当前产品，不再使用虚构人物或引语。', items: [
-    { value: '700', label: '公开 GitHub 仓库 · 249 非 fork', href: 'https://github.com/samihalawa' }, { value: '12', label: '公开文章 · API 列出 17 个 Spaces', href: 'https://huggingface.co/samihalawa/posts' }, { value: 'LIVE', label: 'OULANG Web 产品 · 公开商店页面与当前身份分开记录', href: 'https://oulang.ai' }, { value: '97', label: '已验证课程、会议与项目视频', href: '/cv' }
+    { value: '700', label: '公开 GitHub 仓库 · 249 非 fork', href: 'https://github.com/samihalawa' }, { value: '12', label: '公开文章 · API 列出 17 个 Spaces', href: 'https://huggingface.co/samihalawa/posts' }, { value: 'LIVE', label: 'OULANG Web 产品 · 公开商店页面与当前身份分开记录', href: 'https://oulang.ai' }, { value: '111', label: '已验证课程、会议与项目媒体 · 125.83 小时', href: '/cv' }
   ]}
 };
 
