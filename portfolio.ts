@@ -99,7 +99,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   {
     id: 'autopricing', name: 'AutoPricing / IWAKY delivery', period: '2025–2026', category: 'platforms',
     description: copy('Pricing-intelligence and evidence-report workflow combining marketplace data, product matching and inventory or ERP inputs.', 'Inteligencia de precios e informes de evidencia con datos de marketplaces, matching e inventario o ERP.'),
-    proof: copy('Current dashboard, report artifacts and meeting transcripts; demo values are not claimed as results', 'Dashboard, informes y transcripciones actuales; los valores de demo no se presentan como resultados'),
+    proof: copy('Signed scope, first payment and audited delivery artifacts are separated from final acceptance/payment; demo values are not claimed as results', 'Contrato, primer pago y evidencias auditadas se separan de aceptación/pago final; los valores de demo no se presentan como resultados'),
     tags: ['Data pipelines', 'ERP', 'Reports', 'Automation'], image: '/portfolio/autopricing-dashboard.png'
   },
   {
@@ -514,8 +514,8 @@ export const PROGRESSION_PLAN_STEPS: ProgressionPlanStep[] = [
     id: 'client-outcomes',
     order: 3,
     title: copy('Separate client proposal, payment, delivery and outcome proof', 'Separar propuesta, pago, entrega y resultado de clientes', 'Séparer proposition, paiement, livraison et résultat client', '区分客户提案、付款、交付与结果证据'),
-    currentState: copy('Contracts, proposals and cashflow rows exist, but several outcomes and acceptance states are still intentionally unclaimed.', 'Existen contratos, propuestas y pagos, pero varios resultados y aceptaciones siguen sin afirmarse.'),
-    nextProofAction: copy('For IWAKY, INTLAW, San Martín, SORT, Scope/Fernando, Umbramed, Valerio and Light Funnels, fill proposal/contract/payment/delivery/acceptance/live/outcome columns from primary sources.', 'Para IWAKY, INTLAW, San Martín, SORT, Scope/Fernando, Umbramed, Valerio y Light Funnels, completar columnas de propuesta/contrato/pago/entrega/aceptación/live/resultado con fuentes primarias.'),
+    currentState: copy('A client evidence matrix now separates proposal, contract, payment, delivery artifacts, acceptance/live state and outcomes. IWAKY has strong signed-scope, first-payment and delivery-artifact proof; final acceptance/payment remains unclaimed.', 'Una matriz de evidencia separa propuesta, contrato, pago, artefactos de entrega, aceptación/live y resultados. IWAKY tiene contrato, primer pago y entrega probados; aceptación/pago final siguen sin afirmarse.'),
+    nextProofAction: copy('Finish the matrix for INTLAW, San Martín, SORT, Scope/Fernando, Umbramed, Valerio and Light Funnels with acceptance messages, receipts and live/deploy proof where available.', 'Completar la matriz para INTLAW, San Martín, SORT, Scope/Fernando, Umbramed, Valerio y Light Funnels con aceptación, recibos y prueba live/deploy cuando exista.'),
     unlocks: copy('Case studies that are stronger without overclaiming.', 'Casos de estudio más fuertes sin exagerar.'),
   },
   {
