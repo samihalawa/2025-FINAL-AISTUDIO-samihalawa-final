@@ -449,8 +449,8 @@ export const EVIDENCE_GAPS: EvidenceGap[] = [
   {
     id: 'gists',
     title: copy('GitHub gist visibility', 'Visibilidad de GitHub gists', 'Visibilité des gists GitHub', 'GitHub gist 可见性'),
-    status: copy('Profile, public endpoint and authenticated listing disagree: 169 profile count, zero public endpoint rows and 180 mixed-visibility rows.', 'El perfil, el endpoint público y la lista autenticada discrepan: 169 en perfil, cero filas públicas y 180 filas de visibilidad mixta.'),
-    nextStep: copy('Export gists with visibility fields before publishing any exact gist count.', 'Exportar gists con campos de visibilidad antes de publicar un total exacto.'),
+    status: copy('Authenticated inventory now resolves the visibility count: 695 accessible gists, 169 public and 526 non-public. The unauthenticated public endpoint still returns an empty array.', 'El inventario autenticado ya resuelve la visibilidad: 695 gists accesibles, 169 públicos y 526 no públicos. El endpoint público sin autenticación aún devuelve un array vacío.', 'L’inventaire authentifié résout maintenant le comptage: 695 gists accessibles, 169 publics et 526 non publics. Le point d’accès public non authentifié renvoie encore un tableau vide.', '认证清单已确认可见性：695 个可访问 gist，其中 169 个公开、526 个非公开。未认证的公开端点仍返回空数组。'),
+    nextStep: copy('Resolve only the public surfacing mismatch before publishing a detailed public-gist catalogue; never expose non-public gist URLs.', 'Resolver solo la discrepancia de exposición pública antes de publicar un catálogo detallado de gists públicos; no exponer nunca URLs de gists no públicos.', 'Résoudre seulement l’écart d’exposition publique avant de publier un catalogue détaillé des gists publics; ne jamais exposer les URLs non publiques.', '发布详细公开 gist 目录前，只需解释公开展示不一致；不要暴露非公开 gist URL。'),
   },
   {
     id: 'colab-drive',
