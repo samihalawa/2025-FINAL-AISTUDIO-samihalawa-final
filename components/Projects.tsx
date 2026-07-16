@@ -1,10 +1,12 @@
 import React, { useMemo, useState } from 'react';
 import { useTranslation, type LanguageCode } from '../i18n/LanguageContext';
 import {
+  LINKEDIN_MEDIA_ASSETS,
   PORTFOLIO_INVENTORY,
   PORTFOLIO_PROJECTS,
   categoryCopy,
   getInventoryCopy,
+  getLinkedInMediaAssetCopy,
   getProjectCopy,
   inventoryLaneCopy,
   type InventoryLane,
@@ -22,6 +24,10 @@ const headings: Record<LanguageCode, {
   curatedEyebrow: string;
   curatedTitle: string;
   curatedBody: string;
+  mediaEyebrow: string;
+  mediaTitle: string;
+  mediaBody: string;
+  mediaBoundary: string;
   proof: string;
   boundary: string;
   ledgerEyebrow: string;
@@ -48,6 +54,10 @@ const headings: Record<LanguageCode, {
     curatedEyebrow: 'Selected case files',
     curatedTitle: 'The strongest work, with the proof attached.',
     curatedBody: 'These are the projects worth opening first. Live products, prototypes, proposals and pre-release apps keep their real status.',
+    mediaEyebrow: 'Public-safe media queue',
+    mediaTitle: 'The LinkedIn series now has verified media, but it is not scheduled.',
+    mediaBody: 'These assets are reusable evidence cards for the chronological post series and the portfolio. They are shown here because they are already privacy-safe and visually verified.',
+    mediaBoundary: 'Posts 2–20 are still drafts. This site section is not LinkedIn publication or scheduling proof.',
     proof: 'Open proof',
     boundary: 'Evidence boundary',
     ledgerEyebrow: 'Complete chronology',
@@ -74,6 +84,10 @@ const headings: Record<LanguageCode, {
     curatedEyebrow: 'Casos seleccionados',
     curatedTitle: 'El trabajo más fuerte, con la prueba adjunta.',
     curatedBody: 'Los proyectos que merece la pena abrir primero. Productos activos, prototipos, propuestas y apps pre-lanzamiento conservan su estado real.',
+    mediaEyebrow: 'Cola pública de medios',
+    mediaTitle: 'La serie de LinkedIn ya tiene medios verificados, pero no está programada.',
+    mediaBody: 'Estos assets son tarjetas reutilizables de evidencia para la serie cronológica y el portfolio. Se muestran aquí porque ya son seguros para público y están revisados visualmente.',
+    mediaBoundary: 'Los Posts 2–20 siguen siendo borradores. Esta sección no prueba publicación ni programación en LinkedIn.',
     proof: 'Abrir prueba',
     boundary: 'Límite de evidencia',
     ledgerEyebrow: 'Cronología completa',
@@ -100,6 +114,10 @@ const headings: Record<LanguageCode, {
     curatedEyebrow: 'Dossiers sélectionnés',
     curatedTitle: 'Les travaux les plus forts, preuves jointes.',
     curatedBody: 'Produits en ligne, prototypes, propositions et applications en pré-lancement conservent leur statut réel.',
+    mediaEyebrow: 'Médias publics vérifiés',
+    mediaTitle: 'La série LinkedIn a maintenant des médias vérifiés, mais elle n’est pas planifiée.',
+    mediaBody: 'Ces visuels sont des cartes de preuve réutilisables pour la série chronologique et le portfolio.',
+    mediaBoundary: 'Les posts 2–20 restent des brouillons. Cette section ne prouve aucune publication ou planification LinkedIn.',
     proof: 'Ouvrir la preuve', boundary: 'Limite de preuve', ledgerEyebrow: 'Chronologie complète',
     ledgerTitle: '86 entrées classées. Rien ne disparaît.',
     ledgerBody: 'Recherchez dans le registre complet ou filtrez par domaine et niveau de vérification.',
@@ -111,6 +129,7 @@ const headings: Record<LanguageCode, {
     eyebrow: '证据作品集 · 2023–今天', title: '完整工作记录，并明确区分每种证据的含义。',
     body: '产品、客户合作、开源、医疗与智能体研究、基础设施、教学和出版，按时间整理并标注证据边界。',
     curatedEyebrow: '精选案例', curatedTitle: '最值得先看的作品，附带真实证据。', curatedBody: '线上产品、原型、提案与预发布应用保持真实状态。',
+    mediaEyebrow: '公开安全媒体队列', mediaTitle: 'LinkedIn 系列已有验证媒体，但尚未排期。', mediaBody: '这些视觉素材可作为时间线帖子和作品集的证据卡使用。', mediaBoundary: '第 2–20 条仍是草稿；此处不是 LinkedIn 发布或排期证明。',
     proof: '打开证据', boundary: '证据边界', ledgerEyebrow: '完整时间线', ledgerTitle: '86 条分类记录，没有静默遗漏。', ledgerBody: '搜索完整证据账本，或按工作类型和验证状态筛选。',
     search: '搜索项目、客户、工具或证据', allLanes: '全部类型', allStatuses: '全部状态', verified: '已验证', approximate: '近似/待确认', source: '来源边界', openSource: '打开主要来源', results: '条匹配记录', noResults: '没有符合筛选条件的记录。',
     methodology: '重建方法', methodologyBody: '主要来源优先于摘要：仓库、合同与直接消息、查询数据、官方资料、Drive、录音、商店邮件和当前线上页面。',
@@ -178,6 +197,35 @@ const Projects: React.FC = () => {
             </article>; })}</div>
           </div>;
         })}
+
+        <div id="linkedin-media" className="scroll-mt-28 mt-24 rounded-[2rem] border border-slate-200 bg-white p-5 shadow-sm sm:p-8 lg:p-10">
+          <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_18rem] lg:items-end">
+            <div>
+              <span className="badge-pill">{h.mediaEyebrow}</span>
+              <h2 className="mt-5 font-display text-4xl font-bold tracking-[-.045em] text-slate-950 sm:text-5xl">{h.mediaTitle}</h2>
+              <p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-600">{h.mediaBody}</p>
+            </div>
+            <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm font-semibold leading-relaxed text-amber-950">{h.mediaBoundary}</div>
+          </div>
+          <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            {LINKEDIN_MEDIA_ASSETS.map(asset => {
+              const c = getLinkedInMediaAssetCopy(asset, language);
+              return <article key={asset.id} className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+                <div className="aspect-video overflow-hidden bg-slate-950">
+                  <img src={asset.image} alt={`${asset.post}: ${c.title}`} className="h-full w-full object-cover" loading="lazy" />
+                </div>
+                <div className="p-5">
+                  <div className="text-xs font-bold uppercase tracking-[.16em] text-brand-700">{asset.post}</div>
+                  <h3 className="mt-2 text-lg font-bold text-slate-950">{c.title}</h3>
+                  <div className="mt-4 rounded-xl bg-white p-4">
+                    <div className="text-[11px] font-bold uppercase tracking-[.14em] text-slate-500">{h.boundary}</div>
+                    <p className="mt-1 text-sm leading-relaxed text-slate-600">{c.proof}</p>
+                  </div>
+                </div>
+              </article>;
+            })}
+          </div>
+        </div>
 
         <div id="inventory" className="scroll-mt-28 mt-28 border-t border-slate-200 pt-20">
           <div className="max-w-4xl"><span className="badge-pill">{h.ledgerEyebrow}</span><h2 className="mt-5 font-display text-4xl font-bold tracking-[-.045em] text-slate-950 sm:text-5xl">{h.ledgerTitle}</h2><p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-600">{h.ledgerBody}</p></div>

@@ -34,6 +34,14 @@ export interface InventoryItem {
   image?: string;
 }
 
+export interface LinkedInMediaAsset {
+  id: string;
+  post: string;
+  title: LocalizedCopy;
+  image: string;
+  proof: LocalizedCopy;
+}
+
 const copy = (en: string, es: string, fr = en, zh = en): LocalizedCopy => ({ en, es, fr, zh });
 
 export const categoryCopy: Record<PortfolioCategory, LocalizedCopy> = {
@@ -379,6 +387,51 @@ export const PORTFOLIO_INVENTORY: InventoryItem[] = [
   inventoryItem(86, 'timeline-career-rebuild', 'Career evidence rebuild', 'Jul 2026', '2026 Q3', 'infrastructure', 'verified', 'Cross-source reconciliation of repositories, clients, products, writing, recordings and live surfaces.', 'Conciliación de repositorios, clientes, productos, escritura, grabaciones y sitios.', '86 classified entries, 249 public originals, 749 local Git roots and explicit known gaps.', '86 entradas, 249 originales públicos, 749 raíces Git y lagunas explícitas.'),
 ];
 
+export const LINKEDIN_MEDIA_ASSETS: LinkedInMediaAsset[] = [
+  {
+    id: 'linkedin-post03',
+    post: 'Post 3',
+    title: copy('China and multilingual communication', 'China y comunicación multilingüe', 'Chine et communication multilingue', '中国与多语言沟通'),
+    image: '/portfolio/linkedin-post03-china-multilingual-communication.png',
+    proof: copy('Generated from the verified career ledger: presenter/host background, Mandarin learning, ChinoTotal, soundscapes and tutoring artifacts. No private lesson screenshots or student data.', 'Generado desde el ledger verificado: experiencia como presentador, aprendizaje de mandarín, ChinoTotal, paisajes sonoros y materiales docentes. Sin capturas privadas ni datos de alumnos.'),
+  },
+  {
+    id: 'linkedin-post04',
+    post: 'Post 4',
+    title: copy('ChinoTotal education product', 'Producto educativo ChinoTotal', 'Produit éducatif ChinoTotal', 'ChinoTotal 教育产品'),
+    image: '/portfolio/chinototal-home.png',
+    proof: copy('Uses the public ChinoTotal site screenshot and ISBN-backed Mandarin-learning product evidence; no current user or revenue metric is inferred.', 'Usa la captura pública de ChinoTotal y evidencia del producto de mandarín con ISBN; no se infieren usuarios ni ingresos actuales.'),
+  },
+  {
+    id: 'linkedin-post12',
+    post: 'Post 12',
+    title: copy('WhatsApp and operational agents', 'WhatsApp y agentes operativos', 'WhatsApp et agents opérationnels', 'WhatsApp 与运营智能体'),
+    image: '/portfolio/linkedin-post12-whatsapp-operational-agents.png',
+    proof: copy('Repository/inventory-backed workflow media for WhatsApp MCP, GOWA and MessageFlow-style agents. It is not proof of a specific delivered message or conversion.', 'Visual respaldado por repositorios e inventario para WhatsApp MCP, GOWA y agentes tipo MessageFlow. No prueba un mensaje ni conversión concreta.'),
+  },
+  {
+    id: 'linkedin-post18',
+    post: 'Post 18',
+    title: copy('Voice agents and communications tooling', 'Agentes de voz y comunicaciones', 'Agents vocaux et communications', '语音智能体与通信工具'),
+    image: '/portfolio/linkedin-post18-voice-agents-communications.png',
+    proof: copy('Public-safe Telnyx and voice-agent engineering asset. Queue acceptance, phone numbers, call recordings and customer records are excluded.', 'Asset seguro para Telnyx e ingeniería de agentes de voz. Excluye colas como llamada completada, teléfonos, grabaciones y registros de clientes.'),
+  },
+  {
+    id: 'linkedin-post19',
+    post: 'Post 19',
+    title: copy('Recorded work evidence archive', 'Archivo de trabajo grabado', 'Archive de travail enregistré', '录制工作证据档案'),
+    image: '/portfolio/linkedin-post19-recorded-work-archive.png',
+    proof: copy('Aggregate only: 97 valid Meet Recording videos and approximately 110.83 hours inventoried. Content-level indexing is still incomplete.', 'Solo agregado: 97 vídeos válidos de Meet Recordings y aproximadamente 110,83 horas inventariadas. La indexación de contenido sigue incompleta.'),
+  },
+  {
+    id: 'linkedin-post20',
+    post: 'Post 20',
+    title: copy('Recipe intelligence workflow', 'Flujo de inteligencia de recetas', 'Flux d’intelligence recette', '菜谱智能工作流'),
+    image: '/portfolio/linkedin-post20-recipe-intelligence-workflow.png',
+    proof: copy('Verified 8 Jul 2026 discovery/design evidence for turning chef notes into researched, structured and multilingual recipe media. Not a shipped-product claim.', 'Evidencia de discovery/diseño del 8 jul 2026 para convertir notas de chef en recetas investigadas, estructuradas y multilingües. No es producto lanzado.'),
+  },
+];
+
 export const getInventoryCopy = (item: InventoryItem, language: LanguageCode) => ({
   summary: item.summary[language] || item.summary.en,
   source: item.source[language] || item.source.en,
@@ -387,4 +440,9 @@ export const getInventoryCopy = (item: InventoryItem, language: LanguageCode) =>
 export const getProjectCopy = (project: PortfolioProject, language: LanguageCode) => ({
   description: project.description[language] || project.description.en,
   proof: project.proof[language] || project.proof.en,
+});
+
+export const getLinkedInMediaAssetCopy = (asset: LinkedInMediaAsset, language: LanguageCode) => ({
+  title: asset.title[language] || asset.title.en,
+  proof: asset.proof[language] || asset.proof.en,
 });
