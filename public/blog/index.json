@@ -337,9 +337,9 @@
   {
     "slug": "ai-agents-automating-workflows",
     "path": "ai-agents-automating-workflows",
-    "title": "AI Agents Automating Business Workflows: Cut Manual Work by 70% in 2025",
+    "title": "AI Agents Automating Business Workflows: Practical Patterns for 2025",
     "date": "2025-01-15",
-    "summary": "Autonomous AI agents are eliminating 70% of manual workflows across sales, research, and development. Real examples: AutoClient (CRM automation), competitive analysis agents, and Devin (code generation). Includes LangChain implementation guide.",
+    "summary": "Autonomous AI agents can reduce repetitive work across sales, research, and development when they are tied to clear tools, logs, human review, and measurable workflows. Includes AutoClient-style CRM automation patterns and a LangChain implementation guide.",
     "author": "Sami Halawa",
     "tags": []
   },
