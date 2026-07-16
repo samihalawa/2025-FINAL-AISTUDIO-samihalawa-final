@@ -206,7 +206,7 @@ const Projects: React.FC = () => {
     { value: PORTFOLIO_INVENTORY.length, label: language === 'es' ? 'entradas clasificadas' : 'classified entries' },
     { value: 249, label: language === 'es' ? 'repositorios públicos originales' : 'public original repositories' },
     { value: 12, label: language === 'es' ? 'artículos públicos en Hugging Face' : 'public Hugging Face articles' },
-    { value: 108, label: language === 'es' ? 'archivos media de Meet válidos' : 'valid Meet media files' },
+    { value: 111, label: language === 'es' ? 'archivos media de Meet válidos' : 'valid Meet media files' },
   ];
 
   return (
