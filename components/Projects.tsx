@@ -5,10 +5,12 @@ import {
   LINKEDIN_MEDIA_ASSETS,
   PORTFOLIO_INVENTORY,
   PORTFOLIO_PROJECTS,
+  PROGRESSION_PLAN_STEPS,
   categoryCopy,
   getEvidenceGapCopy,
   getInventoryCopy,
   getLinkedInMediaAssetCopy,
+  getProgressionPlanStepCopy,
   getProjectCopy,
   inventoryLaneCopy,
   type InventoryLane,
@@ -46,6 +48,12 @@ const headings: Record<LanguageCode, {
   noResults: string;
   methodology: string;
   methodologyBody: string;
+  progressionEyebrow: string;
+  progressionTitle: string;
+  progressionBody: string;
+  progressionCurrent: string;
+  progressionAction: string;
+  progressionUnlocks: string;
   knownGaps: string;
   knownGapsBody: string;
   gapStatus: string;
@@ -78,6 +86,12 @@ const headings: Record<LanguageCode, {
     noResults: 'No entries match these filters.',
     methodology: 'How this was rebuilt',
     methodologyBody: 'Primary sources outrank summaries: repositories, direct contracts and messages, queried cashflow rows, official profiles, Drive files, recordings, store emails and current live surfaces. A proposal is not delivery; a contract is not acceptance; a reachable URL is not a product metric.',
+    progressionEyebrow: 'Next proof sequence',
+    progressionTitle: 'The remaining work is ordered so nothing gets missed.',
+    progressionBody: 'This is the public-safe execution plan behind the CV, Notion master, LinkedIn queue and site. Each step upgrades evidence before it upgrades claims.',
+    progressionCurrent: 'Current state',
+    progressionAction: 'Next proof action',
+    progressionUnlocks: 'What it unlocks',
     knownGaps: 'What is still missing',
     knownGapsBody: 'Deleted or transferred repositories, three unresolved old remote identities, three approximate local family matches, a GitHub public-gist surfacing mismatch, a capped Colab folder, unindexed recording contents, provider-level infrastructure exports, current app-store states, several client outcomes and LinkedIn Posts 2–20 scheduling proof remain open evidence gaps.',
     gapStatus: 'Current state',
@@ -110,6 +124,12 @@ const headings: Record<LanguageCode, {
     noResults: 'Ninguna entrada coincide con estos filtros.',
     methodology: 'Cómo se reconstruyó',
     methodologyBody: 'Las fuentes primarias mandan: repositorios, contratos y mensajes directos, movimientos consultados, perfiles oficiales, Drive, grabaciones, emails de tienda y sitios actuales. Una propuesta no es una entrega; un contrato no es aceptación; una URL accesible no es una métrica de producto.',
+    progressionEyebrow: 'Siguiente secuencia de pruebas',
+    progressionTitle: 'Lo pendiente queda ordenado para no perder nada.',
+    progressionBody: 'Este es el plan público detrás del CV, Notion master, cola de LinkedIn y sitio. Cada paso mejora la evidencia antes de mejorar los claims.',
+    progressionCurrent: 'Estado actual',
+    progressionAction: 'Siguiente prueba',
+    progressionUnlocks: 'Qué desbloquea',
     knownGaps: 'Qué sigue faltando',
     knownGapsBody: 'Siguen abiertos: repositorios borrados o transferidos, tres identidades remotas antiguas sin resolver, tres coincidencias locales aproximadas, la discrepancia de exposición pública de GitHub gists, Colab limitado, grabaciones sin indexar, inventarios de proveedores y tiendas, resultados de varios clientes y la prueba de programación de los Posts 2–20 de LinkedIn.',
     gapStatus: 'Estado actual',
@@ -131,6 +151,12 @@ const headings: Record<LanguageCode, {
     ledgerBody: 'Recherchez dans le registre complet ou filtrez par domaine et niveau de vérification.',
     search: 'Rechercher projets, clients, outils ou preuves', allLanes: 'Tous les domaines', allStatuses: 'Tous les états', verified: 'Vérifié', approximate: 'Approximatif', source: 'Source et limite', openSource: 'Ouvrir la source primaire', results: 'entrées correspondantes', noResults: 'Aucune entrée ne correspond.',
     methodology: 'Méthode de reconstruction', methodologyBody: 'Les sources primaires priment sur les résumés: dépôts, contrats et messages directs, données interrogées, profils officiels, Drive, enregistrements et surfaces en ligne.',
+    progressionEyebrow: 'Prochaine séquence de preuve',
+    progressionTitle: 'Le travail restant est ordonné pour ne rien perdre.',
+    progressionBody: 'Plan public derrière le CV, Notion, LinkedIn et le site. Chaque étape améliore les preuves avant les affirmations.',
+    progressionCurrent: 'État actuel',
+    progressionAction: 'Prochaine preuve',
+    progressionUnlocks: 'Ce que cela débloque',
     knownGaps: 'Ce qui manque encore', knownGapsBody: 'Dépôts supprimés ou transférés, trois anciennes identités distantes non résolues, trois correspondances locales approximatives, écart d’exposition publique des gists GitHub, Colab, enregistrements, inventaires fournisseurs, états des stores, résultats clients et preuve de planification des posts LinkedIn 2–20 restent ouverts.',
     gapStatus: 'État actuel',
     gapNextStep: 'Prochaine preuve',
@@ -143,6 +169,12 @@ const headings: Record<LanguageCode, {
     proof: '打开证据', boundary: '证据边界', ledgerEyebrow: '完整时间线', ledgerTitle: '86 条分类记录，没有静默遗漏。', ledgerBody: '搜索完整证据账本，或按工作类型和验证状态筛选。',
     search: '搜索项目、客户、工具或证据', allLanes: '全部类型', allStatuses: '全部状态', verified: '已验证', approximate: '近似/待确认', source: '来源边界', openSource: '打开主要来源', results: '条匹配记录', noResults: '没有符合筛选条件的记录。',
     methodology: '重建方法', methodologyBody: '主要来源优先于摘要：仓库、合同与直接消息、查询数据、官方资料、Drive、录音、商店邮件和当前线上页面。',
+    progressionEyebrow: '下一步证据序列',
+    progressionTitle: '剩余工作按顺序推进，避免遗漏。',
+    progressionBody: '这是 CV、Notion、LinkedIn 队列和网站背后的公开安全执行计划；每一步先升级证据，再升级对外说法。',
+    progressionCurrent: '当前状态',
+    progressionAction: '下一步证据',
+    progressionUnlocks: '可解锁内容',
     knownGaps: '仍缺少的证据', knownGapsBody: '已删除或转移的仓库、3 个未解决的旧远程身份、3 个近似本地项目匹配、GitHub 公开 gist 展示不一致、Colab、录音索引、基础设施与商店清单、客户结果，以及 LinkedIn 第 2–20 条帖子的排期证明仍需补全。',
     gapStatus: '当前状态',
     gapNextStep: '下一步证据',
@@ -174,7 +206,7 @@ const Projects: React.FC = () => {
     { value: PORTFOLIO_INVENTORY.length, label: language === 'es' ? 'entradas clasificadas' : 'classified entries' },
     { value: 249, label: language === 'es' ? 'repositorios públicos originales' : 'public original repositories' },
     { value: 12, label: language === 'es' ? 'artículos públicos en Hugging Face' : 'public Hugging Face articles' },
-    { value: 97, label: language === 'es' ? 'grabaciones de Meet censadas' : 'Meet recordings inventoried' },
+    { value: 108, label: language === 'es' ? 'archivos media de Meet válidos' : 'valid Meet media files' },
   ];
 
   return (
@@ -232,6 +264,39 @@ const Projects: React.FC = () => {
                   <div className="mt-4 rounded-xl bg-white p-4">
                     <div className="text-[11px] font-bold uppercase tracking-[.14em] text-slate-500">{h.boundary}</div>
                     <p className="mt-1 text-sm leading-relaxed text-slate-600">{c.proof}</p>
+                  </div>
+                </div>
+              </article>;
+            })}
+          </div>
+        </div>
+
+        <div id="progression-plan" className="scroll-mt-28 mt-24 rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-10">
+          <div className="max-w-4xl">
+            <span className="badge-pill">{h.progressionEyebrow}</span>
+            <h2 className="mt-5 font-display text-4xl font-bold tracking-[-.045em] text-slate-950 sm:text-5xl">{h.progressionTitle}</h2>
+            <p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-600">{h.progressionBody}</p>
+          </div>
+          <div className="mt-8 space-y-4">
+            {PROGRESSION_PLAN_STEPS.map(step => {
+              const c = getProgressionPlanStepCopy(step, language);
+              return <article key={step.id} className="grid gap-5 rounded-2xl border border-slate-200 bg-slate-50 p-5 sm:p-6 lg:grid-cols-[5rem_1fr]">
+                <div className="font-display text-4xl font-bold tracking-[-.05em] text-brand-700">{String(step.order).padStart(2, '0')}</div>
+                <div>
+                  <h3 className="text-xl font-bold text-slate-950">{c.title}</h3>
+                  <div className="mt-5 grid gap-4 md:grid-cols-3">
+                    <div>
+                      <div className="text-[11px] font-bold uppercase tracking-[.14em] text-slate-500">{h.progressionCurrent}</div>
+                      <p className="mt-1 text-sm leading-relaxed text-slate-600">{c.currentState}</p>
+                    </div>
+                    <div>
+                      <div className="text-[11px] font-bold uppercase tracking-[.14em] text-brand-700">{h.progressionAction}</div>
+                      <p className="mt-1 text-sm leading-relaxed text-slate-700">{c.nextProofAction}</p>
+                    </div>
+                    <div>
+                      <div className="text-[11px] font-bold uppercase tracking-[.14em] text-emerald-700">{h.progressionUnlocks}</div>
+                      <p className="mt-1 text-sm leading-relaxed text-slate-600">{c.unlocks}</p>
+                    </div>
                   </div>
                 </div>
               </article>;

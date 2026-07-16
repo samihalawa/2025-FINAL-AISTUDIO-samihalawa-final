@@ -49,6 +49,15 @@ export interface EvidenceGap {
   nextStep: LocalizedCopy;
 }
 
+export interface ProgressionPlanStep {
+  id: string;
+  order: number;
+  title: LocalizedCopy;
+  currentState: LocalizedCopy;
+  nextProofAction: LocalizedCopy;
+  unlocks: LocalizedCopy;
+}
+
 const copy = (en: string, es: string, fr = en, zh = en): LocalizedCopy => ({ en, es, fr, zh });
 
 export const categoryCopy: Record<PortfolioCategory, LocalizedCopy> = {
@@ -484,6 +493,57 @@ export const EVIDENCE_GAPS: EvidenceGap[] = [
   },
 ];
 
+export const PROGRESSION_PLAN_STEPS: ProgressionPlanStep[] = [
+  {
+    id: 'recording-index',
+    order: 1,
+    title: copy('Index the recording archive by claim', 'Indexar las grabaciones por claim', 'Indexer les enregistrements par preuve', '按主张索引录制档案'),
+    currentState: copy('108 valid media files / approximately 122.07 hours are verified at file level; 267 sidecars and 3 timed-out candidates remain to process.', '108 archivos válidos / unas 122,07 horas están verificados a nivel de archivo; quedan 267 sidecars y 3 candidatos con timeout.'),
+    nextProofAction: copy('Re-probe the three timed-out files, convert/read sidecars and map recordings to project, date, participants, transcript status and public-safe claim.', 'Reintentar los tres archivos con timeout, leer sidecars y mapear cada grabación a proyecto, fecha, participantes, transcripción y claim público seguro.'),
+    unlocks: copy('Stronger evidence for Valerio/Umbramed, Chinese lessons, IWAKY, recipe intelligence, INTLAW and recorded product work.', 'Evidencia más fuerte para Valerio/Umbramed, clases de chino, IWAKY, recetas inteligentes, INTLAW y trabajo de producto grabado.'),
+  },
+  {
+    id: 'youtube-tutorials',
+    order: 2,
+    title: copy('Enumerate YouTube and tutorial evidence', 'Enumerar YouTube y tutoriales', 'Énumérer YouTube et les tutoriels', '枚举 YouTube 与教程证据'),
+    currentState: copy('Tutorials and channels are known leads, but the video catalogue is not yet directly enumerated in the master ledger.', 'Los tutoriales y canales son leads conocidos, pero el catálogo de vídeos aún no está enumerado directamente.'),
+    nextProofAction: copy('Read owned/relevant channels, videos, playlists, dates, thumbnails and URLs; map each tutorial to the matching project family.', 'Leer canales, vídeos, playlists, fechas, miniaturas y URLs; mapear cada tutorial a su familia de proyecto.'),
+    unlocks: copy('More complete education, AutoClient, agent-workflow and public communication posts.', 'Posts más completos sobre educación, AutoClient, agentes y comunicación pública.'),
+  },
+  {
+    id: 'client-outcomes',
+    order: 3,
+    title: copy('Separate client proposal, payment, delivery and outcome proof', 'Separar propuesta, pago, entrega y resultado de clientes', 'Séparer proposition, paiement, livraison et résultat client', '区分客户提案、付款、交付与结果证据'),
+    currentState: copy('Contracts, proposals and cashflow rows exist, but several outcomes and acceptance states are still intentionally unclaimed.', 'Existen contratos, propuestas y pagos, pero varios resultados y aceptaciones siguen sin afirmarse.'),
+    nextProofAction: copy('For IWAKY, INTLAW, San Martín, SORT, Scope/Fernando, Umbramed, Valerio and Light Funnels, fill proposal/contract/payment/delivery/acceptance/live/outcome columns from primary sources.', 'Para IWAKY, INTLAW, San Martín, SORT, Scope/Fernando, Umbramed, Valerio y Light Funnels, completar columnas de propuesta/contrato/pago/entrega/aceptación/live/resultado con fuentes primarias.'),
+    unlocks: copy('Case studies that are stronger without overclaiming.', 'Casos de estudio más fuertes sin exagerar.'),
+  },
+  {
+    id: 'provider-store-state',
+    order: 4,
+    title: copy('Refresh provider and store states', 'Actualizar proveedores y tiendas', 'Rafraîchir fournisseurs et stores', '刷新提供商与应用商店状态'),
+    currentState: copy('Known domains and products are listed, but app-store and infrastructure states can drift quickly.', 'Los dominios y productos conocidos están listados, pero tiendas e infraestructura cambian rápido.'),
+    nextProofAction: copy('Read App Store Connect, Play Console, Coolify, Cloudflare, Vercel, Netlify, Google Cloud and relevant dashboards directly before publishing any current status.', 'Leer App Store Connect, Play Console, Coolify, Cloudflare, Vercel, Netlify, Google Cloud y paneles relevantes antes de publicar estados actuales.'),
+    unlocks: copy('Current release/deploy status for OULANG, AutoDate, PIME, Agents AI, Huatong, OUPIN and related products.', 'Estado actual de release/deploy para OULANG, AutoDate, PIME, Agents AI, Huatong, OUPIN y productos relacionados.'),
+  },
+  {
+    id: 'history-expansion',
+    order: 5,
+    title: copy('Deepen Notion, Gmail, Drive and conversation-history recovery', 'Profundizar Notion, Gmail, Drive e historiales', 'Approfondir Notion, Gmail, Drive et historiques', '深化 Notion、Gmail、Drive 与会话历史恢复'),
+    currentState: copy('Targeted searches recovered the main 86-entry chronology; exhaustive page/message-level reconciliation is still open.', 'Las búsquedas dirigidas recuperaron la cronología principal de 86 entradas; la conciliación exhaustiva por página/mensaje sigue abierta.'),
+    nextProofAction: copy('Query by project/client names and date windows; promote only leads backed by primary pages, messages, files, repositories or recordings.', 'Buscar por proyecto/cliente y fechas; promover solo leads respaldados por páginas, mensajes, archivos, repositorios o grabaciones primarias.'),
+    unlocks: copy('Smaller private/local projects and corrected scopes without letting summaries become facts.', 'Proyectos privados/locales menores y alcances corregidos sin convertir resúmenes en hechos.'),
+  },
+  {
+    id: 'publish-readback',
+    order: 6,
+    title: copy('Publish only after same-layer read-back', 'Publicar solo con read-back de la misma capa', 'Publier seulement après relecture au bon niveau', '仅在同层回读后发布'),
+    currentState: copy('CV, Notion and site are live snapshots; LinkedIn Posts 2–20 remain drafted and unscheduled.', 'CV, Notion y sitio son snapshots activos; los Posts 2–20 de LinkedIn siguen como borradores sin programar.'),
+    nextProofAction: copy('After proof upgrades, regenerate CV/PDF/ATS, update Notion in place, deploy the site and schedule LinkedIn only after explicit confirmation; read each surface back.', 'Tras mejorar pruebas, regenerar CV/PDF/ATS, actualizar Notion en el mismo page, desplegar el sitio y programar LinkedIn solo con confirmación explícita; leer cada superficie después.'),
+    unlocks: copy('A complete public profile that remains evidence-backed instead of just bigger.', 'Un perfil público completo que sigue respaldado por evidencia en vez de solo ser más grande.'),
+  },
+];
+
 export const getInventoryCopy = (item: InventoryItem, language: LanguageCode) => ({
   summary: item.summary[language] || item.summary.en,
   source: item.source[language] || item.source.en,
@@ -503,4 +563,11 @@ export const getEvidenceGapCopy = (gap: EvidenceGap, language: LanguageCode) => 
   title: gap.title[language] || gap.title.en,
   status: gap.status[language] || gap.status.en,
   nextStep: gap.nextStep[language] || gap.nextStep.en,
+});
+
+export const getProgressionPlanStepCopy = (step: ProgressionPlanStep, language: LanguageCode) => ({
+  title: step.title[language] || step.title.en,
+  currentState: step.currentState[language] || step.currentState.en,
+  nextProofAction: step.nextProofAction[language] || step.nextProofAction.en,
+  unlocks: step.unlocks[language] || step.unlocks.en,
 });
