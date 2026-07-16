@@ -65,7 +65,7 @@ const headings: Record<LanguageCode, {
     methodology: 'How this was rebuilt',
     methodologyBody: 'Primary sources outrank summaries: repositories, direct contracts and messages, queried cashflow rows, official profiles, Drive files, recordings, store emails and current live surfaces. A proposal is not delivery; a contract is not acceptance; a reachable URL is not a product metric.',
     knownGaps: 'What is still missing',
-    knownGapsBody: 'Private or transferred repositories, 302 unresolved local project identities, conflicting gist counters, a capped Colab folder, unindexed recording contents, provider-level infrastructure exports, current app-store states, several client outcomes and LinkedIn read-back remain open evidence gaps.',
+    knownGapsBody: 'Deleted or transferred repositories, three unresolved old remote identities, three approximate local family matches, conflicting gist counters, a capped Colab folder, unindexed recording contents, provider-level infrastructure exports, current app-store states, several client outcomes and LinkedIn Posts 2–20 scheduling proof remain open evidence gaps.',
   },
   es: {
     eyebrow: 'Portfolio con evidencia · 2023–hoy',
@@ -91,7 +91,7 @@ const headings: Record<LanguageCode, {
     methodology: 'Cómo se reconstruyó',
     methodologyBody: 'Las fuentes primarias mandan: repositorios, contratos y mensajes directos, movimientos consultados, perfiles oficiales, Drive, grabaciones, emails de tienda y sitios actuales. Una propuesta no es una entrega; un contrato no es aceptación; una URL accesible no es una métrica de producto.',
     knownGaps: 'Qué sigue faltando',
-    knownGapsBody: 'Siguen abiertos: repositorios privados o transferidos, 302 identidades locales sin resolver, contadores de gists en conflicto, Colab limitado, grabaciones sin indexar, inventarios de proveedores y tiendas, resultados de varios clientes y la lectura final de LinkedIn.',
+    knownGapsBody: 'Siguen abiertos: repositorios borrados o transferidos, tres identidades remotas antiguas sin resolver, tres coincidencias locales aproximadas, contadores de gists en conflicto, Colab limitado, grabaciones sin indexar, inventarios de proveedores y tiendas, resultados de varios clientes y la prueba de programación de los Posts 2–20 de LinkedIn.',
   },
   fr: {
     eyebrow: 'Portfolio avec preuves · 2023–aujourd’hui',
@@ -105,7 +105,7 @@ const headings: Record<LanguageCode, {
     ledgerBody: 'Recherchez dans le registre complet ou filtrez par domaine et niveau de vérification.',
     search: 'Rechercher projets, clients, outils ou preuves', allLanes: 'Tous les domaines', allStatuses: 'Tous les états', verified: 'Vérifié', approximate: 'Approximatif', source: 'Source et limite', openSource: 'Ouvrir la source primaire', results: 'entrées correspondantes', noResults: 'Aucune entrée ne correspond.',
     methodology: 'Méthode de reconstruction', methodologyBody: 'Les sources primaires priment sur les résumés: dépôts, contrats et messages directs, données interrogées, profils officiels, Drive, enregistrements et surfaces en ligne.',
-    knownGaps: 'Ce qui manque encore', knownGapsBody: 'Dépôts privés, identités locales non résolues, compteurs de gists, Colab, enregistrements, inventaires fournisseurs, états des stores, résultats clients et LinkedIn restent ouverts.',
+    knownGaps: 'Ce qui manque encore', knownGapsBody: 'Dépôts supprimés ou transférés, trois anciennes identités distantes non résolues, trois correspondances locales approximatives, compteurs de gists, Colab, enregistrements, inventaires fournisseurs, états des stores, résultats clients et preuve de planification des posts LinkedIn 2–20 restent ouverts.',
   },
   zh: {
     eyebrow: '证据作品集 · 2023–今天', title: '完整工作记录，并明确区分每种证据的含义。',
@@ -114,7 +114,7 @@ const headings: Record<LanguageCode, {
     proof: '打开证据', boundary: '证据边界', ledgerEyebrow: '完整时间线', ledgerTitle: '86 条分类记录，没有静默遗漏。', ledgerBody: '搜索完整证据账本，或按工作类型和验证状态筛选。',
     search: '搜索项目、客户、工具或证据', allLanes: '全部类型', allStatuses: '全部状态', verified: '已验证', approximate: '近似/待确认', source: '来源边界', openSource: '打开主要来源', results: '条匹配记录', noResults: '没有符合筛选条件的记录。',
     methodology: '重建方法', methodologyBody: '主要来源优先于摘要：仓库、合同与直接消息、查询数据、官方资料、Drive、录音、商店邮件和当前线上页面。',
-    knownGaps: '仍缺少的证据', knownGapsBody: '私有仓库、本地项目身份、gist 计数、Colab、录音索引、基础设施与商店清单、客户结果和 LinkedIn 仍需补全。',
+    knownGaps: '仍缺少的证据', knownGapsBody: '已删除或转移的仓库、3 个未解决的旧远程身份、3 个近似本地项目匹配、gist 计数、Colab、录音索引、基础设施与商店清单、客户结果，以及 LinkedIn 第 2–20 条帖子的排期证明仍需补全。',
   },
 };
 
