@@ -111,7 +111,7 @@ CHRONOLOGICAL PROJECT INDEX | 2023-2026
 OPEN SOURCE, WRITING AND TEACHING
 - Twelve public Hugging Face articles cover browser automation, local Transformers.js, prompting, autonomous-agent repositories, AutoGen, lead generation and VUDA.
 - Direct Colab audit observed at least 112 folder rows and at least 58 meaningfully named notebooks; the primary folder hit the 100-row connector cap.
-- Public youtube.com/@autoclient-ai enumeration currently exposes 373 videos / approximately 159.65 hours, including verified AI and After Effects tutorials; no subscriber, watch-time or learner-outcome total is claimed without YouTube Studio/provider verification.
+- Public youtube.com/@autoclient-ai enumeration currently exposes 373 videos / approximately 159.65 hours. Public playlist reads verify AI-course, After Effects, Portfolio and AutoPricing surfaces while separating curated/external entries; no subscriber, watch-time or learner-outcome total is claimed without YouTube Studio/provider verification.
 - Author: ChinoTotal: Aprende Chino Mandarín desde 0, ISBN 9798873249237.
 
 EDUCATION

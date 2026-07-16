@@ -93,7 +93,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   {
     id: 'autoclient', name: 'AutoClient', period: '2024–present', category: 'platforms',
     description: copy('Agentic research, enrichment, scoring, personalised outreach and CRM follow-up across email, WhatsApp and voice.', 'Investigación agéntica, enriquecimiento, scoring, contacto personalizado y CRM por email, WhatsApp y voz.'),
-    proof: copy('Public repositories and a current @autoclient-ai public catalogue snapshot: 373 videos / approximately 159.65 hours, including verified AI and After Effects tutorials', 'Repositorios públicos y una instantánea pública actual de @autoclient-ai: 373 vídeos / aproximadamente 159,65 horas, incluidos tutoriales verificados de IA y After Effects'),
+    proof: copy('Public repositories plus a current @autoclient-ai public catalogue snapshot: 373 videos / approximately 159.65 hours, with playlist-verified AI-course, After Effects, Portfolio and AutoPricing surfaces', 'Repositorios públicos y una instantánea pública actual de @autoclient-ai: 373 vídeos / aproximadamente 159,65 horas, con playlists verificadas de curso de IA, After Effects, Portfolio y AutoPricing'),
     tags: ['Agents', 'CRM', 'Outreach', 'Voice'], href: 'https://www.youtube.com/@autoclient-ai'
   },
   {
@@ -506,8 +506,8 @@ export const PROGRESSION_PLAN_STEPS: ProgressionPlanStep[] = [
     id: 'youtube-tutorials',
     order: 2,
     title: copy('Enumerate YouTube and tutorial evidence', 'Enumerar YouTube y tutoriales', 'Énumérer YouTube et les tutoriels', '枚举 YouTube 与教程证据'),
-    currentState: copy('The public @autoclient-ai videos surface is now enumerated: 373 public videos / approximately 159.65 hours. Subscriber count, Studio ownership, private/unlisted videos and playlist-level course mapping remain open.', 'La superficie pública de vídeos @autoclient-ai ya está enumerada: 373 vídeos públicos / aproximadamente 159,65 horas. Quedan pendientes suscriptores, propiedad en Studio, vídeos privados/no listados y mapeo por playlist.'),
-    nextProofAction: copy('Read playlists directly, map each tutorial to its project family, and use authenticated YouTube Studio only for subscriber, ownership or analytics claims.', 'Leer playlists directamente, mapear cada tutorial a su familia de proyecto y usar YouTube Studio autenticado solo para suscriptores, propiedad o métricas.'),
+    currentState: copy('The public @autoclient-ai videos surface is now enumerated: 373 public videos / approximately 159.65 hours. Six public playlists are mapped at current-channel-match level; subscriber count, Studio ownership, private/unlisted videos and per-video thumbnail/page review remain open.', 'La superficie pública de vídeos @autoclient-ai ya está enumerada: 373 vídeos públicos / aproximadamente 159,65 horas. Seis playlists públicas están mapeadas a nivel de coincidencia con el canal actual; quedan pendientes suscriptores, propiedad en Studio, vídeos privados/no listados y revisión de página/miniatura por vídeo.'),
+    nextProofAction: copy('Deep-read each playlist video page and thumbnail before using it in public posts; keep curated/external entries separate from owned-channel matches and use Studio only for subscriber, ownership or analytics claims.', 'Leer cada página y miniatura de vídeo antes de usarla en posts públicos; separar entradas curadas/externas de coincidencias del canal propio y usar Studio solo para suscriptores, propiedad o métricas.'),
     unlocks: copy('More complete education, AutoClient, agent-workflow and public communication posts.', 'Posts más completos sobre educación, AutoClient, agentes y comunicación pública.'),
   },
   {

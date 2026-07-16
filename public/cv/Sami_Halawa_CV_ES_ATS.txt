@@ -111,7 +111,7 @@ INVESTIGACIÓN APLICADA, PROTOTIPOS Y EDUCACIÓN
 OPEN SOURCE, ESCRITURA Y DOCENCIA
 - Doce artículos públicos en Hugging Face: automatización de navegador, Transformers.js local, prompting, repositorios de agentes autónomos, AutoGen, lead generation y VUDA.
 - Auditoría Colab: al menos 112 filas y 58 notebooks con nombres significativos; la carpeta principal alcanzó el límite de 100 filas del conector.
-- La enumeración pública de youtube.com/@autoclient-ai muestra actualmente 373 vídeos / aproximadamente 159,65 horas, incluidos tutoriales verificados de IA y After Effects; no se afirma cifra de suscriptores, watch time ni resultados de alumnos sin verificación de YouTube Studio/proveedor.
+- La enumeración pública de youtube.com/@autoclient-ai muestra actualmente 373 vídeos / aproximadamente 159,65 horas. Las playlists públicas verifican superficies de curso de IA, After Effects, Portfolio y AutoPricing separando entradas curadas/externas; no se afirma cifra de suscriptores, watch time ni resultados de alumnos sin verificación de YouTube Studio/proveedor.
 - Autor: ChinoTotal: Aprende Chino Mandarín desde 0, ISBN 9798873249237.
 
 EDUCACIÓN
