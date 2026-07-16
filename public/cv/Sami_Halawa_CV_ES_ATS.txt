@@ -35,7 +35,7 @@ Fundador e Ingeniero de Producto IA | Agents AI Ltd | Madrid / Londres | Julio 2
 Profesor de IA y Consultor Técnico Independiente | Madrid / Remoto | 2022-Actualidad
 - Enseño IA práctica, agentes, MCP, automatización, Python e ingeniería de producto mediante aplicaciones reales, construcción en directo y programas técnicos.
 - Convierto necesidades de negocio en sistemas para profesionales y equipos en español, inglés y mandarín.
-- Mantengo un archivo verificado por fichero de 111 archivos multimedia y aproximadamente 125,83 horas; solo grabaciones dirigidas han sido indexadas por contenido.
+- Mantengo un archivo verificado por fichero de 111 archivos multimedia y aproximadamente 125,83 horas; 14 sidecars de Google, 7 transcripciones locales de Valerio/Umbramed, 8 chats locales de Valerio/Umbramed y 4 chats locales raíz han sido leídos hasta ahora (6 transcripciones locales de Valerio, 1 chat local de Valerio y 1 sidecar de inteligencia de recetas son sustantivos).
 
 Ingeniero Full-Stack Sénior | Damehosting | 2019-2023
 - Desarrollo y mantenimiento de sistemas web de producción.
@@ -93,7 +93,7 @@ INVESTIGACIÓN APLICADA, PROTOTIPOS Y EDUCACIÓN
 - APOLO, 2025: modelo público imagen-texto en Hugging Face basado en DeepSeek-VL2-tiny; investigación/prototipo, no validación clínica.
 - AutoRad, 2025: radiología en estado Backlog de Notion; cifras de financiación, patentes, readiness y mejora siguen como planes no verificados.
 - AutoIOL y oftalmología, 2024-2026: imagen, OCT, seguimiento e informes con revisión humana; sin adopción ni resultados clínicos.
-- Inteligencia de recetas, 2026: discovery para notas/fotos de chef, investigación web, técnica, publicación multilingüe y vídeos opcionales.
+- Inteligencia de recetas, 2026: sidecar de Meet del 8 jul verificado para notas/fotos de chef, investigación agéntica web/vídeo, técnica, vistas chef/usuario, publicación multilingüe y vídeos opcionales; sin producto lanzado, pago, tráfico ni ingresos.
 - SONMADE, 2026: prototipo React/TypeScript, FFmpeg y Sharp para escenas/highlights por movimiento, color, borde/texto y fullscreen.
 - AutoCrypto, 2024: exploración de automatización cripto; sin retornos, capital, usuarios o regulación afirmados.
 - Curso de arquitectura de agentes, 2025: programa directo de 15 horas sobre fundamentos, herramientas, memoria, multiagente, RAG, despliegue y observabilidad; fechas/resultados no inventados.
