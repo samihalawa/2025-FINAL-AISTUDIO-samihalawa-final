@@ -26,7 +26,7 @@ PROFESSIONAL EXPERIENCE
 
 Founder and AI Product Engineer | Agents AI Ltd | Madrid / London | July 2025-Present
 - Own product discovery, architecture, implementation, deployment, analytics, monetisation and operational handover across founder-led and B2B systems.
-- Built OULANG (欧浪AI) as a live multilingual web marketplace/local-life product and continued its iOS/Android repositories, store workflows, search, payments, SEO, analytics and native-parity work. Provider metrics and exact store stages are kept separately timestamped.
+- Built OULANG (欧浪AI) as a live multilingual web marketplace/local-life product with public App Store / Google Play listing pages under the legacy com.oulang.classifieds identity, while continuing the separate oulang.app native-wrapper workflow. Provider metrics and exact console stages are kept separately timestamped.
 - Extended the product ecosystem into Huatong for Chinese communities across Europe, OUPIN for AI-assisted discovery and PIME.ai for productised AI services.
 - Built AutoClient and research, enrichment, CRM, email, WhatsApp and voice-agent systems; published reusable MCP and developer tooling.
 - Delivered pricing-intelligence and evidence-report workflows combining marketplace data, product matching, price history and inventory or ERP inputs.

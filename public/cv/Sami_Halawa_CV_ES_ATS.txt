@@ -26,7 +26,7 @@ EXPERIENCIA PROFESIONAL
 
 Fundador e Ingeniero de Producto IA | Agents AI Ltd | Madrid / Londres | Julio 2025-Actualidad
 - Responsable de discovery, arquitectura, implementación, despliegue, analítica, monetización y entrega operativa en productos propios y B2B.
-- Construí OULANG (欧浪AI) como marketplace/vida local web multilingüe activo y continué sus repositorios iOS/Android, flujos de tienda, búsqueda, pagos, SEO, analítica y paridad nativa. Métricas de proveedor y etapas exactas de tienda se mantienen fechadas por separado.
+- Construí OULANG (欧浪AI) como marketplace/vida local web multilingüe activo con páginas públicas en App Store / Google Play bajo la identidad heredada com.oulang.classifieds, mientras continuaba el flujo nativo separado de oulang.app. Métricas de proveedor y etapas exactas de consola se mantienen fechadas por separado.
 - Extendí el ecosistema a Huatong para comunidades chinas en Europa, OUPIN para discovery asistido y PIME.ai para servicios de IA productizados.
 - Construí AutoClient y sistemas de investigación, enriquecimiento, CRM, email, WhatsApp y agentes de voz; publiqué herramientas MCP reutilizables.
 - Entregué flujos de inteligencia de precios e informes de evidencia con marketplaces, matching, histórico de precios e inventario o ERP.
@@ -132,4 +132,4 @@ ROLES OBJETIVO
 Founding AI Engineer | AI Product Engineer | AI Platform Lead | Head of AI | Staff AI Engineer | Technical Product Lead
 
 FRONTERA DE EVIDENCIA
-Esta versión ATS deriva del ledger de 86 entradas actualizado el 16 de julio de 2026. Separa estados activo, TestFlight, propuesta, contrato, pago, repositorio, desplegado y aceptado. Excluye patentes, validación clínica, ingresos, audiencia, app stores, recuentos de infraestructura y métricas de producto sin prueba actual. El CV maestro con foto y la cronología buscable están en samihalawa.com/cv y samihalawa.com/projects.
+Esta versión ATS deriva del ledger de 86 entradas actualizado el 16 de julio de 2026. Separa estados activo, TestFlight, propuesta, contrato, pago, repositorio, desplegado y aceptado. Excluye patentes, validación clínica, ingresos, audiencia, métricas/estados de consola de app stores, recuentos amplios de infraestructura y métricas de producto sin prueba actual. El CV maestro con foto y la cronología buscable están en samihalawa.com/cv y samihalawa.com/projects.

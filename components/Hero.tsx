@@ -11,7 +11,7 @@ const content: Record<LanguageCode, {
     title: 'I build the complete product around AI.',
     intro: 'From agents and data pipelines to the interface, mobile release, deployment, analytics and customer operations. The work here is shown with real products, timestamped evidence and explicit gaps.',
     work: 'Explore the work', cv: 'Open complete CV', available: 'Open to founding and platform roles',
-    proofTitle: 'Current public proof', proofBody: 'OULANG is live on the web with current native repositories and store workflows. VUDA reached 80 GitHub stars. Public work spans 249 non-fork repositories and 12 Hugging Face articles.',
+    proofTitle: 'Current public proof', proofBody: 'OULANG is live on the web and has public App Store / Google Play listing pages under its legacy store identity. VUDA reached 80 GitHub stars. Public work spans 249 non-fork repositories and 12 Hugging Face articles.',
     now: 'Now building', building: ['Multilingual marketplaces', 'MCP and operational agents', 'Voice, pricing and evidence systems'],
     stats: [{ value: '86', label: 'evidence-classified project entries' }, { value: '249', label: 'public non-fork repositories' }, { value: '80★', label: 'VUDA on GitHub' }, { value: '12', label: 'Hugging Face articles' }]
   },
@@ -20,7 +20,7 @@ const content: Record<LanguageCode, {
     title: 'Construyo el producto completo alrededor de la IA.',
     intro: 'Desde agentes y datos hasta interfaz, app móvil, despliegue, analítica y operaciones. Aquí el trabajo se demuestra con productos reales, evidencia fechada y lagunas explícitas.',
     work: 'Ver proyectos', cv: 'Abrir CV completo', available: 'Disponible para roles founding y de plataforma',
-    proofTitle: 'Prueba pública actual', proofBody: 'OULANG está activo en web con repositorios nativos y flujos de tienda actuales. VUDA alcanzó 80 estrellas. El trabajo público incluye 249 repositorios propios y 12 artículos en Hugging Face.',
+    proofTitle: 'Prueba pública actual', proofBody: 'OULANG está activo en web y tiene páginas públicas en App Store / Google Play bajo su identidad heredada de tienda. VUDA alcanzó 80 estrellas. El trabajo público incluye 249 repositorios propios y 12 artículos en Hugging Face.',
     now: 'Construyendo ahora', building: ['Marketplaces multilingües', 'MCP y agentes operativos', 'Voz, pricing y sistemas de evidencia'],
     stats: [{ value: '86', label: 'entradas de proyectos con evidencia' }, { value: '249', label: 'repositorios propios públicos' }, { value: '80★', label: 'VUDA en GitHub' }, { value: '12', label: 'artículos en Hugging Face' }]
   },
@@ -29,7 +29,7 @@ const content: Record<LanguageCode, {
     title: 'Je construis le produit complet autour de l’IA.',
     intro: 'Des agents et données à l’interface, au mobile, au déploiement, à l’analytique et aux opérations. Chaque preuve est liée à un produit réel.',
     work: 'Voir les projets', cv: 'Ouvrir le CV complet', available: 'Ouvert aux rôles founding et plateforme',
-    proofTitle: 'Preuves publiques actuelles', proofBody: 'OULANG est en ligne sur le web avec des dépôts natifs et des flux de store actuels. VUDA compte 80 étoiles. Le travail public couvre 249 dépôts non-forks et 12 articles Hugging Face.',
+    proofTitle: 'Preuves publiques actuelles', proofBody: 'OULANG est en ligne sur le web et dispose de pages publiques App Store / Google Play sous son identité store historique. VUDA compte 80 étoiles. Le travail public couvre 249 dépôts non-forks et 12 articles Hugging Face.',
     now: 'En cours', building: ['Marketplaces multilingues', 'MCP et agents opérationnels', 'Voix, pricing et systèmes de preuve'],
     stats: [{ value: '86', label: 'entrées de projets classées' }, { value: '249', label: 'dépôts publics non-forks' }, { value: '80★', label: 'VUDA sur GitHub' }, { value: '12', label: 'articles Hugging Face' }]
   },
@@ -38,7 +38,7 @@ const content: Record<LanguageCode, {
     title: '我构建围绕 AI 的完整产品系统。',
     intro: '从智能体与数据管道，到界面、移动端发布、部署、分析和客户运营。这里展示真实产品、注明日期的数据和公开证据。',
     work: '查看项目', cv: '打开完整简历', available: '开放创始工程师与平台岗位',
-    proofTitle: '当前公开证据', proofBody: 'OULANG Web 端已上线，并有当前原生仓库与商店流程。VUDA 获得 80 个 GitHub 星标。公开工作包括 249 个非 fork 仓库和 12 篇 Hugging Face 文章。',
+    proofTitle: '当前公开证据', proofBody: 'OULANG Web 端已上线，并在旧商店身份下拥有公开 App Store / Google Play 页面。VUDA 获得 80 个 GitHub 星标。公开工作包括 249 个非 fork 仓库和 12 篇 Hugging Face 文章。',
     now: '正在构建', building: ['多语言市场平台', 'MCP 与运营智能体', '语音、定价与证据系统'],
     stats: [{ value: '86', label: '证据分类项目记录' }, { value: '249', label: '公开非 fork 仓库' }, { value: '80★', label: 'VUDA GitHub' }, { value: '12', label: 'Hugging Face 文章' }]
   }
