@@ -1,10 +1,21 @@
 # INDEX
 
+public portfolio content boundary | internal evidence debt and next-proof instructions appeared as visitor content | keep validation in the repo ledger and publish product value, scope and links | do not render agent checklists, provider backlog or proof-debt panels | verify public-copy grep plus rendered home/projects/case-studies/CV
 portfolio evidence propagation | fixing /projects left stale OULANG and Hugging Face claims in Hero, evidence cards and downloadable ATS text | sweep every public component and CV asset for the same claim strings | do not treat one route or data file as the complete claim surface | verify repo-wide claim grep plus rendered home/projects/CV and downloadable files
 blog content pipeline | hard-coded slug list + modal did not scale to daily hub-fed posts | glob public/blog/**/*.md at build into index.json + sitemap and render /blog/:slug | do not hand-edit constants.ts per post or reintroduce the modal-only flow; hub commits to public/blog/en/<slug>.md | verify live /blog, one /blog/<slug>, and sitemap blog URLs after a hub pages run
 SPA production routes | public asset directories collide with client routes | serve file-shaped URLs as static files and everything else as the SPA shell | do not let Nginx treat route names as directories or leak port 8080 redirects | verify slash and non-slash routes plus real asset MIME types
 Coolify Linux build | macOS lock omitted the Rollup x64 GNU binary | install the matching native Rollup package inside the Linux builder | do not infer deployability from the macOS Vite build | verify Coolify builds the pushed commit and the live routes
 public portfolio | stock imagery and invented social proof replaced source evidence | use dated metrics, real screenshots and public links | do not publish placeholders, arbitrary percentages or unsupported impact | verify exact live route, image load, text and responsive layout
+
+## 2026-07-19 — Keep operational validation out of visitor-facing copy
+
+- **Status:** CURRENT
+- **Project/root:** `PROJECTS_ON_PROCESS/2025-FINAL-AISTUDIO-samihalawa-final`; homepage, projects, case studies, services and CV.
+- **Mistake recovered:** internal validation language—evidence debt, provider checks, next-proof sequences, publishability labels and missing-proof instructions—was rendered as the portfolio experience.
+- **Superior approach:** keep validation, caveats and deployment follow-up in the project ledger or source data; publish concise product value, honest scope, real work, links and clear contact actions.
+- **Evidence:** 19 Jul 2026 source sweep found the operational panels in `Projects.tsx` and repeated audit framing across `Hero.tsx`, `About.tsx`, `FeaturedCaseStudies.tsx`, `Testimonials.tsx`, case studies and CV copy; the live homepage visibly labelled work as “CURRENT PUBLIC PROOF”.
+- **Triggers / verification:** redesign, claims audit, portfolio automation or new project cards; grep public components for operational instruction language, then render `/`, `/projects`, `/case-studies` and `/cv` at desktop and mobile sizes.
+- **Do / don't:** do preserve factual scope in normal visitor language; don't expose agent TODOs, provider backlog, proof debt or publishing workflow as website sections.
 
 ## 2026-07-16 — Portfolio claims are a sitewide surface
 

@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { LanguageProvider } from './i18n/LanguageContext';
 import Layout from './components/Layout';
-const HomePage = lazy(() => import('./pages/HomePage'));
+import HomePage from './pages/HomePage';
 const ServicesPage = lazy(() => import('./pages/ServicesPage'));
 const ProjectsPage = lazy(() => import('./pages/ProjectsPage'));
 const BlogPage = lazy(() => import('./pages/BlogPage'));
@@ -61,7 +61,7 @@ const App: React.FC = () => {
         <LanguageProvider>
             <HelmetProvider>
                 <BrowserRouter>
-                    <Suspense fallback={<div className="p-6 text-slate-600">Loading…</div>}>
+                    <Suspense fallback={<div className="flex min-h-[60vh] items-center justify-center" role="status"><span className="h-10 w-10 animate-spin rounded-full border-2 border-brand-200 border-t-brand-700" /><span className="sr-only">Loading</span></div>}>
                     <Routes>
                         <Route path="/" element={<Layout />}>
                             <Route index element={<HomePage />} />

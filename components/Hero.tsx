@@ -8,39 +8,39 @@ const content: Record<LanguageCode, {
 }> = {
   en: {
     eyebrow: 'Founder-engineer · Madrid · Europe',
-    title: 'I build the complete product around AI.',
-    intro: 'From agents and data pipelines to the interface, mobile release, deployment, analytics and customer operations. The work here is shown with real products, timestamped evidence and explicit gaps.',
-    work: 'Explore the work', cv: 'Open complete CV', available: 'Open to founding and platform roles',
-    proofTitle: 'Current public proof', proofBody: 'OULANG is live on the web and has public App Store / Google Play listing pages under its legacy store identity. VUDA reached 80 GitHub stars. Public work spans 249 non-fork repositories and 12 Hugging Face articles.',
-    now: 'Now building', building: ['Multilingual marketplaces', 'MCP and operational agents', 'Voice, pricing and evidence systems'],
-    stats: [{ value: '90', label: 'evidence-classified project entries' }, { value: '249', label: 'public non-fork repositories' }, { value: '80★', label: 'VUDA on GitHub' }, { value: '12', label: 'Hugging Face articles' }]
+    title: 'I build AI products from first decision to live operation.',
+    intro: 'Founder-engineer working across product strategy, agents, data, web and mobile, deployment and growth. One owner from the first useful prototype to the product people actually use.',
+    work: 'Explore the portfolio', cv: 'Open complete CV', available: 'Open to founding AI, product and platform roles',
+    proofTitle: 'At a glance', proofBody: 'Founder of Agents AI Ltd and builder of OULANG, AutoClient and specialist agent systems. VUDA reached 80 GitHub stars, with a public body of work spanning 249 original repositories and 12 technical articles.',
+    now: 'Core strengths', building: ['Zero-to-one product engineering', 'Agent, MCP and automation systems', 'Multilingual web and mobile platforms'],
+    stats: [{ value: '90+', label: 'projects across product and research' }, { value: '249', label: 'public original repositories' }, { value: '80★', label: 'VUDA on GitHub' }, { value: '12', label: 'technical articles' }]
   },
   es: {
     eyebrow: 'Fundador e ingeniero · Madrid · Europa',
-    title: 'Construyo el producto completo alrededor de la IA.',
-    intro: 'Desde agentes y datos hasta interfaz, app móvil, despliegue, analítica y operaciones. Aquí el trabajo se demuestra con productos reales, evidencia fechada y lagunas explícitas.',
-    work: 'Ver proyectos', cv: 'Abrir CV completo', available: 'Disponible para roles founding y de plataforma',
-    proofTitle: 'Prueba pública actual', proofBody: 'OULANG está activo en web y tiene páginas públicas en App Store / Google Play bajo su identidad heredada de tienda. VUDA alcanzó 80 estrellas. El trabajo público incluye 249 repositorios propios y 12 artículos en Hugging Face.',
-    now: 'Construyendo ahora', building: ['Marketplaces multilingües', 'MCP y agentes operativos', 'Voz, pricing y sistemas de evidencia'],
-    stats: [{ value: '90', label: 'entradas de proyectos con evidencia' }, { value: '249', label: 'repositorios propios públicos' }, { value: '80★', label: 'VUDA en GitHub' }, { value: '12', label: 'artículos en Hugging Face' }]
+    title: 'Construyo productos de IA desde la primera decisión hasta la operación real.',
+    intro: 'Fundador e ingeniero entre estrategia de producto, agentes, datos, web y móvil, despliegue y crecimiento. Un único responsable desde el primer prototipo útil hasta el producto que usa la gente.',
+    work: 'Explorar el portfolio', cv: 'Abrir CV completo', available: 'Disponible para roles founding, producto y plataforma',
+    proofTitle: 'En pocas palabras', proofBody: 'Fundador de Agents AI Ltd y creador de OULANG, AutoClient y sistemas de agentes especializados. VUDA alcanzó 80 estrellas en GitHub, dentro de un trabajo público con 249 repositorios propios y 12 artículos técnicos.',
+    now: 'Fortalezas', building: ['Ingeniería de producto zero-to-one', 'Agentes, MCP y automatización', 'Plataformas multilingües web y móvil'],
+    stats: [{ value: '90+', label: 'proyectos de producto e investigación' }, { value: '249', label: 'repositorios públicos propios' }, { value: '80★', label: 'VUDA en GitHub' }, { value: '12', label: 'artículos técnicos' }]
   },
   fr: {
     eyebrow: 'Fondateur-ingénieur · Madrid · Europe',
-    title: 'Je construis le produit complet autour de l’IA.',
-    intro: 'Des agents et données à l’interface, au mobile, au déploiement, à l’analytique et aux opérations. Chaque preuve est liée à un produit réel.',
-    work: 'Voir les projets', cv: 'Ouvrir le CV complet', available: 'Ouvert aux rôles founding et plateforme',
-    proofTitle: 'Preuves publiques actuelles', proofBody: 'OULANG est en ligne sur le web et dispose de pages publiques App Store / Google Play sous son identité store historique. VUDA compte 80 étoiles. Le travail public couvre 249 dépôts non-forks et 12 articles Hugging Face.',
-    now: 'En cours', building: ['Marketplaces multilingues', 'MCP et agents opérationnels', 'Voix, pricing et systèmes de preuve'],
-    stats: [{ value: '90', label: 'entrées de projets classées' }, { value: '249', label: 'dépôts publics non-forks' }, { value: '80★', label: 'VUDA sur GitHub' }, { value: '12', label: 'articles Hugging Face' }]
+    title: 'Je construis des produits IA, de la première décision à l’exploitation réelle.',
+    intro: 'Fondateur-ingénieur entre stratégie produit, agents, données, web et mobile, déploiement et croissance. Un seul responsable du premier prototype utile au produit réellement utilisé.',
+    work: 'Explorer le portfolio', cv: 'Ouvrir le CV complet', available: 'Ouvert aux rôles founding, produit et plateforme',
+    proofTitle: 'En bref', proofBody: 'Fondateur d’Agents AI Ltd et créateur d’OULANG, AutoClient et de systèmes d’agents spécialisés. VUDA a atteint 80 étoiles GitHub, au sein de 249 dépôts publics originaux et 12 articles techniques.',
+    now: 'Points forts', building: ['Ingénierie produit zero-to-one', 'Agents, MCP et automatisation', 'Plateformes web et mobiles multilingues'],
+    stats: [{ value: '90+', label: 'projets produit et recherche' }, { value: '249', label: 'dépôts publics originaux' }, { value: '80★', label: 'VUDA sur GitHub' }, { value: '12', label: 'articles techniques' }]
   },
   zh: {
     eyebrow: '创始人工程师 · 马德里 · 欧洲',
-    title: '我构建围绕 AI 的完整产品系统。',
-    intro: '从智能体与数据管道，到界面、移动端发布、部署、分析和客户运营。这里展示真实产品、注明日期的数据和公开证据。',
-    work: '查看项目', cv: '打开完整简历', available: '开放创始工程师与平台岗位',
-    proofTitle: '当前公开证据', proofBody: 'OULANG Web 端已上线，并在旧商店身份下拥有公开 App Store / Google Play 页面。VUDA 获得 80 个 GitHub 星标。公开工作包括 249 个非 fork 仓库和 12 篇 Hugging Face 文章。',
-    now: '正在构建', building: ['多语言市场平台', 'MCP 与运营智能体', '语音、定价与证据系统'],
-    stats: [{ value: '90', label: '证据分类项目记录' }, { value: '249', label: '公开非 fork 仓库' }, { value: '80★', label: 'VUDA GitHub' }, { value: '12', label: 'Hugging Face 文章' }]
+    title: '我把 AI 产品从第一项决策构建到真实运营。',
+    intro: '创始人工程师，横跨产品战略、智能体、数据、Web 与移动端、部署和增长。从第一个有用原型到真正被使用的产品，全程负责。',
+    work: '浏览作品集', cv: '打开完整简历', available: '开放创始工程师、产品与平台岗位',
+    proofTitle: '快速了解', proofBody: 'Agents AI Ltd 创始人，OULANG、AutoClient 及专业智能体系统的构建者。VUDA 获得 80 个 GitHub 星标，公开工作包括 249 个原创仓库与 12 篇技术文章。',
+    now: '核心能力', building: ['从零到一的产品工程', '智能体、MCP 与自动化系统', '多语言 Web 与移动平台'],
+    stats: [{ value: '90+', label: '产品与研究项目' }, { value: '249', label: '原创公开仓库' }, { value: '80★', label: 'VUDA GitHub 星标' }, { value: '12', label: '技术文章' }]
   }
 };
 

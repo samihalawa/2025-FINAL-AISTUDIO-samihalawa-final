@@ -2,21 +2,30 @@ import React from 'react';
 import { useTranslation, type LanguageCode } from '../i18n/LanguageContext';
 
 const copy: Record<LanguageCode, { eyebrow: string; title: string; body: string; items: { value: string; label: string; href: string }[] }> = {
-  en: { eyebrow: 'Evidence instead of testimonials', title: 'Inspect the work directly.', body: 'This site no longer uses placeholder people or invented quotes. These links expose the public artifacts and current product surfaces.', items: [
-    { value: '700', label: 'public GitHub repositories · 249 non-forks', href: 'https://github.com/samihalawa' },
-    { value: '12', label: 'public Hugging Face articles · API lists 17 Spaces', href: 'https://huggingface.co/samihalawa/posts' },
-    { value: 'LIVE', label: 'OULANG web product · public store listings and current wrapper identity tracked separately', href: 'https://oulang.ai' },
-    { value: '111', label: 'verified lesson, meeting and project media files · 125.83h', href: '/cv' }
+  en: { eyebrow: 'Across the public work', title: 'Follow the work where it lives.', body: 'Explore the code, technical writing, open-source community and full career profile.', items: [
+    { value: '249', label: 'original public repositories on GitHub', href: 'https://github.com/samihalawa' },
+    { value: '12', label: 'technical articles on Hugging Face', href: 'https://huggingface.co/samihalawa/posts' },
+    { value: '80★', label: 'for the VUDA visual debugging agent', href: 'https://github.com/samihalawa/visual-ui-debug-agent-mcp' },
+    { value: '4', label: 'portfolio languages: English, Spanish, French and Chinese', href: '/cv' },
   ]},
-  es: { eyebrow: 'Evidencia en vez de testimonios', title: 'Inspecciona el trabajo directamente.', body: 'La web ya no usa personas de relleno ni citas inventadas. Estos enlaces muestran artefactos públicos y productos actuales.', items: [
-    { value: '700', label: 'repositorios públicos · 249 no-forks', href: 'https://github.com/samihalawa' }, { value: '12', label: 'artículos públicos · la API lista 17 Spaces', href: 'https://huggingface.co/samihalawa/posts' }, { value: 'LIVE', label: 'producto web OULANG · tiendas públicas e identidad actual separadas', href: 'https://oulang.ai' }, { value: '111', label: 'media verificados de clases, reuniones y proyectos · 125,83h', href: '/cv' }
+  es: { eyebrow: 'Trabajo público', title: 'Sigue el trabajo donde vive.', body: 'Explora el código, la escritura técnica, la comunidad open source y el perfil profesional completo.', items: [
+    { value: '249', label: 'repositorios públicos propios en GitHub', href: 'https://github.com/samihalawa' },
+    { value: '12', label: 'artículos técnicos en Hugging Face', href: 'https://huggingface.co/samihalawa/posts' },
+    { value: '80★', label: 'para el agente de depuración visual VUDA', href: 'https://github.com/samihalawa/visual-ui-debug-agent-mcp' },
+    { value: '4', label: 'idiomas: inglés, español, francés y chino', href: '/cv' },
   ]},
-  fr: { eyebrow: 'Des preuves, pas de faux témoignages', title: 'Inspectez directement le travail.', body: 'Ces liens montrent les artefacts publics et produits actuels.', items: [
-    { value: '700', label: 'dépôts publics · 249 non-forks', href: 'https://github.com/samihalawa' }, { value: '12', label: 'articles publics · l’API liste 17 Spaces', href: 'https://huggingface.co/samihalawa/posts' }, { value: 'LIVE', label: 'produit web OULANG · stores publics et identité actuelle séparés', href: 'https://oulang.ai' }, { value: '111', label: 'médias cours, réunions et projets vérifiés · 125,83h', href: '/cv' }
+  fr: { eyebrow: 'Travail public', title: 'Suivez le travail là où il vit.', body: 'Explorez le code, les articles techniques, la communauté open source et le parcours complet.', items: [
+    { value: '249', label: 'dépôts publics originaux sur GitHub', href: 'https://github.com/samihalawa' },
+    { value: '12', label: 'articles techniques sur Hugging Face', href: 'https://huggingface.co/samihalawa/posts' },
+    { value: '80★', label: 'pour l’agent de débogage visuel VUDA', href: 'https://github.com/samihalawa/visual-ui-debug-agent-mcp' },
+    { value: '4', label: 'langues : anglais, espagnol, français et chinois', href: '/cv' },
   ]},
-  zh: { eyebrow: '用证据代替占位推荐语', title: '直接检查工作成果。', body: '这些链接展示公开工件和当前产品，不再使用虚构人物或引语。', items: [
-    { value: '700', label: '公开 GitHub 仓库 · 249 非 fork', href: 'https://github.com/samihalawa' }, { value: '12', label: '公开文章 · API 列出 17 个 Spaces', href: 'https://huggingface.co/samihalawa/posts' }, { value: 'LIVE', label: 'OULANG Web 产品 · 公开商店页面与当前身份分开记录', href: 'https://oulang.ai' }, { value: '111', label: '已验证课程、会议与项目媒体 · 125.83 小时', href: '/cv' }
-  ]}
+  zh: { eyebrow: '公开作品', title: '在作品真实所在之处继续探索。', body: '查看代码、技术文章、开源社区与完整职业资料。', items: [
+    { value: '249', label: 'GitHub 原创公开仓库', href: 'https://github.com/samihalawa' },
+    { value: '12', label: 'Hugging Face 技术文章', href: 'https://huggingface.co/samihalawa/posts' },
+    { value: '80★', label: 'VUDA 视觉调试智能体', href: 'https://github.com/samihalawa/visual-ui-debug-agent-mcp' },
+    { value: '4', label: '作品集语言：英语、西班牙语、法语和中文', href: '/cv' },
+  ]},
 };
 
 const Testimonials: React.FC = () => {

@@ -56,12 +56,11 @@ const ApoloMedicalFramework: React.FC = () => {
               <li>Human-review checkpoints for sensitive medical-image workflows.</li>
             </ul>
           </article>
-          <article className="rounded-3xl border border-amber-200 bg-amber-50 p-6">
-            <h2 className="mb-3 text-xl font-bold text-slate-900">Evidence boundary</h2>
+          <article className="rounded-3xl border border-brand-200 bg-brand-50 p-6">
+            <h2 className="mb-3 text-xl font-bold text-slate-900">Research scope</h2>
             <p className="leading-7 text-slate-700">
-              This is research and prototyping work. It is not presented as a clinically validated diagnostic system,
-              a hospital deployment, a filed patent, or a source of verified benchmark results. Those claims require
-              primary evaluation records that are not currently in the evidence set.
+              APOLO is research and prototyping work focused on multimodal architecture, structured outputs and
+              human review. It explores a foundation for future evaluation rather than a clinical diagnostic product.
             </p>
           </article>
         </div>

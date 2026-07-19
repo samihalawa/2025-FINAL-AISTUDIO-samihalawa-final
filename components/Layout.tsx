@@ -84,7 +84,7 @@ const Layout: React.FC = () => {
       <BackToTop />
       <a
         href="https://wa.me/34679794037"
-        className="fixed bottom-6 right-6 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full bg-slate-900 text-white shadow-lg shadow-brand-900/30 transition-all hover:-translate-y-1 hover:scale-105 hover:bg-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2"
+        className="fixed bottom-4 right-4 z-40 inline-flex h-12 w-12 items-center justify-center rounded-full bg-slate-900 text-white shadow-lg shadow-brand-900/30 transition-all hover:-translate-y-1 hover:scale-105 hover:bg-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 sm:bottom-6 sm:right-6 sm:h-14 sm:w-14"
         target="_blank"
         rel="noopener noreferrer"
         aria-label={t('ui.contactViaWhatsApp')}

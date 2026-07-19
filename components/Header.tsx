@@ -69,7 +69,7 @@ const Header: React.FC = () => {
                     </Link>
 
                     <nav aria-label={t('header.primaryNavAria')} className="hidden xl:flex items-center gap-1 flex-1 justify-center">
-                        {NAV_LINKS.map(link => (
+                        {NAV_LINKS.filter(link => link.href !== '/contact').map(link => (
                             link.href === '/services' ? (
                                 <Popover key={link.key} className="relative">
                                     <Popover.Button className="group inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white">
@@ -126,20 +126,21 @@ const Header: React.FC = () => {
                             <LanguageSelector />
                         </div>
 
-                        {/* CTA Button - Icon only on desktop to prevent overflow */}
+                        {/* Primary contact action */}
                         <Link 
                             to="/contact" 
-                            className="hidden xl:inline-flex items-center justify-center h-11 w-11 rounded-full bg-slate-900 text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-slate-800"
+                            className="hidden min-h-11 items-center justify-center gap-2 rounded-full bg-slate-900 px-4 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-slate-800 hover:text-white xl:inline-flex"
                             title={t('header.cta')}
                             aria-label={t('header.cta')}
                         >
-                            <i className="fas fa-wand-magic-sparkles text-sm"></i>
+                            <span>{t('header.cta')}</span>
+                            <i className="fas fa-arrow-right text-xs"></i>
                         </Link>
 
                         {/* Mobile Menu */}
                         <div className="xl:hidden">
                             <Popover className="relative">
-                                <Popover.Button className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white/80 p-2 text-slate-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+                                <Popover.Button className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white/80 text-slate-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
                                     <span className="sr-only">{t('ui.openMenu')}</span>
                                     <i className="fas fa-bars w-6 h-6"></i>
                                 </Popover.Button>
@@ -153,7 +154,7 @@ const Header: React.FC = () => {
                                         <div className="space-y-6">
                                             <div className="flex items-center justify-between">
                                                 <div className="text-lg font-semibold text-slate-900">Sami Halawa</div>
-                                                <Popover.Button className="-mr-1 inline-flex items-center justify-center rounded-full border border-slate-200 bg-white/70 p-2 text-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                                                <Popover.Button className="-mr-1 inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white/70 text-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500">
                                                     <span className="sr-only">{t('ui.closeMenu')}</span>
                                                     <i className="fas fa-times w-6 h-6"></i>
                                                 </Popover.Button>

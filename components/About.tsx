@@ -8,10 +8,10 @@ const content: Record<LanguageCode, {
 }> = {
   en: {
     eyebrow: 'Why the work connects', title: 'Product, systems, distribution and communication.',
-    intro: 'My career did not begin with LLMs. Full-stack engineering, mobile apps, growth, teaching and China-based media work became the operating layer beneath the AI products I build now.', evidence: 'No skill percentages. No placeholder testimonials. Every headline number on this site is dated and tied to a public or current primary source.',
+    intro: 'My career did not begin with LLMs. Full-stack engineering, mobile apps, growth, teaching and China-based media work became the operating layer beneath the AI products I build now.', evidence: 'Hands-on by default: I can move from product framing to code, infrastructure, launch and iteration without splitting the work into disconnected handoffs.',
     principles: [
       { title: 'Build the whole system', body: 'Agents, APIs, data, interface, deployment, analytics, payments and operations belong to one product.' },
-      { title: 'Prove at the user layer', body: 'A build or HTTP 200 is not the outcome. I verify the live screen, real workflow and resulting state.' },
+      { title: 'Close the loop', body: 'A product is only finished when the interface, workflow and operating reality work together.' },
       { title: 'Explain across boundaries', body: 'Spanish, English and Mandarin delivery helps bridge engineering, users, clients and executives.' }
     ],
     timeline: [
@@ -24,10 +24,10 @@ const content: Record<LanguageCode, {
   },
   es: {
     eyebrow: 'Por qué todo conecta', title: 'Producto, sistemas, distribución y comunicación.',
-    intro: 'Mi carrera no empezó con los LLM. Full-stack, apps móviles, growth, docencia y medios en China forman la capa operativa de los productos de IA que construyo hoy.', evidence: 'Sin porcentajes arbitrarios. Sin testimonios de relleno. Cada cifra principal está fechada y ligada a una fuente pública o primaria actual.',
+    intro: 'Mi carrera no empezó con los LLM. Full-stack, apps móviles, growth, docencia y medios en China forman la capa operativa de los productos de IA que construyo hoy.', evidence: 'Trabajo con las manos en el producto: puedo pasar de definición a código, infraestructura, lanzamiento e iteración sin dividirlo en entregas desconectadas.',
     principles: [
       { title: 'Construir el sistema completo', body: 'Agentes, APIs, datos, interfaz, despliegue, analítica, pagos y operaciones son un único producto.' },
-      { title: 'Demostrar en la capa del usuario', body: 'Un build o un HTTP 200 no es el resultado. Verifico la pantalla, el flujo y el estado real.' },
+      { title: 'Cerrar el ciclo', body: 'Un producto termina cuando interfaz, flujo y realidad operativa funcionan juntos.' },
       { title: 'Explicar entre mundos', body: 'La entrega en español, inglés y mandarín une ingeniería, usuarios, clientes y dirección.' }
     ],
     timeline: [
@@ -40,14 +40,14 @@ const content: Record<LanguageCode, {
   },
   fr: {
     eyebrow: 'Pourquoi tout se relie', title: 'Produit, systèmes, distribution et communication.',
-    intro: 'Ma carrière n’a pas commencé avec les LLM. Full-stack, mobile, croissance, formation et médias en Chine forment la base de mes produits IA actuels.', evidence: 'Aucun pourcentage arbitraire. Aucun faux témoignage. Chaque chiffre important est daté et sourcé.',
-    principles: [{ title: 'Construire le système complet', body: 'Agents, APIs, données, interface, déploiement, analyse et opérations forment un seul produit.' }, { title: 'Prouver au niveau utilisateur', body: 'Un build n’est pas le résultat. Je vérifie l’écran et le workflow réel.' }, { title: 'Expliquer entre les mondes', body: 'Espagnol, anglais et mandarin relient ingénierie, utilisateurs et décideurs.' }],
+    intro: 'Ma carrière n’a pas commencé avec les LLM. Full-stack, mobile, croissance, formation et médias en Chine forment la base de mes produits IA actuels.', evidence: 'J’interviens directement du cadrage produit au code, à l’infrastructure, au lancement et à l’itération, sans multiplier les relais.',
+    principles: [{ title: 'Construire le système complet', body: 'Agents, APIs, données, interface, déploiement, analyse et opérations forment un seul produit.' }, { title: 'Fermer la boucle', body: 'Un produit est abouti lorsque l’interface, le parcours et la réalité opérationnelle fonctionnent ensemble.' }, { title: 'Expliquer entre les mondes', body: 'Espagnol, anglais et mandarin relient ingénierie, utilisateurs et décideurs.' }],
     timeline: [{ years: '2009–2023', title: 'Web, mobile, croissance & éducation', body: 'Produits, cours, design numérique et 70+ projets déclarés.' }, { years: '2013–2017', title: 'Médias en Chine', body: 'Production commerciale et présentation multilingue.' }, { years: '2019–2023', title: 'Ingénierie full-stack', body: 'Web, Linux, CI/CD, revues et mentoring.' }, { years: '2022–présent', title: 'Formation IA & conseil', body: 'Agents, automatisation, Python et produit.' }, { years: '2025–présent', title: 'Agents AI Ltd', body: 'Plateformes IA et opérations agentiques.' }]
   },
   zh: {
     eyebrow: '这些经历为何相连', title: '产品、系统、增长与沟通。',
-    intro: '我的职业并非始于 LLM。全栈、移动应用、增长、教学以及在中国的媒体经历，构成了今天 AI 产品的运营基础。', evidence: '不使用任意技能百分比，不使用占位推荐语。网站的核心数据均注明日期并绑定公开或当前一手来源。',
-    principles: [{ title: '构建完整系统', body: '智能体、API、数据、界面、部署、分析、支付和运营属于同一个产品。' }, { title: '在用户层验证', body: '构建成功或 HTTP 200 并非结果；必须验证真实界面、流程和状态。' }, { title: '跨边界解释', body: '西班牙语、英语和中文帮助连接工程、用户、客户与管理层。' }],
+    intro: '我的职业并非始于 LLM。全栈、移动应用、增长、教学以及在中国的媒体经历，构成了今天 AI 产品的运营基础。', evidence: '默认亲自推进：从产品定义到代码、基础设施、发布与迭代，避免把工作拆成彼此断开的交接。',
+    principles: [{ title: '构建完整系统', body: '智能体、API、数据、界面、部署、分析、支付和运营属于同一个产品。' }, { title: '闭合产品循环', body: '只有界面、用户流程与真实运营共同顺畅，产品才算完成。' }, { title: '跨边界解释', body: '西班牙语、英语和中文帮助连接工程、用户、客户与管理层。' }],
     timeline: [{ years: '2009–2023', title: 'Web、移动、增长与教育', body: '产品、课程、数字设计教学与 70+ 项目的一手职业记录。' }, { years: '2013–2017', title: '中国媒体工作', body: '商业制作、主持与多语言镜头沟通。' }, { years: '2019–2023', title: '生产级全栈工程', body: 'Web、Linux、CI/CD、评审和指导。' }, { years: '2022–至今', title: 'AI 教学与技术咨询', body: '面向实现的智能体、自动化、Python 与产品工程。' }, { years: '2025–至今', title: 'Agents AI Ltd', body: 'AI 平台、智能体运营与专业产品交付。' }]
   }
 };
@@ -63,7 +63,7 @@ const About: React.FC = () => {
             <span className="badge-pill">{c.eyebrow}</span>
             <h2 className="section-heading mt-5">{c.title}</h2>
             <p className="mt-6 text-lg leading-relaxed text-slate-600">{c.intro}</p>
-            <div className="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm font-semibold leading-relaxed text-amber-950">{c.evidence}</div>
+            <div className="mt-8 rounded-2xl border border-brand-200 bg-brand-50 p-5 text-sm font-semibold leading-relaxed text-brand-900">{c.evidence}</div>
             <div className="mt-8 space-y-5">{c.principles.map((item, index) => <div key={item.title} className="grid grid-cols-[36px_1fr] gap-4"><span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-100 text-xs font-bold text-brand-800">{index + 1}</span><div><h3 className="font-bold text-slate-950">{item.title}</h3><p className="mt-1 text-slate-600">{item.body}</p></div></div>)}</div>
           </div>
           <div className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-8">

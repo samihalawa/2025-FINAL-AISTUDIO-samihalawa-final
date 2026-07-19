@@ -14,14 +14,14 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
   const preview = spanish ? '/cv/Sami_Halawa_CV_ES_preview.png' : '/cv/Sami_Halawa_CV_preview.png';
   const title = spanish ? 'CV completo de Sami Halawa' : 'Sami Halawa complete CV';
   const description = spanish
-    ? 'CV maestro de cuatro páginas con fotografía, 90 entradas por era, productos, clientes, open source, investigación, docencia y evidencia pública. La versión ATS se ofrece por separado.'
-    : 'Four-page master CV with portrait, 90 era-indexed entries, products, client systems, open source, research, teaching and public evidence. A separate ATS edition is available.';
+    ? 'Una visión completa de productos, sistemas para clientes, open source, investigación y docencia, disponible en PDF y en formato ATS.'
+    : 'A complete view of products, client systems, open source, research and teaching, available as a designed PDF and an ATS-ready edition.';
   return <>
     <Helmet><title>{title}</title><meta name="description" content={description} /><link rel="canonical" href={`https://samihalawa.com/cv/${selected}`} /></Helmet>
     <section className="py-14 sm:py-20">
       <div className="container">
         <div className="grid items-end gap-8 lg:grid-cols-[1fr_auto]">
-          <div className="max-w-4xl"><span className="badge-pill">{spanish ? 'CV maestro · versión española' : 'Complete master CV · English edition'}</span><h1 className="mt-5 font-display text-5xl font-bold tracking-[-.05em] text-slate-950 sm:text-6xl">{spanish ? 'La trayectoria completa, no una versión recortada por el ATS.' : 'The complete career—not an ATS-compressed substitute.'}</h1><p className="mt-6 max-w-3xl text-xl leading-relaxed text-slate-600">{description}</p></div>
+          <div className="max-w-4xl"><span className="badge-pill">{spanish ? 'CV · versión española' : 'CV · English edition'}</span><h1 className="mt-5 font-display text-5xl font-bold tracking-[-.05em] text-slate-950 sm:text-6xl">{spanish ? 'Productos, investigación y una trayectoria construida haciendo.' : 'Products, research and a career built by making.'}</h1><p className="mt-6 max-w-3xl text-xl leading-relaxed text-slate-600">{description}</p></div>
           <div className="flex flex-wrap gap-2"><Link to="/cv/en" className={`inline-flex min-h-11 items-center rounded-full px-4 text-sm font-bold ${!spanish ? 'bg-slate-900 text-white' : 'border border-slate-300 bg-white text-slate-700'}`}>English</Link><Link to="/cv/es" className={`inline-flex min-h-11 items-center rounded-full px-4 text-sm font-bold ${spanish ? 'bg-slate-900 text-white' : 'border border-slate-300 bg-white text-slate-700'}`}>Español</Link></div>
         </div>
         <div className="mt-10 flex flex-col gap-3 sm:flex-row"><a href={pdf} download className="btn-primary"><i className="fas fa-file-pdf"></i>{spanish ? 'Descargar CV completo PDF' : 'Download complete PDF'}</a><a href={ats} download className="btn-secondary"><i className="fas fa-file-lines"></i>{spanish ? 'Descargar versión ATS' : 'Download ATS edition'}</a><a href="https://www.linkedin.com/in/samihalawa" target="_blank" rel="noopener noreferrer" className="btn-secondary"><i className="fab fa-linkedin"></i>LinkedIn</a></div>
@@ -32,7 +32,6 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
             <a href={pdf} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 font-bold text-brand-700">{spanish ? 'Abrir las cuatro páginas' : 'Open all four pages'}<i className="fas fa-arrow-up-right-from-square text-xs"></i></a>
           </div>
         </div>
-        <div className="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm leading-relaxed text-amber-950">{spanish ? 'Arquitectura del documento: el PDF visual es el registro maestro; el TXT ATS es un derivado sin fotografía para formularios de candidatura. Ambos proceden del mismo ledger de evidencias.' : 'Document architecture: the visual PDF is the master career record; the photo-free ATS text is a derivative for application systems. Both come from the same evidence ledger.'}</div>
       </div>
     </section>
   </>;

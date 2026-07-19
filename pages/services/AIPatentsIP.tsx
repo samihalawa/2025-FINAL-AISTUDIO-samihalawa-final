@@ -33,10 +33,10 @@ const AIPatentsIP: React.FC = () => {
         <p className="text-lg text-slate-700 mb-8">Turn scattered research and implementation artifacts into a traceable dossier. The service prepares technical evidence; it does not replace qualified legal advice or claim a filing outcome.</p>
         <div className="grid md:grid-cols-2 gap-6">
           <Section title="Scope" points={[ 'Prior-art research and source trail', 'Problem and differentiation framing', 'System diagrams and flows', 'Evidence and evaluation notes' ]} />
-          <Section title="Outcomes" points={[ 'Technical dossier for specialist review', 'Review and iteration cycles', 'Claim-to-evidence map', 'Open questions and next-proof checklist' ]} />
+          <Section title="Outcomes" points={[ 'Technical dossier for specialist review', 'Review and iteration cycles', 'Claim-to-source map', 'Open questions and recommended next steps' ]} />
         </div>
         <div className="mt-10 flex gap-4">
-          <Link to="/contact" className="inline-block bg-slate-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-slate-800">Discuss the evidence set</Link>
+          <Link to="/contact" className="inline-block bg-slate-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-slate-800">Discuss your research</Link>
           <Link to="/case-studies/apolo-medical-framework" className="inline-block bg-white text-slate-700 px-6 py-3 rounded-md border border-slate-300 font-semibold hover:bg-slate-100">See APOLO research</Link>
         </div>
       </div>
