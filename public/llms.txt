@@ -1,0 +1,20 @@
+# Sami Halawa — AI Product and Engineering Portfolio
+
+Sami Halawa is a founder-engineer in Madrid building multilingual AI products, agent systems, applied AI workflows and technical education.
+
+## Main pages
+
+- [Home](https://samihalawa.com/): Profile, current focus and selected work
+- [Projects](https://samihalawa.com/projects): Curated products plus 84 public work records
+- [Case studies](https://samihalawa.com/case-studies): Detailed product and engineering case studies
+- [Services](https://samihalawa.com/services): AI product, automation, training and advisory services
+- [CV](https://samihalawa.com/cv): Complete professional profile
+- [Blog](https://samihalawa.com/blog): Technical articles on AI agents, product engineering and deployment
+- [Contact](https://samihalawa.com/contact): Project and role enquiries
+
+## Public profiles
+
+- [GitHub](https://github.com/samihalawa)
+- [Hugging Face](https://huggingface.co/samihalawa)
+- [YouTube](https://www.youtube.com/@autoclient-ai)
+- [LinkedIn](https://www.linkedin.com/in/samihalawa/)

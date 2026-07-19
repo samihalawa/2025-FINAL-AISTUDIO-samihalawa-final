@@ -6,25 +6,25 @@ const copy: Record<LanguageCode, { eyebrow: string; title: string; body: string;
     { value: '249', label: 'original public repositories on GitHub', href: 'https://github.com/samihalawa' },
     { value: '12', label: 'technical articles on Hugging Face', href: 'https://huggingface.co/samihalawa/posts' },
     { value: '80★', label: 'for the VUDA visual debugging agent', href: 'https://github.com/samihalawa/visual-ui-debug-agent-mcp' },
-    { value: '4', label: 'portfolio languages: English, Spanish, French and Chinese', href: '/cv' },
+    { value: '373', label: 'public videos across AI, automation, product and creative tools', href: 'https://www.youtube.com/@autoclient-ai' },
   ]},
   es: { eyebrow: 'Trabajo público', title: 'Sigue el trabajo donde vive.', body: 'Explora el código, la escritura técnica, la comunidad open source y el perfil profesional completo.', items: [
     { value: '249', label: 'repositorios públicos propios en GitHub', href: 'https://github.com/samihalawa' },
     { value: '12', label: 'artículos técnicos en Hugging Face', href: 'https://huggingface.co/samihalawa/posts' },
     { value: '80★', label: 'para el agente de depuración visual VUDA', href: 'https://github.com/samihalawa/visual-ui-debug-agent-mcp' },
-    { value: '4', label: 'idiomas: inglés, español, francés y chino', href: '/cv' },
+    { value: '373', label: 'vídeos públicos sobre IA, automatización, producto y herramientas creativas', href: 'https://www.youtube.com/@autoclient-ai' },
   ]},
   fr: { eyebrow: 'Travail public', title: 'Suivez le travail là où il vit.', body: 'Explorez le code, les articles techniques, la communauté open source et le parcours complet.', items: [
     { value: '249', label: 'dépôts publics originaux sur GitHub', href: 'https://github.com/samihalawa' },
     { value: '12', label: 'articles techniques sur Hugging Face', href: 'https://huggingface.co/samihalawa/posts' },
     { value: '80★', label: 'pour l’agent de débogage visuel VUDA', href: 'https://github.com/samihalawa/visual-ui-debug-agent-mcp' },
-    { value: '4', label: 'langues : anglais, espagnol, français et chinois', href: '/cv' },
+    { value: '373', label: 'vidéos publiques sur l’IA, l’automatisation, le produit et les outils créatifs', href: 'https://www.youtube.com/@autoclient-ai' },
   ]},
   zh: { eyebrow: '公开作品', title: '在作品真实所在之处继续探索。', body: '查看代码、技术文章、开源社区与完整职业资料。', items: [
     { value: '249', label: 'GitHub 原创公开仓库', href: 'https://github.com/samihalawa' },
     { value: '12', label: 'Hugging Face 技术文章', href: 'https://huggingface.co/samihalawa/posts' },
     { value: '80★', label: 'VUDA 视觉调试智能体', href: 'https://github.com/samihalawa/visual-ui-debug-agent-mcp' },
-    { value: '4', label: '作品集语言：英语、西班牙语、法语和中文', href: '/cv' },
+    { value: '373', label: '关于 AI、自动化、产品与创意工具的公开视频', href: 'https://www.youtube.com/@autoclient-ai' },
   ]},
 };
 

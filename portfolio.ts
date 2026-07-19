@@ -287,6 +287,78 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     description: copy('Original poetry, Chinese onomatopoeia decks, printable exercises, vocabulary cards and generated poetry audio.', 'Poesía original, materiales de onomatopeyas chinas, ejercicios, tarjetas de vocabulario y audio de poesía generado.'),
     proof: copy('72-poem source collection plus current PDFs, slides and audio manifests', 'Colección fuente de 72 poemas más PDFs, diapositivas y manifiestos de audio actuales'),
     tags: ['Poetry', 'Chinese', 'Audio']
+  },
+  {
+    id: 'vibracode', name: 'VibraCode', period: '2026', category: 'platforms',
+    description: copy('A live software product for moving from an idea to a structured, buildable application concept.', 'Producto de software activo para convertir una idea en un concepto de aplicación estructurado y construible.', 'Produit logiciel en ligne pour transformer une idée en concept d’application structuré et réalisable.', '把想法转化为结构化、可构建应用概念的在线软件产品。'),
+    proof: copy('Live product surface and current repository work', 'Superficie activa y trabajo actual de repositorio', 'Produit en ligne et travail actuel dans le dépôt', '线上产品与当前仓库工作'),
+    tags: ['Product design', 'AI workflow', 'Web'], href: 'https://vibracode.megawebs.com'
+  },
+  {
+    id: 'oulang-world-cup', name: 'OULANG World Cup', period: '2026', category: 'platforms',
+    description: copy('A sports-live module inside OULANG with predictions, leaderboards, standings, results and live-room flows.', 'Módulo deportivo dentro de OULANG con predicciones, clasificación, resultados y salas en directo.', 'Module sportif dans OULANG avec pronostics, classements, résultats et salons en direct.', 'OULANG 内的体育直播模块，包含预测、排行榜、积分、赛果与直播间流程。'),
+    proof: copy('Implemented in the current Expo product source', 'Implementado en el código actual del producto Expo', 'Implémenté dans le code Expo actuel', '已在当前 Expo 产品源码中实现'),
+    tags: ['Expo', 'Live data', 'Community']
+  },
+  {
+    id: 'damesender', name: 'DameSender', period: '2020–2023', category: 'platforms',
+    description: copy('The earliest public product in a longer email, outreach and customer-acquisition automation lineage.', 'El primer producto público de una trayectoria más amplia en email, outreach y automatización comercial.', 'Le premier produit public d’une trajectoire plus large en email, prospection et automatisation commerciale.', '邮件、触达与客户获取自动化长期产品线中的最早公开产品。'),
+    proof: copy('Earliest observed public original repository', 'Primer repositorio público original observado', 'Premier dépôt public original observé', '目前观察到的最早原创公开仓库'),
+    tags: ['Email', 'Outreach', 'Product lineage'], href: 'https://github.com/samihalawa/damesender'
+  },
+  {
+    id: 'productivity-apps', name: 'KittyTasks · FocusOnTask', period: '2024', category: 'platforms',
+    description: copy('Focused productivity-app experiments exploring task capture, attention and lightweight personal workflows.', 'Experimentos de productividad centrados en captura de tareas, atención y flujos personales ligeros.', 'Expériences de productivité autour de la capture de tâches, de l’attention et de flux personnels légers.', '围绕任务捕捉、专注与轻量个人工作流的效率应用实验。'),
+    proof: copy('Product artifacts preserved in repository history', 'Artefactos de producto preservados en el historial', 'Artefacts produit conservés dans l’historique', '产品工件保存在仓库历史中'),
+    tags: ['Productivity', 'Product design', 'Apps']
+  },
+  {
+    id: 'crawlab-actors', name: 'Crawlab / Apify actor fleet', period: '2026', category: 'agents',
+    description: copy('Reusable scraping actors, central storage and downstream consumers supporting OULANG, Huatong and OUPIN.', 'Actores de scraping reutilizables, almacenamiento central y consumidores para OULANG, Huatong y OUPIN.', 'Acteurs de scraping réutilisables, stockage central et consommateurs pour OULANG, Huatong et OUPIN.', '为 OULANG、Huatong 与 OUPIN 提供可复用采集任务、中央存储及下游消费。'),
+    proof: copy('Current repositories and operating infrastructure', 'Repositorios e infraestructura operativa actuales', 'Dépôts et infrastructure opérationnelle actuels', '当前仓库与运行基础设施'),
+    tags: ['Crawlab', 'Apify', 'Data pipelines']
+  },
+  {
+    id: 'mcp-suite', name: 'Browser, shell & diff MCP suite', period: '2025–present', category: 'agents',
+    description: copy('A family of command, browser, editing and comparison integrations that give AI agents practical operating tools.', 'Familia de integraciones de comandos, navegador, edición y comparación para dar herramientas prácticas a agentes de IA.', 'Famille d’intégrations commande, navigateur, édition et comparaison pour outiller concrètement les agents IA.', '为 AI 智能体提供命令、浏览器、编辑与差异比较能力的一组实用集成。'),
+    proof: copy('Part of the 249 public-original repository archive', 'Parte del archivo de 249 repositorios públicos propios', 'Fait partie des 249 dépôts publics originaux', '属于 249 个原创公开仓库档案'),
+    tags: ['MCP', 'Browser', 'Developer tools'], href: 'https://github.com/samihalawa?tab=repositories'
+  },
+  {
+    id: 'audio-multimodal', name: 'Audio & transcription tooling', period: '2024–present', category: 'agents',
+    description: copy('Speech, audio, transcription and multimodal utilities developed across recording, meeting and content workflows.', 'Utilidades de voz, audio, transcripción y multimodalidad para grabación, reuniones y contenido.', 'Outils de voix, audio, transcription et multimodalité pour l’enregistrement, les réunions et le contenu.', '面向录音、会议与内容工作流的语音、音频、转录及多模态工具。'),
+    proof: copy('Multiple repository families and current recording workflows', 'Varias familias de repositorios y flujos actuales de grabación', 'Plusieurs familles de dépôts et flux d’enregistrement actuels', '多个仓库系列与当前录制工作流'),
+    tags: ['Speech', 'Transcription', 'Multimodal']
+  },
+  {
+    id: 'lemon-ai', name: 'Lemon AI customization', period: '2025', category: 'agents',
+    description: copy('Deployment, product identity, landing-page and infrastructure work built around the upstream open-source Lemon AI platform.', 'Despliegue, identidad, landing e infraestructura sobre la plataforma open source Lemon AI.', 'Déploiement, identité produit, landing page et infrastructure autour de la plateforme open source Lemon AI.', '围绕上游开源 Lemon AI 平台开展部署、产品形象、落地页与基础设施工作。'),
+    proof: copy('Customization and deployment work with upstream authorship preserved', 'Personalización y despliegue preservando la autoría upstream', 'Personnalisation et déploiement en préservant l’auteur upstream', '定制与部署工作，并保留上游作者归属'),
+    tags: ['Open source', 'Deployment', 'Agent platform']
+  },
+  {
+    id: 'autoiol', name: 'AutoIOL', period: '2024–2026', category: 'applied',
+    description: copy('Ophthalmology-oriented software and AI explorations for image review, longitudinal tracking and structured reporting.', 'Exploraciones de software e IA oftalmológica para revisión de imagen, seguimiento longitudinal e informes estructurados.', 'Explorations logicielles et IA en ophtalmologie pour la revue d’images, le suivi longitudinal et les rapports structurés.', '面向眼科影像审阅、纵向跟踪与结构化报告的软件和 AI 探索。'),
+    proof: copy('Repository and medical-project artifact family', 'Familia de repositorios y artefactos médicos', 'Famille de dépôts et d’artefacts médicaux', '仓库与医疗项目工件系列'),
+    tags: ['Ophthalmology', 'Medical imaging', 'Human review']
+  },
+  {
+    id: 'autohsk', name: 'AutoHSK & language tools', period: '2025–present', category: 'education',
+    description: copy('AI-assisted Chinese study tools connecting language teaching, structured practice and software product design.', 'Herramientas de chino con IA que conectan enseñanza, práctica estructurada y diseño de producto.', 'Outils d’étude du chinois assistés par IA reliant enseignement, pratique structurée et produit logiciel.', '连接中文教学、结构化练习与软件产品设计的 AI 辅助学习工具。'),
+    proof: copy('Project artifacts connect language teaching to software', 'Los artefactos conectan la enseñanza de idiomas con software', 'Les artefacts relient l’enseignement des langues au logiciel', '项目工件将语言教学与软件相连接'),
+    tags: ['Mandarin', 'Learning tools', 'AI']
+  },
+  {
+    id: 'guided-learning', name: 'AutoTutorial · MentorIA · PerfectPrompter', period: '2025', category: 'education',
+    description: copy('A family of guided-learning and prompt-design experiments focused on helping people work more effectively with AI.', 'Familia de aprendizaje guiado y diseño de prompts para trabajar mejor con IA.', 'Famille d’expériences d’apprentissage guidé et de conception de prompts pour mieux travailler avec l’IA.', '帮助人们更有效使用 AI 的引导式学习与提示设计实验系列。'),
+    proof: copy('Verified product families and source artifacts', 'Familias de producto y artefactos verificados', 'Familles de produits et artefacts vérifiés', '已验证的产品系列与源码工件'),
+    tags: ['Learning design', 'Prompting', 'Education']
+  },
+  {
+    id: 'public-teaching', name: 'Public video & teaching catalogue', period: '2023–present', category: 'education',
+    description: copy('A substantial public library spanning long-form AI lessons, automation, creative software, product walkthroughs and technical demonstrations.', 'Biblioteca pública de lecciones extensas de IA, automatización, software creativo, recorridos de producto y demostraciones técnicas.', 'Bibliothèque publique de cours IA, automatisation, logiciels créatifs, présentations produit et démonstrations techniques.', '涵盖 AI 长课程、自动化、创意软件、产品演示与技术展示的大型公开资料库。'),
+    proof: copy('373 public videos · approximately 159.65 hours at the current snapshot', '373 vídeos públicos · aproximadamente 159,65 horas en la instantánea actual', '373 vidéos publiques · environ 159,65 heures dans l’instantané actuel', '当前快照为 373 个公开视频，约 159.65 小时'),
+    tags: ['Video', 'Teaching', 'AI'], href: 'https://www.youtube.com/@autoclient-ai'
   }
 ];
 

@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
                     </div>
                     <div className="rounded-2xl border border-slate-100 bg-white/80 p-6 shadow-sm backdrop-blur">
                         <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">{t('footer.contactTitle')}</h3>
-                        <dl className="mt-4 space-y-4">
+                        <div className="mt-4 space-y-4">
                             {contactDetails.map(detail => {
                                 const isExternalLink = detail.href ? detail.href.startsWith('http') : false;
                                 const linkProps = isExternalLink
@@ -57,8 +57,8 @@ const Footer: React.FC = () => {
                                             <i className={`${detail.icon} text-sm`}></i>
                                         </div>
                                         <div className="text-left">
-                                            <dt className="text-xs font-semibold uppercase tracking-wide text-slate-500">{detail.label}</dt>
-                                            <dd className="text-sm text-slate-700">
+                                            <div className="text-xs font-semibold uppercase tracking-wide text-slate-500">{detail.label}</div>
+                                            <div className="text-sm text-slate-700">
                                                 {detail.href ? (
                                                     <a
                                                         href={detail.href}
@@ -70,12 +70,12 @@ const Footer: React.FC = () => {
                                                 ) : (
                                                     detail.value
                                                 )}
-                                            </dd>
+                                            </div>
                                         </div>
                                     </div>
                                 );
                             })}
-                        </dl>
+                        </div>
                     </div>
                 </div>
                 <p className="mt-10 text-center text-xs text-slate-400">{t('footer.copyright')}</p>

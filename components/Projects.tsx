@@ -14,6 +14,13 @@ import {
 
 type InventoryFilter = 'all' | InventoryLane;
 
+const workstreamHeadings: Record<LanguageCode, { eyebrow: string; title: string; body: string; open: string }> = {
+  en: { eyebrow: 'The full landscape', title: 'Seven workstreams, one connected practice.', body: 'The portfolio stretches from products and client systems to open source, infrastructure, research, education and earlier experiments. Open any lane to jump into its full chronology.', open: 'Explore workstream' },
+  es: { eyebrow: 'El mapa completo', title: 'Siete líneas de trabajo, una práctica conectada.', body: 'El portfolio une productos, sistemas para clientes, open source, infraestructura, investigación, educación y experimentos anteriores. Abre cualquier línea para ver su cronología completa.', open: 'Explorar línea' },
+  fr: { eyebrow: 'Vue d’ensemble', title: 'Sept axes, une pratique connectée.', body: 'Le portfolio relie produits, systèmes clients, open source, infrastructure, recherche, éducation et expérimentations antérieures. Ouvrez un axe pour parcourir toute sa chronologie.', open: 'Explorer cet axe' },
+  zh: { eyebrow: '完整版图', title: '七条工作主线，一个相互连接的实践体系。', body: '作品集涵盖产品、客户系统、开源、基础设施、研究、教育与早期实验。打开任一主线即可进入完整时间线。', open: '探索此主线' },
+};
+
 const headings: Record<LanguageCode, {
   eyebrow: string;
   title: string;
@@ -44,7 +51,7 @@ const headings: Record<LanguageCode, {
     eyebrow: 'Selected work · 2023–today',
     title: 'AI products built from first decision to live operation.',
     body: 'A portfolio of multilingual platforms, agent systems, applied AI and technical education—designed, engineered and operated end to end.',
-    stats: ['portfolio projects', 'public original repositories', 'VUDA GitHub stars', 'portfolio languages'],
+    stats: ['public work records', 'public original repositories', 'public videos', 'technical articles'],
     approachEyebrow: 'End-to-end ownership',
     approachTitle: 'One builder across product, engineering and launch.',
     approachBody: 'The strongest work happens when product decisions, technical architecture and the operating reality stay connected.',
@@ -74,7 +81,7 @@ const headings: Record<LanguageCode, {
     eyebrow: 'Trabajo seleccionado · 2023–hoy',
     title: 'Productos de IA, desde la primera decisión hasta la operación real.',
     body: 'Un portfolio de plataformas multilingües, sistemas de agentes, IA aplicada y formación técnica, diseñado y construido de principio a fin.',
-    stats: ['proyectos del portfolio', 'repositorios públicos propios', 'estrellas de VUDA en GitHub', 'idiomas del portfolio'],
+    stats: ['registros de trabajo públicos', 'repositorios públicos propios', 'vídeos públicos', 'artículos técnicos'],
     approachEyebrow: 'Responsabilidad integral',
     approachTitle: 'Producto, ingeniería y lanzamiento en una sola visión.',
     approachBody: 'El mejor trabajo ocurre cuando las decisiones de producto, la arquitectura y la realidad operativa siguen conectadas.',
@@ -104,7 +111,7 @@ const headings: Record<LanguageCode, {
     eyebrow: 'Travaux sélectionnés · 2023–aujourd’hui',
     title: 'Des produits IA, de la première décision à l’exploitation réelle.',
     body: 'Un portfolio de plateformes multilingues, de systèmes d’agents, d’IA appliquée et de formation technique, conçu et construit de bout en bout.',
-    stats: ['projets du portfolio', 'dépôts publics originaux', 'étoiles GitHub de VUDA', 'langues du portfolio'],
+    stats: ['réalisations publiques', 'dépôts publics originaux', 'vidéos publiques', 'articles techniques'],
     approachEyebrow: 'Responsabilité de bout en bout',
     approachTitle: 'Produit, ingénierie et lancement dans une même vision.',
     approachBody: 'Les meilleurs produits gardent les décisions produit, l’architecture technique et la réalité opérationnelle connectées.',
@@ -134,7 +141,7 @@ const headings: Record<LanguageCode, {
     eyebrow: '精选作品 · 2023 至今',
     title: '从第一项决策到真实运营的 AI 产品。',
     body: '涵盖多语言平台、智能体系统、应用型 AI 与技术教育，贯穿设计、开发与运营全过程。',
-    stats: ['作品集项目', '原创公开仓库', 'VUDA GitHub 星标', '作品集语言'],
+    stats: ['公开工作记录', '原创公开仓库', '公开视频', '技术文章'],
     approachEyebrow: '端到端负责',
     approachTitle: '让产品、工程与发布保持同一视角。',
     approachBody: '当产品决策、技术架构和真实运营持续连接时，才能做出更强的产品。',
@@ -165,6 +172,7 @@ const headings: Record<LanguageCode, {
 const categoryOrder: PortfolioCategory[] = ['platforms', 'agents', 'applied', 'education'];
 const laneOrder: InventoryLane[] = ['products', 'clients', 'open-source', 'research', 'education', 'infrastructure', 'archive'];
 const internalInventoryIds = new Set(['timeline-private-artifacts', 'timeline-career-rebuild']);
+const publicInventory = PORTFOLIO_INVENTORY.filter(item => item.status === 'verified' && !internalInventoryIds.has(item.id));
 
 const Projects: React.FC = () => {
   const { language } = useTranslation();
@@ -174,7 +182,7 @@ const Projects: React.FC = () => {
 
   const filteredInventory = useMemo(() => {
     const normalizedQuery = query.trim().toLocaleLowerCase(language);
-    return PORTFOLIO_INVENTORY.filter(item => item.status === 'verified' && !internalInventoryIds.has(item.id)).filter(item => {
+    return publicInventory.filter(item => {
       const c = getInventoryCopy(item, language);
       const matchesQuery = !normalizedQuery || [item.title, item.period, item.era, c.summary]
         .some(value => value.toLocaleLowerCase(language).includes(normalizedQuery));
@@ -183,11 +191,15 @@ const Projects: React.FC = () => {
   }, [language, lane, query]);
 
   const eras = useMemo(() => Array.from(new Set(filteredInventory.map(item => item.era))), [filteredInventory]);
+  const workstreams = useMemo(() => laneOrder.map(option => {
+    const items = publicInventory.filter(item => item.lane === option);
+    return { lane: option, count: items.length, examples: items.slice(-3).reverse().map(item => item.title) };
+  }), []);
   const stats = [
-    { value: PORTFOLIO_PROJECTS.length, label: h.stats[0] },
+    { value: publicInventory.length, label: h.stats[0] },
     { value: '249', label: h.stats[1] },
-    { value: '80★', label: h.stats[2] },
-    { value: '4', label: h.stats[3] },
+    { value: '373', label: h.stats[2] },
+    { value: '12', label: h.stats[3] },
   ];
 
   return (
@@ -214,7 +226,21 @@ const Projects: React.FC = () => {
           </div>
         </section>
 
-        <div className="max-w-4xl"><span className="badge-pill">{h.selectedEyebrow}</span><h2 className="mt-5 font-display text-4xl font-bold tracking-[-.045em] text-slate-950 sm:text-5xl">{h.selectedTitle}</h2><p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-600">{h.selectedBody}</p></div>
+        <section className="border-y border-slate-200 py-20 sm:py-24" aria-labelledby="portfolio-workstreams-heading">
+          <div className="grid gap-8 lg:grid-cols-[.78fr_1.22fr] lg:gap-14">
+            <div className="lg:sticky lg:top-28 lg:self-start"><span className="badge-pill">{workstreamHeadings[language].eyebrow}</span><h2 id="portfolio-workstreams-heading" className="section-heading mt-5">{workstreamHeadings[language].title}</h2><p className="section-subtitle mt-5">{workstreamHeadings[language].body}</p></div>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {workstreams.map((stream, index) => <button key={stream.lane} type="button" onClick={() => { setQuery(''); setLane(stream.lane); document.getElementById('inventory')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }} className="group min-h-48 rounded-2xl border border-slate-200 bg-white p-5 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-brand-300 hover:shadow-lg sm:p-6">
+                <div className="flex items-start justify-between gap-4"><span className="font-mono text-xs font-bold text-brand-700">{String(index + 1).padStart(2, '0')}</span><span className="rounded-full bg-slate-950 px-3 py-1 text-xs font-bold text-white">{stream.count}</span></div>
+                <h3 className="mt-5 text-xl font-bold text-slate-950">{inventoryLaneCopy[stream.lane][language]}</h3>
+                <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-slate-500">{stream.examples.join(' · ')}</p>
+                <span className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-bold text-brand-700">{workstreamHeadings[language].open}<i className="fas fa-arrow-down text-xs transition group-hover:translate-y-0.5" /></span>
+              </button>)}
+            </div>
+          </div>
+        </section>
+
+        <div className="max-w-4xl pt-20 sm:pt-24"><span className="badge-pill">{h.selectedEyebrow}</span><h2 className="mt-5 font-display text-4xl font-bold tracking-[-.045em] text-slate-950 sm:text-5xl">{h.selectedTitle}</h2><p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-600">{h.selectedBody}</p></div>
         {categoryOrder.map(category => {
           const items = PORTFOLIO_PROJECTS.filter(project => project.category === category);
           return <section key={category} className="mt-14" aria-labelledby={`category-${category}`}><div className="mb-6 flex items-center gap-4"><h3 id={`category-${category}`} className="text-xl font-bold text-slate-950 sm:text-2xl">{categoryCopy[category][language]}</h3><span className="h-px flex-1 bg-slate-200" /><span className="text-sm font-bold tabular-nums text-slate-400">{String(items.length).padStart(2, '0')}</span></div>
@@ -240,7 +266,7 @@ const Projects: React.FC = () => {
           <div className="mt-12 space-y-16">
             {eras.map(era => <section key={era} aria-labelledby={`era-${era.replace(/\W+/g, '-')}`}>
               <div className="grid gap-6 lg:grid-cols-[12rem_1fr]"><div><h3 id={`era-${era.replace(/\W+/g, '-')}`} className="font-display text-3xl font-bold tracking-[-.035em] text-slate-950 lg:sticky lg:top-[16rem]">{era}</h3><div className="mt-2 h-1 w-12 rounded-full bg-brand-500" /></div><div className="grid gap-4 md:grid-cols-2">{filteredInventory.filter(item => item.era === era).map(item => { const c = getInventoryCopy(item, language); return <article key={item.id} id={item.id} className="scroll-mt-72 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
-                <div className="flex flex-wrap items-center gap-2"><span className="rounded-full bg-brand-50 px-2.5 py-1 text-xs font-bold text-brand-800">{inventoryLaneCopy[item.lane][language]}</span><span className="ml-auto text-xs font-bold uppercase tracking-[.12em] text-slate-400">{item.period}</span></div>
+                <div className="flex flex-wrap items-center gap-2"><span className="rounded-full bg-brand-50 px-2.5 py-1 text-xs font-bold text-brand-800">{inventoryLaneCopy[item.lane][language]}</span><span className="ml-auto text-xs font-bold uppercase tracking-[.12em] text-slate-600">{item.period}</span></div>
                 {item.image && <img src={item.image} alt={`${item.title} interface`} className="mt-4 h-32 w-full rounded-xl object-cover" loading="lazy" />}
                 <h4 className="mt-4 text-xl font-bold text-slate-950">{item.title}</h4><p className="mt-2 text-sm leading-relaxed text-slate-600">{c.summary}</p>{item.href && <a href={item.href} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex min-h-11 items-center gap-2 rounded-full font-bold text-brand-700">{h.open}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>}
               </article>; })}</div></div>

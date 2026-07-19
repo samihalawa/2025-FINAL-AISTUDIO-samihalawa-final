@@ -8,8 +8,8 @@ linkedin.com/in/samihalawa | github.com/samihalawa | huggingface.co/samihalawa
 PERFIL
 Fundador e ingeniero que convierte ideas ambiguas de negocio y producto en sistemas de IA operativos. Responsabilidad completa sobre definición, flujos LLM y agentes, datos y APIs, implementación web/móvil, cloud, observabilidad, crecimiento y operaciones. Especializado en arquitectura zero-to-one, entrega multilingüe, automatización y el sistema de producción completo alrededor de la IA.
 
-INSTANTÁNEA DE EVIDENCIA PÚBLICA VERIFICADA | 16 JULIO 2026
-- 90 entradas de proyectos y trabajo clasificadas por evidencia entre 2023 y la instantánea actual.
+RESUMEN DE TRABAJO PÚBLICO | 19 JULIO 2026
+- 84 registros públicos de trabajo entre 2023 y la instantánea actual.
 - GitHub: 700 repositorios públicos, 249 no-fork y 451 forks; 3 repositorios archivados.
 - VUDA: 80 estrellas y 7 forks en la instantánea actual.
 - Hugging Face: 12 artículos públicos. La API devuelve 17 Spaces, 6 colecciones, 1 modelo y 0 datasets; hay discrepancia UI/API y se explicita el resultado de API.
@@ -26,16 +26,16 @@ EXPERIENCIA PROFESIONAL
 
 Fundador e Ingeniero de Producto IA | Agents AI Ltd | Madrid / Londres | Julio 2025-Actualidad
 - Responsable de discovery, arquitectura, implementación, despliegue, analítica, monetización y entrega operativa en productos propios y B2B.
-- Construí OULANG (欧浪AI) como marketplace/vida local web multilingüe activo con páginas públicas en App Store / Google Play bajo la identidad heredada com.oulang.classifieds, mientras continuaba el flujo nativo separado de oulang.app. Métricas de proveedor y etapas exactas de consola se mantienen fechadas por separado.
+- Construí OULANG (欧浪AI), un marketplace multilingüe y plataforma de vida local para comunidades chinas en España, con entrega web, iOS y Android.
 - Extendí el ecosistema a Huatong para comunidades chinas en Europa, OUPIN para discovery asistido y PIME.ai para servicios de IA productizados.
-- Construí AutoClient y sistemas de investigación, enriquecimiento, CRM, email, WhatsApp y agentes de voz; publiqué herramientas MCP reutilizables. Un sidecar Meet Tekçe/OULANG-AutoClient del 15 jul 2026 verifica una discusión/demo de generación de leads inmobiliarios, acotada como propuesta/demo.
+- Construí AutoClient y sistemas de investigación, enriquecimiento, CRM, email, WhatsApp y agentes de voz; publiqué herramientas MCP reutilizables, incluida una demostración de generación de leads inmobiliarios para Tekçe.
 - Entregué flujos de inteligencia de precios e informes de evidencia con marketplaces, matching, histórico de precios e inventario o ERP.
 - Prototipé flujos multimodales de revisión de imagen médica, seguimiento longitudinal e informes estructurados con revisión humana; sin afirmar despliegue clínico.
 
 Profesor de IA y Consultor Técnico Independiente | Madrid / Remoto | 2022-Actualidad
 - Enseño IA práctica, agentes, MCP, automatización, Python e ingeniería de producto mediante aplicaciones reales, construcción en directo y programas técnicos.
 - Convierto necesidades de negocio en sistemas para profesionales y equipos en español, inglés y mandarín.
-- Mantengo un archivo verificado por fichero de 111 archivos multimedia y aproximadamente 125,83 horas; solo grabaciones dirigidas han sido indexadas por contenido.
+- Mantengo un archivo de 111 archivos multimedia de clases, reuniones y proyectos, con aproximadamente 125,83 horas.
 
 Ingeniero Full-Stack Sénior | Damehosting | 2019-2023
 - Desarrollo y mantenimiento de sistemas web de producción.
@@ -47,7 +47,7 @@ Web, Móvil, Growth y Educación | Megawebs / Megacursos | 2009-2023
 
 CRONOLOGÍA PROFESIONAL ADICIONAL
 Constructor independiente de productos web y móvil | 2015-Actualidad
-- Registro propio de más de 20 apps nativas y cross-platform; el estado público/tienda actual se verifica producto por producto.
+- Más de 20 aplicaciones nativas y cross-platform construidas en trabajo de producto independiente.
 
 Presentador y anfitrión en directo | China | 2015-2017
 - Comunicación multilingüe en cámara, presentación en directo y producción de contenido.
@@ -62,32 +62,29 @@ PRODUCTOS ACTIVOS Y CONTINUOS
 - OULANG, 2026-actualidad: marketplace y vida local para la diáspora china en España; web activa y trabajo nativo/tienda continuo. oulang.ai
 - Huatong, 2026-actualidad: empleo, vivienda, clasificados y servicios locales para comunidades chinas en Europa. huatong.eu
 - AutoDate, 2026: web activa e iOS 1.0.14 (39) listo para probar en TestFlight el 14 de julio de 2026; no se representa como lanzamiento App Store. autodate.ai
-- AutoClient, 2024-actualidad: investigación agéntica, enriquecimiento, scoring, outreach, conversación y CRM; evidencia sidecar de 2026 verifica discusión/demo sobre compradores inmobiliarios chinos cualificados, transparencia CRM y outreach personalizado con IA, sin afirmar partnership firmado, pago, ingresos ni conversión.
+- AutoClient, 2024-actualidad: investigación agéntica, enriquecimiento, scoring, outreach, conversación y CRM, incluida una demostración de generación de compradores inmobiliarios chinos cualificados para Tekçe.
 - PIME.ai pack Ley IA, 2026: análisis multilingüe de aplicabilidad/riesgo, alfabetización IA y hoja de ruta con infraestructura de entrega y campaña. pime.ai
 - AutoMedical, 2025-2026: superficie activa de aprendizaje y flujos multimodales; sin afirmar eficacia, regulación, adopción o resultados. automedical.ai
 - Tasky, 2026: cliente SwiftUI Google Tasks para macOS, iOS y iPadOS con captura, foco, widgets, extensiones, búsqueda y sync; uploads/revisión verificados, lanzamiento no.
 - OUPIN, 2026: discovery asistido para consumo/inmobiliario con identidad e infraestructura compartidas; dominio y métricas no confirmados.
 
 SISTEMAS PARA CLIENTES Y COLABORACIONES
-- IWAKY / AutoPricing, 2025-2026: contrato de EUR35.000 para pricing B2C/B2B, evidencia de marketplaces, matching, WhatsApp privado, comercio ERP y dashboards. Caja registra EUR17.500. Artefactos demo de junio de 2026 añaden ecommerce/tasación dinámica, mini-ERP de stock y precios de compra/venta, scraping de mercado, automatización de captación/contacto en Wallapop, extracción de presupuestos de WhatsApp y gestión opcional de pedidos/usuarios. Contrato, primer pago y artefactos demo probados; aceptación final, pago final, envío real de mensajes, resultado en producción y métricas live actuales no.
-- InfoHuaxin, 2025-2026: lane cliente/producto verificado por repositorios, web activa y ocho filas de caja; materiales legales sensibles excluidos. infohuaxin.es
-- Umbramed / Valerio, 2025-2026: liderazgo técnico de herramientas Ionic/Capacitor, ingesta de exámenes OPE, tooling PDF-to-JSON/Airtable, flujos de subida de exámenes con conectores Claude/Table, asesoría de recuperación e instalabilidad web/PWA, investigación de automatización Diraya/Citrix/ICA, preparación app-store/pagos, preparación de conectores Stripe/pagos, revisión de simulador de arritmias, ideación ML con retinografías, flujo de audio/teleprompter promocional, optimización de logo/icono, prompt de rediseño final Umbramez y entrega del prompt Autonomous Clone, además de preparación EIC/EC Accelerator/vídeo. Solicitud no es premio; recuperación/preparación app-store/pagos/conectores no es aceptación de despliegue, envío a app store, integración de pagos/estadísticas/pagos completada, adopción clínica, validación clínica ni lanzamiento de producto clonado. umbramed.es
+- IWAKY / AutoPricing, 2025-2026: contrato de EUR35.000 para pricing B2C/B2B, inteligencia de marketplaces, matching de productos, análisis de presupuestos de WhatsApp, comercio ERP y dashboards.
+- InfoHuaxin, 2025-2026: trabajo de producto y cliente en una superficie pública activa, sistemas de datos y herramientas operativas. infohuaxin.es
+- Umbramed / Valerio, 2025-2026: liderazgo técnico de herramientas Ionic/Capacitor con roadmap, Netlify, Stripe y artefactos EIC. Solicitud no es premio; despliegue no es adopción clínica. umbramed.es
 - INTLAW / Ignacio, 2025-2026: demo legal con prospección, intake por chatbot/WhatsApp/teléfono y análisis multiagente de expedientes; propuestas/piloto no son contrato firmado.
 - Scope / EyeUnit / Fernando Ly, 2024-2025: fusión de listas, cross-sell y scoring clínico-comercial conectado a OCT/IA médica; prototipo demostrado, host actual cerrado.
 - SORT / SortBot, 2025: propuesta y repositorio para convertir PDFs en cursos online, añadir chatbot y publicar por SSH; aceptación/despliegue no confirmados.
 - San Martín, 2025: propuesta RRHH para cumpleaños, partes/horarios, búsqueda de talento y portal de empleado; adopción no confirmada.
 - EA Housing / Radio Inter, 2026: propuestas modulares por empresa y opción de grupo derivadas de llamada grabada; sin afirmar contrato, pago o entrega.
-- Tekçe / OULANG-AutoClient, 2026: discusión comercial y demo para generación de compradores inmobiliarios chinos cualificados, gestión auditable en CRM y outreach personalizado con IA; solo evidencia de propuesta/demo.
-- EVA, 2025: alcance de formación en IA/automatización administrativa con Copilot, prompting, automatización de clics en navegador, organización local de archivos/contabilidad, Microsoft To Do, propuesta de 20-30 horas y logística FUNDAE/subvención; solo evidencia de propuesta/alcance.
-- Mike Lepcsik, 2025: consultoría sobre N8N, Close CRM, Lead Feeder, enriquecimiento Google Maps/Search y enriquecimiento tipo AutoClient; solo evidencia de propuesta/consultoría.
-- SOLMADE, 2026: discovery de IA/marketing para moda con reconstrucción web/app, automatización SEO/blog, imágenes IA de producto/modelo, mockups/tech packs y vídeos/imágenes generados; solo evidencia de propuesta/discovery.
+- Tekçe / OULANG-AutoClient, 2026: demostración comercial para generar compradores inmobiliarios chinos cualificados, gestión transparente en CRM y outreach personalizado con IA.
 
 OPEN SOURCE E INFRAESTRUCTURA OPERATIVA
 - VUDA, Visual UI Debug Agent MCP: captura, anotación y razonamiento visual para diagnóstico de interfaces; 80 estrellas y 7 forks. github.com/samihalawa/VUDA
 - SMTP MCP Server: transporte de correo y buzón para agentes; 17 estrellas y 15 forks. github.com/samihalawa/smtp-mcp-server
-- GOWA / automatización WhatsApp: APIs Go de mensajería, histórico y medios; código disponible se separa de prueba de envío real.
-- Notion-Drive Sync: sincronización open source conectada a evidencia del espejo Notion/Drive; 3 estrellas. github.com/samihalawa/notion-drive-sync
-- Telnyx agentic: telefonía, estado de agentes de voz e integraciones; aceptación de cola no se presenta como llamada completada.
+- GOWA / automatización WhatsApp: APIs Go de mensajería, histórico y medios para agentes operativos.
+- Notion-Drive Sync: sincronización open source entre espacios de Notion y Google Drive; 3 estrellas. github.com/samihalawa/notion-drive-sync
+- Telnyx agentic: telefonía, estado de agentes de voz e integraciones reutilizables de comunicaciones.
 - Codex Chronicle / Screenpipe: reconstrucción entre sesiones, memoria visual persistente y análisis multiagente en macOS.
 - macOS Optimizer: utilidad pública con 13 estrellas y 1 fork.
 - Crawlab / Apify: actores, almacenamiento central y consumidores OULANG/Huatong/OUPIN; sin publicar recuentos de control plane.
@@ -95,7 +92,7 @@ OPEN SOURCE E INFRAESTRUCTURA OPERATIVA
 
 INVESTIGACIÓN APLICADA, PROTOTIPOS Y EDUCACIÓN
 - APOLO, 2025: modelo público imagen-texto en Hugging Face basado en DeepSeek-VL2-tiny; investigación/prototipo, no validación clínica.
-- AutoRad, 2025: radiología en estado Backlog de Notion; cifras de financiación, patentes, readiness y mejora siguen como planes no verificados.
+- AutoRad, 2025: concepto de producto radiológico y planificación de flujos en Notion Backlog.
 - AutoIOL y oftalmología, 2024-2026: imagen, OCT, seguimiento e informes con revisión humana; sin adopción ni resultados clínicos.
 - Inteligencia de recetas, 2026: discovery para notas/fotos de chef, investigación web, técnica, publicación multilingüe y vídeos opcionales.
 - SONMADE, 2026: prototipo React/TypeScript, FFmpeg y Sharp para escenas/highlights por movimiento, color, borde/texto y fullscreen.
@@ -108,14 +105,14 @@ INVESTIGACIÓN APLICADA, PROTOTIPOS Y EDUCACIÓN
 2024: Aprende IA; MenuEditorElectron; AI Absolut; crawler/email; macOS Optimizer; CloudflaredMe; Rafael Botella; AutoCrypto; audio/transcripción; KittyTasks/FocusOnTask; AutoClient inicial y workers; Pollinations/storage; AutoVideo; MedSAM; AutoTraining; AutoIOL; SpeakingAI; EyeUnit/Fernando Ly; Daniel Parisi; Light Funnels; escritura HF; Colab.
 2025 enero-marzo: SORT/SortBot; AutoHSK; blog/contenido; SMTP MCP; shell/browser/diff; oftalmología.
 2025 abril-junio: APOLO; VUDA; AutoTutorial/MentorIA/PerfectPrompter; Wordlist Visual; Scope; Fernando Ly; expansión AutoClient; ola MCP; Agents AI Ltd; ecosistema Lanzadera.
-2025 julio-diciembre: packaging AutoMedical; utilidades; AutoRad backlog; sites; WhatsApp MCP; IWAKY/AutoPricing; INTLAW; San Martín; Umbramed; diseño AutoDate/AutoTinder; ola de prototipos; web de poesía; Lemon AI; curso de agentes; alcance de formación IA/admin EVA; consultoría de automatización Mike Lepcsik.
-2026 enero-junio: OULANG; GOWA; Notion-Drive; Huatong; InfoHuaxin; OUPIN; Crawlab/Apify; Chronicle/Screenpipe; Telnyx; Desktop Commander; MadridResorts; VibraCode; AutoMedical; sites; Tasky; tutoría/ITE/TusClases; módulo Mundial; SONMADE; discovery IA/marketing para moda SOLMADE.
-2026 julio: AutoDate TestFlight; recetas; discusión Tekçe/OULANG-AutoClient sobre leads inmobiliarios cualificados; paridad nativa OULANG; propuestas EA Housing/Radio Inter; paisajes sonoros/tutoría/audio; pack Ley IA PIME; artefactos locales; reconstrucción de evidencia.
+2025 julio-diciembre: packaging AutoMedical; utilidades; AutoRad backlog; sites; WhatsApp MCP; IWAKY/AutoPricing; INTLAW; San Martín; Umbramed; diseño AutoDate/AutoTinder; ola de prototipos; web de poesía; Lemon AI; curso de agentes.
+2026 enero-junio: OULANG; GOWA; Notion-Drive; Huatong; InfoHuaxin; OUPIN; Crawlab/Apify; Chronicle/Screenpipe; Telnyx; Desktop Commander; MadridResorts; VibraCode; AutoMedical; sites; Tasky; tutoría/ITE/TusClases; módulo Mundial; SONMADE.
+2026 julio: AutoDate TestFlight; recetas; generación de leads inmobiliarios Tekçe/OULANG-AutoClient; paridad nativa OULANG; propuestas EA Housing/Radio Inter; paisajes sonoros/tutoría/audio; pack Ley IA PIME; productos locales adicionales.
 
 OPEN SOURCE, ESCRITURA Y DOCENCIA
 - Doce artículos públicos en Hugging Face: automatización de navegador, Transformers.js local, prompting, repositorios de agentes autónomos, AutoGen, lead generation y VUDA.
 - Auditoría Colab: al menos 112 filas y 58 notebooks con nombres significativos; la carpeta principal alcanzó el límite de 100 filas del conector.
-- La enumeración pública de youtube.com/@autoclient-ai muestra actualmente 373 vídeos / aproximadamente 159,65 horas. Las playlists públicas verifican superficies de curso de IA, After Effects, Portfolio y AutoPricing separando entradas curadas/externas; no se afirma cifra de suscriptores, watch time ni resultados de alumnos sin verificación de YouTube Studio/proveedor.
+- Catálogo público youtube.com/@autoclient-ai: 373 vídeos / aproximadamente 159,65 horas sobre cursos de IA, After Effects, portfolio y AutoPricing.
 - Autor: ChinoTotal: Aprende Chino Mandarín desde 0, ISBN 9798873249237.
 
 EDUCACIÓN
@@ -135,5 +132,5 @@ Cantonés: conversacional
 ROLES OBJETIVO
 Founding AI Engineer | AI Product Engineer | AI Platform Lead | Head of AI | Staff AI Engineer | Technical Product Lead
 
-FRONTERA DE EVIDENCIA
-Esta versión ATS deriva del ledger de 90 entradas actualizado el 16 de julio de 2026. Separa estados activo, TestFlight, propuesta, contrato, pago, repositorio, desplegado y aceptado. Excluye patentes, validación clínica, ingresos, audiencia, métricas/estados de consola de app stores, recuentos amplios de infraestructura y métricas de producto sin prueba actual. El CV maestro con foto y la cronología buscable están en samihalawa.com/cv y samihalawa.com/projects.
+EDICIONES DEL PORTFOLIO
+Esta edición sin fotografía está optimizada para sistemas ATS. El CV visual y el archivo buscable completo de 84 registros públicos están en samihalawa.com/cv y samihalawa.com/projects.
