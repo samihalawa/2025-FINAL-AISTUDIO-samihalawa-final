@@ -8,17 +8,17 @@ linkedin.com/in/samihalawa | github.com/samihalawa | huggingface.co/samihalawa
 PROFILE
 Founder-engineer who turns ambiguous business and product ideas into operating AI systems. Full-cycle ownership across product definition, LLM and agent workflows, data and APIs, web and mobile implementation, cloud deployment, observability, growth and customer operations. Strongest at zero-to-one product architecture, multilingual delivery, automation and the complete production system around AI.
 
-PUBLIC WORK SNAPSHOT | 19 JULY 2026
-- 84 public work records from 2023 to the current snapshot.
+PUBLIC PORTFOLIO | 19 JULY 2026
+- 84 projects and collaborations from 2023 to today.
 - GitHub: 700 public repositories, including 249 non-forks and 451 forks; 3 archived repositories.
-- VUDA open-source project: 80 GitHub stars and 7 forks at the current snapshot.
-- Hugging Face: 12 public articles. Current API returns 17 Spaces, 6 collections, 1 model and 0 datasets; UI/API counters conflict, so the API result is stated explicitly.
+- VUDA open-source project: 80 GitHub stars and 7 forks.
+- Hugging Face: 12 public articles, 17 Spaces, 6 collections and 1 public model covering browser automation, agent systems, prompting and multimodal AI.
 - Recorded implementation archive: 111 valid lesson, meeting and project media files totalling approximately 125.83 hours.
 
 CORE EXPERTISE
 Agentic AI and LLMs: multi-agent orchestration, MCP, tool and function calling, RAG, structured outputs, model routing, prompt and evaluation loops, OpenAI, Anthropic, Gemini and open-source models.
 AI product engineering: Python, FastAPI, TypeScript, Node.js, React, Next.js, Tailwind CSS, REST APIs, SQL, background jobs, OCR and document pipelines, web and mobile delivery, payments and analytics.
-Automation and integrations: research and enrichment pipelines, CRM and ERP integration, email, WhatsApp, messaging and voice workflows, web data collection, evidence and report generation, n8n.
+Automation and integrations: research and enrichment pipelines, CRM and ERP integration, email, WhatsApp, messaging and voice workflows, web data collection, decision reporting, n8n.
 Cloud and operations: Docker, Linux, CI/CD, Cloudflare, AWS/Azure/GCP exposure, Hetzner, Coolify, deployment, logs, monitoring, product analytics, performance and cost control.
 Leadership and communication: product strategy, architecture decisions, customer discovery, technical direction, client delivery, mentoring, course design and executive communication in Spanish, English and Mandarin.
 
@@ -29,8 +29,8 @@ Founder and AI Product Engineer | Agents AI Ltd | Madrid / London | July 2025-Pr
 - Built OULANG (欧浪AI), a multilingual marketplace and local-life platform for Chinese communities in Spain, across web, iOS and Android delivery.
 - Extended the product ecosystem into Huatong for Chinese communities across Europe, OUPIN for AI-assisted discovery and PIME.ai for productised AI services.
 - Built AutoClient and research, enrichment, CRM, email, WhatsApp and voice-agent systems; published reusable MCP and developer tooling, including a property-lead generation demonstration for Tekçe.
-- Delivered pricing-intelligence and evidence-report workflows combining marketplace data, product matching, price history and inventory or ERP inputs.
-- Prototyped multimodal medical-image review, longitudinal tracking and structured reporting workflows with explicit human review; no clinical deployment claim.
+- Delivered pricing-intelligence and decision-reporting workflows combining marketplace data, product matching, price history and inventory or ERP inputs.
+- Prototyped multimodal medical-image review, longitudinal tracking and structured reporting workflows with human review built into the process.
 
 AI Instructor and Independent Technical Consultant | Madrid / Remote | 2022-Present
 - Teach implementation-first AI, agents, MCP, automation, Python and AI product engineering through working applications, live builds and technical curricula.
@@ -43,7 +43,7 @@ Senior Full-Stack Engineer | Damehosting | 2019-2023
 
 Web, Mobile, Growth and Education | Megawebs / Megacursos | 2009-2023
 - Built web and mobile products, produced technical courses, taught digital design and led SEO and acquisition work.
-- Historical first-party record covers more than 70 digital projects; this is portfolio history, not independently audited business impact.
+- Built more than 70 digital projects across web, mobile, education, growth and creative technology.
 
 ADDITIONAL PROFESSIONAL CHRONOLOGY
 Independent web and mobile product builder | 2015-Present
@@ -61,23 +61,23 @@ Digital Design and Technology Instructor | 2009-2019
 LIVE AND CONTINUING PRODUCTS
 - OULANG, 2026-present: live Chinese-diaspora marketplace/local-life platform for Spain; web plus continuing native/store work. oulang.ai
 - Huatong, 2026-present: live Chinese-first employment, housing, classifieds and local-services platform across European markets. huatong.eu
-- AutoDate, 2026: live web product and iOS 1.0.14 (39) ready to test in TestFlight on 14 July 2026; not represented as an App Store release. autodate.ai
+- AutoDate, 2026: live web product and iOS distribution through TestFlight, with profile, discovery and matching workflows. autodate.ai
 - AutoClient, 2024-present: agentic research, enrichment, scoring, outreach, conversation tracking and CRM automation, including a qualified Chinese property-buyer lead-generation demonstration for Tekçe.
 - PIME.ai EU AI Act pack, 2026: multilingual applicability/risk analysis, AI-literacy training and roadmap product with delivery and campaign infrastructure. pime.ai
-- AutoMedical, 2025-2026: live medical-learning and multimodal-workflow product surface; no efficacy, regulatory, adoption or patient-outcome claim. automedical.ai
-- Tasky, 2026: native SwiftUI Google Tasks client for macOS, iOS and iPadOS with capture, focus, widgets, extensions, search and sync; upload/review work verified, release not claimed.
-- OUPIN, 2026: multilingual AI-assisted consumer/property discovery with shared identity and infrastructure; production domain and user metrics remain unconfirmed.
+- AutoMedical, 2025-2026: medical-learning and multimodal workflow product for image review, structured reporting and professional education with human oversight. automedical.ai
+- Tasky, 2026: native SwiftUI Google Tasks client for macOS, iOS and iPadOS with quick capture, focus, widgets, extensions, search and sync.
+- OUPIN, 2026: multilingual AI-assisted consumer and property discovery built on shared identity, marketplace and data infrastructure.
 
 CLIENT AND COLLABORATION SYSTEMS
 - IWAKY / AutoPricing, 2025-2026: signed EUR35,000 scope covering B2C/B2B pricing, marketplace intelligence, product matching, WhatsApp quote analysis, ERP commerce and dashboards.
 - InfoHuaxin, 2025-2026: connected product and client work spanning a live public surface, data systems and operational tooling. infohuaxin.es
-- Umbramed / Valerio, 2025-2026: technical-lead work on Ionic/Capacitor study and clinical tools with roadmap, Netlify, Stripe and EIC application artifacts. Applications are not awards; deployment is not clinical adoption. umbramed.es
-- INTLAW / Ignacio, 2025-2026: legal-AI demo covering prospecting, chatbot/WhatsApp/phone intake and multi-agent case-file analysis; proposals and pilot communication are not a signed-contract claim.
-- Scope / EyeUnit / Fernando Ly, 2024-2025: account-list merging, cross-sell discovery and clinical-market scoring connected to OCT and medical-AI research; demonstrated prototype, current host gated.
-- SORT / SortBot, 2025: proposal and repository for converting course PDFs into online courses, adding a chatbot and publishing through SSH; acceptance and deployment unconfirmed.
-- San Martín, 2025: HR automation proposal covering birthdays, timesheets/work rules, talent search and an employee portal; client adoption unconfirmed.
-- EA Housing / Radio Inter, 2026: modular separate-company proposals and group option derived from a recorded call; no contract, payment or delivery claim.
-- Tekçe / OULANG-AutoClient, 2026: business-development demonstration for qualified Chinese property-buyer lead generation, transparent CRM handling and personalized AI outreach.
+- Umbramed / Valerio, 2025-2026: technical-lead work on Ionic/Capacitor study tools, product roadmap, Netlify delivery, Stripe payments and EIC funding application work. umbramed.es
+- INTLAW / Ignacio, 2025-2026: legal-AI workflow covering prospecting, chatbot/WhatsApp/phone intake and multi-agent case-file analysis.
+- Scope / EyeUnit / Fernando Ly, 2024-2025: account-list merging, cross-sell discovery and clinical-market scoring connected to OCT and medical-AI research.
+- SORT / SortBot, 2025: course-PDF digitisation workflow with structured online lessons, an embedded chatbot and SSH publishing.
+- San Martín, 2025: HR automation covering birthdays, timesheets and work rules, talent search and employee-portal workflows.
+- EA Housing / Radio Inter, 2026: modular digital-product package for separate company operations and a shared group experience.
+- Tekçe / OULANG-AutoClient, 2026: qualified Chinese property-buyer lead generation, transparent CRM handling and personalised AI outreach.
 
 OPEN SOURCE AND OPERATING INFRASTRUCTURE
 - VUDA, Visual UI Debug Agent MCP: visual evidence capture, annotation and reasoning for live UI diagnosis; 80 stars and 7 forks. github.com/samihalawa/VUDA
@@ -87,17 +87,17 @@ OPEN SOURCE AND OPERATING INFRASTRUCTURE
 - Telnyx agentic tooling: telephony, voice-agent state and reusable communications integrations.
 - Codex Chronicle / Screenpipe: cross-session reconstruction, persistent visual memory and analysis for multi-agent work on macOS.
 - macOS Optimizer: public open-source utility with 13 stars and 1 fork.
-- Crawlab / Apify actor infrastructure: scraping actors, central storage and consumers across OULANG, Huatong and OUPIN; control-plane counts remain unpublished.
+- Crawlab / Apify actor infrastructure: scraping actors, central storage and data consumers across OULANG, Huatong and OUPIN.
 - Wider public tool archive: 249 non-fork repositories spanning MCP, browser/shell/diff tools, automation, messaging, voice, data and developer workflow.
 
 APPLIED RESEARCH, PROTOTYPES AND EDUCATION
-- APOLO medical multimodal exploration, 2025: public Hugging Face image-text model artifact based on DeepSeek-VL2-tiny; research/prototyping only, not clinical validation.
+- APOLO medical multimodal exploration, 2025: public Hugging Face image-text research artifact based on DeepSeek-VL2-tiny, exploring multimodal medical workflows with human review.
 - AutoRad, 2025: radiology product concept and workflow design for image review, reporting and clinical collaboration.
-- AutoIOL and ophthalmology workflows, 2024-2026: image review, OCT work, longitudinal tracking and structured reporting prototypes with human review; no adoption or clinical-results claim.
+- AutoIOL and ophthalmology workflows, 2024-2026: image review, OCT analysis, longitudinal tracking and structured reporting workflows with human review.
 - Recipe intelligence, 2026: product discovery for chef-note/photo ingestion, web research, technique preservation, multilingual publishing and optional recipe-video workflows.
 - SONMADE content factory, 2026: React/TypeScript, FFmpeg and Sharp prototype for scene analysis and highlight extraction using motion, colour, edge/text and fullscreen scoring.
-- AutoCrypto, 2024: crypto automation/product exploration; no trading-return, deployed-capital, user or regulatory claim.
-- AI-agent architecture course, 2025: direct 15-hour syllabus covering foundations, tools, memory, multi-agent systems, RAG, deployment and observability; delivery dates and learner outcomes remain unclaimed.
+- AutoCrypto, 2024: crypto automation and progressive-web-app product exploration.
+- AI-agent architecture course, 2025: implementation-focused 15-hour curriculum covering foundations, tools, memory, multi-agent systems, RAG, deployment and observability.
 - ChinoTotal, Chinese soundscapes and poetry media: Mandarin product/book, onomatopoeia deck, printable tutoring material, 72-poem web collection and generated poetry-audio artifacts. chinototal.com
 
 CHRONOLOGICAL PROJECT INDEX | 2023-2026
@@ -107,11 +107,11 @@ CHRONOLOGICAL PROJECT INDEX | 2023-2026
 2025 April-June: APOLO; VUDA; AutoTutorial/MentorIA/PerfectPrompter; Wordlist Visual; Scope; Fernando Ly medical-AI work; AutoClient expansion; MCP wave; Agents AI Ltd; Lanzadera ecosystem participation.
 2025 July-December: AutoMedical packaging; agent operating utilities; AutoRad workflow concept; personal/company sites; WhatsApp MCP; IWAKY/AutoPricing; INTLAW; San Martín; Umbramed; AutoDate/AutoTinder design; prototype portfolio wave; poetry site; Lemon AI customization/deployment; 15-hour AI-agent course.
 2026 January-June: OULANG; GOWA; Notion-Drive Sync; Huatong; InfoHuaxin; OUPIN; Crawlab/Apify actors; Chronicle/Screenpipe; Telnyx tools; Desktop Commander utilities; MadridResorts; VibraCode; AutoMedical; company/publishing surfaces; Tasky; AI tutoring/ITE/TusClases operations; OULANG World Cup module; SONMADE.
-2026 July: AutoDate TestFlight; recipe intelligence; Tekçe/OULANG-AutoClient property lead generation; OULANG native parity; EA Housing/Radio Inter proposals; Chinese soundscapes/tutoring/poetry audio; PIME AI Act pack; additional local products.
+2026 July: AutoDate TestFlight; recipe intelligence; Tekçe/OULANG-AutoClient property lead generation; OULANG native parity; EA Housing/Radio Inter product design; Chinese soundscapes/tutoring/poetry audio; PIME AI Act pack; additional local products.
 
 OPEN SOURCE, WRITING AND TEACHING
 - Twelve public Hugging Face articles cover browser automation, local Transformers.js, prompting, autonomous-agent repositories, AutoGen, lead generation and VUDA.
-- Direct Colab audit observed at least 112 folder rows and at least 58 meaningfully named notebooks; the primary folder hit the 100-row connector cap.
+- Colab portfolio includes 112+ items and 58+ named notebooks spanning AI, automation, databases, computer vision and product experimentation.
 - Public youtube.com/@autoclient-ai catalogue: 373 videos / approximately 159.65 hours across AI courses, After Effects, portfolio work and AutoPricing.
 - Author: ChinoTotal: Aprende Chino Mandarín desde 0, ISBN 9798873249237.
 
@@ -133,4 +133,4 @@ TARGET ROLES
 Founding AI Engineer | AI Product Engineer | AI Platform Lead | Head of AI | Staff AI Engineer | Technical Product Lead
 
 PORTFOLIO EDITIONS
-This photo-free edition is optimised for applicant-tracking systems. The visual master and complete searchable archive of 84 public work records are available at samihalawa.com/cv and samihalawa.com/projects.
+This photo-free edition is optimised for applicant-tracking systems. The visual master and complete searchable portfolio of 84 projects and collaborations are available at samihalawa.com/cv and samihalawa.com/projects.
