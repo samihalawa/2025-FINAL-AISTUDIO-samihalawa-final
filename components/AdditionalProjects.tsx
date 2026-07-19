@@ -4,10 +4,10 @@ import { useTranslation, type LanguageCode } from '../i18n/LanguageContext';
 import { PORTFOLIO_PROJECTS, categoryCopy, getProjectCopy } from '../portfolio';
 
 const copy: Record<LanguageCode, { eyebrow: string; title: string; body: string; all: string }> = {
-  en: { eyebrow: 'Beyond the flagships', title: 'The work is wider than five case studies.', body: 'A selected cross-section of platforms, agent infrastructure, medical workflows, open source, language technology and public education—drawn from a much larger career archive.', all: 'Explore all 84 public work records' },
-  es: { eyebrow: 'Más allá de los principales', title: 'El trabajo va mucho más allá de cinco casos.', body: 'Una selección de plataformas, infraestructura de agentes, flujos médicos, open source, tecnología lingüística y educación pública dentro de un archivo profesional mucho mayor.', all: 'Explorar los 84 registros públicos' },
-  fr: { eyebrow: 'Au-delà des projets phares', title: 'Le travail va bien au-delà de cinq études de cas.', body: 'Une sélection de plateformes, infrastructure d’agents, workflows médicaux, open source, technologies linguistiques et éducation publique, issue d’une archive bien plus vaste.', all: 'Explorer les 84 réalisations publiques' },
-  zh: { eyebrow: '旗舰之外', title: '这些工作远不止五个案例。', body: '从更大的职业档案中精选平台、智能体基础设施、医疗工作流、开源、语言技术与公共教育项目。', all: '探索全部 84 条公开工作记录' }
+  en: { eyebrow: 'Beyond the flagships', title: 'The work is wider than five case studies.', body: 'A selected cross-section of platforms, agent infrastructure, medical workflows, open source, language technology and public education.', all: 'Explore all 84 projects and collaborations' },
+  es: { eyebrow: 'Más allá de los principales', title: 'El trabajo va mucho más allá de cinco casos.', body: 'Una selección de plataformas, infraestructura de agentes, flujos médicos, open source, tecnología lingüística y educación pública.', all: 'Explorar los 84 proyectos y colaboraciones' },
+  fr: { eyebrow: 'Au-delà des projets phares', title: 'Le travail va bien au-delà de cinq études de cas.', body: 'Une sélection de plateformes, infrastructure d’agents, workflows médicaux, open source, technologies linguistiques et éducation publique.', all: 'Explorer les 84 projets et collaborations' },
+  zh: { eyebrow: '旗舰之外', title: '这些工作远不止五个案例。', body: '精选平台、智能体基础设施、医疗工作流、开源、语言技术与公共教育项目。', all: '探索全部 84 个项目与合作' }
 };
 
 const selectedIds = ['autoclient', 'autopricing', 'crawlab-actors', 'mcp-suite', 'vibracode', 'oulang-world-cup', 'autoiol', 'recipes', 'autohsk', 'public-teaching', 'language-media', 'damesender'];
