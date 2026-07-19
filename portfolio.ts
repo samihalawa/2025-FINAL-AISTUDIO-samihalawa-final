@@ -254,9 +254,9 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   },
   {
     id: 'autorad', name: 'AutoRad', period: '2025', category: 'applied',
-    description: copy('Planned radiology workflow product covering PACS/RIS-oriented reporting and review concepts.', 'Producto planificado de radiología con conceptos de revisión e informes orientados a PACS/RIS.'),
-    proof: copy('The direct project page says Backlog; no patent, efficacy, adoption or live-product claim', 'La página directa dice Backlog; sin afirmar patentes, eficacia, adopción ni producto activo'),
-    tags: ['Radiology', 'Backlog', 'Human review']
+    description: copy('Radiology workflow concept for PACS/RIS-oriented reporting, review and human-in-the-loop decision support.', 'Concepto de flujo radiológico para informes y revisión orientados a PACS/RIS con apoyo a decisiones bajo supervisión humana.'),
+    proof: copy('Product concept and workflow design; no clinical or commercial outcome claim.', 'Concepto de producto y diseño de flujos; sin afirmar resultados clínicos o comerciales.'),
+    tags: ['Radiology', 'Workflow design', 'Human review']
   },
   {
     id: 'autocrypto', name: 'AutoCrypto', period: '2024–2025', category: 'applied',

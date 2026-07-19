@@ -92,7 +92,7 @@ OPEN SOURCE E INFRAESTRUCTURA OPERATIVA
 
 INVESTIGACIÓN APLICADA, PROTOTIPOS Y EDUCACIÓN
 - APOLO, 2025: modelo público imagen-texto en Hugging Face basado en DeepSeek-VL2-tiny; investigación/prototipo, no validación clínica.
-- AutoRad, 2025: concepto de producto radiológico y planificación de flujos en Notion Backlog.
+- AutoRad, 2025: concepto de producto radiológico y diseño de flujos para revisión de imagen, informes y colaboración clínica.
 - AutoIOL y oftalmología, 2024-2026: imagen, OCT, seguimiento e informes con revisión humana; sin adopción ni resultados clínicos.
 - Inteligencia de recetas, 2026: discovery para notas/fotos de chef, investigación web, técnica, publicación multilingüe y vídeos opcionales.
 - SONMADE, 2026: prototipo React/TypeScript, FFmpeg y Sharp para escenas/highlights por movimiento, color, borde/texto y fullscreen.
@@ -105,7 +105,7 @@ INVESTIGACIÓN APLICADA, PROTOTIPOS Y EDUCACIÓN
 2024: Aprende IA; MenuEditorElectron; AI Absolut; crawler/email; macOS Optimizer; CloudflaredMe; Rafael Botella; AutoCrypto; audio/transcripción; KittyTasks/FocusOnTask; AutoClient inicial y workers; Pollinations/storage; AutoVideo; MedSAM; AutoTraining; AutoIOL; SpeakingAI; EyeUnit/Fernando Ly; Daniel Parisi; Light Funnels; escritura HF; Colab.
 2025 enero-marzo: SORT/SortBot; AutoHSK; blog/contenido; SMTP MCP; shell/browser/diff; oftalmología.
 2025 abril-junio: APOLO; VUDA; AutoTutorial/MentorIA/PerfectPrompter; Wordlist Visual; Scope; Fernando Ly; expansión AutoClient; ola MCP; Agents AI Ltd; ecosistema Lanzadera.
-2025 julio-diciembre: packaging AutoMedical; utilidades; AutoRad backlog; sites; WhatsApp MCP; IWAKY/AutoPricing; INTLAW; San Martín; Umbramed; diseño AutoDate/AutoTinder; ola de prototipos; web de poesía; Lemon AI; curso de agentes.
+2025 julio-diciembre: packaging AutoMedical; utilidades; concepto de flujo AutoRad; sites; WhatsApp MCP; IWAKY/AutoPricing; INTLAW; San Martín; Umbramed; diseño AutoDate/AutoTinder; ola de prototipos; web de poesía; Lemon AI; curso de agentes.
 2026 enero-junio: OULANG; GOWA; Notion-Drive; Huatong; InfoHuaxin; OUPIN; Crawlab/Apify; Chronicle/Screenpipe; Telnyx; Desktop Commander; MadridResorts; VibraCode; AutoMedical; sites; Tasky; tutoría/ITE/TusClases; módulo Mundial; SONMADE.
 2026 julio: AutoDate TestFlight; recetas; generación de leads inmobiliarios Tekçe/OULANG-AutoClient; paridad nativa OULANG; propuestas EA Housing/Radio Inter; paisajes sonoros/tutoría/audio; pack Ley IA PIME; productos locales adicionales.
 

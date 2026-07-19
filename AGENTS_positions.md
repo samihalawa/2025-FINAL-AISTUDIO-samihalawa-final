@@ -1,11 +1,22 @@
 # INDEX
 
+contact conversion surface | embedded scheduler can render a blank panel when the public event slug is gone | verify the event URL and rendered widget before publishing, otherwise use the working form/email path | do not treat script load or iframe creation as booking proof | verify contact page console, visible CTA/form and destination response on desktop/mobile
 public portfolio content boundary | internal evidence debt and next-proof instructions appeared as visitor content | keep validation in the repo ledger and publish product value, scope and links | do not render agent checklists, provider backlog or proof-debt panels | verify public-copy grep plus rendered home/projects/case-studies/CV
 portfolio evidence propagation | fixing /projects left stale OULANG and Hugging Face claims in Hero, evidence cards and downloadable ATS text | sweep every public component and CV asset for the same claim strings | do not treat one route or data file as the complete claim surface | verify repo-wide claim grep plus rendered home/projects/CV and downloadable files
 blog content pipeline | hard-coded slug list + modal did not scale to daily hub-fed posts | glob public/blog/**/*.md at build into index.json + sitemap and render /blog/:slug | do not hand-edit constants.ts per post or reintroduce the modal-only flow; hub commits to public/blog/en/<slug>.md | verify live /blog, one /blog/<slug>, and sitemap blog URLs after a hub pages run
 SPA production routes | public asset directories collide with client routes | serve file-shaped URLs as static files and everything else as the SPA shell | do not let Nginx treat route names as directories or leak port 8080 redirects | verify slash and non-slash routes plus real asset MIME types
 Coolify Linux build | macOS lock omitted the Rollup x64 GNU binary | install the matching native Rollup package inside the Linux builder | do not infer deployability from the macOS Vite build | verify Coolify builds the pushed commit and the live routes
 public portfolio | stock imagery and invented social proof replaced source evidence | use dated metrics, real screenshots and public links | do not publish placeholders, arbitrary percentages or unsupported impact | verify exact live route, image load, text and responsive layout
+
+## 2026-07-19 — Booking controls require destination proof
+
+- **Status:** CURRENT
+- **Project/root:** `PROJECTS_ON_PROCESS/2025-FINAL-AISTUDIO-samihalawa-final`; contact and consultation flow.
+- **Mistake recovered:** the page loaded Cal.com's embed script for `samihalawa/schedule`, but the event URL returned 404 and the client threw `Cal is not defined`, leaving a 600px blank panel on mobile.
+- **Superior approach:** publish a scheduler only after the public event resolves and the widget renders; otherwise route visitors through the existing contact form and direct email without promising unavailable slots.
+- **Evidence:** 19 Jul 2026 production console, empty `#my-cal-inline-schedule`, direct Cal.com 404 checks and mobile screenshot of the blank card.
+- **Triggers / verification:** calendar slug, embed-provider or contact-page changes; open the destination directly, then verify the rendered control and console on desktop and mobile.
+- **Do / don't:** do prove the booking destination itself; don't infer availability from a loaded script, iframe, HTTP 200 asset or reserved blank area.
 
 ## 2026-07-19 — Keep operational validation out of visitor-facing copy
 

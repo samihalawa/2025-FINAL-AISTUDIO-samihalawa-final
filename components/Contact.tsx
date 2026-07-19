@@ -35,38 +35,6 @@ const TallyEmbed: React.FC<{ src: string; title: string; height: number }> = ({ 
     );
 };
 
-const CalendarEmbed: React.FC = () => {
-    useEffect(() => {
-        const script = document.createElement('script');
-        script.src = 'https://app.cal.com/embed/embed.js';
-        script.async = true;
-
-        script.onload = () => {
-            // @ts-ignore
-            const Cal = (window as any).Cal;
-            if (Cal) {
-                Cal("init", "schedule", { origin: "https://app.cal.com" });
-                Cal.ns.schedule("inline", {
-                    elementOrSelector: "#my-cal-inline-schedule",
-                    config: { layout: "month_view", theme: "auto" },
-                    calLink: "samihalawa/schedule",
-                });
-                Cal.ns.schedule("ui", { hideEventTypeDetails: false, layout: "month_view" });
-            }
-        };
-
-        document.head.appendChild(script);
-
-        return () => {
-            if (document.head.contains(script)) {
-                document.head.removeChild(script);
-            }
-        };
-    }, []);
-
-    return <div id="my-cal-inline-schedule" style={{ width: '100%', height: '600px', overflow: 'scroll' }} />;
-};
-
 const Contact: React.FC = () => {
     const { t } = useTranslation();
     const formTitle = t('contact.formTitle');
@@ -124,8 +92,8 @@ const Contact: React.FC = () => {
                     <span className="inline-flex items-center justify-center rounded-full border border-brand-200 bg-brand-50 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-brand-600">
                         {t('contact.badge')}
                     </span>
-                    <h2 className="mt-6 text-3xl font-bold text-slate-900 md:text-4xl">{t('contact.title')}</h2>
-                    <h3 className="mt-4 text-xl font-semibold text-slate-800">{t('contact.heading')}</h3>
+                    <h1 className="mt-6 text-3xl font-bold text-slate-900 md:text-4xl">{t('contact.title')}</h1>
+                    <h2 className="mt-4 text-xl font-semibold text-slate-800">{t('contact.heading')}</h2>
                     <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">{t('contact.description')}</p>
                     <p className="mt-3 text-sm text-slate-500">{t('contact.subtitle')}</p>
                 </div>
@@ -246,9 +214,30 @@ const Contact: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="bg-slate-50 rounded-lg border border-slate-200 p-6">
-                            <h3 className="text-xl font-semibold mb-4 text-slate-900">Schedule a Meeting</h3>
-                            <CalendarEmbed />
+                        <div id="consultation" className="relative scroll-mt-24 overflow-hidden rounded-3xl border border-brand-100 bg-brand-50 p-8 shadow-sm sm:p-10">
+                            <div aria-hidden className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-brand-200/50 blur-2xl"></div>
+                            <div className="relative">
+                                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-brand-600 shadow-sm">
+                                    <i className="fas fa-calendar-check text-lg"></i>
+                                </div>
+                                <h3 className="mt-5 text-xl font-semibold text-slate-900">{t('contact.bookingTitle')}</h3>
+                                <p className="mt-2 text-sm leading-relaxed text-slate-600">{t('contact.bookingCopy')}</p>
+                                <div className="mt-6 flex flex-wrap items-center gap-4">
+                                    <a
+                                        href="#contact-form"
+                                        className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-brand-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2"
+                                    >
+                                        {t('contact.bookingCta')}
+                                        <i className="fas fa-arrow-up text-xs"></i>
+                                    </a>
+                                    <a
+                                        href="mailto:sami@oulang.ai?subject=Strategy%20consultation"
+                                        className="inline-flex min-h-11 items-center text-sm font-semibold text-brand-700 transition hover:text-brand-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2"
+                                    >
+                                        {t('contact.bookingEmail')}
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -92,7 +92,7 @@ OPEN SOURCE AND OPERATING INFRASTRUCTURE
 
 APPLIED RESEARCH, PROTOTYPES AND EDUCATION
 - APOLO medical multimodal exploration, 2025: public Hugging Face image-text model artifact based on DeepSeek-VL2-tiny; research/prototyping only, not clinical validation.
-- AutoRad, 2025: radiology product concept and workflow planning in Notion Backlog.
+- AutoRad, 2025: radiology product concept and workflow design for image review, reporting and clinical collaboration.
 - AutoIOL and ophthalmology workflows, 2024-2026: image review, OCT work, longitudinal tracking and structured reporting prototypes with human review; no adoption or clinical-results claim.
 - Recipe intelligence, 2026: product discovery for chef-note/photo ingestion, web research, technique preservation, multilingual publishing and optional recipe-video workflows.
 - SONMADE content factory, 2026: React/TypeScript, FFmpeg and Sharp prototype for scene analysis and highlight extraction using motion, colour, edge/text and fullscreen scoring.
@@ -105,7 +105,7 @@ CHRONOLOGICAL PROJECT INDEX | 2023-2026
 2024: Aprende IA; MenuEditorElectron; AI Absolut; email crawler/lead tools; macOS Optimizer; CloudflaredMe; Rafael Botella work; AutoCrypto; audio/transcription tools; KittyTasks/FocusOnTask; AutoClient seed and worker expansion; Pollinations/storage experiments; AutoVideo; MedSAM; AutoTraining; AutoIOL; SpeakingAI; EyeUnit/Fernando Ly; Daniel Parisi; Light Funnels; Hugging Face writing; Colab research archive.
 2025 January-March: SORT/SortBot; AutoHSK; blog/content systems; SMTP MCP; shell/browser/diff tools; ophthalmology workflows.
 2025 April-June: APOLO; VUDA; AutoTutorial/MentorIA/PerfectPrompter; Wordlist Visual; Scope; Fernando Ly medical-AI work; AutoClient expansion; MCP wave; Agents AI Ltd; Lanzadera ecosystem participation.
-2025 July-December: AutoMedical packaging; agent operating utilities; AutoRad backlog; personal/company sites; WhatsApp MCP; IWAKY/AutoPricing; INTLAW; San Martín; Umbramed; AutoDate/AutoTinder design; prototype portfolio wave; poetry site; Lemon AI customization/deployment; 15-hour AI-agent course.
+2025 July-December: AutoMedical packaging; agent operating utilities; AutoRad workflow concept; personal/company sites; WhatsApp MCP; IWAKY/AutoPricing; INTLAW; San Martín; Umbramed; AutoDate/AutoTinder design; prototype portfolio wave; poetry site; Lemon AI customization/deployment; 15-hour AI-agent course.
 2026 January-June: OULANG; GOWA; Notion-Drive Sync; Huatong; InfoHuaxin; OUPIN; Crawlab/Apify actors; Chronicle/Screenpipe; Telnyx tools; Desktop Commander utilities; MadridResorts; VibraCode; AutoMedical; company/publishing surfaces; Tasky; AI tutoring/ITE/TusClases operations; OULANG World Cup module; SONMADE.
 2026 July: AutoDate TestFlight; recipe intelligence; Tekçe/OULANG-AutoClient property lead generation; OULANG native parity; EA Housing/Radio Inter proposals; Chinese soundscapes/tutoring/poetry audio; PIME AI Act pack; additional local products.
 

@@ -191,7 +191,7 @@ const Blog: React.FC = () => {
         <section id="blog" className="py-20 bg-gradient-to-br from-slate-50 to-white scroll-mt-20" aria-label={t('blog.title')}>
             <div className="container mx-auto px-6">
                 <div className="mb-12 text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900">{t('blog.title')}</h2>
+                    <h1 className="text-3xl md:text-4xl font-bold text-slate-900">{t('blog.title')}</h1>
                     <p className="mt-3 text-lg text-slate-600 max-w-2xl mx-auto">
                         {t('blog.intro')}
                     </p>
