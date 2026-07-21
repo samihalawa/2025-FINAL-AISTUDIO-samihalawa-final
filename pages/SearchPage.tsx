@@ -1,8 +1,6 @@
 import React, { useMemo } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from '../i18n/LanguageContext';
-import { usePageMeta } from '../hooks/usePageMeta';
 import type { TranslationKey } from '../i18n/translations';
 
 type Item = { href: string; titleKey: TranslationKey; descriptionKey: TranslationKey; categoryKey: TranslationKey };
@@ -38,7 +36,6 @@ function useQuery() {
 
 const SearchPage: React.FC = () => {
   const { t } = useTranslation();
-  const { title, description } = usePageMeta('search');
   const localizedItems = useMemo(
     () =>
       ITEMS.map(item => ({
@@ -60,12 +57,7 @@ const SearchPage: React.FC = () => {
 
   return (
     <section className="py-16 bg-white">
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <link rel="canonical" href="/search" />
-      </Helmet>
-      <div className="container mx-auto px-6 max-w-5xl">
+<div className="container mx-auto px-6 max-w-5xl">
         <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">{t('search.title')}</h1>
         <form action="/search" className="mb-6">
           <input

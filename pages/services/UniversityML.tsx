@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../../i18n/LanguageContext';
 
@@ -22,40 +21,9 @@ const CTA: React.FC=()=> (
 const UniversityML: React.FC = () => {
   const { t } = useTranslation();
   const title = t('services.universityML.title');
-  const description = t('services.universityML.description');
-  const ogImage = 'https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&h=630&q=80';
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: 'Clases de Machine Learning para universitarios',
-    areaServed: 'Madrid, Online',
-    provider: { '@type': 'Person', name: 'Sami Halawa' },
-    serviceType: 'University ML Tutoring',
-    offers: { '@type': 'Offer', availability: 'https://schema.org/InStock' }
-  };
-  const jsonLdFaq = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: '¿Nivel requerido?', acceptedAnswer: { '@type': 'Answer', text: 'Desde cero a intermedio. Ajusto el plan según la asignatura.' }},
-      { '@type': 'Question', name: '¿Incluye TFG/TFM?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Apoyo integral: estado del arte, dataset, modelos y memoria.' }},
-      { '@type': 'Question', name: '¿Formato?', acceptedAnswer: { '@type': 'Answer', text: 'Clases 1:1 u online en grupos pequeños con prácticas.' }}
-    ]
-  };
   return (
     <section className="py-16 bg-white">
-      <Helmet>
-        <title>{title} | Sami Halawa</title>
-        <meta name="description" content={description} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta name="twitter:image" content={ogImage} />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
-        <link rel="canonical" href="/services/university-ml" />
-      </Helmet>
-      <div className="container mx-auto px-6 max-w-5xl">
+<div className="container mx-auto px-6 max-w-5xl">
         <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">{title}</h1>
         <p className="text-lg text-slate-700 mb-8">Desde cero hasta avanzado. Ejercicios reales de tu asignatura, explicación por pasos y materiales listos para examen.</p>
         <div className="grid md:grid-cols-2 gap-6">

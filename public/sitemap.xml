@@ -2,25 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://samihalawa.com/</loc></url>
   <url><loc>https://samihalawa.com/corporate</loc></url>
+  <url><loc>https://samihalawa.com/ai-training</loc></url>
   <url><loc>https://samihalawa.com/projects</loc></url>
+  <url><loc>https://samihalawa.com/blog</loc></url>
+  <url><loc>https://samihalawa.com/contact</loc></url>
   <url><loc>https://samihalawa.com/cv</loc></url>
   <url><loc>https://samihalawa.com/cv/en</loc></url>
   <url><loc>https://samihalawa.com/cv/es</loc></url>
-  <url><loc>https://samihalawa.com/blog</loc></url>
-  <url><loc>https://samihalawa.com/contact</loc></url>
+  <url><loc>https://samihalawa.com/services</loc></url>
   <url><loc>https://samihalawa.com/services/medical-ai</loc></url>
   <url><loc>https://samihalawa.com/services/business-automation</loc></url>
   <url><loc>https://samihalawa.com/services/university-ml</loc></url>
   <url><loc>https://samihalawa.com/services/family-ai</loc></url>
   <url><loc>https://samihalawa.com/services/advanced-ai</loc></url>
   <url><loc>https://samihalawa.com/services/no-code-ai</loc></url>
-  <url><loc>https://samihalawa.com/services/troubleshooting</loc></url>
-  <url><loc>https://samihalawa.com/services</loc></url>
   <url><loc>https://samihalawa.com/services/prompt-engineering</loc></url>
   <url><loc>https://samihalawa.com/services/rag-langchain</loc></url>
   <url><loc>https://samihalawa.com/services/agents-automation</loc></url>
   <url><loc>https://samihalawa.com/services/ai-for-marketing</loc></url>
-  <url><loc>https://samihalawa.com/ai-training</loc></url>
+  <url><loc>https://samihalawa.com/services/ai-funding-grants</loc></url>
+  <url><loc>https://samihalawa.com/services/ai-ip-patents</loc></url>
+  <url><loc>https://samihalawa.com/services/accelerator-readiness</loc></url>
+  <url><loc>https://samihalawa.com/services/ai-readiness-audit</loc></url>
+  <url><loc>https://samihalawa.com/services/ai-competitive-research</loc></url>
+  <url><loc>https://samihalawa.com/services/data-science-training</loc></url>
+  <url><loc>https://samihalawa.com/services/proptech-analytics</loc></url>
+  <url><loc>https://samihalawa.com/services/airbnb-analytics</loc></url>
+  <url><loc>https://samihalawa.com/services/ai-language-learning</loc></url>
+  <url><loc>https://samihalawa.com/services/troubleshooting</loc></url>
   <url><loc>https://samihalawa.com/locations</loc></url>
   <url><loc>https://samihalawa.com/locations/madrid</loc></url>
   <url><loc>https://samihalawa.com/locations/barcelona</loc></url>
@@ -35,50 +44,48 @@
   <url><loc>https://samihalawa.com/case-studies/apolo-medical-framework</loc></url>
   <url><loc>https://samihalawa.com/case-studies/radiology-ai</loc></url>
   <url><loc>https://samihalawa.com/case-studies/autoclient</loc></url>
-  <url><loc>https://samihalawa.com/services/ai-funding-grants</loc></url>
-  <url><loc>https://samihalawa.com/services/ai-ip-patents</loc></url>
-  <url><loc>https://samihalawa.com/services/accelerator-readiness</loc></url>
-  <url><loc>https://samihalawa.com/services/ai-readiness-audit</loc></url>
-  <url><loc>https://samihalawa.com/services/ai-competitive-research</loc></url>
-  <url><loc>https://samihalawa.com/services/data-science-training</loc></url>
-  <url><loc>https://samihalawa.com/services/proptech-analytics</loc></url>
-  <url><loc>https://samihalawa.com/services/airbnb-analytics</loc></url>
-  <url><loc>https://samihalawa.com/services/ai-language-learning</loc></url>
-  <url><loc>https://samihalawa.com/blog/subagents-and-parallel-agents</loc></url>
-  <url><loc>https://samihalawa.com/blog/observability-for-ai-agents</loc></url>
-  <url><loc>https://samihalawa.com/blog/prototype-to-production-ai</loc></url>
-  <url><loc>https://samihalawa.com/blog/structured-outputs-and-json-mode</loc></url>
-  <url><loc>https://samihalawa.com/blog/memory-systems-for-ai-agents</loc></url>
-  <url><loc>https://samihalawa.com/blog/ai-code-review-and-verification</loc></url>
-  <url><loc>https://samihalawa.com/blog/build-in-public-ai-startup-lessons</loc></url>
-  <url><loc>https://samihalawa.com/blog/voice-first-ai-interfaces</loc></url>
-  <url><loc>https://samihalawa.com/blog/self-hosting-open-source-llms</loc></url>
-  <url><loc>https://samihalawa.com/blog/controlling-llm-costs</loc></url>
-  <url><loc>https://samihalawa.com/blog/designing-tools-for-ai-agents</loc></url>
-  <url><loc>https://samihalawa.com/blog/shipping-ai-features-as-a-founder</loc></url>
-  <url><loc>https://samihalawa.com/blog/multi-agent-orchestration-patterns</loc></url>
-  <url><loc>https://samihalawa.com/blog/context-engineering-for-llm-apps</loc></url>
-  <url><loc>https://samihalawa.com/blog/evaluating-ai-agents</loc></url>
-  <url><loc>https://samihalawa.com/blog/rag-vs-long-context</loc></url>
-  <url><loc>https://samihalawa.com/blog/choosing-the-right-llm</loc></url>
-  <url><loc>https://samihalawa.com/blog/prompt-engineering-for-agents</loc></url>
-  <url><loc>https://samihalawa.com/blog/local-first-ai-and-privacy</loc></url>
-  <url><loc>https://samihalawa.com/blog/agentic-coding-workflows</loc></url>
-  <url><loc>https://samihalawa.com/blog/mcp-model-context-protocol-explained</loc></url>
-  <url><loc>https://samihalawa.com/blog/building-reliable-ai-agents</loc></url>
-  <url><loc>https://samihalawa.com/blog/2025-guide-ai-agent-orchestration</loc></url>
-  <url><loc>https://samihalawa.com/blog/deep-dive-attio-api</loc></url>
-  <url><loc>https://samihalawa.com/blog/maximizing-learning-with-ai</loc></url>
-  <url><loc>https://samihalawa.com/blog/ai-agents-automating-workflows</loc></url>
-  <url><loc>https://samihalawa.com/blog/building-rag-with-gemini-langchain</loc></url>
-  <url><loc>https://samihalawa.com/blog/ai-powered-code-generation-debugging</loc></url>
-  <url><loc>https://samihalawa.com/blog/rise-of-ai-first-development</loc></url>
-  <url><loc>https://samihalawa.com/blog/securing-llm-powered-applications</loc></url>
-  <url><loc>https://samihalawa.com/blog/react-server-vs-client-components</loc></url>
-  <url><loc>https://samihalawa.com/blog/multimodal-ai-explained</loc></url>
-  <url><loc>https://samihalawa.com/blog/deploying-ml-models-docker-kubernetes</loc></url>
-  <url><loc>https://samihalawa.com/blog/ethics-of-ai-bias-fairness</loc></url>
-  <url><loc>https://samihalawa.com/blog/finetuning-vs-prompt-engineering</loc></url>
-  <url><loc>https://samihalawa.com/blog/why-ai-is-the-future</loc></url>
-  <url><loc>https://samihalawa.com/blog/getting-started-with-gemini</loc></url>
+  <url><loc>https://samihalawa.com/case-studies/attio-sequences</loc></url>
+  <url><loc>https://samihalawa.com/case-studies/banking-assistant</loc></url>
+  <url><loc>https://samihalawa.com/case-studies/spreadsheet-assistant</loc></url>
+  <url><loc>https://samihalawa.com/case-studies/proptech-analytics</loc></url>
+  <url><loc>https://samihalawa.com/case-studies/airbnb-intelligence</loc></url>
+  <url><loc>https://samihalawa.com/case-studies/autofunding-grants</loc></url>
+  <url><loc>https://samihalawa.com/case-studies/lanzadera-readiness</loc></url>
+  <url><loc>https://samihalawa.com/blog/subagents-and-parallel-agents</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/observability-for-ai-agents</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/prototype-to-production-ai</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/structured-outputs-and-json-mode</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/memory-systems-for-ai-agents</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/ai-code-review-and-verification</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/build-in-public-ai-startup-lessons</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/voice-first-ai-interfaces</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/self-hosting-open-source-llms</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/controlling-llm-costs</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/designing-tools-for-ai-agents</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/shipping-ai-features-as-a-founder</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/multi-agent-orchestration-patterns</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/context-engineering-for-llm-apps</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/evaluating-ai-agents</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/rag-vs-long-context</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/choosing-the-right-llm</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/prompt-engineering-for-agents</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/local-first-ai-and-privacy</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/agentic-coding-workflows</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/mcp-model-context-protocol-explained</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/building-reliable-ai-agents</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/2025-guide-ai-agent-orchestration</loc><lastmod>2025-08-23</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/deep-dive-attio-api</loc><lastmod>2025-08-22</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/maximizing-learning-with-ai</loc><lastmod>2025-08-21</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/ai-agents-automating-workflows</loc><lastmod>2025-01-15</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/building-rag-with-gemini-langchain</loc><lastmod>2025-01-15</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/ai-powered-code-generation-debugging</loc><lastmod>2024-08-18</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/rise-of-ai-first-development</loc><lastmod>2024-08-15</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/securing-llm-powered-applications</loc><lastmod>2024-08-12</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/react-server-vs-client-components</loc><lastmod>2024-08-08</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/multimodal-ai-explained</loc><lastmod>2024-08-01</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/deploying-ml-models-docker-kubernetes</loc><lastmod>2024-07-28</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/ethics-of-ai-bias-fairness</loc><lastmod>2024-07-25</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/finetuning-vs-prompt-engineering</loc><lastmod>2024-07-22</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/why-ai-is-the-future</loc><lastmod>2024-07-15</lastmod></url>
+  <url><loc>https://samihalawa.com/blog/getting-started-with-gemini</loc><lastmod>2024-06-28</lastmod></url>
 </urlset>

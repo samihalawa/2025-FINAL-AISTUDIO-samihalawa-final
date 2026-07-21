@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../../i18n/LanguageContext';
 import type { TranslationKey } from '../../i18n/translations';
@@ -16,8 +15,6 @@ const Section: React.FC<{ title: string; points: string[] }> = ({ title, points 
 const AIForMarketing: React.FC = () => {
   const { t } = useTranslation();
   const title = t('services.aiForMarketing.title');
-  const description = t('services.aiForMarketing.description');
-  const ogImage = 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&h=630&q=80';
   const relatedCaseStudies = [
     { href: '/case-studies/autoclient', label: t('caseStudies.index.case.autoclient.title') },
     { href: '/projects#oulang', label: 'OULANG multilingual growth platform' }
@@ -36,37 +33,9 @@ const AIForMarketing: React.FC = () => {
   ];
   const modules = moduleKeys.map((key) => t(key));
   const deliverables = deliverableKeys.map((key) => t(key));
-  const jsonLdService = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: title,
-    serviceType: 'AI Marketing Training',
-    provider: { '@type': 'Person', name: 'Sami Halawa' },
-    areaServed: 'Madrid, Online'
-  };
-  const jsonLdFaq = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: 'What tools do we use?', acceptedAnswer: { '@type': 'Answer', text: 'ChatGPT/Claude for copy, Midjourney/Runway for creatives, Sheets/Looker for analytics.' }},
-      { '@type': 'Question', name: 'Will we get templates?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — prompts, briefs, and campaign/reporting templates are provided.' }},
-      { '@type': 'Question', name: 'Team size?', acceptedAnswer: { '@type': 'Answer', text: 'Ideal for 3–20 people. Larger groups on request.' }}
-    ]
-  };
   return (
     <section className="py-16 bg-white">
-      <Helmet>
-        <title>{title} | Sami Halawa</title>
-        <meta name="description" content={description} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta name="twitter:image" content={ogImage} />
-        <script type="application/ld+json">{JSON.stringify(jsonLdService)}</script>
-        <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
-        <link rel="canonical" href="/services/ai-for-marketing" />
-      </Helmet>
-      <div className="container mx-auto px-6 max-w-5xl">
+<div className="container mx-auto px-6 max-w-5xl">
         <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">{title}</h1>
         <p className="text-lg text-slate-700 mb-8">{t('services.aiForMarketing.intro')}</p>
         <div className="grid md:grid-cols-2 gap-6">

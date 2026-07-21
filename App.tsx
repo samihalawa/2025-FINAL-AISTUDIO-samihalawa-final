@@ -1,9 +1,9 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
 import { LanguageProvider } from './i18n/LanguageContext';
 import Layout from './components/Layout';
-import HomePage from './pages/HomePage';
+const HomePage = lazy(() => import('./pages/HomePage'));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 const ServicesPage = lazy(() => import('./pages/ServicesPage'));
 const ProjectsPage = lazy(() => import('./pages/ProjectsPage'));
 const BlogPage = lazy(() => import('./pages/BlogPage'));
@@ -59,8 +59,7 @@ const MadridBusinessAutomation = lazy(() => import('./pages/locations/services/M
 const App: React.FC = () => {
     return (
         <LanguageProvider>
-            <HelmetProvider>
-                <BrowserRouter>
+            <BrowserRouter>
                     <Suspense fallback={<div className="flex min-h-[60vh] items-center justify-center" role="status"><span className="h-10 w-10 animate-spin rounded-full border-2 border-brand-200 border-t-brand-700" /><span className="sr-only">Loading</span></div>}>
                     <Routes>
                         <Route path="/" element={<Layout />}>
@@ -119,12 +118,11 @@ const App: React.FC = () => {
                                 <Route path="ai-language-learning" element={<AILanguageLearning />} />
                                 <Route path="troubleshooting" element={<Troubleshooting />} />
                             </Route>
-                            <Route path="*" element={<HomePage />} />
+                            <Route path="*" element={<NotFoundPage />} />
                         </Route>
                     </Routes>
                     </Suspense>
-                </BrowserRouter>
-            </HelmetProvider>
+            </BrowserRouter>
         </LanguageProvider>
     );
 };

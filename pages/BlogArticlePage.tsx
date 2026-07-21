@@ -3,77 +3,6 @@ import { useParams, Link } from 'react-router-dom';
 import { marked } from 'marked';
 import { useTranslation, LanguageCode } from '../i18n/LanguageContext';
 
-// This site's react-helmet-async does not inject into <head> at runtime
-// (reproduced across dev + production builds, all pages). To guarantee the
-// blog's per-article SEO metadata actually renders, the article page manages
-// its own head tags imperatively. All tags carry data-blog-meta so they are
-// upserted idempotently and removed on unmount.
-function applyArticleHead(meta: {
-  title: string;
-  description: string;
-  canonical: string;
-  ogImage: string;
-  jsonLd: object | null;
-}): () => void {
-  const prevTitle = document.title;
-  document.title = meta.title;
-  const created: HTMLElement[] = [];
-
-  const upsertTag = (
-    selector: string,
-    create: () => HTMLElement,
-    apply: (el: HTMLElement) => void,
-  ) => {
-    let el = document.head.querySelector(selector) as HTMLElement | null;
-    if (!el) {
-      el = create();
-      el.setAttribute('data-blog-meta', '');
-      document.head.appendChild(el);
-      created.push(el);
-    }
-    apply(el);
-  };
-
-  const meta_ = (attr: 'name' | 'property', key: string, content: string) =>
-    upsertTag(`meta[${attr}="${key}"][data-blog-meta]`, () => {
-      const el = document.createElement('meta');
-      el.setAttribute(attr, key);
-      return el;
-    }, (el) => el.setAttribute('content', content));
-
-  meta_('name', 'description', meta.description);
-  meta_('property', 'og:type', 'article');
-  meta_('property', 'og:title', meta.title);
-  meta_('property', 'og:description', meta.description);
-  meta_('property', 'og:url', meta.canonical);
-  meta_('property', 'og:image', meta.ogImage);
-  meta_('name', 'twitter:card', 'summary_large_image');
-  meta_('name', 'twitter:title', meta.title);
-  meta_('name', 'twitter:description', meta.description);
-  meta_('name', 'twitter:image', meta.ogImage);
-
-  upsertTag('link[rel="canonical"][data-blog-meta]', () => {
-    const el = document.createElement('link');
-    el.setAttribute('rel', 'canonical');
-    return el;
-  }, (el) => el.setAttribute('href', meta.canonical));
-
-  if (meta.jsonLd) {
-    upsertTag('script[type="application/ld+json"][data-blog-meta]', () => {
-      const el = document.createElement('script');
-      el.setAttribute('type', 'application/ld+json');
-      return el;
-    }, (el) => {
-      el.textContent = JSON.stringify(meta.jsonLd);
-    });
-  }
-
-  return () => {
-    document.title = prevTitle;
-    document.head.querySelectorAll('[data-blog-meta]').forEach((el) => el.remove());
-  };
-}
-
 interface ManifestEntry {
   slug: string;
   path: string;
@@ -91,8 +20,6 @@ interface LoadedArticle {
   author: string;
   content: string;
 }
-
-const SITE_URL = 'https://samihalawa.com';
 
 const localeMap: Record<LanguageCode, string> = {
   en: 'en-US',
@@ -186,38 +113,6 @@ const BlogArticlePage: React.FC = () => {
       day: 'numeric',
     }).format(d);
   }, [article, language]);
-
-  const canonical = `${SITE_URL}/blog/${slug}`;
-  const metaTitle = article ? `${article.title} — Sami Halawa` : t('blog.title');
-  const metaDescription = article?.summary || t('meta.blog.description');
-  const ogImage = `${SITE_URL}/portfolio/vuda-annotated.png`;
-
-  const articleJsonLd = article
-    ? {
-        '@context': 'https://schema.org',
-        '@type': 'BlogPosting',
-        headline: article.title,
-        description: article.summary,
-        datePublished: article.date,
-        dateModified: article.date,
-        author: { '@type': 'Person', name: article.author, url: SITE_URL },
-        publisher: { '@type': 'Person', name: 'Sami Halawa', url: SITE_URL },
-        mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
-        url: canonical,
-        inLanguage: 'en',
-      }
-    : null;
-
-  useEffect(() => {
-    const cleanup = applyArticleHead({
-      title: metaTitle,
-      description: metaDescription,
-      canonical,
-      ogImage,
-      jsonLd: articleJsonLd,
-    });
-    return cleanup;
-  }, [metaTitle, metaDescription, canonical, ogImage, articleJsonLd]);
 
   return (
     <>

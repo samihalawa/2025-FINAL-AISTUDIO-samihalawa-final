@@ -1,40 +1,17 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import HireCTA from '../../components/HireCTA';
 import { useTranslation } from '../../i18n/LanguageContext';
 
 const LanzaderaReadiness: React.FC = () => {
-  const { t, language } = useTranslation();
-  const siteUrl = 'https://samihalawa.com';
-  const canonical = `${siteUrl}/case-studies/lanzadera-readiness`;
+  const { t } = useTranslation();
   const title = t('caseStudies.lanzadera.title');
-  const description = t('caseStudies.lanzadera.description');
   const relatedServices = [
     { href: '/services/accelerator-readiness', label: t('services.acceleratorReadiness.title') },
     { href: '/services/ai-competitive-research', label: t('services.aiCompetitiveResearch.title') }
   ];
-  const jsonLd = { '@context': 'https://schema.org', '@type': 'TechArticle', headline: title, about: 'Accelerators, Pitch, GTM', description, author: { '@type': 'Person', name: 'Sami Halawa' },
-    inLanguage: language,
-    mainEntityOfPage: canonical,
-    isRelatedTo: relatedServices.map(service => ({
-      '@type': 'Service',
-      name: service.label,
-      url: `${siteUrl}${service.href}`
-    })) };
-  const og = `${siteUrl}/portfolio/autopricing-dashboard.png`;
   return (
     <section className="py-16 bg-white">
-      <Helmet>
-        <title>{title} | Sami Halawa</title>
-        <meta name="description" content={description} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={og} />
-        <meta name="twitter:image" content={og} />
-        <link rel="canonical" href={canonical} />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
-      <div className="container mx-auto px-6 max-w-3xl">
+<div className="container mx-auto px-6 max-w-3xl">
         <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">{title}</h1>
         <p className="text-slate-700 mb-6">{t('caseStudies.lanzadera.intro')}</p>
         <h2 className="text-xl font-bold text-slate-900 mb-2">Highlights</h2>

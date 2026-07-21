@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 const Section: React.FC<{ title: string, points: string[] }>=({ title, points })=> (
@@ -13,22 +12,9 @@ const Section: React.FC<{ title: string, points: string[] }>=({ title, points })
 
 const AIPatentsIP: React.FC = () => {
   const title = 'AI Technical Evidence & Research Dossiers';
-  const description = 'Organize prior-art research, architecture diagrams, evaluation notes and implementation evidence for review by product, research or legal specialists.';
-  const jsonLd = { '@context': 'https://schema.org', '@type': 'Service', name: title, serviceType: 'Technical Research Documentation', provider: { '@type': 'Person', name: 'Sami Halawa' } };
-  const faq = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What do you cover?', acceptedAnswer: { '@type': 'Answer', text: 'Problem framing, source research, architecture diagrams, implementation notes and evidence boundaries.' }},
-    { '@type': 'Question', name: 'Deliverables?', acceptedAnswer: { '@type': 'Answer', text: 'A structured technical dossier for review by the appropriate product, research or legal specialist.' }},
-    { '@type': 'Question', name: 'Industries?', acceptedAnswer: { '@type': 'Answer', text: 'Healthcare, automation, agents and applied ML.' }} ] };
   return (
     <section className="py-16 bg-white">
-      <Helmet>
-        <title>{title} | Sami Halawa</title>
-        <meta name="description" content={description} />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(faq)}</script>
-        <link rel="canonical" href="/services/ai-ip-patents" />
-      </Helmet>
-      <div className="container mx-auto px-6 max-w-5xl">
+<div className="container mx-auto px-6 max-w-5xl">
         <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">{title}</h1>
         <p className="text-lg text-slate-700 mb-8">Turn scattered research and implementation artifacts into a traceable dossier. The service prepares technical evidence; it does not replace qualified legal advice or claim a filing outcome.</p>
         <div className="grid md:grid-cols-2 gap-6">

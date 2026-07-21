@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../../i18n/LanguageContext';
 import type { TranslationKey } from '../../i18n/translations';
@@ -23,8 +22,6 @@ const CTA: React.FC<{ primaryLabel: string; secondaryLabel: string }> = ({ prima
 const BusinessAutomation: React.FC = () => {
   const { t } = useTranslation();
   const title = t('services.businessAutomation.title');
-  const description = t('services.businessAutomation.description');
-  const ogImage = 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&h=630&q=80';
   const relatedCaseStudies = [
     { href: '/case-studies/autoclient', label: t('caseStudies.index.case.autoclient.title') }
   ];
@@ -42,38 +39,9 @@ const BusinessAutomation: React.FC = () => {
   ];
   const scopePoints = scopeKeys.map((key) => t(key));
   const stackPoints = stackKeys.map((key) => t(key));
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: 'Automatización empresarial con IA',
-    areaServed: 'Madrid, Online',
-    provider: { '@type': 'Person', name: 'Sami Halawa' },
-    serviceType: 'AI Automation',
-    offers: { '@type': 'Offer', availability: 'https://schema.org/InStock' }
-  };
-  const jsonLdFaq = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: '¿Necesito desarrolladores?', acceptedAnswer: { '@type': 'Answer', text: 'No. Usamos Zapier/Make/n8n y sólo código cuando aporta valor.' }},
-      { '@type': 'Question', name: '¿Qué CRMs integras?', acceptedAnswer: { '@type': 'Answer', text: 'HubSpot, Salesforce, Pipedrive, Notion, Airtable, Google Workspace y más.' }},
-      { '@type': 'Question', name: '¿Cómo controlamos costes?', acceptedAnswer: { '@type': 'Answer', text: 'Presupuestos por flujo, límites por uso y reportes mensuales de ROI.' }}
-    ]
-  };
   return (
     <section className="py-16 bg-white">
-      <Helmet>
-        <title>{title} | Sami Halawa</title>
-        <meta name="description" content={description} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta name="twitter:image" content={ogImage} />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
-        <link rel="canonical" href="/services/business-automation" />
-      </Helmet>
-      <div className="container mx-auto px-6 max-w-5xl">
+<div className="container mx-auto px-6 max-w-5xl">
         <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">{title}</h1>
         <p className="text-lg text-slate-700 mb-8">{t('services.businessAutomation.intro')}</p>
         <div className="grid md:grid-cols-2 gap-6">

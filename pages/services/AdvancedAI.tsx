@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../../i18n/LanguageContext';
 
@@ -22,39 +21,9 @@ const CTA: React.FC=()=> (
 const AdvancedAI: React.FC = () => {
   const { t } = useTranslation();
   const title = t('services.advancedAI.title');
-  const description = t('services.advancedAI.description');
-  const ogImage = 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=80';
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: 'Desarrollo de proyectos de IA avanzados',
-    areaServed: 'Madrid, Online',
-    provider: { '@type': 'Person', name: 'Sami Halawa' },
-    serviceType: 'Advanced AI Development'
-  };
-  const jsonLdFaq = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: '¿Qué stack usas?', acceptedAnswer: { '@type': 'Answer', text: 'Python/TypeScript, LangChain/LlamaIndex, FastAPI/Node, Docker/K8s, Pinecone/Qdrant, AWS/GCP/Azure.' }},
-      { '@type': 'Question', name: '¿Tiempo de entrega?', acceptedAnswer: { '@type': 'Answer', text: 'MVP en 2–4 semanas con sprints semanales y hitos claros.' }},
-      { '@type': 'Question', name: '¿Cómo garantizas calidad?', acceptedAnswer: { '@type': 'Answer', text: 'Evals automáticos, trazas, monitoreo, límites de coste y seguridad de datos.' }}
-    ]
-  };
   return (
     <section className="py-16 bg-white">
-      <Helmet>
-        <title>{title} | Sami Halawa</title>
-        <meta name="description" content={description} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta name="twitter:image" content={ogImage} />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
-        <link rel="canonical" href="/services/advanced-ai" />
-      </Helmet>
-      <div className="container mx-auto px-6 max-w-5xl">
+<div className="container mx-auto px-6 max-w-5xl">
         <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">{title}</h1>
         <p className="text-lg text-slate-700 mb-8">Para founders, equipos técnicos y empresas que necesitan soluciones IA robustas y escalables, con código y despliegue en producción.</p>
         <div className="grid md:grid-cols-2 gap-6">

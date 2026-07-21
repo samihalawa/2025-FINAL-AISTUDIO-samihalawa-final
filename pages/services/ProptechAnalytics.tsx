@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 const Section: React.FC<{ title: string, points: string[] }>=({ title, points })=> (
@@ -13,17 +12,9 @@ const Section: React.FC<{ title: string, points: string[] }>=({ title, points })
 
 const ProptechAnalytics: React.FC = () => {
   const title = 'PropTech & Real Estate Analytics — Data Pipelines & Insights';
-  const description = 'Build property data pipelines, valuation models and dashboards. Market intel for real estate and investment decisions.';
-  const jsonLd = { '@context': 'https://schema.org', '@type': 'Service', name: title, serviceType: 'PropTech Analytics', provider: { '@type': 'Person', name: 'Sami Halawa' } };
   return (
     <section className="py-16 bg-white">
-      <Helmet>
-        <title>{title} | Sami Halawa</title>
-        <meta name="description" content={description} />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-        <link rel="canonical" href="/services/proptech-analytics" />
-      </Helmet>
-      <div className="container mx-auto px-6 max-w-5xl">
+<div className="container mx-auto px-6 max-w-5xl">
         <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">{title}</h1>
         <p className="text-lg text-slate-700 mb-8">From raw listings to actionable insights: we consolidate data, score opportunities and surface trends with clear dashboards.</p>
         <div className="grid md:grid-cols-2 gap-6">

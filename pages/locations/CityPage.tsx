@@ -1,5 +1,4 @@
 import React, { useMemo } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../../i18n/LanguageContext';
 import type { TranslationKey } from '../../i18n/translations';
@@ -20,15 +19,11 @@ const highlightServices: Array<{ href: string; labelKey: TranslationKey }> = [
   { href: '/services/medical-ai', labelKey: 'services.medicalAI.name' },
 ];
 
-const siteUrl = 'https://samihalawa.com';
-
-const CityPage: React.FC<CityPageProps> = ({ cityKey, titleKey, descriptionKey, canonical }) => {
+const CityPage: React.FC<CityPageProps> = ({ cityKey, titleKey, descriptionKey }) => {
   const { t } = useTranslation();
   const city = t(cityKey);
   const title = t(titleKey);
   const description = t(descriptionKey);
-  const siteName = t('layout.siteName');
-  const canonicalUrl = canonical.startsWith('http') ? canonical : `${siteUrl}${canonical}`;
 
   const faqItems = useMemo(() => ([
     { question: t('locations.city.faq.delivery.question'), answer: t('locations.city.faq.delivery.answer') },
@@ -36,45 +31,12 @@ const CityPage: React.FC<CityPageProps> = ({ cityKey, titleKey, descriptionKey, 
     { question: t('locations.city.faq.availability.question'), answer: t('locations.city.faq.availability.answer') },
   ]), [t]);
 
-  const jsonLd = useMemo(() => ({
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: t('locations.city.schema.name').replace('{city}', city),
-    areaServed: city,
-    url: canonicalUrl,
-    provider: { '@type': 'Person', name: 'Sami Halawa' },
-    serviceType: t('locations.city.schema.serviceType'),
-    availableLanguage: ['es', 'en'],
-  }), [canonicalUrl, city, t]);
-
-  const faqJsonLd = useMemo(() => ({
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqItems.map(item => ({
-      '@type': 'Question',
-      name: item.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: item.answer,
-      },
-    })),
-  }), [faqItems]);
-
   const highlightTitle = t('locations.city.highlightsTitle').replace('{city}', city);
   const highlightSubtitle = t('locations.city.highlightsSubtitle').replace('{city}', city);
   const faqTitle = t('locations.city.faqTitle').replace('{city}', city);
 
   return (
     <section className="py-16 bg-white">
-      <Helmet>
-        <title>{`${title} | ${siteName}`}</title>
-        <meta name="description" content={description} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <link rel="canonical" href={canonicalUrl} />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
-      </Helmet>
       <div className="container mx-auto px-6 max-w-5xl">
         <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">{title}</h1>
         <p className="text-lg text-slate-700 mb-8">{description}</p>
@@ -125,4 +87,3 @@ const CityPage: React.FC<CityPageProps> = ({ cityKey, titleKey, descriptionKey, 
 };
 
 export default CityPage;
-

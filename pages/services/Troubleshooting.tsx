@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 const Section: React.FC<{ title: string, points: string[] }>=({ title, points })=> (
@@ -19,36 +18,9 @@ const CTA: React.FC=()=> (
 
 const Troubleshooting: React.FC = () => {
   const title = 'Soporte y Troubleshooting: rescate de proyectos ML y arreglos de automatización';
-  const description = 'Auditoría, diagnóstico y solución de incidencias en proyectos de IA y automatización. Debug urgente, estabilidad y buenas prácticas.';
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: 'Soporte y Troubleshooting IA',
-    areaServed: 'Madrid, Online',
-    provider: { '@type': 'Person', name: 'Sami Halawa' },
-    serviceType: 'AI Troubleshooting'
-  };
-  const jsonLdFaq = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: '¿Qué tipo de incidencias?', acceptedAnswer: { '@type': 'Answer', text: 'Fallos de automatización, errores en chains/RAG, permisos API, costes/latencias.' }},
-      { '@type': 'Question', name: '¿Tiempo de respuesta?', acceptedAnswer: { '@type': 'Answer', text: 'Diagnóstico en 24–48h, con plan de acción y estimación.' }},
-      { '@type': 'Question', name: '¿Cómo se entrega?', acceptedAnswer: { '@type': 'Answer', text: 'Correcciones, checklist de hardening y documentación de mantenimiento.' }}
-    ]
-  };
   return (
     <section className="py-16 bg-white">
-      <Helmet>
-        <title>{title} | Sami Halawa</title>
-        <meta name="description" content={description} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
-        <link rel="canonical" href="/services/troubleshooting" />
-      </Helmet>
-      <div className="container mx-auto px-6 max-w-5xl">
+<div className="container mx-auto px-6 max-w-5xl">
         <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">{title}</h1>
         <p className="text-lg text-slate-700 mb-8">¿Proyecto atascado? ¿Automatización inestable? Hago auditoría rápida, localizo cuellos de botella y dejo todo funcionando con buenas prácticas.</p>
         <div className="grid md:grid-cols-2 gap-6">

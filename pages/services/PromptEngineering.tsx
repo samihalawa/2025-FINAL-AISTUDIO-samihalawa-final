@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../../i18n/LanguageContext';
 
@@ -15,43 +14,9 @@ const Section: React.FC<{ title: string, points: string[] }>=({ title, points })
 const PromptEngineering: React.FC = () => {
   const { t } = useTranslation();
   const title = t('services.promptEngineering.title');
-  const description = t('services.promptEngineering.description');
-  const ogImage = 'https://images.unsplash.com/photo-1556157382-1b4a2e0?auto=format&fit=crop&w=1200&h=630&q=80';
-  const jsonLdCourse = {
-    '@context': 'https://schema.org',
-    '@type': 'Course',
-    name: 'Prompt Engineering & LLM Best Practices',
-    provider: { '@type': 'Person', name: 'Sami Halawa' },
-    description,
-    hasCourseInstance: [{
-      '@type': 'CourseInstance',
-      courseMode: 'Onsite/Online',
-      location: { '@type': 'Place', name: 'Madrid / Remote' }
-    }]
-  };
-  const jsonLdFaq = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: 'Who is this for?', acceptedAnswer: { '@type': 'Answer', text: 'Product, engineering, data and ops teams who ship LLM features.' }},
-      { '@type': 'Question', name: 'What will we build?', acceptedAnswer: { '@type': 'Answer', text: 'A prompt library with evals, guardrails, and a cost/perf dashboard.' }},
-      { '@type': 'Question', name: 'How long is it?', acceptedAnswer: { '@type': 'Answer', text: '1–2 days workshop or 4-week program (2h/week).' }}
-    ]
-  };
   return (
     <section className="py-16 bg-white">
-      <Helmet>
-        <title>{title} | Sami Halawa</title>
-        <meta name="description" content={description} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta name="twitter:image" content={ogImage} />
-        <script type="application/ld+json">{JSON.stringify(jsonLdCourse)}</script>
-        <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
-        <link rel="canonical" href="/services/prompt-engineering" />
-      </Helmet>
-      <div className="container mx-auto px-6 max-w-5xl">
+<div className="container mx-auto px-6 max-w-5xl">
         <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">{title}</h1>
         <p className="text-lg text-slate-700 mb-8">Design robust prompts, tool-calling and evaluation. Learn prompt patterns, chain-of-thought alternatives, and safety strategies that scale.</p>
         <div className="grid md:grid-cols-2 gap-6">

@@ -1,10 +1,11 @@
 import React from 'react';
 import { useTranslation } from '../i18n/LanguageContext';
 import { CONTACT_INFO } from '../constants';
+import type { TranslationKey } from '../i18n/translations';
 
 const Footer: React.FC = () => {
     const { t } = useTranslation();
-    const socialLinks = [
+    const socialLinks: Array<{ href: string; icon: string; labelKey: TranslationKey }> = [
         { href: 'https://www.linkedin.com/in/samihalawa/', icon: 'fab fa-linkedin', labelKey: 'social.linkedin' },
         { href: 'https://github.com/samihalawa', icon: 'fab fa-github', labelKey: 'social.github' },
         { href: 'https://huggingface.co/samihalawa', icon: 'fas fa-face-smile', labelKey: 'social.huggingface' },

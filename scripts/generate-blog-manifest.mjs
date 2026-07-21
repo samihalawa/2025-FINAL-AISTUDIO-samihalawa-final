@@ -23,6 +23,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import matter from 'gray-matter';
+import { ROUTE_METADATA } from '../seo/siteMetadata.js';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, '..');
@@ -110,19 +111,14 @@ const manifest = [...bySlug.values()].sort(
 fs.writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
 console.log(`[blog-manifest] wrote ${manifest.length} post(s) to public/blog/index.json`);
 
-// --- Sitemap: keep all non-blog-article URLs, refresh /blog/<slug> entries ---
-if (fs.existsSync(sitemapPath)) {
-  const xml = fs.readFileSync(sitemapPath, 'utf8');
-  const urlBlockRe = /\s*<url>[\s\S]*?<\/url>/g;
-  const isBlogArticle = (block) => /<loc>\s*[^<]*\/blog\/[^<]+<\/loc>/.test(block);
-  const kept = (xml.match(urlBlockRe) || []).filter((b) => !isBlogArticle(b));
-  const articleUrls = manifest
-    .map((p) => `  <url><loc>${SITE}/blog/${p.slug}</loc></url>`)
-    .join('\n');
-  const body = `${kept.map((b) => b.trim()).map((b) => `  ${b}`).join('\n')}\n${articleUrls}`;
-  const out = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>\n`;
-  fs.writeFileSync(sitemapPath, out);
-  console.log(`[blog-manifest] sitemap: ${kept.length} static URL(s) + ${manifest.length} blog article URL(s)`);
-} else {
-  console.warn('[blog-manifest] public/sitemap.xml not found; skipped sitemap update');
-}
+// --- Sitemap: one source of truth for static routes and generated articles ---
+const staticUrls = ROUTE_METADATA
+  .filter((item) => !item.robots.startsWith('noindex'))
+  .map((item) => `  <url><loc>${SITE}${item.path === '/' ? '/' : item.path}</loc></url>`);
+const articleUrls = manifest.map((post) => {
+  const lastmod = /^\d{4}-\d{2}-\d{2}/.exec(post.date)?.[0];
+  return `  <url><loc>${SITE}/blog/${post.slug}</loc>${lastmod ? `<lastmod>${lastmod}</lastmod>` : ''}</url>`;
+});
+const out = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[...staticUrls, ...articleUrls].join('\n')}\n</urlset>\n`;
+fs.writeFileSync(sitemapPath, out);
+console.log(`[blog-manifest] sitemap: ${staticUrls.length} static URL(s) + ${articleUrls.length} blog article URL(s)`);

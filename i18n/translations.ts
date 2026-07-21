@@ -265,6 +265,10 @@ const en = {
     'locations.city.faq.availability.question': 'How soon can we schedule?',
     'locations.city.faq.availability.answer': 'Most teams book within 2–3 weeks. Reach out for specific dates.',
     'locations.city.faqLabel': 'FAQ {index}',
+    'search.title': 'Search',
+    'search.description': 'Find training, services, case studies and locations.',
+    'search.placeholder': 'Search projects, services, case studies...',
+    'search.noResults': 'No results found. Try another search.',
     'corporate.title': 'Corporate Training & Solutions',
     'corporate.description': 'We offer tailored AI training programs and consulting services designed to meet the specific needs of your organization. Equip your teams with the skills to leverage AI for a competitive advantage.',
     'corporate.programsTitle': 'Our Training Programs',
@@ -570,6 +574,7 @@ const en = {
     'blog.loadingContent': 'Loading articles…',
     'blog.loadingButton': 'Loading…',
     'blog.error': 'We could not load the latest articles. Please refresh to try again.',
+    'blog.noResults': 'No articles match this search.',
     'contact.title': 'Contact Agents AI Ltd',
     'contact.heading': 'Partner with production-grade AI specialists',
     'contact.description': 'Agents AI Ltd helps teams across the UK and EU design, deploy, and govern AI programmes. Book a consultation to plan your next automation or training rollout.',
@@ -686,7 +691,9 @@ const en = {
     'footer.tagline': 'Agents AI Ltd — AI training, automation, and R&D'
 };
 
-const es: typeof en = {
+export type TranslationKey = keyof typeof en;
+
+const es: Partial<Record<TranslationKey, string>> = {
     'nav.about': 'Sobre Mí',
     'nav.corporate': 'Para Empresas',
     'nav.skills': 'Habilidades',
@@ -1259,6 +1266,7 @@ const es: typeof en = {
     'blog.loadingContent': 'Contenido de IA en preparación.',
     'blog.loadingButton': 'Cargando…',
     'blog.error': 'No pudimos cargar los artículos más recientes. Refresca la página e inténtalo de nuevo.',
+    'blog.noResults': 'Ningún artículo coincide con esta búsqueda.',
     'contact.title': 'Contacta con Agents AI Ltd',
     'contact.heading': 'Colabora con especialistas en IA de producción',
     'contact.description': 'Agents AI Ltd acompaña a equipos del Reino Unido y la UE para diseñar, desplegar y gobernar programas de IA. Agenda una consulta para planificar tu próxima automatización o formación.',
@@ -1375,7 +1383,7 @@ const es: typeof en = {
     'footer.tagline': 'Agents AI Ltd — Formación, automatización e I+D en IA'
 };
 
-const fr: typeof en = {
+const fr: Partial<Record<TranslationKey, string>> = {
     'nav.about': 'À propos',
     'nav.corporate': 'Pour les Entreprises',
     'nav.skills': 'Compétences',
@@ -1948,6 +1956,7 @@ const fr: typeof en = {
     'blog.loadingContent': 'Contenu IA en cours de préparation.',
     'blog.loadingButton': 'Chargement…',
     'blog.error': "Impossible de charger les derniers articles. Actualisez la page pour réessayer.",
+    'blog.noResults': 'Aucun article ne correspond à cette recherche.',
     'contact.title': 'Contactez Agents AI Ltd',
     'contact.heading': 'Collaborez avec des spécialistes IA prêts pour la production',
     'contact.description': "Agents AI Ltd accompagne les équipes au Royaume-Uni et dans l’UE pour concevoir, déployer et gouverner des programmes d’IA. Planifiez une consultation pour votre prochaine automatisation ou formation.",
@@ -2064,7 +2073,7 @@ const fr: typeof en = {
     'footer.tagline': 'Agents AI Ltd — Formation IA, automatisation et R&D'
 };
 
-const zh: typeof en = {
+const zh: Partial<Record<TranslationKey, string>> = {
     'nav.about': '关于我',
     'nav.corporate': '企业服务',
     'nav.skills': '技能',
@@ -2604,6 +2613,7 @@ const zh: typeof en = {
     'blog.loadingContent': 'AI 洞察内容生成中。',
     'blog.loadingButton': '加载中…',
     'blog.error': '最新文章加载失败，请刷新页面后重试。',
+    'blog.noResults': '没有文章符合此搜索。',
     'contact.title': '联系 Agents AI Ltd',
     'contact.heading': '与生产级 AI 专家合作',
     'contact.description': 'Agents AI Ltd 为英国及欧盟团队提供 AI 项目设计、部署与治理支持。预约咨询，规划下一次自动化或培训落地。',
@@ -2720,5 +2730,4 @@ const zh: typeof en = {
     'footer.tagline': 'Agents AI Ltd — AI 培训、自动化与研发'
 };
 
-export const translations = { en, es, fr, zh };
-export type TranslationKey = keyof typeof en;
+export const translations: Record<'en' | 'es' | 'fr' | 'zh', Partial<Record<TranslationKey, string>>> = { en, es, fr, zh };

@@ -1,10 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../../i18n/LanguageContext';
-import { usePageMeta } from '../../hooks/usePageMeta';
+import type { TranslationKey } from '../../i18n/translations';
 
-const SERVICE_CARDS = [
+const SERVICE_CARDS: Array<{ href: string; titleKey: TranslationKey; descKey: TranslationKey }> = [
   { href: '/services/medical-ai', titleKey: 'services.medicalAI.name', descKey: 'services.medicalAI.description' },
   { href: '/services/business-automation', titleKey: 'services.businessAutomation.name', descKey: 'services.businessAutomation.description' },
   { href: '/services/university-ml', titleKey: 'services.universityML.name', descKey: 'services.universityML.description' },
@@ -27,27 +26,16 @@ const SERVICE_CARDS = [
   { href: '/services/troubleshooting', titleKey: 'services.troubleshooting.name', descKey: 'services.troubleshooting.description' },
 ];
 
-const FEATURED_CASE_STUDIES = [
+const FEATURED_CASE_STUDIES: Array<{ href: string; titleKey: TranslationKey; descKey: TranslationKey }> = [
   { href: '/case-studies/autoclient', titleKey: 'services.index.caseStudy.autoclient.title', descKey: 'services.index.caseStudy.autoclient.description' },
   { href: '/case-studies/radiology-ai', titleKey: 'services.index.caseStudy.radiology.title', descKey: 'services.index.caseStudy.radiology.description' },
 ];
 
 const ServicesIndex: React.FC = () => {
   const { t } = useTranslation();
-  const { title, description } = usePageMeta('services');
-  const ogImage = 'https://samihalawa.com/portfolio/vuda-annotated.png';
 
   return (
     <section className="py-8">
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta name="twitter:image" content={ogImage} />
-        <link rel="canonical" href="/services" />
-      </Helmet>
       <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">{t('services.index.title')}</h1>
       <p className="text-slate-700 mb-8 max-w-3xl">{t('services.index.description')}</p>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

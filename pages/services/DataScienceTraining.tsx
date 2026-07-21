@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 const Section: React.FC<{ title: string, points: string[] }>=({ title, points })=> (
@@ -13,17 +12,9 @@ const Section: React.FC<{ title: string, points: string[] }>=({ title, points })
 
 const DataScienceTraining: React.FC = () => {
   const title = 'Data Science Training — Statistics, ML & Evaluation';
-  const description = 'Curriculum-backed training on classification, regression, dimensionality reduction and metrics. Hands-on with Python and notebooks.';
-  const jsonLd = { '@context': 'https://schema.org', '@type': 'Service', name: title, serviceType: 'Data Science Training', provider: { '@type': 'Person', name: 'Sami Halawa' } };
   return (
     <section className="py-16 bg-white">
-      <Helmet>
-        <title>{title} | Sami Halawa</title>
-        <meta name="description" content={description} />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-        <link rel="canonical" href="/services/data-science-training" />
-      </Helmet>
-      <div className="container mx-auto px-6 max-w-5xl">
+<div className="container mx-auto px-6 max-w-5xl">
         <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">{title}</h1>
         <p className="text-lg text-slate-700 mb-8">Level up your teams with battle-tested modules: metrics for binary targets, advanced regression, clustering and more.</p>
         <div className="grid md:grid-cols-2 gap-6">

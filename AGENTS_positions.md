@@ -1,12 +1,23 @@
 # INDEX
 
+SEO head delivery | client-only Helmet left crawler and social HTML empty | generate physical per-route heads from one metadata registry and keep runtime head in sync | do not reintroduce Helmet or same-URL hreflang | verify every raw route HTML, schema, sitemap, OG asset, 404 status and rendered routes
 contact conversion surface | embedded scheduler can render a blank panel when the public event slug is gone | verify the event URL and rendered widget before publishing, otherwise use the working form/email path | do not treat script load or iframe creation as booking proof | verify contact page console, visible CTA/form and destination response on desktop/mobile
 public portfolio content boundary | internal evidence debt and next-proof instructions appeared as visitor content | keep validation in the repo ledger and publish product value, scope and links | do not render agent checklists, provider backlog or proof-debt panels | verify public-copy grep plus rendered home/projects/case-studies/CV
 portfolio evidence propagation | fixing /projects left stale OULANG and Hugging Face claims in Hero, evidence cards and downloadable ATS text | sweep every public component and CV asset for the same claim strings | do not treat one route or data file as the complete claim surface | verify repo-wide claim grep plus rendered home/projects/CV and downloadable files
 blog content pipeline | hard-coded slug list + modal did not scale to daily hub-fed posts | glob public/blog/**/*.md at build into index.json + sitemap and render /blog/:slug | do not hand-edit constants.ts per post or reintroduce the modal-only flow; hub commits to public/blog/en/<slug>.md | verify live /blog, one /blog/<slug>, and sitemap blog URLs after a hub pages run
 SPA production routes | public asset directories collide with client routes | serve file-shaped URLs as static files and everything else as the SPA shell | do not let Nginx treat route names as directories or leak port 8080 redirects | verify slash and non-slash routes plus real asset MIME types
-Coolify Linux build | macOS lock omitted the Rollup x64 GNU binary | install the matching native Rollup package inside the Linux builder | do not infer deployability from the macOS Vite build | verify Coolify builds the pushed commit and the live routes
+Coolify Linux build | macOS lock can omit the Linux Rollup binary and Docker hosts differ between arm64 and x64 | install the build container's matching native Rollup GNU package | do not hardcode one CPU or infer deployability from the macOS Vite build | verify local container plus Coolify build the pushed commit and live routes
 public portfolio | stock imagery and invented social proof replaced source evidence | use dated metrics, real screenshots and public links | do not publish placeholders, arbitrary percentages or unsupported impact | verify exact live route, image load, text and responsive layout
+
+## 2026-07-21 — SEO must exist in the delivered route HTML
+
+- **Status:** CURRENT
+- **Project/root:** `PROJECTS_ON_PROCESS/2025-FINAL-AISTUDIO-samihalawa-final`; every public route, article, sitemap and 404 response.
+- **Mistake recovered:** dozens of page-local Helmet blocks implied complete SEO, but raw production HTML for every route contained only the generic home title and no description, canonical, OG, Twitter or JSON-LD; unknown URLs also rendered the homepage.
+- **Superior approach:** define route metadata once in `seo/siteMetadata.js`, generate physical route HTML during the build, use the same registry for runtime navigation, and generate article metadata from the content manifest.
+- **Evidence:** `scripts/verify-seo.mjs` checks all App routes and articles; production proof must still read literal tags/status from the pushed commit and visually render representative routes.
+- **Triggers / verification:** route, metadata, blog, Nginx, Netlify, sitemap or social-card changes; verify raw HTML for every route, JSON-LD parsing, 1200x630 owned OG, sitemap inclusion/exclusion, a real 404 status, and rendered desktop/mobile routes.
+- **Do / don't:** do keep crawler HTML and client navigation synchronized; don't reintroduce `react-helmet-async`, per-page duplicates, remote OG dependencies or hreflang links without real reciprocal localized URLs.
 
 ## 2026-07-19 — Booking controls require destination proof
 
@@ -48,7 +59,7 @@ public portfolio | stock imagery and invented social proof replaced source evide
 - **Triggers:** editing the blog reader, adding a post source, changing the build script, or touching the sitemap.
 - **Required verification:** `npm run build` green; live `/blog` lists posts, one `/blog/<slug>` renders real body + correct `<title>`/canonical (Googlebot UA), and `sitemap.xml` contains the article URLs — after a hub pages run has committed to this repo.
 - **Do / don't:** do let the build script + manifest own the post list; don't hand-edit `constants.ts` per post, don't restore the modal-only navigation, and don't feed this blog the Chinese-diaspora news (it is `samihalawa`-scoped, English).
-- **Helmet caveat (sitewide):** `react-helmet-async` (2.0.4 and 2.0.5 both tried) injects NOTHING into `<head>` at runtime in this app — reproduced in dev + production builds, on `/` and every route (`[data-rh]` count 0, no canonical/OG/JSON-LD). So `BlogArticlePage` sets its SEO tags via a direct-DOM effect (`applyArticleHead`, `data-blog-meta`, idempotent + cleaned up on unmount) rather than `<Helmet>`. Don't "fix" the article page by moving its meta back into `<Helmet>` — it will silently stop rendering. The whole site's per-page meta (services/case-studies/etc. still use `<Helmet>`) is affected by the same bug and should be fixed separately.
+- **SEO delivery:** superseded the page-local Helmet/direct-DOM split with the current centralized build-time + runtime SEO registry. Keep article metadata generated from the manifest and verify it in raw route HTML; do not restore Helmet.
 
 ## 2026-07-15 — SPA routes versus public asset directories
 
@@ -66,10 +77,10 @@ public portfolio | stock imagery and invented social proof replaced source evide
 - **Status:** CURRENT
 - **Project/root:** `PROJECTS_ON_PROCESS/2025-FINAL-AISTUDIO-samihalawa-final`; Docker/Coolify build.
 - **Mistake recovered:** the macOS build passed while the generated lock omitted `@rollup/rollup-linux-x64-gnu`; Coolify's glibc Node image then failed at Vite startup.
-- **Superior approach:** keep the package manifest portable and install the matching Rollup native binary only inside the Linux build stage.
-- **Evidence:** Coolify deployment `vzfbjrt753qkeyk0lmlxgknu` for commit `1ff6bf3`; build log failed after successful `npm ci` with the missing GNU module while the lock still declared it as an optional Rollup dependency.
+- **Superior approach:** keep the package manifest portable and install the Rollup GNU package matching `process.arch` only inside the Linux build stage.
+- **Evidence:** Coolify deployment `vzfbjrt753qkeyk0lmlxgknu` for commit `1ff6bf3` lacked the x64 GNU module; on 21 Jul 2026 a local `linux/arm64` container rejected the later hardcoded x64 repair with `wanted cpu x64` / `Actual cpu arm64`.
 - **Triggers:** Vite/Rollup upgrade, macOS lock regeneration, Dockerfile change or Coolify build failure.
-- **Required verification:** local build plus a Coolify build of the pushed commit, followed by browser proof on `/`, `/projects` and `/cv`.
+- **Required verification:** local architecture container build plus a Coolify x64 build of the pushed commit, followed by browser proof on `/`, `/projects` and `/cv`.
 
 ## 2026-07-15 — Evidence-first personal portfolio
 

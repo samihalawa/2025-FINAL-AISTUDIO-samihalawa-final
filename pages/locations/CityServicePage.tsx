@@ -1,40 +1,22 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { useTranslation } from '../../i18n/LanguageContext';
 import { Link } from 'react-router-dom';
 
 type Props = {
-  serviceKey: string; // e.g., 'aiReadinessAudit'
+  serviceKey: string;
   cityKey: 'madrid' | 'barcelona' | 'valencia';
-  path: string; // canonical path
+  path: string;
 };
 
-const ogMap: Record<string, string> = {
-  aiReadinessAudit: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&h=630&q=80',
-  promptEngineering: 'https://images.unsplash.com/photo-1556157382-1b4a2e0?auto=format&fit=crop&w=1200&h=630&q=80',
-  ragLangChain: 'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1200&h=630&q=80',
-  businessAutomation: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&h=630&q=80',
-};
-
-const CityServicePage: React.FC<Props> = ({ serviceKey, cityKey, path }) => {
+const CityServicePage: React.FC<Props> = ({ serviceKey, cityKey }) => {
   const { t } = useTranslation();
   const titleBase = t(`services.${serviceKey}.title` as any);
-  const descBase = t(`services.${serviceKey}.description` as any);
+  const description = t(`services.${serviceKey}.description` as any);
   const city = t(`city.${cityKey}` as any);
   const title = `${titleBase} — ${city}`;
-  const description = `${descBase}`;
-  const ogImage = ogMap[serviceKey] || 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&h=630&q=80';
+
   return (
     <section className="py-16 bg-white">
-      <Helmet>
-        <title>{title} | Sami Halawa</title>
-        <meta name="description" content={description} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta name="twitter:image" content={ogImage} />
-        <link rel="canonical" href={path} />
-      </Helmet>
       <div className="container mx-auto px-6 max-w-5xl">
         <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">{title}</h1>
         <p className="text-lg text-slate-700 mb-8">{description}</p>
@@ -48,4 +30,3 @@ const CityServicePage: React.FC<Props> = ({ serviceKey, cityKey, path }) => {
 };
 
 export default CityServicePage;
-

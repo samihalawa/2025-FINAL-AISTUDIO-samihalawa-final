@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../../i18n/LanguageContext';
 import type { TranslationKey } from '../../i18n/translations';
@@ -23,8 +22,6 @@ const CTA: React.FC<{ primaryLabel: string; secondaryLabel: string }> = ({ prima
 const MedicalAI: React.FC = () => {
   const { t } = useTranslation();
   const title = t('services.medicalAI.title');
-  const description = t('services.medicalAI.description');
-  const ogImage = '/portfolio/apolo-architecture.png';
   const relatedCaseStudies = [
     { href: '/case-studies/radiology-ai', label: t('caseStudies.index.case.radiology.title') }
   ];
@@ -41,38 +38,9 @@ const MedicalAI: React.FC = () => {
   ];
   const learnPoints = learnKeys.map((key) => t(key));
   const casePoints = caseKeys.map((key) => t(key));
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: 'Formación y consultoría en IA médica',
-    areaServed: 'Madrid, Online',
-    provider: { '@type': 'Person', name: 'Sami Halawa' },
-    serviceType: 'AI Medical Training',
-    offers: { '@type': 'Offer', availability: 'https://schema.org/InStock' }
-  };
-  const jsonLdFaq = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: '¿Es seguro para datos clínicos?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Separamos entornos, aplicamos anonimización y controles de acceso.' }},
-      { '@type': 'Question', name: '¿Necesito programar?', acceptedAnswer: { '@type': 'Answer', text: 'No. Los flujos son visuales y guiados; el código es opcional.' }},
-      { '@type': 'Question', name: '¿Cuánto dura la formación?', acceptedAnswer: { '@type': 'Answer', text: 'Taller de 1 día o programa de 4 semanas (2h/semana).' }}
-    ]
-  };
   return (
     <section className="py-16 bg-white">
-      <Helmet>
-        <title>{title} | Sami Halawa</title>
-        <meta name="description" content={description} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta name="twitter:image" content={ogImage} />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
-        <link rel="canonical" href="/services/medical-ai" />
-      </Helmet>
-      <div className="container mx-auto px-6 max-w-5xl">
+<div className="container mx-auto px-6 max-w-5xl">
         <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">{title}</h1>
         <p className="text-lg text-slate-700 mb-8">{t('services.medicalAI.intro')}</p>
         <div className="grid md:grid-cols-2 gap-6">

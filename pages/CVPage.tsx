@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../i18n/LanguageContext';
 
@@ -12,13 +11,11 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
   const pdf = spanish ? '/cv/Sami_Halawa_CV_ES.pdf' : '/cv/Sami_Halawa_CV.pdf';
   const ats = spanish ? '/cv/Sami_Halawa_CV_ES_ATS.txt' : '/cv/Sami_Halawa_CV_ATS.txt';
   const preview = spanish ? '/cv/Sami_Halawa_CV_ES_preview.png' : '/cv/Sami_Halawa_CV_preview.png';
-  const title = spanish ? 'CV completo de Sami Halawa' : 'Sami Halawa complete CV';
   const description = spanish
     ? 'Una visión completa de productos, sistemas para clientes, open source, investigación y docencia, disponible en PDF y en formato ATS.'
     : 'A complete view of products, client systems, open source, research and teaching, available as a designed PDF and an ATS-ready edition.';
   return <>
-    <Helmet><title>{title}</title><meta name="description" content={description} /><link rel="canonical" href={`https://samihalawa.com/cv/${selected}`} /></Helmet>
-    <section className="py-14 sm:py-20">
+<section className="py-14 sm:py-20">
       <div className="container">
         <div className="grid items-end gap-8 lg:grid-cols-[1fr_auto]">
           <div className="max-w-4xl"><span className="badge-pill">{spanish ? 'CV · versión española' : 'CV · English edition'}</span><h1 className="mt-5 font-display text-5xl font-bold tracking-[-.05em] text-slate-950 sm:text-6xl">{spanish ? 'Productos, investigación y una trayectoria construida haciendo.' : 'Products, research and a career built by making.'}</h1><p className="mt-6 max-w-3xl text-xl leading-relaxed text-slate-600">{description}</p></div>

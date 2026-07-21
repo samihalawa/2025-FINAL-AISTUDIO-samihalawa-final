@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 const Section: React.FC<{ title: string, points: string[] }>=({ title, points })=> (
@@ -13,17 +12,9 @@ const Section: React.FC<{ title: string, points: string[] }>=({ title, points })
 
 const AILanguageLearning: React.FC = () => {
   const title = 'AI for Language Learning — Curriculum, Tools & Practice';
-  const description = 'Design a personalized language learning stack: spaced repetition, pronunciation aids, and AI conversation partners with safe prompts.';
-  const jsonLd = { '@context': 'https://schema.org', '@type': 'Service', name: title, serviceType: 'Language Learning with AI', provider: { '@type': 'Person', name: 'Sami Halawa' } };
   return (
     <section className="py-16 bg-white">
-      <Helmet>
-        <title>{title} | Sami Halawa</title>
-        <meta name="description" content={description} />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-        <link rel="canonical" href="/services/ai-language-learning" />
-      </Helmet>
-      <div className="container mx-auto px-6 max-w-5xl">
+<div className="container mx-auto px-6 max-w-5xl">
         <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">{title}</h1>
         <p className="text-lg text-slate-700 mb-8">From HSK planning to daily conversation: use AI to accelerate vocabulary, listening, and speaking with a safe, structured system.</p>
         <div className="grid md:grid-cols-2 gap-6">
