@@ -98,7 +98,7 @@ APPLIED RESEARCH, PROTOTYPES AND EDUCATION
 - SONMADE content factory, 2026: React/TypeScript, FFmpeg and Sharp prototype for scene analysis and highlight extraction using motion, colour, edge/text and fullscreen scoring.
 - AutoCrypto, 2024: crypto automation and progressive-web-app product exploration.
 - AI-agent architecture course, 2025: implementation-focused 15-hour curriculum covering foundations, tools, memory, multi-agent systems, RAG, deployment and observability.
-- ChinoTotal, Chinese soundscapes and poetry media: Mandarin product/book, onomatopoeia deck, printable tutoring material, 72-poem web collection and generated poetry-audio artifacts. chinototal.com
+- ChinoTotal, Chinese soundscapes and poetry media: 296-page Spanish-language Mandarin course from zero to HSK2/A2, onomatopoeia deck, printable tutoring material, 72-poem web collection and generated poetry-audio artifacts. chinototal.com
 
 CHRONOLOGICAL PROJECT INDEX | 2023-2026
 2023: RealSintra; Mi ChatGPT React Español; OpenAI/GPT file experiments; DameSender continuity.
@@ -113,10 +113,11 @@ OPEN SOURCE, WRITING AND TEACHING
 - Twelve public Hugging Face articles cover browser automation, local Transformers.js, prompting, autonomous-agent repositories, AutoGen, lead generation and VUDA.
 - Colab portfolio includes 112+ items and 58+ named notebooks spanning AI, automation, databases, computer vision and product experimentation.
 - Public youtube.com/@autoclient-ai catalogue: 373 videos / approximately 159.65 hours across AI courses, After Effects, portfolio work and AutoPricing.
-- Author: ChinoTotal: Aprende Chino Mandarín desde 0, ISBN 9798873249237.
+- Author: ChinoTotal: Aprende Chino Mandarín desde 0, 296 pages, independently published in 2024, ISBN 9798873249237.
+- Youth Prize, II Nogarejas Poetry Competition, 2012: “Olvidaste una llave en mi costado”, submitted as “El arte de la fuga”, selected from an international field of more than 200 works.
 
 EDUCATION
-Li Po Chun United World College of Hong Kong | International Baccalaureate, Science and Mathematics | 2010-2012 | Full UWC scholarship
+Li Po Chun United World College of Hong Kong | International Baccalaureate, Science and Mathematics | 2010-2012 | Rafael del Pino Foundation scholarship
 Shenzhen Institute of Information Technology | Computing and information-technology studies | 2016-2018 | Shenzhen, China
 
 SELECTED CREDENTIALS

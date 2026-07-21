@@ -151,9 +151,9 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     tags: ['Document AI', 'Research', 'Multilingual']
   },
   {
-    id: 'chinototal', name: 'ChinoTotal', period: 'Published work', category: 'education',
-    description: copy('Mandarin-learning book and part of a longer Chinese-language teaching and content practice.', 'Libro para aprender mandarín y parte de una trayectoria más amplia de docencia y contenido en chino.'),
-    proof: copy('ISBN 9798873249237', 'ISBN 9798873249237'),
+    id: 'chinototal', name: 'ChinoTotal', period: '2024 · Published book', category: 'education',
+    description: copy('A 296-page Spanish-language Mandarin course for beginners, structured from zero to HSK2 / A2 and independently published through Amazon KDP.', 'Curso de mandarín para principiantes de 296 páginas en español, estructurado desde cero hasta HSK2 / A2 y publicado de forma independiente mediante Amazon KDP.'),
+    proof: copy('Published 2 Jan 2024 · ISBN 9798873249237', 'Publicado el 2 ene 2024 · ISBN 9798873249237'),
     tags: ['Mandarin', 'Writing', 'Education'], href: 'https://chinototal.com', image: '/portfolio/chinototal-home.png', imagePosition: 'center 25%'
   },
   {
@@ -259,9 +259,9 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     tags: ['Teaching', 'Agents', 'RAG']
   },
   {
-    id: 'language-media', name: 'Chinese soundscapes & poetry audio', period: '2017–2026', category: 'education',
-    description: copy('Original poetry, Chinese onomatopoeia decks, printable exercises, vocabulary cards and generated poetry audio.', 'Poesía original, materiales de onomatopeyas chinas, ejercicios, tarjetas de vocabulario y audio de poesía generado.'),
-    proof: copy('72-poem source collection plus current PDFs, slides and audio manifests', 'Colección fuente de 72 poemas más PDFs, diapositivas y manifiestos de audio actuales'),
+    id: 'language-media', name: 'Poetry, Chinese soundscapes & audio', period: '2012–2026', category: 'education',
+    description: copy('Youth poetry prize for “Olvidaste una llave en mi costado”, followed by a 72-poem web collection, Chinese onomatopoeia decks, printable exercises, vocabulary cards and generated poetry audio.', 'Premio juvenil por “Olvidaste una llave en mi costado”, seguido de una colección web de 72 poemas, materiales de onomatopeyas chinas, ejercicios, tarjetas de vocabulario y audio de poesía generado.'),
+    proof: copy('Diario de León and archived Memoria Gráfica for the 2012 award; source collection and current media manifests for later work', 'Diario de León y Memoria Gráfica archivada para el premio de 2012; colección fuente y manifiestos actuales para el trabajo posterior'),
     tags: ['Poetry', 'Chinese', 'Audio']
   },
   {
@@ -413,7 +413,7 @@ export const PORTFOLIO_INVENTORY: InventoryItem[] = [
   inventoryItem(51, 'timeline-umbramed', 'Umbramed / Valerio', '2025–2026', '2025 Q4', 'clients', 'verified', 'Technical leadership across Ionic/Capacitor clinical-study tools, OPE exam ingestion, web/PWA delivery, automation research, payments, product design and medical-AI concepts.', 'Liderazgo técnico en herramientas clínicas Ionic/Capacitor, ingesta de exámenes OPE, entrega web/PWA, automatización, pagos, diseño de producto y conceptos de IA médica.', 'Site, repository, design records, €6,700 labelled cashflow and sampled Meet sidecars; applications are not awards, app-store/payment prep is not submission or completion, connector/payment prep is not completed payment integration, and prompt delivery is not a clone-product launch.', 'Sitio, repositorio, documentación, €6.700 etiquetados y sidecars Meet muestreados; solicitudes no son premios, la preparación app-store/pagos no es envío ni finalización, la preparación de conectores/pagos no es integración de pagos completada y la entrega de prompts no es lanzamiento de un producto clonado.', 'https://umbramed.es', '/portfolio/umbramed-home.png'),
   inventoryItem(52, 'timeline-autotinder', 'AutoTinder / AutoDate design', '2025', '2025 Q4', 'research', 'approximate', 'Extensive product-design and automation specifications.', 'Especificaciones amplias de diseño y automatización.', 'Architecture pages and repositories; mock testimonials and pricing are excluded.', 'Páginas y repositorios; se excluyen testimonios y precios simulados.'),
   inventoryItem(53, 'timeline-prototype-wave', 'Prototype portfolio wave', '2025', '2025 Q4', 'archive', 'verified', 'AutoProposal, AuraAI, HealthGuard, MessageFlow, PriceIntel, AutoMedical Academy and many smaller artifacts.', 'AutoProposal, AuraAI, HealthGuard, MessageFlow, PriceIntel, AutoMedical Academy y otros artefactos.', 'Public/local artifact families; upstream references are not claimed as original work.', 'Familias públicas/locales; referencias upstream no se reclaman como propias.'),
-  inventoryItem(54, 'timeline-poetry', 'Sami Halawa poetry website', '2017–2025', '2025 Q4', 'education', 'verified', 'Web collection of 72 original poems written from 2017 to 2022.', 'Colección web de 72 poemas originales escritos entre 2017 y 2022.', 'Repository README and poem data source verify the published collection.', 'El README y la fuente de poemas verifican la colección publicada.'),
+  inventoryItem(54, 'timeline-poetry', 'Poetry prize & Sami Halawa poetry website', '2012–2025', '2025 Q4', 'education', 'verified', '2012 Nogarejas youth prize for “Olvidaste una llave en mi costado”, followed by a web collection of 72 original poems written from 2017 to 2022.', 'Premio juvenil de Nogarejas en 2012 por “Olvidaste una llave en mi costado”, seguido de una colección web de 72 poemas originales escritos entre 2017 y 2022.', 'Diario de León and the archived Memoria Gráfica verify the award; repository README and poem data verify the later collection.', 'Diario de León y la Memoria Gráfica archivada verifican el premio; el README y la fuente de poemas verifican la colección posterior.'),
   inventoryItem(55, 'timeline-lemon-ai', 'Lemon AI customization', 'Nov 2025', '2025 Q4', 'infrastructure', 'verified', 'Deployment, landing page, identity and infrastructure work on the upstream Lemon AI platform.', 'Despliegue, landing, identidad e infraestructura sobre Lemon AI upstream.', 'Local repository; upstream authorship is explicitly preserved.', 'Repositorio local; la autoría upstream se preserva.'),
   inventoryItem(56, 'timeline-agents-course', '15-hour AI agents course', '2025', '2025 Q4', 'education', 'verified', 'Foundations, tools, memory, multi-agent systems, RAG, deployment and observability.', 'Fundamentos, herramientas, memoria, multiagentes, RAG, despliegue y observabilidad.', 'Direct Notion syllabus; delivery dates and outcomes remain unconfirmed.', 'Programa directo; fechas y resultados no confirmados.'),
 

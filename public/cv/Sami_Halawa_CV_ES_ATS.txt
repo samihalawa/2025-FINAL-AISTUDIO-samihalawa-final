@@ -98,7 +98,7 @@ INVESTIGACIÓN APLICADA, PROTOTIPOS Y EDUCACIÓN
 - SONMADE, 2026: prototipo React/TypeScript, FFmpeg y Sharp para escenas/highlights por movimiento, color, borde/texto y fullscreen.
 - AutoCrypto, 2024: exploración de automatización cripto y producto web progresivo.
 - Curso de arquitectura de agentes, 2025: programa práctico de 15 horas sobre fundamentos, herramientas, memoria, multiagente, RAG, despliegue y observabilidad.
-- ChinoTotal, paisajes sonoros y poesía: producto/libro de mandarín, deck de onomatopeyas, material imprimible, 72 poemas y audio generado. chinototal.com
+- ChinoTotal, paisajes sonoros y poesía: curso de mandarín de 296 páginas en español, desde cero hasta HSK2/A2, deck de onomatopeyas, material imprimible, 72 poemas y audio generado. chinototal.com
 
 ÍNDICE CRONOLÓGICO | 2023-2026
 2023: RealSintra; Mi ChatGPT React Español; archivos/experimentos OpenAI-GPT; continuidad DameSender.
@@ -113,10 +113,11 @@ OPEN SOURCE, ESCRITURA Y DOCENCIA
 - Doce artículos públicos en Hugging Face: automatización de navegador, Transformers.js local, prompting, repositorios de agentes autónomos, AutoGen, lead generation y VUDA.
 - Portfolio Colab con más de 112 elementos y 58 notebooks identificados sobre IA, automatización, bases de datos, visión y experimentación de producto.
 - Catálogo público youtube.com/@autoclient-ai: 373 vídeos / aproximadamente 159,65 horas sobre cursos de IA, After Effects, portfolio y AutoPricing.
-- Autor: ChinoTotal: Aprende Chino Mandarín desde 0, ISBN 9798873249237.
+- Autor: ChinoTotal: Aprende Chino Mandarín desde 0, 296 páginas, publicado de forma independiente en 2024, ISBN 9798873249237.
+- Premio Juvenil del II Certamen de Poesía de Nogarejas, 2012: “Olvidaste una llave en mi costado”, presentado como “El arte de la fuga”, seleccionado entre más de 200 obras de un certamen internacional.
 
 EDUCACIÓN
-Li Po Chun United World College of Hong Kong | Bachillerato Internacional, Ciencias y Matemáticas | 2010-2012 | Beca completa UWC
+Li Po Chun United World College of Hong Kong | Bachillerato Internacional, Ciencias y Matemáticas | 2010-2012 | Beca Fundación Rafael del Pino
 Shenzhen Institute of Information Technology | Estudios de informática y tecnologías de la información | 2016-2018 | Shenzhen, China
 
 CREDENCIALES SELECCIONADAS

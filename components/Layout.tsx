@@ -27,6 +27,14 @@ const Layout: React.FC = () => {
       'https://huggingface.co/samihalawa'
     ],
     jobTitle,
+    award: [
+      'Youth Prize, II Nogarejas Poetry Competition (2012)',
+      'Rafael del Pino Foundation scholarship for Li Po Chun United World College of Hong Kong (2012)'
+    ],
+    alumniOf: {
+      '@type': 'EducationalOrganization',
+      name: 'Li Po Chun United World College of Hong Kong'
+    },
   };
   const webSiteJsonLd = {
     '@context': 'https://schema.org',
