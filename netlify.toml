@@ -6,9 +6,35 @@
   NODE_VERSION = "18"
 
 [[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/404.html"
   status = 404
+
+[[headers]]
+  for = "/blog/*.md"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/blog/index.json"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/demos/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/cv/*.txt"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
 
 [dev]
   command = "npm run dev"

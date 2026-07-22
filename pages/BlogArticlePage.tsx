@@ -13,12 +13,19 @@ interface ManifestEntry {
   tags?: string[];
 }
 
-interface LoadedArticle {
+export interface LoadedArticle {
+  slug: string;
   title: string;
   date: string;
   summary: string;
   author: string;
   content: string;
+}
+
+declare global {
+  interface Window {
+    __INITIAL_BLOG_ARTICLE__?: LoadedArticle;
+  }
 }
 
 const localeMap: Record<LanguageCode, string> = {
@@ -47,13 +54,20 @@ function parseFrontMatter(content: string): { data: Record<string, string>; cont
   return { data, content: body };
 }
 
-const BlogArticlePage: React.FC = () => {
+const BlogArticlePage: React.FC<{ initialArticle?: LoadedArticle | null }> = ({ initialArticle = null }) => {
   const { slug = '' } = useParams();
   const { t, language } = useTranslation();
-  const [article, setArticle] = useState<LoadedArticle | null>(null);
-  const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading');
+  const matchingInitialArticle = initialArticle?.slug === slug ? initialArticle : null;
+  const [article, setArticle] = useState<LoadedArticle | null>(matchingInitialArticle);
+  const [status, setStatus] = useState<'loading' | 'ready' | 'error'>(matchingInitialArticle ? 'ready' : 'loading');
 
   useEffect(() => {
+    if (matchingInitialArticle) {
+      setArticle(matchingInitialArticle);
+      setStatus('ready');
+      return;
+    }
+
     let cancelled = false;
     const load = async () => {
       setStatus('loading');
@@ -81,6 +95,7 @@ const BlogArticlePage: React.FC = () => {
         const { data, content } = parseFrontMatter(raw);
         if (cancelled) return;
         setArticle({
+          slug,
           title: data.title || meta?.title || slug.replace(/-/g, ' '),
           date: data.date || data.publishedAt || meta?.date || new Date().toISOString().slice(0, 10),
           summary: data.summary || data.excerpt || data.metaDescription || meta?.summary || '',
@@ -96,7 +111,7 @@ const BlogArticlePage: React.FC = () => {
     return () => {
       cancelled = true;
     };
-  }, [slug]);
+  }, [matchingInitialArticle, slug]);
 
   const parsedContent = useMemo(
     () => (article?.content ? (marked.parse(article.content, { async: false }) as string) : ''),

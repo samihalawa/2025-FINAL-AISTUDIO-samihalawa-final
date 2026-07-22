@@ -87,7 +87,10 @@ for (const file of files) {
   const summary =
     firstNonEmpty(data.summary, data.excerpt, data.metaDescription) ||
     stripBody(parsed.content).slice(0, 180);
-  const author = firstNonEmpty(data.author, data.sourceName) || 'Sami Halawa';
+  // sourceName identifies the delivery system, not the public author. Publishing
+  // values such as "content-hub-pages" conflicts with the visible byline and
+  // Article structured data, so only an explicit author may override the owner.
+  const author = firstNonEmpty(data.author) || 'Sami Halawa';
   const tags = normalizeTags(data.tags);
   const entry = { slug, path: routePath, title, date, summary, author, tags };
 

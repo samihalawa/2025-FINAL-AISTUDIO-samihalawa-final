@@ -4,6 +4,11 @@ export const DEFAULT_OG_IMAGE = '/og/sami-halawa-ai-engineer.png';
 export const DEFAULT_OG_ALT = 'Sami Halawa AI product engineering portfolio';
 
 const DEFAULT_ROBOTS = 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1';
+const CV_ALTERNATES = [
+  { lang: 'en', path: '/cv/en' },
+  { lang: 'es', path: '/cv/es' },
+  { lang: 'x-default', path: '/cv' },
+];
 
 const route = (path, title, description, options = {}) => ({
   path,
@@ -23,9 +28,9 @@ export const ROUTE_METADATA = [
   route('/projects', 'AI Products & Engineering Projects | Sami Halawa', 'Explore Sami Halawa\'s work across multilingual platforms, agent systems, automation, applied AI and product engineering.', { schemaType: 'CollectionPage' }),
   route('/blog', 'AI Engineering & Agent Systems Blog | Sami Halawa', 'Technical articles on AI agents, context engineering, RAG, evaluation, automation and shipping reliable AI products.', { schemaType: 'Blog' }),
   route('/contact', 'Contact Sami Halawa | AI Product & Engineering', 'Discuss an AI product, automation, training program, technical role or collaboration with Sami Halawa.', { schemaType: 'ContactPage' }),
-  route('/cv', 'Sami Halawa CV | Founding AI Engineer', 'Professional profile, experience, selected products, technical skills and public work by founding AI engineer Sami Halawa.', { schemaType: 'ProfilePage' }),
-  route('/cv/en', 'Sami Halawa CV in English | Founding AI Engineer', 'English CV with Sami Halawa\'s AI product, engineering, automation, research and technical training experience.', { schemaType: 'ProfilePage' }),
-  route('/cv/es', 'CV de Sami Halawa | Ingeniero Fundador de IA', 'Currículum en español con la experiencia de Sami Halawa en productos de IA, ingeniería, automatización y formación técnica.', { schemaType: 'ProfilePage', lang: 'es', locale: 'es_ES' }),
+  route('/cv', 'Sami Halawa CV | Founding AI Engineer', 'Professional profile, experience, selected products, technical skills and public work by founding AI engineer Sami Halawa.', { schemaType: 'ProfilePage', alternates: CV_ALTERNATES }),
+  route('/cv/en', 'Sami Halawa CV in English | Founding AI Engineer', 'English CV with Sami Halawa\'s AI product, engineering, automation, research and technical training experience.', { schemaType: 'ProfilePage', alternates: CV_ALTERNATES }),
+  route('/cv/es', 'CV de Sami Halawa | Ingeniero Fundador de IA', 'Currículum en español con la experiencia de Sami Halawa en productos de IA, ingeniería, automatización y formación técnica.', { schemaType: 'ProfilePage', lang: 'es', locale: 'es_ES', alternates: CV_ALTERNATES }),
   route('/search', 'Search the Sami Halawa Portfolio', 'Search projects, services, case studies and technical articles across the Sami Halawa portfolio.', { schemaType: 'SearchResultsPage', robots: 'noindex,follow' }),
 
   route('/services', 'AI Engineering, Automation & Training Services | Sami Halawa', 'AI product engineering, agent systems, workflow automation, technical training and applied research services.', { schemaType: 'CollectionPage' }),
@@ -127,8 +132,11 @@ export function buildStructuredData(meta) {
     '@id': personId,
     name: 'Sami Halawa',
     url: SITE_URL,
-    image: absoluteUrl('/portfolio/sami-photo.png'),
+    image: absoluteUrl('/portfolio/sami-photo.webp'),
     jobTitle: 'Founding AI Engineer',
+    description: 'Founder-engineer building multilingual AI products, agent systems, automation and technical education.',
+    knowsLanguage: ['English', 'Spanish', 'Mandarin Chinese'],
+    knowsAbout: ['AI product engineering', 'AI agents', 'workflow automation', 'multilingual software', 'technical training'],
     sameAs: [
       'https://www.linkedin.com/in/samihalawa',
       'https://github.com/samihalawa',
@@ -142,9 +150,17 @@ export function buildStructuredData(meta) {
     url: SITE_URL,
     publisher: { '@id': personId },
     inLanguage: 'en',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${SITE_URL}/search?q={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
   };
   const segments = meta.path.split('/').filter(Boolean);
-  const breadcrumbs = {
+  const breadcrumbs = segments.length ? {
     '@type': 'BreadcrumbList',
     '@id': `${canonical}#breadcrumb`,
     itemListElement: [
@@ -154,12 +170,14 @@ export function buildStructuredData(meta) {
         return {
           '@type': 'ListItem',
           position: index + 2,
-          name: breadcrumbName(itemPath),
+          name: itemPath === meta.path
+            ? meta.title.split(' | ')[0].split(' — ')[0]
+            : breadcrumbName(itemPath),
           item: absoluteUrl(itemPath),
         };
       }),
     ],
-  };
+  } : null;
 
   const common = {
     '@id': pageId,
@@ -168,7 +186,7 @@ export function buildStructuredData(meta) {
     description: meta.description,
     inLanguage: meta.lang || 'en',
     isPartOf: { '@id': websiteId },
-    breadcrumb: { '@id': `${canonical}#breadcrumb` },
+    ...(breadcrumbs ? { breadcrumb: { '@id': `${canonical}#breadcrumb` } } : {}),
     primaryImageOfPage: { '@type': 'ImageObject', url: absoluteUrl(meta.image), width: 1200, height: 630 },
   };
 
@@ -218,7 +236,7 @@ export function buildStructuredData(meta) {
     if (meta.schemaType === 'ProfilePage') page.mainEntity = { '@id': personId };
   }
 
-  return { '@context': 'https://schema.org', '@graph': [person, website, page, breadcrumbs] };
+  return { '@context': 'https://schema.org', '@graph': [person, website, page, breadcrumbs].filter(Boolean) };
 }
 
 function escapeHtml(value) {
@@ -262,5 +280,23 @@ export function buildHeadMarkup(meta) {
     `<script data-seo-head="true" type="application/ld+json">${JSON.stringify(buildStructuredData(meta)).replace(/</g, '\\u003c')}</script>`,
   ];
   if (meta.keywords?.length) tags.splice(3, 0, `<meta data-seo-head="true" name="keywords" content="${escapeHtml(meta.keywords.join(', '))}">`);
+  if (meta.alternates?.length) {
+    const canonicalIndex = tags.findIndex((tag) => tag.includes('rel="canonical"'));
+    tags.splice(canonicalIndex + 1, 0, ...meta.alternates.map((alternate) =>
+      `<link data-seo-head="true" rel="alternate" hreflang="${escapeHtml(alternate.lang)}" href="${escapeHtml(absoluteUrl(alternate.path))}">`,
+    ));
+  }
+  if (ogType === 'article') {
+    const scriptIndex = tags.findIndex((tag) => tag.startsWith('<script'));
+    const articleTags = [
+      `<meta data-seo-head="true" property="article:author" content="${SITE_URL}/">`,
+      ...(meta.datePublished ? [
+        `<meta data-seo-head="true" property="article:published_time" content="${escapeHtml(meta.datePublished)}">`,
+        `<meta data-seo-head="true" property="article:modified_time" content="${escapeHtml(meta.dateModified || meta.datePublished)}">`,
+      ] : []),
+      ...(meta.keywords || []).map((keyword) => `<meta data-seo-head="true" property="article:tag" content="${escapeHtml(keyword)}">`),
+    ];
+    tags.splice(scriptIndex, 0, ...articleTags);
+  }
   return tags.join('\n    ');
 }

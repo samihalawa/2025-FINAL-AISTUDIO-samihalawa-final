@@ -1,5 +1,6 @@
 # INDEX
 
+SEO route body and public authorship | generated heads still left crawler HTML empty and hub source labels leaked as authors | prerender every route/article and normalize public author identity | do not treat metadata-only HTML or delivery labels as indexable content | verify raw H1/article body, hydration, byline/JSON-LD agreement and live Lighthouse
 SEO head delivery | client-only Helmet left crawler and social HTML empty | generate physical per-route heads from one metadata registry and keep runtime head in sync | do not reintroduce Helmet or same-URL hreflang | verify every raw route HTML, schema, sitemap, OG asset, 404 status and rendered routes
 contact conversion surface | embedded scheduler can render a blank panel when the public event slug is gone | verify the event URL and rendered widget before publishing, otherwise use the working form/email path | do not treat script load or iframe creation as booking proof | verify contact page console, visible CTA/form and destination response on desktop/mobile
 public portfolio content boundary | internal evidence debt and next-proof instructions appeared as visitor content | keep validation in the repo ledger and publish product value, scope and links | do not render agent checklists, provider backlog or proof-debt panels | verify public-copy grep plus rendered home/projects/case-studies/CV
@@ -8,6 +9,16 @@ blog content pipeline | hard-coded slug list + modal did not scale to daily hub-
 SPA production routes | public asset directories collide with client routes | serve file-shaped URLs as static files and everything else as the SPA shell | do not let Nginx treat route names as directories or leak port 8080 redirects | verify slash and non-slash routes plus real asset MIME types
 Coolify Linux build | macOS lock can omit the Linux Rollup binary and Docker hosts differ between arm64 and x64 | install the build container's matching native Rollup GNU package | do not hardcode one CPU or infer deployability from the macOS Vite build | verify local container plus Coolify build the pushed commit and live routes
 public portfolio | stock imagery and invented social proof replaced source evidence | use dated metrics, real screenshots and public links | do not publish placeholders, arbitrary percentages or unsupported impact | verify exact live route, image load, text and responsive layout
+
+## 2026-07-22 — SEO delivery includes the route body and public identity
+
+- **Status:** CURRENT
+- **Project/root:** `PROJECTS_ON_PROCESS/2025-FINAL-AISTUDIO-samihalawa-final`; all public app routes and blog articles.
+- **Mistake recovered:** physical per-route heads were present, but every crawler response still had an empty React root; hub `sourceName` also appeared as the visible article author while JSON-LD named Sami.
+- **Superior approach:** build-time render every route and full Markdown article into its physical HTML, hydrate that exact markup, and accept only explicit public author metadata with Sami as the fallback.
+- **Evidence:** 22 Jul 2026 raw production baseline, generated-route verifier, `dist/blog/building-reliable-ai-agents/index.html`, Chrome desktop/mobile renders, and Lighthouse before/after reports.
+- **Triggers / verification:** routing, SSR/prerender, hydration, blog frontmatter, author, build or SEO changes; verify raw `<main>` + `<h1>`, raw article body, no internal source label, matching visible/structured author, client hydration, and local/live Lighthouse.
+- **Do / don't:** do treat crawler body, browser body and structured identity as one contract; don't close SEO from head tags, build success, or a content-hub delivery label alone.
 
 ## 2026-07-21 — SEO must exist in the delivered route HTML
 

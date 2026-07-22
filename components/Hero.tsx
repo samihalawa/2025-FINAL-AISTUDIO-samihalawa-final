@@ -70,7 +70,7 @@ const Hero: React.FC = () => {
         <div className="relative mx-auto w-full max-w-lg">
           <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-4 shadow-soft-xl sm:p-6">
             <div className="grid grid-cols-[92px_1fr] items-center gap-5 border-b border-slate-200 pb-5">
-              <img src="/portfolio/sami-photo.png" alt="Sami Halawa Ribas" width="184" height="178" className="h-[92px] w-[92px] rounded-2xl object-cover object-top" />
+              <img src="/portfolio/sami-photo.webp" alt="Sami Halawa Ribas" width="184" height="178" className="h-[92px] w-[92px] rounded-2xl object-cover object-top" />
               <div><p className="text-sm font-bold uppercase tracking-[.18em] text-brand-700">{c.proofTitle}</p><p className="mt-2 text-sm leading-relaxed text-slate-600">{c.proofBody}</p></div>
             </div>
             <div className="pt-5"><p className="text-xs font-bold uppercase tracking-[.2em] text-slate-500">{c.now}</p><ul className="mt-3 space-y-3">{c.building.map((item, index) => <li key={item} className="flex items-center gap-3"><span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-50 text-xs font-bold text-brand-800">0{index + 1}</span><span className="font-semibold text-slate-800">{item}</span></li>)}</ul></div>

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "blog:manifest": "node scripts/generate-blog-manifest.mjs",
-    "build": "node scripts/generate-blog-manifest.mjs && vite build && node scripts/generate-seo-pages.mjs",
+    "build": "node scripts/generate-blog-manifest.mjs && vite build && vite build --ssr entry-server.tsx --outDir dist-ssr && node scripts/generate-seo-pages.mjs",
     "seo:verify": "node scripts/verify-seo.mjs",
     "preview": "vite preview"
   },

@@ -42,6 +42,7 @@ for (const meta of pages) {
     : path.join(dist, meta.path.slice(1), 'index.html');
   if (!fs.existsSync(target)) throw new Error(`Missing generated HTML for ${meta.path}`);
   const html = fs.readFileSync(target, 'utf8');
+  if (html.includes('\0')) throw new Error(`${meta.path} contains an invalid NUL byte`);
   const canonical = absoluteUrl(meta.path);
   const required = [
     `<title data-seo-head="true">`,
@@ -60,6 +61,15 @@ for (const meta of pages) {
   for (const fragment of required) {
     if (!html.includes(fragment)) throw new Error(`${meta.path} is missing ${fragment}`);
   }
+  if (!html.includes('<main') || !html.includes('<h1')) {
+    throw new Error(`${meta.path} is missing server-rendered main content or H1`);
+  }
+  if (html.includes('content-hub-pages')) {
+    throw new Error(`${meta.path} exposes the internal content delivery source as public authorship`);
+  }
+  if (meta.schemaType === 'BlogPosting' && !html.includes('<article')) {
+    throw new Error(`${meta.path} is missing its server-rendered article body`);
+  }
   const jsonLd = html.match(/<script data-seo-head="true" type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1];
   if (!jsonLd) throw new Error(`${meta.path} has no JSON-LD body`);
   JSON.parse(jsonLd);
@@ -70,6 +80,7 @@ for (const meta of pages) {
 
 const notFound = fs.readFileSync(path.join(dist, '404.html'), 'utf8');
 if (!notFound.includes('name="robots" content="noindex,follow"')) throw new Error('404.html must be noindex,follow');
+if (!notFound.includes('<h1')) throw new Error('404.html must contain a server-rendered H1');
 if (sitemap.includes(`<loc>${SITE_URL}/search</loc>`)) throw new Error('/search must not appear in sitemap.xml');
 if (!fs.existsSync(path.join(dist, 'og', 'sami-halawa-ai-engineer.png'))) throw new Error('Default OG image is missing');
 

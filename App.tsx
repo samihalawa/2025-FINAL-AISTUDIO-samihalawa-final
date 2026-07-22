@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { LanguageProvider } from './i18n/LanguageContext';
+import type { LoadedArticle } from './pages/BlogArticlePage';
 import Layout from './components/Layout';
 const HomePage = lazy(() => import('./pages/HomePage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
@@ -56,12 +57,13 @@ const BarcelonaPromptEngineering = lazy(() => import('./pages/locations/services
 const ValenciaRagLangChain = lazy(() => import('./pages/locations/services/ValenciaRagLangChain'));
 const MadridBusinessAutomation = lazy(() => import('./pages/locations/services/MadridBusinessAutomation'));
 
-const App: React.FC = () => {
-    return (
-        <LanguageProvider>
-            <BrowserRouter>
-                    <Suspense fallback={<div className="flex min-h-[60vh] items-center justify-center" role="status"><span className="h-10 w-10 animate-spin rounded-full border-2 border-brand-200 border-t-brand-700" /><span className="sr-only">Loading</span></div>}>
-                    <Routes>
+type AppRoutesProps = {
+    initialBlogArticle?: LoadedArticle | null;
+};
+
+export const AppRoutes: React.FC<AppRoutesProps> = ({ initialBlogArticle = null }) => (
+    <Suspense fallback={<div className="flex min-h-[60vh] items-center justify-center" role="status"><span className="h-10 w-10 animate-spin rounded-full border-2 border-brand-200 border-t-brand-700" /><span className="sr-only">Loading</span></div>}>
+        <Routes>
                         <Route path="/" element={<Layout />}>
                             <Route index element={<HomePage />} />
                             <Route path="corporate" element={<ServicesPage />} />
@@ -69,7 +71,7 @@ const App: React.FC = () => {
                             <Route path="search" element={<SearchPage />} />
                             <Route path="projects" element={<ProjectsPage />} />
                             <Route path="blog" element={<BlogPage />} />
-                            <Route path="blog/:slug" element={<BlogArticlePage />} />
+                            <Route path="blog/:slug" element={<BlogArticlePage initialArticle={initialBlogArticle} />} />
                             <Route path="contact" element={<ContactPage />} />
                             <Route path="cv" element={<CVPage />} />
                             <Route path="cv/en" element={<CVPage edition="en" />} />
@@ -120,8 +122,19 @@ const App: React.FC = () => {
                             </Route>
                             <Route path="*" element={<NotFoundPage />} />
                         </Route>
-                    </Routes>
-                    </Suspense>
+        </Routes>
+    </Suspense>
+);
+
+const App: React.FC = () => {
+    const initialBlogArticle = typeof window !== 'undefined'
+        ? window.__INITIAL_BLOG_ARTICLE__ || null
+        : null;
+
+    return (
+        <LanguageProvider>
+            <BrowserRouter>
+                <AppRoutes initialBlogArticle={initialBlogArticle} />
             </BrowserRouter>
         </LanguageProvider>
     );
