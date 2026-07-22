@@ -1,5 +1,6 @@
 # INDEX
 
+measurement provider proof | missing repo IDs were treated as proof that analytics did not exist | audit live bundle, credentials and actual GA4/GTM/Ads/PostHog/Tag Gateway providers | do not infer provider state from source grep or reuse another brand's IDs | verify exact property/container/project IDs, live events and provider readback
 SEO route body and public authorship | generated heads still left crawler HTML empty and hub source labels leaked as authors | prerender every route/article and normalize public author identity | do not treat metadata-only HTML or delivery labels as indexable content | verify raw H1/article body, hydration, byline/JSON-LD agreement and live Lighthouse
 SEO head delivery | client-only Helmet left crawler and social HTML empty | generate physical per-route heads from one metadata registry and keep runtime head in sync | do not reintroduce Helmet or same-URL hreflang | verify every raw route HTML, schema, sitemap, OG asset, 404 status and rendered routes
 contact conversion surface | embedded scheduler can render a blank panel when the public event slug is gone | verify the event URL and rendered widget before publishing, otherwise use the working form/email path | do not treat script load or iframe creation as booking proof | verify contact page console, visible CTA/form and destination response on desktop/mobile
@@ -9,6 +10,16 @@ blog content pipeline | hard-coded slug list + modal did not scale to daily hub-
 SPA production routes | public asset directories collide with client routes | serve file-shaped URLs as static files and everything else as the SPA shell | do not let Nginx treat route names as directories or leak port 8080 redirects | verify slash and non-slash routes plus real asset MIME types
 Coolify Linux build | macOS lock can omit the Linux Rollup binary and Docker hosts differ between arm64 and x64 | install the build container's matching native Rollup GNU package | do not hardcode one CPU or infer deployability from the macOS Vite build | verify local container plus Coolify build the pushed commit and live routes
 public portfolio | stock imagery and invented social proof replaced source evidence | use dated metrics, real screenshots and public links | do not publish placeholders, arbitrary percentages or unsupported impact | verify exact live route, image load, text and responsive layout
+
+## 2026-07-22 — Measurement state requires provider proof
+
+- **Status:** CURRENT
+- **Project/root:** `PROJECTS_ON_PROCESS/2025-FINAL-AISTUDIO-samihalawa-final`; `samihalawa.com` measurement stack.
+- **Mistake recovered:** a repo and live-bundle grep found no IDs, but that was reported before checking the GA4, GTM, Ads, PostHog and Cloudflare provider surfaces required by the measurement skill.
+- **Superior approach:** classify every layer `present | wrong | missing` from its own current surface; create distinct portfolio entities instead of borrowing OULANG/AutoDate identifiers.
+- **Evidence:** 22 Jul 2026 live bundle had no measurement IDs; GA4 picker search and GTM account list had no Sami portfolio entity; PostHog showed only existing brand projects; Ads required two-step verification; Tag Gateway GET returned 403 and the dashboard was signed out.
+- **Triggers / verification:** analytics, tracking, conversions, GTM, GA4, Ads, PostHog or Tag Gateway; verify exact IDs, deployed bundle, network events, provider realtime/readback and consent state.
+- **Do / don't:** do reopen every provider and verify live events; don't equate missing source config with verified provider absence or fabricate/reuse cross-brand IDs.
 
 ## 2026-07-22 — SEO delivery includes the route body and public identity
 
