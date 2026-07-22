@@ -1,0 +1,75 @@
+@font-face {
+  font-display: swap;
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../webfonts/fa-solid-900.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Font Awesome 6 Brands";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../webfonts/fa-brands-400.woff2") format("woff2");
+}
+
+.fas,
+.fab {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+}
+
+.fas {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.fab {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa-arrow-down::before { content: "\f063"; }
+.fa-arrow-left::before { content: "\f060"; }
+.fa-arrow-right::before { content: "\f061"; }
+.fa-arrow-up::before { content: "\f062"; }
+.fa-arrow-up-right-from-square::before { content: "\f08e"; }
+.fa-bars::before { content: "\f0c9"; }
+.fa-building::before { content: "\f1ad"; }
+.fa-calendar-check::before { content: "\f274"; }
+.fa-chalkboard-teacher::before { content: "\f51c"; }
+.fa-check::before { content: "\f00c"; }
+.fa-check-circle::before { content: "\f058"; }
+.fa-chevron-down::before { content: "\f078"; }
+.fa-code-branch::before { content: "\f126"; }
+.fa-cogs::before { content: "\f085"; }
+.fa-diagram-project::before { content: "\f542"; }
+.fa-envelope::before { content: "\f0e0"; }
+.fa-external-link-alt::before { content: "\f35d"; }
+.fa-face-smile::before { content: "\f118"; }
+.fa-file-contract::before { content: "\f56c"; }
+.fa-file-lines::before { content: "\f15c"; }
+.fa-file-pdf::before { content: "\f1c1"; }
+.fa-headset::before { content: "\f590"; }
+.fa-layer-group::before { content: "\f5fd"; }
+.fa-lightbulb::before { content: "\f0eb"; }
+.fa-magnifying-glass::before,
+.fa-search::before { content: "\f002"; }
+.fa-map-marker-alt::before { content: "\f3c5"; }
+.fa-paper-plane::before { content: "\f1d8"; }
+.fa-phone::before { content: "\f095"; }
+.fa-robot::before { content: "\f544"; }
+.fa-times::before { content: "\f00d"; }
+.fa-wand-magic-sparkles::before { content: "\e2ca"; }
+
+.fa-aws::before { content: "\f375"; }
+.fa-github::before { content: "\f09b"; }
+.fa-google::before { content: "\f1a0"; }
+.fa-linkedin::before { content: "\f08c"; }
+.fa-microsoft::before { content: "\f3ca"; }
+.fa-whatsapp::before { content: "\f232"; }
+.fa-youtube::before { content: "\f167"; }
