@@ -6,6 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="q5-xQ1QUkeFQCJwc9Gdor2HGVLKHhA6z3ksXD_aQNbs" />
     <meta name="theme-color" content="#071427" />
+    <!-- Consent Mode v2 defaults must run before Google Tag Manager. -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      (function () {
+        var consent = localStorage.getItem('samihalawa.analytics-consent') === 'granted' ? 'granted' : 'denied';
+        gtag('consent', 'default', {
+          analytics_storage: consent,
+          ad_storage: consent,
+          ad_user_data: consent,
+          ad_personalization: consent,
+          wait_for_update: 500
+        });
+      })();
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W2Z8DSVK');</script>
+    <!-- End Google Tag Manager -->
     <!-- SEO_HEAD_START -->
     <title data-seo-head="true">Sami Halawa — Founding AI Engineer &amp; Product Builder</title>
     <meta data-seo-head="true" name="description" content="Founder-engineer building multilingual AI products, reliable agent systems, automation and technical training from Madrid.">
@@ -44,6 +66,9 @@
     </style>
 </head>
 <body id="top">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W2Z8DSVK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
 </body>

@@ -15,11 +15,11 @@ public portfolio | stock imagery and invented social proof replaced source evide
 
 - **Status:** CURRENT
 - **Project/root:** `PROJECTS_ON_PROCESS/2025-FINAL-AISTUDIO-samihalawa-final`; `samihalawa.com` measurement stack.
-- **Mistake recovered:** a repo and live-bundle grep found no IDs, but that was reported before checking the GA4, GTM, Ads, PostHog and Cloudflare provider surfaces required by the measurement skill.
-- **Superior approach:** classify every layer `present | wrong | missing` from its own current surface; create distinct portfolio entities instead of borrowing OULANG/AutoDate identifiers.
-- **Evidence:** 22 Jul 2026 live bundle had no measurement IDs; GA4 picker search and GTM account list had no Sami portfolio entity; PostHog showed only existing brand projects; Ads required two-step verification; Tag Gateway GET returned 403 and the dashboard was signed out.
+- **Mistake recovered:** repo/live-bundle absence was treated as provider absence, then a new portfolio stream was mistakenly created inside the existing AutoDate property and both GTM tags initially targeted that cross-brand measurement ID.
+- **Superior approach:** classify every layer `present | wrong | missing` from its own current surface; verify picker account/property IDs before creating streams, and give the portfolio its own GA4 account/property plus GTM container.
+- **Evidence:** 22 Jul 2026 GA picker proved AutoDate was `a400094799p544310841`; the corrected portfolio is `a401970297p546661717`, web stream `15302511642`, GTM `GTM-W2Z8DSVK` v4. The GTM payload was read back to prove both base and event tags route to the portfolio property.
 - **Triggers / verification:** analytics, tracking, conversions, GTM, GA4, Ads, PostHog or Tag Gateway; verify exact IDs, deployed bundle, network events, provider realtime/readback and consent state.
-- **Do / don't:** do reopen every provider and verify live events; don't equate missing source config with verified provider absence or fabricate/reuse cross-brand IDs.
+- **Do / don't:** do reopen every provider, read picker IDs and verify live events; don't infer ownership from display names, reuse cross-brand IDs, or trust a stream-creation success screen without account/property readback.
 
 ## 2026-07-22 — SEO delivery includes the route body and public identity
 

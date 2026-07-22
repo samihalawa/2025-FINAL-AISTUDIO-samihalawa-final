@@ -45,7 +45,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onDemoClick, onChatC
                                 {t('projects.commonDemoButton')} <i className="fas fa-arrow-right ml-1 transform group-hover:translate-x-1 transition-transform"></i>
                              </button>
                         ) : project.repoUrl ? (
-                            <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="text-slate-800 font-semibold hover:text-slate-900 transition-colors duration-300 group text-sm">
+                            <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" data-analytics-event="project_view" data-project-name={t(project.titleKey)} className="text-slate-800 font-semibold hover:text-slate-900 transition-colors duration-300 group text-sm">
                                {t('projects.commonRepoButton')} <i className="fas fa-external-link-alt ml-1 text-xs"></i>
                             </a>
                         ) : <span></span>}
