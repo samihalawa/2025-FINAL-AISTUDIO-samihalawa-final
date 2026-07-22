@@ -1,44 +1,54 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from '../i18n/LanguageContext';
 import { CONTACT_INFO } from '../constants';
+import { trackPortfolioEvent } from '../lib/analytics';
 
-const TallyEmbed: React.FC<{ src: string; title: string; height: number }> = ({ src, title, height }) => {
-    useEffect(() => {
-        const w = 'https://tally.so/widgets/embed.js';
-        const d = document;
-        const v = () => {
-            // @ts-ignore
-            if (typeof (window as any).Tally !== 'undefined') (window as any).Tally.loadEmbeds();
-            else d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((e) => { (e as HTMLIFrameElement).src = (e as HTMLIFrameElement).dataset.tallySrc || ''; });
-        };
-        if (d.querySelector(`script[src="${w}"]`) == null) {
-            const s = d.createElement('script');
-            s.src = w;
-            s.onload = v;
-            s.onerror = v;
-            d.body.appendChild(s);
-        } else {
-            v();
-        }
-    }, []);
-    return (
-        <iframe
-            data-tally-src={src}
-            title={title}
-            loading="lazy"
-            width="100%"
-            height={height}
-            frameBorder={0}
-            marginHeight={0}
-            marginWidth={0}
-        />
-    );
-};
+type SubmissionStatus = 'idle' | 'sending' | 'success' | 'error';
+type LeadType = 'contact' | 'newsletter';
+
+const STATIC_FORMS_ENDPOINT = 'https://api.staticforms.dev/submit';
+const STATIC_FORMS_API_KEY = 'b67e8125-1a1a-4712-9c3a-f2dedb36a100';
 
 const Contact: React.FC = () => {
     const { t } = useTranslation();
     const formTitle = t('contact.formTitle');
     const newsletterTitle = t('contact.newsletterTitle');
+    const [contactStatus, setContactStatus] = useState<SubmissionStatus>('idle');
+    const [newsletterStatus, setNewsletterStatus] = useState<SubmissionStatus>('idle');
+
+    const submitForm = async (event: React.FormEvent<HTMLFormElement>, leadType: LeadType) => {
+        event.preventDefault();
+        const form = event.currentTarget;
+        const setStatus = leadType === 'contact' ? setContactStatus : setNewsletterStatus;
+        const formData = new FormData(form);
+        const email = formData.get('email');
+
+        setStatus('sending');
+        formData.set('apiKey', STATIC_FORMS_API_KEY);
+        formData.set('subject', leadType === 'contact' ? 'New Contact from Portfolio Website' : 'New Portfolio Newsletter Subscription');
+        formData.set('form_type', leadType === 'contact' ? 'Portfolio contact' : 'Portfolio newsletter');
+        if (typeof email === 'string') formData.set('replyTo', email);
+
+        try {
+            const response = await fetch(STATIC_FORMS_ENDPOINT, {
+                method: 'POST',
+                body: formData,
+                headers: { Accept: 'application/json' },
+            });
+            const result = await response.json().catch(() => null) as { success?: boolean; error?: string } | null;
+            if (!response.ok || result?.success === false) throw new Error(result?.error || 'Form submission failed');
+
+            trackPortfolioEvent('generate_lead', {
+                form_id: `portfolio-${leadType}`,
+                form_name: leadType === 'contact' ? 'portfolio contact' : 'portfolio newsletter',
+                lead_type: leadType,
+            });
+            form.reset();
+            setStatus('success');
+        } catch {
+            setStatus('error');
+        }
+    };
 
     const supportOptions = [
         {
@@ -191,13 +201,30 @@ const Contact: React.FC = () => {
                             <div className="relative p-8 sm:p-10">
                                 <h3 className="text-xl font-semibold text-slate-900">{formTitle}</h3>
                                 <p className="mt-2 text-sm text-slate-500">{t('contact.formSubtitle')}</p>
-                                <div className="mt-6 overflow-hidden rounded-2xl border border-slate-200">
-                                    <TallyEmbed
-                                        src="https://tally.so/embed/wz9VVq?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                                        title={formTitle}
-                                        height={360}
-                                    />
-                                </div>
+                                <form onSubmit={(event) => void submitForm(event, 'contact')} className="mt-6 space-y-5">
+                                    <div>
+                                        <label htmlFor="contact-name" className="block text-sm font-semibold text-slate-700">{t('contact.form.nameLabel')}</label>
+                                        <input id="contact-name" name="name" type="text" autoComplete="name" required className="mt-2 min-h-11 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-200" />
+                                    </div>
+                                    <div>
+                                        <label htmlFor="contact-email" className="block text-sm font-semibold text-slate-700">{t('contact.form.emailLabel')}</label>
+                                        <input id="contact-email" name="email" type="email" autoComplete="email" required className="mt-2 min-h-11 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-200" />
+                                    </div>
+                                    <div>
+                                        <label htmlFor="contact-company" className="block text-sm font-semibold text-slate-700">{t('contact.form.companyLabel')}</label>
+                                        <input id="contact-company" name="company" type="text" autoComplete="organization" className="mt-2 min-h-11 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-200" />
+                                    </div>
+                                    <div>
+                                        <label htmlFor="contact-message" className="block text-sm font-semibold text-slate-700">{t('contact.form.messageLabel')}</label>
+                                        <textarea id="contact-message" name="message" rows={5} required className="mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-200" />
+                                    </div>
+                                    <input name="honeypot" type="text" tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[9999px] h-px w-px opacity-0" />
+                                    <button type="submit" disabled={contactStatus === 'sending'} className="inline-flex min-h-11 w-full items-center justify-center rounded-xl bg-slate-950 px-5 py-3 text-sm font-bold text-white transition hover:bg-brand-800 disabled:cursor-wait disabled:opacity-65">
+                                        {contactStatus === 'sending' ? t('contact.form.sendingButton') : t('contact.form.submitButton')}
+                                    </button>
+                                    {contactStatus === 'success' && <p role="status" className="text-sm font-semibold text-emerald-700">{t('contact.form.successMessage')}</p>}
+                                    {contactStatus === 'error' && <p role="alert" className="text-sm font-semibold text-red-700">{t('contact.form.errorMessage')}</p>}
+                                </form>
                             </div>
                         </div>
                         <div className="relative overflow-hidden rounded-3xl border border-slate-100 bg-slate-900 text-slate-100 shadow-xl">
@@ -205,13 +232,18 @@ const Contact: React.FC = () => {
                             <div className="relative p-8 sm:p-10">
                                 <h3 className="text-xl font-semibold">{newsletterTitle}</h3>
                                 <p className="mt-2 text-sm text-slate-200">{t('contact.newsletterSubtitle')}</p>
-                                <div className="mt-6 overflow-hidden rounded-2xl border border-white/10">
-                                    <TallyEmbed
-                                        src="https://tally.so/embed/mY1V66?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                                        title={newsletterTitle}
-                                        height={240}
-                                    />
-                                </div>
+                                <form onSubmit={(event) => void submitForm(event, 'newsletter')} className="mt-6 space-y-4">
+                                    <label htmlFor="newsletter-email" className="block text-sm font-semibold text-white">{t('contact.newsletter.emailLabel')}</label>
+                                    <div className="flex flex-col gap-3 sm:flex-row">
+                                        <input id="newsletter-email" name="email" type="email" autoComplete="email" required placeholder="name@example.com" className="min-h-11 flex-1 rounded-xl border border-white/20 bg-white px-4 py-3 text-slate-950 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-brand-300 focus:ring-2 focus:ring-brand-300/40" />
+                                        <button type="submit" disabled={newsletterStatus === 'sending'} className="inline-flex min-h-11 items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-bold text-slate-950 transition hover:bg-brand-50 disabled:cursor-wait disabled:opacity-65">
+                                            {newsletterStatus === 'sending' ? t('contact.newsletter.sendingButton') : t('contact.newsletter.submitButton')}
+                                        </button>
+                                    </div>
+                                    <input name="honeypot" type="text" tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[9999px] h-px w-px opacity-0" />
+                                    {newsletterStatus === 'success' && <p role="status" className="text-sm font-semibold text-emerald-300">{t('contact.newsletter.successMessage')}</p>}
+                                    {newsletterStatus === 'error' && <p role="alert" className="text-sm font-semibold text-red-300">{t('contact.newsletter.errorMessage')}</p>}
+                                </form>
                             </div>
                         </div>
                         <div id="consultation" className="relative scroll-mt-24 overflow-hidden rounded-3xl border border-brand-100 bg-brand-50 p-8 shadow-sm sm:p-10">

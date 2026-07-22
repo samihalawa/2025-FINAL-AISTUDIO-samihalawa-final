@@ -43,7 +43,6 @@ const AnalyticsManager: React.FC = () => {
   const { language } = useTranslation();
   const location = useLocation();
   const firstRoute = useRef(true);
-  const submittedIds = useRef(new Set<string>());
   const [showConsent, setShowConsent] = useState(false);
 
   useEffect(() => {
@@ -92,30 +91,6 @@ const AnalyticsManager: React.FC = () => {
 
     document.addEventListener('click', handleClick, true);
     return () => document.removeEventListener('click', handleClick, true);
-  }, []);
-
-  useEffect(() => {
-    const handleTallySubmission = (event: MessageEvent) => {
-      if (event.origin !== 'https://tally.so' || typeof event.data !== 'string' || !event.data.includes('Tally.FormSubmitted')) return;
-
-      try {
-        const message = JSON.parse(event.data) as { payload?: { id?: string; formId?: string; formName?: string } };
-        const submissionId = message.payload?.id;
-        if (!submissionId || submittedIds.current.has(submissionId)) return;
-        submittedIds.current.add(submissionId);
-
-        trackPortfolioEvent('generate_lead', {
-          form_id: message.payload?.formId || 'tally',
-          form_name: message.payload?.formName || 'portfolio contact',
-          lead_type: message.payload?.formId === 'mY1V66' ? 'newsletter' : 'contact',
-        });
-      } catch {
-        // Ignore unrelated cross-window messages that happen to contain the same text.
-      }
-    };
-
-    window.addEventListener('message', handleTallySubmission);
-    return () => window.removeEventListener('message', handleTallySubmission);
   }, []);
 
   const chooseConsent = (consent: AnalyticsConsent) => {
