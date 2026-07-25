@@ -9,16 +9,16 @@ locale: "en"
 hubId: "7c1813271a6e4f0163dc3b6881b7fc10"
 metaTitle: "Build-in-Public Lessons from Shipping AI Products"
 metaDescription: "Shipping AI products in public offers unique advantages and pitfalls. This guide covers what to share, turning demos into paid products, distribution, using real data, avoiding builder-centric traps, and proving value at the user layer."
-contentHash: "589ed76d7618ebfc4201bf1c81897128a51bfc56655ff327573f71adf878861f"
+contentHash: "49ae0b173a3f8df475acf194bfe52323d7bfd4627e0c693143e257582b68402f"
 ---
-Building in public, especially with AI products, is a double-edged sword. On one hand, it forces transparency, accelerates feedback loops, and can build a loyal community. On the other, it exposes your nascent ideas, invites premature judgment, and can distract from core product development. Having shipped multiple AI products in the open, I've learned that the 'how' of building in public is as crucial as the 'what'. This isn't about marketing fluff; it's about strategic transparency that drives product value and adoption.
+Building in public, especially with AI products, isn't just about tweeting progress updates. It's a strategic choice that forces discipline, accelerates feedback loops, and can be a powerful distribution channel. However, it comes with its own set of challenges, particularly when your product relies on rapidly evolving technology and often-unpredictable user interactions. Here's what I've learned from the trenches.
 
-## Strategic Transparency: What to Share, What to Keep
+## What to Share, What to Keep Close
 
-The impulse to share everything can be strong, but it's often counterproductive. Your goal isn't to document every line of code or every internal debate. It's to build trust, gather relevant feedback, and attract early adopters. 
+The line between transparency and competitive disadvantage is thin. When building AI products, I've found it most effective to share the *problem*, the *solution's impact*, and the *user experience*. This means showing off working demos, discussing the challenges of data collection or model fine-tuning, and celebrating user wins. 
 
-**Share:**
+What to keep close? The secret sauce. This isn't about proprietary algorithms in the academic sense, but rather the specific data pipelines, model architectures, prompt engineering techniques, or fine-tuning datasets that give your product its unique edge. For instance, I'll happily show a demo of a code-generating agent, but I won't detail the exact sequence of tools it uses, the specific few-shot examples, or the proprietary evaluation metrics that ensure its quality. This isn't about being secretive; it's about protecting the hard-won intellectual property that differentiates you in a crowded market. Your unique data, your unique prompt engineering, your unique evaluation loops – these are your competitive moat. Don't give them away for free.
 
-*   **Working Demos & Prototypes:** The most powerful form of communication is showing, not telling. A functional demo, even if crude, conveys more than a thousand words. It allows users to interact, discover limitations, and imagine possibilities. This is your primary feedback mechanism.
-*   **Problem Statements & Hypotheses:** Frame your work around the user problem you're solving. Articulate your assumptions and invite people to challenge them. This helps validate your direction early and often.
-*   **Technical Challenges & Learnings (High-Level):** Share the *types* of problems you're encountering (e.g.,
+## Turning a Working Demo into a Product People Pay For
+
+Many AI products start as impressive demos. They solve a specific, often narrow, problem with surprising efficacy. The leap from
