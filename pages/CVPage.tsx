@@ -48,7 +48,7 @@ const roleEditions = [
     detailEs: 'Edición superdetallada de IA, full-stack, datos, APIs y deployment, con la formación actual en Databricks Mosaic AI.'
   }
 ];
-const roleEditionFile = (key: string) => key === 'Atos_Technical' ? key : `${key}_Comprehensive`;
+const roleEditionFile = (key: string) => `${key}_Comprehensive`;
 
 const CVPage: React.FC<CVPageProps> = ({ edition }) => {
   const { language } = useTranslation();

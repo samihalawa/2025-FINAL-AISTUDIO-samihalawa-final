@@ -20,8 +20,8 @@ public portfolio | stock imagery and invented social proof replaced source evide
 - **Mistake recovered:** two-, three- and four-page role editions omitted verified achievements, detailed technology evidence and most of the complete project record; independent CV copies or a builder would still create drift.
 - **Superior approach:** publish six designed twelve-page comprehensive role PDFs and six plain-text ATS files generated from the CV repository’s single shared evidence record.
 - **Evidence:** `pages/CVPage.tsx`, `public/cv/variants/`, Atos transcript line 61 and the comprehensive generator in the CV repository.
-- **Triggers / verification:** CV, resume, role family, application, visual or ATS; verify every file URL/MIME, all twelve PDF pages, all 90 projects, ATS parsing and the rendered desktop/mobile route.
-- **Do / don't:** do keep visual storytelling and parsing as separate outputs and use unique `_Comprehensive` filenames when content materially changes; don't force one file to serve both purposes, build an editing application or rely on a long-cached legacy URL.
+- **Triggers / verification:** CV, resume, role family, application, visual or ATS; verify every file URL/MIME and exact source hash, all twelve PDF pages, all 90 projects, ATS parsing and the rendered desktop/mobile route.
+- **Do / don't:** do keep visual storytelling and parsing as separate outputs and use unique `_Comprehensive` filenames for every materially changed edition, including one-off employer dossiers; don't force one file to serve both purposes, build an editing application or rely on a long-cached legacy URL.
 
 ## 2026-07-22 — Contact intake stays native and provider-confirmed
 
