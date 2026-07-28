@@ -1,16 +1,16 @@
 SAMI HALAWA RIBAS
-Senior GenAI Engineer · RAG & Agentic Systems
+Ingeniero IA Full-Stack · Agentes, Datos, APIs & Deployment
 
 Madrid, Spain · EU work authorisation · +34 679 794 037 · sami@oulang.ai · samihalawa.com · linkedin.com/in/samihalawa · github.com/samihalawa
 
 ROLE-SPECIFIC PROFILE
-Hands-on AI engineer building agentic products from orchestration and retrieval through APIs, interfaces, deployment and observability. Strong in MCP, tool use, structured outputs, multi-agent workflows and production-oriented RAG architecture.
+Perfil técnico integral para proyectos de Atos: experiencia transversal desde agentes, RAG, MCP y automatización hasta backend, frontend, móvil, datos, APIs, despliegue y operación. Inglés y chino C2; disponibilidad inmediata. Formación aplicada y certificada en Databricks Mosaic AI completada específicamente para esta oportunidad.
 
 ROLE EMPHASIS
-Agentic AI: LangGraph-informed agent architecture, multi-agent collaboration, MCP, tool/function calling, memory and structured outputs
-RAG & models: Retrieval workflows, document/OCR pipelines, model routing, prompt/evaluation loops, OpenAI, Anthropic, Gemini and open-source models
-Backend: Python, FastAPI, TypeScript, Node.js, REST APIs, SQL, background jobs and integrations
-Delivery: React, Next.js, Docker, Linux, CI/CD, deployment, logs, monitoring, analytics and human-review workflows
+IA y agentes: MCP, RAG, herramientas/funciones, flujos multiagente, memoria, salidas estructuradas, routing de modelos y evaluación
+Backend y datos: Python, FastAPI, TypeScript, Node.js, REST APIs, webhooks, SQL/MySQL, procesos en segundo plano e integraciones
+Frontend y móvil: React, Next.js, Tailwind, Expo/React Native, SwiftUI, Ionic y Capacitor
+Deployment y operación: Docker, Linux, CI/CD, Cloudflare, Coolify, Hetzner, exposición AWS/Azure/GCP, logs, monitorización y control de costes
 
 DETAILED TECHNOLOGY MATRIX
 Agentic AI & orchestration

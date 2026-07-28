@@ -3,50 +3,254 @@ AI Instructor · Responsible AI & Governance Specialist
 
 Madrid, Spain · EU work authorisation · +34 679 794 037 · sami@oulang.ai · samihalawa.com · linkedin.com/in/samihalawa · github.com/samihalawa
 
-PROFILE
+ROLE-SPECIFIC PROFILE
 Implementation-first AI educator and product engineer who translates agentic systems, governance and operational risk into working examples, clear curricula and usable organisational practices in Spanish, English and Mandarin.
 
-ROLE-ALIGNED CAPABILITIES
+ROLE EMPHASIS
 Teaching: Course design, live builds, practical exercises, executive communication and multilingual technical explanation
 Responsible AI: AI governance foundations, EU AI Act, impact assessment, privacy, prompt-injection awareness, audit readiness and ISO 42001
 Agent systems: MCP, RAG, multi-agent workflows, memory, tool use, deployment and observability
 Product delivery: Python, FastAPI, TypeScript, React/Next.js, automation, document workflows and production operations
 
+DETAILED TECHNOLOGY MATRIX
+Agentic AI & orchestration
+Technologies: MCP; tool/function calling; multi-agent collaboration; memory; structured outputs; model routing; prompt and evaluation loops; LangGraph-informed architecture
+Evidence: AutoClient, communications agents, VUDA, SMTP MCP, WhatsApp/GOWA and agent-course implementations
+
+Retrieval, documents & multimodal AI
+Technologies: RAG; OCR; document ingestion; chunking/retrieval workflows; image-text review; computer vision; human-review checkpoints
+Evidence: SORT course digitisation, AutoMedical, APOLO, AutoIOL/OCT workflows, reporting and recipe-intelligence prototypes
+
+Models & AI platforms
+Technologies: OpenAI; Anthropic; Gemini; DeepSeek; Hugging Face; open-source models; Databricks Mosaic AI certified applied coursework
+Evidence: Production integrations and prototypes across product, automation, education and multimodal workflows; Mosaic training completed deliberately for current role readiness
+
+Backend & APIs
+Technologies: Python; FastAPI; TypeScript; Node.js; REST APIs; webhooks; SQL/MySQL; background jobs; authentication; integrations
+Evidence: AutoClient, marketplace services, communications tools, pricing intelligence, client workflows and product APIs
+
+Web, mobile & interface delivery
+Technologies: React; Next.js; Tailwind CSS; Expo/React Native; SwiftUI; Ionic; Capacitor; responsive web; native/store delivery
+Evidence: OULANG, Huatong, OUPIN, AutoDate, Tasky, Umbramed and more than 70 earlier web/mobile builds
+
+Automation & communications
+Technologies: n8n; MCP; email/SMTP; WhatsApp; Telnyx; voice-agent state; CRM/ERP integration; Apify; Crawlab; data enrichment
+Evidence: AutoClient, Tekçe property leads, GOWA, SMTP MCP, voice tooling, outreach and operational automations
+
+Cloud, delivery & operations
+Technologies: Docker; Linux; CI/CD; Cloudflare; Coolify; Hetzner; AWS/Azure/GCP exposure; deployment; logs; monitoring; cost control
+Evidence: Operating production web/mobile systems, shared platform infrastructure, self-hosted services and client handover
+
+Data, analytics & commercial systems
+Technologies: SQL; product analytics; PostHog; GA4/GTM; Stripe; RevenueCat; payments; pricing/history data; reporting; experimentation
+Evidence: OULANG monetisation and analytics, IWAKY/AutoPricing, marketplace intelligence, mobile subscriptions and campaign measurement
+
+Media, education & technical communication
+Technologies: FFmpeg; Sharp; After Effects; course design; live builds; technical writing; Spanish/English/Mandarin delivery
+Evidence: SONMADE, 373-video public catalogue, ChinoTotal, AI instruction and 111 verified work-media files
+
+DETAILED TECHNICAL CASE STUDIES
+OULANG / Huatong / OUPIN
+Stack: TypeScript, React/Next.js, Expo/mobile delivery, SQL, payments, analytics, Cloudflare and containerised deployment.
+Work: Designed and operated shared marketplace capabilities across identity, listings, search, messaging, monetisation, multilingual delivery and web/native release workflows.
+
+AutoClient & communication agents
+Stack: Python/FastAPI, TypeScript/Node.js, MCP, model APIs, structured outputs, CRM, email, WhatsApp, Telnyx/voice, webhooks and background jobs.
+Work: Built research, enrichment, scoring, personalised outreach, conversation-state and human-handoff workflows across multiple channels.
+
+IWAKY / AutoPricing
+Stack: Marketplace data collection, Apify/Crawlab-style actors, product matching, price history, WhatsApp quote analysis, SQL/ERP inputs, dashboards and PDF reporting.
+Work: Implemented pricing-intelligence and decision-reporting workflows under a signed scope while keeping acceptance and payment state distinct.
+
+VUDA & MCP toolchain
+Stack: TypeScript/Python, MCP, browser/UI evidence, image capture and annotation, SMTP, shell/browser/diff integrations.
+Work: Published reusable developer tools; VUDA reached 80 stars/7 forks and SMTP MCP reached 17 stars/15 forks at the verified snapshot.
+
+AutoMedical / APOLO / ophthalmology
+Stack: Python, multimodal model workflows, image-text processing, OCR/computer vision, structured reporting and human review.
+Work: Prototyped medical-learning and image-review workflows without claiming clinical validation, diagnosis or production hospital deployment.
+
+Tasky / AutoDate / Umbramed
+Stack: SwiftUI, Expo/React Native, Ionic/Capacitor, React/TypeScript, authentication, sync, payments and release tooling.
+Work: Delivered or advanced native/cross-platform products through TestFlight, store-facing, pre-release and client-delivery states.
+
+SORT & document intelligence
+Stack: PDF/OCR ingestion, structured extraction, RAG/chat interfaces, web publishing, APIs and background processing.
+Work: Designed a workflow to turn course PDFs and unstructured source material into searchable, structured online learning experiences.
+
+PIME.ai / governance / instruction
+Stack: EU AI Act applicability and literacy workflows, ISO 42001/23894 concepts, impact assessment, RAG/agent architecture and multilingual curricula.
+Work: Combined implementation-first instruction with working governance products and current professional education in responsible AI and operational controls.
+
+SONMADE & media systems
+Stack: React/TypeScript, FFmpeg and Sharp; motion, colour, edge/text and fullscreen scoring.
+Work: Built a scene-analysis and highlight-extraction prototype as part of a broader audio, transcription, video and creative-technology archive.
+
+Damehosting / Megawebs / Megacursos foundation
+Stack: Production web systems, Linux/server operations, CI/CD, code review, web/mobile delivery, SEO/acquisition and Adobe creative tooling.
+Work: Built the engineering, operations, teaching and customer-delivery foundation behind later end-to-end AI product ownership.
+
 PROFESSIONAL EXPERIENCE
-Founder & AI Product Engineer · Agents AI Ltd | Jul 2025–Present · Madrid / London
+
+Founder and AI Product Engineer | Agents AI Ltd | Madrid / London | July 2025-Present
 - Own product discovery, architecture, implementation, deployment, analytics, monetisation and operational handover across founder-led and B2B systems.
-- Built OULANG, a multilingual marketplace and local-life platform for Chinese communities in Spain, across web, iOS and Android delivery.
-- Built AutoClient and research, enrichment, CRM, email, WhatsApp and voice-agent systems; published reusable MCP and developer tooling.
-- Delivered pricing-intelligence, decision-reporting, document-processing and multimodal review workflows with human review built into the process.
+- Built OULANG (欧浪AI), a multilingual marketplace and local-life platform for Chinese communities in Spain, across web, iOS and Android delivery.
+- Extended the product ecosystem into Huatong for Chinese communities across Europe, OUPIN for AI-assisted discovery and PIME.ai for productised AI services.
+- Built AutoClient and research, enrichment, CRM, email, WhatsApp and voice-agent systems; published reusable MCP and developer tooling, including a property-lead generation demonstration for Tekçe.
+- Delivered pricing-intelligence and decision-reporting workflows combining marketplace data, product matching, price history and inventory or ERP inputs.
+- Prototyped multimodal medical-image review, longitudinal tracking and structured reporting workflows with human review built into the process.
 
-AI Instructor & Independent Technical Consultant | 2022–Present · Madrid / Remote
-- Teach practical AI, agents, MCP, automation, Python and product engineering through working applications, live builds and implementation-focused curricula.
-- Translate business needs into systems and technical decisions for professionals and teams in Spanish, English and Mandarin.
+AI Instructor and Independent Technical Consultant | Madrid / Remote | 2022-Present
+- Teach implementation-first AI, agents, MCP, automation, Python and AI product engineering through working applications, live builds and technical curricula.
+- Translate business needs into systems for professionals and teams in Spanish, English and Mandarin.
+- Maintain an archive of 111 lesson, meeting and project media files totalling approximately 125.83 hours.
 
-Senior Full-Stack Engineer · Damehosting | 2019–2023
-- Developed and maintained production web systems; supported delivery through code review, CI/CD, Linux/server operations and mentoring.
+Senior Full-Stack Engineer | Damehosting | 2019-2023
+- Developed and maintained production web systems.
+- Supported delivery through code review, CI/CD practices, Linux and server operations, and developer mentoring.
 
-Web, Mobile, Growth & Education · Megawebs / Megacursos | 2009–2023
-- Built more than 70 web and mobile projects, produced technical courses, taught digital design and led SEO/acquisition work.
+Web, Mobile, Growth and Education | Megawebs / Megacursos | 2009-2023
+- Built web and mobile products, produced technical courses, taught digital design and led SEO and acquisition work.
+- Built more than 70 digital projects across web, mobile, education, growth and creative technology.
 
-SELECTED SYSTEMS AND PROOF
-- AI instruction: Implementation-focused teaching across AI agents, MCP, automation, Python and product engineering.
-- Governance credentials: Completed specializations in responsible AI, managing AI systems and ISO 42001/GRC readiness, plus EU AI Act coursework.
-- Education products: Published ChinoTotal Mandarin course and built technical, language-learning and AI education materials across web and media.
+ADDITIONAL PROFESSIONAL CHRONOLOGY
+Independent web and mobile product builder | 2015-Present
+- Built more than 20 native and cross-platform applications across independent product work.
+
+Presenter and Live Host | China | 2015-2017
+- Multilingual on-camera communication, live presentation and content production.
+
+Commercial Model and Actor | China | 2013-2017
+- International production, client communication and visual storytelling.
+
+Digital Design and Technology Instructor | 2009-2019
+- Taught After Effects, Photoshop, Cinema 4D, web and product skills; produced reusable online course material.
+
+LIVE AND CONTINUING PRODUCTS
+- OULANG, 2026-present: live Chinese-diaspora marketplace/local-life platform for Spain; web plus continuing native/store work. oulang.ai
+- Huatong, 2026-present: live Chinese-first employment, housing, classifieds and local-services platform across European markets. huatong.eu
+- AutoDate, 2026: live web product and iOS distribution through TestFlight, with profile, discovery and matching workflows. autodate.ai
+- AutoClient, 2024-present: agentic research, enrichment, scoring, outreach, conversation tracking and CRM automation, including a qualified Chinese property-buyer lead-generation demonstration for Tekçe.
+- PIME.ai EU AI Act pack, 2026: multilingual applicability/risk analysis, AI-literacy training and roadmap product with delivery and campaign infrastructure. pime.ai
+- AutoMedical, 2025-2026: medical-learning and multimodal workflow product for image review, structured reporting and professional education with human oversight. automedical.ai
+- Tasky, 2026: native SwiftUI Google Tasks client for macOS, iOS and iPadOS with quick capture, focus, widgets, extensions, search and sync.
+- OUPIN, 2026: multilingual AI-assisted consumer and property discovery built on shared identity, marketplace and data infrastructure.
+
+CLIENT AND COLLABORATION SYSTEMS
+- IWAKY / AutoPricing, 2025-2026: signed EUR35,000 scope covering B2C/B2B pricing, marketplace intelligence, product matching, WhatsApp quote analysis, ERP commerce and dashboards.
+- InfoHuaxin, 2025-2026: connected product and client work spanning a live public surface, data systems and operational tooling. infohuaxin.es
+- Umbramed / Valerio, 2025-2026: technical-lead work on Ionic/Capacitor study tools, product roadmap, Netlify delivery, Stripe payments and EIC funding application work. umbramed.es
+- INTLAW / Ignacio, 2025-2026: legal-AI workflow covering prospecting, chatbot/WhatsApp/phone intake and multi-agent case-file analysis.
+- Scope / EyeUnit / Fernando Ly, 2024-2025: account-list merging, cross-sell discovery and clinical-market scoring connected to OCT and medical-AI research.
+- SORT / SortBot, 2025: course-PDF digitisation workflow with structured online lessons, an embedded chatbot and SSH publishing.
+- San Martín, 2025: HR automation covering birthdays, timesheets and work rules, talent search and employee-portal workflows.
+- EA Housing / Radio Inter, 2026: modular digital-product package for separate company operations and a shared group experience.
+- Tekçe / OULANG-AutoClient, 2026: qualified Chinese property-buyer lead generation, transparent CRM handling and personalised AI outreach.
+
+OPEN SOURCE AND OPERATING INFRASTRUCTURE
+- VUDA, Visual UI Debug Agent MCP: visual evidence capture, annotation and reasoning for live UI diagnosis; 80 stars and 7 forks. github.com/samihalawa/VUDA
+- SMTP MCP Server: email transport and mailbox integration; 17 stars and 15 forks. github.com/samihalawa/smtp-mcp-server
+- GOWA / WhatsApp automation: Go messaging, history and media APIs for operational agents.
+- Notion-Drive Sync: open-source synchronization between Notion workspaces and Google Drive; 3 stars. github.com/samihalawa/notion-drive-sync
+- Telnyx agentic tooling: telephony, voice-agent state and reusable communications integrations.
+- Codex Chronicle / Screenpipe: cross-session reconstruction, persistent visual memory and analysis for multi-agent work on macOS.
+- macOS Optimizer: public open-source utility with 13 stars and 1 fork.
+- Crawlab / Apify actor infrastructure: scraping actors, central storage and data consumers across OULANG, Huatong and OUPIN.
+- Wider public tool archive: 249 non-fork repositories spanning MCP, browser/shell/diff tools, automation, messaging, voice, data and developer workflow.
+
+APPLIED RESEARCH, PROTOTYPES AND EDUCATION
+- APOLO medical multimodal exploration, 2025: public Hugging Face image-text research artifact based on DeepSeek-VL2-tiny, exploring multimodal medical workflows with human review.
+- AutoRad, 2025: radiology product concept and workflow design for image review, reporting and clinical collaboration.
+- AutoIOL and ophthalmology workflows, 2024-2026: image review, OCT analysis, longitudinal tracking and structured reporting workflows with human review.
+- Recipe intelligence, 2026: product discovery for chef-note/photo ingestion, web research, technique preservation, multilingual publishing and optional recipe-video workflows.
+- SONMADE content factory, 2026: React/TypeScript, FFmpeg and Sharp prototype for scene analysis and highlight extraction using motion, colour, edge/text and fullscreen scoring.
+- AutoCrypto, 2024: crypto automation and progressive-web-app product exploration.
+- AI-agent architecture course, 2025: implementation-focused 15-hour curriculum covering foundations, tools, memory, multi-agent systems, RAG, deployment and observability.
+- ChinoTotal, Chinese soundscapes and poetry media: 296-page Spanish-language Mandarin course from zero to HSK2/A2, onomatopoeia deck, printable tutoring material, 72-poem web collection and generated poetry-audio artifacts. chinototal.com
+
+CHRONOLOGICAL PROJECT INDEX | 2023-2026
+2023: RealSintra; Mi ChatGPT React Español; OpenAI/GPT file experiments; DameSender continuity.
+2024: Aprende IA; MenuEditorElectron; AI Absolut; email crawler/lead tools; macOS Optimizer; CloudflaredMe; Rafael Botella work; AutoCrypto; audio/transcription tools; KittyTasks/FocusOnTask; AutoClient seed and worker expansion; Pollinations/storage experiments; AutoVideo; MedSAM; AutoTraining; AutoIOL; SpeakingAI; EyeUnit/Fernando Ly; Daniel Parisi; Light Funnels; Hugging Face writing; Colab research archive.
+2025 January-March: SORT/SortBot; AutoHSK; blog/content systems; SMTP MCP; shell/browser/diff tools; ophthalmology workflows.
+2025 April-June: APOLO; VUDA; AutoTutorial/MentorIA/PerfectPrompter; Wordlist Visual; Scope; Fernando Ly medical-AI work; AutoClient expansion; MCP wave; Agents AI Ltd; Lanzadera ecosystem participation.
+2025 July-December: AutoMedical packaging; agent operating utilities; AutoRad workflow concept; personal/company sites; WhatsApp MCP; IWAKY/AutoPricing; INTLAW; San Martín; Umbramed; AutoDate/AutoTinder design; prototype portfolio wave; poetry site; Lemon AI customization/deployment; 15-hour AI-agent course.
+2026 January-June: OULANG; GOWA; Notion-Drive Sync; Huatong; InfoHuaxin; OUPIN; Crawlab/Apify actors; Chronicle/Screenpipe; Telnyx tools; Desktop Commander utilities; MadridResorts; VibraCode; AutoMedical; company/publishing surfaces; Tasky; AI tutoring/ITE/TusClases operations; OULANG World Cup module; SONMADE.
+2026 July: AutoDate TestFlight; recipe intelligence; Tekçe/OULANG-AutoClient property lead generation; OULANG native parity; EA Housing/Radio Inter product design; Chinese soundscapes/tutoring/poetry audio; PIME AI Act pack; additional local products.
+
+OPEN SOURCE, WRITING AND TEACHING
+- Twelve public Hugging Face articles cover browser automation, local Transformers.js, prompting, autonomous-agent repositories, AutoGen, lead generation and VUDA.
+- Colab portfolio includes 112+ items and 58+ named notebooks spanning AI, automation, databases, computer vision and product experimentation.
+- Public youtube.com/@autoclient-ai catalogue: 373 videos / approximately 159.65 hours across AI courses, After Effects, portfolio work and AutoPricing.
+- Author: ChinoTotal: Aprende Chino Mandarín desde 0, 296 pages, independently published in 2024, ISBN 9798873249237.
+- Youth Prize, II Nogarejas Poetry Competition, 2012: “Olvidaste una llave en mi costado”, submitted as “El arte de la fuga”, selected from an international field of more than 200 works.
+
+EDUCATION
+Li Po Chun United World College of Hong Kong | International Baccalaureate, Science and Mathematics | 2010-2012 | Rafael del Pino Foundation scholarship
+Shenzhen Institute of Information Technology | Computing and information-technology studies | 2016-2018 | Shenzhen, China
 
 SELECTED CREDENTIALS
 Microsoft Certified: Azure AI Fundamentals (AI-900)
-Databricks Mosaic AI · Coursera · RRXO8HSACR29
-AI Agent Architecture: Reasoning, Memory, and LangGraph · Board Infinity · SO0LO9NOCFXF
-Designing Multi-Agent Systems: Collaboration and Workflows · Board Infinity · ORYP5BAAR0KO
-AI Automation Engineer with n8n · LearnKartS · YUNCHF6IXQJQ
-Managing AI Systems: Development, Deployment, and Governance · Board Infinity · HZ7XDA9WCE2I
-Data Privacy, Ethics, and Responsible AI · Coursera · W4PPDYPHJKUR
-AI Governance & ISO 42001 Readiness · British Standards Institution · UXUS7TQ36GF4
+Adobe Certified Expert, After Effects
+Databricks Mosaic AI | Coursera | Completed Jul 2026 | Credential ID RRXO8HSACR29
+Designing Multi-Agent Systems: Collaboration and Workflows | Board Infinity via Coursera | Completed Jul 2026 | Credential ID ORYP5BAAR0KO
+AI Agent Architecture: Reasoning, Memory, and LangGraph | Board Infinity via Coursera | Completed Jul 2026 | Credential ID SO0LO9NOCFXF
+AI Automation Engineer with n8n | LearnKartS via Coursera | Completed Jul 2026 | Credential ID YUNCHF6IXQJQ
+Data Privacy, Ethics, and Responsible AI | Coursera | Completed Jul 2026 | Credential ID W4PPDYPHJKUR
+Foundations of AI Governance and Responsible Development | LearnQuest via Coursera | Completed Jul 2026 | Credential ID 8STVBR62T6CY
+Managing AI Systems: Development, Deployment, and Governance Specialization | Board Infinity via Coursera | Completed Jul 2026 | Credential ID HZ7XDA9WCE2I
+AI Governance & ISO 42001 Readiness for GRC, Audit, & Legal | British Standards Institution via Coursera | Completed Jul 2026 | Credential ID UXUS7TQ36GF4
+Investment Management with Python and Machine Learning | EDHEC Business School via Coursera | Completed Jul 2026 | Credential ID EGOPNC45Z7X4
 
-EDUCATION
-Li Po Chun United World College of Hong Kong · International Baccalaureate, Science & Mathematics · 2010–2012 · Rafael del Pino Foundation scholarship
-Shenzhen Institute of Information Technology · Computing and information-technology studies · 2016–2018 · Shenzhen, China
+COMPLETED COURSERA COURSEWORK — JULY 2026
+Databricks Mosaic AI | Coursera | Course certificate | Credential ID RRXO8HSACR29
+Designing Multi-Agent Systems: Collaboration and Workflows | Board Infinity | Course certificate | Credential ID ORYP5BAAR0KO
+AI Agent Architecture: Reasoning, Memory, and LangGraph | Board Infinity | Course certificate | Credential ID SO0LO9NOCFXF
+
+Investment Management with Python and Machine Learning | EDHEC Business School | Specialization certificate
+- Introduction to Portfolio Construction and Analysis with Python
+- Advanced Portfolio Construction and Analysis with Python
+- Python and Machine Learning for Asset Management
+- Python and Machine-Learning for Asset Management with Alternative Data Sets
+
+Data Privacy, Ethics, and Responsible AI | Coursera | Specialization certificate
+- Building Trust: Ethics for AI-powered Chatbots
+- Fundamental Rights Impact Assessment for GenAI Projects
+- User Awareness and Education for Generative AI
+- Introduction to Prompt Injection Vulnerabilities
+- Data Privacy and Protection Standards
+- AI and European Union Law: Navigating Regulatory Compliance
+
+AI Automation Engineer with n8n | LearnKartS via Coursera | Specialization certificate
+- Workflow Automation with n8n: Logic, Data & Error Handling
+- Integrate AI Models in n8n: Prompt Engineering & Outputs
+- Build AI Agents & Secure API Integrations with n8n
+- AI Memory Systems: Production RAG Pipelines with n8n
+- Build MCP Automation Projects with n8n: Connect AI Clients
+- Multi-Agent Systems Design: AI Customer Support with n8n
+- Deploy, Test & Secure AI Workflows with n8n
+
+Foundations of AI Governance and Responsible Development | LearnQuest via Coursera | Completed Jul 27, 2026 | Grade 98.33% | Credential ID 8STVBR62T6CY
+
+Managing AI Systems: Development, Deployment, and Governance | Board Infinity via Coursera | Specialization certificate
+- AI Systems Design: RAG Pipelines and LLM Architecture
+- MLOps and LLMOps: Deploying and Scaling AI in Production
+- AI Risk and Compliance: Audit and Governance Foundations
+
+AI Governance & ISO 42001 Readiness for GRC, Audit, & Legal | British Standards Institution via Coursera | Specialization certificate
+- ISO/IEC 22989:2023 An Introduction to the Fundamentals of AI
+- AI System Impact Assessment Guidance
+- AI Management Essentials: Integrating ISO 42001 & ISO 23894
+- Understanding the Foundations of the EU AI Act
+- Approaches to Establish Trust in AI Systems
 
 LANGUAGES
-Spanish: native · English: C2 / full professional · Mandarin Chinese: C2 / full professional · Cantonese: conversational
+Spanish: native
+English: C2 / full professional
+Mandarin Chinese: C2 / full professional
+Cantonese: conversational
+
+TARGET ROLES
+Founding AI Engineer | AI Product Engineer | AI Platform Lead | Head of AI | Staff AI Engineer | Technical Product Lead
+
+PORTFOLIO EDITIONS
+This photo-free edition is optimised for applicant-tracking systems. The visual master and complete searchable portfolio of 90 projects and collaborations are available at samihalawa.com/cv and samihalawa.com/projects.

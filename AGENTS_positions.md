@@ -1,6 +1,6 @@
 # INDEX
 
-CV downloads | role tailoring was either one oversized master or an over-compressed ATS-looking PDF | publish visual three-page role editions plus separate ATS text from one shared evidence record | do not build a CV editor or maintain independent factual forks | verify every download, PDF page, ATS parse and rendered CV route
+CV downloads | shorter role editions omitted achievements, technologies and career breadth | publish comprehensive twelve-page role editions plus separate ATS text from one shared evidence record | do not build a CV editor or remove shared facts to shorten an edition | verify all 90 projects, technology detail, credentials, achievements, every download and rendered CV route
 contact intake | Tally embeds replaced the existing native provider flow | use native contact/newsletter forms and emit conversions only after provider success | do not reintroduce embedded Tally forms or fire leads on button clicks | verify no Tally assets, provider response, rendered states and analytics reception
 measurement provider proof | missing repo IDs were treated as proof that analytics did not exist | audit live bundle, credentials and actual GA4/GTM/Ads/PostHog/Tag Gateway providers | do not infer provider state from source grep or reuse another brand's IDs | verify exact property/container/project IDs, live events and provider readback
 SEO route body and public authorship | generated heads still left crawler HTML empty and hub source labels leaked as authors | prerender every route/article and normalize public author identity | do not treat metadata-only HTML or delivery labels as indexable content | verify raw H1/article body, hydration, byline/JSON-LD agreement and live Lighthouse
@@ -13,14 +13,14 @@ SPA production routes | public asset directories collide with client routes | se
 Coolify Linux build | macOS lock can omit the Linux Rollup binary and Docker hosts differ between arm64 and x64 | install the build container's matching native Rollup GNU package | do not hardcode one CPU or infer deployability from the macOS Vite build | verify local container plus Coolify build the pushed commit and live routes
 public portfolio | stock imagery and invented social proof replaced source evidence | use dated metrics, real screenshots and public links | do not publish placeholders, arbitrary percentages or unsupported impact | verify exact live route, image load, text and responsive layout
 
-## 2026-07-28 — Pair visual role CVs with separate ATS editions
+## 2026-07-28 — Pair comprehensive visual role CVs with separate ATS editions
 
 - **Status:** CURRENT
 - **Project/root:** `PROJECTS_ON_PROCESS/2025-FINAL-AISTUDIO-samihalawa-final`; `/cv` and downloadable resume assets.
-- **Mistake recovered:** the first focused editions compressed the career into two ATS-like pages; independent CV copies or a builder would create factual drift and unnecessary machinery.
-- **Superior approach:** publish five designed three-page role PDFs and five plain-text ATS files generated from the CV repository’s single shared evidence record.
-- **Evidence:** `pages/CVPage.tsx`, `public/cv/variants/` and CV source commit `e99a400`.
-- **Triggers / verification:** CV, resume, role family, application, visual or ATS; verify every file URL/MIME, all three PDF pages, ATS parsing and the rendered desktop/mobile route.
+- **Mistake recovered:** two-, three- and four-page role editions omitted verified achievements, detailed technology evidence and most of the complete project record; independent CV copies or a builder would still create drift.
+- **Superior approach:** publish six designed twelve-page comprehensive role PDFs and six plain-text ATS files generated from the CV repository’s single shared evidence record.
+- **Evidence:** `pages/CVPage.tsx`, `public/cv/variants/`, Atos transcript line 61 and the comprehensive generator in the CV repository.
+- **Triggers / verification:** CV, resume, role family, application, visual or ATS; verify every file URL/MIME, all twelve PDF pages, all 90 projects, ATS parsing and the rendered desktop/mobile route.
 - **Do / don't:** do keep visual storytelling and parsing as separate outputs; don't force one file to serve both purposes or build an editing application.
 
 ## 2026-07-22 — Contact intake stays native and provider-confirmed

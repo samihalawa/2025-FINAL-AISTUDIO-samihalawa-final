@@ -39,6 +39,13 @@ const roleEditions = [
     es: 'Docencia / Gobernanza de IA',
     detailEn: 'Practical education, responsible AI and governance.',
     detailEs: 'Formación práctica, IA responsable y gobernanza.'
+  },
+  {
+    key: 'Atos_Technical',
+    en: 'Atos Technical Dossier',
+    es: 'Dossier técnico para Atos',
+    detailEn: 'A super-detailed AI, full-stack, data, API and deployment edition, including current Databricks Mosaic AI qualification.',
+    detailEs: 'Edición superdetallada de IA, full-stack, datos, APIs y deployment, con la formación actual en Databricks Mosaic AI.'
   }
 ];
 
@@ -63,8 +70,8 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
         <section className="mt-12">
           <div className="max-w-3xl">
             <span className="badge-pill">{spanish ? 'Ediciones por familia de rol' : 'Role-family editions'}</span>
-            <h2 className="mt-4 font-display text-3xl font-bold tracking-[-.035em] text-slate-950">{spanish ? 'Una base común, cinco énfasis claros.' : 'One shared record, five clear emphases.'}</h2>
-            <p className="mt-3 text-base leading-relaxed text-slate-600">{spanish ? 'Cada edición combina un PDF visual de tres páginas con una versión ATS en texto. Conserva las mismas fechas, experiencia, educación e idiomas; solo cambia el título objetivo, el resumen, el orden de capacidades y la evidencia más relevante.' : 'Each edition pairs a visual three-page PDF with a plain-text ATS version. Dates, experience, education and languages remain shared; only the target title, summary, capability order and most relevant evidence change.'}</p>
+            <h2 className="mt-4 font-display text-3xl font-bold tracking-[-.035em] text-slate-950">{spanish ? 'Un historial completo, seis énfasis claros.' : 'One complete record, six clear emphases.'}</h2>
+            <p className="mt-3 text-base leading-relaxed text-slate-600">{spanish ? 'Cada edición combina un PDF visual completo de doce páginas con una versión ATS en texto. Todas conservan la experiencia completa, el stack tecnológico detallado, los 90 proyectos, credenciales, formación y logros; solo cambia el énfasis inicial y el orden.' : 'Each edition pairs a comprehensive twelve-page visual PDF with a plain-text ATS version. Every edition retains the full experience, detailed technology stack, all 90 projects, credentials, coursework and achievements; only the opening emphasis and ordering change.'}</p>
           </div>
           <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {roleEditions.map((item) => <article key={item.key} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
