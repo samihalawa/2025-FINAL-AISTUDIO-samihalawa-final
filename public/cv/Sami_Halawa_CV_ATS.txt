@@ -123,6 +123,57 @@ Shenzhen Institute of Information Technology | Computing and information-technol
 SELECTED CREDENTIALS
 Microsoft Certified: Azure AI Fundamentals (AI-900)
 Adobe Certified Expert, After Effects
+Databricks Mosaic AI | Coursera | Completed Jul 2026 | Credential ID RRXO8HSACR29
+Designing Multi-Agent Systems: Collaboration and Workflows | Board Infinity via Coursera | Completed Jul 2026 | Credential ID ORYP5BAAR0KO
+AI Agent Architecture: Reasoning, Memory, and LangGraph | Board Infinity via Coursera | Completed Jul 2026 | Credential ID SO0LO9NOCFXF
+AI Automation Engineer with n8n | LearnKartS via Coursera | Completed Jul 2026 | Credential ID YUNCHF6IXQJQ
+Data Privacy, Ethics, and Responsible AI | Coursera | Completed Jul 2026 | Credential ID W4PPDYPHJKUR
+Foundations of AI Governance and Responsible Development | LearnQuest via Coursera | Completed Jul 2026 | Credential ID 8STVBR62T6CY
+Managing AI Systems: Development, Deployment, and Governance Specialization | Board Infinity via Coursera | Completed Jul 2026 | Credential ID HZ7XDA9WCE2I
+AI Governance & ISO 42001 Readiness for GRC, Audit, & Legal | British Standards Institution via Coursera | Completed Jul 2026 | Credential ID UXUS7TQ36GF4
+Investment Management with Python and Machine Learning | EDHEC Business School via Coursera | Completed Jul 2026 | Credential ID EGOPNC45Z7X4
+
+COMPLETED COURSERA COURSEWORK — JULY 2026
+Databricks Mosaic AI | Coursera | Course certificate | Credential ID RRXO8HSACR29
+Designing Multi-Agent Systems: Collaboration and Workflows | Board Infinity | Course certificate | Credential ID ORYP5BAAR0KO
+AI Agent Architecture: Reasoning, Memory, and LangGraph | Board Infinity | Course certificate | Credential ID SO0LO9NOCFXF
+
+Investment Management with Python and Machine Learning | EDHEC Business School | Specialization certificate
+- Introduction to Portfolio Construction and Analysis with Python
+- Advanced Portfolio Construction and Analysis with Python
+- Python and Machine Learning for Asset Management
+- Python and Machine-Learning for Asset Management with Alternative Data Sets
+
+Data Privacy, Ethics, and Responsible AI | Coursera | Specialization certificate
+- Building Trust: Ethics for AI-powered Chatbots
+- Fundamental Rights Impact Assessment for GenAI Projects
+- User Awareness and Education for Generative AI
+- Introduction to Prompt Injection Vulnerabilities
+- Data Privacy and Protection Standards
+- AI and European Union Law: Navigating Regulatory Compliance
+
+AI Automation Engineer with n8n | LearnKartS via Coursera | Specialization certificate
+- Workflow Automation with n8n: Logic, Data & Error Handling
+- Integrate AI Models in n8n: Prompt Engineering & Outputs
+- Build AI Agents & Secure API Integrations with n8n
+- AI Memory Systems: Production RAG Pipelines with n8n
+- Build MCP Automation Projects with n8n: Connect AI Clients
+- Multi-Agent Systems Design: AI Customer Support with n8n
+- Deploy, Test & Secure AI Workflows with n8n
+
+Foundations of AI Governance and Responsible Development | LearnQuest via Coursera | Completed Jul 27, 2026 | Grade 98.33% | Credential ID 8STVBR62T6CY
+
+Managing AI Systems: Development, Deployment, and Governance | Board Infinity via Coursera | Specialization certificate
+- AI Systems Design: RAG Pipelines and LLM Architecture
+- MLOps and LLMOps: Deploying and Scaling AI in Production
+- AI Risk and Compliance: Audit and Governance Foundations
+
+AI Governance & ISO 42001 Readiness for GRC, Audit, & Legal | British Standards Institution via Coursera | Specialization certificate
+- ISO/IEC 22989:2023 An Introduction to the Fundamentals of AI
+- AI System Impact Assessment Guidance
+- AI Management Essentials: Integrating ISO 42001 & ISO 23894
+- Understanding the Foundations of the EU AI Act
+- Approaches to Establish Trust in AI Systems
 
 LANGUAGES
 Spanish: native

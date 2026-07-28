@@ -4,7 +4,7 @@
     "path": "en/subagents-and-parallel-agents",
     "title": "Subagents and Parallel Agents: Dividing Work Without Creating Chaos",
     "date": "2026-07-15T22:02:41.512Z",
-    "summary": "Spawning subagents can accelerate complex tasks, but it's a double-edged sword. Learn when to leverage independent investigations and parallel implementations, and when it just burns context and adds failure modes. This guide covers scoping, avoiding overlaps, and keeping your orchestrator's context clean.",
+    "summary": "Spawning subagents can accelerate complex tasks, but only if done thoughtfully. Learn when to leverage independent investigations, parallel implementations, and review sidecars, and when to avoid the pitfalls of context burning and overlapping edits.",
     "author": "Sami Halawa",
     "tags": [
       "agentic-coding",
@@ -18,7 +18,7 @@
     "path": "en/observability-for-ai-agents",
     "title": "Observability for AI Agents: Tracing, Debugging, and Evaluating LLM Workflows",
     "date": "2026-07-15T22:02:23.772Z",
-    "summary": "Building reliable AI agents demands robust observability. This guide dives into tracing every LLM call, tool invocation, and decision, capturing critical metrics like tokens, latency, and cost. Learn how to correlate failures, detect silent issues, and turn traces into actionable evaluations, balancing visibility with overhead.",
+    "summary": "Debugging AI agents is fundamentally different from traditional software. You can't just set a breakpoint. This guide dives deep into practical observability strategies for LLM-powered systems, covering everything from granular tracing to turning logs into actionable evaluations. Learn how to see inside your agents, identify failure modes, and build robust, reliable AI applications.",
     "author": "Sami Halawa",
     "tags": [
       "ai-agents",
@@ -32,7 +32,7 @@
     "path": "en/prototype-to-production-ai",
     "title": "From AI Prototype to Production: The Unglamorous Work",
     "date": "2026-07-15T22:01:59.304Z",
-    "summary": "Moving an AI model from a Jupyter notebook to a reliable production feature is a brutal reality check. This guide covers the essential, often-overlooked steps: handling long-tail inputs, robust evals, rate limits, cost, latency, observability, and graceful failure.",
+    "summary": "Moving an AI model from a Jupyter notebook to a reliable production feature is a brutal reality check. This guide covers the essential, often overlooked steps: handling edge cases, robust evaluation, cost and latency management, and building resilient systems.",
     "author": "Sami Halawa",
     "tags": [
       "ai-product",
@@ -44,9 +44,9 @@
   {
     "slug": "structured-outputs-and-json-mode",
     "path": "en/structured-outputs-and-json-mode",
-    "title": "Structured Outputs from LLMs: A Guide to Reliable JSON and Typed Data",
+    "title": "Reliable Structured Outputs from LLMs: A Deep Dive",
     "date": "2026-07-15T22:01:35.940Z",
-    "summary": "Getting reliable, machine-readable data from LLMs is critical for building robust AI applications. This guide covers why free-text parsing is a trap and how to enforce structure using JSON mode, schema-constrained decoding, function calling, and validation-and-repair loops. Learn practical patterns for handling edge cases, streaming, and schema design.",
+    "summary": "Getting reliable JSON and typed data from LLMs is crucial for building robust AI applications. This guide explores why free-text parsing is a trap and how to enforce structure using JSON mode, schema-constrained decoding, function calling, and validation-and-repair loops. Learn practical patterns and schema design for production-grade pipelines.",
     "author": "Sami Halawa",
     "tags": [
       "integration",
@@ -60,7 +60,7 @@
     "path": "en/memory-systems-for-ai-agents",
     "title": "Building Durable Memory Systems for AI Agents",
     "date": "2026-07-15T22:01:04.739Z",
-    "summary": "Understanding the critical distinction between context and durable memory is foundational for building effective AI agents. This guide dives deep into how to equip your agents with long-term recall, covering persistence, retrieval, memory hygiene, and practical architectural trade-offs.",
+    "summary": "Understanding and implementing effective memory systems is crucial for building robust AI agents. This guide dissects the differences between context and durable memory, exploring practical strategies for long-term recall, memory management, and avoiding common pitfalls.",
     "author": "Sami Halawa",
     "tags": [
       "ai-agents",
@@ -74,7 +74,7 @@
     "path": "en/ai-code-review-and-verification",
     "title": "Verifying AI-Generated Code: Beyond Type Checks",
     "date": "2026-07-15T22:00:38.519Z",
-    "summary": "AI-generated code is a powerful accelerant, but 'typecheck passed' is a low bar. This guide dives into practical, concrete strategies for verifying agent-produced changes, from end-to-end flow validation to characterization tests and identifying plausible-but-wrong AI outputs. Learn how to genuinely trust AI-written code.",
+    "summary": "AI-generated code is a powerful tool, but 'typecheck passed' is never enough. Learn how to truly verify agent-generated changes, from end-to-end flow testing to diff analysis and characterization tests, to catch plausible-but-wrong AI outputs.",
     "author": "Sami Halawa",
     "tags": [
       "agentic-coding",
@@ -100,9 +100,9 @@
   {
     "slug": "voice-first-ai-interfaces",
     "path": "en/voice-first-ai-interfaces",
-    "title": "Voice-First AI: Beyond Dictation to Agentic Workflows",
+    "title": "Voice-First AI: Beyond Assistants to Agentic Workflows",
     "date": "2026-07-15T20:38:29.384Z",
-    "summary": "Voice is evolving from a simple dictation tool to a powerful input for agentic AI. This guide explores the engineering trade-offs, design patterns, and critical considerations for building voice-first interfaces that execute multi-step tasks, covering latency, error handling, and when voice truly shines.",
+    "summary": "Voice is no longer just for simple commands or dictation. For agentic AI tools, it's becoming a serious input modality. This guide dives into the engineering trade-offs, design considerations, and practical challenges of building robust voice-first interfaces that execute multi-step tasks, covering latency, error handling, and when voice truly shines.",
     "author": "Sami Halawa",
     "tags": [
       "ai-agents",
@@ -114,9 +114,9 @@
   {
     "slug": "self-hosting-open-source-llms",
     "path": "en/self-hosting-open-source-llms",
-    "title": "Self-Hosting Open-Weight LLMs: When and How to Do It Right",
+    "title": "Self-Hosting Open-Weight LLMs: When and How to Do It",
     "date": "2026-07-15T20:38:05.530Z",
-    "summary": "Deciding whether to self-host open-weight LLMs is a critical architectural choice. This guide cuts through the hype, detailing the real benefits like privacy, cost control, and latency, alongside the often-underestimated hidden costs of GPUs, operations, and quality degradation. Learn when it's worth the effort and how to navigate the complexities.",
+    "summary": "Deciding whether to self-host open-weight LLMs is a critical architectural choice. This guide cuts through the hype, detailing the real reasons to self-host (privacy, cost, control, latency, offline access) against the often-underestimated hidden costs (GPUs, ops, quality degradation, throughput tuning). Learn about quantization, context trade-offs, serving stacks, and a practical decision framework.",
     "author": "Sami Halawa",
     "tags": [
       "infrastructure",
@@ -128,9 +128,9 @@
   {
     "slug": "controlling-llm-costs",
     "path": "en/controlling-llm-costs",
-    "title": "Controlling LLM Costs Without Crippling Quality",
+    "title": "Controlling LLM Costs Without Crippling Quality: A Practical Guide",
     "date": "2026-07-15T20:37:44.819Z",
-    "summary": "LLM costs can quickly spiral in agentic applications. This guide dives into where your spend actually goes—long contexts, redundant tool calls, retries, and overpowered models—and provides actionable strategies like model routing, prompt caching, context trimming, and cost-per-successful-task metrics to maintain quality while optimizing your budget.",
+    "summary": "LLM costs can quickly spiral in agentic applications. This guide dives into where the spend actually goes—long context, redundant tool calls, retries, overpowered models—and offers concrete, actionable strategies like model routing, prompt caching, context trimming, and cost-per-task metrics to maintain quality while slashing your bill.",
     "author": "Sami Halawa",
     "tags": [
       "ai-agents",
@@ -144,7 +144,7 @@
     "path": "en/designing-tools-for-ai-agents",
     "title": "Designing AI Agent Tools: A Practical Guide for Developers",
     "date": "2026-07-15T20:37:22.542Z",
-    "summary": "Learn how to design effective tools for AI agents. This guide covers naming, descriptions, argument schemas, error handling, output formatting, and crucial design principles like idempotency and permissioning for robust agentic workflows.",
+    "summary": "Building effective AI agents hinges on well-designed tools. This guide dives into the specifics of crafting tool interfaces that models can actually use, covering naming, descriptions, argument schemas, error handling, and output formatting. Learn to avoid common pitfalls and build robust, agent-friendly tools.",
     "author": "Sami Halawa",
     "tags": [
       "ai-agents",
@@ -158,7 +158,7 @@
     "path": "en/shipping-ai-features-as-a-founder",
     "title": "Shipping AI Features Fast as a Technical Founder",
     "date": "2026-07-15T20:36:56.407Z",
-    "summary": "As a technical founder, speed is paramount when shipping AI features. This guide cuts through the hype, offering concrete strategies for moving from idea to a working AI feature without over-engineering. Learn to scope tightly, build minimally, verify effectively, and make smart buy-vs-build decisions.",
+    "summary": "As a technical founder, speed is your currency. Learn how to move from an AI idea to a working feature without over-engineering, focusing on real user workflows, minimal viable solutions, and rapid iteration.",
     "author": "Sami Halawa",
     "tags": [
       "ai-product",
@@ -170,9 +170,9 @@
   {
     "slug": "multi-agent-orchestration-patterns",
     "path": "en/multi-agent-orchestration-patterns",
-    "title": "Multi-Agent Orchestration: When Complexity Pays Off (and When It Doesn't)",
+    "title": "Multi-Agent Orchestration: Earning Its Keep",
     "date": "2026-07-15T20:36:39.015Z",
-    "summary": "Splitting work across AI agents isn't a silver bullet. This guide cuts through the hype, detailing concrete patterns like orchestrator/worker, parallel investigations, and critique sidecars. Learn when multi-agent systems earn their complexity, how to manage shared state and context costs, and critical anti-patterns to avoid for engineers building robust AI applications.",
+    "summary": "When does multi-agent orchestration genuinely add value, and when is it an over-engineered mess? This guide dives into the concrete trade-offs, architectural patterns, and anti-patterns for building agentic systems that scale, perform, and deliver, rather than just adding complexity.",
     "author": "Sami Halawa",
     "tags": [
       "ai-agents",
@@ -186,7 +186,7 @@
     "path": "en/context-engineering-for-llm-apps",
     "title": "Context Engineering: The Real Bottleneck in LLM Apps",
     "date": "2026-07-15T20:36:15.763Z",
-    "summary": "The context window is the most critical and often overlooked resource in LLM applications. Learn how to treat it as a scarce commodity, employing strategies for retrieval, summarization, and memory management to build robust, long-running AI agents.",
+    "summary": "Context window management is the critical, often overlooked, challenge in building robust LLM applications. It's a scarce resource, demanding precise strategies for retrieval, summarization, and avoiding data poisoning. This guide dives into practical patterns for feeding your models exactly what they need, when they need it, for long-running agents and complex tasks.",
     "author": "Sami Halawa",
     "tags": [
       "ai-agents",
@@ -198,9 +198,9 @@
   {
     "slug": "evaluating-ai-agents",
     "path": "en/evaluating-ai-agents",
-    "title": "Evaluating AI Agents Beyond Vibes: A Technical Guide",
+    "title": "Evaluating AI Agents Beyond Vibes: A Practical Guide",
     "date": "2026-07-15T20:35:43.780Z",
-    "summary": "HTTP 200, green typechecks, or a 'looks right' demo aren't proof of an AI agent's success. This guide details how to rigorously evaluate AI agents, focusing on outcome-layer task success, trace-level analysis, regression evals, human review, and cost/latency budgets. Learn to build golden sets, navigate LLM-as-judge pitfalls, and detect agents that falsely report success.",
+    "summary": "HTTP 200, green typechecks, or a 'looks right' demo aren't proof of AI agent success. This guide details how to move beyond superficial metrics to robustly evaluate AI agents, focusing on outcome-layer task success, trace-level analysis, regression evals, human review, and cost/latency budgets.",
     "author": "Sami Halawa",
     "tags": [
       "ai-agents",
@@ -212,9 +212,9 @@
   {
     "slug": "rag-vs-long-context",
     "path": "en/rag-vs-long-context",
-    "title": "RAG vs. Long Context: A Practical Guide for LLM App Builders",
+    "title": "RAG vs. Long Context: A Practical Engineering Guide",
     "date": "2026-07-15T20:35:23.540Z",
-    "summary": "Deciding between Retrieval Augmented Generation (RAG) and stuffing large context windows is a core challenge in modern LLM application development. This guide dissects the engineering trade-offs, failure modes, and hybrid patterns, offering concrete advice for software engineers and AI builders.",
+    "summary": "Deciding between Retrieval Augmented Generation (RAG) and stuffing large context windows is a critical engineering choice for LLM applications. This guide breaks down the trade-offs, failure modes, and practical considerations for builders.",
     "author": "Sami Halawa",
     "tags": [
       "architecture",
@@ -226,9 +226,9 @@
   {
     "slug": "choosing-the-right-llm",
     "path": "en/choosing-the-right-llm",
-    "title": "Choosing LLMs for Your Product: Beyond Benchmarks",
+    "title": "Choosing an LLM for Your Product: Beyond Benchmarks",
     "date": "2026-07-15T20:35:04.195Z",
-    "summary": "Stop chasing leaderboards. This guide provides a practical framework for selecting the right LLM for your product, focusing on real-world trade-offs like reasoning depth, latency, cost, and tool-calling reliability. Learn how to match models to tasks and build robust AI applications.",
+    "summary": "Forget chasing leaderboards. This guide provides a practical framework for selecting the right LLM for your product, focusing on real-world trade-offs like reasoning depth, latency, cost, and tool-calling reliability. Learn to match models to tasks and build robust scaffolding around them.",
     "author": "Sami Halawa",
     "tags": [
       "architecture",
@@ -242,7 +242,7 @@
     "path": "en/prompt-engineering-for-agents",
     "title": "Prompt Engineering for Autonomous Agents: Beyond Chatbots",
     "date": "2026-07-15T20:34:46.029Z",
-    "summary": "Prompting autonomous agents isn't about clever phrasing; it's about encoding the operational loop, tool contracts, stop conditions, and verification expectations. This guide dives into the unique challenges and strategies for designing system prompts that empower agents, not just chatbots, to execute complex tasks reliably.",
+    "summary": "Prompting autonomous agents isn't about clever phrasing; it's about encoding the operational loop, tool contracts, stop conditions, and verification expectations. This guide dives into the unique challenges and strategies for building robust agentic systems, focusing on practical, hard-won lessons for engineers and AI builders.",
     "author": "Sami Halawa",
     "tags": [
       "ai-agents",
@@ -254,9 +254,9 @@
   {
     "slug": "local-first-ai-and-privacy",
     "path": "en/local-first-ai-and-privacy",
-    "title": "Local-First AI: The On-Device Revolution",
+    "title": "Local-First AI: The On-Device Advantage for Privacy, Latency, and Trust",
     "date": "2026-07-15T20:34:25.933Z",
-    "summary": "Explore the critical advantages of local-first AI, from privacy and latency to building robust agentic systems. This guide dives into hardware realities, quantization, hybrid architectures, and the engineering trade-offs of running models on-device.",
+    "summary": "Explore the critical role of local-first AI for privacy, low latency, and building user trust. This guide dives into the technical realities of running models on-device, hybrid architectures, and the engineering trade-offs for developers building AI products.",
     "author": "Sami Halawa",
     "tags": [
       "architecture",
@@ -270,7 +270,7 @@
     "path": "en/agentic-coding-workflows",
     "title": "Agentic Coding Workflows That Actually Ship Code",
     "date": "2026-07-15T20:34:06.769Z",
-    "summary": "Move beyond autocomplete with agentic coding workflows. Learn how to plan, implement, and verify agent output effectively, focusing on tight task contracts, minimal diffs, and skeptical review to ship real code.",
+    "summary": "Move beyond autocomplete with agentic coding workflows. Learn how to plan, implement, and verify agent output effectively. This guide covers task contracts, parallel subagents, minimal diffs, and critical review to ship real code, not just hype.",
     "author": "Sami Halawa",
     "tags": [
       "agentic-coding",
@@ -282,9 +282,9 @@
   {
     "slug": "mcp-model-context-protocol-explained",
     "path": "en/mcp-model-context-protocol-explained",
-    "title": "The Model Context Protocol (MCP): A Builder's Guide to Agent-Tool Interoperability",
+    "title": "The Model Context Protocol (MCP): A Builder's Guide",
     "date": "2026-07-15T20:33:47.403Z",
-    "summary": "The Model Context Protocol (MCP) offers a standardized way for AI agents to interact with tools and data, moving beyond bespoke integrations. This guide covers MCP's architecture, when to build an MCP server, effective tool design, security, common pitfalls, and its impact on agent product architecture.",
+    "summary": "The Model Context Protocol (MCP) is emerging as a critical piece of infrastructure for agentic workflows. This guide cuts through the noise, explaining MCP's core problem, its architecture, when to build an MCP server, tool design principles, and common pitfalls.",
     "author": "Sami Halawa",
     "tags": [
       "ai-agents",
@@ -298,7 +298,7 @@
     "path": "en/building-reliable-ai-agents",
     "title": "Building Production-Ready AI Agents: From Demo to Deployment",
     "date": "2026-07-15T20:33:27.435Z",
-    "summary": "Moving AI agents from a flashy demo to reliable production systems is fraught with challenges. This guide dives into the hard-won lessons of building agents that don't just work once, but consistently deliver value, covering task bounding, robust verification, error handling, observability, and evaluation strategies.",
+    "summary": "Moving AI agents from a flashy demo to a reliable production system is fraught with challenges. This guide dissects the critical differences and provides actionable strategies for building agents that consistently deliver, focusing on robust task loops, rigorous verification, fault tolerance, and comprehensive observability.",
     "author": "Sami Halawa",
     "tags": [
       "ai-agents",

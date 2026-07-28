@@ -1,0 +1,52 @@
+SAMI HALAWA RIBAS
+AI Instructor · Responsible AI & Governance Specialist
+
+Madrid, Spain · EU work authorisation · +34 679 794 037 · sami@oulang.ai · samihalawa.com · linkedin.com/in/samihalawa · github.com/samihalawa
+
+PROFILE
+Implementation-first AI educator and product engineer who translates agentic systems, governance and operational risk into working examples, clear curricula and usable organisational practices in Spanish, English and Mandarin.
+
+ROLE-ALIGNED CAPABILITIES
+Teaching: Course design, live builds, practical exercises, executive communication and multilingual technical explanation
+Responsible AI: AI governance foundations, EU AI Act, impact assessment, privacy, prompt-injection awareness, audit readiness and ISO 42001
+Agent systems: MCP, RAG, multi-agent workflows, memory, tool use, deployment and observability
+Product delivery: Python, FastAPI, TypeScript, React/Next.js, automation, document workflows and production operations
+
+PROFESSIONAL EXPERIENCE
+Founder & AI Product Engineer · Agents AI Ltd | Jul 2025–Present · Madrid / London
+- Own product discovery, architecture, implementation, deployment, analytics, monetisation and operational handover across founder-led and B2B systems.
+- Built OULANG, a multilingual marketplace and local-life platform for Chinese communities in Spain, across web, iOS and Android delivery.
+- Built AutoClient and research, enrichment, CRM, email, WhatsApp and voice-agent systems; published reusable MCP and developer tooling.
+- Delivered pricing-intelligence, decision-reporting, document-processing and multimodal review workflows with human review built into the process.
+
+AI Instructor & Independent Technical Consultant | 2022–Present · Madrid / Remote
+- Teach practical AI, agents, MCP, automation, Python and product engineering through working applications, live builds and implementation-focused curricula.
+- Translate business needs into systems and technical decisions for professionals and teams in Spanish, English and Mandarin.
+
+Senior Full-Stack Engineer · Damehosting | 2019–2023
+- Developed and maintained production web systems; supported delivery through code review, CI/CD, Linux/server operations and mentoring.
+
+Web, Mobile, Growth & Education · Megawebs / Megacursos | 2009–2023
+- Built more than 70 web and mobile projects, produced technical courses, taught digital design and led SEO/acquisition work.
+
+SELECTED SYSTEMS AND PROOF
+- AI instruction: Implementation-focused teaching across AI agents, MCP, automation, Python and product engineering.
+- Governance credentials: Completed specializations in responsible AI, managing AI systems and ISO 42001/GRC readiness, plus EU AI Act coursework.
+- Education products: Published ChinoTotal Mandarin course and built technical, language-learning and AI education materials across web and media.
+
+SELECTED CREDENTIALS
+Microsoft Certified: Azure AI Fundamentals (AI-900)
+Databricks Mosaic AI · Coursera · RRXO8HSACR29
+AI Agent Architecture: Reasoning, Memory, and LangGraph · Board Infinity · SO0LO9NOCFXF
+Designing Multi-Agent Systems: Collaboration and Workflows · Board Infinity · ORYP5BAAR0KO
+AI Automation Engineer with n8n · LearnKartS · YUNCHF6IXQJQ
+Managing AI Systems: Development, Deployment, and Governance · Board Infinity · HZ7XDA9WCE2I
+Data Privacy, Ethics, and Responsible AI · Coursera · W4PPDYPHJKUR
+AI Governance & ISO 42001 Readiness · British Standards Institution · UXUS7TQ36GF4
+
+EDUCATION
+Li Po Chun United World College of Hong Kong · International Baccalaureate, Science & Mathematics · 2010–2012 · Rafael del Pino Foundation scholarship
+Shenzhen Institute of Information Technology · Computing and information-technology studies · 2016–2018 · Shenzhen, China
+
+LANGUAGES
+Spanish: native · English: C2 / full professional · Mandarin Chinese: C2 / full professional · Cantonese: conversational
