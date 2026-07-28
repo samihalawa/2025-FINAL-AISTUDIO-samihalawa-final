@@ -90,6 +90,14 @@ Damehosting / Megawebs / Megacursos foundation
 Stack: Production web systems, Linux/server operations, CI/CD, code review, web/mobile delivery, SEO/acquisition and Adobe creative tooling.
 Work: Built the engineering, operations, teaching and customer-delivery foundation behind later end-to-end AI product ownership.
 
+ACHIEVEMENTS AND RECOGNITION
+- Rafael del Pino Foundation scholarship: Named in the Foundation’s official 2012 annual report for study at Li Po Chun United World College of Hong Kong.
+- Youth Prize · II Nogarejas Poetry Competition: Awarded in 2012 for “Olvidaste una llave en mi costado”, submitted as “El arte de la fuga”, from an international field of more than 200 works.
+- Published author · ChinoTotal: Wrote and independently published a 296-page Spanish-language Mandarin course from zero to HSK2/A2 in 2024. ISBN 9798873249237.
+- Open-source engineering recognition: VUDA visual UI diagnosis reached 80 GitHub stars / 7 forks; the SMTP MCP Server reached 17 stars / 15 forks at the verified snapshot.
+- Multiplatform product delivery: Built OULANG across production web and native iOS/Android delivery, then extended the platform approach into Huatong and OUPIN.
+- Teaching and implementation archive: 111 verified lesson, meeting and project media files totalling approximately 125.83 hours, alongside 12 public Hugging Face articles.
+
 PROFESSIONAL EXPERIENCE
 
 Founder and AI Product Engineer | Agents AI Ltd | Madrid / London | July 2025-Present

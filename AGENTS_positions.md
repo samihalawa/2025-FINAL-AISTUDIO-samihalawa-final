@@ -1,6 +1,6 @@
 # INDEX
 
-CV downloads | shorter role editions omitted achievements, technologies and career breadth | publish comprehensive twelve-page role editions plus separate ATS text from one shared evidence record | do not build a CV editor or remove shared facts to shorten an edition | verify all 90 projects, technology detail, credentials, achievements, every download and rendered CV route
+CV downloads | shorter role editions omitted achievements and reused filenames stayed stale in Cloudflare | publish comprehensive twelve-page role editions at unique `_Comprehensive` URLs plus separate ATS text | do not build a CV editor, remove shared facts or reuse a cached filename for materially new content | verify all 90 projects, technology detail, credentials, achievements, exact live hashes and rendered CV route
 contact intake | Tally embeds replaced the existing native provider flow | use native contact/newsletter forms and emit conversions only after provider success | do not reintroduce embedded Tally forms or fire leads on button clicks | verify no Tally assets, provider response, rendered states and analytics reception
 measurement provider proof | missing repo IDs were treated as proof that analytics did not exist | audit live bundle, credentials and actual GA4/GTM/Ads/PostHog/Tag Gateway providers | do not infer provider state from source grep or reuse another brand's IDs | verify exact property/container/project IDs, live events and provider readback
 SEO route body and public authorship | generated heads still left crawler HTML empty and hub source labels leaked as authors | prerender every route/article and normalize public author identity | do not treat metadata-only HTML or delivery labels as indexable content | verify raw H1/article body, hydration, byline/JSON-LD agreement and live Lighthouse
@@ -21,7 +21,7 @@ public portfolio | stock imagery and invented social proof replaced source evide
 - **Superior approach:** publish six designed twelve-page comprehensive role PDFs and six plain-text ATS files generated from the CV repository’s single shared evidence record.
 - **Evidence:** `pages/CVPage.tsx`, `public/cv/variants/`, Atos transcript line 61 and the comprehensive generator in the CV repository.
 - **Triggers / verification:** CV, resume, role family, application, visual or ATS; verify every file URL/MIME, all twelve PDF pages, all 90 projects, ATS parsing and the rendered desktop/mobile route.
-- **Do / don't:** do keep visual storytelling and parsing as separate outputs; don't force one file to serve both purposes or build an editing application.
+- **Do / don't:** do keep visual storytelling and parsing as separate outputs and use unique `_Comprehensive` filenames when content materially changes; don't force one file to serve both purposes, build an editing application or rely on a long-cached legacy URL.
 
 ## 2026-07-22 — Contact intake stays native and provider-confirmed
 

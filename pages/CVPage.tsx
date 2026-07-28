@@ -48,6 +48,7 @@ const roleEditions = [
     detailEs: 'Edición superdetallada de IA, full-stack, datos, APIs y deployment, con la formación actual en Databricks Mosaic AI.'
   }
 ];
+const roleEditionFile = (key: string) => key === 'Atos_Technical' ? key : `${key}_Comprehensive`;
 
 const CVPage: React.FC<CVPageProps> = ({ edition }) => {
   const { language } = useTranslation();
@@ -78,8 +79,8 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
               <h3 className="font-display text-xl font-bold text-slate-950">{spanish ? item.es : item.en}</h3>
               <p className="mt-2 min-h-12 text-sm leading-relaxed text-slate-600">{spanish ? item.detailEs : item.detailEn}</p>
               <div className="mt-4 flex flex-wrap gap-2">
-                <a href={`/cv/variants/Sami_Halawa_CV_${item.key}.pdf`} download data-analytics-event="cv_download" className="inline-flex min-h-11 items-center gap-2 rounded-full bg-slate-900 px-4 text-sm font-bold text-white"><i className="fas fa-file-pdf"></i>PDF</a>
-                <a href={`/cv/variants/Sami_Halawa_CV_${item.key}_ATS.txt`} download data-analytics-event="cv_download" className="inline-flex min-h-11 items-center gap-2 rounded-full border border-slate-300 bg-white px-4 text-sm font-bold text-slate-700">ATS</a>
+                <a href={`/cv/variants/Sami_Halawa_CV_${roleEditionFile(item.key)}.pdf`} download data-analytics-event="cv_download" className="inline-flex min-h-11 items-center gap-2 rounded-full bg-slate-900 px-4 text-sm font-bold text-white"><i className="fas fa-file-pdf"></i>PDF</a>
+                <a href={`/cv/variants/Sami_Halawa_CV_${roleEditionFile(item.key)}_ATS.txt`} download data-analytics-event="cv_download" className="inline-flex min-h-11 items-center gap-2 rounded-full border border-slate-300 bg-white px-4 text-sm font-bold text-slate-700">ATS</a>
               </div>
             </article>)}
           </div>
