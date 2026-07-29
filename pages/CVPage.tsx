@@ -42,21 +42,21 @@ const roleEditions = [
   },
   {
     key: 'Atos_Technical',
-    en: 'Atos Technical Dossier',
-    es: 'Dossier técnico para Atos',
+    en: 'Technical AI / Full-Stack',
+    es: 'IA técnica / Full-Stack',
     detailEn: 'Detailed technical edition covering AI, full-stack delivery, data, APIs and deployment, including current Databricks, LangChain and LangGraph qualifications.',
     detailEs: 'Edición técnica detallada sobre IA, desarrollo full-stack, datos, APIs y despliegue, con formación actual en Databricks, LangChain y LangGraph.'
   }
 ];
-const roleEditionFile = (key: string) => `${key}_Comprehensive_2026-07-29-v3`;
+const roleEditionFile = (key: string) => `${key}_Comprehensive_2026-07-29-v4`;
 
 const CVPage: React.FC<CVPageProps> = ({ edition }) => {
   const { language } = useTranslation();
   const selected = edition || (language === 'es' ? 'es' : 'en');
   const spanish = selected === 'es';
-  const pdf = spanish ? '/cv/Sami_Halawa_CV_ES_2026-07-29-v3.pdf' : '/cv/Sami_Halawa_CV_2026-07-29-v3.pdf';
-  const ats = spanish ? '/cv/Sami_Halawa_CV_ES_ATS_2026-07-29-v3.txt' : '/cv/Sami_Halawa_CV_ATS_2026-07-29-v3.txt';
-  const preview = spanish ? '/cv/Sami_Halawa_CV_ES_preview_2026-07-29-v4.png' : '/cv/Sami_Halawa_CV_preview_2026-07-29-v4.png';
+  const pdf = spanish ? '/cv/Sami_Halawa_CV_ES_2026-07-29-v4.pdf' : '/cv/Sami_Halawa_CV_2026-07-29-v4.pdf';
+  const ats = spanish ? '/cv/Sami_Halawa_CV_ES_ATS_2026-07-29-v4.txt' : '/cv/Sami_Halawa_CV_ATS_2026-07-29-v4.txt';
+  const preview = spanish ? '/cv/Sami_Halawa_CV_ES_preview_2026-07-29-v5.png' : '/cv/Sami_Halawa_CV_preview_2026-07-29-v5.png';
   const description = spanish
     ? 'Una visión completa de productos, sistemas para clientes, open source, investigación y docencia, disponible en PDF y en formato ATS.'
     : 'A complete view of products, client systems, open source, research and teaching, available as a designed PDF and an ATS-ready edition.';
@@ -100,9 +100,9 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
         <section className="border-t border-slate-400 py-12 sm:py-16">
           <div className="grid gap-8 lg:grid-cols-[minmax(15rem,.55fr)_minmax(0,1.45fr)] lg:gap-16">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Ediciones por familia de rol' : 'Role-family editions'}</p>
-              <h2 className="cv-serif mt-4 text-4xl font-normal leading-tight tracking-[-0.025em] text-slate-950">{spanish ? 'Un historial completo, seis énfasis.' : 'One complete record, six emphases.'}</h2>
-              <p className="mt-5 max-w-md leading-relaxed text-slate-700">{spanish ? 'Cada edición incluye un PDF visual de doce páginas y una versión ATS. Todas conservan la experiencia completa, el stack tecnológico, los 85 proyectos y colaboraciones profesionales, las 37 credenciales, la formación y los logros; solo cambia el énfasis inicial.' : 'Each edition includes a twelve-page visual PDF and an ATS version. Every edition retains the complete experience, technology stack, all 85 professional projects and engagements, all 37 credentials, coursework and achievements; only the opening emphasis changes.'}</p>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Perfiles profesionales' : 'Professional profiles'}</p>
+              <h2 className="cv-serif mt-4 text-4xl font-normal leading-tight tracking-[-0.025em] text-slate-950">{spanish ? 'Elige el perfil más cercano a la oportunidad.' : 'Choose the profile closest to the opportunity.'}</h2>
+              <p className="mt-5 max-w-md leading-relaxed text-slate-700">{spanish ? 'Todos presentan la trayectoria completa, el stack tecnológico, 85 proyectos y colaboraciones, 41 cualificaciones verificadas y los logros principales, situando primero las capacidades más relevantes para cada función.' : 'Every profile presents the complete career history, technology stack, 85 projects and engagements, 41 verified qualifications and major achievements, with the most relevant capabilities first.'}</p>
             </div>
             <ol className="border-t border-slate-400">
               {roleEditions.map((item, index) => (
@@ -126,7 +126,7 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
           <aside className="lg:sticky lg:top-24 lg:self-start">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Formación profesional actual' : 'Current professional development'}</p>
             <h2 className="cv-serif mt-4 text-3xl font-normal leading-tight text-slate-950">{spanish ? 'IA agéntica, plataformas y gobernanza.' : 'Agentic AI, platforms and governance.'}</h2>
-            <p className="mt-5 leading-relaxed text-slate-700">{spanish ? 'He completado 37 certificados de cursos y especializaciones en Coursera. Las credenciales más recientes incluyen Building Your First AI Agent with LangChain; Deploying AI Agents: LLMs, LangGraph, and Production APIs; y la especialización Building and Deploying AI Agents with LLMs and LangChain, junto con Databricks Mosaic AI, automatización, MLOps y gobernanza de IA.' : 'I have completed 37 Coursera course and specialization certificates. The newest credentials include Building Your First AI Agent with LangChain; Deploying AI Agents: LLMs, LangGraph, and Production APIs; and the Building and Deploying AI Agents with LLMs and LangChain Specialization, alongside Databricks Mosaic AI, automation, MLOps and AI governance.'}</p>
+            <p className="mt-5 leading-relaxed text-slate-700">{spanish ? 'Mis 41 cualificaciones verificadas abarcan Agentic AI Engineering de Edureka, Databricks Mosaic AI, automatización con n8n de LearnKartS, arquitectura y operación de sistemas de IA de Board Infinity, gobernanza e ISO 42001 del British Standards Institution y métodos cuantitativos de EDHEC Business School.' : 'My 41 verified qualifications span Edureka’s Agentic AI Engineering, Databricks Mosaic AI, LearnKartS n8n automation, Board Infinity AI systems architecture and operations, British Standards Institution governance and ISO 42001, and quantitative methods from EDHEC Business School.'}</p>
           </aside>
           <figure>
             <div className="border border-slate-400 bg-white p-2 shadow-[0_28px_70px_-42px_rgba(15,23,42,.55)] sm:p-4">

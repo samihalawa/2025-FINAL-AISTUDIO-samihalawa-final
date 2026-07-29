@@ -3,19 +3,19 @@ Founding AI Engineer · Head of AI · AI Product & Platform Lead
 
 Madrid, Spain · EU work authorisation · +34 679 794 037 · sami@oulang.ai · samihalawa.com · linkedin.com/in/samihalawa · github.com/samihalawa
 
-ROLE-SPECIFIC PROFILE
+PROFILE
 Founder-engineer who turns ambiguous opportunities into operating AI products. Full-cycle ownership across product strategy, agent and LLM workflows, data and APIs, web/mobile delivery, infrastructure, analytics, monetisation and customer operations.
 
-ROLE EMPHASIS
+CORE EXPERTISE
 Leadership & product: Zero-to-one architecture, product strategy, customer discovery, technical direction, client delivery, mentoring
 AI systems: Multi-agent orchestration, MCP, tool/function calling, RAG, structured outputs, model routing and evaluation loops
 Engineering: Python, FastAPI, TypeScript, Node.js, React, Next.js, REST APIs, SQL, background jobs and mobile delivery
 Operations: Docker, Linux, CI/CD, Cloudflare, Coolify, logs, monitoring, analytics, payments and cost control
 
-DETAILED TECHNOLOGY MATRIX
+TECHNOLOGY AND DELIVERY
 Agentic AI & orchestration
 Technologies: LangChain; LangGraph; MCP; tool/function calling; multi-agent collaboration; CrewAI; Agno; Mem0; PydanticAI; structured outputs; model routing; prompt and evaluation loops; production APIs
-Applied in: AutoClient, communications agents, VUDA, SMTP MCP, WhatsApp/GOWA and certified applied agent-system coursework
+Applied in: AutoClient, communications agents, VUDA, SMTP MCP, WhatsApp/GOWA and production agent workflows
 
 Retrieval, documents & multimodal AI
 Technologies: RAG; OCR; document ingestion; chunking/retrieval workflows; image-text review; computer vision; human-review checkpoints
@@ -33,9 +33,9 @@ Web, mobile & interface delivery
 Technologies: React; Next.js; Tailwind CSS; Expo/React Native; SwiftUI; Ionic; Capacitor; responsive web; native/store delivery
 Applied in: OULANG, Huatong, OUPIN, AutoDate, Tasky, Umbramed and more than 70 earlier web/mobile builds
 
-Automation & communications
-Technologies: n8n; MCP; email/SMTP; WhatsApp; Telnyx; voice-agent state; CRM/ERP integration; Apify; Crawlab; data enrichment
-Applied in: AutoClient, Tekçe property leads, GOWA, SMTP MCP, voice tooling, outreach and operational automations
+Voice AI, automation & communications
+Technologies: Telnyx; voice APIs; telephony; multilingual voice agents; live CRM/database context; post-call notes and follow-up; LangChain; LangGraph; n8n; MCP; email/SMTP; WhatsApp
+Applied in: OULANG premium-user voice workflows, AutoClient, GOWA, SMTP MCP, outreach and operational automations
 
 Cloud, delivery & operations
 Technologies: Docker; Linux; CI/CD; Cloudflare; Coolify; Hetzner; working familiarity with AWS, Azure and GCP; deployment; logs; monitoring; cost control
@@ -49,14 +49,14 @@ Media, education & technical communication
 Technologies: FFmpeg; Sharp; After Effects; course design; live builds; technical writing; Spanish/English/Mandarin delivery
 Applied in: SONMADE, a 373-video public catalogue, ChinoTotal and more than 125 recorded hours of AI instruction and technical workshops
 
-DETAILED TECHNICAL CASE STUDIES
+TECHNICAL CASE STUDIES
 OULANG / Huatong / OUPIN
 Stack: TypeScript, React/Next.js, Expo/mobile delivery, SQL, payments, analytics, Cloudflare and containerised deployment.
 Work: Designed and operated shared marketplace capabilities across identity, listings, search, messaging, monetisation, multilingual delivery and web/native release workflows.
 
-AutoClient & communication agents
-Stack: Python/FastAPI, TypeScript/Node.js, MCP, model APIs, structured outputs, CRM, email, WhatsApp, Telnyx/voice, webhooks and background jobs.
-Work: Built research, enrichment, scoring, personalised outreach, conversation-state and human-handoff workflows across multiple channels.
+AutoClient & voice-agent systems
+Stack: Python/FastAPI, TypeScript/Node.js, Telnyx and custom voice APIs, LangChain/LangGraph, MCP, CRM/database context, email, WhatsApp, webhooks and background jobs.
+Work: Built multilingual outbound calling workflows with personalised live context, conversational state, automated post-call notes, CRM follow-up and human handoff across voice and messaging channels.
 
 IWAKY / AutoPricing
 Stack: Marketplace data collection, Apify/Crawlab-style actors, product matching, price history, WhatsApp quote analysis, SQL/ERP inputs, dashboards and PDF reporting.
@@ -80,7 +80,7 @@ Work: Designed a workflow to turn course PDFs and unstructured source material i
 
 PIME.ai / governance / instruction
 Stack: EU AI Act applicability and literacy workflows, ISO 42001/23894 concepts, impact assessment, RAG/agent architecture and multilingual curricula.
-Work: Combined implementation-first instruction with working governance products and current professional education in responsible AI and operational controls.
+Work: Combined implementation-first instruction with governance products, responsible-AI methods and operational controls.
 
 SONMADE & media systems
 Stack: React/TypeScript, FFmpeg and Sharp; motion, colour, edge/text and full-screen-frame scoring.
@@ -98,17 +98,17 @@ ACHIEVEMENTS AND RECOGNITION
 - Multiplatform product delivery: Built OULANG across production web and native iOS/Android delivery, then extended the platform approach into Huatong and OUPIN.
 - Technical teaching and communication: Delivered more than 125 recorded hours of AI instruction, product workshops and technical implementation sessions, alongside 12 public Hugging Face articles.
 
-COMPLETE PROJECT REGISTER — 85 PROJECTS AND ENGAGEMENTS
-1. RealSintra: Early public software project from the 2023 AI-product exploration period.
+PROJECTS AND PROFESSIONAL ENGAGEMENTS — 85
+1. RealSintra software product: Early software product combining web development with AI-assisted functionality.
 2. Mi ChatGPT React Español: Spanish-language React interface for experimenting with conversational AI.
-3. OpenAI/GPT files and experiments: OpenAI and GPT file-processing experiments developed as public technical artifacts.
+3. OpenAI / GPT document tools: OpenAI and GPT file-processing tools for structured document workflows.
 4. DameSender continuity: Email delivery and outreach tooling that established an early automation product line.
 5. Aprende IA / IA Megacursos: AI education and course-production work supported by a 373-video public technical catalogue.
 6. MenuEditorElectron: Electron desktop utility for editing and managing structured menu content.
 7. AI Absolut and prompt research: Applied prompt, system-instruction and generative-AI research across GitHub and Hugging Face.
 8. Email crawler and lead tooling: Web crawling, lead research and email-automation utilities for commercial workflows.
 9. macOS Optimizer: Open-source macOS storage and maintenance utility with 13 stars and 1 fork.
-10. CloudflaredMe: Developer-infrastructure utility for simplifying Cloudflare Tunnel workflows.
+10. CloudflaredMe: Cloudflare Tunnel utility for faster local-to-public development workflows.
 11. AutoCrypto: Crypto automation and progressive-web-app product exploration.
 12. Audio and transcription tooling: Speech, audio-processing and transcription utilities used across later automation workflows.
 13. KittyTasks / FocusOnTask: Productivity experiments for task management, focus and lightweight personal workflows.
@@ -121,7 +121,7 @@ COMPLETE PROJECT REGISTER — 85 PROJECTS AND ENGAGEMENTS
 20. EyeUnit / Fernando Ly medical AI: Commercial medical-AI, OCT and market-intelligence collaboration with EyeUnit / Fernando Ly.
 21. Light Funnels AI training: AI training engagement involving applied automation and commercial workflows.
 22. Hugging Face technical writing: Technical writing on AI, prompting, automation and agent systems for Hugging Face.
-23. Colab research archive: Research collection containing more than 100 Colab files and at least 58 named notebooks.
+23. Applied AI research: Applied research across multimodal AI, model evaluation, automation and agent-system engineering.
 24. SORT / SortBot: Course-PDF digitisation workflow with structured lessons, chatbot support and web publishing.
 25. AutoHSK and language-learning tools: AI-assisted Mandarin and HSK learning tools connecting language expertise with software.
 26. Blog and content system work: Technical publishing systems for articles, product education and searchable web content.
@@ -138,14 +138,14 @@ COMPLETE PROJECT REGISTER — 85 PROJECTS AND ENGAGEMENTS
 37. Open-source MCP toolchain: Concentrated open-source release cycle for MCP, browser, shell, email and agent integrations.
 38. Agents AI Ltd: AI product and consulting company supporting platform, automation and client-delivery work.
 39. Lanzadera ecosystem participation: AutoClient participation in Lanzadera’s startup and technology-partner ecosystem.
-40. APOLO / AutoMedical product development: Medical-AI product packaging for learning, multimodal review and professional workflows.
+40. APOLO / AutoMedical product development: Medical-AI product development for learning, multimodal review and professional workflows.
 41. Agent tools and operating utilities: Reusable utilities for automation, memory, deployment, browser control and developer operations.
 42. AutoRad: Radiology product concept for image review, structured reporting and clinical collaboration.
 43. Personal and company site work: Engineering and publishing work across personal, portfolio and company websites.
 44. WhatsApp MCP / automation: WhatsApp API and MCP integrations for messaging, history, media and operational automation.
-45. IWAKY / AutoPricing: €35,000 B2C/B2B pricing platform scope covering marketplace intelligence, WhatsApp quotes, ERP commerce and reporting.
-46. INTLAW legal AI: Legal-AI demonstration covering prospecting, multichannel intake and multi-agent case analysis.
-47. San Martín HR automation proposal: HR automation proposal covering birthdays, timesheets, talent search and employee-portal workflows.
+45. IWAKY / AutoPricing: B2C/B2B pricing platform covering marketplace intelligence, WhatsApp quotes, ERP commerce and reporting.
+46. INTLAW legal AI: Designed a legal-AI workflow covering prospecting, multichannel intake and multi-agent case analysis.
+47. San Martín HR automation proposal: Designed HR automation covering birthdays, timesheets, talent search and employee-portal workflows.
 48. Umbramed / Valerio: Technical leadership for an Ionic/Capacitor medical-education product, PWA delivery, data workflows and payments.
 49. AutoTinder / AutoDate design generation: Product design and automation work that evolved from AutoTinder concepts into AutoDate.
 50. Cross-sector prototype portfolio: Prototype portfolio spanning proposals, commerce, health, messaging, pricing, media and operations.
@@ -154,17 +154,17 @@ COMPLETE PROJECT REGISTER — 85 PROJECTS AND ENGAGEMENTS
 53. 15-hour AI-agents course: Fifteen-hour AI-agent curriculum covering tools, memory, multi-agent systems, RAG and deployment.
 54. OULANG: Multilingual marketplace and local-life platform for Chinese communities across web, iOS and Android.
 55. OULANG monetisation and analytics: OULANG monetisation, analytics, subscriptions, payments and commercial-operations workstream.
-56. Umbramed product development: Ongoing Umbramed product, PWA, medical-data, connector, payment and application work.
+56. Umbramed product development: Umbramed product development spanning PWA delivery, medical data, connectors, payments and mobile applications.
 57. Skills and tooling publishing: Publication of reusable agent skills, browser workflows and MCP infrastructure.
 58. GOWA: WhatsApp automation and API platform for operational messaging workflows.
 59. Notion–Drive synchronization: Open-source synchronization between Notion workspaces and Google Drive.
 60. OULANG web, native and monetisation: OULANG web and native development spanning marketplace flows, payments, SEO, analytics and store delivery.
 61. Huatong: Multilingual employment and local-services platform for Chinese users across European markets.
-62. InfoHuaxin: Client and product work spanning a public web surface, data systems and operational tooling.
+62. InfoHuaxin: Customer-facing web product, data integrations and operational tooling.
 63. OUPIN: Multilingual consumer and property-discovery platform using shared marketplace infrastructure.
 64. Crawlab / Apify actor fleet: Crawlab and Apify data-collection actors with central storage and downstream product consumers.
-65. Codex Chronicle / Screenpipe memory workflows: Persistent cross-session memory and activity-reconstruction workflows for AI-assisted development.
-66. Telnyx voice/communications tools: Telnyx integrations for telephony, voice-agent state and communications tooling.
+65. AI development context tools: Context-management and activity-analysis tools supporting complex AI-assisted development workflows.
+66. Telnyx voice/communications tools: Telnyx and custom Voice API integrations for telephony, agent state, real-time business context, post-call outputs and reusable communications tooling.
 67. Desktop Commander and operations skills: macOS, browser, CRM and deployment automation utilities for technical operations.
 68. VibraCode: Deployed web product and development environment for rapid application building.
 69. AutoMedical platform: Medical-AI platform for multimodal learning and structured workflows.
@@ -175,15 +175,15 @@ COMPLETE PROJECT REGISTER — 85 PROJECTS AND ENGAGEMENTS
 74. SONMADE content factory: React/TypeScript, FFmpeg and Sharp prototype for scene analysis and video-highlight extraction.
 75. AutoDate web and TestFlight: Dating product with a live web experience and an iOS build distributed through TestFlight.
 76. Recipe intelligence platform with José Olivares: Product discovery and architecture for digitising, enriching, publishing and illustrating professional recipes.
-77. Tekçe / OULANG-AutoClient property lead-generation proposal: Property lead-generation proposal and demonstration for qualified Chinese buyers, CRM transparency and AI outreach.
+77. Tekçe / OULANG-AutoClient property growth: Designed a property-growth workflow for qualified Chinese buyers, transparent CRM handling and personalised AI outreach.
 78. OULANG native parity and store delivery: Web-to-native feature parity, marketplace, payment and store-delivery work for the current OULANG application.
-79. EA Housing / Radio Inter proposal package: Modular website and product proposal package for EA Housing and Radio Inter.
+79. EA Housing / Radio Inter digital architecture: Designed modular web and product architecture for EA Housing and Radio Inter.
 80. Chinese soundscapes, tutoring materials, lessons and poetry audio: Mandarin soundscapes, vocabulary materials, tutoring exercises and Spanish poetry audio.
 81. PIME.ai EU AI Act compliance pack: Multilingual EU AI Act service covering applicability, risk analysis, AI literacy and implementation roadmaps.
 82. ClipKing / UseraLegal / Aida Facturas / IRSushi: Additional product initiatives including ClipKing, UseraLegal, Aida Facturas and IRSushi.
 83. EVA AI/admin automation training consultation: AI and administration-automation training consultation covering Copilot, browser workflows and task systems.
 84. Mike Lepcsik lead-generation/business-automation consulting: Lead-generation and business-automation consulting covering n8n, Close CRM, enrichment and MCP architecture.
-85. SOLMADE fashion AI and commerce proposal: Fashion and commerce product discovery spanning branding, web/app delivery, SEO, AI imagery and advertising.
+85. SOLMADE fashion AI and commerce strategy: Fashion and commerce product strategy spanning branding, web/app delivery, SEO, AI imagery and advertising.
 
 PROFESSIONAL EXPERIENCE
 
@@ -191,7 +191,7 @@ Founder and AI Product Engineer | Agents AI Ltd | Madrid / London | July 2025-Pr
 - Own product discovery, architecture, implementation, deployment, analytics, monetisation and operational handover across founder-led and B2B systems.
 - Built OULANG (欧浪AI), a multilingual marketplace and local-life platform for Chinese communities in Spain, across web, iOS and Android delivery.
 - Extended the product ecosystem into Huatong for Chinese communities across Europe, OUPIN for AI-assisted discovery and PIME.ai for productised AI services.
-- Built AutoClient and research, enrichment, CRM, email, WhatsApp and voice-agent systems; published reusable MCP and developer tooling, including a property-lead generation demonstration for Tekçe.
+- Built AutoClient and OULANG voice-agent workflows for multilingual outbound conversations, using live CRM and database context, automated post-call notes and follow-up updates; integrated Telnyx, email, WhatsApp and reusable MCP tooling.
 - Delivered pricing-intelligence and decision-reporting workflows combining marketplace data, product matching, price history and inventory or ERP inputs.
 - Prototyped multimodal medical-image review, longitudinal tracking and structured reporting workflows with human review built into the process.
 
@@ -225,7 +225,7 @@ LIVE AND CONTINUING PRODUCTS
 - OULANG, 2026-present: live Chinese-diaspora marketplace/local-life platform for Spain; web plus continuing native/store work. oulang.ai
 - Huatong, 2026-present: live Chinese-first employment, housing, classifieds and local-services platform across European markets. huatong.eu
 - AutoDate, 2026: live web product and iOS distribution through TestFlight, with profile, discovery and matching workflows. autodate.ai
-- AutoClient, 2024-present: agentic research, enrichment, scoring, outreach, conversation tracking and CRM automation, including a qualified Chinese property-buyer lead-generation demonstration for Tekçe.
+- AutoClient / OULANG voice agents, 2024-present: multilingual outbound voice workflows with personalised database context, conversational call handling, automated notes and CRM follow-up, integrated with research, enrichment, email and WhatsApp automation.
 - PIME.ai EU AI Act pack, 2026: multilingual applicability/risk analysis, AI-literacy training and roadmap product with delivery and campaign infrastructure. pime.ai
 - AutoMedical, 2025-2026: medical-learning and multimodal workflow product for image review, structured reporting and professional education with human oversight. automedical.ai
 - Tasky, 2026: native SwiftUI Google Tasks client for macOS, iOS and iPadOS with quick capture, focus, widgets, extensions, search and sync.
@@ -233,7 +233,7 @@ LIVE AND CONTINUING PRODUCTS
 
 CLIENT AND COLLABORATION SYSTEMS
 - IWAKY / AutoPricing, 2025-2026: signed EUR35,000 scope covering B2C/B2B pricing, marketplace intelligence, product matching, WhatsApp quote analysis, ERP commerce and dashboards.
-- InfoHuaxin, 2025-2026: connected product and client work spanning a live public surface, data systems and operational tooling. infohuaxin.es
+- InfoHuaxin, 2025-2026: developed the customer-facing web product, data integrations and operational tooling. infohuaxin.es
 - Umbramed / Valerio, 2025-2026: technical-lead work on Ionic/Capacitor study tools, product roadmap, Netlify delivery, Stripe payments and EIC funding application work. umbramed.es
 - INTLAW / Ignacio, 2025-2026: legal-AI workflow covering prospecting, chatbot/WhatsApp/phone intake and multi-agent case-file analysis.
 - Scope / EyeUnit / Fernando Ly, 2024-2025: account-list merging, cross-sell discovery and clinical-market scoring connected to OCT and medical-AI research.
@@ -247,8 +247,8 @@ OPEN SOURCE AND OPERATING INFRASTRUCTURE
 - SMTP MCP Server: email transport and mailbox integration; 17 stars and 15 forks. github.com/samihalawa/smtp-mcp-server
 - GOWA / WhatsApp automation: Go messaging, history and media APIs for operational agents.
 - Notion-Drive Sync: open-source synchronization between Notion workspaces and Google Drive; 3 stars. github.com/samihalawa/notion-drive-sync
-- Telnyx voice tools: telephony, voice-agent state and reusable communications integrations.
-- Codex Chronicle / Screenpipe: cross-session reconstruction, persistent visual memory and analysis for multi-agent work on macOS.
+- Telnyx voice tools: telephony and Voice API integrations covering call state, real-time business context, conversational workflows, post-call outputs and reusable communications tooling.
+- AI development context tools: context management and activity analysis for complex development workflows on macOS.
 - macOS Optimizer: public open-source utility with 13 stars and 1 fork.
 - Crawlab / Apify actor infrastructure: scraping actors, central storage and data consumers across OULANG, Huatong and OUPIN.
 - Wider public tool archive: 249 non-fork repositories spanning MCP, browser/shell/diff tools, automation, messaging, voice, data and developer workflow.
@@ -269,7 +269,7 @@ CHRONOLOGICAL PROJECT INDEX | 2023-2026
 2025 January-March: SORT/SortBot; AutoHSK; blog/content systems; SMTP MCP; shell/browser/diff tools; ophthalmology workflows.
 2025 April-June: APOLO; VUDA; AutoTutorial/MentorIA/PerfectPrompter; Scope; Fernando Ly medical-AI work; AutoClient expansion; MCP wave; Agents AI Ltd; Lanzadera ecosystem participation.
 2025 July-December: AutoMedical product development; agent operating utilities; AutoRad workflow concept; personal/company sites; WhatsApp MCP; IWAKY/AutoPricing; INTLAW; San Martín; Umbramed; AutoDate/AutoTinder design; cross-sector prototype portfolio; poetry site; Lemon AI customization/deployment; 15-hour AI-agent course.
-2026 January-June: OULANG; GOWA; Notion-Drive Sync; Huatong; InfoHuaxin; OUPIN; Crawlab/Apify actors; Chronicle/Screenpipe; Telnyx tools; Desktop Commander utilities; VibraCode; AutoMedical; company/publishing surfaces; Tasky; AI tutoring/ITE/TusClases operations; OULANG World Cup module; SONMADE.
+2026 January-June: OULANG; GOWA; Notion-Drive Sync; Huatong; InfoHuaxin; OUPIN; Crawlab/Apify actors; AI development context tools; Telnyx tools; Desktop Commander utilities; VibraCode; AutoMedical; company/publishing sites; Tasky; AI tutoring/ITE/TusClases operations; OULANG World Cup module; SONMADE.
 2026 July: AutoDate TestFlight; recipe intelligence; Tekçe/OULANG-AutoClient property lead generation; OULANG native parity; EA Housing/Radio Inter product design; Chinese soundscapes/tutoring/poetry audio; PIME AI Act pack; additional local products.
 
 OPEN SOURCE, WRITING AND TEACHING
@@ -283,27 +283,36 @@ EDUCATION
 Li Po Chun United World College of Hong Kong | International Baccalaureate, Science and Mathematics | 2010-2012 | Rafael del Pino Foundation scholarship
 Shenzhen Institute of Information Technology | Computing and information-technology studies | 2016-2018 | Shenzhen, China
 
-SELECTED CREDENTIALS
+SELECTED QUALIFICATIONS
 Microsoft Certified: Azure AI Fundamentals (AI-900)
 Adobe Certified Expert, After Effects
-Databricks Mosaic AI | Coursera | Completed Jul 2026 | Credential ID RRXO8HSACR29
-Building Your First AI Agent with LangChain | Edureka via Coursera | Completed Jul 28, 2026 | Credential ID 33RUZI5SP0ZU
-Designing Multi-Agent Systems: Collaboration and Workflows | Board Infinity via Coursera | Completed Jul 2026 | Credential ID ORYP5BAAR0KO
-AI Agent Architecture: Reasoning, Memory, and LangGraph | Board Infinity via Coursera | Completed Jul 2026 | Credential ID SO0LO9NOCFXF
-Deploying AI Agents: LLMs, LangGraph, and Production APIs | Board Infinity via Coursera | Completed Jul 28, 2026 | Credential ID WFOU01N1PLP7
-Building and Deploying AI Agents with LLMs and LangChain Specialization | Board Infinity via Coursera | Completed Jul 28, 2026 | Credential ID V7QS07EJVS93
-AI Automation Engineer with n8n | LearnKartS via Coursera | Completed Jul 2026 | Credential ID YUNCHF6IXQJQ
-Data Privacy, Ethics, and Responsible AI | Coursera | Completed Jul 2026 | Credential ID W4PPDYPHJKUR
-Foundations of AI Governance and Responsible Development | LearnQuest via Coursera | Completed Jul 2026 | Credential ID 8STVBR62T6CY
-Managing AI Systems: Development, Deployment, and Governance Specialization | Board Infinity via Coursera | Completed Jul 2026 | Credential ID HZ7XDA9WCE2I
-AI Governance & ISO 42001 Readiness for GRC, Audit, & Legal | British Standards Institution via Coursera | Completed Jul 2026 | Credential ID UXUS7TQ36GF4
-Investment Management with Python and Machine Learning | EDHEC Business School via Coursera | Completed Jul 2026 | Credential ID EGOPNC45Z7X4
+Databricks Mosaic AI | Course certificate | 2026 | Credential ID RRXO8HSACR29
+Building Your First AI Agent with LangChain | Edureka | 2026 | Credential ID 33RUZI5SP0ZU
+Applied Agentic AI Pipelines with LangChain | Edureka | 2026 | Credential ID Z9JGKO7KWQ6A
+Multi-Agent Systems with LangGraph | Edureka | 2026 | Credential ID C8KPTX6U5B6C
+Developing MCP-Powered Agentic AI Systems | Edureka | 2026 | Credential ID PEGPNFWLRNHG
+Agentic AI Engineering Specialization | Edureka | 2026 | Credential ID GZ2Q50QNLE6N
+Designing Multi-Agent Systems: Collaboration and Workflows | Board Infinity | 2026 | Credential ID ORYP5BAAR0KO
+AI Agent Architecture: Reasoning, Memory, and LangGraph | Board Infinity | 2026 | Credential ID SO0LO9NOCFXF
+Deploying AI Agents: LLMs, LangGraph, and Production APIs | Board Infinity | 2026 | Credential ID WFOU01N1PLP7
+Building and Deploying AI Agents with LLMs and LangChain Specialization | Board Infinity | 2026 | Credential ID V7QS07EJVS93
+AI Automation Engineer with n8n | LearnKartS | 2026 | Credential ID YUNCHF6IXQJQ
+Data Privacy, Ethics, and Responsible AI | Specialization certificate | 2026 | Credential ID W4PPDYPHJKUR
+Foundations of AI Governance and Responsible Development | LearnQuest | 2026 | Credential ID 8STVBR62T6CY
+Managing AI Systems: Development, Deployment, and Governance Specialization | Board Infinity | 2026 | Credential ID HZ7XDA9WCE2I
+AI Governance & ISO 42001 Readiness for GRC, Audit, & Legal | British Standards Institution | 2026 | Credential ID UXUS7TQ36GF4
+Investment Management with Python and Machine Learning | EDHEC Business School | 2026 | Credential ID EGOPNC45Z7X4
 
-COMPLETED COURSERA COURSEWORK — JULY 2026
-Databricks Mosaic AI | Coursera | Course certificate | Credential ID RRXO8HSACR29
-Building Your First AI Agent with LangChain | Edureka | Course certificate | Credential ID 33RUZI5SP0ZU
+PROFESSIONAL QUALIFICATIONS — 2026
+Databricks Mosaic AI | Course certificate | Credential ID RRXO8HSACR29
 
-Building and Deploying AI Agents with LLMs and LangChain | Board Infinity via Coursera | Specialization certificate | Credential ID V7QS07EJVS93
+Agentic AI Engineering | Edureka | Specialization certificate | Credential ID GZ2Q50QNLE6N
+- Building Your First AI Agent with LangChain | Credential ID 33RUZI5SP0ZU
+- Applied Agentic AI Pipelines with LangChain | Credential ID Z9JGKO7KWQ6A
+- Multi-Agent Systems with LangGraph | Credential ID C8KPTX6U5B6C
+- Developing MCP-Powered Agentic AI Systems | Credential ID PEGPNFWLRNHG
+
+Building and Deploying AI Agents with LLMs and LangChain | Board Infinity | Specialization certificate | Credential ID V7QS07EJVS93
 - AI Agent Architecture: Reasoning, Memory, and LangGraph | Credential ID SO0LO9NOCFXF
 - Designing Multi-Agent Systems: Collaboration and Workflows | Credential ID ORYP5BAAR0KO
 - Deploying AI Agents: LLMs, LangGraph, and Production APIs | Credential ID WFOU01N1PLP7
@@ -314,7 +323,7 @@ Investment Management with Python and Machine Learning | EDHEC Business School |
 - Python and Machine Learning for Asset Management | Credential ID XWMR6R7BFW7F
 - Python and Machine-Learning for Asset Management with Alternative Data Sets | Credential ID 5SL26L5XFIRY
 
-Data Privacy, Ethics, and Responsible AI | Coursera | Specialization certificate
+Data Privacy, Ethics, and Responsible AI | Specialization certificate
 - Building Trust: Ethics for AI-powered Chatbots | Credential ID KHC24ZIMD4UP
 - Fundamental Rights Impact Assessment for GenAI Projects | Credential ID NWLPDHLE4SQA
 - User Awareness and Education for Generative AI | Credential ID 6ZH2XSY4X1VY
@@ -322,7 +331,7 @@ Data Privacy, Ethics, and Responsible AI | Coursera | Specialization certificate
 - Data Privacy and Protection Standards | Credential ID 69T2HK10MCBW
 - AI and European Union Law: Navigating Regulatory Compliance | Credential ID CXKRGYMZBWL6
 
-AI Automation Engineer with n8n | LearnKartS via Coursera | Specialization certificate
+AI Automation Engineer with n8n | LearnKartS | Specialization certificate
 - Workflow Automation with n8n: Logic, Data & Error Handling | Credential ID 0U3L8YXLIGLK
 - Integrate AI Models in n8n: Prompt Engineering & Outputs | Credential ID SYLD77A55WBO
 - Build AI Agents & Secure API Integrations with n8n | Credential ID SAFAGPUKDIL7
@@ -331,14 +340,14 @@ AI Automation Engineer with n8n | LearnKartS via Coursera | Specialization certi
 - Multi-Agent Systems Design: AI Customer Support with n8n | Credential ID MJX0L3XJ82K2
 - Deploy, Test & Secure AI Workflows with n8n | Credential ID LPN041O3NGGZ
 
-Foundations of AI Governance and Responsible Development | LearnQuest via Coursera | Completed Jul 27, 2026 | Grade 98.33% | Credential ID 8STVBR62T6CY
+Foundations of AI Governance and Responsible Development | LearnQuest | 2026 | Credential ID 8STVBR62T6CY
 
-Managing AI Systems: Development, Deployment, and Governance | Board Infinity via Coursera | Specialization certificate
+Managing AI Systems: Development, Deployment, and Governance | Board Infinity | Specialization certificate
 - AI Systems Design: RAG Pipelines and LLM Architecture | Credential ID P9ZUHTTKQ546
 - MLOps and LLMOps: Deploying and Scaling AI in Production | Credential ID 5XRHG7TPQ6IR
 - AI Risk and Compliance: Audit and Governance Foundations | Credential ID N6UE7DP7T104
 
-AI Governance & ISO 42001 Readiness for GRC, Audit, & Legal | British Standards Institution via Coursera | Specialization certificate
+AI Governance & ISO 42001 Readiness for GRC, Audit, & Legal | British Standards Institution | Specialization certificate
 - ISO/IEC 22989:2023 An Introduction to the Fundamentals of AI | Credential ID 0YTL5PHGC0O5
 - AI System Impact Assessment Guidance | Credential ID JG2DXNZ66KGO
 - AI Management Essentials: Integrating ISO 42001 & ISO 23894 | Credential ID I61HD0HLKVAB
@@ -354,5 +363,5 @@ Cantonese: conversational
 TARGET ROLES
 Founding AI Engineer | AI Product Engineer | AI Platform Lead | Head of AI | Staff AI Engineer | Technical Product Lead
 
-PORTFOLIO EDITIONS
-This photo-free edition is optimised for applicant-tracking systems. The visual master and searchable portfolio of 85 projects and engagements are available at samihalawa.com/cv and samihalawa.com/projects.
+PORTFOLIO
+samihalawa.com/cv | samihalawa.com/projects | linkedin.com/in/samihalawa | github.com/samihalawa

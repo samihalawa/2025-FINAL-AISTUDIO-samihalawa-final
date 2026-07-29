@@ -18,7 +18,7 @@ PORTFOLIO PÚBLICO | 19 JULIO 2026
 CAPACIDADES PRINCIPALES
 IA agéntica y LLM: orquestación multiagente, MCP, tool/function calling, RAG, salidas estructuradas, enrutado de modelos, ciclos de prompts/evaluación, OpenAI, Anthropic, Gemini y modelos abiertos.
 Ingeniería de producto IA: Python, FastAPI, TypeScript, Node.js, React, Next.js, Tailwind, APIs REST, SQL, tareas en segundo plano, OCR/documentos, web, móvil, pagos y analítica.
-Automatización e integraciones: investigación/enriquecimiento, CRM y ERP, email, WhatsApp, mensajería y voz, datos web, informes de decisión, n8n.
+IA de voz y comunicaciones: Telnyx y APIs de voz personalizadas, telefonía, agentes multilingües, contexto CRM y de base de datos en directo, notas y seguimiento tras llamada, WhatsApp, email y n8n.
 Cloud y operaciones: Docker, Linux, CI/CD, Cloudflare, experiencia con AWS/Azure/GCP, Hetzner, Coolify, despliegue, logs, monitorización, analítica y costes.
 Liderazgo y comunicación: estrategia de producto, arquitectura, discovery, dirección técnica, entrega a cliente, mentoring, diseño de cursos y comunicación ejecutiva en español, inglés y mandarín.
 
@@ -28,7 +28,7 @@ Fundador e Ingeniero de Producto IA | Agents AI Ltd | Madrid / Londres | Julio 2
 - Responsable de discovery, arquitectura, implementación, despliegue, analítica, monetización y entrega operativa en productos propios y B2B.
 - Construí OULANG (欧浪AI), un marketplace multilingüe y plataforma de vida local para comunidades chinas en España, con entrega web, iOS y Android.
 - Extendí el ecosistema a Huatong para comunidades chinas en Europa, OUPIN para discovery asistido y PIME.ai para servicios de IA productizados.
-- Construí AutoClient y sistemas de investigación, enriquecimiento, CRM, email, WhatsApp y agentes de voz; publiqué herramientas MCP reutilizables, incluida una demostración de generación de leads inmobiliarios para Tekçe.
+- Construí AutoClient y flujos de agentes de voz para OULANG orientados a conversaciones salientes multilingües, con contexto CRM y de base de datos en directo, notas automáticas y actualización del seguimiento; integré Telnyx, email, WhatsApp y herramientas MCP reutilizables.
 - Entregué flujos de inteligencia de precios e informes de decisión con marketplaces, matching, histórico de precios e inventario o ERP.
 - Prototipé flujos multimodales de revisión de imagen médica, seguimiento longitudinal e informes estructurados con revisión humana integrada.
 
@@ -62,7 +62,7 @@ PRODUCTOS ACTIVOS Y CONTINUOS
 - OULANG, 2026-actualidad: marketplace y vida local para la diáspora china en España; web activa y trabajo nativo/tienda continuo. oulang.ai
 - Huatong, 2026-actualidad: empleo, vivienda, clasificados y servicios locales para comunidades chinas en Europa. huatong.eu
 - AutoDate, 2026: producto web activo y distribución iOS mediante TestFlight, con perfiles, descubrimiento y matching. autodate.ai
-- AutoClient, 2024-actualidad: investigación agéntica, enriquecimiento, scoring, outreach, conversación y CRM, incluida una demostración de generación de compradores inmobiliarios chinos cualificados para Tekçe.
+- AutoClient / agentes de voz OULANG, 2024-actualidad: flujos de voz salientes multilingües con contexto personalizado de base de datos, conversación automatizada, notas y seguimiento en CRM, integrados con investigación, enriquecimiento, email y WhatsApp.
 - PIME.ai — cumplimiento de la Ley de IA, 2026: análisis multilingüe de aplicabilidad y riesgo, alfabetización en IA y hoja de ruta con infraestructura de entrega y campaña. pime.ai
 - AutoMedical, 2025-2026: producto de aprendizaje médico y flujos multimodales para revisión de imagen, informes estructurados y formación profesional con supervisión humana. automedical.ai
 - Tasky, 2026: cliente SwiftUI Google Tasks para macOS, iOS y iPadOS con captura rápida, foco, widgets, extensiones, búsqueda y sincronización.
@@ -84,8 +84,8 @@ OPEN SOURCE E INFRAESTRUCTURA OPERATIVA
 - SMTP MCP Server: transporte de correo y buzón para agentes; 17 estrellas y 15 forks. github.com/samihalawa/smtp-mcp-server
 - GOWA / automatización WhatsApp: APIs Go de mensajería, histórico y medios para agentes operativos.
 - Notion-Drive Sync: sincronización open source entre espacios de Notion y Google Drive; 3 estrellas. github.com/samihalawa/notion-drive-sync
-- Herramientas de voz con Telnyx: telefonía, estado de agentes de voz e integraciones reutilizables de comunicaciones.
-- Codex Chronicle / Screenpipe: reconstrucción entre sesiones, memoria visual persistente y análisis multiagente en macOS.
+- Herramientas de voz con Telnyx: telefonía e integraciones de Voice API con estado de llamada, contexto de negocio en tiempo real, flujos conversacionales, resultados posteriores a la llamada y herramientas reutilizables.
+- Herramientas de contexto para desarrollo con IA: gestión de contexto y análisis de actividad para flujos complejos en macOS.
 - macOS Optimizer: utilidad pública con 13 estrellas y 1 fork.
 - Crawlab / Apify: actores, almacenamiento central y consumidores de datos para OULANG, Huatong y OUPIN.
 - Archivo completo: 249 repositorios no-fork de MCP, browser/shell/diff, automatización, mensajería, voz, datos y workflow.
@@ -106,7 +106,7 @@ INVESTIGACIÓN APLICADA, PROTOTIPOS Y EDUCACIÓN
 2025 enero-marzo: SORT/SortBot; AutoHSK; blog/contenido; SMTP MCP; shell/browser/diff; oftalmología.
 2025 abril-junio: APOLO; VUDA; AutoTutorial/MentorIA/PerfectPrompter; Scope; Fernando Ly; expansión AutoClient; ola MCP; Agents AI Ltd; ecosistema Lanzadera.
 2025 julio-diciembre: packaging AutoMedical; utilidades; concepto de flujo AutoRad; sites; WhatsApp MCP; IWAKY/AutoPricing; INTLAW; San Martín; Umbramed; diseño AutoDate/AutoTinder; ola de prototipos; web de poesía; Lemon AI; curso de agentes.
-2026 enero-junio: OULANG; GOWA; Notion-Drive; Huatong; InfoHuaxin; OUPIN; Crawlab/Apify; Chronicle/Screenpipe; Telnyx; Desktop Commander; VibraCode; AutoMedical; sitios web; Tasky; tutoría/ITE/TusClases; módulo Mundial; SONMADE.
+2026 enero-junio: OULANG; GOWA; Notion-Drive; Huatong; InfoHuaxin; OUPIN; Crawlab/Apify; herramientas de contexto para desarrollo con IA; Telnyx; Desktop Commander; VibraCode; AutoMedical; sitios web; Tasky; tutoría/ITE/TusClases; módulo Mundial; SONMADE.
 2026 julio: AutoDate TestFlight; recetas; generación de leads inmobiliarios Tekçe/OULANG-AutoClient; paridad nativa OULANG; diseño EA Housing/Radio Inter; paisajes sonoros/tutoría/audio; cumplimiento de la Ley de IA con PIME.ai; productos locales adicionales.
 
 OPEN SOURCE, ESCRITURA Y DOCENCIA
@@ -120,27 +120,36 @@ EDUCACIÓN
 Li Po Chun United World College of Hong Kong | Bachillerato Internacional, Ciencias y Matemáticas | 2010-2012 | Beca Fundación Rafael del Pino
 Shenzhen Institute of Information Technology | Estudios de informática y tecnologías de la información | 2016-2018 | Shenzhen, China
 
-CREDENCIALES SELECCIONADAS
+FORMACIÓN SELECCIONADA
 Microsoft Certified: Azure AI Fundamentals (AI-900)
 Adobe Certified Expert, After Effects
-Databricks Mosaic AI | Coursera | Completado jul 2026 | ID de credencial RRXO8HSACR29
-Building Your First AI Agent with LangChain | Edureka a través de Coursera | Completado el 28 jul 2026 | ID de credencial 33RUZI5SP0ZU
-Designing Multi-Agent Systems: Collaboration and Workflows | Board Infinity a través de Coursera | Completado jul 2026 | ID de credencial ORYP5BAAR0KO
-AI Agent Architecture: Reasoning, Memory, and LangGraph | Board Infinity a través de Coursera | Completado jul 2026 | ID de credencial SO0LO9NOCFXF
-Deploying AI Agents: LLMs, LangGraph, and Production APIs | Board Infinity a través de Coursera | Completado el 28 jul 2026 | ID de credencial WFOU01N1PLP7
-Building and Deploying AI Agents with LLMs and LangChain Specialization | Board Infinity a través de Coursera | Completada el 28 jul 2026 | ID de credencial V7QS07EJVS93
-AI Automation Engineer with n8n | LearnKartS a través de Coursera | Completada jul 2026 | ID de credencial YUNCHF6IXQJQ
-Data Privacy, Ethics, and Responsible AI | Coursera | Completada jul 2026 | ID de credencial W4PPDYPHJKUR
-Foundations of AI Governance and Responsible Development | LearnQuest a través de Coursera | Completada jul 2026 | ID de credencial 8STVBR62T6CY
-Managing AI Systems: Development, Deployment, and Governance Specialization | Board Infinity a través de Coursera | Completada jul 2026 | ID de credencial HZ7XDA9WCE2I
-AI Governance & ISO 42001 Readiness for GRC, Audit, & Legal | British Standards Institution a través de Coursera | Completada jul 2026 | ID de credencial UXUS7TQ36GF4
-Investment Management with Python and Machine Learning | EDHEC Business School a través de Coursera | Completada jul 2026 | ID de credencial EGOPNC45Z7X4
+Databricks Mosaic AI | Certificado de curso | 2026 | ID de credencial RRXO8HSACR29
+Building Your First AI Agent with LangChain | Edureka | 2026 | ID de credencial 33RUZI5SP0ZU
+Applied Agentic AI Pipelines with LangChain | Edureka | 2026 | ID de credencial Z9JGKO7KWQ6A
+Multi-Agent Systems with LangGraph | Edureka | 2026 | ID de credencial C8KPTX6U5B6C
+Developing MCP-Powered Agentic AI Systems | Edureka | 2026 | ID de credencial PEGPNFWLRNHG
+Agentic AI Engineering Specialization | Edureka | 2026 | ID de credencial GZ2Q50QNLE6N
+Designing Multi-Agent Systems: Collaboration and Workflows | Board Infinity | 2026 | ID de credencial ORYP5BAAR0KO
+AI Agent Architecture: Reasoning, Memory, and LangGraph | Board Infinity | 2026 | ID de credencial SO0LO9NOCFXF
+Deploying AI Agents: LLMs, LangGraph, and Production APIs | Board Infinity | 2026 | ID de credencial WFOU01N1PLP7
+Building and Deploying AI Agents with LLMs and LangChain Specialization | Board Infinity | 2026 | ID de credencial V7QS07EJVS93
+AI Automation Engineer with n8n | LearnKartS | 2026 | ID de credencial YUNCHF6IXQJQ
+Data Privacy, Ethics, and Responsible AI | Certificado de especialización | 2026 | ID de credencial W4PPDYPHJKUR
+Foundations of AI Governance and Responsible Development | LearnQuest | 2026 | ID de credencial 8STVBR62T6CY
+Managing AI Systems: Development, Deployment, and Governance Specialization | Board Infinity | 2026 | ID de credencial HZ7XDA9WCE2I
+AI Governance & ISO 42001 Readiness for GRC, Audit, & Legal | British Standards Institution | 2026 | ID de credencial UXUS7TQ36GF4
+Investment Management with Python and Machine Learning | EDHEC Business School | 2026 | ID de credencial EGOPNC45Z7X4
 
-FORMACIÓN COMPLETADA EN COURSERA — JULIO DE 2026
-Databricks Mosaic AI | Coursera | Certificado de curso | ID de credencial RRXO8HSACR29
-Building Your First AI Agent with LangChain | Edureka | Certificado de curso | ID de credencial 33RUZI5SP0ZU
+FORMACIÓN PROFESIONAL — 2026
+Databricks Mosaic AI | Certificado de curso | ID de credencial RRXO8HSACR29
 
-Building and Deploying AI Agents with LLMs and LangChain | Board Infinity a través de Coursera | Certificado de especialización | ID de credencial V7QS07EJVS93
+Agentic AI Engineering | Edureka | Certificado de especialización | ID de credencial GZ2Q50QNLE6N
+- Building Your First AI Agent with LangChain | ID de credencial 33RUZI5SP0ZU
+- Applied Agentic AI Pipelines with LangChain | ID de credencial Z9JGKO7KWQ6A
+- Multi-Agent Systems with LangGraph | ID de credencial C8KPTX6U5B6C
+- Developing MCP-Powered Agentic AI Systems | ID de credencial PEGPNFWLRNHG
+
+Building and Deploying AI Agents with LLMs and LangChain | Board Infinity | Certificado de especialización | ID de credencial V7QS07EJVS93
 - AI Agent Architecture: Reasoning, Memory, and LangGraph | ID de credencial SO0LO9NOCFXF
 - Designing Multi-Agent Systems: Collaboration and Workflows | ID de credencial ORYP5BAAR0KO
 - Deploying AI Agents: LLMs, LangGraph, and Production APIs | ID de credencial WFOU01N1PLP7
@@ -151,7 +160,7 @@ Investment Management with Python and Machine Learning | EDHEC Business School |
 - Python and Machine Learning for Asset Management | ID de credencial XWMR6R7BFW7F
 - Python and Machine-Learning for Asset Management with Alternative Data Sets | ID de credencial 5SL26L5XFIRY
 
-Data Privacy, Ethics, and Responsible AI | Coursera | Certificado de especialización
+Data Privacy, Ethics, and Responsible AI | Certificado de especialización
 - Building Trust: Ethics for AI-powered Chatbots | ID de credencial KHC24ZIMD4UP
 - Fundamental Rights Impact Assessment for GenAI Projects | ID de credencial NWLPDHLE4SQA
 - User Awareness and Education for Generative AI | ID de credencial 6ZH2XSY4X1VY
@@ -159,7 +168,7 @@ Data Privacy, Ethics, and Responsible AI | Coursera | Certificado de especializa
 - Data Privacy and Protection Standards | ID de credencial 69T2HK10MCBW
 - AI and European Union Law: Navigating Regulatory Compliance | ID de credencial CXKRGYMZBWL6
 
-AI Automation Engineer with n8n | LearnKartS a través de Coursera | Certificado de especialización
+AI Automation Engineer with n8n | LearnKartS | Certificado de especialización
 - Workflow Automation with n8n: Logic, Data & Error Handling | ID de credencial 0U3L8YXLIGLK
 - Integrate AI Models in n8n: Prompt Engineering & Outputs | ID de credencial SYLD77A55WBO
 - Build AI Agents & Secure API Integrations with n8n | ID de credencial SAFAGPUKDIL7
@@ -168,14 +177,14 @@ AI Automation Engineer with n8n | LearnKartS a través de Coursera | Certificado
 - Multi-Agent Systems Design: AI Customer Support with n8n | ID de credencial MJX0L3XJ82K2
 - Deploy, Test & Secure AI Workflows with n8n | ID de credencial LPN041O3NGGZ
 
-Foundations of AI Governance and Responsible Development | LearnQuest a través de Coursera | Completada el 27 jul 2026 | Calificación 98,33% | ID de credencial 8STVBR62T6CY
+Foundations of AI Governance and Responsible Development | LearnQuest | 2026 | ID de credencial 8STVBR62T6CY
 
-Managing AI Systems: Development, Deployment, and Governance | Board Infinity a través de Coursera | Certificado de especialización
+Managing AI Systems: Development, Deployment, and Governance | Board Infinity | Certificado de especialización
 - AI Systems Design: RAG Pipelines and LLM Architecture | ID de credencial P9ZUHTTKQ546
 - MLOps and LLMOps: Deploying and Scaling AI in Production | ID de credencial 5XRHG7TPQ6IR
 - AI Risk and Compliance: Audit and Governance Foundations | ID de credencial N6UE7DP7T104
 
-AI Governance & ISO 42001 Readiness for GRC, Audit, & Legal | British Standards Institution a través de Coursera | Certificado de especialización
+AI Governance & ISO 42001 Readiness for GRC, Audit, & Legal | British Standards Institution | Certificado de especialización
 - ISO/IEC 22989:2023 An Introduction to the Fundamentals of AI | ID de credencial 0YTL5PHGC0O5
 - AI System Impact Assessment Guidance | ID de credencial JG2DXNZ66KGO
 - AI Management Essentials: Integrating ISO 42001 & ISO 23894 | ID de credencial I61HD0HLKVAB
@@ -191,5 +200,5 @@ Cantonés: conversacional
 ROLES OBJETIVO
 Founding AI Engineer | AI Product Engineer | AI Platform Lead | Head of AI | Staff AI Engineer | Technical Product Lead
 
-EDICIONES DEL PORTFOLIO
-Esta edición sin fotografía está optimizada para sistemas ATS. El CV visual y el portfolio buscable de 85 proyectos y colaboraciones están en samihalawa.com/cv y samihalawa.com/projects.
+PORTFOLIO
+samihalawa.com/cv | samihalawa.com/projects | linkedin.com/in/samihalawa | github.com/samihalawa
