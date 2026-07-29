@@ -56,7 +56,7 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
   const spanish = selected === 'es';
   const pdf = spanish ? '/cv/Sami_Halawa_CV_ES_2026-07-29-v3.pdf' : '/cv/Sami_Halawa_CV_2026-07-29-v3.pdf';
   const ats = spanish ? '/cv/Sami_Halawa_CV_ES_ATS_2026-07-29-v3.txt' : '/cv/Sami_Halawa_CV_ATS_2026-07-29-v3.txt';
-  const preview = spanish ? '/cv/Sami_Halawa_CV_ES_preview_2026-07-29-v3.png' : '/cv/Sami_Halawa_CV_preview_2026-07-29-v3.png';
+  const preview = spanish ? '/cv/Sami_Halawa_CV_ES_preview_2026-07-29-v4.png' : '/cv/Sami_Halawa_CV_preview_2026-07-29-v4.png';
   const description = spanish
     ? 'Una visión completa de productos, sistemas para clientes, open source, investigación y docencia, disponible en PDF y en formato ATS.'
     : 'A complete view of products, client systems, open source, research and teaching, available as a designed PDF and an ATS-ready edition.';
