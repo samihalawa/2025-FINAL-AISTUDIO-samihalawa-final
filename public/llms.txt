@@ -5,7 +5,7 @@ Sami Halawa is a founder-engineer in Madrid building multilingual AI products, a
 ## Main pages
 
 - [Home](https://samihalawa.com/): Profile, current focus and selected work
-- [Projects](https://samihalawa.com/projects): Curated products plus 84 public work records
+- [Projects](https://samihalawa.com/projects): Products, collaborations, open-source tools and research
 - [Case studies](https://samihalawa.com/case-studies): Detailed product and engineering case studies
 - [Services](https://samihalawa.com/services): AI product, automation, training and advisory services
 - [CV](https://samihalawa.com/cv): Complete professional profile

@@ -15,10 +15,10 @@ import {
 type InventoryFilter = 'all' | InventoryLane;
 
 const workstreamHeadings: Record<LanguageCode, { eyebrow: string; title: string; body: string; open: string }> = {
-  en: { eyebrow: 'The full landscape', title: 'Seven workstreams, one connected practice.', body: 'The portfolio stretches from products and client systems to open source, infrastructure, research, education and earlier experiments. Open any lane to jump into its full chronology.', open: 'Explore workstream' },
-  es: { eyebrow: 'El mapa completo', title: 'Siete líneas de trabajo, una práctica conectada.', body: 'El portfolio une productos, sistemas para clientes, open source, infraestructura, investigación, educación y experimentos anteriores. Abre cualquier línea para ver su cronología completa.', open: 'Explorar línea' },
-  fr: { eyebrow: 'Vue d’ensemble', title: 'Sept axes, une pratique connectée.', body: 'Le portfolio relie produits, systèmes clients, open source, infrastructure, recherche, éducation et expérimentations antérieures. Ouvrez un axe pour parcourir toute sa chronologie.', open: 'Explorer cet axe' },
-  zh: { eyebrow: '完整版图', title: '七条工作主线，一个相互连接的实践体系。', body: '作品集涵盖产品、客户系统、开源、基础设施、研究、教育与早期实验。打开任一主线即可进入完整时间线。', open: '探索此主线' },
+  en: { eyebrow: 'Areas of work', title: 'Seven connected areas of product and engineering.', body: 'Browse products, client systems, open source, infrastructure, research, education and earlier work.', open: 'Explore area' },
+  es: { eyebrow: 'Áreas de trabajo', title: 'Siete áreas conectadas de producto e ingeniería.', body: 'Explora productos, sistemas para clientes, open source, infraestructura, investigación, educación y trabajos anteriores.', open: 'Explorar área' },
+  fr: { eyebrow: 'Domaines de travail', title: 'Sept domaines reliés de produit et d’ingénierie.', body: 'Découvrez produits, systèmes clients, open source, infrastructure, recherche, éducation et travaux antérieurs.', open: 'Explorer le domaine' },
+  zh: { eyebrow: '工作方向', title: '七个相互关联的产品与工程方向。', body: '浏览产品、客户系统、开源、基础设施、研究、教育与早期作品。', open: '探索方向' },
 };
 
 const headings: Record<LanguageCode, {
@@ -64,13 +64,13 @@ const headings: Record<LanguageCode, {
     selectedTitle: 'Products and systems worth opening.',
     selectedBody: 'Current platforms, open-source tools, client systems and focused prototypes across four areas of work.',
     visit: 'Visit project',
-    archiveEyebrow: 'Career archive',
-    archiveTitle: 'A broader record of products, collaborations and research.',
-    archiveBody: 'Search by name, technology or year, or filter the timeline by workstream.',
-    search: 'Search the archive',
+    archiveEyebrow: 'Earlier work',
+    archiveTitle: 'More products, collaborations and research.',
+    archiveBody: 'Search projects by name, technology or year, or filter by area of work.',
+    search: 'Search projects',
     allLanes: 'All workstreams',
-    results: 'entries',
-    noResults: 'No entries match this search.',
+    results: 'projects',
+    noResults: 'No projects match this search.',
     open: 'Open project',
     ctaEyebrow: 'Build together',
     ctaTitle: 'Have an ambitious AI product in mind?',
@@ -94,13 +94,13 @@ const headings: Record<LanguageCode, {
     selectedTitle: 'Productos y sistemas que merece la pena abrir.',
     selectedBody: 'Plataformas actuales, herramientas open source, sistemas para clientes y prototipos específicos en cuatro áreas.',
     visit: 'Visitar proyecto',
-    archiveEyebrow: 'Archivo profesional',
-    archiveTitle: 'Un registro más amplio de productos, colaboraciones e investigación.',
-    archiveBody: 'Busca por nombre, tecnología o año, o filtra la cronología por tipo de trabajo.',
-    search: 'Buscar en el archivo',
+    archiveEyebrow: 'Trabajos anteriores',
+    archiveTitle: 'Más productos, colaboraciones e investigación.',
+    archiveBody: 'Busca proyectos por nombre, tecnología o año, o filtra por área de trabajo.',
+    search: 'Buscar proyectos',
     allLanes: 'Todos los tipos',
-    results: 'entradas',
-    noResults: 'Ninguna entrada coincide con la búsqueda.',
+    results: 'proyectos',
+    noResults: 'Ningún proyecto coincide con la búsqueda.',
     open: 'Abrir proyecto',
     ctaEyebrow: 'Construyamos juntos',
     ctaTitle: '¿Tienes en mente un producto de IA ambicioso?',
@@ -124,13 +124,13 @@ const headings: Record<LanguageCode, {
     selectedTitle: 'Des produits et systèmes à découvrir.',
     selectedBody: 'Plateformes actuelles, outils open source, systèmes clients et prototypes ciblés dans quatre domaines.',
     visit: 'Visiter le projet',
-    archiveEyebrow: 'Archive professionnelle',
-    archiveTitle: 'Un historique plus large de produits, collaborations et recherche.',
-    archiveBody: 'Recherchez par nom, technologie ou année, ou filtrez la chronologie par domaine.',
-    search: 'Rechercher dans l’archive',
+    archiveEyebrow: 'Travaux antérieurs',
+    archiveTitle: 'Plus de produits, collaborations et recherche.',
+    archiveBody: 'Recherchez les projets par nom, technologie ou année, ou filtrez par domaine.',
+    search: 'Rechercher des projets',
     allLanes: 'Tous les domaines',
-    results: 'entrées',
-    noResults: 'Aucune entrée ne correspond à cette recherche.',
+    results: 'projets',
+    noResults: 'Aucun projet ne correspond à cette recherche.',
     open: 'Ouvrir le projet',
     ctaEyebrow: 'Construisons ensemble',
     ctaTitle: 'Vous avez un produit IA ambitieux en tête ?',
@@ -154,13 +154,13 @@ const headings: Record<LanguageCode, {
     selectedTitle: '值得打开体验的产品与系统。',
     selectedBody: '涵盖四个方向的当前平台、开源工具、客户系统与重点原型。',
     visit: '访问项目',
-    archiveEyebrow: '职业档案',
-    archiveTitle: '更完整的产品、合作与研究记录。',
-    archiveBody: '按名称、技术或年份搜索，也可按工作类型筛选时间线。',
-    search: '搜索档案',
+    archiveEyebrow: '早期作品',
+    archiveTitle: '更多产品、合作与研究。',
+    archiveBody: '按名称、技术或年份搜索项目，也可按工作方向筛选。',
+    search: '搜索项目',
     allLanes: '全部类型',
-    results: '条记录',
-    noResults: '没有符合搜索条件的记录。',
+    results: '个项目',
+    noResults: '没有符合搜索条件的项目。',
     open: '打开项目',
     ctaEyebrow: '一起构建',
     ctaTitle: '有一个有野心的 AI 产品想法吗？',
@@ -171,8 +171,7 @@ const headings: Record<LanguageCode, {
 
 const categoryOrder: PortfolioCategory[] = ['platforms', 'agents', 'applied', 'education'];
 const laneOrder: InventoryLane[] = ['products', 'clients', 'open-source', 'research', 'education', 'infrastructure', 'archive'];
-const internalInventoryIds = new Set(['timeline-private-artifacts', 'timeline-career-rebuild']);
-const publicInventory = PORTFOLIO_INVENTORY.filter(item => item.status === 'verified' && !internalInventoryIds.has(item.id));
+const publicInventory = PORTFOLIO_INVENTORY.filter(item => item.status === 'verified');
 
 const Projects: React.FC = () => {
   const { language } = useTranslation();
