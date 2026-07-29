@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Popover, Transition, Listbox } from '@headlessui/react';
 import { useTranslation } from '../i18n/LanguageContext';
-import { NAV_LINKS, LANGUAGES, SERVICE_MENU_SECTIONS } from '../constants';
+import { NAV_LINKS, LANGUAGES, SERVICE_MENU_SECTIONS, STRATEGY_CALL_URL } from '../constants';
 
 const Header: React.FC = () => {
     const { t, language, setLanguage } = useTranslation();
@@ -127,15 +127,17 @@ const Header: React.FC = () => {
                         </div>
 
                         {/* Primary contact action */}
-                        <Link 
-                            to="/contact" 
+                        <a
+                            href={STRATEGY_CALL_URL}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="hidden min-h-11 items-center justify-center gap-2 rounded-sm bg-slate-950 px-4 text-sm font-semibold text-white transition-colors hover:bg-brand-800 hover:text-white xl:inline-flex"
                             title={t('header.cta')}
                             aria-label={t('header.cta')}
                         >
                             <span>{t('header.cta')}</span>
-                            <i className="fas fa-arrow-right text-xs"></i>
-                        </Link>
+                            <i className="fas fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
 
                         {/* Mobile Menu */}
                         <div className="xl:hidden">
@@ -170,10 +172,16 @@ const Header: React.FC = () => {
                                                         <Link to="/ai-training" onClick={() => close()} className="block border-b border-slate-200 px-1 py-3 text-sm font-semibold text-slate-700">
                                                             {t('nav.training')}
                                                         </Link>
-                                                        <Link to="/contact" onClick={() => close()} className="block rounded-sm bg-slate-950 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-800">
+                                                        <a
+                                                            href={STRATEGY_CALL_URL}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            onClick={() => close()}
+                                                            className="block rounded-sm bg-slate-950 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-800"
+                                                        >
                                                             {t('header.cta')}
-                                                            <i className="fas fa-wand-magic-sparkles text-sm ml-2"></i>
-                                                        </Link>
+                                                            <i className="fas fa-arrow-up-right-from-square ml-2 text-sm"></i>
+                                                        </a>
                                                         <LanguageSelector mobile={true} />
                                                     </div>
                                                 </div>

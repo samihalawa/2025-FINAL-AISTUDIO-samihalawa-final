@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { useTranslation } from '../i18n/LanguageContext';
-import { CONTACT_INFO } from '../constants';
+import { CONTACT_INFO, STRATEGY_CALL_URL } from '../constants';
 import { trackPortfolioEvent } from '../lib/analytics';
 
 type SubmissionStatus = 'idle' | 'sending' | 'success' | 'error';
-type LeadType = 'contact' | 'newsletter';
 
 const STATIC_FORMS_ENDPOINT = 'https://api.staticforms.dev/submit';
 const STATIC_FORMS_API_KEY = 'b67e8125-1a1a-4712-9c3a-f2dedb36a100';
@@ -13,20 +12,18 @@ const Contact: React.FC = () => {
     const { t } = useTranslation();
     const formTitle = t('contact.formTitle');
     const newsletterTitle = t('contact.newsletterTitle');
-    const [contactStatus, setContactStatus] = useState<SubmissionStatus>('idle');
     const [newsletterStatus, setNewsletterStatus] = useState<SubmissionStatus>('idle');
 
-    const submitForm = async (event: React.FormEvent<HTMLFormElement>, leadType: LeadType) => {
+    const submitNewsletter = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const form = event.currentTarget;
-        const setStatus = leadType === 'contact' ? setContactStatus : setNewsletterStatus;
         const formData = new FormData(form);
         const email = formData.get('email');
 
-        setStatus('sending');
+        setNewsletterStatus('sending');
         formData.set('apiKey', STATIC_FORMS_API_KEY);
-        formData.set('subject', leadType === 'contact' ? 'New Contact from Portfolio Website' : 'New Portfolio Newsletter Subscription');
-        formData.set('form_type', leadType === 'contact' ? 'Portfolio contact' : 'Portfolio newsletter');
+        formData.set('subject', 'New Portfolio Newsletter Subscription');
+        formData.set('form_type', 'Portfolio newsletter');
         if (typeof email === 'string') formData.set('replyTo', email);
 
         try {
@@ -39,14 +36,14 @@ const Contact: React.FC = () => {
             if (!response.ok || result?.success === false) throw new Error(result?.error || 'Form submission failed');
 
             trackPortfolioEvent('generate_lead', {
-                form_id: `portfolio-${leadType}`,
-                form_name: leadType === 'contact' ? 'portfolio contact' : 'portfolio newsletter',
-                lead_type: leadType,
+                form_id: 'portfolio-newsletter',
+                form_name: 'portfolio newsletter',
+                lead_type: 'newsletter',
             });
             form.reset();
-            setStatus('success');
+            setNewsletterStatus('success');
         } catch {
-            setStatus('error');
+            setNewsletterStatus('error');
         }
     };
 
@@ -55,19 +52,22 @@ const Contact: React.FC = () => {
             icon: 'fas fa-lightbulb',
             title: t('contact.support.strategy.title'),
             description: t('contact.support.strategy.copy'),
-            href: '#contact-form',
+            href: STRATEGY_CALL_URL,
+            external: true,
         },
         {
             icon: 'fas fa-diagram-project',
             title: t('contact.support.projects.title'),
             description: t('contact.support.projects.copy'),
             href: '#contact-form',
+            external: false,
         },
         {
             icon: 'fas fa-headset',
             title: t('contact.support.support.title'),
             description: t('contact.support.support.copy'),
             href: 'mailto:info@AgentsAI.ltd',
+            external: false,
         },
     ];
 
@@ -178,6 +178,8 @@ const Contact: React.FC = () => {
                                     <a
                                         key={option.title}
                                         href={option.href}
+                                        target={option.external ? '_blank' : undefined}
+                                        rel={option.external ? 'noopener noreferrer' : undefined}
                                         className="group relative flex flex-col rounded-2xl border border-slate-100 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-brand-200 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2"
                                     >
                                         <div className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-50 text-brand-600">
@@ -201,30 +203,9 @@ const Contact: React.FC = () => {
                             <div className="relative p-8 sm:p-10">
                                 <h3 className="text-xl font-semibold text-slate-900">{formTitle}</h3>
                                 <p className="mt-2 text-sm text-slate-500">{t('contact.formSubtitle')}</p>
-                                <form onSubmit={(event) => void submitForm(event, 'contact')} className="mt-6 space-y-5">
-                                    <div>
-                                        <label htmlFor="contact-name" className="block text-sm font-semibold text-slate-700">{t('contact.form.nameLabel')}</label>
-                                        <input id="contact-name" name="name" type="text" autoComplete="name" required className="mt-2 min-h-11 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-200" />
-                                    </div>
-                                    <div>
-                                        <label htmlFor="contact-email" className="block text-sm font-semibold text-slate-700">{t('contact.form.emailLabel')}</label>
-                                        <input id="contact-email" name="email" type="email" autoComplete="email" required className="mt-2 min-h-11 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-200" />
-                                    </div>
-                                    <div>
-                                        <label htmlFor="contact-company" className="block text-sm font-semibold text-slate-700">{t('contact.form.companyLabel')}</label>
-                                        <input id="contact-company" name="company" type="text" autoComplete="organization" className="mt-2 min-h-11 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-200" />
-                                    </div>
-                                    <div>
-                                        <label htmlFor="contact-message" className="block text-sm font-semibold text-slate-700">{t('contact.form.messageLabel')}</label>
-                                        <textarea id="contact-message" name="message" rows={5} required className="mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-200" />
-                                    </div>
-                                    <input name="honeypot" type="text" tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[9999px] h-px w-px opacity-0" />
-                                    <button type="submit" disabled={contactStatus === 'sending'} className="inline-flex min-h-11 w-full items-center justify-center rounded-xl bg-slate-950 px-5 py-3 text-sm font-bold text-white transition hover:bg-brand-800 disabled:cursor-wait disabled:opacity-65">
-                                        {contactStatus === 'sending' ? t('contact.form.sendingButton') : t('contact.form.submitButton')}
-                                    </button>
-                                    {contactStatus === 'success' && <p role="status" className="text-sm font-semibold text-emerald-700">{t('contact.form.successMessage')}</p>}
-                                    {contactStatus === 'error' && <p role="alert" className="text-sm font-semibold text-red-700">{t('contact.form.errorMessage')}</p>}
-                                </form>
+                                <div className="mt-6 min-h-[32rem]">
+                                    {React.createElement('close-form', { id: 'form_033y7Q5vVve5g8t4diql2M' })}
+                                </div>
                             </div>
                         </div>
                         <div className="relative overflow-hidden rounded-3xl border border-slate-100 bg-slate-900 text-slate-100 shadow-xl">
@@ -232,7 +213,7 @@ const Contact: React.FC = () => {
                             <div className="relative p-8 sm:p-10">
                                 <h3 className="text-xl font-semibold">{newsletterTitle}</h3>
                                 <p className="mt-2 text-sm text-slate-200">{t('contact.newsletterSubtitle')}</p>
-                                <form onSubmit={(event) => void submitForm(event, 'newsletter')} className="mt-6 space-y-4">
+                                <form onSubmit={(event) => void submitNewsletter(event)} className="mt-6 space-y-4">
                                     <label htmlFor="newsletter-email" className="block text-sm font-semibold text-white">{t('contact.newsletter.emailLabel')}</label>
                                     <div className="flex flex-col gap-3 sm:flex-row">
                                         <input id="newsletter-email" name="email" type="email" autoComplete="email" required placeholder="name@example.com" className="min-h-11 flex-1 rounded-xl border border-white/20 bg-white px-4 py-3 text-slate-950 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-brand-300 focus:ring-2 focus:ring-brand-300/40" />
@@ -256,11 +237,13 @@ const Contact: React.FC = () => {
                                 <p className="mt-2 text-sm leading-relaxed text-slate-600">{t('contact.bookingCopy')}</p>
                                 <div className="mt-6 flex flex-wrap items-center gap-4">
                                     <a
-                                        href="#contact-form"
+                                        href={STRATEGY_CALL_URL}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-brand-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2"
                                     >
                                         {t('contact.bookingCta')}
-                                        <i className="fas fa-arrow-up text-xs"></i>
+                                        <i className="fas fa-arrow-up-right-from-square text-xs"></i>
                                     </a>
                                     <a
                                         href="mailto:sami@oulang.ai?subject=Strategy%20consultation"

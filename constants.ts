@@ -1,5 +1,7 @@
 import { NavLink, Language, ContactInfo, TrainingProgram, Partner, ServiceMenuSection } from './types';
 
+export const STRATEGY_CALL_URL = 'https://calendly.com/sami-halawa/30min';
+
 export const NAV_LINKS: NavLink[] = [
   { href: '/', key: 'nav.about' },
   { href: '/projects', key: 'nav.projects' },

@@ -3,7 +3,7 @@
 public CV qualification copy | platform-first wording and generator/process labels made verified qualifications sound like internal export metadata | name the qualification, specialist subject and real issuing institution where verified, while preserving every validated credential | do not foreground Coursera, expose source/proof fields, or delete achievements to solve copy leakage | verify all public HTML/TXT/PDF assets, every current credential ID, exact live hashes and rendered CV routes
 portfolio visual language | oversized slogans, gradient ornaments, pill controls and repeated rounded cards make the site feel AI-template generated | use a restrained editorial system with serif-led hierarchy, rules, square controls and content-specific compositions | do not solve “more visual” by adding gradients, glass, floating shapes or another card grid | verify desktop/mobile home and CV routes, navigation states, no overflow and preserved actions
 CV downloads | shorter role editions omitted achievements, raw inventory prose leaked internal notes/payment state and reused filenames stayed stale in Cloudflare | publish clean comprehensive twelve-page role editions at unique `_Comprehensive` URLs plus separate ATS text | do not render evidence-ledger prose, payment-state wording, build a CV editor, remove shared facts or reuse a cached filename for materially new content | verify all 85 professional projects, every current validated credential, achievements, exact live hashes and rendered CV route
-contact intake | Tally embeds replaced the existing native provider flow | use native contact/newsletter forms and emit conversions only after provider success | do not reintroduce embedded Tally forms or fire leads on button clicks | verify no Tally assets, provider response, rendered states and analytics reception
+contact and booking intake | the former native contact flow and indirect booking CTA no longer match the selected providers | use the Close form on `/contact`, keep the native newsletter, and open every strategy-call CTA at the canonical Calendly URL | do not route strategy-call actions through `/contact` or replace the newsletter flow | verify the Close custom element renders and desktop/mobile CTA hrefs equal the canonical Calendly URL
 measurement provider proof | missing repo IDs were treated as proof that analytics did not exist | audit live bundle, credentials and actual GA4/GTM/Ads/PostHog/Tag Gateway providers | do not infer provider state from source grep or reuse another brand's IDs | verify exact property/container/project IDs, live events and provider readback
 SEO route body and public authorship | generated heads still left crawler HTML empty and hub source labels leaked as authors | prerender every route/article and normalize public author identity | do not treat metadata-only HTML or delivery labels as indexable content | verify raw H1/article body, hydration, byline/JSON-LD agreement and live Lighthouse
 SEO head delivery | client-only Helmet left crawler and social HTML empty | generate physical per-route heads from one metadata registry and keep runtime head in sync | do not reintroduce Helmet or same-URL hreflang | verify every raw route HTML, schema, sitemap, OG asset, 404 status and rendered routes
@@ -14,6 +14,16 @@ blog content pipeline | hard-coded slug list + modal did not scale to daily hub-
 SPA production routes | public asset directories collide with client routes | serve file-shaped URLs as static files and everything else as the SPA shell | do not let Nginx treat route names as directories or leak port 8080 redirects | verify slash and non-slash routes plus real asset MIME types
 Coolify Linux build | macOS lock can omit the Linux Rollup binary and Docker hosts differ between arm64 and x64 | install the build container's matching native Rollup GNU package | do not hardcode one CPU or infer deployability from the macOS Vite build | verify local container plus Coolify build the pushed commit and live routes
 public portfolio | stock imagery and invented social proof replaced source evidence | use dated metrics, real screenshots and public links | do not publish placeholders, arbitrary percentages or unsupported impact | verify exact live route, image load, text and responsive layout
+
+## 2026-07-30 — Contact intake uses Close; strategy-call actions open Calendly
+
+- **Status:** CURRENT
+- **Project/root:** `PROJECTS_ON_PROCESS/2025-FINAL-AISTUDIO-samihalawa-final`; contact form and shared booking CTAs.
+- **Mistake superseded:** the native contact form and strategy-call links routed visitors through `/contact` instead of the selected Close and Calendly destinations.
+- **Superior approach:** render Close form `form_033y7Q5vVve5g8t4diql2M` on `/contact`, retain the separate native newsletter, and use `https://calendly.com/sami-halawa/30min` for every strategy-call action.
+- **Evidence:** explicit user instruction on 30 Jul 2026; current `Contact.tsx`, `Header.tsx`, `HireCTA.tsx` and `index.html`.
+- **Triggers / verification:** contact form, Close, calendar, strategy call or booking CTA; verify the custom element becomes a visible form, the provider script occurs once, and desktop/mobile CTA hrefs equal the canonical Calendly URL.
+- **Do / don't:** do keep one contact form and one shared booking destination; don't route strategy-call actions through `/contact`, alter the newsletter provider, or infer success from script load alone.
 
 ## 2026-07-29 — Public CV copy foregrounds qualifications, not the delivery platform
 
@@ -47,13 +57,13 @@ public portfolio | stock imagery and invented social proof replaced source evide
 
 ## 2026-07-22 — Contact intake stays native and provider-confirmed
 
-- **Status:** CURRENT
+- **Status:** SUPERSEDED
 - **Project/root:** `PROJECTS_ON_PROCESS/2025-FINAL-AISTUDIO-samihalawa-final`; contact and newsletter intake.
 - **Mistake recovered:** two Tally embeds replaced the repository's existing native Static Forms flow, while analytics inferred conversion from a cross-window `Tally.FormSubmitted` message.
 - **Superior approach:** keep accessible native forms for contact and newsletter, submit to the verified provider endpoint, and emit `generate_lead` only after a successful provider response.
 - **Evidence:** source history commit `68e1eef`, current Static Forms API documentation, source/build/SEO checks, and 22 Jul 2026 desktop/mobile local browser proof showing real controls, HTML validation, zero iframes and zero Tally scripts.
 - **Triggers / verification:** form, newsletter, lead, Tally, Static Forms, GA4 or PostHog changes; verify provider response shape, no Tally assets, required/error/success states, mobile layout, live delivery and analytics provider reception.
-- **Do / don't:** do preserve the native provider-backed forms and post-success event contract; don't reintroduce third-party form embeds, count clicks as leads, or reuse another brand's PostHog project.
+- **Do / don't:** superseded for the contact form by the 30 Jul 2026 Close instruction; retain this rule only for the native newsletter and post-success event contract.
 
 ## 2026-07-22 — Measurement state requires provider proof
 

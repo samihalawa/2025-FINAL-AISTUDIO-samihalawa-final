@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from '../i18n/LanguageContext';
+import { STRATEGY_CALL_URL } from '../constants';
 
 const HireCTA: React.FC = () => {
   const { t } = useTranslation();
@@ -13,9 +14,9 @@ const HireCTA: React.FC = () => {
           <p className="mt-4 text-sm sm:text-base text-white/80">{t('hireCta.description')}</p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row">
-          <a href="/contact" className="btn-primary bg-white text-slate-900 hover:bg-slate-100">
+          <a href={STRATEGY_CALL_URL} target="_blank" rel="noopener noreferrer" className="btn-primary bg-white text-slate-900 hover:bg-slate-100">
             {t('hireCta.primary')}
-            <i className="fas fa-arrow-right text-sm"></i>
+            <i className="fas fa-arrow-up-right-from-square text-sm"></i>
           </a>
           <a href="https://wa.me/34679794037" target="_blank" rel="noopener noreferrer" className="btn-secondary border-white/60 bg-white/10 text-white hover:bg-white/20">
             {t('hireCta.secondary')}
