@@ -1,5 +1,5 @@
 SAMI HALAWA RIBAS
-Ingeniero IA Full-Stack · Agentes, Datos, APIs & Deployment
+Ingeniero IA Full-Stack · Agentes, Datos, APIs y Despliegue
 
 Madrid, Spain · EU work authorisation · +34 679 794 037 · sami@oulang.ai · samihalawa.com · linkedin.com/in/samihalawa · github.com/samihalawa
 
@@ -7,10 +7,10 @@ ROLE-SPECIFIC PROFILE
 Perfil técnico integral para proyectos de transformación con IA: experiencia transversal desde agentes, RAG, MCP y automatización hasta backend, frontend, móvil, datos, APIs, despliegue y operación. Inglés y chino C2; disponibilidad inmediata. Formación reciente y certificada en Databricks Mosaic AI.
 
 ROLE EMPHASIS
-IA y agentes: MCP, RAG, herramientas/funciones, flujos multiagente, memoria, salidas estructuradas, routing de modelos y evaluación
+IA y agentes: MCP, RAG, herramientas/funciones, flujos multiagente, memoria, salidas estructuradas, enrutamiento de modelos y evaluación
 Backend y datos: Python, FastAPI, TypeScript, Node.js, REST APIs, webhooks, SQL/MySQL, procesos en segundo plano e integraciones
 Frontend y móvil: React, Next.js, Tailwind, Expo/React Native, SwiftUI, Ionic y Capacitor
-Deployment y operación: Docker, Linux, CI/CD, Cloudflare, Coolify, Hetzner, exposición AWS/Azure/GCP, logs, monitorización y control de costes
+Despliegue y operación: Docker, Linux, CI/CD, Cloudflare, Coolify, Hetzner, experiencia práctica con AWS/Azure/GCP, registros, monitorización y control de costes
 
 DETAILED TECHNOLOGY MATRIX
 Agentic AI & orchestration
@@ -22,7 +22,7 @@ Technologies: RAG; OCR; document ingestion; chunking/retrieval workflows; image-
 Applied in: SORT course digitisation, AutoMedical, APOLO, AutoIOL/OCT workflows, reporting and recipe-intelligence prototypes
 
 Models & AI platforms
-Technologies: OpenAI; Anthropic; Gemini; DeepSeek; Hugging Face; open-source models; Databricks Mosaic AI certified applied coursework
+Technologies: OpenAI; Anthropic; Gemini; DeepSeek; Hugging Face; open-source models; applied Databricks Mosaic AI coursework
 Applied in: Production integrations and prototypes across product, automation, education and multimodal workflows, complemented by recent Mosaic AI coursework
 
 Backend & APIs
@@ -118,9 +118,9 @@ COMPLETE PROJECT REGISTER — 85 PROJECTS AND ENGAGEMENTS
 17. AutoIOL: Ophthalmology-oriented product exploration for lens, image and clinical-workflow support.
 18. SpeakingAI: Speech and conversational-AI product experiment.
 19. AutoClient monorepo and worker expansion: Expansion of AutoClient into a modular platform with workers and automation services.
-20. EyeUnit / Fernando Ly medical AI: Paid medical-AI, OCT and commercial-intelligence collaboration with EyeUnit / Fernando Ly.
+20. EyeUnit / Fernando Ly medical AI: Commercial medical-AI, OCT and market-intelligence collaboration with EyeUnit / Fernando Ly.
 21. Light Funnels AI training: AI training engagement involving applied automation and commercial workflows.
-22. Hugging Face technical writing begins/continues: Technical writing on AI, prompting, automation and agent systems for Hugging Face.
+22. Hugging Face technical writing: Technical writing on AI, prompting, automation and agent systems for Hugging Face.
 23. Colab research archive: Research collection containing more than 100 Colab files and at least 58 named notebooks.
 24. SORT / SortBot: Course-PDF digitisation workflow with structured lessons, chatbot support and web publishing.
 25. AutoHSK and language-learning tools: AI-assisted Mandarin and HSK learning tools connecting language expertise with software.
@@ -135,10 +135,10 @@ COMPLETE PROJECT REGISTER — 85 PROJECTS AND ENGAGEMENTS
 34. Scope / account intelligence prototype: Account-list merging, cross-sell discovery and clinical-market scoring prototype.
 35. Fernando Ly medical-AI teaching and research: Applied medical-AI teaching and research collaboration focused on OCT workflows.
 36. AutoClient expands: Growth of AutoClient into a broader research, enrichment, outreach and CRM platform.
-37. MCP/open-source wave: Concentrated open-source release cycle for MCP, browser, shell, email and agent integrations.
+37. Open-source MCP toolchain: Concentrated open-source release cycle for MCP, browser, shell, email and agent integrations.
 38. Agents AI Ltd: AI product and consulting company supporting platform, automation and client-delivery work.
 39. Lanzadera ecosystem participation: AutoClient participation in Lanzadera’s startup and technology-partner ecosystem.
-40. APOLO / AutoMedical packaging: Medical-AI product packaging for learning, multimodal review and professional workflows.
+40. APOLO / AutoMedical product development: Medical-AI product packaging for learning, multimodal review and professional workflows.
 41. Agent tools and operating utilities: Reusable utilities for automation, memory, deployment, browser control and developer operations.
 42. AutoRad: Radiology product concept for image review, structured reporting and clinical collaboration.
 43. Personal and company site work: Engineering and publishing work across personal, portfolio and company websites.
@@ -148,13 +148,13 @@ COMPLETE PROJECT REGISTER — 85 PROJECTS AND ENGAGEMENTS
 47. San Martín HR automation proposal: HR automation proposal covering birthdays, timesheets, talent search and employee-portal workflows.
 48. Umbramed / Valerio: Technical leadership for an Ionic/Capacitor medical-education product, PWA delivery, data workflows and payments.
 49. AutoTinder / AutoDate design generation: Product design and automation work that evolved from AutoTinder concepts into AutoDate.
-50. Prototype portfolio wave: Prototype portfolio spanning proposals, commerce, health, messaging, pricing, media and operations.
+50. Cross-sector prototype portfolio: Prototype portfolio spanning proposals, commerce, health, messaging, pricing, media and operations.
 51. Sami Halawa poetry website: Web collection of 72 original poems with navigation, export and media experimentation.
 52. Lemon AI deployment/customization work: Deployment, identity, landing-page and infrastructure customization for the Lemon AI platform.
 53. 15-hour AI-agents course: Fifteen-hour AI-agent curriculum covering tools, memory, multi-agent systems, RAG and deployment.
 54. OULANG: Multilingual marketplace and local-life platform for Chinese communities across web, iOS and Android.
 55. OULANG monetisation and analytics: OULANG monetisation, analytics, subscriptions, payments and commercial-operations workstream.
-56. Umbramed continuation: Ongoing Umbramed product, PWA, medical-data, connector, payment and application work.
+56. Umbramed product development: Ongoing Umbramed product, PWA, medical-data, connector, payment and application work.
 57. Skills and tooling publishing: Publication of reusable agent skills, browser workflows and MCP infrastructure.
 58. GOWA: WhatsApp automation and API platform for operational messaging workflows.
 59. Notion–Drive synchronization: Open-source synchronization between Notion workspaces and Google Drive.
@@ -167,7 +167,7 @@ COMPLETE PROJECT REGISTER — 85 PROJECTS AND ENGAGEMENTS
 66. Telnyx voice/communications tools: Telnyx integrations for telephony, voice-agent state and communications tooling.
 67. Desktop Commander and operations skills: macOS, browser, CRM and deployment automation utilities for technical operations.
 68. VibraCode: Deployed web product and development environment for rapid application building.
-69. AutoMedical live surface: Live medical-AI product surface for multimodal learning and structured workflows.
+69. AutoMedical platform: Medical-AI platform for multimodal learning and structured workflows.
 70. Portfolio and company websites: Portfolio, company, product and publishing sites across Sami Halawa, PIME.ai, Agents AI Ltd and ChinoTotal.
 71. Tasky: Native SwiftUI Google Tasks client for macOS, iOS and iPadOS with widgets, extensions and sync.
 72. AI tutoring and professional training: AI teaching, course design and commercial training operations with ITE and TusClasesParticulares.
@@ -175,8 +175,8 @@ COMPLETE PROJECT REGISTER — 85 PROJECTS AND ENGAGEMENTS
 74. SONMADE content factory: React/TypeScript, FFmpeg and Sharp prototype for scene analysis and video-highlight extraction.
 75. AutoDate web and TestFlight: Dating product with a live web experience and an iOS build distributed through TestFlight.
 76. Recipe intelligence platform with José Olivares: Product discovery and architecture for digitising, enriching, publishing and illustrating professional recipes.
-77. Tekçe / OULANG-AutoClient property lead-generation discussion: Property lead-generation proposal and demonstration for qualified Chinese buyers, CRM transparency and AI outreach.
-78. OULANG native parity and store delivery: Native-parity, marketplace, payment and store-delivery work for the current OULANG application.
+77. Tekçe / OULANG-AutoClient property lead-generation proposal: Property lead-generation proposal and demonstration for qualified Chinese buyers, CRM transparency and AI outreach.
+78. OULANG native parity and store delivery: Web-to-native feature parity, marketplace, payment and store-delivery work for the current OULANG application.
 79. EA Housing / Radio Inter proposal package: Modular website and product proposal package for EA Housing and Radio Inter.
 80. Chinese soundscapes, tutoring materials, lessons and poetry audio: Mandarin soundscapes, vocabulary materials, tutoring exercises and Spanish poetry audio.
 81. PIME.ai EU AI Act compliance pack: Multilingual EU AI Act service covering applicability, risk analysis, AI literacy and implementation roadmaps.
@@ -268,7 +268,7 @@ CHRONOLOGICAL PROJECT INDEX | 2023-2026
 2024: Aprende IA; MenuEditorElectron; AI Absolut; email crawler/lead tools; macOS Optimizer; CloudflaredMe; AutoCrypto; audio/transcription tools; KittyTasks/FocusOnTask; AutoClient seed and worker expansion; Pollinations/storage experiments; AutoVideo; MedSAM; AutoTraining; AutoIOL; SpeakingAI; EyeUnit/Fernando Ly; Light Funnels; Hugging Face writing; Colab research.
 2025 January-March: SORT/SortBot; AutoHSK; blog/content systems; SMTP MCP; shell/browser/diff tools; ophthalmology workflows.
 2025 April-June: APOLO; VUDA; AutoTutorial/MentorIA/PerfectPrompter; Scope; Fernando Ly medical-AI work; AutoClient expansion; MCP wave; Agents AI Ltd; Lanzadera ecosystem participation.
-2025 July-December: AutoMedical packaging; agent operating utilities; AutoRad workflow concept; personal/company sites; WhatsApp MCP; IWAKY/AutoPricing; INTLAW; San Martín; Umbramed; AutoDate/AutoTinder design; prototype portfolio wave; poetry site; Lemon AI customization/deployment; 15-hour AI-agent course.
+2025 July-December: AutoMedical product development; agent operating utilities; AutoRad workflow concept; personal/company sites; WhatsApp MCP; IWAKY/AutoPricing; INTLAW; San Martín; Umbramed; AutoDate/AutoTinder design; cross-sector prototype portfolio; poetry site; Lemon AI customization/deployment; 15-hour AI-agent course.
 2026 January-June: OULANG; GOWA; Notion-Drive Sync; Huatong; InfoHuaxin; OUPIN; Crawlab/Apify actors; Chronicle/Screenpipe; Telnyx tools; Desktop Commander utilities; VibraCode; AutoMedical; company/publishing surfaces; Tasky; AI tutoring/ITE/TusClases operations; OULANG World Cup module; SONMADE.
 2026 July: AutoDate TestFlight; recipe intelligence; Tekçe/OULANG-AutoClient property lead generation; OULANG native parity; EA Housing/Radio Inter product design; Chinese soundscapes/tutoring/poetry audio; PIME AI Act pack; additional local products.
 
