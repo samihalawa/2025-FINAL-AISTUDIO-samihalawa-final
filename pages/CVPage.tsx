@@ -44,19 +44,19 @@ const roleEditions = [
     key: 'Atos_Technical',
     en: 'Atos Technical Dossier',
     es: 'Dossier técnico para Atos',
-    detailEn: 'A super-detailed AI, full-stack, data, API and deployment edition, including current Databricks Mosaic AI qualification.',
-    detailEs: 'Edición superdetallada de IA, full-stack, datos, APIs y deployment, con la formación actual en Databricks Mosaic AI.'
+    detailEn: 'A super-detailed AI, full-stack, data, API and deployment edition, including current Databricks, LangChain and LangGraph qualifications.',
+    detailEs: 'Edición superdetallada de IA, full-stack, datos, APIs y deployment, con formación actual en Databricks, LangChain y LangGraph.'
   }
 ];
-const roleEditionFile = (key: string) => `${key}_Comprehensive`;
+const roleEditionFile = (key: string) => `${key}_Comprehensive_2026-07-29`;
 
 const CVPage: React.FC<CVPageProps> = ({ edition }) => {
   const { language } = useTranslation();
   const selected = edition || (language === 'es' ? 'es' : 'en');
   const spanish = selected === 'es';
-  const pdf = spanish ? '/cv/Sami_Halawa_CV_ES.pdf' : '/cv/Sami_Halawa_CV.pdf';
-  const ats = spanish ? '/cv/Sami_Halawa_CV_ES_ATS.txt' : '/cv/Sami_Halawa_CV_ATS.txt';
-  const preview = spanish ? '/cv/Sami_Halawa_CV_ES_preview.png' : '/cv/Sami_Halawa_CV_preview.png';
+  const pdf = spanish ? '/cv/Sami_Halawa_CV_ES_2026-07-29.pdf' : '/cv/Sami_Halawa_CV_2026-07-29.pdf';
+  const ats = spanish ? '/cv/Sami_Halawa_CV_ES_ATS_2026-07-29.txt' : '/cv/Sami_Halawa_CV_ATS_2026-07-29.txt';
+  const preview = spanish ? '/cv/Sami_Halawa_CV_ES_preview_2026-07-29.png' : '/cv/Sami_Halawa_CV_preview_2026-07-29.png';
   const description = spanish
     ? 'Una visión completa de productos, sistemas para clientes, open source, investigación y docencia, disponible en PDF y en formato ATS.'
     : 'A complete view of products, client systems, open source, research and teaching, available as a designed PDF and an ATS-ready edition.';
@@ -88,7 +88,7 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
         <section className="mt-12 rounded-[1.5rem] border border-brand-200 bg-brand-50 p-6 sm:p-8">
           <span className="text-sm font-bold uppercase tracking-[.14em] text-brand-800">{spanish ? 'Formación profesional actual' : 'Current professional development'}</span>
           <h2 className="mt-3 font-display text-2xl font-bold text-slate-950">{spanish ? 'IA agéntica, plataformas y gobernanza.' : 'Agentic AI, platforms and governance.'}</h2>
-          <p className="mt-3 max-w-4xl leading-relaxed text-slate-700">{spanish ? 'Certificados verificados de julio de 2026: Databricks Mosaic AI; AI Agent Architecture: Reasoning, Memory, and LangGraph; Designing Multi-Agent Systems; AI Automation Engineer with n8n; Managing AI Systems; Data Privacy, Ethics, and Responsible AI; y AI Governance & ISO 42001 Readiness.' : 'Verified July 2026 certificates: Databricks Mosaic AI; AI Agent Architecture: Reasoning, Memory, and LangGraph; Designing Multi-Agent Systems; AI Automation Engineer with n8n; Managing AI Systems; Data Privacy, Ethics, and Responsible AI; and AI Governance & ISO 42001 Readiness.'}</p>
+          <p className="mt-3 max-w-4xl leading-relaxed text-slate-700">{spanish ? 'Archivo profesional validado de 37 certificados de Coursera. Las credenciales más recientes incluyen Building Your First AI Agent with LangChain; Deploying AI Agents: LLMs, LangGraph, and Production APIs; y la especialización Building and Deploying AI Agents with LLMs and LangChain, junto con Databricks Mosaic AI, automatización, MLOps y gobernanza de IA.' : 'Validated professional archive of 37 Coursera certificates. The newest credentials include Building Your First AI Agent with LangChain; Deploying AI Agents: LLMs, LangGraph, and Production APIs; and the Building and Deploying AI Agents with LLMs and LangChain Specialization, alongside Databricks Mosaic AI, automation, MLOps and AI governance.'}</p>
         </section>
         <div className="mt-10 overflow-hidden rounded-[1.5rem] border border-slate-200 bg-slate-100 p-3 shadow-sm sm:p-6">
           <img src={preview} alt={spanish ? 'Primera página del CV completo' : 'First page of the complete CV'} className="mx-auto block w-full max-w-3xl rounded-lg bg-white shadow-sm" />

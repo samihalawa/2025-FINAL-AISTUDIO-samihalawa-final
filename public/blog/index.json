@@ -28,25 +28,11 @@
     ]
   },
   {
-    "slug": "prototype-to-production-ai",
-    "path": "en/prototype-to-production-ai",
-    "title": "From AI Prototype to Production: The Unglamorous Work",
-    "date": "2026-07-15T22:01:59.304Z",
-    "summary": "Moving an AI model from a Jupyter notebook to a reliable production feature is a brutal reality check. This guide covers the essential, often overlooked steps: handling edge cases, robust evaluation, cost and latency management, and building resilient systems.",
-    "author": "Sami Halawa",
-    "tags": [
-      "ai-product",
-      "mlops",
-      "production",
-      "reliability"
-    ]
-  },
-  {
     "slug": "structured-outputs-and-json-mode",
     "path": "en/structured-outputs-and-json-mode",
-    "title": "Reliable Structured Outputs from LLMs: A Deep Dive",
+    "title": "Structured Outputs: The Engineering Guide to Reliable LLM Data",
     "date": "2026-07-15T22:01:35.940Z",
-    "summary": "Getting reliable JSON and typed data from LLMs is crucial for building robust AI applications. This guide explores why free-text parsing is a trap and how to enforce structure using JSON mode, schema-constrained decoding, function calling, and validation-and-repair loops. Learn practical patterns and schema design for production-grade pipelines.",
+    "summary": "Stop parsing free-text. Learn how to enforce schema-constrained decoding, tool calling, and validation loops to build production-ready AI pipelines.",
     "author": "Sami Halawa",
     "tags": [
       "integration",
@@ -128,9 +114,9 @@
   {
     "slug": "controlling-llm-costs",
     "path": "en/controlling-llm-costs",
-    "title": "Controlling LLM Costs Without Crippling Quality: A Practical Guide",
+    "title": "The Engineering Guide to LLM Unit Economics",
     "date": "2026-07-15T20:37:44.819Z",
-    "summary": "LLM costs can quickly spiral in agentic applications. This guide dives into where the spend actually goes—long context, redundant tool calls, retries, overpowered models—and offers concrete, actionable strategies like model routing, prompt caching, context trimming, and cost-per-task metrics to maintain quality while slashing your bill.",
+    "summary": "A technical deep dive into optimizing agentic workflows, from model routing and prompt caching to measuring cost per successful task instead of per token.",
     "author": "Sami Halawa",
     "tags": [
       "ai-agents",
@@ -268,9 +254,9 @@
   {
     "slug": "agentic-coding-workflows",
     "path": "en/agentic-coding-workflows",
-    "title": "Agentic Coding Workflows That Actually Ship Code",
+    "title": "Beyond Autocomplete: Engineering Agentic Coding Workflows that Actually Ship",
     "date": "2026-07-15T20:34:06.769Z",
-    "summary": "Move beyond autocomplete with agentic coding workflows. Learn how to plan, implement, and verify agent output effectively. This guide covers task contracts, parallel subagents, minimal diffs, and critical review to ship real code, not just hype.",
+    "summary": "Stop using LLMs as glorified autocomplete. Learn how to architect agentic loops using planning, tight task contracts, and verification layers to build production-grade software.",
     "author": "Sami Halawa",
     "tags": [
       "agentic-coding",

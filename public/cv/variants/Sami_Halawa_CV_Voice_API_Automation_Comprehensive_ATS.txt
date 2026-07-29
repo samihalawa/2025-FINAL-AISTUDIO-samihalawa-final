@@ -14,8 +14,8 @@ Operations: Docker, Linux, CI/CD, deployment, logs, monitoring, analytics, retri
 
 DETAILED TECHNOLOGY MATRIX
 Agentic AI & orchestration
-Technologies: MCP; tool/function calling; multi-agent collaboration; memory; structured outputs; model routing; prompt and evaluation loops; LangGraph-informed architecture
-Evidence: AutoClient, communications agents, VUDA, SMTP MCP, WhatsApp/GOWA and agent-course implementations
+Technologies: LangChain; LangGraph; MCP; tool/function calling; multi-agent collaboration; CrewAI; Agno; Mem0; PydanticAI; structured outputs; model routing; prompt and evaluation loops; production APIs
+Evidence: AutoClient, communications agents, VUDA, SMTP MCP, WhatsApp/GOWA and certified applied agent-system coursework
 
 Retrieval, documents & multimodal AI
 Technologies: RAG; OCR; document ingestion; chunking/retrieval workflows; image-text review; computer vision; human-review checkpoints
@@ -200,8 +200,11 @@ SELECTED CREDENTIALS
 Microsoft Certified: Azure AI Fundamentals (AI-900)
 Adobe Certified Expert, After Effects
 Databricks Mosaic AI | Coursera | Completed Jul 2026 | Credential ID RRXO8HSACR29
+Building Your First AI Agent with LangChain | Edureka via Coursera | Completed Jul 28, 2026 | Credential ID 33RUZI5SP0ZU
 Designing Multi-Agent Systems: Collaboration and Workflows | Board Infinity via Coursera | Completed Jul 2026 | Credential ID ORYP5BAAR0KO
 AI Agent Architecture: Reasoning, Memory, and LangGraph | Board Infinity via Coursera | Completed Jul 2026 | Credential ID SO0LO9NOCFXF
+Deploying AI Agents: LLMs, LangGraph, and Production APIs | Board Infinity via Coursera | Completed Jul 28, 2026 | Credential ID WFOU01N1PLP7
+Building and Deploying AI Agents with LLMs and LangChain Specialization | Board Infinity via Coursera | Completed Jul 28, 2026 | Credential ID V7QS07EJVS93
 AI Automation Engineer with n8n | LearnKartS via Coursera | Completed Jul 2026 | Credential ID YUNCHF6IXQJQ
 Data Privacy, Ethics, and Responsible AI | Coursera | Completed Jul 2026 | Credential ID W4PPDYPHJKUR
 Foundations of AI Governance and Responsible Development | LearnQuest via Coursera | Completed Jul 2026 | Credential ID 8STVBR62T6CY
@@ -211,45 +214,49 @@ Investment Management with Python and Machine Learning | EDHEC Business School v
 
 COMPLETED COURSERA COURSEWORK — JULY 2026
 Databricks Mosaic AI | Coursera | Course certificate | Credential ID RRXO8HSACR29
-Designing Multi-Agent Systems: Collaboration and Workflows | Board Infinity | Course certificate | Credential ID ORYP5BAAR0KO
-AI Agent Architecture: Reasoning, Memory, and LangGraph | Board Infinity | Course certificate | Credential ID SO0LO9NOCFXF
+Building Your First AI Agent with LangChain | Edureka | Course certificate | Credential ID 33RUZI5SP0ZU
+
+Building and Deploying AI Agents with LLMs and LangChain | Board Infinity via Coursera | Specialization certificate | Credential ID V7QS07EJVS93
+- AI Agent Architecture: Reasoning, Memory, and LangGraph | Credential ID SO0LO9NOCFXF
+- Designing Multi-Agent Systems: Collaboration and Workflows | Credential ID ORYP5BAAR0KO
+- Deploying AI Agents: LLMs, LangGraph, and Production APIs | Credential ID WFOU01N1PLP7
 
 Investment Management with Python and Machine Learning | EDHEC Business School | Specialization certificate
-- Introduction to Portfolio Construction and Analysis with Python
-- Advanced Portfolio Construction and Analysis with Python
-- Python and Machine Learning for Asset Management
-- Python and Machine-Learning for Asset Management with Alternative Data Sets
+- Introduction to Portfolio Construction and Analysis with Python | Credential ID K3YYB6E213GY
+- Advanced Portfolio Construction and Analysis with Python | Credential ID PI2VZASXJ2NR
+- Python and Machine Learning for Asset Management | Credential ID XWMR6R7BFW7F
+- Python and Machine-Learning for Asset Management with Alternative Data Sets | Credential ID 5SL26L5XFIRY
 
 Data Privacy, Ethics, and Responsible AI | Coursera | Specialization certificate
-- Building Trust: Ethics for AI-powered Chatbots
-- Fundamental Rights Impact Assessment for GenAI Projects
-- User Awareness and Education for Generative AI
-- Introduction to Prompt Injection Vulnerabilities
-- Data Privacy and Protection Standards
-- AI and European Union Law: Navigating Regulatory Compliance
+- Building Trust: Ethics for AI-powered Chatbots | Credential ID KHC24ZIMD4UP
+- Fundamental Rights Impact Assessment for GenAI Projects | Credential ID NWLPDHLE4SQA
+- User Awareness and Education for Generative AI | Credential ID 6ZH2XSY4X1VY
+- Introduction to Prompt Injection Vulnerabilities | Credential ID 92DG3JSOPHXL
+- Data Privacy and Protection Standards | Credential ID 69T2HK10MCBW
+- AI and European Union Law: Navigating Regulatory Compliance | Credential ID CXKRGYMZBWL6
 
 AI Automation Engineer with n8n | LearnKartS via Coursera | Specialization certificate
-- Workflow Automation with n8n: Logic, Data & Error Handling
-- Integrate AI Models in n8n: Prompt Engineering & Outputs
-- Build AI Agents & Secure API Integrations with n8n
-- AI Memory Systems: Production RAG Pipelines with n8n
-- Build MCP Automation Projects with n8n: Connect AI Clients
-- Multi-Agent Systems Design: AI Customer Support with n8n
-- Deploy, Test & Secure AI Workflows with n8n
+- Workflow Automation with n8n: Logic, Data & Error Handling | Credential ID 0U3L8YXLIGLK
+- Integrate AI Models in n8n: Prompt Engineering & Outputs | Credential ID SYLD77A55WBO
+- Build AI Agents & Secure API Integrations with n8n | Credential ID SAFAGPUKDIL7
+- AI Memory Systems: Production RAG Pipelines with n8n | Credential ID KU3W35C54Z9T
+- Build MCP Automation Projects with n8n: Connect AI Clients | Credential ID X7YFWSUKK69U
+- Multi-Agent Systems Design: AI Customer Support with n8n | Credential ID MJX0L3XJ82K2
+- Deploy, Test & Secure AI Workflows with n8n | Credential ID LPN041O3NGGZ
 
 Foundations of AI Governance and Responsible Development | LearnQuest via Coursera | Completed Jul 27, 2026 | Grade 98.33% | Credential ID 8STVBR62T6CY
 
 Managing AI Systems: Development, Deployment, and Governance | Board Infinity via Coursera | Specialization certificate
-- AI Systems Design: RAG Pipelines and LLM Architecture
-- MLOps and LLMOps: Deploying and Scaling AI in Production
-- AI Risk and Compliance: Audit and Governance Foundations
+- AI Systems Design: RAG Pipelines and LLM Architecture | Credential ID P9ZUHTTKQ546
+- MLOps and LLMOps: Deploying and Scaling AI in Production | Credential ID 5XRHG7TPQ6IR
+- AI Risk and Compliance: Audit and Governance Foundations | Credential ID N6UE7DP7T104
 
 AI Governance & ISO 42001 Readiness for GRC, Audit, & Legal | British Standards Institution via Coursera | Specialization certificate
-- ISO/IEC 22989:2023 An Introduction to the Fundamentals of AI
-- AI System Impact Assessment Guidance
-- AI Management Essentials: Integrating ISO 42001 & ISO 23894
-- Understanding the Foundations of the EU AI Act
-- Approaches to Establish Trust in AI Systems
+- ISO/IEC 22989:2023 An Introduction to the Fundamentals of AI | Credential ID 0YTL5PHGC0O5
+- AI System Impact Assessment Guidance | Credential ID JG2DXNZ66KGO
+- AI Management Essentials: Integrating ISO 42001 & ISO 23894 | Credential ID I61HD0HLKVAB
+- Understanding the Foundations of the EU AI Act | Credential ID X5JU1YKW8B9S
+- Approaches to Establish Trust in AI Systems | Credential ID U6ZLGVCLZ5H5
 
 LANGUAGES
 Spanish: native
