@@ -4,11 +4,11 @@ Voice AI · API Integration & Automation Engineer
 Madrid, Spain · EU work authorisation · +34 679 794 037 · sami@oulang.ai · samihalawa.com · linkedin.com/in/samihalawa · github.com/samihalawa
 
 ROLE-SPECIFIC PROFILE
-Integration-focused AI engineer connecting voice, messaging, email, CRM and web systems into reliable agent workflows. Builds the APIs, state, tools, automation and operational handover around customer-facing AI.
+Voice AI and integration engineer building multilingual, customer-facing agent workflows across telephony, Voice APIs, live CRM/database context and automated post-call operations. Hands-on with Telnyx, custom voice integrations, LangChain/LangGraph, MCP, backend APIs and production delivery.
 
 ROLE EMPHASIS
-Voice & communications: Voice-agent state, telephony integrations, email, WhatsApp, messaging and conversation workflows
-Automation: n8n, MCP, tool/function calling, research/enrichment, CRM/ERP integration and background jobs
+Voice AI & telephony: Telnyx and custom Voice APIs, multilingual agents, call state, conversational workflows and real-time business context
+Post-call automation: Transcription and structured notes, CRM updates, follow-up actions, n8n, MCP, email and WhatsApp
 APIs & backend: Python, FastAPI, TypeScript, Node.js, REST APIs, SQL, webhooks and structured outputs
 Operations: Docker, Linux, CI/CD, deployment, logs, monitoring, analytics, retries and human handoff
 
@@ -33,9 +33,9 @@ Web, mobile & interface delivery
 Technologies: React; Next.js; Tailwind CSS; Expo/React Native; SwiftUI; Ionic; Capacitor; responsive web; native/store delivery
 Applied in: OULANG, Huatong, OUPIN, AutoDate, Tasky, Umbramed and more than 70 earlier web/mobile builds
 
-Automation & communications
-Technologies: n8n; MCP; email/SMTP; WhatsApp; Telnyx; voice-agent state; CRM/ERP integration; Apify; Crawlab; data enrichment
-Applied in: AutoClient, Tekçe property leads, GOWA, SMTP MCP, voice tooling, outreach and operational automations
+Voice AI, automation & communications
+Technologies: Telnyx; voice APIs; telephony; multilingual voice agents; live CRM/database context; post-call notes and follow-up; LangChain; LangGraph; n8n; MCP; email/SMTP; WhatsApp
+Applied in: OULANG premium-user voice workflows, AutoClient, GOWA, SMTP MCP, outreach and operational automations
 
 Cloud, delivery & operations
 Technologies: Docker; Linux; CI/CD; Cloudflare; Coolify; Hetzner; working familiarity with AWS, Azure and GCP; deployment; logs; monitoring; cost control
@@ -54,9 +54,9 @@ OULANG / Huatong / OUPIN
 Stack: TypeScript, React/Next.js, Expo/mobile delivery, SQL, payments, analytics, Cloudflare and containerised deployment.
 Work: Designed and operated shared marketplace capabilities across identity, listings, search, messaging, monetisation, multilingual delivery and web/native release workflows.
 
-AutoClient & communication agents
-Stack: Python/FastAPI, TypeScript/Node.js, MCP, model APIs, structured outputs, CRM, email, WhatsApp, Telnyx/voice, webhooks and background jobs.
-Work: Built research, enrichment, scoring, personalised outreach, conversation-state and human-handoff workflows across multiple channels.
+AutoClient & voice-agent systems
+Stack: Python/FastAPI, TypeScript/Node.js, Telnyx and custom voice APIs, LangChain/LangGraph, MCP, CRM/database context, email, WhatsApp, webhooks and background jobs.
+Work: Built multilingual outbound calling workflows with personalised live context, conversational state, automated post-call notes, CRM follow-up and human handoff across voice and messaging channels.
 
 IWAKY / AutoPricing
 Stack: Marketplace data collection, Apify/Crawlab-style actors, product matching, price history, WhatsApp quote analysis, SQL/ERP inputs, dashboards and PDF reporting.
@@ -138,7 +138,7 @@ COMPLETE PROJECT REGISTER — 85 PROJECTS AND ENGAGEMENTS
 37. Open-source MCP toolchain: Concentrated open-source release cycle for MCP, browser, shell, email and agent integrations.
 38. Agents AI Ltd: AI product and consulting company supporting platform, automation and client-delivery work.
 39. Lanzadera ecosystem participation: AutoClient participation in Lanzadera’s startup and technology-partner ecosystem.
-40. APOLO / AutoMedical product development: Medical-AI product packaging for learning, multimodal review and professional workflows.
+40. APOLO / AutoMedical product development: Medical-AI product development for learning, multimodal review and professional workflows.
 41. Agent tools and operating utilities: Reusable utilities for automation, memory, deployment, browser control and developer operations.
 42. AutoRad: Radiology product concept for image review, structured reporting and clinical collaboration.
 43. Personal and company site work: Engineering and publishing work across personal, portfolio and company websites.
@@ -164,7 +164,7 @@ COMPLETE PROJECT REGISTER — 85 PROJECTS AND ENGAGEMENTS
 63. OUPIN: Multilingual consumer and property-discovery platform using shared marketplace infrastructure.
 64. Crawlab / Apify actor fleet: Crawlab and Apify data-collection actors with central storage and downstream product consumers.
 65. Codex Chronicle / Screenpipe memory workflows: Persistent cross-session memory and activity-reconstruction workflows for AI-assisted development.
-66. Telnyx voice/communications tools: Telnyx integrations for telephony, voice-agent state and communications tooling.
+66. Telnyx voice/communications tools: Telnyx and custom Voice API integrations for telephony, agent state, real-time business context, post-call outputs and reusable communications tooling.
 67. Desktop Commander and operations skills: macOS, browser, CRM and deployment automation utilities for technical operations.
 68. VibraCode: Deployed web product and development environment for rapid application building.
 69. AutoMedical platform: Medical-AI platform for multimodal learning and structured workflows.
@@ -191,7 +191,7 @@ Founder and AI Product Engineer | Agents AI Ltd | Madrid / London | July 2025-Pr
 - Own product discovery, architecture, implementation, deployment, analytics, monetisation and operational handover across founder-led and B2B systems.
 - Built OULANG (欧浪AI), a multilingual marketplace and local-life platform for Chinese communities in Spain, across web, iOS and Android delivery.
 - Extended the product ecosystem into Huatong for Chinese communities across Europe, OUPIN for AI-assisted discovery and PIME.ai for productised AI services.
-- Built AutoClient and research, enrichment, CRM, email, WhatsApp and voice-agent systems; published reusable MCP and developer tooling, including a property-lead generation demonstration for Tekçe.
+- Built AutoClient and OULANG voice-agent workflows for multilingual outbound conversations, using live CRM and database context, automated post-call notes and follow-up updates; integrated Telnyx, email, WhatsApp and reusable MCP tooling.
 - Delivered pricing-intelligence and decision-reporting workflows combining marketplace data, product matching, price history and inventory or ERP inputs.
 - Prototyped multimodal medical-image review, longitudinal tracking and structured reporting workflows with human review built into the process.
 
@@ -225,7 +225,7 @@ LIVE AND CONTINUING PRODUCTS
 - OULANG, 2026-present: live Chinese-diaspora marketplace/local-life platform for Spain; web plus continuing native/store work. oulang.ai
 - Huatong, 2026-present: live Chinese-first employment, housing, classifieds and local-services platform across European markets. huatong.eu
 - AutoDate, 2026: live web product and iOS distribution through TestFlight, with profile, discovery and matching workflows. autodate.ai
-- AutoClient, 2024-present: agentic research, enrichment, scoring, outreach, conversation tracking and CRM automation, including a qualified Chinese property-buyer lead-generation demonstration for Tekçe.
+- AutoClient / OULANG voice agents, 2024-present: multilingual outbound voice workflows with personalised database context, conversational call handling, automated notes and CRM follow-up, integrated with research, enrichment, email and WhatsApp automation.
 - PIME.ai EU AI Act pack, 2026: multilingual applicability/risk analysis, AI-literacy training and roadmap product with delivery and campaign infrastructure. pime.ai
 - AutoMedical, 2025-2026: medical-learning and multimodal workflow product for image review, structured reporting and professional education with human oversight. automedical.ai
 - Tasky, 2026: native SwiftUI Google Tasks client for macOS, iOS and iPadOS with quick capture, focus, widgets, extensions, search and sync.
@@ -247,7 +247,7 @@ OPEN SOURCE AND OPERATING INFRASTRUCTURE
 - SMTP MCP Server: email transport and mailbox integration; 17 stars and 15 forks. github.com/samihalawa/smtp-mcp-server
 - GOWA / WhatsApp automation: Go messaging, history and media APIs for operational agents.
 - Notion-Drive Sync: open-source synchronization between Notion workspaces and Google Drive; 3 stars. github.com/samihalawa/notion-drive-sync
-- Telnyx voice tools: telephony, voice-agent state and reusable communications integrations.
+- Telnyx voice tools: telephony and Voice API integrations covering call state, real-time business context, conversational workflows, post-call outputs and reusable communications tooling.
 - Codex Chronicle / Screenpipe: cross-session reconstruction, persistent visual memory and analysis for multi-agent work on macOS.
 - macOS Optimizer: public open-source utility with 13 stars and 1 fork.
 - Crawlab / Apify actor infrastructure: scraping actors, central storage and data consumers across OULANG, Huatong and OUPIN.

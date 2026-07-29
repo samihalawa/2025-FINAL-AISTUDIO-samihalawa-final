@@ -30,8 +30,8 @@ const roleEditions = [
     key: 'Voice_API_Automation',
     en: 'Voice / API Automation',
     es: 'Voz / APIs / Automatización',
-    detailEn: 'Voice, messaging, CRM and integration workflows.',
-    detailEs: 'Voz, mensajería, CRM y flujos de integración.'
+    detailEn: 'Telnyx and custom Voice APIs, multilingual agents, live CRM context and post-call automation.',
+    detailEs: 'Telnyx y APIs de voz, agentes multilingües, contexto CRM en directo y automatización tras llamada.'
   },
   {
     key: 'AI_Teaching_Governance',
@@ -48,15 +48,15 @@ const roleEditions = [
     detailEs: 'Edición técnica detallada sobre IA, desarrollo full-stack, datos, APIs y despliegue, con formación actual en Databricks, LangChain y LangGraph.'
   }
 ];
-const roleEditionFile = (key: string) => `${key}_Comprehensive_2026-07-29-v2`;
+const roleEditionFile = (key: string) => `${key}_Comprehensive_2026-07-29-v3`;
 
 const CVPage: React.FC<CVPageProps> = ({ edition }) => {
   const { language } = useTranslation();
   const selected = edition || (language === 'es' ? 'es' : 'en');
   const spanish = selected === 'es';
-  const pdf = spanish ? '/cv/Sami_Halawa_CV_ES_2026-07-29-v2.pdf' : '/cv/Sami_Halawa_CV_2026-07-29-v2.pdf';
-  const ats = spanish ? '/cv/Sami_Halawa_CV_ES_ATS_2026-07-29-v2.txt' : '/cv/Sami_Halawa_CV_ATS_2026-07-29-v2.txt';
-  const preview = spanish ? '/cv/Sami_Halawa_CV_ES_preview_2026-07-29-v2.png' : '/cv/Sami_Halawa_CV_preview_2026-07-29-v2.png';
+  const pdf = spanish ? '/cv/Sami_Halawa_CV_ES_2026-07-29-v3.pdf' : '/cv/Sami_Halawa_CV_2026-07-29-v3.pdf';
+  const ats = spanish ? '/cv/Sami_Halawa_CV_ES_ATS_2026-07-29-v3.txt' : '/cv/Sami_Halawa_CV_ATS_2026-07-29-v3.txt';
+  const preview = spanish ? '/cv/Sami_Halawa_CV_ES_preview_2026-07-29-v3.png' : '/cv/Sami_Halawa_CV_preview_2026-07-29-v3.png';
   const description = spanish
     ? 'Una visión completa de productos, sistemas para clientes, open source, investigación y docencia, disponible en PDF y en formato ATS.'
     : 'A complete view of products, client systems, open source, research and teaching, available as a designed PDF and an ATS-ready edition.';
