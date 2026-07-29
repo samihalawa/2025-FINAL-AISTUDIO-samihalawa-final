@@ -13,7 +13,7 @@ const Header: React.FC = () => {
             <div className={`relative ${mobile ? 'w-full mt-4' : ''}`}>
                 <Listbox.Button
                     role="button"
-                    className={`relative cursor-default rounded-full border border-slate-200 bg-white/80 pl-4 pr-10 text-left text-sm font-medium text-slate-600 shadow-sm transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white ${mobile ? 'w-full py-3' : 'py-2'}`}
+                    className={`relative cursor-default rounded-sm border border-slate-300 bg-white pl-4 pr-10 text-left text-sm font-semibold text-slate-700 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white ${mobile ? 'w-full py-3' : 'py-2'}`}
                 >
                     <span className="block truncate">{selectedLanguage?.name}</span>
                     <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-slate-400">
@@ -26,12 +26,12 @@ const Header: React.FC = () => {
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
                 >
-                    <Listbox.Options className="absolute mt-2 max-h-60 w-full overflow-auto rounded-2xl border border-slate-100 bg-white/95 py-2 text-base shadow-soft-xl ring-1 ring-black/5 backdrop-blur-xl focus:outline-none sm:text-sm z-20">
+                <Listbox.Options className="absolute z-20 mt-2 max-h-60 w-full overflow-auto rounded-sm border border-slate-200 bg-white py-2 text-base shadow-soft-xl focus:outline-none sm:text-sm">
                         {LANGUAGES.map((lang) => (
                             <Listbox.Option
                                 key={lang.code}
                                 className={({ active }) =>
-                                    `relative cursor-default select-none rounded-xl px-4 py-2 ${active ? 'bg-brand-50 text-brand-700' : 'text-slate-700 hover:bg-slate-100'}`
+                                    `relative cursor-default select-none px-4 py-2 ${active ? 'bg-brand-50 text-brand-800' : 'text-slate-700 hover:bg-slate-100'}`
                                 }
                                 value={lang.code}
                             >
@@ -56,14 +56,14 @@ const Header: React.FC = () => {
     );
 
     return (
-        <header role="banner" className="sticky top-0 z-50 w-full border-b border-slate-100 bg-white/90 backdrop-blur-xl shadow-sm">
+        <header role="banner" className="sticky top-0 z-50 w-full border-b border-slate-300 bg-[#f8f6f1]/95 backdrop-blur">
             <div className="container flex h-16 items-center justify-between gap-4 px-4">
                     <Link to="/" className="flex items-center gap-3 text-slate-900 flex-shrink-0">
-                        <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-600 via-brand-500 to-brand-700 text-lg font-semibold text-white shadow-brand">
+                        <span className="inline-flex h-10 w-10 items-center justify-center border border-slate-950 bg-slate-950 text-sm font-bold tracking-[0.08em] text-white">
                             SH
                         </span>
                         <span className="flex flex-col leading-tight">
-                            <span className="text-lg font-semibold tracking-tight">Sami Halawa</span>
+                            <span className="cv-serif text-xl font-semibold tracking-tight">Sami Halawa</span>
                             <span className="hidden text-xs uppercase tracking-[0.24em] text-slate-500 2xl:block">{t('header.tagline')}</span>
                         </span>
                     </Link>
@@ -72,7 +72,7 @@ const Header: React.FC = () => {
                         {NAV_LINKS.filter(link => link.href !== '/contact').map(link => (
                             link.href === '/services' ? (
                                 <Popover key={link.key} className="relative">
-                                    <Popover.Button className="group inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white">
+                                    <Popover.Button className="group inline-flex items-center gap-1 border-b border-transparent px-3 py-2 text-sm font-semibold text-slate-600 transition-colors hover:border-slate-400 hover:text-slate-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white">
                                         {t(link.key)}
                                         <i className="fas fa-chevron-down text-xs transition-transform group-data-[headlessui-state=open]:rotate-180" />
                                     </Popover.Button>
@@ -85,7 +85,7 @@ const Header: React.FC = () => {
                                         leaveFrom="opacity-100 translate-y-0"
                                         leaveTo="opacity-0 translate-y-2"
                                     >
-                                        <Popover.Panel className="absolute left-1/2 z-50 mt-6 w-[720px] max-w-[95vw] -translate-x-1/2 rounded-3xl border border-white/70 bg-white/95 p-6 shadow-soft-xl ring-1 ring-black/5 backdrop-blur-xl">
+                                        <Popover.Panel className="absolute left-1/2 z-50 mt-6 w-[720px] max-w-[95vw] -translate-x-1/2 rounded-sm border border-slate-200 bg-white p-6 shadow-soft-xl">
                                             <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
                                                 {SERVICE_MENU_SECTIONS.map(section => (
                                                     <div key={section.titleKey}>
@@ -95,7 +95,7 @@ const Header: React.FC = () => {
                                                                 <Link
                                                                     key={item.href}
                                                                     to={item.href}
-                                                                    className="block rounded-lg px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-brand-50 hover:text-brand-700"
+                                                                    className="block border-l-2 border-transparent px-3 py-2 text-sm font-medium text-slate-700 transition hover:border-brand-700 hover:bg-brand-50 hover:text-brand-800"
                                                                 >
                                                                     {t(item.labelKey)}
                                                                 </Link>
@@ -111,7 +111,7 @@ const Header: React.FC = () => {
                                 <NavLink
                                     key={link.key}
                                     to={link.href}
-                                    className={({ isActive }) => `inline-flex items-center rounded-full px-3 py-2 text-sm font-medium transition-colors ${isActive ? 'bg-brand-50 text-brand-700 shadow-inner' : 'text-slate-600 hover:text-slate-900 hover:bg-white/60'}`}
+                                    className={({ isActive }) => `inline-flex items-center border-b px-3 py-2 text-sm font-semibold transition-colors ${isActive ? 'border-brand-700 text-brand-800' : 'border-transparent text-slate-600 hover:border-slate-400 hover:text-slate-950'}`}
                                     end
                                 >
                                     {t(link.key)}
@@ -129,7 +129,7 @@ const Header: React.FC = () => {
                         {/* Primary contact action */}
                         <Link 
                             to="/contact" 
-                            className="hidden min-h-11 items-center justify-center gap-2 rounded-full bg-slate-900 px-4 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-slate-800 hover:text-white xl:inline-flex"
+                            className="hidden min-h-11 items-center justify-center gap-2 rounded-sm bg-slate-950 px-4 text-sm font-semibold text-white transition-colors hover:bg-brand-800 hover:text-white xl:inline-flex"
                             title={t('header.cta')}
                             aria-label={t('header.cta')}
                         >
@@ -140,7 +140,7 @@ const Header: React.FC = () => {
                         {/* Mobile Menu */}
                         <div className="xl:hidden">
                             <Popover className="relative">
-                                <Popover.Button className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white/80 text-slate-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+                                <Popover.Button className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-slate-300 bg-white text-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500">
                                     <span className="sr-only">{t('ui.openMenu')}</span>
                                     <i className="fas fa-bars w-6 h-6"></i>
                                 </Popover.Button>
@@ -149,12 +149,12 @@ const Header: React.FC = () => {
                                     enter="duration-200 ease-out" enterFrom="opacity-0 scale-95" enterTo="opacity-100 scale-100"
                                     leave="duration-100 ease-in" leaveFrom="opacity-100 scale-100" leaveTo="opacity-0 scale-95"
                                 >
-                                    <Popover.Panel className="absolute right-0 mt-4 w-72 origin-top-right rounded-3xl border border-white/70 bg-white/95 p-6 shadow-soft-xl ring-1 ring-black/5 backdrop-blur-xl focus:outline-none">
+                                    <Popover.Panel className="absolute right-0 mt-4 w-72 origin-top-right rounded-sm border border-slate-200 bg-white p-6 shadow-soft-xl focus:outline-none">
                                       {({ close }) => (
                                         <div className="space-y-6">
                                             <div className="flex items-center justify-between">
                                                 <div className="text-lg font-semibold text-slate-900">Sami Halawa</div>
-                                                <Popover.Button className="-mr-1 inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white/70 text-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                                                <Popover.Button className="-mr-1 inline-flex h-11 w-11 items-center justify-center rounded-sm border border-slate-300 bg-white text-slate-600 focus:outline-none focus:ring-2 focus:ring-brand-500">
                                                     <span className="sr-only">{t('ui.closeMenu')}</span>
                                                     <i className="fas fa-times w-6 h-6"></i>
                                                 </Popover.Button>
@@ -162,15 +162,15 @@ const Header: React.FC = () => {
                                             <nav className="mt-6">
                                                 <div className="space-y-2">
                                                     {NAV_LINKS.map(link => (
-                                                        <Link key={link.key} to={link.href} onClick={() => close()} className="block rounded-xl bg-white/70 px-4 py-3 text-base font-medium text-slate-700 shadow-sm transition hover:bg-brand-50 hover:text-brand-700">
+                                                        <Link key={link.key} to={link.href} onClick={() => close()} className="block border-b border-slate-200 px-1 py-3 text-base font-semibold text-slate-700 transition hover:border-brand-700 hover:text-brand-800">
                                                             {t(link.key)}
                                                         </Link>
                                                     ))}
                                                     <div className="pt-4 mt-4 border-t border-slate-200 space-y-2">
-                                                        <Link to="/ai-training" onClick={() => close()} className="block rounded-xl bg-white/70 px-4 py-3 text-sm font-medium text-slate-700 shadow-sm">
+                                                        <Link to="/ai-training" onClick={() => close()} className="block border-b border-slate-200 px-1 py-3 text-sm font-semibold text-slate-700">
                                                             {t('nav.training')}
                                                         </Link>
-                                                        <Link to="/contact" onClick={() => close()} className="block rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-4 py-3 text-sm font-semibold text-white shadow-brand transition hover:shadow-lg">
+                                                        <Link to="/contact" onClick={() => close()} className="block rounded-sm bg-slate-950 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-800">
                                                             {t('header.cta')}
                                                             <i className="fas fa-wand-magic-sparkles text-sm ml-2"></i>
                                                         </Link>

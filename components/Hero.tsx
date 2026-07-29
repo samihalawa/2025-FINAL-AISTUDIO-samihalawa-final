@@ -49,34 +49,40 @@ const Hero: React.FC = () => {
   const c = content[language];
 
   return (
-    <section className="relative overflow-hidden border-b border-slate-200/80 py-16 sm:py-20 lg:py-24">
-      <div className="container grid items-center gap-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(340px,.85fr)] lg:gap-16">
-        <div>
-          <div className="mb-6 flex flex-wrap items-center gap-3">
-            <span className="badge-pill">{c.eyebrow}</span>
-            <span className="inline-flex items-center gap-2 text-sm font-semibold text-brand-800"><span className="h-2 w-2 rounded-full bg-emerald-500"></span>{c.available}</span>
-          </div>
-          <h1 className="max-w-4xl font-display text-5xl font-bold leading-[1.02] tracking-[-0.055em] text-slate-950 sm:text-6xl lg:text-7xl">{c.title}</h1>
-          <p className="mt-7 max-w-3xl text-xl leading-relaxed text-slate-600">{c.intro}</p>
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <Link to="/projects" className="btn-primary">{c.work}<i className="fas fa-arrow-right text-sm"></i></Link>
-            <Link to="/cv" className="btn-secondary">{c.cv}<i className="fas fa-file-lines text-sm"></i></Link>
-          </div>
-          <dl className="mt-11 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 sm:grid-cols-4">
-            {c.stats.map((stat) => <div key={stat.label} className="bg-white px-4 py-5"><dd className="text-2xl font-bold tracking-tight text-slate-950">{stat.value}</dd><dt className="mt-1 text-xs font-semibold leading-tight text-slate-500">{stat.label}</dt></div>)}
-          </dl>
+    <section className="border-b border-slate-300 py-14 sm:py-20">
+      <div className="container">
+        <div className="flex flex-col gap-3 border-b border-slate-400 pb-5 sm:flex-row sm:items-center sm:justify-between">
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-brand-900">{c.eyebrow}</span>
+          <span className="inline-flex items-center gap-2 text-sm font-semibold text-slate-700"><span className="h-2 w-2 bg-emerald-600"></span>{c.available}</span>
         </div>
 
-        <div className="relative mx-auto w-full max-w-lg">
-          <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-4 shadow-soft-xl sm:p-6">
-            <div className="grid grid-cols-[92px_1fr] items-center gap-5 border-b border-slate-200 pb-5">
-              <img src="/portfolio/sami-photo.webp" alt="Sami Halawa Ribas" width="184" height="178" className="h-[92px] w-[92px] rounded-2xl object-cover object-top" />
-              <div><p className="text-sm font-bold uppercase tracking-[.18em] text-brand-700">{c.proofTitle}</p><p className="mt-2 text-sm leading-relaxed text-slate-600">{c.proofBody}</p></div>
+        <div className="grid gap-10 py-10 lg:grid-cols-[minmax(0,1.25fr)_minmax(21rem,.75fr)] lg:gap-16 lg:py-14">
+          <div>
+            <h1 className="cv-serif max-w-5xl text-[clamp(3.4rem,7vw,7.1rem)] font-normal leading-[0.91] tracking-[-0.05em] text-slate-950">{c.title}</h1>
+            <p className="mt-8 max-w-3xl text-xl leading-relaxed text-slate-700">{c.intro}</p>
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <Link to="/projects" className="btn-primary">{c.work}<i className="fas fa-arrow-right text-sm"></i></Link>
+              <Link to="/cv" className="btn-secondary">{c.cv}<i className="fas fa-file-lines text-sm"></i></Link>
             </div>
-            <div className="pt-5"><p className="text-xs font-bold uppercase tracking-[.2em] text-slate-500">{c.now}</p><ul className="mt-3 space-y-3">{c.building.map((item, index) => <li key={item} className="flex items-center gap-3"><span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-50 text-xs font-bold text-brand-800">0{index + 1}</span><span className="font-semibold text-slate-800">{item}</span></li>)}</ul></div>
           </div>
-          <div className="absolute -bottom-5 -right-5 -z-10 h-full w-full rounded-[2rem] border border-brand-200 bg-brand-50"></div>
+
+          <aside className="flex flex-col justify-end border-t border-slate-400 pt-6 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
+            <div className="grid grid-cols-[6.25rem_1fr] items-start gap-5">
+              <img src="/portfolio/sami-photo.webp" alt="Sami Halawa Ribas" width="184" height="178" className="h-[100px] w-[100px] border border-slate-400 object-cover object-top" />
+              <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-900">{c.proofTitle}</p><p className="mt-2 text-sm leading-relaxed text-slate-600">{c.proofBody}</p></div>
+            </div>
+            <div className="mt-8 border-t border-slate-400 pt-5">
+              <p className="text-xs font-bold uppercase tracking-[.2em] text-slate-600">{c.now}</p>
+              <ol className="mt-3 border-t border-slate-300">
+                {c.building.map((item, index) => <li key={item} className="grid grid-cols-[2rem_1fr] gap-3 border-b border-slate-300 py-3"><span className="font-mono text-xs font-bold text-brand-800">0{index + 1}</span><span className="font-semibold text-slate-800">{item}</span></li>)}
+              </ol>
+            </div>
+          </aside>
         </div>
+
+        <dl className="grid grid-cols-2 border-y border-slate-400 sm:grid-cols-4">
+          {c.stats.map((stat, index) => <div key={stat.label} className={`py-5 pr-4 sm:px-5 ${index % 2 === 1 ? 'border-l border-slate-300' : ''} ${index > 1 ? 'border-t border-slate-300 sm:border-t-0' : ''} ${index > 0 ? 'sm:border-l' : ''}`}><dd className="cv-serif text-3xl font-semibold tracking-tight text-slate-950">{stat.value}</dd><dt className="mt-1 text-xs font-bold uppercase leading-tight tracking-[0.1em] text-slate-500">{stat.label}</dt></div>)}
+        </dl>
       </div>
     </section>
   );

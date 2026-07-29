@@ -1,5 +1,257 @@
 [
   {
+    "slug": "data-provenance-receipts-audit-trails",
+    "path": "en/data-provenance-receipts-audit-trails",
+    "title": "Architecting Data Provenance: Delivery Receipts and Audit Trails for AI Agent Systems",
+    "date": "2026-07-29T13:03:48.217Z",
+    "summary": "A technical blueprint for building immutable, verifiable audit trails for automated systems and AI agents. Learn why logs fail and how to construct a robust provenance model.",
+    "author": "Sami Halawa",
+    "tags": [
+      "audit-trail",
+      "automation",
+      "data-provenance",
+      "receipts"
+    ]
+  },
+  {
+    "slug": "scheduler-worker-cms-separation",
+    "path": "en/scheduler-worker-cms-separation",
+    "title": "A Scheduler is Not a CMS: Separating Crawlab Workers from the Editorial Truth",
+    "date": "2026-07-29T13:03:28.291Z",
+    "summary": "Stop pointing your frontend directly at your crawler's MongoDB database. Learn why worker control planes must remain structurally separated from your editorial content pipelines.",
+    "author": "Sami Halawa",
+    "tags": [
+      "cms",
+      "content-pipeline",
+      "scheduler",
+      "workers"
+    ]
+  },
+  {
+    "slug": "eu-ai-act-engineering-checklist",
+    "path": "en/eu-ai-act-engineering-checklist",
+    "title": "An Engineering-First EU AI Act Checklist: Building Compliant Agent Systems",
+    "date": "2026-07-29T13:03:05.723Z",
+    "summary": "A practical guide for AI product engineers to translate the EU AI Act into concrete code, system architecture, logging pipelines, and operational guardrails.",
+    "author": "Sami Halawa",
+    "tags": [
+      "ai-governance",
+      "compliance",
+      "eu-ai-act",
+      "product-engineering"
+    ]
+  },
+  {
+    "slug": "web-mobile-feature-parity-strategy",
+    "path": "en/web-mobile-feature-parity-strategy",
+    "title": "A Pragmatic Engineer's Guide to Cross-Platform Feature Parity",
+    "date": "2026-07-29T13:02:45.059Z",
+    "summary": "A highly technical, no-nonsense architectural strategy for maintaining workflow parity across web, iOS, and Android without duplicating business logic.",
+    "author": "Sami Halawa",
+    "tags": [
+      "cross-platform",
+      "mobile",
+      "product-engineering",
+      "web"
+    ]
+  },
+  {
+    "slug": "whatsapp-api-automation-architecture",
+    "path": "en/whatsapp-api-automation-architecture",
+    "title": "Building Production-Grade WhatsApp Automation: An Engineer's Guide to Scale, State, and CRM Sync",
+    "date": "2026-07-29T13:02:25.341Z",
+    "summary": "A technical blueprint for architecting a resilient WhatsApp API engine: webhook normalization, idempotency, CRM sync, and why browser automation is a production hazard.",
+    "author": "Sami Halawa",
+    "tags": [
+      "api",
+      "automation",
+      "messaging",
+      "whatsapp"
+    ]
+  },
+  {
+    "slug": "crm-automation-system-design",
+    "path": "en/crm-automation-system-design",
+    "title": "CRM Automation is a State Machine, Not a Sequence of Templates",
+    "date": "2026-07-29T13:01:59.297Z",
+    "summary": "Stop building brittle CRM outreach scripts. Learn how to architect robust CRM automation using strict state machines, canonical schemas, and deterministic state transitions.",
+    "author": "Sami Halawa",
+    "tags": [
+      "ai-agents",
+      "automation",
+      "crm",
+      "system-design"
+    ]
+  },
+  {
+    "slug": "human-approval-boundaries-ai-automation",
+    "path": "en/human-approval-boundaries-ai-automation",
+    "title": "Designing Human Approval Boundaries in AI Agent Architectures",
+    "date": "2026-07-29T12:56:06.401Z",
+    "summary": "A highly technical, concrete framework for implementing human-in-the-loop (HITL) boundaries in production AI agent systems.",
+    "author": "Sami Halawa",
+    "tags": [
+      "ai-automation",
+      "human-in-the-loop",
+      "product-design",
+      "safety"
+    ]
+  },
+  {
+    "slug": "characterization-tests-for-legacy-code",
+    "path": "en/characterization-tests-for-legacy-code",
+    "title": "Characterization Testing: How to Refactor Crucial Legacy Code Without Flying Blind",
+    "date": "2026-07-29T12:55:46.430Z",
+    "summary": "A hands-on, engineering-first guide to using characterization tests, golden files, and boundary seams to safely refactor undocumented legacy subsystems.",
+    "author": "Sami Halawa",
+    "tags": [
+      "characterization-tests",
+      "legacy-code",
+      "refactoring",
+      "testing"
+    ]
+  },
+  {
+    "slug": "observe-runtime-shape-before-coding",
+    "path": "en/observe-runtime-shape-before-coding",
+    "title": "Probe the Runtime: Why Static Types Lie and How to Verify Shapes Before You Integrate",
+    "date": "2026-07-29T12:55:27.796Z",
+    "summary": "Learn why static schemas lie and how to implement read-only runtime probes across databases, APIs, CLI tools, and DOM elements before writing integration code.",
+    "author": "Sami Halawa",
+    "tags": [
+      "debugging",
+      "developer-workflow",
+      "integration",
+      "runtime"
+    ]
+  },
+  {
+    "slug": "reliable-webhook-receivers",
+    "path": "en/reliable-webhook-receivers",
+    "title": "Designing Bulletproof Webhook Receivers: The Fast-Ack, Idempotent Engine",
+    "date": "2026-07-29T12:54:50.687Z",
+    "summary": "A technical blueprint for building zero-loss webhook receivers. Learn signature verification, fast-ack architecture, idempotency strategies, and automated state reconciliation.",
+    "author": "Sami Halawa",
+    "tags": [
+      "backend",
+      "idempotency",
+      "integration",
+      "webhooks"
+    ]
+  },
+  {
+    "slug": "self-hosted-git-push-deployments",
+    "path": "en/self-hosted-git-push-deployments",
+    "title": "Designing a Bulletproof Self-Hosted GitOps Deployment Pipeline",
+    "date": "2026-07-29T12:54:27.263Z",
+    "summary": "A deep dive into building a reliable self-hosted deployment flow from push to production, using immutable commit proof chains, proper env boundaries, and robust reverse-proxy handoffs.",
+    "author": "Sami Halawa",
+    "tags": [
+      "coolify",
+      "deployment",
+      "gitops",
+      "self-hosting"
+    ]
+  },
+  {
+    "slug": "semantic-quality-gates-ai-content",
+    "path": "en/semantic-quality-gates-ai-content",
+    "title": "Semantic Quality Gates: Architectural Patterns for AI Content Validation",
+    "date": "2026-07-29T12:53:51.595Z",
+    "summary": "A deep dive into building production-grade semantic quality gates that validate accuracy, grounding, and locale correctness in AI pipelines.",
+    "author": "Sami Halawa",
+    "tags": [
+      "ai-content",
+      "publishing",
+      "quality-gates",
+      "semantic-evaluation"
+    ]
+  },
+  {
+    "slug": "programmatic-seo-without-thin-pages",
+    "path": "en/programmatic-seo-without-thin-pages",
+    "title": "Engineering Programmatic SEO: Build Pipelines, Not Spam Engines",
+    "date": "2026-07-29T12:53:31.986Z",
+    "summary": "A technical blueprint for programmatic SEO. Build high-quality, context-seeded dynamic pages with strict quality gates, collision routing, and automated linting.",
+    "author": "Sami Halawa",
+    "tags": [
+      "automation",
+      "content-quality",
+      "programmatic-seo",
+      "seo"
+    ]
+  },
+  {
+    "slug": "multilingual-seo-content-architecture",
+    "path": "en/multilingual-seo-content-architecture",
+    "title": "Architecting Multilingual SEO for Web Products",
+    "date": "2026-07-29T12:53:08.938Z",
+    "summary": "A deep dive into stable locale URLs, hreflang rules, sitemap design, and verification pipelines for technical founders and engineers building internationalized web apps.",
+    "author": "Sami Halawa",
+    "tags": [
+      "content-architecture",
+      "multilingual",
+      "seo",
+      "web-development"
+    ]
+  },
+  {
+    "slug": "gitops-markdown-content-publishing",
+    "path": "en/gitops-markdown-content-publishing",
+    "title": "Git-Based Content Delivery: Architecture, Schemas, and Build-Time Reconciliation",
+    "date": "2026-07-29T12:52:25.762Z",
+    "summary": "Ditch the headless CMS overhead. Learn how to design a high-throughput Git-and-Markdown pipeline with type-safe frontmatter, stable internationalized slugs, and content-hashed build manifests.",
+    "author": "Sami Halawa",
+    "tags": [
+      "content-pipeline",
+      "gitops",
+      "markdown",
+      "static-site"
+    ]
+  },
+  {
+    "slug": "rate-limits-backpressure-ai-pipelines",
+    "path": "en/rate-limits-backpressure-ai-pipelines",
+    "title": "Architecting Backpressure and Rate-Limit Resilience in AI Pipelines",
+    "date": "2026-07-29T12:52:05.441Z",
+    "summary": "Learn how to build resilient AI pipelines that handle heavy token volume without crashing into provider rate limits or wasting API budget.",
+    "author": "Sami Halawa",
+    "tags": [
+      "ai-pipelines",
+      "backpressure",
+      "rate-limits",
+      "reliability"
+    ]
+  },
+  {
+    "slug": "idempotent-content-delivery-reconciliation",
+    "path": "en/idempotent-content-delivery-reconciliation",
+    "title": "Idempotent Multi-Platform Content Publishing and Reconciliation",
+    "date": "2026-07-29T12:51:43.401Z",
+    "summary": "A deep dive into building bulletproof multi-destination publishing engines using deterministic IDs, content hashes, and manifest-based reconciliation.",
+    "author": "Sami Halawa",
+    "tags": [
+      "content-delivery",
+      "distributed-systems",
+      "idempotency",
+      "reconciliation"
+    ]
+  },
+  {
+    "slug": "scraping-pipeline-raw-canonical-consumer",
+    "path": "en/scraping-pipeline-raw-canonical-consumer",
+    "title": "Designing a Resilient Three-Layer Web Scraping Pipeline",
+    "date": "2026-07-29T12:51:21.968Z",
+    "summary": "Stop treating web scraping as a simple fetch-and-save. Learn how a three-layer database architecture prevents data loss, self-ingestion loops, and schema corruption.",
+    "author": "Sami Halawa",
+    "tags": [
+      "architecture",
+      "data-pipeline",
+      "provenance",
+      "web-scraping"
+    ]
+  },
+  {
     "slug": "subagents-and-parallel-agents",
     "path": "en/subagents-and-parallel-agents",
     "title": "Subagents and Parallel Agents: Dividing Work Without Creating Chaos",
@@ -25,6 +277,20 @@
       "debugging",
       "observability",
       "tracing"
+    ]
+  },
+  {
+    "slug": "prototype-to-production-ai",
+    "path": "en/prototype-to-production-ai",
+    "title": "From AI Prototype to Production: The Unglamorous Work",
+    "date": "2026-07-15T22:01:59.304Z",
+    "summary": "Moving an AI model from a Jupyter notebook to a reliable production feature is a brutal reality check. This guide covers the essential, often overlooked steps: handling edge cases, robust evaluation, cost and latency management, and building resilient systems.",
+    "author": "Sami Halawa",
+    "tags": [
+      "ai-product",
+      "mlops",
+      "production",
+      "reliability"
     ]
   },
   {

@@ -1,5 +1,6 @@
 # INDEX
 
+portfolio visual language | oversized slogans, gradient ornaments, pill controls and repeated rounded cards make the site feel AI-template generated | use a restrained editorial system with serif-led hierarchy, rules, square controls and content-specific compositions | do not solve “more visual” by adding gradients, glass, floating shapes or another card grid | verify desktop/mobile home and CV routes, navigation states, no overflow and preserved actions
 CV downloads | shorter role editions omitted achievements, raw inventory prose leaked internal notes/payment state and reused filenames stayed stale in Cloudflare | publish clean comprehensive twelve-page role editions at unique `_Comprehensive` URLs plus separate ATS text | do not render evidence-ledger prose, payment-state wording, build a CV editor, remove shared facts or reuse a cached filename for materially new content | verify all 85 professional projects, technology detail, 37 credentials, achievements, exact live hashes and rendered CV route
 contact intake | Tally embeds replaced the existing native provider flow | use native contact/newsletter forms and emit conversions only after provider success | do not reintroduce embedded Tally forms or fire leads on button clicks | verify no Tally assets, provider response, rendered states and analytics reception
 measurement provider proof | missing repo IDs were treated as proof that analytics did not exist | audit live bundle, credentials and actual GA4/GTM/Ads/PostHog/Tag Gateway providers | do not infer provider state from source grep or reuse another brand's IDs | verify exact property/container/project IDs, live events and provider readback
@@ -12,6 +13,16 @@ blog content pipeline | hard-coded slug list + modal did not scale to daily hub-
 SPA production routes | public asset directories collide with client routes | serve file-shaped URLs as static files and everything else as the SPA shell | do not let Nginx treat route names as directories or leak port 8080 redirects | verify slash and non-slash routes plus real asset MIME types
 Coolify Linux build | macOS lock can omit the Linux Rollup binary and Docker hosts differ between arm64 and x64 | install the build container's matching native Rollup GNU package | do not hardcode one CPU or infer deployability from the macOS Vite build | verify local container plus Coolify build the pushed commit and live routes
 public portfolio | stock imagery and invented social proof replaced source evidence | use dated metrics, real screenshots and public links | do not publish placeholders, arbitrary percentages or unsupported impact | verify exact live route, image load, text and responsive layout
+
+## 2026-07-29 — Personal portfolio uses an editorial, not AI-template, visual language
+
+- **Status:** CURRENT
+- **Project/root:** `PROJECTS_ON_PROCESS/2025-FINAL-AISTUDIO-samihalawa-final`; shared shell and recruiter-facing CV routes.
+- **Mistake recovered:** the CV surface combined an oversized slogan, gradient decoration, capsule labels, pill buttons, six identical rounded cards and pastel panels, making verified professional content look generated from a generic AI landing-page template.
+- **Superior approach:** use a warm document canvas, serif-led hierarchy, typographic rules, compact square controls, numbered editorial lists and the real CV preview as the dominant visual object.
+- **Evidence:** user correction on 29 Jul 2026, production `/cv/en` screenshot and the matching `CVPage.tsx`, `Header.tsx`, `Layout.tsx` and global component styles.
+- **Triggers / verification:** “AI style”, redesign, portfolio, CV, cards, gradients, pills or visual polish; render `/`, `/cv/en` and `/cv/es` at 375px and desktop, check navigation/action states, overflow and exact download targets.
+- **Do / don't:** do create hierarchy from type, spacing, rules and real work; don't add glass, neon gradients, floating blobs or another evenly distributed rounded-card grid.
 
 ## 2026-07-28 — Pair comprehensive visual role CVs with separate ATS editions
 
