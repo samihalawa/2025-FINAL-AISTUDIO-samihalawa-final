@@ -1,6 +1,6 @@
 # INDEX
 
-CV downloads | shorter role editions omitted achievements and reused filenames stayed stale in Cloudflare | publish comprehensive twelve-page role editions at unique `_Comprehensive` URLs plus separate ATS text | do not build a CV editor, remove shared facts or reuse a cached filename for materially new content | verify all 90 projects, technology detail, credentials, achievements, exact live hashes and rendered CV route
+CV downloads | shorter role editions omitted achievements, raw inventory prose leaked internal notes and reused filenames stayed stale in Cloudflare | publish clean comprehensive twelve-page role editions at unique `_Comprehensive` URLs plus separate ATS text | do not render evidence-ledger prose, build a CV editor, remove shared facts or reuse a cached filename for materially new content | verify all 85 professional projects, technology detail, 37 credentials, achievements, exact live hashes and rendered CV route
 contact intake | Tally embeds replaced the existing native provider flow | use native contact/newsletter forms and emit conversions only after provider success | do not reintroduce embedded Tally forms or fire leads on button clicks | verify no Tally assets, provider response, rendered states and analytics reception
 measurement provider proof | missing repo IDs were treated as proof that analytics did not exist | audit live bundle, credentials and actual GA4/GTM/Ads/PostHog/Tag Gateway providers | do not infer provider state from source grep or reuse another brand's IDs | verify exact property/container/project IDs, live events and provider readback
 SEO route body and public authorship | generated heads still left crawler HTML empty and hub source labels leaked as authors | prerender every route/article and normalize public author identity | do not treat metadata-only HTML or delivery labels as indexable content | verify raw H1/article body, hydration, byline/JSON-LD agreement and live Lighthouse
@@ -17,10 +17,10 @@ public portfolio | stock imagery and invented social proof replaced source evide
 
 - **Status:** CURRENT
 - **Project/root:** `PROJECTS_ON_PROCESS/2025-FINAL-AISTUDIO-samihalawa-final`; `/cv` and downloadable resume assets.
-- **Mistake recovered:** two-, three- and four-page role editions omitted verified achievements, detailed technology evidence and most of the complete project record; independent CV copies or a builder would still create drift.
-- **Superior approach:** publish six designed twelve-page comprehensive role PDFs and six plain-text ATS files generated from the CV repository’s single shared evidence record.
-- **Evidence:** `pages/CVPage.tsx`, `public/cv/variants/`, Atos transcript line 61 and the comprehensive generator in the CV repository.
-- **Triggers / verification:** CV, resume, role family, application, visual or ATS; verify every file URL/MIME and exact source hash, all twelve PDF pages, all 90 projects, ATS parsing and the rendered desktop/mobile route.
+- **Mistake recovered:** early role editions omitted verified achievements and technology coverage; later generated editions also rendered private evidence-inventory prose, including audit language, workflow references and records without professional scope.
+- **Superior approach:** publish six designed twelve-page PDFs and six ATS files from one shared factual record, using a dedicated recruiter-facing copy layer and an 85-item professional project register.
+- **Evidence:** `pages/CVPage.tsx`, `public/cv/variants/`, Atos transcript line 61, the 29 Jul 2026 full-text extraction, and `scripts/build-role-cvs.mjs` in the CV repository.
+- **Triggers / verification:** CV, resume, role family, application, visual, ATS or internal notes; verify every file URL/MIME and exact source hash, all twelve PDF pages, all 85 recruiter-facing projects, all 37 credential IDs, ATS parsing and the rendered desktop/mobile route.
 - **Do / don't:** do keep visual storytelling and parsing as separate outputs and use unique `_Comprehensive` filenames for every materially changed edition, including one-off employer dossiers; don't force one file to serve both purposes, build an editing application or rely on a long-cached legacy URL.
 
 ## 2026-07-22 — Contact intake stays native and provider-confirmed
