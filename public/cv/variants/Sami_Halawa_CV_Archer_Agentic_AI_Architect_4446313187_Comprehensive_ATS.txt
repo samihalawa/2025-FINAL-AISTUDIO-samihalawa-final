@@ -1,16 +1,16 @@
 SAMI HALAWA RIBAS
-Founding AI Engineer · Head of AI · AI Product & Platform Lead
+Solutions Architect · Agentic AI
 
 Madrid, Spain · EU work authorisation · +34 679 794 037 · sami@oulang.ai · samihalawa.com · linkedin.com/in/samihalawa · github.com/samihalawa
 
 PROFILE
-Founder-engineer who turns ambiguous opportunities into operating AI products. Full-cycle ownership across product strategy, agent and LLM workflows, data and APIs, web/mobile delivery, infrastructure, analytics, monetisation and customer operations.
+AI solutions architect and hands-on product engineer designing and operating multi-agent systems across orchestration, data, APIs, automation and user-facing delivery. Brings 15+ years across software, product delivery and technical education, with current hands-on ownership of Python/FastAPI agent systems. Combines LangChain/LangGraph, MCP, RAG, structured outputs, prompt and evaluation loops, and technical leadership to turn complex workflows into dependable decision-support and operational systems.
 
 CORE EXPERTISE
-Leadership & product: Zero-to-one architecture, product strategy, customer discovery, technical direction, client delivery, mentoring
-AI systems: Multi-agent orchestration, MCP, tool/function calling, RAG, structured outputs, model routing and evaluation loops
-Engineering: Python, FastAPI, TypeScript, Node.js, React, Next.js, REST APIs, SQL, background jobs and mobile delivery
-Operations: Docker, Linux, CI/CD, Cloudflare, Coolify, logs, monitoring, analytics, payments and cost control
+Agentic AI architecture: LangChain, LangGraph, MCP, multi-agent orchestration, tool/function calling, memory, RAG, structured outputs and model routing
+Python, data & ML engineering: Python, FastAPI, SQL/MySQL, REST APIs, webhooks, background jobs, document/OCR pipelines and multimodal workflows
+Prompt engineering & decision systems: Prompt design, tool schemas, reusable system instructions, evaluation loops, error analysis, human review and AI governance
+Technical leadership & production: Zero-to-one architecture, technical direction, cross-functional delivery, mentoring, Docker, Linux, CI/CD, monitoring and operational handover
 
 TECHNOLOGY AND DELIVERY
 Agentic AI & orchestration

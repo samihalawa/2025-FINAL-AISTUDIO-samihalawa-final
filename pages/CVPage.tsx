@@ -46,17 +46,24 @@ const roleEditions = [
     es: 'IA técnica / Full-Stack',
     detailEn: 'Detailed technical edition covering AI, full-stack delivery, data, APIs and deployment, including current Databricks, LangChain and LangGraph qualifications.',
     detailEs: 'Edición técnica detallada sobre IA, desarrollo full-stack, datos, APIs y despliegue, con formación actual en Databricks, LangChain y LangGraph.'
+  },
+  {
+    key: 'Archer_Agentic_AI_Architect_4446313187',
+    en: 'Agentic AI Architect',
+    es: 'Arquitectura de IA agéntica',
+    detailEn: 'Enterprise agentic architecture, LangChain/LangGraph, MCP, RAG, voice and production delivery.',
+    detailEs: 'Arquitectura agéntica empresarial, LangChain/LangGraph, MCP, RAG, voz y entrega en producción.'
   }
 ];
-const roleEditionFile = (key: string) => `${key}_Comprehensive_2026-07-29-v4`;
+const roleEditionFile = (key: string) => `${key}_Comprehensive_2026-07-30`;
 
 const CVPage: React.FC<CVPageProps> = ({ edition }) => {
   const { language } = useTranslation();
   const selected = edition || (language === 'es' ? 'es' : 'en');
   const spanish = selected === 'es';
-  const pdf = spanish ? '/cv/Sami_Halawa_CV_ES_2026-07-29-v4.pdf' : '/cv/Sami_Halawa_CV_2026-07-29-v4.pdf';
-  const ats = spanish ? '/cv/Sami_Halawa_CV_ES_ATS_2026-07-29-v4.txt' : '/cv/Sami_Halawa_CV_ATS_2026-07-29-v4.txt';
-  const preview = spanish ? '/cv/Sami_Halawa_CV_ES_preview_2026-07-29-v5.png' : '/cv/Sami_Halawa_CV_preview_2026-07-29-v5.png';
+  const pdf = spanish ? '/cv/Sami_Halawa_CV_ES_2026-07-30.pdf' : '/cv/Sami_Halawa_CV_2026-07-30.pdf';
+  const ats = spanish ? '/cv/Sami_Halawa_CV_ES_ATS_2026-07-30.txt' : '/cv/Sami_Halawa_CV_ATS_2026-07-30.txt';
+  const preview = spanish ? '/cv/Sami_Halawa_CV_ES_preview_2026-07-30.png' : '/cv/Sami_Halawa_CV_preview_2026-07-30.png';
   const description = spanish
     ? 'Una visión completa de productos, sistemas para clientes, open source, investigación y docencia, disponible en PDF y en formato ATS.'
     : 'A complete view of products, client systems, open source, research and teaching, available as a designed PDF and an ATS-ready edition.';
@@ -102,7 +109,7 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Perfiles profesionales' : 'Professional profiles'}</p>
               <h2 className="cv-serif mt-4 text-4xl font-normal leading-tight tracking-[-0.025em] text-slate-950">{spanish ? 'Elige el perfil más cercano a la oportunidad.' : 'Choose the profile closest to the opportunity.'}</h2>
-              <p className="mt-5 max-w-md leading-relaxed text-slate-700">{spanish ? 'Todos presentan la trayectoria completa, el stack tecnológico, 85 proyectos y colaboraciones, 41 cualificaciones verificadas y los logros principales, situando primero las capacidades más relevantes para cada función.' : 'Every profile presents the complete career history, technology stack, 85 projects and engagements, 41 verified qualifications and major achievements, with the most relevant capabilities first.'}</p>
+              <p className="mt-5 max-w-md leading-relaxed text-slate-700">{spanish ? 'Todos presentan la trayectoria completa, el stack tecnológico, 85 proyectos y colaboraciones, 53 cualificaciones verificadas y los logros principales, situando primero las capacidades más relevantes para cada función.' : 'Every profile presents the complete career history, technology stack, 85 projects and engagements, 53 verified qualifications and major achievements, with the most relevant capabilities first.'}</p>
             </div>
             <ol className="border-t border-slate-400">
               {roleEditions.map((item, index) => (
@@ -126,15 +133,15 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
           <aside className="lg:sticky lg:top-24 lg:self-start">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Formación profesional actual' : 'Current professional development'}</p>
             <h2 className="cv-serif mt-4 text-3xl font-normal leading-tight text-slate-950">{spanish ? 'IA agéntica, plataformas y gobernanza.' : 'Agentic AI, platforms and governance.'}</h2>
-            <p className="mt-5 leading-relaxed text-slate-700">{spanish ? 'Mis 41 cualificaciones verificadas abarcan Agentic AI Engineering de Edureka, Databricks Mosaic AI, automatización con n8n de LearnKartS, arquitectura y operación de sistemas de IA de Board Infinity, gobernanza e ISO 42001 del British Standards Institution y métodos cuantitativos de EDHEC Business School.' : 'My 41 verified qualifications span Edureka’s Agentic AI Engineering, Databricks Mosaic AI, LearnKartS n8n automation, Board Infinity AI systems architecture and operations, British Standards Institution governance and ISO 42001, and quantitative methods from EDHEC Business School.'}</p>
+            <p className="mt-5 leading-relaxed text-slate-700">{spanish ? 'Mis 53 cualificaciones verificadas abarcan ingeniería de IA agéntica; estrategia y gobernanza de IA de Saïd Business School, University of Oxford; arquitectura de IA segura y preparación SecAI+ de Packt; MLOps de producción de Board Infinity; Databricks Mosaic AI; automatización con n8n de LearnKartS; ISO 42001 del British Standards Institution; y métodos cuantitativos de EDHEC Business School.' : 'My 53 verified qualifications span agentic AI engineering; AI strategy and governance from Saïd Business School, University of Oxford; secure-AI architecture and SecAI+ exam preparation from Packt; production MLOps from Board Infinity; Databricks Mosaic AI; n8n automation from LearnKartS; ISO 42001 from the British Standards Institution; and quantitative methods from EDHEC Business School.'}</p>
           </aside>
           <figure>
             <div className="border border-slate-400 bg-white p-2 shadow-[0_28px_70px_-42px_rgba(15,23,42,.55)] sm:p-4">
               <img src={preview} alt={spanish ? 'Primera página del CV completo' : 'First page of the complete CV'} className="block w-full bg-white" />
             </div>
             <figcaption className="mt-4 flex flex-col items-start justify-between gap-3 border-t border-slate-400 pt-4 text-sm text-slate-600 sm:flex-row sm:items-center">
-              <span>{spanish ? 'Vista previa de la página 1 de 5.' : 'Preview of page 1 of 5.'}</span>
-              <a href={pdf} target="_blank" rel="noopener noreferrer" data-analytics-event="cv_download" className="inline-flex min-h-11 items-center gap-2 border-b border-slate-500 font-bold text-slate-800 hover:border-slate-950 hover:text-slate-950">{spanish ? 'Abrir las cinco páginas' : 'Open all five pages'}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>
+              <span>{spanish ? 'Vista previa de la página 1 de 6.' : 'Preview of page 1 of 6.'}</span>
+              <a href={pdf} target="_blank" rel="noopener noreferrer" data-analytics-event="cv_download" className="inline-flex min-h-11 items-center gap-2 border-b border-slate-500 font-bold text-slate-800 hover:border-slate-950 hover:text-slate-950">{spanish ? 'Abrir las seis páginas' : 'Open all six pages'}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>
             </figcaption>
           </figure>
         </section>

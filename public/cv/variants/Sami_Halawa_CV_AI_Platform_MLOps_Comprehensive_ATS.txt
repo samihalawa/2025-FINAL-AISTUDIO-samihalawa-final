@@ -302,6 +302,9 @@ Foundations of AI Governance and Responsible Development | LearnQuest | 2026 | C
 Managing AI Systems: Development, Deployment, and Governance Specialization | Board Infinity | 2026 | Credential ID HZ7XDA9WCE2I
 AI Governance & ISO 42001 Readiness for GRC, Audit, & Legal | British Standards Institution | 2026 | Credential ID UXUS7TQ36GF4
 Investment Management with Python and Machine Learning | EDHEC Business School | 2026 | Credential ID EGOPNC45Z7X4
+AI Foundations for Business Professionals | Saïd Business School, University of Oxford | 2026 | Credential ID LWTECCK71WBO
+CompTIA SecAI+ (CY0-001) Certification Exam Prep | Packt | 2026 | Credential ID Q4IYZTSRNUTN
+Machine Learning Operations (MLOps) | Board Infinity | 2026 | Credential ID 3HZCX9EHMFMO
 
 PROFESSIONAL QUALIFICATIONS — 2026
 Databricks Mosaic AI | Course certificate | Credential ID RRXO8HSACR29
@@ -353,6 +356,21 @@ AI Governance & ISO 42001 Readiness for GRC, Audit, & Legal | British Standards 
 - AI Management Essentials: Integrating ISO 42001 & ISO 23894 | Credential ID I61HD0HLKVAB
 - Understanding the Foundations of the EU AI Act | Credential ID X5JU1YKW8B9S
 - Approaches to Establish Trust in AI Systems | Credential ID U6ZLGVCLZ5H5
+
+AI Foundations for Business Professionals | Saïd Business School, University of Oxford | Specialization certificate | Credential ID LWTECCK71WBO
+- AI Governance | Credential ID BNQDJXKCD1O5
+- Generative and Agentic AI | Credential ID VNIB5TAX5SVF
+- AI Essentials | Credential ID LMTNWRB8U84N
+
+CompTIA SecAI+ (CY0-001) Certification Exam Prep | Packt | Specialization certificate | Credential ID Q4IYZTSRNUTN
+- Advanced AI Security, Automation, Governance, and Compliance | Credential ID INDPFS30V3OV
+- AI Security Architecture, Controls, and Defensive Operations | Credential ID 1SF8VGAOC9CM
+- AI Foundations and Secure AI Fundamentals | Credential ID D4JLEZG41RLX
+
+Machine Learning Operations (MLOps) | Board Infinity | Specialization certificate | Credential ID 3HZCX9EHMFMO
+- Model Serving Systems: Containers, APIs & Scalability | Credential ID HVVGUCUZZ6A5
+- Cloud Platforms for ML: AWS, Azure & GCP Deployment | Credential ID VXCX7BOCN5EK
+- DevOps for Machine Learning: CI/CD, APIs & Deployment | Credential ID PEL4KC01Y3UU
 
 LANGUAGES
 Spanish: native
