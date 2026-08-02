@@ -53,6 +53,13 @@ const roleEditions = [
     es: 'Arquitectura de IA agéntica',
     detailEn: 'Enterprise agentic architecture, LangChain/LangGraph, MCP, RAG, voice and production delivery.',
     detailEs: 'Arquitectura agéntica empresarial, LangChain/LangGraph, MCP, RAG, voz y entrega en producción.'
+  },
+  {
+    key: 'Zooplus_Agentic_Commerce',
+    en: 'Agentic AI / Commerce',
+    es: 'IA agéntica / Comercio',
+    detailEn: 'Production AI services, commerce workflows, evaluation, observability and product delivery.',
+    detailEs: 'Servicios de IA en producción, flujos de comercio, evaluación, observabilidad y entrega de producto.'
   }
 ];
 const roleEditionFile = (key: string) => `${key}_Comprehensive_2026-07-30`;
