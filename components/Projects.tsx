@@ -202,36 +202,37 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <section id="projects" className="overflow-hidden pb-24 pt-12 sm:pt-16" aria-labelledby="projects-heading">
+    <section id="projects" className="overflow-hidden border-b border-slate-300 bg-[#f8f6f1] pb-24 pt-12 sm:pt-16" aria-labelledby="projects-heading">
       <div className="container">
-        <div className="relative overflow-hidden rounded-[2rem] border border-slate-800 bg-slate-950 px-5 py-10 text-white shadow-2xl sm:px-10 sm:py-14 lg:px-14 lg:py-16">
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_84%_14%,rgba(45,212,191,.22),transparent_28%),radial-gradient(circle_at_8%_88%,rgba(99,102,241,.20),transparent_30%)]" />
-          <div className="relative max-w-5xl">
-            <span className="inline-flex rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-bold uppercase tracking-[.18em] text-teal-200">{h.eyebrow}</span>
-            <h1 id="projects-heading" className="mt-6 max-w-5xl font-display text-4xl font-bold leading-[.98] tracking-[-.055em] text-white sm:text-6xl lg:text-7xl">{h.title}</h1>
-            <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate-300 sm:text-xl">{h.body}</p>
+        <header className="border-b border-slate-400 pb-12">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(18rem,.8fr)] lg:items-end lg:gap-16">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">{h.eyebrow}</span>
+              <h1 id="projects-heading" className="cv-serif mt-5 max-w-5xl text-[clamp(3rem,7vw,6.5rem)] font-normal leading-[.92] tracking-[-.045em] text-slate-950">{h.title}</h1>
+            </div>
+            <p className="border-t border-slate-400 pt-5 text-lg leading-relaxed text-slate-700 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">{h.body}</p>
           </div>
-          <dl className="relative mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 lg:grid-cols-4">
-            {stats.map(stat => <div key={stat.label} className="bg-slate-950/80 p-5 sm:p-6"><dd className="font-display text-3xl font-bold text-white sm:text-4xl">{stat.value}</dd><dt className="mt-2 text-xs font-semibold uppercase leading-relaxed tracking-[.12em] text-slate-400">{stat.label}</dt></div>)}
+          <dl className="mt-10 grid grid-cols-2 border-t border-slate-400 lg:grid-cols-4">
+            {stats.map((stat, index) => <div key={stat.label} className={`border-b border-slate-300 py-5 sm:px-5 ${index % 2 === 0 ? 'border-r' : ''} lg:border-r lg:last:border-r-0`}><dd className="cv-serif text-4xl font-semibold text-slate-950">{stat.value}</dd><dt className="mt-2 text-xs font-bold uppercase leading-relaxed tracking-[.12em] text-slate-500">{stat.label}</dt></div>)}
           </dl>
-        </div>
+        </header>
 
         <section className="py-20 sm:py-24" aria-labelledby="portfolio-approach-heading">
           <div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:gap-16">
-            <div><span className="badge-pill">{h.approachEyebrow}</span><h2 id="portfolio-approach-heading" className="section-heading mt-5">{h.approachTitle}</h2><p className="section-subtitle mt-5">{h.approachBody}</p></div>
-            <div className="grid gap-px overflow-hidden rounded-[1.5rem] border border-slate-200 bg-slate-200 sm:grid-cols-3">
-              {h.approach.map(item => <article key={item.number} className="bg-white p-6"><span className="font-mono text-sm font-bold text-brand-700">{item.number}</span><h3 className="mt-8 text-lg font-bold text-slate-950">{item.title}</h3><p className="mt-3 text-sm leading-relaxed text-slate-600">{item.body}</p></article>)}
+            <div><span className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">{h.approachEyebrow}</span><h2 id="portfolio-approach-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">{h.approachTitle}</h2><p className="mt-5 text-lg leading-relaxed text-slate-600">{h.approachBody}</p></div>
+            <div className="grid border-t border-slate-400 sm:grid-cols-3">
+              {h.approach.map((item, index) => <article key={item.number} className={`border-b border-slate-300 py-6 sm:px-6 ${index < 2 ? 'sm:border-r' : ''}`}><span className="font-mono text-sm font-bold text-brand-800">{item.number}</span><h3 className="cv-serif mt-8 text-xl font-semibold text-slate-950">{item.title}</h3><p className="mt-3 text-sm leading-relaxed text-slate-600">{item.body}</p></article>)}
             </div>
           </div>
         </section>
 
         <section className="border-y border-slate-200 py-20 sm:py-24" aria-labelledby="portfolio-workstreams-heading">
           <div className="grid gap-8 lg:grid-cols-[.78fr_1.22fr] lg:gap-14">
-            <div className="lg:sticky lg:top-28 lg:self-start"><span className="badge-pill">{workstreamHeadings[language].eyebrow}</span><h2 id="portfolio-workstreams-heading" className="section-heading mt-5">{workstreamHeadings[language].title}</h2><p className="section-subtitle mt-5">{workstreamHeadings[language].body}</p></div>
-            <div className="grid gap-3 sm:grid-cols-2">
-              {workstreams.map((stream, index) => <button key={stream.lane} type="button" onClick={() => { setQuery(''); setLane(stream.lane); document.getElementById('inventory')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }} className="group min-h-48 rounded-2xl border border-slate-200 bg-white p-5 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-brand-300 hover:shadow-lg sm:p-6">
-                <div className="flex items-start justify-between gap-4"><span className="font-mono text-xs font-bold text-brand-700">{String(index + 1).padStart(2, '0')}</span><span className="rounded-full bg-slate-950 px-3 py-1 text-xs font-bold text-white">{stream.count}</span></div>
-                <h3 className="mt-5 text-xl font-bold text-slate-950">{inventoryLaneCopy[stream.lane][language]}</h3>
+            <div className="lg:sticky lg:top-28 lg:self-start"><span className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">{workstreamHeadings[language].eyebrow}</span><h2 id="portfolio-workstreams-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">{workstreamHeadings[language].title}</h2><p className="mt-5 text-lg leading-relaxed text-slate-600">{workstreamHeadings[language].body}</p></div>
+            <div className="grid border-t border-slate-400 sm:grid-cols-2">
+              {workstreams.map((stream, index) => <button key={stream.lane} type="button" onClick={() => { setQuery(''); setLane(stream.lane); document.getElementById('inventory')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }} className={`group min-h-48 border-b border-slate-300 bg-transparent p-5 text-left transition hover:bg-white sm:p-6 ${index % 2 === 0 ? 'sm:border-r' : ''}`}>
+                <div className="flex items-start justify-between gap-4"><span className="font-mono text-xs font-bold text-brand-800">{String(index + 1).padStart(2, '0')}</span><span className="font-mono text-xs font-bold text-slate-600">{String(stream.count).padStart(2, '0')}</span></div>
+                <h3 className="cv-serif mt-5 text-2xl font-semibold text-slate-950">{inventoryLaneCopy[stream.lane][language]}</h3>
                 <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-slate-500">{stream.examples.join(' · ')}</p>
                 <span className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-bold text-brand-700">{workstreamHeadings[language].open}<i className="fas fa-arrow-down text-xs transition group-hover:translate-y-0.5" /></span>
               </button>)}
@@ -239,42 +240,42 @@ const Projects: React.FC = () => {
           </div>
         </section>
 
-        <div className="max-w-4xl pt-20 sm:pt-24"><span className="badge-pill">{h.selectedEyebrow}</span><h2 className="mt-5 font-display text-4xl font-bold tracking-[-.045em] text-slate-950 sm:text-5xl">{h.selectedTitle}</h2><p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-600">{h.selectedBody}</p></div>
+        <div className="max-w-4xl pt-20 sm:pt-24"><span className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">{h.selectedEyebrow}</span><h2 className="cv-serif mt-5 text-4xl font-normal tracking-[-.035em] text-slate-950 sm:text-5xl">{h.selectedTitle}</h2><p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-600">{h.selectedBody}</p></div>
         {categoryOrder.map(category => {
           const items = PORTFOLIO_PROJECTS.filter(project => project.category === category);
           return <section key={category} className="mt-14" aria-labelledby={`category-${category}`}><div className="mb-6 flex items-center gap-4"><h3 id={`category-${category}`} className="text-xl font-bold text-slate-950 sm:text-2xl">{categoryCopy[category][language]}</h3><span className="h-px flex-1 bg-slate-200" /><span className="text-sm font-bold tabular-nums text-slate-400">{String(items.length).padStart(2, '0')}</span></div>
-            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">{items.map((project, index) => { const c = getProjectCopy(project, language); return <article id={project.id} key={project.id} className="group scroll-mt-24 flex min-h-[24rem] flex-col overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+            <div className="grid border-t border-slate-400 md:grid-cols-2 xl:grid-cols-3">{items.map((project, index) => { const c = getProjectCopy(project, language); return <article id={project.id} key={project.id} className="group scroll-mt-24 flex min-h-[24rem] flex-col overflow-hidden border-b border-r border-slate-300 bg-white">
               {project.image ? <div className="h-52 overflow-hidden border-b border-slate-200 bg-slate-100"><img src={project.image} alt={`${project.name} interface`} className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]" style={{ objectPosition: project.imagePosition || 'center' }} loading="lazy" /></div> : <div className="flex h-36 items-end justify-between border-b border-slate-800 bg-slate-950 p-6 text-white"><span className="font-display text-5xl font-bold text-teal-200">{String(index + 1).padStart(2, '0')}</span><i className="fas fa-code-branch text-xl text-white/35" /></div>}
-              <div className="flex flex-1 flex-col p-6"><div className="text-xs font-bold uppercase tracking-[.16em] text-brand-700">{project.period}</div><h4 className="mt-2 text-xl font-bold text-slate-950">{project.name}</h4><p className="mt-3 text-sm leading-relaxed text-slate-600">{c.description}</p><div className="mt-auto flex flex-wrap items-center gap-2 pt-6">{project.tags.map(tag => <span key={tag} className="rounded-full border border-slate-200 px-2.5 py-1 text-xs font-semibold text-slate-600">{tag}</span>)}{project.href && <a href={project.href} target="_blank" rel="noopener noreferrer" className="ml-auto inline-flex min-h-11 items-center gap-2 rounded-full px-3 text-sm font-bold text-brand-700 hover:bg-brand-50">{h.visit}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>}</div></div>
+              <div className="flex flex-1 flex-col p-6"><div className="text-xs font-bold uppercase tracking-[.16em] text-brand-800">{project.period}</div><h4 className="cv-serif mt-2 text-2xl font-semibold text-slate-950">{project.name}</h4><p className="mt-3 text-sm leading-relaxed text-slate-600">{c.description}</p><div className="mt-auto flex flex-wrap items-center gap-x-3 gap-y-2 pt-6">{project.tags.map(tag => <span key={tag} className="text-xs font-semibold text-slate-500">{tag}</span>)}{project.href && <a href={project.href} target="_blank" rel="noopener noreferrer" className="ml-auto inline-flex min-h-11 items-center gap-2 border-b border-slate-500 text-sm font-bold text-slate-800 hover:border-slate-950">{h.visit}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>}</div></div>
             </article>; })}</div>
           </section>;
         })}
 
         <section id="inventory" className="scroll-mt-28 mt-28 border-t border-slate-200 pt-20" aria-labelledby="archive-heading">
-          <div className="max-w-4xl"><span className="badge-pill">{h.archiveEyebrow}</span><h2 id="archive-heading" className="mt-5 font-display text-4xl font-bold tracking-[-.045em] text-slate-950 sm:text-5xl">{h.archiveTitle}</h2><p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-600">{h.archiveBody}</p></div>
+          <div className="max-w-4xl"><span className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">{h.archiveEyebrow}</span><h2 id="archive-heading" className="cv-serif mt-5 text-4xl font-normal tracking-[-.035em] text-slate-950 sm:text-5xl">{h.archiveTitle}</h2><p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-600">{h.archiveBody}</p></div>
 
-          <div className="sticky top-20 z-20 -mx-4 mt-10 border-y border-slate-200 bg-surface/95 px-4 py-4 backdrop-blur sm:mx-0 sm:rounded-2xl sm:border sm:px-5">
-            <label className="relative block"><span className="sr-only">{h.search}</span><i className="fas fa-magnifying-glass pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" /><input value={query} onChange={event => setQuery(event.target.value)} placeholder={h.search} className="min-h-12 w-full rounded-xl border border-slate-300 bg-white py-3 pl-11 pr-4 text-base text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20" /></label>
+          <div className="sticky top-20 z-20 -mx-4 mt-10 border-y border-slate-400 bg-[#f8f6f1]/95 px-4 py-4 backdrop-blur sm:mx-0 sm:px-5">
+            <label className="relative block"><span className="sr-only">{h.search}</span><i className="fas fa-magnifying-glass pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" /><input value={query} onChange={event => setQuery(event.target.value)} placeholder={h.search} className="min-h-12 w-full border border-slate-400 bg-white py-3 pl-11 pr-4 text-base text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-slate-950 focus:ring-2 focus:ring-brand-500/20" /></label>
             <div className="mt-3 flex gap-2 overflow-x-auto pb-1" aria-label={h.allLanes}>
-              <button type="button" onClick={() => setLane('all')} aria-pressed={lane === 'all'} className={`min-h-11 shrink-0 rounded-full border px-4 text-sm font-bold transition ${lane === 'all' ? 'border-slate-950 bg-slate-950 text-white' : 'border-slate-300 bg-white text-slate-600 hover:border-brand-400'}`}>{h.allLanes}</button>
-              {laneOrder.map(option => <button type="button" key={option} onClick={() => setLane(option)} aria-pressed={lane === option} className={`min-h-11 shrink-0 rounded-full border px-4 text-sm font-bold transition ${lane === option ? 'border-slate-950 bg-slate-950 text-white' : 'border-slate-300 bg-white text-slate-600 hover:border-brand-400'}`}>{inventoryLaneCopy[option][language]}</button>)}
+              <button type="button" onClick={() => setLane('all')} aria-pressed={lane === 'all'} className={`min-h-11 shrink-0 border-b-2 px-2 text-sm font-bold transition ${lane === 'all' ? 'border-slate-950 text-slate-950' : 'border-transparent text-slate-500 hover:border-slate-400'}`}>{h.allLanes}</button>
+              {laneOrder.map(option => <button type="button" key={option} onClick={() => setLane(option)} aria-pressed={lane === option} className={`min-h-11 shrink-0 border-b-2 px-2 text-sm font-bold transition ${lane === option ? 'border-slate-950 text-slate-950' : 'border-transparent text-slate-500 hover:border-slate-400'}`}>{inventoryLaneCopy[option][language]}</button>)}
             </div>
             <div className="mt-3 text-sm font-semibold tabular-nums text-slate-500">{filteredInventory.length} {h.results}</div>
           </div>
 
           <div className="mt-12 space-y-16">
             {eras.map(era => <section key={era} aria-labelledby={`era-${era.replace(/\W+/g, '-')}`}>
-              <div className="grid gap-6 lg:grid-cols-[12rem_1fr]"><div><h3 id={`era-${era.replace(/\W+/g, '-')}`} className="font-display text-3xl font-bold tracking-[-.035em] text-slate-950 lg:sticky lg:top-[16rem]">{era}</h3><div className="mt-2 h-1 w-12 rounded-full bg-brand-500" /></div><div className="grid gap-4 md:grid-cols-2">{filteredInventory.filter(item => item.era === era).map(item => { const c = getInventoryCopy(item, language); return <article key={item.id} id={item.id} className="scroll-mt-72 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
-                <div className="flex flex-wrap items-center gap-2"><span className="rounded-full bg-brand-50 px-2.5 py-1 text-xs font-bold text-brand-800">{inventoryLaneCopy[item.lane][language]}</span><span className="ml-auto text-xs font-bold uppercase tracking-[.12em] text-slate-600">{item.period}</span></div>
-                {item.image && <img src={item.image} alt={`${item.title} interface`} className="mt-4 h-32 w-full rounded-xl object-cover" loading="lazy" />}
-                <h4 className="mt-4 text-xl font-bold text-slate-950">{item.title}</h4><p className="mt-2 text-sm leading-relaxed text-slate-600">{c.summary}</p>{item.href && <a href={item.href} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex min-h-11 items-center gap-2 rounded-full font-bold text-brand-700">{h.open}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>}
+              <div className="grid gap-6 lg:grid-cols-[12rem_1fr]"><div><h3 id={`era-${era.replace(/\W+/g, '-')}`} className="cv-serif text-3xl font-semibold tracking-[-.025em] text-slate-950 lg:sticky lg:top-[16rem]">{era}</h3><div className="mt-3 h-px w-12 bg-slate-500" /></div><div className="grid border-t border-slate-400 md:grid-cols-2">{filteredInventory.filter(item => item.era === era).map((item, index) => { const c = getInventoryCopy(item, language); return <article key={item.id} id={item.id} className={`scroll-mt-72 border-b border-slate-300 bg-white p-5 sm:p-6 ${index % 2 === 0 ? 'md:border-r' : ''}`}>
+                <div className="flex flex-wrap items-center gap-2"><span className="text-xs font-bold uppercase tracking-[.12em] text-brand-800">{inventoryLaneCopy[item.lane][language]}</span><span className="ml-auto text-xs font-bold uppercase tracking-[.12em] text-slate-600">{item.period}</span></div>
+                {item.image && <img src={item.image} alt={`${item.title} interface`} className="mt-4 h-32 w-full border border-slate-300 object-cover" loading="lazy" />}
+                <h4 className="cv-serif mt-4 text-2xl font-semibold text-slate-950">{item.title}</h4><p className="mt-2 text-sm leading-relaxed text-slate-600">{c.summary}</p>{item.href && <a href={item.href} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex min-h-11 items-center gap-2 border-b border-slate-500 font-bold text-slate-800">{h.open}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>}
               </article>; })}</div></div>
             </section>)}
-            {!filteredInventory.length && <div className="rounded-2xl border border-dashed border-slate-300 bg-white p-10 text-center text-slate-600">{h.noResults}</div>}
+            {!filteredInventory.length && <div className="border border-dashed border-slate-400 bg-white p-10 text-center text-slate-600">{h.noResults}</div>}
           </div>
         </section>
 
-        <section className="mt-24 overflow-hidden rounded-[2rem] bg-slate-950 px-6 py-10 text-white sm:px-10 sm:py-12 lg:flex lg:items-end lg:justify-between lg:gap-12">
+        <section className="mt-24 border-y border-slate-950 bg-slate-950 px-6 py-10 text-white sm:px-10 sm:py-12 lg:flex lg:items-end lg:justify-between lg:gap-12">
           <div className="max-w-3xl"><span className="text-xs font-bold uppercase tracking-[.18em] text-brand-200">{h.ctaEyebrow}</span><h2 className="mt-4 font-display text-3xl font-bold tracking-[-.04em] text-white sm:text-5xl">{h.ctaTitle}</h2><p className="mt-4 text-lg leading-relaxed text-slate-300">{h.ctaBody}</p></div>
           <Link to="/contact" className="btn-primary mt-8 shrink-0 bg-white text-slate-950 hover:bg-brand-50 hover:text-slate-950 lg:mt-0">{h.cta}<i className="fas fa-arrow-right text-sm" /></Link>
         </section>

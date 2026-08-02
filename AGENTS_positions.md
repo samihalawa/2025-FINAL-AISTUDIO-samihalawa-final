@@ -1,5 +1,6 @@
 # INDEX
 
+embedded Close form content | provider templates can inject irrelevant legal and marketing consent into the public contact form even when the site component is correct | edit and publish the canonical Close form, then verify both its share URL and the embedded production DOM | do not hide provider copy with CSS or treat the script/custom element as content approval | verify exact field labels, published provider state, fresh embedded DOM, desktop/mobile layout and preserved submission controls
 public CV qualification copy | platform-first wording and generator/process labels made verified qualifications sound like internal export metadata | name the qualification, specialist subject and real issuing institution where verified, while preserving every validated credential | do not foreground Coursera, expose source/proof fields, or delete achievements to solve copy leakage | verify all public HTML/TXT/PDF assets, every current credential ID, exact live hashes and rendered CV routes
 portfolio visual language | oversized slogans, gradient ornaments, pill controls and repeated rounded cards make the site feel AI-template generated | use a restrained editorial system with serif-led hierarchy, rules, square controls and content-specific compositions | do not solve “more visual” by adding gradients, glass, floating shapes or another card grid | verify desktop/mobile home and CV routes, navigation states, no overflow and preserved actions
 CV downloads | shorter role editions omitted achievements, raw inventory prose leaked internal notes/payment state and reused filenames stayed stale in Cloudflare | publish clean comprehensive role editions at unique dated `_Comprehensive` URLs plus separate ATS text | do not render evidence-ledger prose, payment-state wording, build a CV editor, remove shared facts or reuse a cached filename for materially new content | verify all 85 professional projects, every current validated credential, achievements, exact live hashes and rendered CV route
@@ -14,6 +15,16 @@ blog content pipeline | hard-coded slug list + modal did not scale to daily hub-
 SPA production routes | public asset directories collide with client routes | serve file-shaped URLs as static files and everything else as the SPA shell | do not let Nginx treat route names as directories or leak port 8080 redirects | verify slash and non-slash routes plus real asset MIME types
 Coolify Linux build | macOS lock can omit the Linux Rollup binary and Docker hosts differ between arm64 and x64 | install the build container's matching native Rollup GNU package | do not hardcode one CPU or infer deployability from the macOS Vite build | verify local container plus Coolify build the pushed commit and live routes
 public portfolio | stock imagery and invented social proof replaced source evidence | use dated metrics, real screenshots and public links | do not publish placeholders, arbitrary percentages or unsupported impact | verify exact live route, image load, text and responsive layout
+
+## 2026-08-03 — Treat provider-rendered form fields as public website copy
+
+- **Status:** CURRENT
+- **Project/root:** `PROJECTS_ON_PROCESS/2025-FINAL-AISTUDIO-samihalawa-final`; Close form `form_033y7Q5vVve5g8t4diql2M` embedded on `/contact`.
+- **Mistake recovered:** the site rendered the correct Close custom element, but its provider configuration injected a required US arbitration and marketing-calls agreement into the public contact workflow.
+- **Superior approach:** edit and publish the canonical Close form at the provider, keeping only the professional name, email and message fields; verify the direct form and the site embed independently.
+- **Evidence:** 3 Aug 2026 production DOM, Close builder field list and `Form published successfully` confirmation; direct `forms.close.com/033y7Q5vVve5g8t4diql2M` readback.
+- **Triggers / verification:** Close, contact form, consent, legal agreement, provider embed or form redesign; read every rendered field label after load, confirm the provider share URL, then recheck a fresh production embed on desktop and mobile.
+- **Do / don't:** do treat provider fields as part of the public-copy firewall; don't hide inappropriate provider text with CSS, replace the approved form, or infer content correctness from script/custom-element presence.
 
 ## 2026-07-30 — Contact intake uses Close; strategy-call actions open Calendly
 

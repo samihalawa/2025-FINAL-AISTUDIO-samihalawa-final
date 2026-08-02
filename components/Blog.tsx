@@ -135,19 +135,6 @@ const Blog: React.FC = () => {
         insights: 'blog.category.insights'
     };
 
-    const getCategoryColor = (categoryKey: ReturnType<typeof getCategoryKey>): string => {
-        const colors: Record<ReturnType<typeof getCategoryKey>, string> = {
-            automation: 'bg-blue-100 text-blue-800',
-            architecture: 'bg-purple-100 text-purple-800',
-            devops: 'bg-green-100 text-green-800',
-            safety: 'bg-red-100 text-red-800',
-            education: 'bg-yellow-100 text-yellow-800',
-            development: 'bg-indigo-100 text-indigo-800',
-            insights: 'bg-gray-100 text-gray-800'
-        };
-        return colors[categoryKey] || colors.insights;
-    };
-
     const localeMap: Record<LanguageCode, string> = {
         en: 'en-US',
         es: 'es-ES',
@@ -188,18 +175,18 @@ const Blog: React.FC = () => {
         : t('blog.loadingButton');
 
     return (
-        <section id="blog" className="py-20 bg-gradient-to-br from-slate-50 to-white scroll-mt-20" aria-label={t('blog.title')}>
-            <div className="container mx-auto px-6">
-                <div className="mb-12 text-center">
-                    <h1 className="text-3xl md:text-4xl font-bold text-slate-900">{t('blog.title')}</h1>
-                    <p className="mt-3 text-lg text-slate-600 max-w-2xl mx-auto">
-                        {t('blog.intro')}
-                    </p>
-                </div>
+        <section id="blog" className="scroll-mt-20 border-b border-slate-300 bg-[#f8f6f1] py-12 sm:py-16" aria-label={t('blog.title')}>
+            <div className="container">
+                <header className="grid gap-8 border-b border-slate-400 pb-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(18rem,.85fr)] lg:items-end lg:gap-16">
+                    <div>
+                        <h1 className="cv-serif text-[clamp(3rem,7vw,6.5rem)] font-normal leading-[0.92] tracking-[-0.045em] text-slate-950">{t('blog.title')}</h1>
+                    </div>
+                    <p className="border-t border-slate-400 pt-5 text-lg leading-relaxed text-slate-700 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">{t('blog.intro')}</p>
+                </header>
 
-                <div className="glass-panel mx-auto max-w-6xl p-6 shadow-soft-xl">
-                    <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-                        <div className="relative w-full md:max-w-md">
+                <div className="border-b border-slate-400 py-8">
+                    <div className="grid gap-5 lg:grid-cols-[minmax(16rem,.7fr)_minmax(0,1.3fr)] lg:items-start">
+                        <div className="relative w-full">
                             <label htmlFor="blog-search" className="sr-only">{t('blog.searchPlaceholder')}</label>
                             <input
                                 id="blog-search"
@@ -208,18 +195,18 @@ const Blog: React.FC = () => {
                                 onChange={(e) => setQuery(e.target.value)}
                                 placeholder={t('blog.searchPlaceholder')}
                                 disabled={!isDataReady}
-                                className="w-full rounded-full border border-slate-200 bg-white/80 px-4 py-3 pr-11 text-sm text-slate-600 shadow-sm transition focus:outline-none focus:ring-2 focus:ring-brand-500 disabled:cursor-not-allowed disabled:opacity-60"
+                                className="min-h-12 w-full border border-slate-400 bg-white px-4 py-3 pr-11 text-sm text-slate-700 outline-none transition focus:border-slate-950 focus:ring-2 focus:ring-brand-500 disabled:cursor-not-allowed disabled:opacity-60"
                             />
                             <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-slate-400">
                                 <i className="fas fa-search"></i>
                             </span>
                         </div>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-x-5 gap-y-2">
                             <button
                                 type="button"
                                 onClick={() => setActiveCategory('all')}
                                 disabled={!isDataReady}
-                                className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition ${activeCategory === 'all' ? 'border-transparent bg-gradient-to-r from-brand-600 to-brand-500 text-white shadow-brand' : 'border-slate-200 bg-white/80 text-slate-600 hover:border-brand-200 hover:text-brand-700'} ${!isDataReady ? 'cursor-not-allowed opacity-60' : ''}`}
+                                className={`inline-flex min-h-11 items-center border-b-2 px-1 text-sm font-bold transition ${activeCategory === 'all' ? 'border-slate-950 text-slate-950' : 'border-transparent text-slate-500 hover:border-slate-400 hover:text-slate-950'} ${!isDataReady ? 'cursor-not-allowed opacity-60' : ''}`}
                             >
                                 {t('blog.filter.all')}
                             </button>
@@ -228,7 +215,7 @@ const Blog: React.FC = () => {
                                     key={category}
                                     type="button"
                                     onClick={() => setActiveCategory(category)}
-                                    className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition ${activeCategory === category ? 'border-transparent bg-gradient-to-r from-brand-600 to-brand-500 text-white shadow-brand' : 'border-slate-200 bg-white/80 text-slate-600 hover:border-brand-200 hover:text-brand-700'}`}
+                                    className={`inline-flex min-h-11 items-center border-b-2 px-1 text-sm font-bold transition ${activeCategory === category ? 'border-slate-950 text-slate-950' : 'border-transparent text-slate-500 hover:border-slate-400 hover:text-slate-950'}`}
                                 >
                                     {t(categoryTranslationMap[category])}
                                 </button>
@@ -236,29 +223,29 @@ const Blog: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="mt-4 text-sm text-slate-500" aria-live="polite">
+                    <div className="mt-4 font-mono text-xs font-bold uppercase tracking-[0.14em] text-slate-500" aria-live="polite">
                         {loading ? <span className="animate-pulse">{t('blog.loadingButton')}</span> : resultLabel}
                     </div>
 
                     {errored && (
-                        <div className="mt-8 text-center text-red-600 bg-red-50 p-4 rounded-lg">
+                        <div className="mt-8 border border-red-300 bg-red-50 p-4 text-red-700">
                             <p>{errorMessage || t('blog.error')}</p>
                         </div>
                     )}
 
                     {loading && (
-                        <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                        <div className="mt-8 grid border-t border-slate-300 md:grid-cols-2">
                             {Array.from({ length: 6 }).map((_, index) => (
-                                <div key={index} className="rounded-xl bg-white shadow-lg animate-pulse">
+                                <div key={index} className="animate-pulse border-b border-slate-300 bg-white md:border-r">
                                     <div className="p-6">
                                         <div className="mb-4 flex items-center justify-between">
-                                            <div className="w-16 h-4 bg-gray-200 rounded-md"></div>
-                                            <div className="w-20 h-4 bg-gray-200 rounded-md"></div>
+                                            <div className="h-4 w-16 bg-slate-200"></div>
+                                            <div className="h-4 w-20 bg-slate-200"></div>
                                         </div>
-                                        <div className="w-full h-6 bg-gray-200 rounded-md mb-2"></div>
-                                        <div className="w-5/6 h-4 bg-gray-200 rounded-md mb-1"></div>
-                                        <div className="w-full h-4 bg-gray-200 rounded-md mb-4"></div>
-                                        <div className="w-24 h-4 bg-gray-200 rounded-md"></div>
+                                        <div className="mb-2 h-6 w-full bg-slate-200"></div>
+                                        <div className="mb-1 h-4 w-5/6 bg-slate-200"></div>
+                                        <div className="mb-4 h-4 w-full bg-slate-200"></div>
+                                        <div className="h-4 w-24 bg-slate-200"></div>
                                     </div>
                                 </div>
                             ))}
@@ -266,29 +253,29 @@ const Blog: React.FC = () => {
                     )}
 
                     {!loading && !errored && articles.length > 0 && (
-                        <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                            {filteredArticles.map((article) => (
+                        <div className="mt-10 grid border-t border-slate-400 md:grid-cols-2">
+                            {filteredArticles.map((article, index) => (
                                 <Link
                                     key={article.slug}
                                     to={`/blog/${article.slug}`}
-                                    className="block rounded-xl bg-white shadow-lg transition-transform duration-300 hover:-translate-y-1"
+                                    className={`group block border-b border-slate-300 py-7 md:px-7 ${index % 2 === 0 ? 'md:border-r' : ''}`}
                                     aria-label={`Read article: ${article.title}`}
                                 >
-                                    <div className="p-6">
-                                        <div className="mb-4 flex items-center justify-between text-xs text-slate-500">
-                                            <span className={`${getCategoryColor(getCategoryKey(article.slug))} rounded-full px-3 py-1 text-xs font-semibold`}>
+                                    <div>
+                                        <div className="mb-5 flex items-center justify-between gap-4 text-xs font-bold uppercase tracking-[0.12em] text-slate-500">
+                                            <span className="text-brand-800">
                                                 {t(categoryTranslationMap[getCategoryKey(article.slug)])}
                                             </span>
                                             <span>{dateFormatter.format(new Date(article.date))}</span>
                                         </div>
-                                        <h3 className="mb-2 text-lg font-bold text-slate-800">
+                                        <h3 className="cv-serif mb-3 text-2xl font-semibold leading-tight text-slate-950 group-hover:text-brand-800">
                                             {article.title}
                                         </h3>
                                         <p className="text-sm text-slate-600 line-clamp-3">
                                             {article.summary}
                                         </p>
-                                        <div className="mt-4 text-sm font-semibold text-brand-600 hover:text-brand-700">
-                                            {t('blog.readMore')}
+                                        <div className="mt-5 inline-flex min-h-11 items-center gap-2 border-b border-slate-500 text-sm font-bold text-slate-800 group-hover:border-slate-950">
+                                            {t('blog.readMore')} <i className="fas fa-arrow-right text-xs" />
                                         </div>
                                     </div>
                                 </Link>
@@ -297,7 +284,7 @@ const Blog: React.FC = () => {
                     )}
 
                     {!loading && !errored && articles.length > 0 && filteredArticles.length === 0 && (
-                        <div className="mt-8 text-center text-slate-600">
+                        <div className="mt-8 border border-dashed border-slate-400 p-10 text-center text-slate-600">
                             <p>{t('blog.noResults')}</p>
                         </div>
                     )}

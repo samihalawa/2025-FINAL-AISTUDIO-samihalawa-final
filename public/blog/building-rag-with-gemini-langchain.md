@@ -349,8 +349,8 @@ You now have a production-ready RAG system that:
 ---
 
 ## Related Resources
-- [Advanced RAG: Agentic Retrieval & Self-Correction](/blog/advanced-rag-techniques)
-- [RAG vs Fine-Tuning: When to Use Each](/blog/rag-vs-finetuning)
-- [Production LLM Cost Optimization](/blog/llm-cost-optimization)
+- [RAG vs. Long Context: A Practical Engineering Guide](/blog/rag-vs-long-context)
+- [Fine-Tuning vs. Prompt Engineering: Which Is Right?](/blog/finetuning-vs-prompt-engineering)
+- [The Engineering Guide to LLM Unit Economics](/blog/controlling-llm-costs)
 
 **Need help building your RAG system?** [Explore our RAG & LangChain service →](/services/rag-langchain)
