@@ -1,6 +1,6 @@
 # INDEX
 
-floating action controls | a fixed back-to-top button covered the final CV profile's ATS link on desktop | keep the utility in the left desktop gutter and WhatsApp in the right rail | do not stack both controls over the page's right-aligned actions | verify visible/clickable controls at the collision scroll position on desktop and mobile
+floating action controls | a fixed back-to-top button covered the final CV profile's ATS link; ordinary left/right insets merely moved the collision | keep the desktop control entirely inside the 44px outer-left rail before the 48px content inset | do not move the collision onto another content column or stack controls over right-aligned actions | verify measured non-overlap at both adjacent scroll positions on desktop and mobile
 embedded Close form content | provider templates can inject irrelevant legal and marketing consent into the public contact form even when the site component is correct | edit and publish the canonical Close form, then verify both its share URL and the embedded production DOM | do not hide provider copy with CSS or treat the script/custom element as content approval | verify exact field labels, published provider state, fresh embedded DOM, desktop/mobile layout and preserved submission controls
 CV role-edition parity | the website exposed seven current role editions while the CV source had eight | reconcile the explicit website list against every current generated PDF and ATS pair | do not assume the existing page enumerates the full output set | verify one rendered card and exact downloadable PDF/ATS hashes for every current role edition
 public CV qualification copy | platform-first wording and generator/process labels made verified qualifications sound like internal export metadata | name the qualification, specialist subject and real issuing institution where verified, while preserving every validated credential | do not foreground Coursera, expose source/proof fields, or delete achievements to solve copy leakage | verify all public HTML/TXT/PDF assets, every current credential ID, exact live hashes and rendered CV routes
@@ -22,11 +22,11 @@ public portfolio | stock imagery and invented social proof replaced source evide
 
 - **Status:** CURRENT
 - **Project/root:** `2025-FINAL-AISTUDIO-samihalawa-final`; shared `Layout` / `BackToTop` controls and CV profile downloads.
-- **Mistake recovered:** the back-to-top and WhatsApp controls shared the right edge, and the upper control covered the final profile's ATS link in the rendered desktop CV.
-- **Superior approach:** preserve both utilities but move back-to-top into the left desktop gutter, leaving the right action column unobstructed; retain the compact right rail on mobile.
-- **Evidence:** 3 Aug 2026 production screenshot at the `Agentic AI / Commerce` row and the shared control classes in `components/BackToTop.tsx` and `components/Layout.tsx`.
-- **Triggers / verification:** CV, floating button, WhatsApp, back to top, fixed control or download; recheck the exact scroll position at desktop and mobile widths and prove the download links remain visible and clickable.
-- **Do / don't:** do preserve the utilities and separate their desktop rails; don't hide a control or allow it to cover an interactive page action.
+- **Mistake recovered:** the back-to-top control covered the final profile's ATS link; an initial move to the left gutter cleared the link but covered the following section heading.
+- **Superior approach:** preserve both utilities but fit the desktop back-to-top control entirely inside the 44px outer-left rail before the page's 48px content inset; retain the roomier right inset on mobile.
+- **Evidence:** 3 Aug 2026 production and local screenshots at the `Agentic AI / Commerce` row and following qualification section, plus hit-testing and rectangle measurements that rejected the ordinary left inset and a remaining 4px right-edge collision.
+- **Triggers / verification:** CV, floating button, WhatsApp, back to top, fixed control or download; recheck both adjacent scroll positions at desktop and mobile widths and prove the download links remain visible and clickable.
+- **Do / don't:** do reserve a true outer rail and keep the 44px touch target; don't clear one collision by moving it onto another content column.
 
 ## 2026-08-03 — Every current role edition must be exposed on the CV page
 
