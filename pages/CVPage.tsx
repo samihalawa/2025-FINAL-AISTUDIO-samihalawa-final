@@ -62,15 +62,29 @@ const roleEditions = [
     detailEs: 'Servicios de IA en producción, flujos de comercio, evaluación, observabilidad y entrega de producto.'
   }
 ];
-const roleEditionFile = (key: string) => `${key}_Comprehensive_2026-07-30`;
+
+const googleDataAnalyticsCourses = [
+  { title: 'Foundations: Data, Data, Everywhere', id: 'V4FNLT216Q8B', file: 'foundations-data-data-everywhere-V4FNLT216Q8B.pdf' },
+  { title: 'Ask Questions to Make Data-Driven Decisions', id: 'CLX6U7RJXKDZ', file: 'ask-questions-to-make-data-driven-decisions-CLX6U7RJXKDZ.pdf' },
+  { title: 'Prepare Data for Exploration', id: '137FKE9U9IKK', file: 'prepare-data-for-exploration-137FKE9U9IKK.pdf' },
+  { title: 'Process Data from Dirty to Clean', id: 'KC57MXBQZ1SX', file: 'process-data-from-dirty-to-clean-KC57MXBQZ1SX.pdf' },
+  { title: 'Analyze Data to Answer Questions', id: 'YFQT024FPUVM', file: 'analyze-data-to-answer-questions-YFQT024FPUVM.pdf' },
+  { title: 'Share Data Through the Art of Visualization', id: 'SJ76VZSHXMWV', file: 'share-data-through-visualization-SJ76VZSHXMWV.pdf' },
+  { title: 'Introduction to Data Analysis Using Python', id: 'UBFYCZ59VCOI', file: 'introduction-to-data-analysis-using-python-UBFYCZ59VCOI.pdf' },
+  { title: 'Google Data Analytics Capstone: Complete a Case Study', id: 'ZCQUM67FGISV', file: 'google-data-analytics-capstone-ZCQUM67FGISV.pdf' },
+  { title: 'Accelerate Your Job Search with AI', id: 'HP5JK2INXV6R', file: 'accelerate-your-job-search-with-ai-HP5JK2INXV6R.pdf' }
+];
+
+const credentialBase = '/credentials/google-data-analytics';
+const roleEditionFile = (key: string) => `${key}_Comprehensive_2026-08-04`;
 
 const CVPage: React.FC<CVPageProps> = ({ edition }) => {
   const { language } = useTranslation();
   const selected = edition || (language === 'es' ? 'es' : 'en');
   const spanish = selected === 'es';
-  const pdf = spanish ? '/cv/Sami_Halawa_CV_ES_2026-07-30.pdf' : '/cv/Sami_Halawa_CV_2026-07-30.pdf';
-  const ats = spanish ? '/cv/Sami_Halawa_CV_ES_ATS_2026-07-30.txt' : '/cv/Sami_Halawa_CV_ATS_2026-07-30.txt';
-  const preview = spanish ? '/cv/Sami_Halawa_CV_ES_preview_2026-07-30.png' : '/cv/Sami_Halawa_CV_preview_2026-07-30.png';
+  const pdf = spanish ? '/cv/Sami_Halawa_CV_ES_2026-08-04.pdf' : '/cv/Sami_Halawa_CV_2026-08-04.pdf';
+  const ats = spanish ? '/cv/Sami_Halawa_CV_ES_ATS_2026-08-04.txt' : '/cv/Sami_Halawa_CV_ATS_2026-08-04.txt';
+  const preview = spanish ? '/cv/Sami_Halawa_CV_ES_preview_2026-08-04.png' : '/cv/Sami_Halawa_CV_preview_2026-08-04.png';
   const description = spanish
     ? 'Una visión completa de productos, sistemas para clientes, open source, investigación y docencia, disponible en PDF y en formato ATS.'
     : 'A complete view of products, client systems, open source, research and teaching, available as a designed PDF and an ATS-ready edition.';
@@ -112,11 +126,66 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
         </header>
 
         <section className="border-t border-slate-400 py-12 sm:py-16">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(20rem,.9fr)] lg:gap-14">
+            <div className="overflow-hidden border border-slate-400 bg-white p-2 shadow-[0_28px_70px_-42px_rgba(15,23,42,.55)] sm:p-4">
+              <img
+                src={`${credentialBase}/google-data-analytics-professional-certificate.webp`}
+                alt={spanish ? 'Diploma del Certificado Profesional de Google Data Analytics' : 'Google Data Analytics Professional Certificate diploma'}
+                className="block h-full w-full object-contain"
+              />
+            </div>
+            <div className="flex flex-col justify-between">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Nueva cualificación · agosto de 2026' : 'New qualification · August 2026'}</p>
+                <h2 className="cv-serif mt-4 text-[clamp(2.3rem,5vw,4.5rem)] font-normal leading-[0.96] tracking-[-0.04em] text-slate-950">Google Data Analytics</h2>
+                <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate-700">{spanish ? 'Certificado Profesional de Google con nueve cursos en hojas de cálculo, SQL, Python, Tableau, preparación, análisis y visualización de datos, más un caso práctico completo.' : 'Google Professional Certificate comprising nine courses in spreadsheets, SQL, Python, Tableau, data preparation, analysis and visualisation, plus a complete case study.'}</p>
+                <dl className="mt-7 grid grid-cols-2 border-y border-slate-300 py-5 text-sm">
+                  <div><dt className="font-bold uppercase tracking-[0.12em] text-slate-500">{spanish ? 'Emisor' : 'Issuer'}</dt><dd className="mt-1 text-lg font-semibold text-slate-950">Google</dd></div>
+                  <div><dt className="font-bold uppercase tracking-[0.12em] text-slate-500">{spanish ? 'Credencial' : 'Credential'}</dt><dd className="mt-1 font-mono text-base font-semibold text-slate-950">WMUDGIG7OY8D</dd></div>
+                </dl>
+              </div>
+              <div className="mt-8 grid gap-2 sm:grid-cols-2">
+                <a href={`${credentialBase}/google-data-analytics-professional-certificate-WMUDGIG7OY8D.pdf`} target="_blank" rel="noopener noreferrer" className={`${downloadLink} bg-slate-950 text-white`}>
+                  <span>{spanish ? 'Abrir diploma' : 'Open diploma'}</span><i className="fas fa-arrow-up-right-from-square text-xs" />
+                </a>
+                <a href="https://www.coursera.org/account/accomplishments/professional-cert/WMUDGIG7OY8D" target="_blank" rel="noopener noreferrer" className={downloadLink}>
+                  <span>{spanish ? 'Ver credencial' : 'View credential'}</span><i className="fas fa-arrow-up-right-from-square text-xs" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 border-t border-slate-400">
+            <div className="grid gap-4 py-6 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Diplomas de los nueve cursos' : 'Nine course diplomas'}</p>
+                <h3 className="cv-serif mt-3 text-3xl font-normal text-slate-950">{spanish ? 'Cada curso, con su credencial oficial.' : 'Every course, with its official credential.'}</h3>
+              </div>
+              <span className="font-mono text-sm font-bold text-slate-500">09 + 01</span>
+            </div>
+            <ol className="grid border-t border-slate-300 md:grid-cols-2 md:gap-x-10">
+              {googleDataAnalyticsCourses.map((course, index) => (
+                <li key={course.id} className="grid grid-cols-[2.25rem_minmax(0,1fr)_auto] items-center gap-3 border-b border-slate-300 py-4">
+                  <span className="font-mono text-xs font-bold text-slate-500">{String(index + 1).padStart(2, '0')}</span>
+                  <div className="min-w-0">
+                    <h4 className="text-sm font-semibold leading-snug text-slate-950">{course.title}</h4>
+                    <p className="mt-1 font-mono text-xs text-slate-500">{course.id}</p>
+                  </div>
+                  <a href={`${credentialBase}/${course.file}`} target="_blank" rel="noopener noreferrer" aria-label={`${spanish ? 'Abrir diploma' : 'Open diploma'}: ${course.title}`} className="inline-flex min-h-11 min-w-11 items-center justify-center border border-slate-400 text-slate-800 transition-colors hover:border-slate-950 hover:bg-slate-950 hover:text-white">
+                    <i className="fas fa-arrow-up-right-from-square text-xs" />
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+
+        <section className="border-t border-slate-400 py-12 sm:py-16">
           <div className="grid gap-8 lg:grid-cols-[minmax(15rem,.55fr)_minmax(0,1.45fr)] lg:gap-16">
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Perfiles profesionales' : 'Professional profiles'}</p>
               <h2 className="cv-serif mt-4 text-4xl font-normal leading-tight tracking-[-0.025em] text-slate-950">{spanish ? 'Elige el perfil más cercano a la oportunidad.' : 'Choose the profile closest to the opportunity.'}</h2>
-              <p className="mt-5 max-w-md leading-relaxed text-slate-700">{spanish ? 'Todos presentan la trayectoria completa, el stack tecnológico, 85 proyectos y colaboraciones, 53 cualificaciones verificadas y los logros principales, situando primero las capacidades más relevantes para cada función.' : 'Every profile presents the complete career history, technology stack, 85 projects and engagements, 53 verified qualifications and major achievements, with the most relevant capabilities first.'}</p>
+              <p className="mt-5 max-w-md leading-relaxed text-slate-700">{spanish ? 'Todos presentan la trayectoria completa, el stack tecnológico, 85 proyectos y colaboraciones, 63 cualificaciones profesionales y los logros principales, situando primero las capacidades más relevantes para cada función.' : 'Every profile presents the complete career history, technology stack, 85 projects and engagements, 63 professional qualifications and major achievements, with the most relevant capabilities first.'}</p>
             </div>
             <ol className="border-t border-slate-400">
               {roleEditions.map((item, index) => (
@@ -140,15 +209,15 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
           <aside className="lg:sticky lg:top-24 lg:self-start">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Formación profesional actual' : 'Current professional development'}</p>
             <h2 className="cv-serif mt-4 text-3xl font-normal leading-tight text-slate-950">{spanish ? 'IA agéntica, plataformas y gobernanza.' : 'Agentic AI, platforms and governance.'}</h2>
-            <p className="mt-5 leading-relaxed text-slate-700">{spanish ? 'Mis 53 cualificaciones verificadas abarcan ingeniería de IA agéntica; estrategia y gobernanza de IA de Saïd Business School, University of Oxford; arquitectura de IA segura y preparación SecAI+ de Packt; MLOps de producción de Board Infinity; Databricks Mosaic AI; automatización con n8n de LearnKartS; ISO 42001 del British Standards Institution; y métodos cuantitativos de EDHEC Business School.' : 'My 53 verified qualifications span agentic AI engineering; AI strategy and governance from Saïd Business School, University of Oxford; secure-AI architecture and SecAI+ exam preparation from Packt; production MLOps from Board Infinity; Databricks Mosaic AI; n8n automation from LearnKartS; ISO 42001 from the British Standards Institution; and quantitative methods from EDHEC Business School.'}</p>
+            <p className="mt-5 leading-relaxed text-slate-700">{spanish ? 'Mis 63 cualificaciones profesionales abarcan análisis de datos de Google; ingeniería de IA agéntica; estrategia y gobernanza de IA de Saïd Business School, University of Oxford; arquitectura de IA segura y preparación SecAI+ de Packt; MLOps de producción de Board Infinity; Databricks Mosaic AI; automatización con n8n de LearnKartS; ISO 42001 del British Standards Institution; y métodos cuantitativos de EDHEC Business School.' : 'My 63 professional qualifications span Google data analytics; agentic AI engineering; AI strategy and governance from Saïd Business School, University of Oxford; secure-AI architecture and SecAI+ exam preparation from Packt; production MLOps from Board Infinity; Databricks Mosaic AI; n8n automation from LearnKartS; ISO 42001 from the British Standards Institution; and quantitative methods from EDHEC Business School.'}</p>
           </aside>
           <figure>
             <div className="border border-slate-400 bg-white p-2 shadow-[0_28px_70px_-42px_rgba(15,23,42,.55)] sm:p-4">
               <img src={preview} alt={spanish ? 'Primera página del CV completo' : 'First page of the complete CV'} className="block w-full bg-white" />
             </div>
             <figcaption className="mt-4 flex flex-col items-start justify-between gap-3 border-t border-slate-400 pt-4 text-sm text-slate-600 sm:flex-row sm:items-center">
-              <span>{spanish ? 'Vista previa de la página 1 de 6.' : 'Preview of page 1 of 6.'}</span>
-              <a href={pdf} target="_blank" rel="noopener noreferrer" data-analytics-event="cv_download" className="inline-flex min-h-11 items-center gap-2 border-b border-slate-500 font-bold text-slate-800 hover:border-slate-950 hover:text-slate-950">{spanish ? 'Abrir las seis páginas' : 'Open all six pages'}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>
+              <span>{spanish ? 'Vista previa de la página 1 de 7.' : 'Preview of page 1 of 7.'}</span>
+              <a href={pdf} target="_blank" rel="noopener noreferrer" data-analytics-event="cv_download" className="inline-flex min-h-11 items-center gap-2 border-b border-slate-500 font-bold text-slate-800 hover:border-slate-950 hover:text-slate-950">{spanish ? 'Abrir las siete páginas' : 'Open all seven pages'}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>
             </figcaption>
           </figure>
         </section>

@@ -1,16 +1,16 @@
 SAMI HALAWA RIBAS
-Ingeniero IA Full-Stack · Agentes, Datos, APIs y Despliegue
+Senior AI Engineer · Agentic Commerce
 
 Madrid, Spain · EU work authorisation · +34 659 777 908 · sami@oulang.ai · samihalawa.com · linkedin.com/in/samihalawa · github.com/samihalawa
 
 PROFILE
-Perfil técnico integral para proyectos de transformación con IA: experiencia transversal desde agentes, RAG, MCP y automatización hasta backend, frontend, móvil, datos, APIs, despliegue y operación. Inglés y chino C2; disponibilidad inmediata. Formación reciente y certificada en Databricks Mosaic AI.
+Hands-on AI product engineer designing and operating production-oriented agentic services across Python APIs, LLM workflows, structured outputs, tool calling, evaluation and observability. Connects ambiguous commerce and customer-operations use cases to maintainable backend services, dependable controls and user-facing delivery, with direct product ownership across multilingual marketplaces, automation and communications systems.
 
 CORE EXPERTISE
-IA y agentes: MCP, RAG, herramientas/funciones, flujos multiagente, memoria, salidas estructuradas, enrutamiento de modelos y evaluación
-Backend y datos: Python, FastAPI, TypeScript, Node.js, REST APIs, webhooks, SQL/MySQL, procesos en segundo plano e integraciones
-Frontend y móvil: React, Next.js, Tailwind, Expo/React Native, SwiftUI, Ionic y Capacitor
-Despliegue y operación: Docker, Linux, CI/CD, Cloudflare, Coolify, Hetzner, experiencia práctica con AWS/Azure/GCP, registros, monitorización y control de costes
+Production AI services: Python, FastAPI, REST APIs, SQL, webhooks, background jobs, automated workflows and end-to-end service ownership
+LLM & agent workflows: Prompt design, context management, structured outputs, tool/function calling, LangChain, LangGraph, MCP, RAG and model routing
+Reliability & evaluation: Output validation, guardrails, fallbacks, error handling, human review, logs, metrics, evaluation loops and operational improvement
+Commerce & product delivery: Marketplace systems, search and discovery, pricing intelligence, CRM automation, React/Next.js interfaces and cross-functional delivery
 
 TECHNOLOGY AND DELIVERY
 Agentic AI & orchestration

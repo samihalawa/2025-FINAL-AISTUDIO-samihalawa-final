@@ -18,7 +18,7 @@ const HireCTA: React.FC = () => {
             {t('hireCta.primary')}
             <i className="fas fa-arrow-up-right-from-square text-sm"></i>
           </a>
-          <a href="https://wa.me/34679794037" target="_blank" rel="noopener noreferrer" className="btn-secondary border-white/60 bg-white/10 text-white hover:bg-white/20">
+          <a href="https://wa.me/34659777908" target="_blank" rel="noopener noreferrer" className="btn-secondary border-white/60 bg-white/10 text-white hover:bg-white/20">
             {t('hireCta.secondary')}
             <i className="fab fa-whatsapp"></i>
           </a>
