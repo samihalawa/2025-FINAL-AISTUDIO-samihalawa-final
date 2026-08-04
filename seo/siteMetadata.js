@@ -17,6 +17,9 @@ const route = (path, title, description, options = {}) => ({
   schemaType: 'WebPage',
   image: DEFAULT_OG_IMAGE,
   imageAlt: DEFAULT_OG_ALT,
+  imageWidth: 1200,
+  imageHeight: 630,
+  imageMime: 'image/png',
   robots: DEFAULT_ROBOTS,
   ...options,
 });
@@ -25,7 +28,7 @@ export const ROUTE_METADATA = [
   route('/', 'Sami Halawa — Founding AI Engineer & Product Builder', 'Founder-engineer building multilingual AI products, reliable agent systems, automation and technical training from Madrid.', { schemaType: 'ProfilePage', keywords: ['AI engineer', 'AI product builder', 'AI agents', 'Madrid'] }),
   route('/corporate', 'Corporate AI Training & Solutions | Sami Halawa', 'Practical AI training, workflow automation and product delivery for teams that need measurable, production-ready outcomes.', { schemaType: 'Service', serviceType: 'Corporate AI training and consulting' }),
   route('/ai-training', 'AI Training for Teams: Workshops & Bootcamps | Sami Halawa', 'Hands-on AI programs covering prompting, RAG, agents, automation and applied AI, delivered onsite in Madrid or remotely.', { schemaType: 'CollectionPage' }),
-  route('/projects', 'AI Products & Engineering Projects | Sami Halawa', 'Explore Sami Halawa\'s work across multilingual platforms, agent systems, automation, applied AI and product engineering.', { schemaType: 'CollectionPage' }),
+  route('/projects', 'AI Products & Engineering Projects | Sami Halawa', 'Explore detailed project stories across multilingual platforms, agent systems, automation, medical workflows and technical education.', { schemaType: 'CollectionPage', image: '/portfolio/pime-studio-cover.webp', imageAlt: 'AI product studio workspace with a readiness roadmap', imageWidth: 1600, imageHeight: 900, imageMime: 'image/webp', keywords: ['AI products', 'agent systems', 'product engineering', 'multilingual platforms'] }),
   route('/blog', 'AI Engineering & Agent Systems Blog | Sami Halawa', 'Technical articles on AI agents, context engineering, RAG, evaluation, automation and shipping reliable AI products.', { schemaType: 'Blog' }),
   route('/contact', 'Contact Sami Halawa | AI Product & Engineering', 'Discuss an AI product, automation, training program, technical role or collaboration with Sami Halawa.', { schemaType: 'ContactPage' }),
   route('/cv', 'Sami Halawa CV | Founding AI Engineer', 'Professional profile, experience, selected products, technical skills and public work by founding AI engineer Sami Halawa.', { schemaType: 'ProfilePage', alternates: CV_ALTERNATES }),
@@ -34,7 +37,7 @@ export const ROUTE_METADATA = [
   route('/search', 'Search the Sami Halawa Portfolio', 'Search projects, services, case studies and technical articles across the Sami Halawa portfolio.', { schemaType: 'SearchResultsPage', robots: 'noindex,follow' }),
 
   route('/services', 'AI Engineering, Automation & Training Services | Sami Halawa', 'AI product engineering, agent systems, workflow automation, technical training and applied research services.', { schemaType: 'CollectionPage' }),
-  route('/services/medical-ai', 'Medical AI Research & Human-Review Workflows | Sami Halawa', 'Prototype structured reporting, medical-image review and research workflows with explicit human oversight.', { schemaType: 'Service', serviceType: 'Medical AI research and prototyping', image: '/portfolio/apolo-architecture.png', imageAlt: 'APOLO medical AI workflow architecture' }),
+  route('/services/medical-ai', 'Medical AI Research & Human-Review Workflows | Sami Halawa', 'Prototype structured reporting, medical-image review and research workflows with explicit human oversight.', { schemaType: 'Service', serviceType: 'Medical AI research and prototyping', image: '/portfolio/apolo-architecture.png', imageAlt: 'APOLO medical AI workflow architecture', imageWidth: 1024, imageHeight: 1024 }),
   route('/services/business-automation', 'AI Business Automation & Workflow Delivery | Sami Halawa', 'Automate lead capture, operations, support and reporting with observable AI workflows and reliable human handoffs.', { schemaType: 'Service', serviceType: 'AI business automation' }),
   route('/services/university-ml', 'Python & Machine Learning Project Support | Sami Halawa', 'Hands-on support for Python, machine learning, neural networks and final university projects with clear technical guidance.', { schemaType: 'Service', serviceType: 'Machine learning education' }),
   route('/services/family-ai', 'Practical AI for Families, Parents & Students | Sami Halawa', 'Practical, age-aware AI learning for families, including study support, creative tools and safer everyday workflows.', { schemaType: 'Service', serviceType: 'Family AI education' }),
@@ -66,18 +69,10 @@ export const ROUTE_METADATA = [
   route('/locations/valencia/rag-langchain', 'RAG & LangChain Workshop in Valencia | Sami Halawa', 'Build and evaluate production retrieval systems in a practical RAG and LangChain workshop in Valencia.', { schemaType: 'Service', serviceType: 'RAG and LangChain training', areaServed: 'Valencia, Spain' }),
   route('/locations/madrid/business-automation', 'AI Business Automation in Madrid | Sami Halawa', 'Design reliable AI workflows for operations, sales and support with local delivery in Madrid.', { schemaType: 'Service', serviceType: 'AI business automation', areaServed: 'Madrid, Spain' }),
 
-  route('/case-studies', 'AI Product & Engineering Case Studies | Sami Halawa', 'Detailed case studies across AI products, automation, applied research, agent systems and data platforms.', { schemaType: 'CollectionPage', image: '/portfolio/vuda-annotated.png', imageAlt: 'Annotated VUDA product interface' }),
-  route('/case-studies/apolo-medical-framework', 'APOLO Medical AI Framework Case Study | Sami Halawa', 'A multimodal medical AI research framework combining structured reasoning, image workflows and human review.', { schemaType: 'TechArticle', image: '/portfolio/apolo-architecture.png', imageAlt: 'APOLO medical AI architecture diagram' }),
-  route('/case-studies/radiology-ai', 'Radiology AI Workflow Case Study | Sami Halawa', 'Research prototypes for structured medical-image workflows, report generation and explicit clinician review.', { schemaType: 'TechArticle', image: '/portfolio/apolo-architecture.png', imageAlt: 'Medical AI workflow architecture' }),
-  route('/case-studies/autoclient', 'AutoClient AI Automation Case Study | Sami Halawa', 'A product and automation system for turning operational data into repeatable sales, analysis and reporting workflows.', { schemaType: 'TechArticle', image: '/portfolio/autopricing-dashboard.png', imageAlt: 'AutoPricing analytics dashboard' }),
-  route('/case-studies/autopricing', 'AutoPricing Delivery Case Study | Sami Halawa', 'A client delivery case study connecting marketplace evidence, product matching, ERP inputs and human review in a pricing-intelligence workflow.', { schemaType: 'TechArticle', image: '/portfolio/autopricing-dashboard.png', imageAlt: 'AutoPricing pricing-intelligence and operations interface' }),
-  route('/case-studies/attio-sequences', 'Attio CRM Sequences Case Study | Sami Halawa', 'Designing structured CRM sequences, enrichment and follow-up automation with observable workflow states.', { schemaType: 'TechArticle' }),
-  route('/case-studies/banking-assistant', 'Conversational Banking Assistant Case Study | Sami Halawa', 'A conversational product concept for explainable personal-finance workflows, data access and safe user guidance.', { schemaType: 'TechArticle' }),
-  route('/case-studies/spreadsheet-assistant', 'AI Spreadsheet Assistant Case Study | Sami Halawa', 'Natural-language analysis, structured data operations and reviewable outputs for spreadsheet workflows.', { schemaType: 'TechArticle' }),
-  route('/case-studies/proptech-analytics', 'PropTech Analytics Case Study | Sami Halawa', 'Property-data pipelines, normalization, market analysis and decision interfaces for real-estate products.', { schemaType: 'TechArticle', image: '/portfolio/autopricing-dashboard.png', imageAlt: 'Data analytics dashboard interface' }),
-  route('/case-studies/airbnb-intelligence', 'Airbnb Market Intelligence Case Study | Sami Halawa', 'Listing normalization, pricing signals, occupancy analysis and market-monitoring workflows for short-term rentals.', { schemaType: 'TechArticle' }),
-  route('/case-studies/autofunding-grants', 'AI Funding & Grants Workflow Case Study | Sami Halawa', 'A structured workflow for program research, evidence mapping, technical narratives, budgets and submission readiness.', { schemaType: 'TechArticle' }),
-  route('/case-studies/lanzadera-readiness', 'Accelerator Readiness Case Study | Sami Halawa', 'Product narrative, demo evidence, go-to-market analysis and Q&A preparation for accelerator applications.', { schemaType: 'TechArticle', image: '/portfolio/autopricing-dashboard.png', imageAlt: 'Product analytics dashboard' }),
+  route('/case-studies', 'AI Product & Engineering Case Studies | Sami Halawa', 'Detailed case studies of AutoPricing, AutoClient and APOLO across pricing intelligence, revenue operations and medical workflows.', { schemaType: 'CollectionPage', image: '/portfolio/autoclient-operations-cover.webp', imageAlt: 'Connected account research, CRM and communication workflow', imageWidth: 1600, imageHeight: 900, imageMime: 'image/webp', keywords: ['AI case studies', 'pricing intelligence', 'revenue operations', 'medical AI'] }),
+  route('/case-studies/apolo-medical-framework', 'APOLO Medical AI Framework Case Study | Sami Halawa', 'A multimodal medical-image workflow that separates structured visual description, reasoning, reporting and human review.', { schemaType: 'TechArticle', image: '/portfolio/apolo-architecture.png', imageAlt: 'APOLO medical AI architecture diagram', imageWidth: 1024, imageHeight: 1024, keywords: ['multimodal medical AI', 'medical image workflow', 'structured reporting', 'human review'] }),
+  route('/case-studies/autoclient', 'AutoClient Revenue Operations Case Study | Sami Halawa', 'How AutoClient connects account research, enrichment, CRM review, email, WhatsApp and voice follow-up in one operator-led system.', { schemaType: 'TechArticle', image: '/portfolio/autoclient-operations-cover.webp', imageAlt: 'AutoClient account research, CRM and multi-channel operations workflow', imageWidth: 1600, imageHeight: 900, imageMime: 'image/webp', keywords: ['revenue operations', 'CRM automation', 'account research', 'AI agents'] }),
+  route('/case-studies/autopricing', 'AutoPricing Delivery Case Study | Sami Halawa', 'A pricing-intelligence workflow connecting marketplace evidence, product matching, inventory, ERP context and operator review.', { schemaType: 'TechArticle', image: '/portfolio/autopricing-dashboard.png', imageAlt: 'AutoPricing pricing-intelligence and operations interface', imageWidth: 2756, imageHeight: 1994, keywords: ['pricing intelligence', 'marketplace data', 'ERP integration', 'sourcing workflow'] }),
 ];
 
 export const NOT_FOUND_METADATA = route('/404', 'Page Not Found | Sami Halawa', 'The requested page could not be found. Explore the portfolio, services, case studies or technical blog.', { schemaType: 'WebPage', robots: 'noindex,follow' });
@@ -188,7 +183,7 @@ export function buildStructuredData(meta) {
     inLanguage: meta.lang || 'en',
     isPartOf: { '@id': websiteId },
     ...(breadcrumbs ? { breadcrumb: { '@id': `${canonical}#breadcrumb` } } : {}),
-    primaryImageOfPage: { '@type': 'ImageObject', url: absoluteUrl(meta.image), width: 1200, height: 630 },
+    primaryImageOfPage: { '@type': 'ImageObject', url: absoluteUrl(meta.image), width: meta.imageWidth, height: meta.imageHeight },
   };
 
   let page;
@@ -269,9 +264,9 @@ export function buildHeadMarkup(meta) {
     `<meta data-seo-head="true" property="og:url" content="${escapeHtml(canonical)}">`,
     `<meta data-seo-head="true" property="og:image" content="${escapeHtml(image)}">`,
     `<meta data-seo-head="true" property="og:image:secure_url" content="${escapeHtml(image)}">`,
-    `<meta data-seo-head="true" property="og:image:type" content="image/png">`,
-    `<meta data-seo-head="true" property="og:image:width" content="1200">`,
-    `<meta data-seo-head="true" property="og:image:height" content="630">`,
+    `<meta data-seo-head="true" property="og:image:type" content="${escapeHtml(meta.imageMime)}">`,
+    `<meta data-seo-head="true" property="og:image:width" content="${escapeHtml(meta.imageWidth)}">`,
+    `<meta data-seo-head="true" property="og:image:height" content="${escapeHtml(meta.imageHeight)}">`,
     `<meta data-seo-head="true" property="og:image:alt" content="${escapeHtml(imageAlt)}">`,
     `<meta data-seo-head="true" name="twitter:card" content="summary_large_image">`,
     `<meta data-seo-head="true" name="twitter:title" content="${escapeHtml(meta.title)}">`,

@@ -1,33 +1,69 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation, type LanguageCode } from '../i18n/LanguageContext';
-import { PORTFOLIO_PROJECTS, getProjectCopy } from '../portfolio';
+import { PORTFOLIO_STORIES, getProjectStoryCopy } from '../portfolio';
 
-const headings: Record<LanguageCode, { eyebrow: string; title: string; body: string; all: string; proof: string }> = {
-  en: { eyebrow: 'Selected work', title: 'Products with real interfaces and operating depth.', body: 'A few representative platforms and tools spanning marketplaces, agent systems, mobile products and open source.', all: 'View the full portfolio', proof: 'Visit project' },
-  es: { eyebrow: 'Trabajo seleccionado', title: 'Productos con interfaz real y profundidad operativa.', body: 'Una selección de plataformas y herramientas: marketplaces, agentes, producto móvil y open source.', all: 'Ver el portfolio completo', proof: 'Visitar proyecto' },
-  fr: { eyebrow: 'Travaux sélectionnés', title: 'Des produits avec de vraies interfaces et une profondeur opérationnelle.', body: 'Une sélection de plateformes et d’outils : marketplaces, agents, mobile et open source.', all: 'Voir le portfolio complet', proof: 'Visiter le projet' },
-  zh: { eyebrow: '精选作品', title: '拥有真实界面与运营深度的产品。', body: '精选市场平台、智能体系统、移动产品与开源工具。', all: '查看完整作品集', proof: '访问项目' }
+const headings: Record<LanguageCode, {
+  eyebrow: string;
+  title: string;
+  body: string;
+  all: string;
+  challenge: string;
+  build: string;
+  role: string;
+  open: string;
+  visit: string;
+}> = {
+  en: { eyebrow: 'Selected work', title: 'Real products, with the useful details left in.', body: 'Each project shows the operating problem, what I built and the interface or project-specific cover behind the work.', all: 'Explore every project story', challenge: 'The problem', build: 'What I built', role: 'Role', open: 'Read the case study', visit: 'Visit the project' },
+  es: { eyebrow: 'Trabajo seleccionado', title: 'Productos reales, con los detalles que importan.', body: 'Cada proyecto muestra el problema operativo, lo que construí y la interfaz o portada específica detrás del trabajo.', all: 'Explorar todos los proyectos', challenge: 'El problema', build: 'Qué construí', role: 'Rol', open: 'Leer el caso', visit: 'Visitar el proyecto' },
+  fr: { eyebrow: 'Travaux sélectionnés', title: 'Des produits réels, avec les détails qui comptent.', body: 'Chaque projet présente le problème opérationnel, ce que j’ai construit et son interface ou visuel dédié.', all: 'Explorer tous les projets', challenge: 'Le problème', build: 'Ce que j’ai construit', role: 'Rôle', open: 'Lire l’étude de cas', visit: 'Visiter le projet' },
+  zh: { eyebrow: '精选作品', title: '真实产品，也保留真正重要的细节。', body: '每个项目都展示实际问题、我的构建内容，以及对应界面或专属封面。', all: '查看全部项目故事', challenge: '问题', build: '构建内容', role: '角色', open: '阅读案例', visit: '访问项目' },
 };
 
 const FeaturedCaseStudies: React.FC = () => {
   const { language } = useTranslation();
   const h = headings[language];
-  const featured = PORTFOLIO_PROJECTS.filter(project => project.featured);
+  const featured = PORTFOLIO_STORIES.filter(story => story.featured);
+
   return (
-    <section className="border-y border-slate-200 bg-white py-20 sm:py-24" id="case-studies" aria-labelledby="home-case-studies-heading">
+    <section className="border-y border-slate-300 bg-white py-20 sm:py-24" id="case-studies" aria-labelledby="home-case-studies-heading">
       <div className="container">
-        <div className="grid items-end gap-6 md:grid-cols-[1fr_auto]">
-          <div><span className="badge-pill">{h.eyebrow}</span><h2 id="home-case-studies-heading" className="section-heading mt-5">{h.title}</h2><p className="section-subtitle mt-4">{h.body}</p></div>
-          <Link to="/projects" className="btn-secondary">{h.all}<i className="fas fa-arrow-right text-sm"></i></Link>
+        <div className="grid items-end gap-8 border-b border-slate-400 pb-10 md:grid-cols-[1fr_auto]">
+          <div>
+            <span className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">{h.eyebrow}</span>
+            <h2 id="home-case-studies-heading" className="cv-serif mt-5 max-w-4xl text-4xl font-normal leading-[1.02] tracking-[-.04em] text-slate-950 sm:text-6xl">{h.title}</h2>
+            <p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-600">{h.body}</p>
+          </div>
+          <Link to="/projects" className="btn-secondary">{h.all}<i className="fas fa-arrow-right text-sm" /></Link>
         </div>
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
-          {featured.map(project => {
-            const c = getProjectCopy(project, language);
-            return <article key={project.id} className="group overflow-hidden rounded-[1.5rem] border border-slate-200 bg-slate-950 text-white shadow-sm">
-              {project.image ? <div className="h-64 overflow-hidden border-b border-white/10 bg-slate-800"><img src={project.image} alt={`${project.name} product interface`} className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]" style={{ objectPosition: project.imagePosition || 'center' }} loading="lazy" /></div> : <div className="flex h-64 items-end justify-between border-b border-white/10 bg-[radial-gradient(circle_at_75%_20%,rgba(45,212,191,.22),transparent_30%),linear-gradient(135deg,#020617,#0f172a)] p-7"><span className="font-display text-5xl font-bold text-teal-200">{project.name.slice(0, 2).toUpperCase()}</span><i className="fas fa-diagram-project text-2xl text-white/30" /></div>}
-              <div className="p-6"><span className="text-xs font-bold uppercase tracking-[.16em] text-brand-300">{project.period}</span><h3 className="mt-3 text-xl font-bold text-white">{project.name}</h3><p className="mt-3 text-sm leading-relaxed text-slate-300">{c.description}</p><div className="mt-5 flex flex-wrap items-center gap-2">{project.tags.slice(0, 2).map(tag => <span key={tag} className="rounded-full border border-white/15 px-2.5 py-1 text-xs font-semibold text-white/70">{tag}</span>)}{project.href && <a href={project.href} target="_blank" rel="noopener noreferrer" data-analytics-event="project_view" data-project-name={project.name} className="ml-auto inline-flex min-h-11 items-center gap-2 font-bold text-brand-200 hover:text-white">{h.proof}<i className="fas fa-arrow-up-right-from-square text-xs"></i></a>}</div></div>
-            </article>;
+
+        <div className="grid border-l border-slate-300 md:grid-cols-2 xl:grid-cols-3">
+          {featured.map(story => {
+            const copy = getProjectStoryCopy(story, language);
+            const action = story.caseStudy || story.href;
+            return (
+              <article key={story.id} className="group flex min-h-full flex-col border-b border-r border-slate-300 bg-[#f8f6f1]">
+                <div className="aspect-[16/10] overflow-hidden border-b border-slate-300 bg-slate-100">
+                  <img src={story.image} alt={`${story.name} ${story.imageKind === 'illustration' ? 'project cover' : 'product interface'}`} className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.015]" style={{ objectPosition: story.imagePosition || 'center' }} loading="lazy" />
+                </div>
+                <div className="flex flex-1 flex-col p-6 sm:p-7">
+                  <div className="flex items-center justify-between gap-4 text-xs font-bold uppercase tracking-[.14em]"><span className="text-brand-800">{story.period}</span><span className="text-slate-500">{copy.role}</span></div>
+                  <h3 className="cv-serif mt-4 text-3xl font-semibold leading-tight text-slate-950">{story.name}</h3>
+                  <p className="mt-3 text-sm leading-6 text-slate-600">{copy.description}</p>
+                  <dl className="mt-6 border-t border-slate-300">
+                    <div className="border-b border-slate-300 py-4"><dt className="text-xs font-bold uppercase tracking-[.14em] text-slate-500">{h.challenge}</dt><dd className="mt-2 text-sm leading-6 text-slate-700">{copy.challenge}</dd></div>
+                    <div className="border-b border-slate-300 py-4"><dt className="text-xs font-bold uppercase tracking-[.14em] text-slate-500">{h.build}</dt><dd className="mt-2 text-sm leading-6 text-slate-700">{copy.build}</dd></div>
+                  </dl>
+                  <div className="mt-auto flex flex-wrap items-center gap-x-2 gap-y-3 pt-6">
+                    <span className="sr-only">{h.role}: {copy.role}</span>
+                    <span className="text-xs font-semibold text-slate-500">{story.includes.join(' · ')}</span>
+                    {action && (story.caseStudy
+                      ? <Link to={story.caseStudy} className="ml-auto inline-flex min-h-11 items-center gap-2 border-b border-slate-600 text-sm font-bold text-slate-900">{h.open}<i className="fas fa-arrow-right text-xs" /></Link>
+                      : <a href={story.href} target="_blank" rel="noopener noreferrer" data-analytics-event="project_view" data-project-name={story.name} className="ml-auto inline-flex min-h-11 items-center gap-2 border-b border-slate-600 text-sm font-bold text-slate-900">{h.visit}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>)}
+                  </div>
+                </div>
+              </article>
+            );
           })}
         </div>
       </div>

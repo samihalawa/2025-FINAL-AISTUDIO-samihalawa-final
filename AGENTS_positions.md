@@ -1,5 +1,6 @@
 # INDEX
 
+portfolio project presentation | raw inventory entries and speculative service templates can make the work look shallow or invented | group related builds into canonical product stories, lead with real interfaces and reserve generated covers for projects without usable media | do not repeat the archive as cards, use abstract initials/gradients, or publish a service idea as a delivered case study | verify every story has a cover, problem, build, role and family scope; index only evidence-backed cases; render desktop/mobile
 credential publishing | redesign can distract from the requested education update | reconcile the live inventory, rank the strongest programmes and show their real diploma images | do not replace credential reconciliation with a page redesign or list component courses as separate headline programmes | compare live IDs with archive/CV/site, render IBM/Google/Oxford imagery, and verify desktop/mobile plus official links
 credential programme counts | archive totals can be mistaken for official programme structure | distinguish the IBM 16-course programme from 20 archived IBM course credentials | do not call the IBM Professional Certificate a 20-course programme | extract the umbrella diploma and sweep every current downloadable CV before deploy
 public contact number | CV downloads and shared WhatsApp/contact CTAs can retain the retired number across releases | use `+34 659 777 908` in current public source, generated CVs and destination URLs | don't inherit `+34 679 794 037` from historic assets | grep rendered source/download text and inspect live contact destinations
@@ -20,6 +21,17 @@ blog content pipeline | hard-coded slug list + modal did not scale to daily hub-
 SPA production routes | public asset directories collide with client routes | serve file-shaped URLs as static files and everything else as the SPA shell | do not let Nginx treat route names as directories or leak port 8080 redirects | verify slash and non-slash routes plus real asset MIME types
 Coolify Linux build | macOS lock can omit the Linux Rollup binary and Docker hosts differ between arm64 and x64 | install the build container's matching native Rollup GNU package | do not hardcode one CPU or infer deployability from the macOS Vite build | verify local container plus Coolify build the pushed commit and live routes
 public portfolio | stock imagery and invented social proof replaced source evidence | use dated metrics, real screenshots and public links | do not publish placeholders, arbitrary percentages or unsupported impact | verify exact live route, image load, text and responsive layout
+
+## 2026-08-04 — Present related builds as complete product stories
+
+- **Status:** CURRENT
+- **Project/root:** `2025-FINAL-AISTUDIO-samihalawa-final`; homepage selected work, `/projects`, `/case-studies` and project social metadata.
+- **Mistake corrected:** 47 shallow cards repeated the larger project archive, abstract initial/gradient placeholders weakened real work, and speculative service templates appeared beside genuine delivery case studies.
+- **Superior approach:** group related applications, tools and experiments into canonical product families; explain the problem, build, role and included systems; keep the full searchable archive separate.
+- **Media rule:** use a real product interface or diagram when one exists; generate a concrete editorial cover only for a project family without usable public media.
+- **Evidence:** user screenshot and correction on 4 Aug 2026; current source consolidation into ten stories and three detailed case-study routes.
+- **Triggers / verification:** project card, cover, selected work, case study, portfolio cleanup or SEO image; verify every canonical story has complete copy and media, only evidence-backed cases are indexed, and desktop/mobile renders have no gaps or overflow.
+- **Do / don't:** do merge related work into a stronger narrative; don't invent outcomes, repeat the archive, or use generic visual filler.
 
 ## 2026-08-04 — Credential updates prioritize reconciliation and visible evidence
 

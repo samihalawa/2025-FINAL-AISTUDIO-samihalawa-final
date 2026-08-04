@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import { useTranslation, type LanguageCode } from '../i18n/LanguageContext';
 import {
   PORTFOLIO_INVENTORY,
-  PORTFOLIO_PROJECTS,
+  PORTFOLIO_STORIES,
   categoryCopy,
   getInventoryCopy,
-  getProjectCopy,
+  getProjectStoryCopy,
   inventoryLaneCopy,
   type InventoryLane,
   type PortfolioCategory,
@@ -19,6 +19,13 @@ const workstreamHeadings: Record<LanguageCode, { eyebrow: string; title: string;
   es: { eyebrow: 'Áreas de trabajo', title: 'Siete áreas conectadas de producto e ingeniería.', body: 'Explora productos, sistemas para clientes, open source, infraestructura, investigación, educación y trabajos anteriores.', open: 'Explorar área' },
   fr: { eyebrow: 'Domaines de travail', title: 'Sept domaines reliés de produit et d’ingénierie.', body: 'Découvrez produits, systèmes clients, open source, infrastructure, recherche, éducation et travaux antérieurs.', open: 'Explorer le domaine' },
   zh: { eyebrow: '工作方向', title: '七个相互关联的产品与工程方向。', body: '浏览产品、客户系统、开源、基础设施、研究、教育与早期作品。', open: '探索方向' },
+};
+
+const storyLabels: Record<LanguageCode, { challenge: string; build: string; role: string }> = {
+  en: { challenge: 'The problem', build: 'What I built', role: 'Role' },
+  es: { challenge: 'El problema', build: 'Qué construí', role: 'Rol' },
+  fr: { challenge: 'Le problème', build: 'Ce que j’ai construit', role: 'Rôle' },
+  zh: { challenge: '问题', build: '构建内容', role: '角色' },
 };
 
 const headings: Record<LanguageCode, {
@@ -242,11 +249,15 @@ const Projects: React.FC = () => {
 
         <div className="max-w-4xl pt-20 sm:pt-24"><span className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">{h.selectedEyebrow}</span><h2 className="cv-serif mt-5 text-4xl font-normal tracking-[-.035em] text-slate-950 sm:text-5xl">{h.selectedTitle}</h2><p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-600">{h.selectedBody}</p></div>
         {categoryOrder.map(category => {
-          const items = PORTFOLIO_PROJECTS.filter(project => project.category === category);
-          return <section key={category} className="mt-14" aria-labelledby={`category-${category}`}><div className="mb-6 flex items-center gap-4"><h3 id={`category-${category}`} className="text-xl font-bold text-slate-950 sm:text-2xl">{categoryCopy[category][language]}</h3><span className="h-px flex-1 bg-slate-200" /><span className="text-sm font-bold tabular-nums text-slate-400">{String(items.length).padStart(2, '0')}</span></div>
-            <div className="grid border-t border-slate-400 md:grid-cols-2 xl:grid-cols-3">{items.map((project, index) => { const c = getProjectCopy(project, language); return <article id={project.id} key={project.id} className="group scroll-mt-24 flex min-h-[24rem] flex-col overflow-hidden border-b border-r border-slate-300 bg-white">
-              {project.image ? <div className="h-52 overflow-hidden border-b border-slate-200 bg-slate-100"><img src={project.image} alt={`${project.name} interface`} className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]" style={{ objectPosition: project.imagePosition || 'center' }} loading="lazy" /></div> : <div className="flex h-36 items-end justify-between border-b border-slate-800 bg-slate-950 p-6 text-white"><span className="font-display text-5xl font-bold text-teal-200">{String(index + 1).padStart(2, '0')}</span><i className="fas fa-code-branch text-xl text-white/35" /></div>}
-              <div className="flex flex-1 flex-col p-6"><div className="text-xs font-bold uppercase tracking-[.16em] text-brand-800">{project.period}</div><h4 className="cv-serif mt-2 text-2xl font-semibold text-slate-950">{project.name}</h4><p className="mt-3 text-sm leading-relaxed text-slate-600">{c.description}</p><div className="mt-auto flex flex-wrap items-center gap-x-3 gap-y-2 pt-6">{project.tags.map(tag => <span key={tag} className="text-xs font-semibold text-slate-500">{tag}</span>)}{project.caseStudy && <Link to={project.caseStudy} className="ml-auto inline-flex min-h-11 items-center gap-2 border-b border-slate-500 text-sm font-bold text-slate-800 hover:border-slate-950">{h.open}<i className="fas fa-arrow-right text-xs" /></Link>}{project.href && !project.caseStudy && <a href={project.href} target="_blank" rel="noopener noreferrer" className="ml-auto inline-flex min-h-11 items-center gap-2 border-b border-slate-500 text-sm font-bold text-slate-800 hover:border-slate-950">{h.visit}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>}</div></div>
+          const items = PORTFOLIO_STORIES.filter(story => story.category === category);
+          if (!items.length) return null;
+          return <section key={category} className="mt-14" aria-labelledby={`category-${category}`}><div className="mb-6 flex items-center gap-4"><h3 id={`category-${category}`} className="text-xl font-bold text-slate-950 sm:text-2xl">{categoryCopy[category][language]}</h3><span className="h-px flex-1 bg-slate-300" /><span className="text-sm font-bold tabular-nums text-slate-500">{String(items.length).padStart(2, '0')}</span></div>
+            <div className="grid border-l border-t border-slate-400 lg:grid-cols-2">{items.map(story => { const copy = getProjectStoryCopy(story, language); return <article id={story.id} key={story.id} className="group scroll-mt-24 flex min-h-full flex-col border-b border-r border-slate-400 bg-white">
+              <div className="aspect-[16/9] overflow-hidden border-b border-slate-300 bg-slate-100"><img src={story.image} alt={`${story.name} ${story.imageKind === 'illustration' ? 'project cover' : 'interface'}`} className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.015]" style={{ objectPosition: story.imagePosition || 'center' }} loading="lazy" /></div>
+              <div className="flex flex-1 flex-col p-6 sm:p-8"><div className="flex flex-wrap items-center justify-between gap-3 text-xs font-bold uppercase tracking-[.14em]"><span className="text-brand-800">{story.period}</span><span className="text-slate-500">{storyLabels[language].role}: {copy.role}</span></div><h4 className="cv-serif mt-4 text-3xl font-semibold leading-tight text-slate-950">{story.name}</h4><p className="mt-3 text-base leading-7 text-slate-600">{copy.description}</p>
+                <dl className="mt-7 grid border-t border-slate-300 sm:grid-cols-2"><div className="border-b border-slate-300 py-5 sm:border-r sm:pr-5"><dt className="text-xs font-bold uppercase tracking-[.14em] text-slate-500">{storyLabels[language].challenge}</dt><dd className="mt-2 text-sm leading-6 text-slate-700">{copy.challenge}</dd></div><div className="border-b border-slate-300 py-5 sm:pl-5"><dt className="text-xs font-bold uppercase tracking-[.14em] text-slate-500">{storyLabels[language].build}</dt><dd className="mt-2 text-sm leading-6 text-slate-700">{copy.build}</dd></div></dl>
+                <div className="mt-auto flex flex-wrap items-center gap-x-3 gap-y-3 pt-6"><span className="text-xs font-semibold text-slate-500">{story.includes.join(' · ')}</span>{story.caseStudy && <Link to={story.caseStudy} className="ml-auto inline-flex min-h-11 items-center gap-2 border-b border-slate-600 text-sm font-bold text-slate-900 hover:border-slate-950">{h.open}<i className="fas fa-arrow-right text-xs" /></Link>}{story.href && !story.caseStudy && <a href={story.href} target="_blank" rel="noopener noreferrer" className="ml-auto inline-flex min-h-11 items-center gap-2 border-b border-slate-600 text-sm font-bold text-slate-900 hover:border-slate-950">{h.visit}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>}</div>
+              </div>
             </article>; })}</div>
           </section>;
         })}

@@ -23,7 +23,7 @@ const MedicalAI: React.FC = () => {
   const { t } = useTranslation();
   const title = t('services.medicalAI.title');
   const relatedCaseStudies = [
-    { href: '/case-studies/radiology-ai', label: t('caseStudies.index.case.radiology.title') }
+    { href: '/case-studies/apolo-medical-framework', label: t('services.index.caseStudy.radiology.title') }
   ];
   const learnKeys: TranslationKey[] = [
     'services.medicalAI.learn1',

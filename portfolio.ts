@@ -20,6 +20,24 @@ export interface PortfolioProject {
   featured?: boolean;
 }
 
+export interface PortfolioStory {
+  id: string;
+  name: string;
+  period: string;
+  category: PortfolioCategory;
+  description: LocalizedCopy;
+  challenge: LocalizedCopy;
+  build: LocalizedCopy;
+  role: LocalizedCopy;
+  includes: string[];
+  image: string;
+  imagePosition?: string;
+  href?: string;
+  caseStudy?: string;
+  featured?: boolean;
+  imageKind?: 'interface' | 'illustration';
+}
+
 export interface InventoryItem {
   number: number;
   id: string;
@@ -66,7 +84,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   {
     id: 'autoclient', name: 'AutoClient', period: '2024–present', category: 'platforms',
     description: copy('Agentic research, enrichment, scoring, personalised outreach and CRM follow-up across email, WhatsApp and voice.', 'Investigación agéntica, enriquecimiento, scoring, contacto personalizado y CRM por email, WhatsApp y voz.'),
-    tags: ['Agents', 'CRM', 'Outreach', 'Voice'], href: 'https://www.youtube.com/@autoclient-ai'
+    tags: ['Agents', 'CRM', 'Outreach', 'Voice'], href: 'https://www.youtube.com/@autoclient-ai', image: '/portfolio/autoclient-operations-cover.webp', imagePosition: 'center 42%'
   },
   {
     id: 'autopricing', name: 'AutoPricing / IWAKY delivery', period: '2025–2026', category: 'platforms',
@@ -146,7 +164,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   {
     id: 'pime', name: 'PIME.ai', period: '2025–present', category: 'platforms', featured: true,
     description: copy('Product studio and operating surface for agentic services, including a multilingual EU AI Act readiness pack.', 'Estudio de producto y superficie operativa para servicios agénticos, incluido un pack multilingüe de preparación para la Ley de IA.'),
-    tags: ['AI services', 'Compliance', 'Multilingual'], href: 'https://pime.ai'
+    tags: ['AI services', 'Compliance', 'Multilingual'], href: 'https://pime.ai', image: '/portfolio/pime-studio-cover.webp', imagePosition: 'center 52%'
   },
   {
     id: 'agents-ai', name: 'Agents AI Ltd', period: '2025–present', category: 'platforms',
@@ -290,6 +308,89 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   }
 ];
 
+export const PORTFOLIO_STORIES: PortfolioStory[] = [
+  {
+    id: 'oulang', name: 'OULANG (欧浪AI)', period: '2026–present', category: 'platforms', featured: true,
+    description: copy('A Mandarin-first marketplace and local-life product built for the Chinese community in Spain.', 'Marketplace y producto de vida local en mandarín para la comunidad china en España.'),
+    challenge: copy('Bring housing, jobs, services and community discovery into one coherent experience across languages and devices.', 'Unir vivienda, empleo, servicios y comunidad en una experiencia coherente entre idiomas y dispositivos.'),
+    build: copy('Web, iOS and Android surfaces with shared marketplace infrastructure, publishing, subscriptions and product analytics.', 'Superficies web, iOS y Android con infraestructura compartida de marketplace, publicación, suscripciones y analítica.'),
+    role: copy('Founder · product, engineering and operations', 'Fundador · producto, ingeniería y operaciones'),
+    includes: ['Marketplace', 'Local life', 'Mobile apps'], image: '/portfolio/oulang-home.png', imagePosition: 'center 18%', href: 'https://oulang.ai'
+  },
+  {
+    id: 'huatong', name: 'Huatong & InfoHuaxin', period: '2025–present', category: 'platforms',
+    description: copy('Connected Chinese-language jobs, housing, classifieds and local-services products for European markets.', 'Productos conectados en chino de empleo, vivienda, clasificados y servicios locales para Europa.'),
+    challenge: copy('Make fragmented local information discoverable to a multilingual audience without losing regional relevance.', 'Hacer descubrible información local fragmentada para una audiencia multilingüe sin perder relevancia regional.'),
+    build: copy('Responsive marketplace interfaces, structured categories, search and shared publishing or operations infrastructure.', 'Interfaces responsive de marketplace, categorías estructuradas, búsqueda e infraestructura compartida de publicación y operaciones.'),
+    role: copy('Product and engineering lead', 'Responsable de producto e ingeniería'),
+    includes: ['Huatong', 'InfoHuaxin', 'European markets'], image: '/portfolio/huatong-home.png', imagePosition: 'center 14%', href: 'https://huatong.eu'
+  },
+  {
+    id: 'autopricing', name: 'AutoPricing / IWAKY', period: '2025–2026', category: 'platforms', featured: true,
+    description: copy('A reviewable pricing and sourcing workflow for a refurbished-device operation.', 'Flujo revisable de pricing y sourcing para una operación de dispositivos reacondicionados.'),
+    challenge: copy('Compare changing marketplace prices, stock and incoming purchase opportunities without losing the evidence behind each recommendation.', 'Comparar precios cambiantes, stock y oportunidades de compra sin perder la evidencia de cada recomendación.'),
+    build: copy('Marketplace collection, product matching, WhatsApp quote inputs, ERP context, decision reports and an operator dashboard.', 'Captación de marketplaces, matching, presupuestos de WhatsApp, contexto ERP, informes de decisión y dashboard operativo.'),
+    role: copy('Product discovery, architecture and hands-on implementation', 'Discovery de producto, arquitectura e implementación práctica'),
+    includes: ['Market signals', 'ERP context', 'Human review'], image: '/portfolio/autopricing-dashboard.png', imagePosition: 'center 18%', caseStudy: '/case-studies/autopricing'
+  },
+  {
+    id: 'autoclient', name: 'AutoClient revenue operations', period: '2024–present', category: 'platforms', featured: true,
+    description: copy('An agentic operating system for account research, enrichment, CRM work and multi-channel follow-up.', 'Sistema operativo agéntico para investigación de cuentas, enriquecimiento, CRM y seguimiento multicanal.'),
+    challenge: copy('Keep research, qualification and follow-up connected while preserving a clear operator checkpoint before external action.', 'Mantener conectados investigación, cualificación y seguimiento con un punto claro de revisión antes de actuar.'),
+    build: copy('Research and scoring workers, CRM synchronization, reporting, and email, WhatsApp and voice integrations.', 'Workers de investigación y scoring, sincronización CRM, reporting e integraciones de email, WhatsApp y voz.'),
+    role: copy('Founder · product and engineering', 'Fundador · producto e ingeniería'),
+    includes: ['Research & enrichment', 'CRM', 'Email · WhatsApp · voice'], image: '/portfolio/autoclient-operations-cover.webp', imagePosition: 'center 42%', caseStudy: '/case-studies/autoclient', imageKind: 'illustration'
+  },
+  {
+    id: 'pime', name: 'PIME.ai & Agents AI', period: '2025–present', category: 'platforms', featured: true,
+    description: copy('A product studio and company portfolio for practical agent systems, training and AI-readiness work.', 'Estudio de producto y portfolio empresarial para agentes prácticos, formación y preparación en IA.'),
+    challenge: copy('Turn broad AI capability into clearly scoped products and programmes that a team can understand, buy and operate.', 'Convertir capacidades amplias de IA en productos y programas claros que un equipo pueda entender, contratar y operar.'),
+    build: copy('Studio and company sites, product packaging, multilingual service journeys and an EU AI Act readiness pack.', 'Sitios de estudio y empresa, empaquetado de producto, recorridos multilingües y pack de preparación para la Ley de IA.'),
+    role: copy('Founder · product strategy and engineering', 'Fundador · estrategia de producto e ingeniería'),
+    includes: ['PIME.ai', 'Agents AI Ltd', 'AI Act readiness'], image: '/portfolio/pime-studio-cover.webp', imagePosition: 'center 52%', href: 'https://pime.ai', imageKind: 'illustration'
+  },
+  {
+    id: 'vuda', name: 'VUDA & agent developer tools', period: '2025–present', category: 'agents', featured: true,
+    description: copy('Open-source tools that give coding agents better visibility into interfaces, context and operating state.', 'Herramientas open source para que los agentes de programación entiendan mejor interfaces, contexto y estado operativo.'),
+    challenge: copy('A text-only agent can miss the visual defect, the focused element or the state that is obvious on screen.', 'Un agente de solo texto puede perder el defecto visual, el elemento enfocado o el estado evidente en pantalla.'),
+    build: copy('Screenshot capture, annotation and visual reasoning through MCP, alongside browser, shell, diff and context utilities.', 'Captura, anotación y razonamiento visual mediante MCP, junto con utilidades de navegador, shell, diff y contexto.'),
+    role: copy('Open-source creator and maintainer', 'Creador y mantenedor open source'),
+    includes: ['Visual debugging', 'MCP tools', 'Context systems'], image: '/portfolio/vuda-annotated.png', imagePosition: 'center 15%', href: 'https://github.com/samihalawa/visual-ui-debug-agent-mcp'
+  },
+  {
+    id: 'medical-systems', name: 'APOLO & medical workflow systems', period: '2024–2026', category: 'applied', featured: true,
+    description: copy('A family of medical-image, structured-reporting and clinical-learning prototypes with explicit human review.', 'Familia de prototipos de imagen médica, reporting estructurado y aprendizaje clínico con revisión humana.'),
+    challenge: copy('Explore useful multimodal support without collapsing image interpretation, reasoning and professional review into one opaque step.', 'Explorar apoyo multimodal sin mezclar interpretación de imagen, razonamiento y revisión profesional en un paso opaco.'),
+    build: copy('APOLO architecture and model artifacts, ophthalmology and radiology workflow experiments, reports and Umbramed learning tools.', 'Arquitectura y artefactos APOLO, experimentos de oftalmología y radiología, informes y herramientas de aprendizaje Umbramed.'),
+    role: copy('Technical lead · research and prototyping', 'Responsable técnico · investigación y prototipado'),
+    includes: ['APOLO', 'AutoIOL · AutoRad', 'Umbramed'], image: '/portfolio/apolo-architecture.png', imagePosition: 'center', caseStudy: '/case-studies/apolo-medical-framework'
+  },
+  {
+    id: 'oupin', name: 'OUPIN commerce discovery', period: '2026', category: 'platforms',
+    description: copy('A Chinese-language AI commerce concept focused on discovery, comparison and trust.', 'Concepto de comercio con IA en chino centrado en descubrimiento, comparación y confianza.'),
+    challenge: copy('Help users compare unfamiliar products and local services without reducing the experience to an unexplained recommendation.', 'Ayudar a comparar productos y servicios sin reducir la experiencia a una recomendación inexplicable.'),
+    build: copy('Recommendation journeys, explainable comparison patterns and a visual identity grounded in real local-service categories.', 'Recorridos de recomendación, comparación explicable e identidad visual basada en categorías reales de servicios locales.'),
+    role: copy('Product direction and engineering', 'Dirección de producto e ingeniería'),
+    includes: ['Commerce', 'Recommendation', 'Trust'], image: '/portfolio/oupin-hero.png', imagePosition: 'center', imageKind: 'illustration'
+  },
+  {
+    id: 'autodate', name: 'AutoDate.ai', period: '2025–present', category: 'platforms',
+    description: copy('Dating-product research and session tooling spanning a public web experience and native iOS work.', 'Investigación de producto de citas y herramientas de sesión en web pública y trabajo nativo para iOS.'),
+    challenge: copy('Study how guided automation changes repetitive matching workflows while keeping the user in control of the session.', 'Estudiar cómo la automatización guiada cambia flujos repetitivos de matching manteniendo el control del usuario.'),
+    build: copy('Product positioning, web interface, native Expo/iOS work and controlled session-automation experiments.', 'Posicionamiento, interfaz web, trabajo nativo Expo/iOS y experimentos controlados de automatización de sesión.'),
+    role: copy('Product research and engineering', 'Investigación de producto e ingeniería'),
+    includes: ['Web product', 'Expo · iOS', 'Session tooling'], image: '/portfolio/autodate-home.png', imagePosition: 'center 25%', href: 'https://autodate.ai'
+  },
+  {
+    id: 'chinototal', name: 'ChinoTotal & language learning', period: '2012–present', category: 'education',
+    description: copy('A long-running Mandarin education body of work across a published book, web products, study tools and media.', 'Trayectoria de educación en mandarín con libro publicado, productos web, herramientas de estudio y medios.'),
+    challenge: copy('Give Spanish-speaking beginners a clear route from first contact with Chinese to structured independent practice.', 'Dar a principiantes hispanohablantes una ruta clara desde el primer contacto hasta la práctica independiente.'),
+    build: copy('A 296-page course from zero to HSK2/A2, an academy site, AutoHSK experiments, exercises, cards and audio materials.', 'Curso de 296 páginas de cero a HSK2/A2, web de academia, experimentos AutoHSK, ejercicios, tarjetas y audio.'),
+    role: copy('Author · curriculum, design and product', 'Autor · currículo, diseño y producto'),
+    includes: ['Published book', 'Curriculum', 'Learning tools'], image: '/portfolio/chinototal-home.png', imagePosition: 'center 25%', href: 'https://chinototal.com'
+  }
+];
+
 const inventoryItem = (
   number: number,
   id: string,
@@ -406,4 +507,11 @@ export const getInventoryCopy = (item: InventoryItem, language: LanguageCode) =>
 
 export const getProjectCopy = (project: PortfolioProject, language: LanguageCode) => ({
   description: project.description[language] || project.description.en,
+});
+
+export const getProjectStoryCopy = (story: PortfolioStory, language: LanguageCode) => ({
+  description: story.description[language] || story.description.en,
+  challenge: story.challenge[language] || story.challenge.en,
+  build: story.build[language] || story.build.en,
+  role: story.role[language] || story.role.en,
 });

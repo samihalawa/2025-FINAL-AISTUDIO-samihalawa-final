@@ -16,7 +16,7 @@ const AIForMarketing: React.FC = () => {
   const { t } = useTranslation();
   const title = t('services.aiForMarketing.title');
   const relatedCaseStudies = [
-    { href: '/case-studies/autoclient', label: t('caseStudies.index.case.autoclient.title') },
+    { href: '/case-studies/autoclient', label: t('services.index.caseStudy.autoclient.title') },
     { href: '/projects#oulang', label: 'OULANG multilingual growth platform' }
   ];
   const moduleKeys: TranslationKey[] = [

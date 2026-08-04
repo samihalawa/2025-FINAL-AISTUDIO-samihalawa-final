@@ -9,6 +9,13 @@ const workflow = [
   { number: '05', title: 'Act', body: 'Turn reviewed decisions into reports, sourcing work and operational follow-up.' },
 ];
 
+const systemAreas = [
+  ['Market inputs', 'Resale listings, sourcing opportunities and changing market prices across multiple public sources.'],
+  ['Product identity', 'Matching by model, storage, condition and channel so unlike devices are not compared as equivalents.'],
+  ['Commercial context', 'Inventory, quotations, stock age, target margin and ERP or catalogue data in the same decision view.'],
+  ['Operator output', 'A review queue, decision reports and sourcing actions that retain the source behind the recommendation.'],
+];
+
 const AutoPricingCase: React.FC = () => (
   <article className="bg-[#f8f6f1] text-slate-800">
     <header className="border-b border-slate-300 py-16 sm:py-24">
@@ -42,11 +49,18 @@ const AutoPricingCase: React.FC = () => (
     <figure className="border-y border-slate-300 bg-white py-10 sm:py-14">
       <div className="container">
         <img src="/portfolio/autopricing-dashboard.png" alt="AutoPricing interface showing an executive pricing and sourcing dashboard" className="w-full border border-slate-300 bg-slate-50 object-cover object-top" />
-        <figcaption className="mt-4 max-w-4xl text-sm leading-6 text-slate-500">Interface from the delivered demonstration archive. Figures visible inside the interface are demonstration data; they are not presented here as customer performance results.</figcaption>
+        <figcaption className="mt-4 max-w-4xl text-sm leading-6 text-slate-500">Executive pricing and sourcing view, combining catalogue coverage, market signals and the cases that need operator attention.</figcaption>
       </div>
     </figure>
 
-    <section className="py-16 sm:py-24" aria-labelledby="case-workflow-heading">
+    <section className="py-16 sm:py-24" aria-labelledby="case-system-heading">
+      <div className="container grid gap-12 lg:grid-cols-[.7fr_1.3fr] lg:gap-16">
+        <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">System anatomy</p><h2 id="case-system-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">Four layers behind one commercial decision.</h2><p className="mt-5 leading-7 text-slate-600">The dashboard is the last layer. The difficult work is keeping market, product and operating context aligned underneath it.</p></div>
+        <div className="grid border-t border-slate-400 sm:grid-cols-2">{systemAreas.map(([title, body], index) => <article key={title} className={`border-b border-slate-300 py-6 sm:px-6 ${index % 2 === 0 ? 'sm:border-r' : ''}`}><h3 className="cv-serif text-2xl font-semibold text-slate-950">{title}</h3><p className="mt-3 text-sm leading-6 text-slate-600">{body}</p></article>)}</div>
+      </div>
+    </section>
+
+    <section className="border-y border-slate-300 bg-white py-16 sm:py-24" aria-labelledby="case-workflow-heading">
       <div className="container">
         <div className="max-w-4xl"><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Process map</p><h2 id="case-workflow-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950 sm:text-5xl">Evidence moves forward. Authority stays visible.</h2><p className="mt-5 text-lg leading-relaxed text-slate-600">The system separated signal collection and analysis from the actions that affect price, purchases or external contact.</p></div>
         <ol className="mt-12 grid border-t border-slate-500 sm:grid-cols-2 lg:grid-cols-5">
@@ -56,15 +70,15 @@ const AutoPricingCase: React.FC = () => (
       </div>
     </section>
 
-    <section className="border-y border-slate-300 bg-slate-950 py-16 text-white sm:py-24" aria-labelledby="case-delivery-heading">
+    <section className="bg-slate-950 py-16 text-white sm:py-24" aria-labelledby="case-delivery-heading">
       <div className="container grid gap-12 lg:grid-cols-[.7fr_1.3fr] lg:gap-16">
-        <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-200">Delivery evidence</p><h2 id="case-delivery-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-white">What reached the demonstration stage.</h2></div>
+        <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-200">Connected workflow</p><h2 id="case-delivery-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-white">What the system brought into one operating model.</h2></div>
         <div className="grid border-t border-slate-600 sm:grid-cols-2">
           {[
             ['Pricing and commerce', 'A database-backed commerce and dynamic quotation flow with stock and pricing controls.'],
             ['Market intelligence', 'Collection, product matching and decision reporting across multiple resale sources.'],
             ['Operational channels', 'Wallapop sourcing and contact flows plus structured extraction of WhatsApp quote inputs.'],
-            ['Traceable artefacts', 'A 69-screen delivery archive across three workstreams, with selected flows traced from collection through database records to rendered reports.'],
+            ['Delivery archive', 'Sixty-nine screens across three workstreams, covering collection, database records, operator controls and rendered reports.'],
           ].map(([title, body], index) => <article key={title} className={`border-b border-slate-700 py-6 sm:px-6 ${index % 2 === 0 ? 'sm:border-r' : ''}`}><h3 className="cv-serif text-2xl font-semibold text-white">{title}</h3><p className="mt-3 text-sm leading-6 text-slate-300">{body}</p></article>)}
         </div>
       </div>
@@ -73,7 +87,7 @@ const AutoPricingCase: React.FC = () => (
     <section className="py-16 sm:py-24" aria-labelledby="case-boundary-heading">
       <div className="container grid gap-10 lg:grid-cols-[1fr_1fr] lg:gap-16">
         <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">What this demonstrates</p><h2 className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">Forward-deployed engineering as operating translation.</h2><p className="mt-5 text-lg leading-relaxed text-slate-600">The core work was not a standalone model or dashboard. It was translating a commercial process across incomplete data, existing tools and human decision points—then turning that map into a system people could inspect and operate.</p></div>
-        <aside className="border-l-2 border-brand-700 bg-white p-7 sm:p-9"><h2 id="case-boundary-heading" className="font-display text-sm font-bold uppercase tracking-[.16em] text-slate-950">Scope of this case study</h2><p className="mt-4 leading-7 text-slate-600">This page describes the contracted scope, initial paid engagement, delivered artefacts and demonstrated capabilities. It does not claim final client acceptance, final settlement, production-wide adoption or a post-deployment KPI improvement.</p></aside>
+        <aside className="border-l-2 border-brand-700 bg-white p-7 sm:p-9"><h2 id="case-boundary-heading" className="font-display text-sm font-bold uppercase tracking-[.16em] text-slate-950">Human review by design</h2><p className="mt-4 leading-7 text-slate-600">Pricing, purchases and external contact stay visible to an operator. Automation assembles and explains the decision context; it does not erase commercial authority.</p></aside>
       </div>
       <div className="container mt-14 flex flex-wrap gap-4 border-t border-slate-300 pt-8"><Link to="/projects" className="btn-secondary">View more work<i className="fas fa-arrow-right text-sm" /></Link><Link to="/contact" className="btn-primary">Discuss a complex workflow<i className="fas fa-arrow-right text-sm" /></Link></div>
     </section>

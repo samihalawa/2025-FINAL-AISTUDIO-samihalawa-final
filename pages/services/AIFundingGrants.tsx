@@ -33,7 +33,7 @@ const AIFundingGrants: React.FC = () => {
         </div>
         <div className="mt-10 flex gap-4">
           <Link to="/contact" className="inline-block bg-slate-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-slate-800">Request funding scan</Link>
-          <Link to="/case-studies/radiology-ai" className="inline-block bg-white text-slate-700 px-6 py-3 rounded-md border border-slate-300 font-semibold hover:bg-slate-100">See healthcare case</Link>
+          <Link to="/case-studies/apolo-medical-framework" className="inline-block bg-white text-slate-700 px-6 py-3 rounded-md border border-slate-300 font-semibold hover:bg-slate-100">See healthcare case</Link>
         </div>
       </div>
     </section>
@@ -41,4 +41,3 @@ const AIFundingGrants: React.FC = () => {
 };
 
 export default AIFundingGrants;
-

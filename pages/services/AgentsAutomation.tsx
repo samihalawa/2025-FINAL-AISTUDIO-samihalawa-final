@@ -16,7 +16,7 @@ const AgentsAutomation: React.FC = () => {
   const { t } = useTranslation();
   const title = t('services.agentsAutomation.title');
   const relatedCaseStudies = [
-    { href: '/case-studies/autoclient', label: t('caseStudies.index.case.autoclient.title') },
+    { href: '/case-studies/autoclient', label: t('services.index.caseStudy.autoclient.title') },
     { href: '/projects#gowa', label: 'GOWA WhatsApp API / WhatsApp MCP' }
   ];
   const bootcampKeys: TranslationKey[] = [

@@ -28,7 +28,7 @@ const SERVICE_CARDS: Array<{ href: string; titleKey: TranslationKey; descKey: Tr
 
 const FEATURED_CASE_STUDIES: Array<{ href: string; titleKey: TranslationKey; descKey: TranslationKey }> = [
   { href: '/case-studies/autoclient', titleKey: 'services.index.caseStudy.autoclient.title', descKey: 'services.index.caseStudy.autoclient.description' },
-  { href: '/case-studies/radiology-ai', titleKey: 'services.index.caseStudy.radiology.title', descKey: 'services.index.caseStudy.radiology.description' },
+  { href: '/case-studies/apolo-medical-framework', titleKey: 'services.index.caseStudy.radiology.title', descKey: 'services.index.caseStudy.radiology.description' },
 ];
 
 const indexCopy: Record<LanguageCode, { eyebrow: string; guide: string; guideBody: string; openCase: string }> = {

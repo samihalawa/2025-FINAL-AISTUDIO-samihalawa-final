@@ -43,16 +43,8 @@ const Spain = lazy(() => import('./pages/locations/Spain'));
 const Online = lazy(() => import('./pages/locations/Online'));
 const CaseStudiesIndex = lazy(() => import('./pages/case-studies/Index'));
 const ApoloMedicalFramework = lazy(() => import('./pages/case-studies/ApoloMedicalFramework'));
-const RadiologyAI = lazy(() => import('./pages/case-studies/RadiologyAI'));
 const AutoClientCase = lazy(() => import('./pages/case-studies/AutoClient'));
 const AutoPricingCase = lazy(() => import('./pages/case-studies/AutoPricing'));
-const AttioSequences = lazy(() => import('./pages/case-studies/AttioSequences'));
-const BankingAssistant = lazy(() => import('./pages/case-studies/BankingAssistant'));
-const SpreadsheetAssistant = lazy(() => import('./pages/case-studies/SpreadsheetAssistant'));
-const ProptechCase = lazy(() => import('./pages/case-studies/ProptechAnalytics'));
-const AirbnbCase = lazy(() => import('./pages/case-studies/AirbnbIntelligence'));
-const AutofundingGrants = lazy(() => import('./pages/case-studies/AutofundingGrants'));
-const LanzaderaReadiness = lazy(() => import('./pages/case-studies/LanzaderaReadiness'));
 const MadridAIReadiness = lazy(() => import('./pages/locations/services/MadridAIReadiness'));
 const BarcelonaPromptEngineering = lazy(() => import('./pages/locations/services/BarcelonaPromptEngineering'));
 const ValenciaRagLangChain = lazy(() => import('./pages/locations/services/ValenciaRagLangChain'));
@@ -89,16 +81,8 @@ export const AppRoutes: React.FC<AppRoutesProps> = ({ initialBlogArticle = null 
                             <Route path="locations/madrid/business-automation" element={<MadridBusinessAutomation />} />
                             <Route path="case-studies" element={<CaseStudiesIndex />} />
                             <Route path="case-studies/apolo-medical-framework" element={<ApoloMedicalFramework />} />
-                            <Route path="case-studies/radiology-ai" element={<RadiologyAI />} />
                             <Route path="case-studies/autoclient" element={<AutoClientCase />} />
                             <Route path="case-studies/autopricing" element={<AutoPricingCase />} />
-                            <Route path="case-studies/attio-sequences" element={<AttioSequences />} />
-                            <Route path="case-studies/banking-assistant" element={<BankingAssistant />} />
-                            <Route path="case-studies/spreadsheet-assistant" element={<SpreadsheetAssistant />} />
-                            <Route path="case-studies/proptech-analytics" element={<ProptechCase />} />
-                            <Route path="case-studies/airbnb-intelligence" element={<AirbnbCase />} />
-                            <Route path="case-studies/autofunding-grants" element={<AutofundingGrants />} />
-                            <Route path="case-studies/lanzadera-readiness" element={<LanzaderaReadiness />} />
                             <Route path="services" element={<ServicesLayout />}>
                                 <Route index element={<ServicesIndex />} />
                                 <Route path="medical-ai" element={<MedicalAI />} />

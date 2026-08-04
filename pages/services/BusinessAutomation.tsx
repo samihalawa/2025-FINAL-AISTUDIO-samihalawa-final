@@ -23,7 +23,7 @@ const BusinessAutomation: React.FC = () => {
   const { t } = useTranslation();
   const title = t('services.businessAutomation.title');
   const relatedCaseStudies = [
-    { href: '/case-studies/autoclient', label: t('caseStudies.index.case.autoclient.title') }
+    { href: '/case-studies/autoclient', label: t('services.index.caseStudy.autoclient.title') }
   ];
   const scopeKeys: TranslationKey[] = [
     'services.businessAutomation.scope1',
