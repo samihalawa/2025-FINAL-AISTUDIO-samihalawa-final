@@ -1,7 +1,7 @@
 SAMI HALAWA RIBAS
 AI Instructor · Responsible AI & Governance Specialist
 
-Madrid, Spain · EU work authorisation · +34 659 777 908 · sami@oulang.ai · samihalawa.com · linkedin.com/in/samihalawa · github.com/samihalawa
+Madrid, Spain · EU work authorisation · +34 679 794 037 · sami@oulang.ai · samihalawa.com · linkedin.com/in/samihalawa · github.com/samihalawa
 
 PROFILE
 Implementation-first AI educator and product engineer who translates agentic systems, governance and operational risk into working examples, clear curricula and usable organisational practices in Spanish, English and Mandarin.
@@ -305,9 +305,32 @@ Investment Management with Python and Machine Learning | EDHEC Business School |
 AI Foundations for Business Professionals | Saïd Business School, University of Oxford | 2026 | Credential ID LWTECCK71WBO
 CompTIA SecAI+ (CY0-001) Certification Exam Prep | Packt | 2026 | Credential ID Q4IYZTSRNUTN
 Machine Learning Operations (MLOps) | Board Infinity | 2026 | Credential ID 3HZCX9EHMFMO
+IBM Generative AI Engineering Professional Certificate | IBM | August 2026 | Credential ID H21CWM4OU7XQ
 Google Data Analytics Professional Certificate | Google | August 2026 | Credential ID WMUDGIG7OY8D
 
 PROFESSIONAL QUALIFICATIONS — 2026
+IBM Generative AI Engineering | IBM | Professional Certificate | Credential ID H21CWM4OU7XQ
+- Introduction to Artificial Intelligence (AI) | Credential ID QDZP4952G529
+- Generative AI: Introduction and Applications | Credential ID Z7OYZQ8R6JC1
+- Generative AI: Prompt Engineering Basics | Credential ID 1CQ1ZFB8WTJ7
+- Python for Data Science, AI & Development | Credential ID T9UGJSEZXDO6
+- Developing AI Applications with Python and Flask | Credential ID QJDTTTMUQ0LE
+- Building Generative AI-Powered Applications with Python | Credential ID OET9Y99RPDEB
+- Generative AI and LLMs: Architecture and Data Preparation | Credential ID N0OS7ZV1ZTQ1
+- Gen AI Foundational Models for NLP & Language Understanding | Credential ID 1V0QE5VLIUWU
+- Generative AI Language Modeling with Transformers | Credential ID 76HQW3YWTQTC
+- Generative AI Engineering and Fine-Tuning Transformers | Credential ID MLODQEU2VSJP
+- Generative AI Advanced Fine-Tuning for LLMs | Credential ID 0MTB497LTU5X
+- Fundamentals of AI Agents Using RAG and LangChain | Credential ID JF0OW4KZ2G96
+- Project: Generative AI Applications with RAG and LangChain | Credential ID AOX3WDKI145D
+- Introduction to Deep Learning & Neural Networks with Keras | Credential ID 7MUT0S0WTGV2
+- Machine Learning with Python | Credential ID MA12RUEA95L1
+- Supervised Machine Learning: Regression | Credential ID PYCV7XOO4LLK
+- Supervised Machine Learning: Classification | Credential ID UKPCHR2RICZS
+- Unsupervised Machine Learning | Credential ID G1VSALTXHPRU
+- Exploratory Data Analysis for Machine Learning | Credential ID QVXE8FP3W0XI
+- Data Analysis with Python | Credential ID WOD7TDCBN50J
+
 Databricks Mosaic AI | Course certificate | Credential ID RRXO8HSACR29
 
 Agentic AI Engineering | Edureka | Specialization certificate | Credential ID GZ2Q50QNLE6N

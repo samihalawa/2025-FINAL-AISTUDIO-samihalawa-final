@@ -26,7 +26,7 @@ const Layout: React.FC = () => {
       <BackToTop />
       <AnalyticsManager />
       <a
-        href="https://wa.me/34659777908"
+        href="https://wa.me/34679794037"
         className="fixed bottom-4 right-4 z-40 inline-flex h-12 w-12 items-center justify-center rounded-sm border border-white/40 bg-slate-950 text-white shadow-lg transition-colors hover:bg-brand-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 sm:bottom-6 sm:right-6 sm:h-14 sm:w-14"
         target="_blank"
         rel="noopener noreferrer"

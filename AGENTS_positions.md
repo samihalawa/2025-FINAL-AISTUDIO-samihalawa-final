@@ -3,7 +3,7 @@
 portfolio project presentation | raw inventory entries and speculative service templates can make the work look shallow or invented | group related builds into canonical product stories, lead with real interfaces and reserve generated covers for projects without usable media | do not repeat the archive as cards, use abstract initials/gradients, or publish a service idea as a delivered case study | verify every story has a cover, problem, build, role and family scope; index only evidence-backed cases; render desktop/mobile
 credential publishing | redesign can distract from the requested education update | reconcile the live inventory, rank the strongest programmes and show their real diploma images | do not replace credential reconciliation with a page redesign or list component courses as separate headline programmes | compare live IDs with archive/CV/site, render IBM/Google/Oxford imagery, and verify desktop/mobile plus official links
 credential programme counts | archive totals can be mistaken for official programme structure | distinguish the IBM 16-course programme from 20 archived IBM course credentials | do not call the IBM Professional Certificate a 20-course programme | extract the umbrella diploma and sweep every current downloadable CV before deploy
-public contact number | CV downloads and shared WhatsApp/contact CTAs can retain the retired number across releases | use `+34 659 777 908` in current public source, generated CVs and destination URLs | don't inherit `+34 679 794 037` from historic assets | grep rendered source/download text and inspect live contact destinations
+public contact number | CV downloads and shared WhatsApp/contact CTAs can inherit an unrelated number across releases | use `+34 679 794 037` in current public source, generated CVs and destination URLs | don't use `+34 659 777 908`; the user explicitly confirmed it is not his | grep rendered source/download text and inspect live contact destinations
 floating action controls | a fixed back-to-top button covered the final CV profile's ATS link; ordinary left/right insets merely moved the collision | keep the desktop control entirely inside the 44px outer-left rail before the 48px content inset | do not move the collision onto another content column or stack controls over right-aligned actions | verify measured non-overlap at both adjacent scroll positions on desktop and mobile
 embedded Close form content | provider templates can inject irrelevant legal and marketing consent into the public contact form even when the site component is correct | edit and publish the canonical Close form, then verify both its share URL and the embedded production DOM | do not hide provider copy with CSS or treat the script/custom element as content approval | verify exact field labels, published provider state, fresh embedded DOM, desktop/mobile layout and preserved submission controls
 CV role-edition parity | the website exposed seven current role editions while the CV source had eight | reconcile the explicit website list against every current generated PDF and ATS pair | do not assume the existing page enumerates the full output set | verify one rendered card and exact downloadable PDF/ATS hashes for every current role edition
@@ -44,15 +44,25 @@ public portfolio | stock imagery and invented social proof replaced source evide
 - **Triggers / verification:** diploma, credential, specialization, newest education, LinkedIn, Facebook or “top”; recheck live IDs, exact issuers/titles, image load dimensions, official links, responsive overflow and downloadable CV hashes.
 - **Do / don't:** do update the education record across surfaces; don't substitute visual restyling for credential coverage or imply exam preparation is the CompTIA certification.
 
-## 2026-08-04 — Current public contact surfaces use the authoritative number
+## 2026-08-04 — User-confirmed public contact number is +34 679 794 037
 
 - **Status:** CURRENT
 - **Project/root:** `PROJECTS_ON_PROCESS/2025-FINAL-AISTUDIO-samihalawa-final`; contact details, WhatsApp CTAs and current CV downloads.
+- **Mistake corrected:** an unrelated number, `+34 659 777 908`, was introduced into site constants, WhatsApp destinations and published CV assets.
+- **Superior approach:** use the user's direct confirmation, `+34 679 794 037`, consistently in public copy, `tel:` and `wa.me` destinations, and all recruiter-accessible CV/ATS files.
+- **Evidence:** direct user correction on 4 Aug 2026: `679794037 si mine. thre otehr one is nto`.
+- **Triggers / verification:** contact, WhatsApp, phone, CV, credentials or deploy; grep source and downloadable text, then inspect rendered links and live downloads.
+- **Do / don't:** do treat direct user confirmation as authoritative; don't inherit `+34 659 777 908` from prior ledgers or generated assets.
+
+## 2026-08-04 — Current public contact surfaces use the authoritative number
+
+- **Status:** SUPERSEDED
+- **Project/root:** `PROJECTS_ON_PROCESS/2025-FINAL-AISTUDIO-samihalawa-final`; contact details, WhatsApp CTAs and current CV downloads.
 - **Mistake corrected:** the retired `+34 679 794 037` number remained in shared site constants, WhatsApp destinations and published CV assets.
-- **Superior approach:** use `+34 659 777 908` consistently in current public copy, `tel:` and `wa.me` destinations, and newly published CV/ATS files.
+- **Superior approach:** superseded by the direct user correction above; `+34 659 777 908` is not Sami's number.
 - **Evidence:** 4 Aug 2026 repo-wide source sweep and authoritative project position in `PROJECTS_AI_TUTORING/AGENTS_positions.md`.
 - **Triggers / verification:** contact, WhatsApp, phone, CV, credentials or deploy; grep source and current downloadable text, then inspect rendered links and destinations live.
-- **Do / don't:** do update current public surfaces atomically; don't rewrite intentionally preserved historic files or copy their phone forward.
+- **Do / don't:** do retain this entry only as a record of the corrected mistake; don't reuse its former phone-number instruction.
 
 ## 2026-08-03 — Floating controls must not cover CV download actions
 
