@@ -45,6 +45,7 @@ const CaseStudiesIndex = lazy(() => import('./pages/case-studies/Index'));
 const ApoloMedicalFramework = lazy(() => import('./pages/case-studies/ApoloMedicalFramework'));
 const RadiologyAI = lazy(() => import('./pages/case-studies/RadiologyAI'));
 const AutoClientCase = lazy(() => import('./pages/case-studies/AutoClient'));
+const AutoPricingCase = lazy(() => import('./pages/case-studies/AutoPricing'));
 const AttioSequences = lazy(() => import('./pages/case-studies/AttioSequences'));
 const BankingAssistant = lazy(() => import('./pages/case-studies/BankingAssistant'));
 const SpreadsheetAssistant = lazy(() => import('./pages/case-studies/SpreadsheetAssistant'));
@@ -90,6 +91,7 @@ export const AppRoutes: React.FC<AppRoutesProps> = ({ initialBlogArticle = null 
                             <Route path="case-studies/apolo-medical-framework" element={<ApoloMedicalFramework />} />
                             <Route path="case-studies/radiology-ai" element={<RadiologyAI />} />
                             <Route path="case-studies/autoclient" element={<AutoClientCase />} />
+                            <Route path="case-studies/autopricing" element={<AutoPricingCase />} />
                             <Route path="case-studies/attio-sequences" element={<AttioSequences />} />
                             <Route path="case-studies/banking-assistant" element={<BankingAssistant />} />
                             <Route path="case-studies/spreadsheet-assistant" element={<SpreadsheetAssistant />} />

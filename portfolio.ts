@@ -14,6 +14,7 @@ export interface PortfolioProject {
   description: LocalizedCopy;
   tags: string[];
   href?: string;
+  caseStudy?: string;
   image?: string;
   imagePosition?: string;
   featured?: boolean;
@@ -70,7 +71,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   {
     id: 'autopricing', name: 'AutoPricing / IWAKY delivery', period: '2025–2026', category: 'platforms',
     description: copy('Pricing-intelligence and decision-reporting workflow combining marketplace data, product matching and inventory or ERP inputs.', 'Inteligencia de precios e informes de decisión con datos de marketplaces, matching e inventario o ERP.'),
-    tags: ['Data pipelines', 'ERP', 'Reports', 'Automation'], image: '/portfolio/autopricing-dashboard.png'
+    tags: ['Data pipelines', 'ERP', 'Reports', 'Automation'], image: '/portfolio/autopricing-dashboard.png', caseStudy: '/case-studies/autopricing'
   },
   {
     id: 'oupin', name: 'OUPIN', period: '2026', category: 'platforms',
