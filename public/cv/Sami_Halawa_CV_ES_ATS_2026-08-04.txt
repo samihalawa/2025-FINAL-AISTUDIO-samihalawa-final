@@ -142,9 +142,32 @@ Investment Management with Python and Machine Learning | EDHEC Business School |
 AI Foundations for Business Professionals | Saïd Business School, University of Oxford | 2026 | ID de credencial LWTECCK71WBO
 CompTIA SecAI+ (CY0-001) Certification Exam Prep | Packt | 2026 | ID de credencial Q4IYZTSRNUTN
 Machine Learning Operations (MLOps) | Board Infinity | 2026 | ID de credencial 3HZCX9EHMFMO
+IBM Generative AI Engineering Professional Certificate | IBM | agosto de 2026 | ID de credencial H21CWM4OU7XQ
 Google Data Analytics Professional Certificate | Google | agosto de 2026 | ID de credencial WMUDGIG7OY8D
 
 FORMACIÓN PROFESIONAL — 2026
+IBM Generative AI Engineering | IBM | Certificado profesional | ID de credencial H21CWM4OU7XQ
+- Introduction to Artificial Intelligence (AI) | ID de credencial QDZP4952G529
+- Generative AI: Introduction and Applications | ID de credencial Z7OYZQ8R6JC1
+- Generative AI: Prompt Engineering Basics | ID de credencial 1CQ1ZFB8WTJ7
+- Python for Data Science, AI & Development | ID de credencial T9UGJSEZXDO6
+- Developing AI Applications with Python and Flask | ID de credencial QJDTTTMUQ0LE
+- Building Generative AI-Powered Applications with Python | ID de credencial OET9Y99RPDEB
+- Generative AI and LLMs: Architecture and Data Preparation | ID de credencial N0OS7ZV1ZTQ1
+- Gen AI Foundational Models for NLP & Language Understanding | ID de credencial 1V0QE5VLIUWU
+- Generative AI Language Modeling with Transformers | ID de credencial 76HQW3YWTQTC
+- Generative AI Engineering and Fine-Tuning Transformers | ID de credencial MLODQEU2VSJP
+- Generative AI Advanced Fine-Tuning for LLMs | ID de credencial 0MTB497LTU5X
+- Fundamentals of AI Agents Using RAG and LangChain | ID de credencial JF0OW4KZ2G96
+- Project: Generative AI Applications with RAG and LangChain | ID de credencial AOX3WDKI145D
+- Introduction to Deep Learning & Neural Networks with Keras | ID de credencial 7MUT0S0WTGV2
+- Machine Learning with Python | ID de credencial MA12RUEA95L1
+- Supervised Machine Learning: Regression | ID de credencial PYCV7XOO4LLK
+- Supervised Machine Learning: Classification | ID de credencial UKPCHR2RICZS
+- Unsupervised Machine Learning | ID de credencial G1VSALTXHPRU
+- Exploratory Data Analysis for Machine Learning | ID de credencial QVXE8FP3W0XI
+- Data Analysis with Python | ID de credencial WOD7TDCBN50J
+
 Databricks Mosaic AI | Certificado de curso | ID de credencial RRXO8HSACR29
 
 Agentic AI Engineering | Edureka | Certificado de especialización | ID de credencial GZ2Q50QNLE6N

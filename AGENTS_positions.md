@@ -1,5 +1,6 @@
 # INDEX
 
+credential publishing | redesign can distract from the requested education update | reconcile the live inventory, rank the strongest programmes and show their real diploma images | do not replace credential reconciliation with a page redesign or list component courses as separate headline programmes | compare live IDs with archive/CV/site, render IBM/Google/Oxford imagery, and verify desktop/mobile plus official links
 public contact number | CV downloads and shared WhatsApp/contact CTAs can retain the retired number across releases | use `+34 659 777 908` in current public source, generated CVs and destination URLs | don't inherit `+34 679 794 037` from historic assets | grep rendered source/download text and inspect live contact destinations
 floating action controls | a fixed back-to-top button covered the final CV profile's ATS link; ordinary left/right insets merely moved the collision | keep the desktop control entirely inside the 44px outer-left rail before the 48px content inset | do not move the collision onto another content column or stack controls over right-aligned actions | verify measured non-overlap at both adjacent scroll positions on desktop and mobile
 embedded Close form content | provider templates can inject irrelevant legal and marketing consent into the public contact form even when the site component is correct | edit and publish the canonical Close form, then verify both its share URL and the embedded production DOM | do not hide provider copy with CSS or treat the script/custom element as content approval | verify exact field labels, published provider state, fresh embedded DOM, desktop/mobile layout and preserved submission controls
@@ -18,6 +19,16 @@ blog content pipeline | hard-coded slug list + modal did not scale to daily hub-
 SPA production routes | public asset directories collide with client routes | serve file-shaped URLs as static files and everything else as the SPA shell | do not let Nginx treat route names as directories or leak port 8080 redirects | verify slash and non-slash routes plus real asset MIME types
 Coolify Linux build | macOS lock can omit the Linux Rollup binary and Docker hosts differ between arm64 and x64 | install the build container's matching native Rollup GNU package | do not hardcode one CPU or infer deployability from the macOS Vite build | verify local container plus Coolify build the pushed commit and live routes
 public portfolio | stock imagery and invented social proof replaced source evidence | use dated metrics, real screenshots and public links | do not publish placeholders, arbitrary percentages or unsupported impact | verify exact live route, image load, text and responsive layout
+
+## 2026-08-04 — Credential updates prioritize reconciliation and visible evidence
+
+- **Status:** CURRENT
+- **Project/root:** `2025-FINAL-AISTUDIO-samihalawa-final`; `/cv/en`, `/cv/es`, diploma media and downloadable CV assets.
+- **Mistake corrected:** the requested diploma and specialization update was interpreted too broadly as a credentials-page redesign, while the real need was complete inventory tracking and prominent evidence.
+- **Superior approach:** reconcile live IDs with the archive and CV first; rank IBM, Google and Oxford for recruiter relevance; show their real diploma images; keep all 12 programmes and 84 credentials accessible without duplicating one programme per component course.
+- **Evidence:** user correction and 4 Aug 2026 comparison: 84 live IDs, 84 archived IDs, zero missing/extras; local desktop and 375px render of `/cv/en`.
+- **Triggers / verification:** diploma, credential, specialization, newest education, LinkedIn, Facebook or “top”; recheck live IDs, exact issuers/titles, image load dimensions, official links, responsive overflow and downloadable CV hashes.
+- **Do / don't:** do update the education record across surfaces; don't substitute visual restyling for credential coverage or imply exam preparation is the CompTIA certification.
 
 ## 2026-08-04 — Current public contact surfaces use the authoritative number
 
