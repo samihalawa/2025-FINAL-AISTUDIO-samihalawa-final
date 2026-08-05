@@ -1,5 +1,6 @@
 # INDEX
 
+session closure | finished case-study work sat uncommitted for a day and a later session asserted its VCS state without running git status | end every implementation session with git status, commit and push the completed surface, and ground any claim about worktree state in a fresh command | do not leave built-and-verified routes unshipped or repeat another session's completion claim without re-proving it | verify clean tree, pushed main and the live route status code
 portfolio project presentation | raw inventory entries and speculative service templates can make the work look shallow or invented | group related builds into canonical product stories, lead with real interfaces and reserve generated covers for projects without usable media | do not repeat the archive as cards, use abstract initials/gradients, or publish a service idea as a delivered case study | verify every story has a cover, problem, build, role and family scope; index only evidence-backed cases; render desktop/mobile
 credential publishing | redesign can distract from the requested education update | reconcile the live inventory, rank the strongest programmes and show their real diploma images | do not replace credential reconciliation with a page redesign or list component courses as separate headline programmes | compare live IDs with archive/CV/site, render IBM/Google/Oxford imagery, and verify desktop/mobile plus official links
 credential programme counts | archive totals can be mistaken for official programme structure | distinguish the IBM 16-course programme from 20 archived IBM course credentials | do not call the IBM Professional Certificate a 20-course programme | extract the umbrella diploma and sweep every current downloadable CV before deploy
@@ -21,6 +22,16 @@ blog content pipeline | hard-coded slug list + modal did not scale to daily hub-
 SPA production routes | public asset directories collide with client routes | serve file-shaped URLs as static files and everything else as the SPA shell | do not let Nginx treat route names as directories or leak port 8080 redirects | verify slash and non-slash routes plus real asset MIME types
 Coolify Linux build | macOS lock can omit the Linux Rollup binary and Docker hosts differ between arm64 and x64 | install the build container's matching native Rollup GNU package | do not hardcode one CPU or infer deployability from the macOS Vite build | verify local container plus Coolify build the pushed commit and live routes
 public portfolio | stock imagery and invented social proof replaced source evidence | use dated metrics, real screenshots and public links | do not publish placeholders, arbitrary percentages or unsupported impact | verify exact live route, image load, text and responsive layout
+
+## 2026-08-05 — Ship finished work in the same session; never inherit VCS claims
+
+- **Status:** CURRENT
+- **Project/root:** `2025-FINAL-AISTUDIO-samihalawa-final`; session-closure discipline for any implementation work.
+- **Mistake corrected:** the Oulang case study, 23 real screenshots and full route/sitemap wiring were built and verified on 4 Aug 2026 but left uncommitted; the live site served 404 on `/case-studies/oulang` for a day. A later session (Pocket analysis, 5 Aug) then asserted "Oulang.tsx is sitting uncommitted" without ever running `git status` — the claim happened to be true but was ungrounded.
+- **Superior approach:** every session that finishes a user-visible surface ends with `git status`, a scoped commit, a push, and a live status-code check of the affected route. Claims about worktree or deploy state must come from a command run in the current session.
+- **Evidence:** commit `99b3d3d` (5 Aug 2026) shipped the dangling work; `/case-studies/oulang` returned 200 within 90s of push; forensic read of session `4142ea7e` showed the ungrounded VCS assertion.
+- **Triggers / verification:** case study, commit, push, deploy, "is it live", closure or critique passes; verify `git status -sb` clean, `main == origin/main`, and curl of the touched route.
+- **Do / don't:** do close the loop to the live layer in the same session; don't state repo or deploy facts recalled from another session's transcript.
 
 ## 2026-08-04 — Present related builds as complete product stories
 
