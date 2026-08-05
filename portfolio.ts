@@ -315,7 +315,7 @@ export const PORTFOLIO_STORIES: PortfolioStory[] = [
     challenge: copy('Bring housing, jobs, services and community discovery into one coherent experience across languages and devices.', 'Unir vivienda, empleo, servicios y comunidad en una experiencia coherente entre idiomas y dispositivos.'),
     build: copy('Web, iOS and Android surfaces with shared marketplace infrastructure, publishing, subscriptions and product analytics.', 'Superficies web, iOS y Android con infraestructura compartida de marketplace, publicación, suscripciones y analítica.'),
     role: copy('Founder · product, engineering and operations', 'Fundador · producto, ingeniería y operaciones'),
-    includes: ['Marketplace', 'Local life', 'Mobile apps'], image: '/portfolio/oulang-home.png', imagePosition: 'center 18%', href: 'https://oulang.ai'
+    includes: ['Marketplace', 'Local life', 'Mobile apps'], image: '/portfolio/oulang-home.png', imagePosition: 'center 18%', href: 'https://oulang.ai', caseStudy: '/case-studies/oulang'
   },
   {
     id: 'huatong', name: 'Huatong & InfoHuaxin', period: '2025–present', category: 'platforms',

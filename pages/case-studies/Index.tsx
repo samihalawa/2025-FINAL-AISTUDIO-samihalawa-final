@@ -4,13 +4,13 @@ import { useTranslation, type LanguageCode } from '../../i18n/LanguageContext';
 import { PORTFOLIO_STORIES, getProjectStoryCopy } from '../../portfolio';
 
 const headings: Record<LanguageCode, { eyebrow: string; title: string; body: string; challenge: string; build: string; open: string }> = {
-  en: { eyebrow: 'Case studies', title: 'Three real systems, examined in depth.', body: 'Follow the product decisions, interface work and system architecture behind three very different operating problems.', challenge: 'Operating problem', build: 'System delivered', open: 'Open case study' },
-  es: { eyebrow: 'Casos de estudio', title: 'Tres sistemas reales, explicados en profundidad.', body: 'Descubre las decisiones de producto, el trabajo de interfaz y la arquitectura detrás de tres problemas operativos muy distintos.', challenge: 'Problema operativo', build: 'Sistema construido', open: 'Abrir caso' },
-  fr: { eyebrow: 'Études de cas', title: 'Trois systèmes réels, étudiés en profondeur.', body: 'Découvrez les décisions produit, le travail d’interface et l’architecture derrière trois problèmes opérationnels très différents.', challenge: 'Problème opérationnel', build: 'Système construit', open: 'Ouvrir l’étude' },
-  zh: { eyebrow: '案例研究', title: '深入拆解三个真实系统。', body: '深入了解三个不同运营问题背后的产品决策、界面工作与系统架构。', challenge: '运营问题', build: '构建系统', open: '打开案例' },
+  en: { eyebrow: 'Case studies', title: 'Four real systems, examined in depth.', body: 'Follow the product decisions, interface work and system architecture behind four very different operating problems.', challenge: 'Operating problem', build: 'System delivered', open: 'Open case study' },
+  es: { eyebrow: 'Casos de estudio', title: 'Cuatro sistemas reales, explicados en profundidad.', body: 'Descubre las decisiones de producto, el trabajo de interfaz y la arquitectura detrás de cuatro problemas operativos muy distintos.', challenge: 'Problema operativo', build: 'Sistema construido', open: 'Abrir caso' },
+  fr: { eyebrow: 'Études de cas', title: 'Quatre systèmes réels, étudiés en profondeur.', body: 'Découvrez les décisions produit, le travail d’interface et l’architecture derrière quatre problèmes opérationnels très différents.', challenge: 'Problème opérationnel', build: 'Système construit', open: 'Ouvrir l’étude' },
+  zh: { eyebrow: '案例研究', title: '深入拆解四个真实系统。', body: '深入了解四个不同运营问题背后的产品决策、界面工作与系统架构。', challenge: '运营问题', build: '构建系统', open: '打开案例' },
 };
 
-const ids = ['autopricing', 'autoclient', 'medical-systems'];
+const ids = ['oulang', 'autopricing', 'autoclient', 'medical-systems'];
 
 const CaseStudiesIndex: React.FC = () => {
   const { language } = useTranslation();

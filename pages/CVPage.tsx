@@ -154,6 +154,45 @@ const majorCredentials = [
 
 const roleEditionFile = (key: string) => `${key}_Comprehensive_2026-08-04-v2`;
 
+const recommendedCredentials = [
+  {
+    title: 'AWS Cloud Solutions Architect Professional Certificate',
+    issuer: 'Amazon Web Services',
+    url: 'https://www.coursera.org/professional-certificates/aws-cloud-solutions-architect',
+    duration: '3–4 months',
+    cost: '~$49/month (Coursera Plus)',
+    detailEn: 'Design scalable, cost-optimised AWS infrastructures; compute, storage, networking, security, serverless and data-lake architecture. Fills the largest enterprise-recruiter filter gap: proven cloud-solutions architecture at AWS depth.',
+    detailEs: 'Diseña infraestructuras AWS escalables y optimizadas en coste; computación, almacenamiento, redes, seguridad, serverless y arquitectura de data lakes. Cubre la mayor brecha en filtros de reclutadores empresariales: arquitectura de soluciones cloud probada a profundidad AWS.'
+  },
+  {
+    title: 'PyTorch for Deep Learning Professional Certificate',
+    issuer: 'DeepLearning.AI',
+    url: 'https://www.coursera.org/professional-certificates/pytorch-for-deep-learning',
+    duration: '2–3 months',
+    cost: '~$59/month',
+    detailEn: 'Build, train and deploy deep-learning models with PyTorch: CNNs, RNNs, transformers, transfer learning, diffusion models and production deployment pipelines. Deeper and more framework-native than the existing Keras-based coverage.',
+    detailEs: 'Construye, entrena y despliega modelos de deep learning con PyTorch: CNNs, RNNs, transformers, transfer learning, modelos de difusión y pipelines de despliegue en producción. Más profundo y nativo de framework que la cobertura existente basada en Keras.'
+  },
+  {
+    title: 'Systems and Solutions Architect',
+    issuer: 'IBM',
+    url: 'https://www.coursera.org/professional-certificates/ibm-systems-and-solutions-architect',
+    duration: '2–3 months',
+    cost: '~$49/month',
+    detailEn: 'Design, integrate and scale enterprise technology solutions across hybrid cloud, AI, security and data platforms. Directly complements the IBM GenAI Engineering certificate with architecture-level systems thinking.',
+    detailEs: 'Diseña, integra y escala soluciones tecnológicas empresariales en cloud híbrido, IA, seguridad y plataformas de datos. Complementa directamente el certificado IBM GenAI Engineering con pensamiento de arquitectura a nivel de sistemas.'
+  },
+  {
+    title: 'GPU Programming',
+    issuer: 'Johns Hopkins University',
+    url: 'https://www.coursera.org/learn/gpu-programming',
+    duration: '4–6 weeks',
+    cost: '~$49/month',
+    detailEn: 'Parallel computing, CUDA, C++ kernel optimisation, memory management and hardware-aware performance tuning for ML workloads. The only credential that closes the low-level systems-engineering gap explicitly requested by top-tier AI-engineering roles.',
+    detailEs: 'Computación paralela, CUDA, optimización de kernels en C++, gestión de memoria y ajuste de rendimiento consciente del hardware para cargas de ML. La única credencial que cierra la brecha de ingeniería de sistemas de bajo nivel explícitamente solicitada por roles de ingeniería de IA de primer nivel.'
+  }
+] as const;
+
 const CVPage: React.FC<CVPageProps> = ({ edition }) => {
   const { language } = useTranslation();
   const selected = edition || (language === 'es' ? 'es' : 'en');
@@ -364,6 +403,30 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
               <a href={pdf} target="_blank" rel="noopener noreferrer" data-analytics-event="cv_download" className="inline-flex min-h-11 items-center gap-2 border-b border-slate-500 font-bold text-slate-800 hover:border-slate-950 hover:text-slate-950">{spanish ? 'Abrir las ocho páginas' : 'Open all eight pages'}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>
             </figcaption>
           </figure>
+        </section>
+        <section className="border-t border-slate-400 py-12 sm:py-16">
+          <div className="grid gap-8 lg:grid-cols-[minmax(16rem,.5fr)_minmax(0,1.5fr)] lg:gap-16">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Desarrollo profesional recomendado' : 'Recommended professional development'}</p>
+              <h2 className="cv-serif mt-4 text-3xl font-normal leading-tight text-slate-950">{spanish ? 'Credenciales de alto ROI para cerrar brechas.' : 'High-ROI credentials to close gaps.'}</h2>
+              <p className="mt-5 leading-relaxed text-slate-700">{spanish ? 'Recomendaciones de cursos de Coursera con alto retorno de inversión para cerrar brechas en arquitectura cloud, programación GPU/CUDA y seguridad avanzada.' : 'Coursera course recommendations with high return on investment to close gaps in cloud architecture, GPU/CUDA programming, and advanced security.'}</p>
+            </div>
+            <ol className="border-t border-slate-400">
+              {recommendedCredentials.map((cred, index) => (
+                <li key={cred.title} className="grid gap-4 border-b border-slate-300 py-6 sm:grid-cols-[3rem_minmax(0,1fr)_auto] sm:items-start sm:gap-6">
+                  <span className="font-mono text-xs font-bold text-slate-500">{String(index + 1).padStart(2, '0')}</span>
+                  <div>
+                    <h3 className="cv-serif text-xl font-semibold text-slate-950">{cred.title}</h3>
+                    <p className="mt-1 text-sm font-semibold text-brand-800">{cred.issuer} · {cred.duration} · {cred.cost}</p>
+                    <p className="mt-2 text-sm leading-relaxed text-slate-700">{spanish ? cred.detailEs : cred.detailEn}</p>
+                  </div>
+                  <a href={cred.url} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center border-b border-slate-500 text-xs font-bold uppercase tracking-[0.12em] text-slate-800 hover:border-slate-950 hover:text-slate-950">
+                    {spanish ? 'Ver en Coursera' : 'View on Coursera'}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </div>
         </section>
       </div>
     </section>

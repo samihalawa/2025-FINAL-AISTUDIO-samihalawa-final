@@ -16,6 +16,12 @@ const systemAreas = [
   ['Reporting and control', 'Pipeline visibility, activity summaries and checkpoints before external action.'],
 ];
 
+const productSurfaces = [
+  { src: '/portfolio/autoclient-research-brief.webp', title: 'Find and qualify', body: 'ICP filters, daily lead volume, reply signals and a mobile handoff share one operating frame.' },
+  { src: '/portfolio/autoclient-sequence-orchestration.webp', title: 'Orchestrate follow-up', body: 'Email, LinkedIn and WhatsApp steps connect to CRM write-back instead of living as isolated campaigns.' },
+  { src: '/portfolio/autoclient-channel-rotation.webp', title: 'Coordinate channels', body: 'Marketing, sales and talent workflows can reuse a controlled inbox rotation and the same contact history.' },
+];
+
 const AutoClientCase: React.FC = () => (
   <article className="bg-[#f8f6f1] text-slate-800">
     <header className="border-b border-slate-300 py-16 sm:py-24">
@@ -46,7 +52,37 @@ const AutoClientCase: React.FC = () => (
       </div>
     </section>
 
-    <section className="border-y border-slate-300 bg-white py-16 sm:py-24" aria-labelledby="autoclient-flow-heading">
+    <section className="border-y border-slate-300 bg-white py-16 sm:py-24" aria-labelledby="autoclient-surfaces-heading">
+      <div className="container">
+        <div className="grid gap-8 lg:grid-cols-[.72fr_1.28fr] lg:gap-16">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Product surfaces</p>
+            <h2 id="autoclient-surfaces-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">The workflow starts with a precise search, not a blank CRM record.</h2>
+          </div>
+          <p className="border-t border-slate-400 pt-5 text-lg leading-relaxed text-slate-600">A useful account brief combines who to find, why the company fits and which facts still need enrichment. The first action is grounded in that brief, and the later channel history remains attached to it.</p>
+        </div>
+        <figure className="mt-12 border border-slate-300 bg-[#f8f6f1] p-4 sm:p-7">
+          <img src="/portfolio/autoclient-lead-search.webp" alt="AutoClient lead search with people criteria, company criteria and selected enrichment fields" loading="lazy" className="w-full border border-slate-200 bg-white object-cover object-top" />
+          <figcaption className="mt-5 grid gap-2 sm:grid-cols-[12rem_1fr]">
+            <strong className="font-display text-sm text-slate-950">Search specification</strong>
+            <span className="text-sm leading-6 text-slate-600">People criteria, company evidence and requested enrichment fields are visible before the search runs.</span>
+          </figcaption>
+        </figure>
+        <div className="mt-6 grid gap-px border border-slate-300 bg-slate-300 md:grid-cols-3">
+          {productSurfaces.map((surface) => (
+            <figure key={surface.title} className="bg-white p-4 sm:p-6">
+              <img src={surface.src} alt={`AutoClient product concept for ${surface.title.toLowerCase()}`} loading="lazy" className="aspect-square w-full border border-slate-200 bg-slate-50 object-cover" />
+              <figcaption className="mt-5">
+                <strong className="cv-serif text-xl font-semibold text-slate-950">{surface.title}</strong>
+                <p className="mt-2 text-sm leading-6 text-slate-600">{surface.body}</p>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section className="py-16 sm:py-24" aria-labelledby="autoclient-flow-heading">
       <div className="container"><div className="max-w-4xl"><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Operating flow</p><h2 id="autoclient-flow-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950 sm:text-5xl">Research once. Carry the context forward.</h2><p className="mt-5 text-lg leading-relaxed text-slate-600">The workflow keeps evidence and operator judgment connected as an account moves from discovery to engagement.</p></div>
         <ol className="mt-12 grid border-t border-slate-500 sm:grid-cols-2 lg:grid-cols-5">{workflow.map((step, index) => <li key={step.number} className={`border-b border-slate-300 py-6 sm:px-5 ${index < workflow.length - 1 ? 'lg:border-r' : ''}`}><span className="font-mono text-xs font-bold text-brand-800">{step.number}</span><h3 className="cv-serif mt-8 text-2xl font-semibold text-slate-950">{step.title}</h3><p className="mt-3 text-sm leading-6 text-slate-600">{step.body}</p></li>)}</ol>
       </div>

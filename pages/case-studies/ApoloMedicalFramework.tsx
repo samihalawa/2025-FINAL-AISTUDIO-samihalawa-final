@@ -8,6 +8,12 @@ const stages = [
   ['04', 'Review', 'Keep a professional checkpoint around interpretation, longitudinal comparison and final reporting.'],
 ];
 
+const clinicalSurfaces = [
+  { src: '/portfolio/umbramed-portal.webp', title: 'Clinical tool portal', body: 'A single entry point for calculators, interpreters, academy work and recent activity.' },
+  { src: '/portfolio/umbramed-document-viewer.webp', title: 'Assisted document review', body: 'Source material, notes and assisted interpretation remain together in a reviewable reading surface.' },
+  { src: '/portfolio/umbramed-performance.webp', title: 'Learning analytics', body: 'Progress, time and topic-level performance turn repeated practice into visible feedback.' },
+];
+
 const ApoloMedicalFramework: React.FC = () => (
   <article className="bg-[#f8f6f1] text-slate-800">
     <header className="border-b border-slate-300 py-16 sm:py-24">
@@ -41,6 +47,35 @@ const ApoloMedicalFramework: React.FC = () => (
       </div>
     </section>
 
+    <section className="py-16 sm:py-24" aria-labelledby="apolo-evidence-heading">
+      <div className="container">
+        <div className="grid gap-8 lg:grid-cols-[.72fr_1.28fr] lg:gap-16">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Model evidence</p>
+            <h2 id="apolo-evidence-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">Architecture, instruction and output shown as separate artifacts.</h2>
+          </div>
+          <p className="border-t border-slate-400 pt-5 text-lg leading-relaxed text-slate-600">The project does not reduce the work to a single polished answer. It exposes the local-processing boundary, the instruction structure and the generated report so each stage can be examined on its own terms.</p>
+        </div>
+        <div className="mt-12 grid gap-6 lg:grid-cols-[.82fr_1.18fr]">
+          <figure className="border border-slate-300 bg-white p-4 sm:p-6">
+            <img src="/portfolio/apolo-local-workflow.webp" alt="APOLO local clinical workflow with a privacy barrier between image processing and reasoning" loading="lazy" className="aspect-square w-full object-contain" />
+            <figcaption className="mt-4 text-sm leading-6 text-slate-600"><strong className="text-slate-950">Local workflow.</strong> Image inputs, structured descriptions and doctor-facing reasoning are visibly separated.</figcaption>
+          </figure>
+          <figure className="border border-slate-300 bg-white p-4 sm:p-6">
+            <img src="/portfolio/apolo-report-example.webp" alt="Example medical image beside an APOLO-generated structured report" loading="lazy" className="aspect-[2/1] w-full object-contain" />
+            <figcaption className="mt-4 text-sm leading-6 text-slate-600"><strong className="text-slate-950">Report surface.</strong> The source image stays beside the generated narrative for comparison and review.</figcaption>
+          </figure>
+        </div>
+        <figure className="mt-6 border border-slate-300 bg-white p-4 sm:p-7">
+          <img src="/portfolio/apolo-instruct-comparison.webp" alt="APOLO instruction example comparing model responses to two chest radiographs" loading="lazy" className="mx-auto max-h-[48rem] w-full object-contain" />
+          <figcaption className="mt-5 grid gap-2 sm:grid-cols-[12rem_1fr]">
+            <strong className="font-display text-sm text-slate-950">Instruction artifact</strong>
+            <span className="text-sm leading-6 text-slate-600">A visible comparison format makes the prompt, image pair and response structure easier to inspect.</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
     <section className="bg-slate-950 py-16 text-white sm:py-24" aria-labelledby="medical-family-heading">
       <div className="container grid gap-12 lg:grid-cols-[.7fr_1.3fr] lg:gap-16">
         <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-200">Related product family</p><h2 id="medical-family-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-white">One research direction across several working surfaces.</h2></div>
@@ -53,10 +88,21 @@ const ApoloMedicalFramework: React.FC = () => (
       </div>
     </section>
 
-    <section className="py-16 sm:py-24">
-      <div className="container grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-16">
-        <img src="/portfolio/umbramed-home.png" alt="Umbramed medical learning and tools interface" className="w-full border border-slate-300 bg-white object-cover object-top" />
-        <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">From architecture to usable surfaces</p><h2 className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">Research becomes useful when it meets a real workflow.</h2><p className="mt-5 text-lg leading-relaxed text-slate-600">The broader work connects model experiments to interfaces for learning, document handling, structured reporting and professional review.</p><div className="mt-8 flex flex-wrap gap-4"><a href="https://huggingface.co/samihalawa/APOLO-medical-multimodal-instruct" target="_blank" rel="noopener noreferrer" className="btn-secondary">View APOLO artifacts<i className="fas fa-arrow-up-right-from-square text-xs" /></a><Link to="/contact" className="btn-primary">Discuss a medical workflow<i className="fas fa-arrow-right text-xs" /></Link></div></div>
+    <section className="py-16 sm:py-24" aria-labelledby="clinical-surfaces-heading">
+      <div className="container">
+        <div className="grid gap-8 lg:grid-cols-[.72fr_1.28fr] lg:gap-16">
+          <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">From research to interface</p><h2 id="clinical-surfaces-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">The model work connects to tools people can actually navigate.</h2></div>
+          <p className="border-t border-slate-400 pt-5 text-lg leading-relaxed text-slate-600">Umbramed translates the broader direction into clinical utilities, assisted documents and learning surfaces. The interface keeps source material, progress and specialist tools visible instead of hiding them behind a chat box.</p>
+        </div>
+        <div className="mt-12 grid gap-px border border-slate-300 bg-slate-300 lg:grid-cols-3">
+          {clinicalSurfaces.map((surface) => (
+            <figure key={surface.title} className="bg-white p-4 sm:p-6">
+              <img src={surface.src} alt={`Umbramed ${surface.title.toLowerCase()} interface`} loading="lazy" className="aspect-[5/4] w-full border border-slate-200 bg-slate-50 object-cover object-top" />
+              <figcaption className="mt-5"><strong className="cv-serif text-xl font-semibold text-slate-950">{surface.title}</strong><p className="mt-2 text-sm leading-6 text-slate-600">{surface.body}</p></figcaption>
+            </figure>
+          ))}
+        </div>
+        <div className="mt-12 flex flex-wrap gap-4 border-t border-slate-300 pt-8"><a href="https://huggingface.co/samihalawa/APOLO-medical-multimodal-instruct" target="_blank" rel="noopener noreferrer" className="btn-secondary">View APOLO artifacts<i className="fas fa-arrow-up-right-from-square text-xs" /></a><Link to="/contact" className="btn-primary">Discuss a medical workflow<i className="fas fa-arrow-right text-xs" /></Link></div>
       </div>
     </section>
   </article>

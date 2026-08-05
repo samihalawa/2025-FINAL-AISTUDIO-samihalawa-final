@@ -16,6 +16,13 @@ const systemAreas = [
   ['Operator output', 'A review queue, decision reports and sourcing actions that retain the source behind the recommendation.'],
 ];
 
+const marketSurfaces = [
+  { src: '/portfolio/autopricing-market-amazon.webp', name: 'Amazon', body: 'New and refurbished catalogue context, seller position and current offer structure.' },
+  { src: '/portfolio/autopricing-market-backmarket.webp', name: 'Back Market', body: 'Condition, warranty and specialist-refurbisher pricing in a structured product page.' },
+  { src: '/portfolio/autopricing-market-cex.webp', name: 'CeX', body: 'A second-hand retail reference with device grade, configuration and store pricing.' },
+  { src: '/portfolio/autopricing-market-swappie.webp', name: 'Swappie', body: 'Refurbished-device configuration, condition and battery options as commercial variables.' },
+];
+
 const AutoPricingCase: React.FC = () => (
   <article className="bg-[#f8f6f1] text-slate-800">
     <header className="border-b border-slate-300 py-16 sm:py-24">
@@ -52,6 +59,51 @@ const AutoPricingCase: React.FC = () => (
         <figcaption className="mt-4 max-w-4xl text-sm leading-6 text-slate-500">Executive pricing and sourcing view, combining catalogue coverage, market signals and the cases that need operator attention.</figcaption>
       </div>
     </figure>
+
+    <section className="py-16 sm:py-24" aria-labelledby="market-evidence-heading">
+      <div className="container">
+        <div className="grid gap-8 lg:grid-cols-[.72fr_1.28fr] lg:gap-16">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Source evidence</p>
+            <h2 id="market-evidence-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">The same phone is not the same commercial offer.</h2>
+          </div>
+          <p className="border-t border-slate-400 pt-5 text-lg leading-relaxed text-slate-600">Each marketplace expresses condition, seller, warranty, storage and configuration differently. The workflow keeps those differences visible before any comparison or recommendation is made.</p>
+        </div>
+        <div className="mt-12 grid gap-px border border-slate-300 bg-slate-300 md:grid-cols-2">
+          {marketSurfaces.map((surface) => (
+            <figure key={surface.name} className="bg-white p-4 sm:p-6">
+              <div className="aspect-[4/3] overflow-hidden border border-slate-200 bg-slate-50">
+                <img src={surface.src} alt={`${surface.name} product page used as a pricing reference`} loading="lazy" className="h-full w-full object-cover object-top" />
+              </div>
+              <figcaption className="mt-5 grid gap-2 sm:grid-cols-[7rem_1fr]">
+                <strong className="font-display text-sm text-slate-950">{surface.name}</strong>
+                <span className="text-sm leading-6 text-slate-600">{surface.body}</span>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section className="border-y border-slate-300 bg-white py-16 sm:py-24" aria-labelledby="operator-loop-heading">
+      <div className="container">
+        <div className="max-w-4xl">
+          <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Operator loop</p>
+          <h2 id="operator-loop-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950 sm:text-5xl">From a live listing to a reviewed conversation.</h2>
+          <p className="mt-5 text-lg leading-relaxed text-slate-600">Wallapop is both a market signal and an operating channel. Discovery and contact sit beside each other, but the message remains visible before it leaves the operator's hands.</p>
+        </div>
+        <div className="mt-12 grid gap-6 lg:grid-cols-[1.12fr_.88fr]">
+          <figure className="border border-slate-300 bg-[#f8f6f1] p-4 sm:p-6">
+            <img src="/portfolio/autopricing-market-wallapop.webp" alt="Wallapop search results filtered for comparable iPhone listings" loading="lazy" className="aspect-[4/3] w-full object-cover object-top" />
+            <figcaption className="mt-4 text-sm leading-6 text-slate-600"><strong className="text-slate-950">Discover.</strong> Filtered listings retain price, model, condition and recency context.</figcaption>
+          </figure>
+          <figure className="border border-slate-300 bg-[#f8f6f1] p-4 sm:p-6">
+            <img src="/portfolio/autopricing-wallapop-operator.webp" alt="Wallapop inbox with an operator reviewing a prepared sourcing message" loading="lazy" className="aspect-[4/3] w-full object-cover object-top" />
+            <figcaption className="mt-4 text-sm leading-6 text-slate-600"><strong className="text-slate-950">Review.</strong> The sourcing conversation stays attached to the listing and the prepared action.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
 
     <section className="py-16 sm:py-24" aria-labelledby="case-system-heading">
       <div className="container grid gap-12 lg:grid-cols-[.7fr_1.3fr] lg:gap-16">

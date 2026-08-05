@@ -42,6 +42,7 @@ const Valencia = lazy(() => import('./pages/locations/Valencia'));
 const Spain = lazy(() => import('./pages/locations/Spain'));
 const Online = lazy(() => import('./pages/locations/Online'));
 const CaseStudiesIndex = lazy(() => import('./pages/case-studies/Index'));
+const OulangCase = lazy(() => import('./pages/case-studies/Oulang'));
 const ApoloMedicalFramework = lazy(() => import('./pages/case-studies/ApoloMedicalFramework'));
 const AutoClientCase = lazy(() => import('./pages/case-studies/AutoClient'));
 const AutoPricingCase = lazy(() => import('./pages/case-studies/AutoPricing'));
@@ -80,6 +81,7 @@ export const AppRoutes: React.FC<AppRoutesProps> = ({ initialBlogArticle = null 
                             <Route path="locations/valencia/rag-langchain" element={<ValenciaRagLangChain />} />
                             <Route path="locations/madrid/business-automation" element={<MadridBusinessAutomation />} />
                             <Route path="case-studies" element={<CaseStudiesIndex />} />
+                            <Route path="case-studies/oulang" element={<OulangCase />} />
                             <Route path="case-studies/apolo-medical-framework" element={<ApoloMedicalFramework />} />
                             <Route path="case-studies/autoclient" element={<AutoClientCase />} />
                             <Route path="case-studies/autopricing" element={<AutoPricingCase />} />

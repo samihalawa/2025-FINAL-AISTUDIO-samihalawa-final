@@ -20,6 +20,8 @@ const ITEMS: Item[] = [
   { href: '/services/proptech-analytics', titleKey: 'search.item.proptechAnalytics.title', descriptionKey: 'search.item.proptechAnalytics.description', categoryKey: 'search.category.services' },
   { href: '/services/airbnb-analytics', titleKey: 'search.item.airbnbAnalytics.title', descriptionKey: 'search.item.airbnbAnalytics.description', categoryKey: 'search.category.services' },
   { href: '/services/ai-language-learning', titleKey: 'search.item.aiLanguageLearning.title', descriptionKey: 'search.item.aiLanguageLearning.description', categoryKey: 'search.category.services' },
+  { href: '/case-studies/oulang', titleKey: 'search.item.caseOulang.title', descriptionKey: 'search.item.caseOulang.description', categoryKey: 'search.category.caseStudies' },
+  { href: '/case-studies/autopricing', titleKey: 'search.item.caseAutopricing.title', descriptionKey: 'search.item.caseAutopricing.description', categoryKey: 'search.category.caseStudies' },
   { href: '/case-studies/apolo-medical-framework', titleKey: 'search.item.caseMedical.title', descriptionKey: 'search.item.caseMedical.description', categoryKey: 'search.category.caseStudies' },
   { href: '/case-studies/autoclient', titleKey: 'search.item.caseAutoclient.title', descriptionKey: 'search.item.caseAutoclient.description', categoryKey: 'search.category.caseStudies' },
   { href: '/locations/madrid', titleKey: 'search.item.locationMadrid.title', descriptionKey: 'search.item.locationMadrid.description', categoryKey: 'search.category.locations' },
