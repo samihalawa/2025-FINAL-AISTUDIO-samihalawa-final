@@ -28,6 +28,11 @@ const OulangCase: React.FC = () => (
       </div>
     </header>
 
+    <figure className="border-b border-slate-300 bg-slate-950">
+      <img src="/portfolio/oulang-case-study-cover.webp" alt="OULANG rent search, AI assistant and local-content mobile interfaces" className="mx-auto block aspect-[16/9] w-full max-w-[1600px] object-cover" />
+      <figcaption className="container py-4 text-sm leading-6 text-slate-400">OULANG across three connected mobile journeys: finding a home, asking for assistance and discovering local content.</figcaption>
+    </figure>
+
     <section className="border-b border-slate-300 bg-slate-950 py-12 sm:py-16" aria-label="OULANG mobile product interface">
       <div className="container grid gap-10 lg:grid-cols-[.72fr_1.28fr] lg:items-center">
         <div className="mx-auto w-full max-w-[25rem] overflow-hidden border border-slate-700 bg-slate-900">
@@ -35,7 +40,7 @@ const OulangCase: React.FC = () => (
         </div>
         <div className="text-white">
           <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-200">The product</p>
-          <h2 className="cv-serif mt-5 text-4xl font-normal leading-tight sm:text-5xl">One home for publishing, discovery and local action.</h2>
+          <h2 className="cv-serif mt-5 text-4xl font-normal leading-tight text-white sm:text-5xl">One home for publishing, discovery and local action.</h2>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">The interface prioritizes the recurring tasks of a local community: publish an offer, find a home or job, locate a service, join a discussion and contact the right person without rebuilding context in another app.</p>
           <dl className="mt-10 grid border-t border-slate-700 sm:grid-cols-3">
             {[

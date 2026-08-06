@@ -71,7 +71,7 @@ const AutoClientCase: React.FC = () => (
         <div className="mt-6 grid gap-px border border-slate-300 bg-slate-300 md:grid-cols-3">
           {productSurfaces.map((surface) => (
             <figure key={surface.title} className="bg-white p-4 sm:p-6">
-              <img src={surface.src} alt={`AutoClient product concept for ${surface.title.toLowerCase()}`} loading="lazy" className="aspect-square w-full border border-slate-200 bg-slate-50 object-cover" />
+              <img src={surface.src} alt={`AutoClient interface view for ${surface.title.toLowerCase()}`} loading="lazy" className="aspect-square w-full border border-slate-200 bg-slate-50 object-cover" />
               <figcaption className="mt-5">
                 <strong className="cv-serif text-xl font-semibold text-slate-950">{surface.title}</strong>
                 <p className="mt-2 text-sm leading-6 text-slate-600">{surface.body}</p>
