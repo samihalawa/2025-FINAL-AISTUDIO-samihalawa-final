@@ -9,6 +9,8 @@ RUN (npm ci || npm install) \
     && (node -e "require.resolve(process.argv[1])" "$ROLLUP_PACKAGE" \
         || npm install --no-save --no-package-lock "$ROLLUP_PACKAGE@$ROLLUP_VERSION")
 COPY . .
+ARG VITE_POSTHOG_KEY
+ENV VITE_POSTHOG_KEY=$VITE_POSTHOG_KEY
 RUN npm run build
 FROM nginx:1.25-alpine
 COPY --from=build /app/dist /usr/share/nginx/html
