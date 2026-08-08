@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useTranslation, type LanguageCode } from '../i18n/LanguageContext';
 import {
@@ -42,8 +42,8 @@ const isCvHref = (href: string) => href.includes('/cv/') && (href.endsWith('.pdf
 const AnalyticsManager: React.FC = () => {
   const { language } = useTranslation();
   const location = useLocation();
-  const firstRoute = useRef(true);
   const [showConsent, setShowConsent] = useState(false);
+  const [consentRevision, setConsentRevision] = useState(0);
 
   useEffect(() => {
     bootstrapAnalytics();
@@ -51,17 +51,21 @@ const AnalyticsManager: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    if (firstRoute.current) {
-      firstRoute.current = false;
-      return;
-    }
+    if (getAnalyticsConsent() !== 'granted') return;
+
+    const searchParams = new URLSearchParams(location.search);
 
     trackPortfolioEvent('page_view', {
       page_location: window.location.href,
       page_path: `${location.pathname}${location.search}${location.hash}`,
       page_title: document.title,
+      page_referrer: document.referrer || null,
+      utm_source: searchParams.get('utm_source'),
+      utm_medium: searchParams.get('utm_medium'),
+      utm_campaign: searchParams.get('utm_campaign'),
+      utm_content: searchParams.get('utm_content'),
     });
-  }, [location.hash, location.pathname, location.search]);
+  }, [consentRevision, location.hash, location.pathname, location.search]);
 
   useEffect(() => {
     const handleClick = (event: MouseEvent) => {
@@ -93,9 +97,10 @@ const AnalyticsManager: React.FC = () => {
     return () => document.removeEventListener('click', handleClick, true);
   }, []);
 
-  const chooseConsent = (consent: AnalyticsConsent) => {
-    void setAnalyticsConsent(consent);
+  const chooseConsent = async (consent: AnalyticsConsent) => {
+    await setAnalyticsConsent(consent);
     setShowConsent(false);
+    if (consent === 'granted') setConsentRevision(revision => revision + 1);
   };
 
   if (!showConsent) return null;
@@ -106,8 +111,8 @@ const AnalyticsManager: React.FC = () => {
       <h2 id="analytics-consent-title" className="text-base font-bold text-slate-950">{copy.title}</h2>
       <p className="mt-2 text-sm leading-relaxed text-slate-600">{copy.body}</p>
       <div className="mt-4 flex flex-wrap gap-3">
-        <button type="button" onClick={() => chooseConsent('granted')} className="inline-flex min-h-11 items-center justify-center rounded-xl bg-slate-950 px-5 py-2 text-sm font-bold text-white transition hover:bg-brand-800">{copy.accept}</button>
-        <button type="button" onClick={() => chooseConsent('denied')} className="inline-flex min-h-11 items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-2 text-sm font-bold text-slate-700 transition hover:bg-slate-50">{copy.reject}</button>
+        <button type="button" onClick={() => void chooseConsent('granted')} className="inline-flex min-h-11 items-center justify-center rounded-xl bg-slate-950 px-5 py-2 text-sm font-bold text-white transition hover:bg-brand-800">{copy.accept}</button>
+        <button type="button" onClick={() => void chooseConsent('denied')} className="inline-flex min-h-11 items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-2 text-sm font-bold text-slate-700 transition hover:bg-slate-50">{copy.reject}</button>
       </div>
     </aside>
   );
