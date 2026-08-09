@@ -1,5 +1,6 @@
 # INDEX
 
+replaced public media | a reused asset URL can keep serving an older sensitive image after the application deploy succeeds | publish the reviewed replacement under a new cache-safe filename and update the rendered reference | do not rely on a successful deploy, cache-busting query or eventual CDN expiry | verify the plain production asset hash and the image actually rendered by the page
 stable CV asset aliases | current dated downloads can coexist with stale stable PDF/ATS names and previews | sync every current Comprehensive PDF/ATS alias and both first-page previews from the canonical release | do not overwrite distinct legacy non-Comprehensive editions or trust route links alone | verify canonical=dated=stable hashes, 114/114 IDs, 1/10 previews and live MIME/body hashes
 current credential inventory | the website can preserve a stale count after the source archive grows | publish 17 programmes and 114 unique credential IDs, while preserving two no-ID historical certifications | do not retain the prior 13/87 snapshot, overclaim a short programme list as the entire credential ledger, or misstate overlapping programme courses as extra unique credentials | compare current archive IDs, all CV/ATS outputs, rendered programme/media counts and credential links
 LinkedIn credential and Education publishing | bulk component-course edits caused throttling and unverified Education saves | reconcile live state and official IDs, publish the complete credential inventory, prioritize umbrella qualifications and flagship diplomas, edit/dedupe, pace saves and read back exact fields | do not infer an empty section, treat a save toast as persistence, omit verified component credentials, or add duplicates | verify the fully loaded LinkedIn sections plus exact saved title, issuer, date, ID, URL, priority and Education wording
@@ -26,6 +27,16 @@ blog content pipeline | hard-coded slug list + modal did not scale to daily hub-
 SPA production routes | public asset directories collide with client routes | serve file-shaped URLs as static files and everything else as the SPA shell | do not let Nginx treat route names as directories or leak port 8080 redirects | verify slash and non-slash routes plus real asset MIME types
 Coolify Linux build | macOS lock can omit the Linux Rollup binary and Docker hosts differ between arm64 and x64 | install the build container's matching native Rollup GNU package | do not hardcode one CPU or infer deployability from the macOS Vite build | verify local container plus Coolify build the pushed commit and live routes
 public portfolio | stock imagery and invented social proof replaced source evidence | use dated metrics, real screenshots and public links | do not publish placeholders, arbitrary percentages or unsupported impact | verify exact live route, image load, text and responsive layout
+
+## 2026-08-09 — Replaced public media needs a cache-safe URL
+
+- **Status:** CURRENT
+- **Project/root:** `2025-FINAL-AISTUDIO-samihalawa-final`; public case-study screenshots and other replaced binary media.
+- **Mistake corrected:** the OULANG screenshot was redacted and deployed successfully, but its reused 30-day-cache URL still served the earlier browser capture on the unversioned production path.
+- **Superior approach:** keep the reviewed replacement and publish it under a new dated filename, then update the page to request that exact asset.
+- **Evidence:** commit `1d92bd0` ran successfully in Coolify; the old plain URL mismatched locally while its cache-busted response matched hash `902fd322...`.
+- **Triggers / verification:** screenshot, image replacement, redaction, cache, CDN or deploy; compare the plain production asset hash and inspect the rendered page after the final deployment.
+- **Do / don't:** do version materially replaced public binaries; don't treat a deployment status or query-string bypass as proof that visitors receive the safe asset.
 
 ## 2026-08-09 — Stable CV aliases must match the current dated release
 

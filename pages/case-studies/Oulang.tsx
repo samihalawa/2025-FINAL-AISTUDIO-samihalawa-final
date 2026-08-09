@@ -94,7 +94,7 @@ const OulangCase: React.FC = () => (
           <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Recent operating work</p><h2 className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">Behavioral recommendations, observed in the workflow that runs them.</h2></div>
           <p className="text-lg leading-relaxed text-slate-600">This PostHog workflow connects an interest signal to an evaluation-and-dispatch step, with execution logs visible beside the flow so product behavior can be inspected as an operating system rather than a black box.</p>
         </div>
-        <img src="/portfolio/oulang-behavioral-recommendations-workflow.png" alt="OULANG PostHog behavioral-recommendations workflow with trigger, evaluation-and-dispatch node and execution logs" loading="lazy" className="mt-10 h-auto w-full border border-slate-300 bg-slate-50 object-contain" />
+        <img src="/portfolio/oulang-behavioral-recommendations-workflow-public-2026-08-09.png" alt="OULANG PostHog behavioral-recommendations workflow with trigger, evaluation-and-dispatch node and execution logs" loading="lazy" className="mt-10 h-auto w-full border border-slate-300 bg-slate-50 object-contain" />
         <figcaption className="mt-4 text-sm leading-6 text-slate-500">A working operations view: the workflow graph, the evaluation-and-dispatch action and completed execution timings are visible together.</figcaption>
       </div>
     </figure>
