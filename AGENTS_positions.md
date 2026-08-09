@@ -44,7 +44,7 @@ public portfolio | stock imagery and invented social proof replaced source evide
 - **Project/root:** `2025-FINAL-AISTUDIO-samihalawa-final`; public CV PDFs, ATS files and preview images.
 - **Mistake corrected:** `CVPage.tsx` correctly linked the 9 Aug release, but 20 stable PDF/ATS aliases and two stable previews still served the previous 87-ID, eight-page edition.
 - **Superior approach:** retain cache-safe dated route links while synchronising every stable master and `Comprehensive` role alias from the same canonical CV release; use a new dated suffix when a rendered role PDF changes.
-- **Evidence:** 9 Aug source-to-public comparison proved the former dated files byte-equal to the canonical 114-ID outputs while every stable alias differed; the corrected role-PDF grid is published under `2026-08-09-v2`, and both stable previews now display `1/10`.
+- **Evidence:** 9 Aug source-to-public comparison proved the former dated files byte-equal to the canonical 114-ID outputs while every stable alias differed; the global-experience refresh is published under `2026-08-09-v3`, and both stable previews show the current ten-page masters.
 - **Triggers / verification:** CV refresh, certificate, PDF, ATS, preview, alias, cache or deploy; compare exact hashes before and after, then read back every changed live URL's MIME and body hash.
 - **Scope guard:** do not rewrite the 21 non-`Comprehensive` legacy role files; they are separate 13-page editions, not aliases of the current 17-page set.
 - **Do / don't:** do keep dated and stable public names in parity; don't infer complete publication from the current route targets alone.

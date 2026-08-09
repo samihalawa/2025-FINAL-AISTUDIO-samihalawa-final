@@ -302,7 +302,7 @@ const legacyCertifications = [
   ['Adobe Certified Expert', 'After Effects']
 ] as const;
 
-const roleEditionFile = (key: string) => `${key}_Comprehensive_2026-08-09-v2`;
+const roleEditionFile = (key: string) => `${key}_Comprehensive_2026-08-09-v3`;
 
 const recommendedCredentials = [
   {
@@ -347,9 +347,9 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
   const { language } = useTranslation();
   const selected = edition || (language === 'es' ? 'es' : 'en');
   const spanish = selected === 'es';
-  const pdf = spanish ? '/cv/Sami_Halawa_CV_ES_2026-08-09.pdf' : '/cv/Sami_Halawa_CV_2026-08-09.pdf';
-  const ats = spanish ? '/cv/Sami_Halawa_CV_ES_ATS_2026-08-09.txt' : '/cv/Sami_Halawa_CV_ATS_2026-08-09.txt';
-  const preview = spanish ? '/cv/Sami_Halawa_CV_ES_preview_2026-08-09.png' : '/cv/Sami_Halawa_CV_preview_2026-08-09.png';
+  const pdf = spanish ? '/cv/Sami_Halawa_CV_ES_2026-08-09-v3.pdf' : '/cv/Sami_Halawa_CV_2026-08-09-v3.pdf';
+  const ats = spanish ? '/cv/Sami_Halawa_CV_ES_ATS_2026-08-09-v3.txt' : '/cv/Sami_Halawa_CV_ATS_2026-08-09-v3.txt';
+  const preview = spanish ? '/cv/Sami_Halawa_CV_ES_preview_2026-08-09-v3.png' : '/cv/Sami_Halawa_CV_preview_2026-08-09-v3.png';
   const primaryCredential = featuredCredentials[0];
   const description = spanish
     ? 'Una visión completa de productos, sistemas para clientes, open source, investigación y docencia, disponible en PDF y en formato ATS.'
