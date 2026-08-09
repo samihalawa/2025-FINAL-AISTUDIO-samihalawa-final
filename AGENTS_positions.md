@@ -1,12 +1,14 @@
 # INDEX
 
+current credential inventory | the website can preserve a stale count after the source archive grows | publish 13 programmes and 87 unique credential IDs, including IBM Machine Learning `TRO88CF6Y826` | do not retain the prior 12/84 snapshot or misstate overlapping programme courses as extra unique credentials | compare current archive IDs, CV outputs, rendered counts and credential links
+LinkedIn credential and Education publishing | bulk component-course edits caused profile inflation, throttling and unverified Education saves | reconcile live state and official IDs, prefer umbrella qualifications, edit/dedupe, pace saves and read back exact fields | do not infer an empty section, treat a save toast as persistence, or mass-add component courses | verify the fully loaded LinkedIn sections plus exact saved title, issuer, date, ID, URL and Education wording
 paginated API inventories | a single limit=N request was treated as the full dataset and 18 items went unprocessed until the user called it fake | read the pagination/total fields on every list response and loop pages until has_more is false before claiming full coverage | do not claim a sweep is complete from one page or one request | verify the reported total equals the records actually scanned
 session closure | finished case-study work sat uncommitted for a day and a later session asserted its VCS state without running git status | end every implementation session with git status, commit and push the completed surface, and ground any claim about worktree state in a fresh command | do not leave built-and-verified routes unshipped or repeat another session's completion claim without re-proving it | verify clean tree, pushed main and the live route status code
 portfolio project presentation | raw inventory entries and speculative service templates can make the work look shallow or invented | group related builds into canonical product stories, lead with real interfaces and reserve generated covers for projects without usable media | do not repeat the archive as cards, use abstract initials/gradients, or publish a service idea as a delivered case study | verify every story has a cover, problem, build, role and family scope; index only evidence-backed cases; render desktop/mobile
 credential publishing | redesign can distract from the requested education update | reconcile the live inventory, rank the strongest programmes and show their real diploma images | do not replace credential reconciliation with a page redesign or list component courses as separate headline programmes | compare live IDs with archive/CV/site, render IBM/Google/Oxford imagery, and verify desktop/mobile plus official links
 credential programme counts | archive totals can be mistaken for official programme structure | distinguish the IBM 16-course programme from 20 archived IBM course credentials | do not call the IBM Professional Certificate a 20-course programme | extract the umbrella diploma and sweep every current downloadable CV before deploy
 public contact number | CV downloads and shared WhatsApp/contact CTAs can inherit an unrelated number across releases | use `+34 679 794 037` in current public source, generated CVs and destination URLs | don't use `+34 659 777 908`; the user explicitly confirmed it is not his | grep rendered source/download text and inspect live contact destinations
-floating action controls | a fixed back-to-top button covered the final CV profile's ATS link; ordinary left/right insets merely moved the collision | keep the desktop control entirely inside the 44px outer-left rail before the 48px content inset | do not move the collision onto another content column or stack controls over right-aligned actions | verify measured non-overlap at both adjacent scroll positions on desktop and mobile
+floating action controls | fixed back-to-top and WhatsApp buttons covered CV download actions; ordinary content insets merely moved the collision | keep desktop controls inside the 44px outer rails and render WhatsApp in normal footer flow below desktop width | do not stack floating controls over mobile content or move one collision onto another column | verify measured non-overlap at both adjacent scroll positions on desktop and mobile
 embedded Close form content | provider templates can inject irrelevant legal and marketing consent into the public contact form even when the site component is correct | edit and publish the canonical Close form, then verify both its share URL and the embedded production DOM | do not hide provider copy with CSS or treat the script/custom element as content approval | verify exact field labels, published provider state, fresh embedded DOM, desktop/mobile layout and preserved submission controls
 CV role-edition parity | the website exposed seven current role editions while the CV source had eight | reconcile the explicit website list against every current generated PDF and ATS pair | do not assume the existing page enumerates the full output set | verify one rendered card and exact downloadable PDF/ATS hashes for every current role edition
 public CV qualification copy | platform-first wording and generator/process labels made verified qualifications sound like internal export metadata | name the qualification, specialist subject and real issuing institution where verified, while preserving every validated credential | do not foreground Coursera, expose source/proof fields, or delete achievements to solve copy leakage | verify all public HTML/TXT/PDF assets, every current credential ID, exact live hashes and rendered CV routes
@@ -23,6 +25,26 @@ blog content pipeline | hard-coded slug list + modal did not scale to daily hub-
 SPA production routes | public asset directories collide with client routes | serve file-shaped URLs as static files and everything else as the SPA shell | do not let Nginx treat route names as directories or leak port 8080 redirects | verify slash and non-slash routes plus real asset MIME types
 Coolify Linux build | macOS lock can omit the Linux Rollup binary and Docker hosts differ between arm64 and x64 | install the build container's matching native Rollup GNU package | do not hardcode one CPU or infer deployability from the macOS Vite build | verify local container plus Coolify build the pushed commit and live routes
 public portfolio | stock imagery and invented social proof replaced source evidence | use dated metrics, real screenshots and public links | do not publish placeholders, arbitrary percentages or unsupported impact | verify exact live route, image load, text and responsive layout
+
+## 2026-08-08 — Current credential inventory is 13 programmes and 87 unique IDs
+
+- **Status:** CURRENT
+- **Project/root:** `2025-FINAL-AISTUDIO-samihalawa-final`; `/cv/en`, `/cv/es` and public CV downloads.
+- **Mistake corrected:** the site still published `12 / 84` after the canonical archive gained the IBM Machine Learning Professional Certificate and two new course credentials.
+- **Superior approach:** derive the displayed total from unique source IDs, add the six-course IBM Machine Learning umbrella, and keep overlapping IBM course IDs from inflating the unique archive count.
+- **Evidence:** the current archive contains 87 unique PDFs; `comm` against the prior ATS output identified only `TRO88CF6Y826`, `P9KWZ6UPS2UK` and `KF03O8XOY1KG` as missing.
+- **Triggers / verification:** credential, course, IBM Machine Learning, CV, download or deploy; verify 13/87 in rendered EN/ES routes and all 87 IDs in every complete downloadable CV.
+- **Do / don't:** do publish the new programme and current count; don't keep the 12/84 snapshot or call overlapping course reuse three different qualifications.
+
+## 2026-08-08 — Reconcile LinkedIn before publishing credentials or Education
+
+- **Status:** CURRENT
+- **Project/root:** `2025-FINAL-AISTUDIO-samihalawa-final`; LinkedIn, canonical CV credentials and samihalawa.com qualification surfaces.
+- **Mistake corrected:** session `4142ea7e` bulk-added 20 IBM and 9 Google component courses, performed about 38 rapid edits, inferred Education was empty before it fully loaded, and later found Shenzhen absent and the new Li Po Chun wording missing despite `Profile saved`.
+- **Superior approach:** load the complete live LinkedIn sections, reconcile official credential IDs, map programmes to one umbrella entry, add only materially distinct standalone credentials, edit or dedupe existing records, pace saves and read back each final field.
+- **Evidence:** `/Users/samihalawa/Downloads/session-export-1786192438525.zip`, transcript hash `e83e37c0fdeb8f59e353259d69953b9cce00932eb8c6dc1572a92595ce3787a4`; the session's final answer itself marks Education unresolved.
+- **Triggers / verification:** LinkedIn, certificate, course, Education, Shenzhen, Li Po Chun, bulk add or save toast; verify fully loaded lists and exact saved title, issuer, date, ID, URL and wording before the next edit.
+- **Do / don't:** do keep the complete course inventory in CV/site outputs and concise umbrella representation on LinkedIn; don't use mutation counts, toasts or agent summaries as persistence proof.
 
 ## 2026-08-05 — Ship finished work in the same session; never inherit VCS claims
 
@@ -76,15 +98,15 @@ public portfolio | stock imagery and invented social proof replaced source evide
 - **Triggers / verification:** contact, WhatsApp, phone, CV, credentials or deploy; grep source and current downloadable text, then inspect rendered links and destinations live.
 - **Do / don't:** do retain this entry only as a record of the corrected mistake; don't reuse its former phone-number instruction.
 
-## 2026-08-03 — Floating controls must not cover CV download actions
+## 2026-08-08 — Floating controls must not cover CV download actions
 
 - **Status:** CURRENT
 - **Project/root:** `2025-FINAL-AISTUDIO-samihalawa-final`; shared `Layout` / `BackToTop` controls and CV profile downloads.
-- **Mistake recovered:** the back-to-top control covered the final profile's ATS link; an initial move to the left gutter cleared the link but covered the following section heading.
-- **Superior approach:** preserve both utilities but fit the desktop back-to-top control entirely inside the 44px outer-left rail before the page's 48px content inset; retain the roomier right inset on mobile.
-- **Evidence:** 3 Aug 2026 production and local screenshots at the `Agentic AI / Commerce` row and following qualification section, plus hit-testing and rectangle measurements that rejected the ordinary left inset and a remaining 4px right-edge collision.
+- **Mistake recovered:** the back-to-top control covered a final profile ATS link, and the fixed WhatsApp control later overlapped the primary ATS download at 390px; ordinary content insets only relocated the collision.
+- **Superior approach:** preserve both utilities, fit desktop controls entirely inside the 44px outer rails, and render WhatsApp in normal footer flow below desktop width so no fixed control can obscure mobile content.
+- **Evidence:** 3 Aug 2026 production hit-testing plus 8 Aug 2026 local rectangles: the mobile ATS button ended at `x=356, y=820.6` while WhatsApp occupied `x=316..364, y=780..828`, proving overlap before the responsive flow correction.
 - **Triggers / verification:** CV, floating button, WhatsApp, back to top, fixed control or download; recheck both adjacent scroll positions at desktop and mobile widths and prove the download links remain visible and clickable.
-- **Do / don't:** do reserve a true outer rail and keep the 44px touch target; don't clear one collision by moving it onto another content column.
+- **Do / don't:** do reserve true outer rails and keep 44px touch targets; don't float persistent controls over narrow content or clear one collision by moving it onto another column.
 
 ## 2026-08-03 — Every current role edition must be exposed on the CV page
 

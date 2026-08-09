@@ -1,0 +1,266 @@
+SAMI HALAWA RIBAS
+Ingeniero Fundador de IA | Líder de Producto y Plataforma de IA
+
+Madrid, España | permiso de trabajo UE
++34 679 794 037 | sami@oulang.ai | samihalawa.com
+linkedin.com/in/samihalawa | github.com/samihalawa | huggingface.co/samihalawa
+
+PERFIL
+Fundador e ingeniero que convierte ideas ambiguas de negocio y producto en sistemas de IA operativos. Responsabilidad completa sobre definición, flujos LLM y agentes, datos y APIs, implementación web/móvil, cloud, observabilidad, crecimiento y operaciones. Especializado en arquitectura zero-to-one, entrega multilingüe, automatización y el sistema de producción completo alrededor de la IA.
+
+PORTFOLIO PÚBLICO | 19 JULIO 2026
+- 85 productos, colaboraciones con clientes, herramientas open source, iniciativas de investigación aplicada y programas formativos entre 2023 y la actualidad.
+- GitHub: 700 repositorios públicos, 249 no-fork y 451 forks; 3 repositorios archivados.
+- VUDA: 80 estrellas y 7 forks.
+- Hugging Face: 12 artículos públicos, 17 Spaces, 6 colecciones y 1 modelo público sobre automatización web, agentes, prompting e IA multimodal.
+- Más de 125 horas grabadas de formación en IA, talleres de producto y sesiones de implementación técnica.
+
+CAPACIDADES PRINCIPALES
+IA agéntica y LLM: orquestación multiagente, MCP, tool/function calling, RAG, salidas estructuradas, enrutado de modelos, ciclos de prompts/evaluación, OpenAI, Anthropic, Gemini y modelos abiertos.
+Ingeniería de producto IA: Python, FastAPI, TypeScript, Node.js, React, Next.js, Tailwind, APIs REST, SQL, tareas en segundo plano, OCR/documentos, web, móvil, pagos y analítica.
+IA de voz y comunicaciones: Telnyx y APIs de voz personalizadas, telefonía, agentes multilingües, contexto CRM y de base de datos en directo, notas y seguimiento tras llamada, WhatsApp, email y n8n.
+Cloud y operaciones: Docker, Linux, CI/CD, Cloudflare, experiencia con AWS/Azure/GCP, Hetzner, Coolify, despliegue, logs, monitorización, analítica y costes.
+Liderazgo y comunicación: estrategia de producto, arquitectura, discovery, dirección técnica, entrega a cliente, mentoring, diseño de cursos y comunicación ejecutiva en español, inglés y mandarín.
+
+EXPERIENCIA PROFESIONAL
+
+Fundador e Ingeniero de Producto IA | Agents AI Ltd | Madrid / Londres | Julio 2025-Actualidad
+- Responsable de discovery, arquitectura, implementación, despliegue, analítica, monetización y entrega operativa en productos propios y B2B.
+- Construí OULANG (欧浪AI), un marketplace multilingüe y plataforma de vida local para comunidades chinas en España, con entrega web, iOS y Android.
+- Extendí el ecosistema a Huatong para comunidades chinas en Europa, OUPIN para discovery asistido y PIME.ai para servicios de IA productizados.
+- Construí AutoClient y flujos de agentes de voz para OULANG orientados a conversaciones salientes multilingües, con contexto CRM y de base de datos en directo, notas automáticas y actualización del seguimiento; integré Telnyx, email, WhatsApp y herramientas MCP reutilizables.
+- Entregué flujos de inteligencia de precios e informes de decisión con marketplaces, matching, histórico de precios e inventario o ERP.
+- Prototipé flujos multimodales de revisión de imagen médica, seguimiento longitudinal e informes estructurados con revisión humana integrada.
+
+Profesor de IA y Consultor Técnico Independiente | Madrid / Remoto | 2022-Actualidad
+- Enseño IA práctica, agentes, MCP, automatización, Python e ingeniería de producto mediante aplicaciones reales, construcción en directo y programas técnicos.
+- Convierto necesidades de negocio en sistemas para profesionales y equipos en español, inglés y mandarín.
+- He impartido más de 125 horas grabadas de formación en IA, talleres de producto y sesiones de implementación técnica.
+
+Ingeniero Full-Stack Sénior | Damehosting | 2019-2023
+- Desarrollo y mantenimiento de sistemas web de producción.
+- Revisión de código, prácticas CI/CD, operación Linux/servidores y mentoring.
+
+Web, Móvil, Growth y Educación | Megawebs / Megacursos | 2009-2023
+- Productos web/móvil, cursos técnicos, docencia de diseño digital y SEO/adquisición.
+- Construí más de 70 proyectos digitales entre web, móvil, educación, growth y tecnología creativa.
+
+CRONOLOGÍA PROFESIONAL ADICIONAL
+Constructor independiente de productos web y móvil | 2015-Actualidad
+- Más de 20 aplicaciones nativas y cross-platform construidas en trabajo de producto independiente.
+
+Presentador y anfitrión en directo | China | 2015-2017
+- Comunicación multilingüe en cámara, presentación en directo y producción de contenido.
+
+Modelo comercial y actor | China | 2013-2017
+- Producción internacional, comunicación con cliente y narrativa visual.
+
+Profesor de diseño digital y tecnología | 2009-2019
+- After Effects, Photoshop, Cinema 4D, web/producto y creación de material formativo reutilizable.
+
+PRODUCTOS ACTIVOS Y CONTINUOS
+- OULANG, 2026-actualidad: marketplace y vida local para la diáspora china en España; web activa y trabajo nativo/tienda continuo. oulang.ai
+- Huatong, 2026-actualidad: empleo, vivienda, clasificados y servicios locales para comunidades chinas en Europa. huatong.eu
+- AutoDate, 2026: producto web activo y distribución iOS mediante TestFlight, con perfiles, descubrimiento y matching. autodate.ai
+- AutoClient / agentes de voz OULANG, 2024-actualidad: flujos de voz salientes multilingües con contexto personalizado de base de datos, conversación automatizada, notas y seguimiento en CRM, integrados con investigación, enriquecimiento, email y WhatsApp.
+- PIME.ai — cumplimiento de la Ley de IA, 2026: análisis multilingüe de aplicabilidad y riesgo, alfabetización en IA y hoja de ruta con infraestructura de entrega y campaña. pime.ai
+- AutoMedical, 2025-2026: producto de aprendizaje médico y flujos multimodales para revisión de imagen, informes estructurados y formación profesional con supervisión humana. automedical.ai
+- Tasky, 2026: cliente SwiftUI Google Tasks para macOS, iOS y iPadOS con captura rápida, foco, widgets, extensiones, búsqueda y sincronización.
+- OUPIN, 2026: discovery asistido para consumo e inmobiliario sobre identidad, marketplace e infraestructura de datos compartidas.
+
+SISTEMAS PARA CLIENTES Y COLABORACIONES
+- IWAKY / AutoPricing, 2025-2026: contrato de EUR35.000 para pricing B2C/B2B, inteligencia de marketplaces, matching de productos, análisis de presupuestos de WhatsApp, comercio ERP y dashboards.
+- InfoHuaxin, 2025-2026: trabajo de producto y cliente en una superficie pública activa, sistemas de datos y herramientas operativas. infohuaxin.es
+- Umbramed / Valerio, 2025-2026: liderazgo técnico de herramientas Ionic/Capacitor, roadmap de producto, entrega en Netlify, pagos Stripe y trabajo de aplicación EIC. umbramed.es
+- INTLAW / Ignacio, 2025-2026: flujo legal con prospección, intake por chatbot/WhatsApp/teléfono y análisis multiagente de expedientes.
+- Scope / EyeUnit / Fernando Ly, 2024-2025: fusión de listas, cross-sell y scoring clínico-comercial conectado a OCT e IA médica.
+- SORT / SortBot, 2025: digitalización de PDFs en cursos online estructurados, chatbot integrado y publicación por SSH.
+- San Martín, 2025: automatización RRHH para cumpleaños, partes/horarios, búsqueda de talento y flujos de portal de empleado.
+- EA Housing / Radio Inter, 2026: paquete digital modular para operaciones separadas de cada empresa y una experiencia compartida de grupo.
+- Tekçe / OULANG-AutoClient, 2026: demostración comercial para generar compradores inmobiliarios chinos cualificados, gestión transparente en CRM y outreach personalizado con IA.
+
+OPEN SOURCE E INFRAESTRUCTURA OPERATIVA
+- VUDA, Visual UI Debug Agent MCP: captura, anotación y razonamiento visual para diagnosticar interfaces; 80 estrellas y 7 forks. github.com/samihalawa/VUDA
+- SMTP MCP Server: transporte de correo y buzón para agentes; 17 estrellas y 15 forks. github.com/samihalawa/smtp-mcp-server
+- GOWA / automatización WhatsApp: APIs Go de mensajería, histórico y medios para agentes operativos.
+- Notion-Drive Sync: sincronización open source entre espacios de Notion y Google Drive; 3 estrellas. github.com/samihalawa/notion-drive-sync
+- Herramientas de voz con Telnyx: telefonía e integraciones de Voice API con estado de llamada, contexto de negocio en tiempo real, flujos conversacionales, resultados posteriores a la llamada y herramientas reutilizables.
+- Herramientas de contexto para desarrollo con IA: gestión de contexto y análisis de actividad para flujos complejos en macOS.
+- macOS Optimizer: utilidad pública con 13 estrellas y 1 fork.
+- Crawlab / Apify: actores, almacenamiento central y consumidores de datos para OULANG, Huatong y OUPIN.
+- Archivo completo: 249 repositorios no-fork de MCP, browser/shell/diff, automatización, mensajería, voz, datos y workflow.
+
+INVESTIGACIÓN APLICADA, PROTOTIPOS Y EDUCACIÓN
+- APOLO, 2025: artefacto público imagen-texto en Hugging Face basado en DeepSeek-VL2-tiny para explorar flujos médicos multimodales con revisión humana.
+- AutoRad, 2025: concepto de producto radiológico y diseño de flujos para revisión de imagen, informes y colaboración clínica.
+- AutoIOL y oftalmología, 2024-2026: revisión de imagen, análisis OCT, seguimiento e informes estructurados con revisión humana.
+- Inteligencia de recetas, 2026: discovery para notas/fotos de chef, investigación web, técnica, publicación multilingüe y vídeos opcionales.
+- SONMADE, 2026: prototipo React/TypeScript, FFmpeg y Sharp para analizar escenas y extraer momentos destacados mediante movimiento, color, bordes, texto y fotogramas a pantalla completa.
+- AutoCrypto, 2024: exploración de automatización cripto y producto web progresivo.
+- Curso de arquitectura de agentes, 2025: programa práctico de 15 horas sobre fundamentos, herramientas, memoria, multiagente, RAG, despliegue y observabilidad.
+- ChinoTotal, paisajes sonoros y poesía: curso de mandarín de 296 páginas en español, desde cero hasta HSK2/A2, deck de onomatopeyas, material imprimible, 72 poemas y audio generado. chinototal.com
+
+ÍNDICE CRONOLÓGICO | 2023-2026
+2023: RealSintra; Mi ChatGPT React Español; archivos/experimentos OpenAI-GPT; continuidad DameSender.
+2024: Aprende IA; MenuEditorElectron; AI Absolut; crawler/email; macOS Optimizer; CloudflaredMe; AutoCrypto; audio/transcripción; KittyTasks/FocusOnTask; AutoClient inicial y workers; Pollinations/storage; AutoVideo; MedSAM; AutoTraining; AutoIOL; SpeakingAI; EyeUnit/Fernando Ly; Light Funnels; escritura HF; Colab.
+2025 enero-marzo: SORT/SortBot; AutoHSK; blog/contenido; SMTP MCP; shell/browser/diff; oftalmología.
+2025 abril-junio: APOLO; VUDA; AutoTutorial/MentorIA/PerfectPrompter; Scope; Fernando Ly; expansión AutoClient; ola MCP; Agents AI Ltd; ecosistema Lanzadera.
+2025 julio-diciembre: packaging AutoMedical; utilidades; concepto de flujo AutoRad; sites; WhatsApp MCP; IWAKY/AutoPricing; INTLAW; San Martín; Umbramed; diseño AutoDate/AutoTinder; ola de prototipos; web de poesía; Lemon AI; curso de agentes.
+2026 enero-junio: OULANG; GOWA; Notion-Drive; Huatong; InfoHuaxin; OUPIN; Crawlab/Apify; herramientas de contexto para desarrollo con IA; Telnyx; Desktop Commander; VibraCode; AutoMedical; sitios web; Tasky; tutoría/ITE/TusClases; módulo Mundial; SONMADE.
+2026 julio: AutoDate TestFlight; recetas; generación de leads inmobiliarios Tekçe/OULANG-AutoClient; paridad nativa OULANG; diseño EA Housing/Radio Inter; paisajes sonoros/tutoría/audio; cumplimiento de la Ley de IA con PIME.ai; productos locales adicionales.
+
+OPEN SOURCE, ESCRITURA Y DOCENCIA
+- Doce artículos públicos en Hugging Face: automatización de navegador, Transformers.js local, prompting, repositorios de agentes autónomos, AutoGen, lead generation y VUDA.
+- Portfolio Colab con más de 112 elementos y 58 notebooks identificados sobre IA, automatización, bases de datos, visión y experimentación de producto.
+- Catálogo público youtube.com/@autoclient-ai: 373 vídeos / aproximadamente 159,65 horas sobre cursos de IA, After Effects, portfolio y AutoPricing.
+- Autor: ChinoTotal: Aprende Chino Mandarín desde 0, 296 páginas, publicado de forma independiente en 2024, ISBN 9798873249237.
+- Premio Juvenil del II Certamen de Poesía de Nogarejas, 2012: “Olvidaste una llave en mi costado”, presentado como “El arte de la fuga”, seleccionado entre más de 200 obras de un certamen internacional.
+
+EDUCACIÓN
+Li Po Chun United World College of Hong Kong | Bachillerato Internacional, Ciencias y Matemáticas | 2010-2012 | Beca Fundación Rafael del Pino
+Shenzhen Institute of Information Technology | Estudios de informática y tecnologías de la información | 2016-2018 | Shenzhen, China
+
+FORMACIÓN SELECCIONADA
+Microsoft Certified: Azure AI Fundamentals (AI-900)
+Adobe Certified Expert, After Effects
+Databricks Mosaic AI | Certificado de curso | 2026 | ID de credencial RRXO8HSACR29
+Building Your First AI Agent with LangChain | Edureka | 2026 | ID de credencial 33RUZI5SP0ZU
+Applied Agentic AI Pipelines with LangChain | Edureka | 2026 | ID de credencial Z9JGKO7KWQ6A
+Multi-Agent Systems with LangGraph | Edureka | 2026 | ID de credencial C8KPTX6U5B6C
+Developing MCP-Powered Agentic AI Systems | Edureka | 2026 | ID de credencial PEGPNFWLRNHG
+Agentic AI Engineering Specialization | Edureka | 2026 | ID de credencial GZ2Q50QNLE6N
+Designing Multi-Agent Systems: Collaboration and Workflows | Board Infinity | 2026 | ID de credencial ORYP5BAAR0KO
+AI Agent Architecture: Reasoning, Memory, and LangGraph | Board Infinity | 2026 | ID de credencial SO0LO9NOCFXF
+Deploying AI Agents: LLMs, LangGraph, and Production APIs | Board Infinity | 2026 | ID de credencial WFOU01N1PLP7
+Building and Deploying AI Agents with LLMs and LangChain Specialization | Board Infinity | 2026 | ID de credencial V7QS07EJVS93
+AI Automation Engineer with n8n | LearnKartS | 2026 | ID de credencial YUNCHF6IXQJQ
+Data Privacy, Ethics, and Responsible AI | Certificado de especialización | 2026 | ID de credencial W4PPDYPHJKUR
+Foundations of AI Governance and Responsible Development | LearnQuest | 2026 | ID de credencial 8STVBR62T6CY
+Managing AI Systems: Development, Deployment, and Governance Specialization | Board Infinity | 2026 | ID de credencial HZ7XDA9WCE2I
+AI Governance & ISO 42001 Readiness for GRC, Audit, & Legal | British Standards Institution | 2026 | ID de credencial UXUS7TQ36GF4
+Investment Management with Python and Machine Learning | EDHEC Business School | 2026 | ID de credencial EGOPNC45Z7X4
+AI Foundations for Business Professionals | Saïd Business School, University of Oxford | 2026 | ID de credencial LWTECCK71WBO
+CompTIA SecAI+ (CY0-001) Certification Exam Prep | Packt | 2026 | ID de credencial Q4IYZTSRNUTN
+Machine Learning Operations (MLOps) | Board Infinity | 2026 | ID de credencial 3HZCX9EHMFMO
+IBM Generative AI Engineering Professional Certificate | IBM | agosto de 2026 | ID de credencial H21CWM4OU7XQ
+IBM Machine Learning Professional Certificate | IBM | agosto de 2026 | ID de credencial TRO88CF6Y826
+Google Data Analytics Professional Certificate | Google | agosto de 2026 | ID de credencial WMUDGIG7OY8D
+
+FORMACIÓN PROFESIONAL — 2026
+IBM Generative AI Engineering | IBM | Certificado profesional | ID de credencial H21CWM4OU7XQ
+- Introduction to Artificial Intelligence (AI) | ID de credencial QDZP4952G529
+- Generative AI: Introduction and Applications | ID de credencial Z7OYZQ8R6JC1
+- Generative AI: Prompt Engineering Basics | ID de credencial 1CQ1ZFB8WTJ7
+- Python for Data Science, AI & Development | ID de credencial T9UGJSEZXDO6
+- Developing AI Applications with Python and Flask | ID de credencial QJDTTTMUQ0LE
+- Building Generative AI-Powered Applications with Python | ID de credencial OET9Y99RPDEB
+- Generative AI and LLMs: Architecture and Data Preparation | ID de credencial N0OS7ZV1ZTQ1
+- Gen AI Foundational Models for NLP & Language Understanding | ID de credencial 1V0QE5VLIUWU
+- Generative AI Language Modeling with Transformers | ID de credencial 76HQW3YWTQTC
+- Generative AI Engineering and Fine-Tuning Transformers | ID de credencial MLODQEU2VSJP
+- Generative AI Advanced Fine-Tuning for LLMs | ID de credencial 0MTB497LTU5X
+- Fundamentals of AI Agents Using RAG and LangChain | ID de credencial JF0OW4KZ2G96
+- Project: Generative AI Applications with RAG and LangChain | ID de credencial AOX3WDKI145D
+- Introduction to Deep Learning & Neural Networks with Keras | ID de credencial 7MUT0S0WTGV2
+- Machine Learning with Python | ID de credencial MA12RUEA95L1
+- Supervised Machine Learning: Regression | ID de credencial PYCV7XOO4LLK
+- Supervised Machine Learning: Classification | ID de credencial UKPCHR2RICZS
+- Unsupervised Machine Learning | ID de credencial G1VSALTXHPRU
+- Exploratory Data Analysis for Machine Learning | ID de credencial QVXE8FP3W0XI
+- Data Analysis with Python | ID de credencial WOD7TDCBN50J
+
+Databricks Mosaic AI | Certificado de curso | ID de credencial RRXO8HSACR29
+
+Agentic AI Engineering | Edureka | Certificado de especialización | ID de credencial GZ2Q50QNLE6N
+- Building Your First AI Agent with LangChain | ID de credencial 33RUZI5SP0ZU
+- Applied Agentic AI Pipelines with LangChain | ID de credencial Z9JGKO7KWQ6A
+- Multi-Agent Systems with LangGraph | ID de credencial C8KPTX6U5B6C
+- Developing MCP-Powered Agentic AI Systems | ID de credencial PEGPNFWLRNHG
+
+Building and Deploying AI Agents with LLMs and LangChain | Board Infinity | Certificado de especialización | ID de credencial V7QS07EJVS93
+- AI Agent Architecture: Reasoning, Memory, and LangGraph | ID de credencial SO0LO9NOCFXF
+- Designing Multi-Agent Systems: Collaboration and Workflows | ID de credencial ORYP5BAAR0KO
+- Deploying AI Agents: LLMs, LangGraph, and Production APIs | ID de credencial WFOU01N1PLP7
+
+Investment Management with Python and Machine Learning | EDHEC Business School | Certificado de especialización
+- Introduction to Portfolio Construction and Analysis with Python | ID de credencial K3YYB6E213GY
+- Advanced Portfolio Construction and Analysis with Python | ID de credencial PI2VZASXJ2NR
+- Python and Machine Learning for Asset Management | ID de credencial XWMR6R7BFW7F
+- Python and Machine-Learning for Asset Management with Alternative Data Sets | ID de credencial 5SL26L5XFIRY
+
+Data Privacy, Ethics, and Responsible AI | Certificado de especialización
+- Building Trust: Ethics for AI-powered Chatbots | ID de credencial KHC24ZIMD4UP
+- Fundamental Rights Impact Assessment for GenAI Projects | ID de credencial NWLPDHLE4SQA
+- User Awareness and Education for Generative AI | ID de credencial 6ZH2XSY4X1VY
+- Introduction to Prompt Injection Vulnerabilities | ID de credencial 92DG3JSOPHXL
+- Data Privacy and Protection Standards | ID de credencial 69T2HK10MCBW
+- AI and European Union Law: Navigating Regulatory Compliance | ID de credencial CXKRGYMZBWL6
+
+AI Automation Engineer with n8n | LearnKartS | Certificado de especialización
+- Workflow Automation with n8n: Logic, Data & Error Handling | ID de credencial 0U3L8YXLIGLK
+- Integrate AI Models in n8n: Prompt Engineering & Outputs | ID de credencial SYLD77A55WBO
+- Build AI Agents & Secure API Integrations with n8n | ID de credencial SAFAGPUKDIL7
+- AI Memory Systems: Production RAG Pipelines with n8n | ID de credencial KU3W35C54Z9T
+- Build MCP Automation Projects with n8n: Connect AI Clients | ID de credencial X7YFWSUKK69U
+- Multi-Agent Systems Design: AI Customer Support with n8n | ID de credencial MJX0L3XJ82K2
+- Deploy, Test & Secure AI Workflows with n8n | ID de credencial LPN041O3NGGZ
+
+Foundations of AI Governance and Responsible Development | LearnQuest | 2026 | ID de credencial 8STVBR62T6CY
+
+Managing AI Systems: Development, Deployment, and Governance | Board Infinity | Certificado de especialización
+- AI Systems Design: RAG Pipelines and LLM Architecture | ID de credencial P9ZUHTTKQ546
+- MLOps and LLMOps: Deploying and Scaling AI in Production | ID de credencial 5XRHG7TPQ6IR
+- AI Risk and Compliance: Audit and Governance Foundations | ID de credencial N6UE7DP7T104
+
+AI Governance & ISO 42001 Readiness for GRC, Audit, & Legal | British Standards Institution | Certificado de especialización
+- ISO/IEC 22989:2023 An Introduction to the Fundamentals of AI | ID de credencial 0YTL5PHGC0O5
+- AI System Impact Assessment Guidance | ID de credencial JG2DXNZ66KGO
+- AI Management Essentials: Integrating ISO 42001 & ISO 23894 | ID de credencial I61HD0HLKVAB
+- Understanding the Foundations of the EU AI Act | ID de credencial X5JU1YKW8B9S
+- Approaches to Establish Trust in AI Systems | ID de credencial U6ZLGVCLZ5H5
+
+AI Foundations for Business Professionals | Saïd Business School, University of Oxford | Certificado de especialización | ID de credencial LWTECCK71WBO
+- AI Governance | ID de credencial BNQDJXKCD1O5
+- Generative and Agentic AI | ID de credencial VNIB5TAX5SVF
+- AI Essentials | ID de credencial LMTNWRB8U84N
+
+CompTIA SecAI+ (CY0-001) Certification Exam Prep | Packt | Certificado de especialización | ID de credencial Q4IYZTSRNUTN
+- Advanced AI Security, Automation, Governance, and Compliance | ID de credencial INDPFS30V3OV
+- AI Security Architecture, Controls, and Defensive Operations | ID de credencial 1SF8VGAOC9CM
+- AI Foundations and Secure AI Fundamentals | ID de credencial D4JLEZG41RLX
+
+Machine Learning Operations (MLOps) | Board Infinity | Certificado de especialización | ID de credencial 3HZCX9EHMFMO
+- Model Serving Systems: Containers, APIs & Scalability | ID de credencial HVVGUCUZZ6A5
+- Cloud Platforms for ML: AWS, Azure & GCP Deployment | ID de credencial VXCX7BOCN5EK
+- DevOps for Machine Learning: CI/CD, APIs & Deployment | ID de credencial PEL4KC01Y3UU
+
+IBM Machine Learning | IBM | Certificado profesional | ID de credencial TRO88CF6Y826
+- Exploratory Data Analysis for Machine Learning | ID de credencial QVXE8FP3W0XI
+- Supervised Machine Learning: Regression | ID de credencial PYCV7XOO4LLK
+- Supervised Machine Learning: Classification | ID de credencial UKPCHR2RICZS
+- Unsupervised Machine Learning | ID de credencial G1VSALTXHPRU
+- Deep Learning and Reinforcement Learning | ID de credencial P9KWZ6UPS2UK
+- Machine Learning Capstone | ID de credencial KF03O8XOY1KG
+
+Google Data Analytics | Google | Certificado profesional | ID de credencial WMUDGIG7OY8D
+- Foundations: Data, Data, Everywhere | ID de credencial V4FNLT216Q8B
+- Ask Questions to Make Data-Driven Decisions | ID de credencial CLX6U7RJXKDZ
+- Prepare Data for Exploration | ID de credencial 137FKE9U9IKK
+- Process Data from Dirty to Clean | ID de credencial KC57MXBQZ1SX
+- Analyze Data to Answer Questions | ID de credencial YFQT024FPUVM
+- Share Data Through the Art of Visualization | ID de credencial SJ76VZSHXMWV
+- Introduction to Data Analysis Using Python | ID de credencial UBFYCZ59VCOI
+- Google Data Analytics Capstone: Complete a Case Study | ID de credencial ZCQUM67FGISV
+- Accelerate Your Job Search with AI | ID de credencial HP5JK2INXV6R
+
+IDIOMAS
+Español: nativo
+Inglés: C2 / profesional completo
+Chino mandarín: C2 / profesional completo
+Cantonés: conversacional
+
+ROLES OBJETIVO
+Founding AI Engineer | AI Product Engineer | AI Platform Lead | Head of AI | Staff AI Engineer | Technical Product Lead
+
+PORTFOLIO
+samihalawa.com/cv | samihalawa.com/projects | linkedin.com/in/samihalawa | github.com/samihalawa

@@ -87,8 +87,8 @@ const featuredCredentials = [
     image: 'ibm-generative-ai-engineering-H21CWM4OU7XQ.webp',
     pdf: 'ibm-generative-ai-engineering-H21CWM4OU7XQ.pdf',
     url: 'https://www.coursera.org/account/accomplishments/specialization/H21CWM4OU7XQ',
-    detailEn: 'Twenty-course Professional Certificate spanning Python, machine learning, deep learning, transformers, fine-tuning, RAG, LangChain and production generative-AI applications.',
-    detailEs: 'Certificado Profesional de veinte cursos sobre Python, machine learning, deep learning, transformers, fine-tuning, RAG, LangChain y aplicaciones de IA generativa en producción.'
+    detailEn: 'Official 16-course Professional Certificate spanning Python, machine learning, deep learning, transformers, fine-tuning, RAG, LangChain and production generative-AI applications, supported by 20 archived IBM course credentials.',
+    detailEs: 'Certificado Profesional oficial de 16 cursos sobre Python, machine learning, deep learning, transformers, fine-tuning, RAG, LangChain y aplicaciones de IA generativa en producción, respaldado por 20 credenciales IBM de cursos archivadas.'
   },
   {
     rank: '02',
@@ -139,6 +139,12 @@ const ibmGenerativeCourses = [
 
 const majorCredentials = [
   ['IBM Generative AI Engineering Professional Certificate', 'IBM', 'H21CWM4OU7XQ'],
+  ['IBM Machine Learning Professional Certificate', 'IBM', 'TRO88CF6Y826'],
+  ['Microsoft Generative AI Engineering', 'Microsoft', '4F55T94ZR1DH'],
+  ['Microsoft AI & ML Engineering', 'Microsoft', 'G39IMP9491N8'],
+  ['Google AI', 'Google', 'RFQT2RK02F2E'],
+  ['AI in Healthcare', 'Stanford University', '7XCTV3Q16K04'],
+  ['中级商务汉语——商务活动篇', 'Peking University', 'OG02CJKE43H4'],
   ['Google Data Analytics Professional Certificate', 'Google', 'WMUDGIG7OY8D'],
   ['AI Foundations for Business Professionals', 'Saïd Business School, University of Oxford', 'LWTECCK71WBO'],
   ['CompTIA SecAI+ (CY0-001) Certification Exam Prep', 'Packt', 'Q4IYZTSRNUTN'],
@@ -152,7 +158,7 @@ const majorCredentials = [
   ['AI Governance & ISO 42001 Readiness for GRC, Audit, & Legal', 'British Standards Institution', 'UXUS7TQ36GF4']
 ] as const;
 
-const roleEditionFile = (key: string) => `${key}_Comprehensive_2026-08-04-v2`;
+const roleEditionFile = (key: string) => `${key}_Comprehensive_2026-08-09`;
 
 const recommendedCredentials = [
   {
@@ -197,9 +203,9 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
   const { language } = useTranslation();
   const selected = edition || (language === 'es' ? 'es' : 'en');
   const spanish = selected === 'es';
-  const pdf = spanish ? '/cv/Sami_Halawa_CV_ES_2026-08-04-v2.pdf' : '/cv/Sami_Halawa_CV_2026-08-04-v2.pdf';
-  const ats = spanish ? '/cv/Sami_Halawa_CV_ES_ATS_2026-08-04-v2.txt' : '/cv/Sami_Halawa_CV_ATS_2026-08-04-v2.txt';
-  const preview = spanish ? '/cv/Sami_Halawa_CV_ES_preview_2026-08-04-v2.png' : '/cv/Sami_Halawa_CV_preview_2026-08-04-v2.png';
+  const pdf = spanish ? '/cv/Sami_Halawa_CV_ES_2026-08-09.pdf' : '/cv/Sami_Halawa_CV_2026-08-09.pdf';
+  const ats = spanish ? '/cv/Sami_Halawa_CV_ES_ATS_2026-08-09.txt' : '/cv/Sami_Halawa_CV_ATS_2026-08-09.txt';
+  const preview = spanish ? '/cv/Sami_Halawa_CV_ES_preview_2026-08-09.png' : '/cv/Sami_Halawa_CV_preview_2026-08-09.png';
   const primaryCredential = featuredCredentials[0];
   const description = spanish
     ? 'Una visión completa de productos, sistemas para clientes, open source, investigación y docencia, disponible en PDF y en formato ATS.'
@@ -294,7 +300,7 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
             <div className="grid gap-4 py-6 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'IBM Generative AI Engineering' : 'IBM Generative AI Engineering'}</p>
-                <h3 className="cv-serif mt-3 text-3xl font-normal text-slate-950">{spanish ? 'Veinte cursos, cada uno con su credencial oficial.' : 'Twenty courses, each with its official credential.'}</h3>
+                <h3 className="cv-serif mt-3 text-3xl font-normal text-slate-950">{spanish ? 'Programa oficial de 16 cursos · 20 credenciales IBM archivadas.' : 'Official 16-course programme · 20 archived IBM course credentials.'}</h3>
               </div>
               <span className="font-mono text-sm font-bold text-slate-500">20 + 01</span>
             </div>
@@ -342,9 +348,9 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
             <div className="grid gap-4 py-6 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Inventario completo' : 'Complete inventory'}</p>
-                <h3 className="cv-serif mt-3 text-3xl font-normal text-slate-950">{spanish ? '12 programas avanzados · 84 credenciales verificadas.' : '12 advanced programmes · 84 verified credentials.'}</h3>
+                <h3 className="cv-serif mt-3 text-3xl font-normal text-slate-950">{spanish ? '18 programas avanzados · 114 credenciales.' : '18 advanced programmes · 114 credentials.'}</h3>
               </div>
-              <span className="font-mono text-sm font-bold text-slate-500">12 / 84</span>
+              <span className="font-mono text-sm font-bold text-slate-500">18 / 114</span>
             </div>
             <ol className="grid border-t border-slate-300 md:grid-cols-2 md:gap-x-10">
               {majorCredentials.map(([title, issuer, id], index) => (
@@ -368,7 +374,7 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Perfiles profesionales' : 'Professional profiles'}</p>
               <h2 className="cv-serif mt-4 text-4xl font-normal leading-tight tracking-[-0.025em] text-slate-950">{spanish ? 'Elige el perfil más cercano a la oportunidad.' : 'Choose the profile closest to the opportunity.'}</h2>
-              <p className="mt-5 max-w-md leading-relaxed text-slate-700">{spanish ? 'Todos presentan la trayectoria completa, el stack tecnológico, 85 proyectos y colaboraciones, 84 credenciales profesionales y los logros principales, situando primero las capacidades más relevantes para cada función.' : 'Every profile presents the complete career history, technology stack, 85 projects and engagements, 84 professional credentials and major achievements, with the most relevant capabilities first.'}</p>
+              <p className="mt-5 max-w-md leading-relaxed text-slate-700">{spanish ? 'Todos presentan la trayectoria completa, el stack tecnológico, 85 proyectos y colaboraciones, 114 credenciales profesionales y los logros principales, situando primero las capacidades más relevantes para cada función.' : 'Every profile presents the complete career history, technology stack, 85 projects and engagements, 114 professional credentials and major achievements, with the most relevant capabilities first.'}</p>
             </div>
             <ol className="border-t border-slate-400">
               {roleEditions.map((item, index) => (
@@ -392,15 +398,15 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
           <aside className="lg:sticky lg:top-24 lg:self-start">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Formación profesional actual' : 'Current professional development'}</p>
             <h2 className="cv-serif mt-4 text-3xl font-normal leading-tight text-slate-950">{spanish ? 'IA agéntica, plataformas y gobernanza.' : 'Agentic AI, platforms and governance.'}</h2>
-            <p className="mt-5 leading-relaxed text-slate-700">{spanish ? 'Mis 84 credenciales profesionales abarcan ingeniería de IA generativa de IBM; análisis de datos de Google; estrategia y gobernanza de IA de Saïd Business School, University of Oxford; ingeniería de IA agéntica; arquitectura de IA segura y preparación SecAI+ de Packt; MLOps de producción; Databricks Mosaic AI; automatización con n8n; ISO 42001; y métodos cuantitativos.' : 'My 84 professional credentials span IBM generative-AI engineering; Google data analytics; AI strategy and governance from Saïd Business School, University of Oxford; agentic AI engineering; secure-AI architecture and SecAI+ exam preparation; production MLOps; Databricks Mosaic AI; n8n automation; ISO 42001; and quantitative methods.'}</p>
+            <p className="mt-5 leading-relaxed text-slate-700">{spanish ? 'Mis 114 credenciales profesionales abarcan ingeniería de IA generativa y machine learning de IBM y Microsoft; IA aplicada de Google; IA sanitaria de Stanford University; estrategia y gobernanza de IA de Saïd Business School, University of Oxford; ingeniería de IA agéntica; MLOps; Databricks Mosaic AI; automatización con n8n; ISO 42001; métodos cuantitativos y chino comercial.' : 'My 114 professional credentials span IBM and Microsoft generative-AI engineering and machine learning; applied AI from Google; healthcare AI from Stanford University; AI strategy and governance from Saïd Business School, University of Oxford; agentic AI engineering; MLOps; Databricks Mosaic AI; n8n automation; ISO 42001; quantitative methods and business Chinese.'}</p>
           </aside>
           <figure>
             <div className="border border-slate-400 bg-white p-2 shadow-[0_28px_70px_-42px_rgba(15,23,42,.55)] sm:p-4">
               <img src={preview} alt={spanish ? 'Primera página del CV completo' : 'First page of the complete CV'} className="block w-full bg-white" />
             </div>
             <figcaption className="mt-4 flex flex-col items-start justify-between gap-3 border-t border-slate-400 pt-4 text-sm text-slate-600 sm:flex-row sm:items-center">
-              <span>{spanish ? 'Vista previa de la página 1 de 8.' : 'Preview of page 1 of 8.'}</span>
-              <a href={pdf} target="_blank" rel="noopener noreferrer" data-analytics-event="cv_download" className="inline-flex min-h-11 items-center gap-2 border-b border-slate-500 font-bold text-slate-800 hover:border-slate-950 hover:text-slate-950">{spanish ? 'Abrir las ocho páginas' : 'Open all eight pages'}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>
+              <span>{spanish ? 'Vista previa de la página 1 de 10.' : 'Preview of page 1 of 10.'}</span>
+              <a href={pdf} target="_blank" rel="noopener noreferrer" data-analytics-event="cv_download" className="inline-flex min-h-11 items-center gap-2 border-b border-slate-500 font-bold text-slate-800 hover:border-slate-950 hover:text-slate-950">{spanish ? 'Abrir las diez páginas' : 'Open all ten pages'}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>
             </figcaption>
           </figure>
         </section>
