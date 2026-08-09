@@ -1,5 +1,6 @@
 # INDEX
 
+active CV choices | the site can expose comprehensive clones and expired company-specific editions as permanent choices | keep complete EN/ES masters and list exactly six two-page reusable application profiles | do not delete historical URLs or keep Atos/Archer/Zooplus/standalone Voice in the active list | verify rendered six-entry list plus exact PDF/ATS hashes and downloads
 replaced public media | a reused asset URL can keep serving an older sensitive image after the application deploy succeeds | publish the reviewed replacement under a new cache-safe filename and update the rendered reference | do not rely on a successful deploy, cache-busting query or eventual CDN expiry | verify the plain production asset hash and the image actually rendered by the page
 stable CV asset aliases | current dated downloads can coexist with stale stable PDF/ATS names and previews | sync every current Comprehensive PDF/ATS alias and both first-page previews from the canonical release | do not overwrite distinct legacy non-Comprehensive editions or trust route links alone | verify canonical=dated=stable hashes, 114/114 IDs, 1/10 previews and live MIME/body hashes
 current credential inventory | the website can preserve a stale count after the source archive grows | publish 17 programmes and 114 unique credential IDs, while preserving two no-ID historical certifications | do not retain the prior 13/87 snapshot, overclaim a short programme list as the entire credential ledger, or misstate overlapping programme courses as extra unique credentials | compare current archive IDs, all CV/ATS outputs, rendered programme/media counts and credential links
@@ -27,6 +28,16 @@ blog content pipeline | hard-coded slug list + modal did not scale to daily hub-
 SPA production routes | public asset directories collide with client routes | serve file-shaped URLs as static files and everything else as the SPA shell | do not let Nginx treat route names as directories or leak port 8080 redirects | verify slash and non-slash routes plus real asset MIME types
 Coolify Linux build | macOS lock can omit the Linux Rollup binary and Docker hosts differ between arm64 and x64 | install the build container's matching native Rollup GNU package | do not hardcode one CPU or infer deployability from the macOS Vite build | verify local container plus Coolify build the pushed commit and live routes
 public portfolio | stock imagery and invented social proof replaced source evidence | use dated metrics, real screenshots and public links | do not publish placeholders, arbitrary percentages or unsupported impact | verify exact live route, image load, text and responsive layout
+
+## 2026-08-09 — Keep six reusable application profiles beside the complete masters
+
+- **Status:** CURRENT
+- **Project/root:** `2025-FINAL-AISTUDIO-samihalawa-final`; `/cv/en`, `/cv/es` and public application-resume downloads.
+- **Mistake corrected:** the site exposed eight comprehensive role editions, including expired Atos, Archer and Zooplus application files plus a standalone Voice family that duplicated GenAI/automation evidence.
+- **Superior approach:** retain the complete EN/ES ten-page masters and their historical URLs, but list exactly six current two-page application profiles: EN/ES Founding AI/Product, GenAI/Agents/Voice/Automation, Platform/Product Engineering/MLOps, Clinical AI and Teaching/Governance.
+- **Evidence:** `pages/CVPage.tsx` and the twelve v4 PDF/ATS assets copied from the canonical CV release.
+- **Triggers / verification:** too many CVs, role profile, application resume, company-specific, Atos, Archer, Zooplus or Voice; render `/cv/en` and `/cv/es`, count six entries and compare every live download hash/MIME with the canonical v4 source.
+- **Do / don't:** do keep historical application URLs available for prior links; don't present one-off company documents as current reusable choices or describe application resumes as the complete evidence record.
 
 ## 2026-08-09 — Replaced public media needs a cache-safe URL
 

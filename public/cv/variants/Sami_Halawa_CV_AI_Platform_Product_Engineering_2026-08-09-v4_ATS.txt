@@ -1,0 +1,58 @@
+SAMI HALAWA RIBAS
+AI Platform & Product Engineer · MLOps · Full-Stack Delivery
+
+Madrid, Spain · EU work authorisation · +34 679 794 037 · sami@oulang.ai · samihalawa.com · linkedin.com/in/samihalawa · github.com/samihalawa
+
+PROFILE
+AI platform and product engineer connecting model workflows to dependable APIs, data, infrastructure, interfaces, CI/CD, observability and operating controls.
+
+CORE EXPERTISE
+Platform engineering: Python, FastAPI, TypeScript, Node.js, REST APIs, SQL, webhooks and background jobs
+MLOps / LLMOps: Model serving, RAG/agent architecture, evaluation, CI/CD, logs and operational controls
+Product surfaces: React, Next.js, Ionic, Capacitor, Expo/React Native, SwiftUI and responsive web
+Infrastructure: Docker, Linux, Cloudflare, Coolify, Hetzner and working delivery familiarity with AWS, Azure and GCP
+
+SELECTED EXPERIENCE
+Founder & AI Product Engineer · Agents AI Ltd | Jul 2025–Present · Madrid, Spain · UK-registered company
+- Own product discovery, architecture, implementation, deployment, analytics, monetisation and operational handover across founder-led and B2B systems.
+- Built OULANG across web, iOS and Android and extended shared product capabilities into Huatong, OUPIN, AutoClient and applied AI services.
+
+Senior Full-Stack Engineer · Damehosting | 2019–2023
+- Developed and maintained production web systems across frontend, backend, integrations and delivery.
+- Supported code review, CI/CD, Linux/server operations and developer mentoring.
+
+Founder & Agentic Revenue Operations Product Lead · AutoClient | 2024–Present · Madrid / Remote
+- Designed an agentic system for account research, enrichment, qualification, CRM work and coordinated follow-up across email, LinkedIn, WhatsApp and voice.
+- Connected live business context, structured outputs and human checkpoints from the first search to the next commercial action; selected by Lanzadera in 2025.
+
+Technical Product Lead & AI Mentor · Valerio Trigos / Umbramed | 2025–2026 · Remote
+- Led Ionic/Capacitor/PWA architecture, exam-data workflows, delivery recovery, integrations, payment preparation and AI-assisted product mentoring.
+- Supported product roadmap, deployment preparation and accelerator-application materials.
+
+Web, Mobile, Growth & Education · Megawebs / Megacursos | 2009–2023
+- Built more than 70 web and mobile projects and led SEO, acquisition and customer delivery.
+- Produced a 373-video public technical catalogue spanning creative technology, software and applied AI.
+
+DELIVERY EVIDENCE
+- Shared marketplace platform: Operated identity, listings, search, payments, analytics and multilingual delivery across OULANG, Huatong and OUPIN.
+- Actor and data infrastructure: Built collection and downstream-consumer workflows around Crawlab/Apify-style actors, shared storage and product reporting.
+- Cross-platform products: Delivered web, PWA, iOS and Android work across marketplaces, productivity, medical education and consumer products.
+- Production operations: Owned containerised deployments, logs, monitoring, analytics, release recovery and technical handover.
+
+EDUCATION AND LANGUAGES
+Li Po Chun United World College of Hong Kong · International Baccalaureate, Science & Mathematics · 2010–2012 · Rafael del Pino Foundation scholarship
+Shenzhen Institute of Information Technology · Computing and information-technology studies · 2016–2018
+Spanish native; English C2; Mandarin Chinese C2; Cantonese conversational.
+
+SELECTED CREDENTIALS
+- Microsoft Certified: Azure AI Fundamentals (AI-900)
+- IBM Machine Learning Professional Certificate · TRO88CF6Y826
+- Microsoft AI & ML Engineering · G39IMP9491N8
+- Databricks Mosaic AI · RRXO8HSACR29
+- Machine Learning Operations (MLOps) · 3HZCX9EHMFMO
+- Developing MCP-Powered Agentic AI Systems · PEGPNFWLRNHG
+
+PORTFOLIO
+samihalawa.com/projects
+github.com/samihalawa
+huggingface.co/samihalawa

@@ -6,60 +6,46 @@ interface CVPageProps { edition?: 'en' | 'es' }
 
 const roleEditions = [
   {
-    key: 'Founding_Head_of_AI',
-    en: 'Founding / Head of AI',
-    es: 'Founding / Dirección de IA',
-    detailEn: 'Product, architecture, leadership and end-to-end ownership.',
-    detailEs: 'Producto, arquitectura, liderazgo y responsabilidad integral.'
+    key: 'Founding_AI_Product',
+    en: 'Founding AI / Product — English',
+    es: 'Fundador técnico / Producto IA — inglés',
+    detailEn: 'Technical founder, AI product engineering and end-to-end product ownership.',
+    detailEs: 'Fundador técnico, ingeniería de producto IA y responsabilidad integral.'
   },
   {
-    key: 'GenAI_RAG_Agents',
-    en: 'GenAI / RAG / Agents',
-    es: 'GenAI / RAG / Agentes',
-    detailEn: 'Agentic systems, retrieval, MCP, tools and AI delivery.',
-    detailEs: 'Sistemas agénticos, retrieval, MCP, herramientas y entrega de IA.'
+    key: 'Founding_AI_Product_ES',
+    en: 'Founding AI / Product — Spanish',
+    es: 'Fundador técnico / Producto IA — español',
+    detailEn: 'Spanish application edition for product, engineering and technical-leadership roles.',
+    detailEs: 'Edición en español para producto, ingeniería y liderazgo técnico.'
   },
   {
-    key: 'AI_Platform_MLOps',
-    en: 'AI Platform / MLOps',
-    es: 'Plataforma IA / MLOps',
-    detailEn: 'APIs, data, infrastructure, CI/CD and observability.',
-    detailEs: 'APIs, datos, infraestructura, CI/CD y observabilidad.'
+    key: 'GenAI_Agents_Automation',
+    en: 'GenAI / Agents / Voice / Automation',
+    es: 'GenAI / Agentes / Voz / Automatización',
+    detailEn: 'RAG, MCP, agent workflows, voice and messaging integrations, evaluation and delivery.',
+    detailEs: 'RAG, MCP, flujos agénticos, integraciones de voz y mensajería, evaluación y entrega.'
   },
   {
-    key: 'Voice_API_Automation',
-    en: 'Voice / API Automation',
-    es: 'Voz / APIs / Automatización',
-    detailEn: 'Telnyx and custom Voice APIs, multilingual agents, live CRM context and post-call automation.',
-    detailEs: 'Telnyx y APIs de voz, agentes multilingües, contexto CRM en directo y automatización tras llamada.'
+    key: 'AI_Platform_Product_Engineering',
+    en: 'AI Platform / Product Engineering / MLOps',
+    es: 'Plataforma IA / Ingeniería de producto / MLOps',
+    detailEn: 'APIs, data, infrastructure, full-stack product delivery, CI/CD and observability.',
+    detailEs: 'APIs, datos, infraestructura, entrega full-stack, CI/CD y observabilidad.'
+  },
+  {
+    key: 'Clinical_AI_Healthcare',
+    en: 'Clinical AI / Healthcare',
+    es: 'IA clínica / Salud',
+    detailEn: 'Medical-learning products, ophthalmology workflows, multimodal review and human oversight.',
+    detailEs: 'Productos de aprendizaje médico, flujos oftalmológicos, revisión multimodal y supervisión humana.'
   },
   {
     key: 'AI_Teaching_Governance',
-    en: 'AI Teaching / Governance',
-    es: 'Docencia / Gobernanza de IA',
-    detailEn: 'Practical education, responsible AI and governance.',
-    detailEs: 'Formación práctica, IA responsable y gobernanza.'
-  },
-  {
-    key: 'Atos_Technical',
-    en: 'Technical AI / Full-Stack',
-    es: 'IA técnica / Full-Stack',
-    detailEn: 'Detailed technical edition covering AI, full-stack delivery, data, APIs and deployment, including current Databricks, LangChain and LangGraph qualifications.',
-    detailEs: 'Edición técnica detallada sobre IA, desarrollo full-stack, datos, APIs y despliegue, con formación actual en Databricks, LangChain y LangGraph.'
-  },
-  {
-    key: 'Archer_Agentic_AI_Architect_4446313187',
-    en: 'Agentic AI Architect',
-    es: 'Arquitectura de IA agéntica',
-    detailEn: 'Enterprise agentic architecture, LangChain/LangGraph, MCP, RAG, voice and production delivery.',
-    detailEs: 'Arquitectura agéntica empresarial, LangChain/LangGraph, MCP, RAG, voz y entrega en producción.'
-  },
-  {
-    key: 'Zooplus_Agentic_Commerce',
-    en: 'Agentic AI / Commerce',
-    es: 'IA agéntica / Comercio',
-    detailEn: 'Production AI services, commerce workflows, evaluation, observability and product delivery.',
-    detailEs: 'Servicios de IA en producción, flujos de comercio, evaluación, observabilidad y entrega de producto.'
+    en: 'AI Teaching / Technical Communication / Governance',
+    es: 'Docencia IA / Comunicación técnica / Gobernanza',
+    detailEn: 'Implementation-first education, stakeholder communication, responsible AI and governance.',
+    detailEs: 'Formación práctica, comunicación con stakeholders, IA responsable y gobernanza.'
   }
 ];
 
@@ -302,7 +288,7 @@ const legacyCertifications = [
   ['Adobe Certified Expert', 'After Effects']
 ] as const;
 
-const roleEditionFile = (key: string) => `${key}_Comprehensive_2026-08-09-v3`;
+const roleEditionFile = (key: string) => `${key}_2026-08-09-v4`;
 
 const recommendedCredentials = [
   {
@@ -556,9 +542,9 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
         <section className="border-t border-slate-400 py-12 sm:py-16">
           <div className="grid gap-8 lg:grid-cols-[minmax(15rem,.55fr)_minmax(0,1.45fr)] lg:gap-16">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Perfiles profesionales' : 'Professional profiles'}</p>
-              <h2 className="cv-serif mt-4 text-4xl font-normal leading-tight tracking-[-0.025em] text-slate-950">{spanish ? 'Elige el perfil más cercano a la oportunidad.' : 'Choose the profile closest to the opportunity.'}</h2>
-              <p className="mt-5 max-w-md leading-relaxed text-slate-700">{spanish ? 'Todos presentan la trayectoria completa, el stack tecnológico, 85 proyectos y colaboraciones, 114 credenciales profesionales y los logros principales, situando primero las capacidades más relevantes para cada función.' : 'Every profile presents the complete career history, technology stack, 85 projects and engagements, 114 professional credentials and major achievements, with the most relevant capabilities first.'}</p>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'CV de candidatura' : 'Application resumes'}</p>
+              <h2 className="cv-serif mt-4 text-4xl font-normal leading-tight tracking-[-0.025em] text-slate-950">{spanish ? 'Elige el perfil que mejor encaja con la oportunidad.' : 'Choose the profile that best matches the opportunity.'}</h2>
+              <p className="mt-5 max-w-md leading-relaxed text-slate-700">{spanish ? 'Cada edición presenta en dos páginas la experiencia, los proyectos y las credenciales más relevantes. El CV maestro ofrece la trayectoria y el portfolio completos.' : 'Each two-page edition presents the most relevant experience, projects and credentials. The master CV provides the complete career and portfolio record.'}</p>
             </div>
             <ol className="border-t border-slate-400">
               {roleEditions.map((item, index) => (

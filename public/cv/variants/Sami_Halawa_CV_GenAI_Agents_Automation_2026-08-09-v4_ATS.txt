@@ -1,0 +1,58 @@
+SAMI HALAWA RIBAS
+Senior GenAI Engineer · RAG, Agents, Voice & Automation
+
+Madrid, Spain · EU work authorisation · +34 679 794 037 · sami@oulang.ai · samihalawa.com · linkedin.com/in/samihalawa · github.com/samihalawa
+
+PROFILE
+Hands-on AI engineer building agentic products from retrieval and orchestration through APIs, interfaces, voice and messaging integrations, deployment, evaluation and observability.
+
+CORE EXPERTISE
+Agents & RAG: LangChain, LangGraph, MCP, multi-agent workflows, memory, retrieval and structured outputs
+Models & evaluation: OpenAI, Anthropic, Gemini, open models, prompt design, tool schemas and evaluation loops
+Voice & automation: Telnyx, voice APIs, CRM context, email, WhatsApp, webhooks, n8n and post-call workflows
+Production delivery: Python, FastAPI, TypeScript, SQL, Docker, CI/CD, logs and human-review checkpoints
+
+SELECTED EXPERIENCE
+Founder & Agentic Revenue Operations Product Lead · AutoClient | 2024–Present · Madrid / Remote
+- Designed an agentic system for account research, enrichment, qualification, CRM work and coordinated follow-up across email, LinkedIn, WhatsApp and voice.
+- Connected live business context, structured outputs and human checkpoints from the first search to the next commercial action; selected by Lanzadera in 2025.
+
+Founder & AI Product Engineer · Agents AI Ltd | Jul 2025–Present · Madrid, Spain · UK-registered company
+- Own product discovery, architecture, implementation, deployment, analytics, monetisation and operational handover across founder-led and B2B systems.
+- Built OULANG across web, iOS and Android and extended shared product capabilities into Huatong, OUPIN, AutoClient and applied AI services.
+
+AI Instructor & Independent Technical Consultant | 2022–Present · Madrid / Remote
+- Teach practical AI, agents, MCP, automation, Python and product engineering through working applications, live builds and implementation-focused curricula.
+- Delivered more than 125 recorded hours of AI instruction, product workshops and technical implementation sessions in Spanish, English and Mandarin.
+
+Senior Full-Stack Engineer · Damehosting | 2019–2023
+- Developed and maintained production web systems across frontend, backend, integrations and delivery.
+- Supported code review, CI/CD, Linux/server operations and developer mentoring.
+
+Web, Mobile, Growth & Education · Megawebs / Megacursos | 2009–2023
+- Built more than 70 web and mobile projects and led SEO, acquisition and customer delivery.
+- Produced a 373-video public technical catalogue spanning creative technology, software and applied AI.
+
+DELIVERY EVIDENCE
+- AutoClient & voice agents: Connected research, enrichment, qualification and CRM write-back with multilingual email, LinkedIn, WhatsApp and voice workflows.
+- MCP toolchain: Built reusable visual-debugging, SMTP, WhatsApp, browser and developer-operation tools around Model Context Protocol.
+- Document & multimodal AI: Designed OCR/RAG ingestion, image-text review and structured-reporting workflows with explicit human checkpoints.
+- Governed automation: Applied validation, reviewable outputs, operational logs and escalation boundaries to customer-facing agent workflows.
+
+EDUCATION AND LANGUAGES
+Li Po Chun United World College of Hong Kong · International Baccalaureate, Science & Mathematics · 2010–2012 · Rafael del Pino Foundation scholarship
+Shenzhen Institute of Information Technology · Computing and information-technology studies · 2016–2018
+Spanish native; English C2; Mandarin Chinese C2; Cantonese conversational.
+
+SELECTED CREDENTIALS
+- IBM Generative AI Engineering Professional Certificate · H21CWM4OU7XQ
+- Microsoft Generative AI Engineering · 4F55T94ZR1DH
+- Agentic AI Engineering · GZ2Q50QNLE6N
+- Multi-Agent Systems with LangGraph · C8KPTX6U5B6C
+- Developing MCP-Powered Agentic AI Systems · PEGPNFWLRNHG
+- AI Automation Engineer with n8n · YUNCHF6IXQJQ
+
+PORTFOLIO
+samihalawa.com/projects
+github.com/samihalawa
+huggingface.co/samihalawa
