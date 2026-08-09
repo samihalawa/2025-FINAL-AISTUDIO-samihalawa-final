@@ -143,6 +143,7 @@ AI Foundations for Business Professionals | Saïd Business School, University of
 CompTIA SecAI+ (CY0-001) Certification Exam Prep | Packt | 2026 | ID de credencial Q4IYZTSRNUTN
 Machine Learning Operations (MLOps) | Board Infinity | 2026 | ID de credencial 3HZCX9EHMFMO
 IBM Generative AI Engineering Professional Certificate | IBM | agosto de 2026 | ID de credencial H21CWM4OU7XQ
+IBM Machine Learning Professional Certificate | IBM | agosto de 2026 | ID de credencial TRO88CF6Y826
 Google Data Analytics Professional Certificate | Google | agosto de 2026 | ID de credencial WMUDGIG7OY8D
 
 FORMACIÓN PROFESIONAL — 2026
@@ -233,6 +234,14 @@ Machine Learning Operations (MLOps) | Board Infinity | Certificado de especializ
 - Cloud Platforms for ML: AWS, Azure & GCP Deployment | ID de credencial VXCX7BOCN5EK
 - DevOps for Machine Learning: CI/CD, APIs & Deployment | ID de credencial PEL4KC01Y3UU
 
+IBM Machine Learning | IBM | Certificado profesional | ID de credencial TRO88CF6Y826
+- Exploratory Data Analysis for Machine Learning | ID de credencial QVXE8FP3W0XI
+- Supervised Machine Learning: Regression | ID de credencial PYCV7XOO4LLK
+- Supervised Machine Learning: Classification | ID de credencial UKPCHR2RICZS
+- Unsupervised Machine Learning | ID de credencial G1VSALTXHPRU
+- Deep Learning and Reinforcement Learning | ID de credencial P9KWZ6UPS2UK
+- Machine Learning Capstone | ID de credencial KF03O8XOY1KG
+
 Google Data Analytics | Google | Certificado profesional | ID de credencial WMUDGIG7OY8D
 - Foundations: Data, Data, Everywhere | ID de credencial V4FNLT216Q8B
 - Ask Questions to Make Data-Driven Decisions | ID de credencial CLX6U7RJXKDZ
@@ -243,6 +252,38 @@ Google Data Analytics | Google | Certificado profesional | ID de credencial WMUD
 - Introduction to Data Analysis Using Python | ID de credencial UBFYCZ59VCOI
 - Google Data Analytics Capstone: Complete a Case Study | ID de credencial ZCQUM67FGISV
 - Accelerate Your Job Search with AI | ID de credencial HP5JK2INXV6R
+
+Microsoft Generative AI Engineering | Microsoft | Certificado profesional | agosto de 2026 | ID de credencial 4F55T94ZR1DH
+- Getting started with generative AI in Azure | ID de credencial SMW3LG5X72ZL
+- Core generative models and techniques | ID de credencial PE3TGQVB50XO
+- Working with large language models using Azure | ID de credencial FD11L1E0B4BF
+- Multimodal and cross-modal AI integrations | ID de credencial OH4GMQEPKH34
+- MLOps and responsible AI practices | ID de credencial 9CG2SLXGYM30
+
+Microsoft AI & ML Engineering | Microsoft | Certificado profesional | agosto de 2026 | ID de credencial G39IMP9491N8
+- Foundations of AI and Machine Learning | ID de credencial FA78NGQKO1VN
+- AI and Machine Learning Algorithms and Techniques | ID de credencial VWR7QBKUNITH
+- Building Intelligent Troubleshooting Agents | ID de credencial DU57A0ZEV5DU
+- Microsoft Azure for AI and Machine Learning | ID de credencial YJ5H4J22TDDX
+- Advanced AI and Machine Learning Techniques and Capstone | ID de credencial TKUJGJODVTN6
+
+Google AI | Google | Certificado profesional | agosto de 2026 | ID de credencial RFQT2RK02F2E
+- AI Fundamentals | ID de credencial OWT0CHDBTHD0
+- AI for Brainstorming and Planning | ID de credencial 96Z9R755CHEP
+- AI for Research and Insights | ID de credencial 6CB3OJKKQV42
+- AI for Writing and Communicating | ID de credencial HM51URAMLAMK
+- AI for Content Creation | ID de credencial NKF2OQIUYSND
+- AI for Data Analysis | ID de credencial 9OIN1ITFNRAV
+- AI for App Building | ID de credencial F5XWGZ74AOS9
+
+AI in Healthcare | Stanford University | Certificado de especialización | agosto de 2026 | ID de credencial 7XCTV3Q16K04
+- Introduction to Healthcare | ID de credencial AN4QXXC6E9ZU
+- Introduction to Clinical Data | ID de credencial WTNOK2WJXL5N
+- Fundamentals of Machine Learning for Healthcare | ID de credencial T913R1OJ07R3
+- Evaluations of AI Applications in Healthcare | ID de credencial SF2H34G7FPCH
+- AI in Healthcare Capstone | ID de credencial 4ACPVPNXAZO6
+
+中级商务汉语——商务活动篇 | Peking University | Certificado de curso | agosto de 2026 | ID de credencial OG02CJKE43H4
 
 IDIOMAS
 Español: nativo

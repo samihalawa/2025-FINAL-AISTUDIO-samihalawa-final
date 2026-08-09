@@ -1,5 +1,6 @@
 # INDEX
 
+stable CV asset aliases | current dated downloads can coexist with stale stable PDF/ATS names and previews | sync every current Comprehensive PDF/ATS alias and both first-page previews from the canonical release | do not overwrite distinct legacy non-Comprehensive editions or trust route links alone | verify canonical=dated=stable hashes, 114/114 IDs, 1/10 previews and live MIME/body hashes
 current credential inventory | the website can preserve a stale count after the source archive grows | publish 17 programmes and 114 unique credential IDs, while preserving two no-ID historical certifications | do not retain the prior 13/87 snapshot, overclaim a short programme list as the entire credential ledger, or misstate overlapping programme courses as extra unique credentials | compare current archive IDs, all CV/ATS outputs, rendered programme/media counts and credential links
 LinkedIn credential and Education publishing | bulk component-course edits caused throttling and unverified Education saves | reconcile live state and official IDs, publish the complete credential inventory, prioritize umbrella qualifications and flagship diplomas, edit/dedupe, pace saves and read back exact fields | do not infer an empty section, treat a save toast as persistence, omit verified component credentials, or add duplicates | verify the fully loaded LinkedIn sections plus exact saved title, issuer, date, ID, URL, priority and Education wording
 paginated API inventories | a single limit=N request was treated as the full dataset and 18 items went unprocessed until the user called it fake | read the pagination/total fields on every list response and loop pages until has_more is false before claiming full coverage | do not claim a sweep is complete from one page or one request | verify the reported total equals the records actually scanned
@@ -25,6 +26,17 @@ blog content pipeline | hard-coded slug list + modal did not scale to daily hub-
 SPA production routes | public asset directories collide with client routes | serve file-shaped URLs as static files and everything else as the SPA shell | do not let Nginx treat route names as directories or leak port 8080 redirects | verify slash and non-slash routes plus real asset MIME types
 Coolify Linux build | macOS lock can omit the Linux Rollup binary and Docker hosts differ between arm64 and x64 | install the build container's matching native Rollup GNU package | do not hardcode one CPU or infer deployability from the macOS Vite build | verify local container plus Coolify build the pushed commit and live routes
 public portfolio | stock imagery and invented social proof replaced source evidence | use dated metrics, real screenshots and public links | do not publish placeholders, arbitrary percentages or unsupported impact | verify exact live route, image load, text and responsive layout
+
+## 2026-08-09 — Stable CV aliases must match the current dated release
+
+- **Status:** CURRENT
+- **Project/root:** `2025-FINAL-AISTUDIO-samihalawa-final`; public CV PDFs, ATS files and preview images.
+- **Mistake corrected:** `CVPage.tsx` correctly linked the 9 Aug release, but 20 stable PDF/ATS aliases and two stable previews still served the previous 87-ID, eight-page edition.
+- **Superior approach:** retain cache-safe dated route links while synchronising every stable master and `Comprehensive` role alias from the same canonical CV release; use a new dated suffix when a rendered role PDF changes.
+- **Evidence:** 9 Aug source-to-public comparison proved the former dated files byte-equal to the canonical 114-ID outputs while every stable alias differed; the corrected role-PDF grid is published under `2026-08-09-v2`, and both stable previews now display `1/10`.
+- **Triggers / verification:** CV refresh, certificate, PDF, ATS, preview, alias, cache or deploy; compare exact hashes before and after, then read back every changed live URL's MIME and body hash.
+- **Scope guard:** do not rewrite the 21 non-`Comprehensive` legacy role files; they are separate 13-page editions, not aliases of the current 17-page set.
+- **Do / don't:** do keep dated and stable public names in parity; don't infer complete publication from the current route targets alone.
 
 ## 2026-08-09 — Current credential inventory is 17 programmes and 114 unique IDs
 

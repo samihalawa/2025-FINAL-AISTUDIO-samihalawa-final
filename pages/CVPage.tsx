@@ -302,7 +302,7 @@ const legacyCertifications = [
   ['Adobe Certified Expert', 'After Effects']
 ] as const;
 
-const roleEditionFile = (key: string) => `${key}_Comprehensive_2026-08-09`;
+const roleEditionFile = (key: string) => `${key}_Comprehensive_2026-08-09-v2`;
 
 const recommendedCredentials = [
   {

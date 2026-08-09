@@ -143,6 +143,7 @@ AI Foundations for Business Professionals | Saïd Business School, University of
 CompTIA SecAI+ (CY0-001) Certification Exam Prep | Packt | 2026 | Credential ID Q4IYZTSRNUTN
 Machine Learning Operations (MLOps) | Board Infinity | 2026 | Credential ID 3HZCX9EHMFMO
 IBM Generative AI Engineering Professional Certificate | IBM | August 2026 | Credential ID H21CWM4OU7XQ
+IBM Machine Learning Professional Certificate | IBM | August 2026 | Credential ID TRO88CF6Y826
 Google Data Analytics Professional Certificate | Google | August 2026 | Credential ID WMUDGIG7OY8D
 
 PROFESSIONAL QUALIFICATIONS — 2026
@@ -233,6 +234,14 @@ Machine Learning Operations (MLOps) | Board Infinity | Specialization certificat
 - Cloud Platforms for ML: AWS, Azure & GCP Deployment | Credential ID VXCX7BOCN5EK
 - DevOps for Machine Learning: CI/CD, APIs & Deployment | Credential ID PEL4KC01Y3UU
 
+IBM Machine Learning | IBM | Professional Certificate | Credential ID TRO88CF6Y826
+- Exploratory Data Analysis for Machine Learning | Credential ID QVXE8FP3W0XI
+- Supervised Machine Learning: Regression | Credential ID PYCV7XOO4LLK
+- Supervised Machine Learning: Classification | Credential ID UKPCHR2RICZS
+- Unsupervised Machine Learning | Credential ID G1VSALTXHPRU
+- Deep Learning and Reinforcement Learning | Credential ID P9KWZ6UPS2UK
+- Machine Learning Capstone | Credential ID KF03O8XOY1KG
+
 Google Data Analytics | Google | Professional Certificate | Credential ID WMUDGIG7OY8D
 - Foundations: Data, Data, Everywhere | Credential ID V4FNLT216Q8B
 - Ask Questions to Make Data-Driven Decisions | Credential ID CLX6U7RJXKDZ
@@ -243,6 +252,38 @@ Google Data Analytics | Google | Professional Certificate | Credential ID WMUDGI
 - Introduction to Data Analysis Using Python | Credential ID UBFYCZ59VCOI
 - Google Data Analytics Capstone: Complete a Case Study | Credential ID ZCQUM67FGISV
 - Accelerate Your Job Search with AI | Credential ID HP5JK2INXV6R
+
+Microsoft Generative AI Engineering | Microsoft | Professional Certificate | August 2026 | Credential ID 4F55T94ZR1DH
+- Getting started with generative AI in Azure | Credential ID SMW3LG5X72ZL
+- Core generative models and techniques | Credential ID PE3TGQVB50XO
+- Working with large language models using Azure | Credential ID FD11L1E0B4BF
+- Multimodal and cross-modal AI integrations | Credential ID OH4GMQEPKH34
+- MLOps and responsible AI practices | Credential ID 9CG2SLXGYM30
+
+Microsoft AI & ML Engineering | Microsoft | Professional Certificate | August 2026 | Credential ID G39IMP9491N8
+- Foundations of AI and Machine Learning | Credential ID FA78NGQKO1VN
+- AI and Machine Learning Algorithms and Techniques | Credential ID VWR7QBKUNITH
+- Building Intelligent Troubleshooting Agents | Credential ID DU57A0ZEV5DU
+- Microsoft Azure for AI and Machine Learning | Credential ID YJ5H4J22TDDX
+- Advanced AI and Machine Learning Techniques and Capstone | Credential ID TKUJGJODVTN6
+
+Google AI | Google | Professional Certificate | August 2026 | Credential ID RFQT2RK02F2E
+- AI Fundamentals | Credential ID OWT0CHDBTHD0
+- AI for Brainstorming and Planning | Credential ID 96Z9R755CHEP
+- AI for Research and Insights | Credential ID 6CB3OJKKQV42
+- AI for Writing and Communicating | Credential ID HM51URAMLAMK
+- AI for Content Creation | Credential ID NKF2OQIUYSND
+- AI for Data Analysis | Credential ID 9OIN1ITFNRAV
+- AI for App Building | Credential ID F5XWGZ74AOS9
+
+AI in Healthcare | Stanford University | Specialization Certificate | August 2026 | Credential ID 7XCTV3Q16K04
+- Introduction to Healthcare | Credential ID AN4QXXC6E9ZU
+- Introduction to Clinical Data | Credential ID WTNOK2WJXL5N
+- Fundamentals of Machine Learning for Healthcare | Credential ID T913R1OJ07R3
+- Evaluations of AI Applications in Healthcare | Credential ID SF2H34G7FPCH
+- AI in Healthcare Capstone | Credential ID 4ACPVPNXAZO6
+
+中级商务汉语——商务活动篇 | Peking University | Course Certificate | August 2026 | Credential ID OG02CJKE43H4
 
 LANGUAGES
 Spanish: native
