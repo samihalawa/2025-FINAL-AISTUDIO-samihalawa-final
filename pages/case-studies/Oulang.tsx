@@ -88,6 +88,17 @@ const OulangCase: React.FC = () => (
       </div>
     </section>
 
+    <figure className="border-b border-slate-300 bg-white">
+      <div className="container py-12 sm:py-16">
+        <div className="grid gap-6 border-t border-slate-400 pt-6 lg:grid-cols-[.58fr_1.42fr] lg:items-end">
+          <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Recent operating work</p><h2 className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">Behavioral recommendations, observed in the workflow that runs them.</h2></div>
+          <p className="text-lg leading-relaxed text-slate-600">This PostHog workflow connects an interest signal to an evaluation-and-dispatch step, with execution logs visible beside the flow so product behavior can be inspected as an operating system rather than a black box.</p>
+        </div>
+        <img src="/portfolio/oulang-behavioral-recommendations-workflow.png" alt="OULANG PostHog behavioral-recommendations workflow with trigger, evaluation-and-dispatch node and execution logs" loading="lazy" className="mt-10 h-auto w-full border border-slate-300 bg-slate-50 object-contain" />
+        <figcaption className="mt-4 text-sm leading-6 text-slate-500">A working operations view: the workflow graph, the evaluation-and-dispatch action and completed execution timings are visible together.</figcaption>
+      </div>
+    </figure>
+
     <section className="py-16 sm:py-24">
       <div className="container grid gap-10 lg:grid-cols-[1fr_1fr] lg:gap-16">
         <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">What this demonstrates</p><h2 className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">Product depth across interface, infrastructure and operations.</h2><p className="mt-5 text-lg leading-relaxed text-slate-600">OULANG is not a collection of landing pages. It is a cross-platform marketplace whose categories, communication paths and operating systems have to work together for the same community.</p></div>

@@ -166,6 +166,105 @@ const featuredCredentials = [
     url: 'https://www.coursera.org/account/accomplishments/specialization/LWTECCK71WBO',
     detailEn: 'Oxford programme in AI essentials, generative and agentic AI, governance, leadership and business application.',
     detailEs: 'Programa de Oxford sobre fundamentos de IA, IA generativa y agéntica, gobernanza, liderazgo y aplicación empresarial.'
+  },
+  {
+    rank: '09',
+    title: 'Agentic AI Engineering Specialization',
+    issuer: 'Edureka',
+    id: 'GZ2Q50QNLE6N',
+    image: 'agentic-ai-engineering-GZ2Q50QNLE6N.webp',
+    pdf: 'agentic-ai-engineering-GZ2Q50QNLE6N.pdf',
+    url: 'https://www.coursera.org/account/accomplishments/specialization/GZ2Q50QNLE6N',
+    detailEn: 'Four-course specialization in LangChain, LangGraph and MCP, covering reasoning, tools, memory, stateful workflows, validation and observability.',
+    detailEs: 'Especialización de cuatro cursos en LangChain, LangGraph y MCP sobre razonamiento, herramientas, memoria, flujos con estado, validación y observabilidad.'
+  },
+  {
+    rank: '10',
+    title: 'Machine Learning Operations (MLOps) Specialization',
+    issuer: 'Board Infinity',
+    id: '3HZCX9EHMFMO',
+    image: 'mlops-3HZCX9EHMFMO.webp',
+    pdf: 'mlops-3HZCX9EHMFMO.pdf',
+    url: 'https://www.coursera.org/account/accomplishments/specialization/3HZCX9EHMFMO',
+    detailEn: 'Three-course specialization in ML CI/CD, cloud deployment, containerised model serving, production APIs, scalability and operating trade-offs.',
+    detailEs: 'Especialización de tres cursos en CI/CD para ML, despliegue cloud, serving de modelos en contenedores, APIs de producción, escalabilidad y decisiones operativas.'
+  },
+  {
+    rank: '11',
+    title: 'Managing AI Systems: Development, Deployment, and Governance',
+    issuer: 'Board Infinity',
+    id: 'HZ7XDA9WCE2I',
+    image: 'managing-ai-systems-HZ7XDA9WCE2I.webp',
+    pdf: 'managing-ai-systems-HZ7XDA9WCE2I.pdf',
+    url: 'https://www.coursera.org/account/accomplishments/specialization/HZ7XDA9WCE2I',
+    detailEn: 'Three-course specialization connecting RAG and LLM architecture with MLOps, LLMOps, production scaling, audit and AI-governance foundations.',
+    detailEs: 'Especialización de tres cursos que conecta arquitectura RAG y LLM con MLOps, LLMOps, escalado en producción, auditoría y fundamentos de gobernanza de IA.'
+  },
+  {
+    rank: '12',
+    title: 'AI Governance & ISO 42001 Readiness for GRC, Audit, & Legal',
+    issuer: 'British Standards Institution',
+    id: 'UXUS7TQ36GF4',
+    image: 'bsi-ai-governance-UXUS7TQ36GF4.webp',
+    pdf: 'bsi-ai-governance-UXUS7TQ36GF4.pdf',
+    url: 'https://www.coursera.org/account/accomplishments/specialization/UXUS7TQ36GF4',
+    detailEn: 'Five-course BSI specialization in AI concepts, impact assessment, ISO 42001 and ISO 23894, the EU AI Act, trust and responsible governance.',
+    detailEs: 'Especialización de BSI de cinco cursos sobre conceptos de IA, evaluación de impacto, ISO 42001 e ISO 23894, Reglamento de IA de la UE, confianza y gobernanza responsable.'
+  },
+  {
+    rank: '13',
+    title: 'AI Automation Engineer with n8n Specialization',
+    issuer: 'LearnKartS',
+    id: 'YUNCHF6IXQJQ',
+    image: 'n8n-ai-automation-YUNCHF6IXQJQ.webp',
+    pdf: 'n8n-ai-automation-YUNCHF6IXQJQ.pdf',
+    url: 'https://www.coursera.org/account/accomplishments/specialization/YUNCHF6IXQJQ',
+    detailEn: 'Seven-course specialization in n8n workflow logic, AI-model integration, secure APIs, RAG memory, MCP, multi-agent systems, testing and deployment.',
+    detailEs: 'Especialización de siete cursos sobre lógica de flujos n8n, integración de modelos, APIs seguras, memoria RAG, MCP, sistemas multiagente, pruebas y despliegue.'
+  },
+  {
+    rank: '14',
+    title: 'Data Privacy, Ethics, and Responsible AI Specialization',
+    issuer: 'Professionals in the Industry',
+    id: 'W4PPDYPHJKUR',
+    image: 'data-privacy-responsible-ai-W4PPDYPHJKUR.webp',
+    pdf: 'data-privacy-responsible-ai-W4PPDYPHJKUR.pdf',
+    url: 'https://www.coursera.org/account/accomplishments/specialization/W4PPDYPHJKUR',
+    detailEn: 'Six-course specialization in trustworthy chatbots, impact assessment, AI literacy, prompt-injection risks, privacy standards and European AI law.',
+    detailEs: 'Especialización de seis cursos sobre chatbots fiables, evaluación de impacto, alfabetización en IA, riesgos de prompt injection, estándares de privacidad y derecho europeo de IA.'
+  },
+  {
+    rank: '15',
+    title: 'CompTIA SecAI+ (CY0-001) Certification Exam Prep',
+    issuer: 'Packt',
+    id: 'Q4IYZTSRNUTN',
+    image: 'comptia-secai-prep-Q4IYZTSRNUTN.webp',
+    pdf: 'comptia-secai-prep-Q4IYZTSRNUTN.pdf',
+    url: 'https://www.coursera.org/account/accomplishments/specialization/Q4IYZTSRNUTN',
+    detailEn: 'Three-course preparation specialization in secure AI foundations, security architecture and controls, defensive operations, automation, governance and compliance.',
+    detailEs: 'Especialización preparatoria de tres cursos sobre fundamentos de IA segura, arquitectura y controles de seguridad, defensa, automatización, gobernanza y cumplimiento.'
+  },
+  {
+    rank: '16',
+    title: 'Building and Deploying AI Agents with LLMs and LangChain',
+    issuer: 'Board Infinity',
+    id: 'V7QS07EJVS93',
+    image: 'building-deploying-ai-agents-V7QS07EJVS93.webp',
+    pdf: 'building-deploying-ai-agents-V7QS07EJVS93.pdf',
+    url: 'https://www.coursera.org/account/accomplishments/specialization/V7QS07EJVS93',
+    detailEn: 'Three-course specialization in agent architecture, persistent memory, LangGraph, PydanticAI, multi-agent collaboration and production API deployment.',
+    detailEs: 'Especialización de tres cursos sobre arquitectura de agentes, memoria persistente, LangGraph, PydanticAI, colaboración multiagente y despliegue mediante APIs de producción.'
+  },
+  {
+    rank: '17',
+    title: 'Investment Management with Python and Machine Learning',
+    issuer: 'EDHEC Business School',
+    id: 'EGOPNC45Z7X4',
+    image: 'investment-management-python-ml-EGOPNC45Z7X4.webp',
+    pdf: 'investment-management-python-ml-EGOPNC45Z7X4.pdf',
+    url: 'https://www.coursera.org/account/accomplishments/specialization/EGOPNC45Z7X4',
+    detailEn: 'Four-course specialization in portfolio construction, quantitative analysis, Python, machine learning for asset management and alternative data.',
+    detailEs: 'Especialización de cuatro cursos sobre construcción de carteras, análisis cuantitativo, Python, machine learning para gestión de activos y datos alternativos.'
   }
 ];
 
@@ -192,25 +291,15 @@ const ibmGenerativeCourses = [
   ['Data Analysis with Python', 'WOD7TDCBN50J']
 ] as const;
 
-const majorCredentials = [
-  ['IBM Generative AI Engineering Professional Certificate', 'IBM', 'H21CWM4OU7XQ'],
-  ['IBM Machine Learning Professional Certificate', 'IBM', 'TRO88CF6Y826'],
-  ['Microsoft Generative AI Engineering', 'Microsoft', '4F55T94ZR1DH'],
-  ['Microsoft AI & ML Engineering', 'Microsoft', 'G39IMP9491N8'],
-  ['Google AI', 'Google', 'RFQT2RK02F2E'],
-  ['AI in Healthcare', 'Stanford University', '7XCTV3Q16K04'],
+const standaloneCredentials = [
   ['中级商务汉语——商务活动篇', 'Peking University', 'OG02CJKE43H4'],
-  ['Google Data Analytics Professional Certificate', 'Google', 'WMUDGIG7OY8D'],
-  ['AI Foundations for Business Professionals', 'Saïd Business School, University of Oxford', 'LWTECCK71WBO'],
-  ['CompTIA SecAI+ (CY0-001) Certification Exam Prep', 'Packt', 'Q4IYZTSRNUTN'],
-  ['Machine Learning Operations (MLOps)', 'Board Infinity', '3HZCX9EHMFMO'],
-  ['Agentic AI Engineering', 'Edureka', 'GZ2Q50QNLE6N'],
-  ['Building and Deploying AI Agents with LLMs and LangChain', 'Board Infinity', 'V7QS07EJVS93'],
-  ['Investment Management with Python and Machine Learning', 'EDHEC Business School', 'EGOPNC45Z7X4'],
-  ['Data Privacy, Ethics, and Responsible AI', 'Coursera', 'W4PPDYPHJKUR'],
-  ['AI Automation Engineer with n8n', 'LearnKartS', 'YUNCHF6IXQJQ'],
-  ['Managing AI Systems: Development, Deployment, and Governance', 'Board Infinity', 'HZ7XDA9WCE2I'],
-  ['AI Governance & ISO 42001 Readiness for GRC, Audit, & Legal', 'British Standards Institution', 'UXUS7TQ36GF4']
+  ['Databricks Mosaic AI', 'Databricks', 'RRXO8HSACR29'],
+  ['Foundations of AI Governance and Responsible Development', 'LearnQuest', '8STVBR62T6CY']
+] as const;
+
+const legacyCertifications = [
+  ['Microsoft Certified: Azure AI Fundamentals', 'AI-900'],
+  ['Adobe Certified Expert', 'After Effects']
 ] as const;
 
 const roleEditionFile = (key: string) => `${key}_Comprehensive_2026-08-09`;
@@ -402,25 +491,65 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
           <div className="mt-12 border-t border-slate-400">
             <div className="grid gap-4 py-6 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Inventario completo' : 'Complete inventory'}</p>
-                <h3 className="cv-serif mt-3 text-3xl font-normal text-slate-950">{spanish ? '18 programas avanzados · 114 credenciales.' : '18 advanced programmes · 114 credentials.'}</h3>
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Registro de programas completados' : 'Completed programme register'}</p>
+                <h3 className="cv-serif mt-3 text-3xl font-normal text-slate-950">{spanish ? '17 programas completados · 114 credenciales.' : '17 completed programmes · 114 credentials.'}</h3>
+                <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-600">{spanish ? 'Los 17 títulos principales se muestran aquí con su diploma. El PDF completo y la versión ATS conservan el registro íntegro de 114 IDs de credencial.' : 'All 17 programme awards are shown here with their diploma. The complete PDF and ATS edition retain the full ledger of 114 credential IDs.'}</p>
               </div>
-              <span className="font-mono text-sm font-bold text-slate-500">18 / 114</span>
+              <span className="font-mono text-sm font-bold text-slate-500">17 / 114</span>
             </div>
             <ol className="grid border-t border-slate-300 md:grid-cols-2 md:gap-x-10">
-              {majorCredentials.map(([title, issuer, id], index) => (
-                <li key={id} className="grid grid-cols-[2.25rem_minmax(0,1fr)_auto] items-center gap-3 border-b border-slate-300 py-4">
-                  <span className="font-mono text-xs font-bold text-slate-500">{String(index + 1).padStart(2, '0')}</span>
+              {featuredCredentials.map((credential) => (
+                <li key={credential.id} className="grid grid-cols-[2.25rem_minmax(0,1fr)_auto] items-center gap-3 border-b border-slate-300 py-4">
+                  <span className="font-mono text-xs font-bold text-slate-500">{credential.rank}</span>
                   <div className="min-w-0">
-                    <h4 className="text-sm font-semibold leading-snug text-slate-950">{title}</h4>
-                    <p className="mt-1 text-xs text-slate-500">{issuer} · <span className="font-mono">{id}</span></p>
+                    <h4 className="text-sm font-semibold leading-snug text-slate-950">{credential.title}</h4>
+                    <p className="mt-1 text-xs text-slate-500">{credential.issuer} · <span className="font-mono">{credential.id}</span></p>
                   </div>
-                  <a href={`https://www.coursera.org/account/accomplishments/specialization/${id}`} target="_blank" rel="noopener noreferrer" aria-label={`${spanish ? 'Ver credencial' : 'View credential'}: ${title}`} className="inline-flex min-h-11 min-w-11 items-center justify-center border border-slate-400 text-slate-800 transition-colors hover:border-slate-950 hover:bg-slate-950 hover:text-white">
+                  <a href={credential.url} target="_blank" rel="noopener noreferrer" aria-label={`${spanish ? 'Ver credencial' : 'View credential'}: ${credential.title}`} className="inline-flex min-h-11 min-w-11 items-center justify-center border border-slate-400 text-slate-800 transition-colors hover:border-slate-950 hover:bg-slate-950 hover:text-white">
                     <i className="fas fa-arrow-up-right-from-square text-xs" />
                   </a>
                 </li>
               ))}
             </ol>
+            <div className="grid gap-4 py-6 sm:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Credenciales independientes' : 'Standalone credentials'}</p>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600">{spanish ? 'Formación adicional verificada fuera de los 17 programas.' : 'Additional verified learning outside the 17 programmes.'}</p>
+              </div>
+              <ol className="border-t border-slate-300">
+                {standaloneCredentials.map(([title, issuer, id]) => (
+                  <li key={id} className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 border-b border-slate-300 py-4">
+                    <div className="min-w-0">
+                      <h4 className="text-sm font-semibold leading-snug text-slate-950">{title}</h4>
+                      <p className="mt-1 text-xs text-slate-500">{issuer} · <span className="font-mono">{id}</span></p>
+                    </div>
+                    <a href={`https://www.coursera.org/account/accomplishments/records/${id}`} target="_blank" rel="noopener noreferrer" aria-label={`${spanish ? 'Ver credencial' : 'View credential'}: ${title}`} className="inline-flex min-h-11 min-w-11 items-center justify-center border border-slate-400 text-slate-800 transition-colors hover:border-slate-950 hover:bg-slate-950 hover:text-white">
+                      <i className="fas fa-arrow-up-right-from-square text-xs" />
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </div>
+            <div className="grid gap-4 border-t border-slate-300 py-6 sm:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Certificaciones anteriores' : 'Earlier certifications'}</p>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600">{spanish ? 'Dos certificaciones históricas de LinkedIn sin ID público de credencial.' : 'Two historical LinkedIn certifications without a public credential ID.'}</p>
+              </div>
+              <div>
+                <ol className="border-t border-slate-300">
+                  {legacyCertifications.map(([title, detail]) => (
+                    <li key={`${title}-${detail}`} className="border-b border-slate-300 py-4">
+                      <h4 className="text-sm font-semibold leading-snug text-slate-950">{title}</h4>
+                      <p className="mt-1 text-xs text-slate-500">{detail}</p>
+                    </li>
+                  ))}
+                </ol>
+                <div className="mt-5 flex flex-wrap gap-5 text-sm font-bold">
+                  <a href={pdf} target="_blank" rel="noopener noreferrer" data-analytics-event="cv_download" className="inline-flex min-h-11 items-center gap-2 border-b border-slate-500 text-slate-800 hover:border-slate-950 hover:text-slate-950">{spanish ? 'Abrir CV completo' : 'Open complete CV'}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>
+                  <a href={ats} target="_blank" rel="noopener noreferrer" data-analytics-event="cv_download" className="inline-flex min-h-11 items-center gap-2 border-b border-slate-500 text-slate-800 hover:border-slate-950 hover:text-slate-950">{spanish ? 'Abrir versión ATS' : 'Open ATS edition'}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 

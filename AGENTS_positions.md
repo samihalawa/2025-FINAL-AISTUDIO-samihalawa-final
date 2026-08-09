@@ -1,6 +1,6 @@
 # INDEX
 
-current credential inventory | the website can preserve a stale count after the source archive grows | publish 13 programmes and 87 unique credential IDs, including IBM Machine Learning `TRO88CF6Y826` | do not retain the prior 12/84 snapshot or misstate overlapping programme courses as extra unique credentials | compare current archive IDs, CV outputs, rendered counts and credential links
+current credential inventory | the website can preserve a stale count after the source archive grows | publish 17 programmes and 114 unique credential IDs, while preserving two no-ID historical certifications | do not retain the prior 13/87 snapshot, overclaim a short programme list as the entire credential ledger, or misstate overlapping programme courses as extra unique credentials | compare current archive IDs, all CV/ATS outputs, rendered programme/media counts and credential links
 LinkedIn credential and Education publishing | bulk component-course edits caused throttling and unverified Education saves | reconcile live state and official IDs, publish the complete credential inventory, prioritize umbrella qualifications and flagship diplomas, edit/dedupe, pace saves and read back exact fields | do not infer an empty section, treat a save toast as persistence, omit verified component credentials, or add duplicates | verify the fully loaded LinkedIn sections plus exact saved title, issuer, date, ID, URL, priority and Education wording
 paginated API inventories | a single limit=N request was treated as the full dataset and 18 items went unprocessed until the user called it fake | read the pagination/total fields on every list response and loop pages until has_more is false before claiming full coverage | do not claim a sweep is complete from one page or one request | verify the reported total equals the records actually scanned
 session closure | finished case-study work sat uncommitted for a day and a later session asserted its VCS state without running git status | end every implementation session with git status, commit and push the completed surface, and ground any claim about worktree state in a fresh command | do not leave built-and-verified routes unshipped or repeat another session's completion claim without re-proving it | verify clean tree, pushed main and the live route status code
@@ -26,9 +26,19 @@ SPA production routes | public asset directories collide with client routes | se
 Coolify Linux build | macOS lock can omit the Linux Rollup binary and Docker hosts differ between arm64 and x64 | install the build container's matching native Rollup GNU package | do not hardcode one CPU or infer deployability from the macOS Vite build | verify local container plus Coolify build the pushed commit and live routes
 public portfolio | stock imagery and invented social proof replaced source evidence | use dated metrics, real screenshots and public links | do not publish placeholders, arbitrary percentages or unsupported impact | verify exact live route, image load, text and responsive layout
 
-## 2026-08-08 — Current credential inventory is 13 programmes and 87 unique IDs
+## 2026-08-09 — Current credential inventory is 17 programmes and 114 unique IDs
 
 - **Status:** CURRENT
+- **Project/root:** `2025-FINAL-AISTUDIO-samihalawa-final`; `/cv/en`, `/cv/es`, public CV downloads and LinkedIn credential surfaces.
+- **Mistake corrected:** the site retained an older 13/87 position and showed only eight diploma images after the canonical Coursera archive had grown to 17 completed programmes and 114 unique credential IDs.
+- **Superior approach:** derive parity from exact source IDs, show all 17 programme diplomas, retain all 114 IDs in every complete PDF/ATS edition, distinguish selected standalone courses, and preserve Azure AI Fundamentals plus Adobe ACE as no-ID historical certifications.
+- **Evidence:** current archive census = 114 unique IDs; all ten current PDFs and all ten ATS editions contain all 114; LinkedIn read-back = 17 Education awards and 116 certification rows comprising 114 unique IDs plus two no-ID records.
+- **Triggers / verification:** credential, programme, diploma, Education, LinkedIn, CV, download or deploy; verify 17 programme images, exact links, 114-ID parity, the two no-ID records, responsive routes and live download hashes.
+- **Do / don't:** do label visible subsets accurately and link the full ledger; don't call a highlights list the complete 114-record inventory or revive 13/87.
+
+## 2026-08-08 — Current credential inventory is 13 programmes and 87 unique IDs
+
+- **Status:** SUPERSEDED
 - **Project/root:** `2025-FINAL-AISTUDIO-samihalawa-final`; `/cv/en`, `/cv/es` and public CV downloads.
 - **Mistake corrected:** the site still published `12 / 84` after the canonical archive gained the IBM Machine Learning Professional Certificate and two new course credentials.
 - **Superior approach:** derive the displayed total from unique source IDs, add the six-course IBM Machine Learning umbrella, and keep overlapping IBM course IDs from inflating the unique archive count.
