@@ -81,7 +81,62 @@ const featuredCredentialBase = '/credentials/featured';
 const featuredCredentials = [
   {
     rank: '01',
-    title: 'IBM Generative AI Engineering',
+    title: 'Google AI Professional Certificate',
+    issuer: 'Google',
+    id: 'RFQT2RK02F2E',
+    image: 'google-ai-professional-RFQT2RK02F2E.webp',
+    pdf: 'google-ai-professional-RFQT2RK02F2E.pdf',
+    url: 'https://www.coursera.org/account/accomplishments/specialization/RFQT2RK02F2E',
+    detailEn: 'Seven-course Professional Certificate covering practical AI for research, planning, communication, content, data analysis and application building.',
+    detailEs: 'Certificado Profesional de siete cursos sobre IA aplicada a investigación, planificación, comunicación, contenido, análisis de datos y creación de aplicaciones.'
+  },
+  {
+    rank: '02',
+    title: 'AI in Healthcare Specialization',
+    issuer: 'Stanford University',
+    id: '7XCTV3Q16K04',
+    image: 'stanford-ai-healthcare-7XCTV3Q16K04.webp',
+    pdf: 'stanford-ai-healthcare-7XCTV3Q16K04.pdf',
+    url: 'https://www.coursera.org/account/accomplishments/specialization/7XCTV3Q16K04',
+    detailEn: 'Five-course Stanford specialization covering clinical data, machine learning for healthcare and evaluation of AI applications, completed with a capstone.',
+    detailEs: 'Especialización de Stanford de cinco cursos sobre datos clínicos, machine learning sanitario y evaluación de aplicaciones de IA, con proyecto final.'
+  },
+  {
+    rank: '03',
+    title: 'Microsoft Generative AI Engineering Professional Certificate',
+    issuer: 'Microsoft',
+    id: '4F55T94ZR1DH',
+    image: 'microsoft-generative-ai-engineering-4F55T94ZR1DH.webp',
+    pdf: 'microsoft-generative-ai-engineering-4F55T94ZR1DH.pdf',
+    url: 'https://www.coursera.org/account/accomplishments/specialization/4F55T94ZR1DH',
+    detailEn: 'Five-course Professional Certificate in Azure generative AI, foundation models, large language models, multimodal systems, MLOps and responsible AI.',
+    detailEs: 'Certificado Profesional de cinco cursos sobre IA generativa en Azure, modelos fundacionales, LLM, sistemas multimodales, MLOps e IA responsable.'
+  },
+  {
+    rank: '04',
+    title: 'Microsoft AI & ML Engineering Professional Certificate',
+    issuer: 'Microsoft',
+    id: 'G39IMP9491N8',
+    image: 'microsoft-ai-ml-engineering-G39IMP9491N8.webp',
+    pdf: 'microsoft-ai-ml-engineering-G39IMP9491N8.pdf',
+    url: 'https://www.coursera.org/account/accomplishments/specialization/G39IMP9491N8',
+    detailEn: 'Professional Certificate covering machine-learning engineering, Azure AI services, production data workflows and responsible deployment.',
+    detailEs: 'Certificado Profesional sobre ingeniería de machine learning, servicios de Azure AI, flujos de datos en producción y despliegue responsable.'
+  },
+  {
+    rank: '05',
+    title: 'IBM Machine Learning Professional Certificate',
+    issuer: 'IBM',
+    id: 'TRO88CF6Y826',
+    image: 'ibm-machine-learning-TRO88CF6Y826.webp',
+    pdf: 'ibm-machine-learning-TRO88CF6Y826.pdf',
+    url: 'https://www.coursera.org/account/accomplishments/specialization/TRO88CF6Y826',
+    detailEn: 'Six-course Professional Certificate spanning exploratory analysis, supervised and unsupervised learning, deep learning and a machine-learning capstone.',
+    detailEs: 'Certificado Profesional de seis cursos sobre análisis exploratorio, aprendizaje supervisado y no supervisado, deep learning y proyecto final de machine learning.'
+  },
+  {
+    rank: '06',
+    title: 'IBM Generative AI Engineering Professional Certificate',
     issuer: 'IBM',
     id: 'H21CWM4OU7XQ',
     image: 'ibm-generative-ai-engineering-H21CWM4OU7XQ.webp',
@@ -91,8 +146,8 @@ const featuredCredentials = [
     detailEs: 'Certificado Profesional oficial de 16 cursos sobre Python, machine learning, deep learning, transformers, fine-tuning, RAG, LangChain y aplicaciones de IA generativa en producción, respaldado por 20 credenciales IBM de cursos archivadas.'
   },
   {
-    rank: '02',
-    title: 'Google Data Analytics',
+    rank: '07',
+    title: 'Google Data Analytics Professional Certificate',
     issuer: 'Google',
     id: 'WMUDGIG7OY8D',
     image: 'google-data-analytics-WMUDGIG7OY8D.webp',
@@ -102,7 +157,7 @@ const featuredCredentials = [
     detailEs: 'Certificado Profesional de nueve cursos sobre hojas de cálculo, SQL, Python, Tableau, preparación, análisis y visualización de datos, con un caso práctico completo.'
   },
   {
-    rank: '03',
+    rank: '08',
     title: 'AI Foundations for Business Professionals',
     issuer: 'Saïd Business School, University of Oxford',
     id: 'LWTECCK71WBO',
