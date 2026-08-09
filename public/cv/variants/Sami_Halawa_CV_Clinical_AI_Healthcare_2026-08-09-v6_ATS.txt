@@ -1,0 +1,58 @@
+SAMI HALAWA RIBAS
+Clinical AI Product Engineer · Medical Workflows & Multimodal Systems
+
+Madrid, Spain · EU work authorisation · +34 679 794 037 · sami@oulang.ai · samihalawa.com · linkedin.com/in/samihalawa · github.com/samihalawa
+
+PROFILE
+Product engineer for medical-learning, ophthalmology and multimodal workflow systems, combining image review, structured reporting, data ingestion and human oversight in reviewable product workflows.
+
+CORE EXPERTISE
+Medical workflows: Ophthalmology/OCT processes, structured reporting, professional learning and review checkpoints
+Multimodal AI: Image-text review, OCR, computer-vision experiments, RAG and document pipelines
+Product engineering: Python, FastAPI, TypeScript, React, Ionic, Capacitor, PWA delivery and SQL
+Reviewable delivery: Human oversight, privacy-oriented product design, traceable outputs and explicit review checkpoints
+
+SELECTED EXPERIENCE
+Founder & Medical AI Product Lead · AutoMedical | 2025–Present · Madrid / Remote
+- Built medical-learning and multimodal workflow products for image review, structured reporting and professional education with human oversight.
+- Connected AutoMedical with APOLO, AutoIOL and MedSAM product experiments across multimodal review and structured workflows.
+
+AI Product & Medical Workflow Consultant · Fernando Ly / EyeUnit | Jul 2024–Jul 2026 · Madrid / Remote
+- Delivered ophthalmology and OCT workflow prototypes spanning account intelligence, cross-sell discovery, image review and structured reporting.
+- Translated specialist requirements into reviewable product and data workflows with explicit human oversight.
+
+Technical Product Lead & AI Mentor · Valerio Trigos / Umbramed | 2025–2026 · Remote
+- Led Ionic/Capacitor/PWA architecture, exam-data workflows, delivery recovery, integrations, payment preparation and AI-assisted product mentoring.
+- Supported product roadmap, deployment preparation and accelerator-application materials.
+
+Founder & AI Product Engineer · Agents AI Ltd | Jul 2025–Present · Madrid, Spain · UK-registered company
+- Own product discovery, architecture, implementation, deployment, analytics, monetisation and operational handover across founder-led and B2B systems.
+- Built OULANG across web, iOS and Android and extended shared product capabilities into Huatong, OUPIN, AutoClient and applied AI services.
+
+AI Instructor & Independent Technical Consultant | 2022–Present · Madrid / Remote
+- Teach practical AI, agents, MCP, automation, Python and product engineering through working applications, live builds and implementation-focused curricula.
+- Delivered more than 125 recorded hours of AI instruction, product workshops and technical implementation sessions in Spanish, English and Mandarin.
+
+DELIVERY EVIDENCE
+- AutoMedical: Built a medical-learning and multimodal workflow product for image review, structured reporting and professional education.
+- Fernando Ly / EyeUnit: Delivered ophthalmology and OCT workflow prototypes plus account-intelligence and cross-sell research.
+- Valerio Trigos / Umbramed: Led product architecture and recovery work across Ionic/Capacitor/PWA delivery, exam data and integration preparation.
+- APOLO / AutoIOL / MedSAM: Developed multimodal and computer-vision product research around reviewable workflows and structured outputs.
+
+EDUCATION AND LANGUAGES
+Li Po Chun United World College of Hong Kong · International Baccalaureate, Science & Mathematics · 2010–2012 · Rafael del Pino Foundation scholarship
+Shenzhen Institute of Information Technology · Computing and information-technology studies · 2016–2018
+Spanish native; English C2; Mandarin Chinese C2; Cantonese conversational.
+
+SELECTED CREDENTIALS
+- AI in Healthcare · Stanford University · 7XCTV3Q16K04
+- IBM Machine Learning Professional Certificate · TRO88CF6Y826
+- Microsoft AI & ML Engineering · G39IMP9491N8
+- Data Privacy, Ethics, and Responsible AI · W4PPDYPHJKUR
+- AI Governance & ISO 42001 Readiness · BSI · UXUS7TQ36GF4
+- Microsoft Certified: Azure AI Fundamentals (AI-900)
+
+PORTFOLIO
+samihalawa.com/projects
+github.com/samihalawa
+huggingface.co/samihalawa

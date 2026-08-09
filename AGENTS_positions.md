@@ -1,5 +1,6 @@
 # INDEX
 
+objective CV public copy | the website can expose a correct six-profile architecture while masters still merge separate collaborations or retain audit-style wording | publish the incremental v6 assets with 84 public projects/collaborations and separate AutoMedical, Fernando/EyeUnit and Valerio/Umbramed framing | do not overwrite historical v4/v5 URLs or expose internal inventory state | verify exact source/public hashes, PDF pages, rendered EN/ES routes and all twelve profile downloads
 active CV choices | the site can expose comprehensive clones and expired company-specific editions as permanent choices | keep complete EN/ES masters and list exactly six two-page reusable application profiles | do not delete historical URLs or keep Atos/Archer/Zooplus/standalone Voice in the active list | verify rendered six-entry list plus exact PDF/ATS hashes and downloads
 replaced public media | a reused asset URL can keep serving an older sensitive image after the application deploy succeeds | publish the reviewed replacement under a new cache-safe filename and update the rendered reference | do not rely on a successful deploy, cache-busting query or eventual CDN expiry | verify the plain production asset hash and the image actually rendered by the page
 stable CV asset aliases | current dated downloads can coexist with stale stable PDF/ATS names and previews | sync every current Comprehensive PDF/ATS alias and both first-page previews from the canonical release | do not overwrite distinct legacy non-Comprehensive editions or trust route links alone | verify canonical=dated=stable hashes, 114/114 IDs, 1/10 previews and live MIME/body hashes
@@ -28,6 +29,16 @@ blog content pipeline | hard-coded slug list + modal did not scale to daily hub-
 SPA production routes | public asset directories collide with client routes | serve file-shaped URLs as static files and everything else as the SPA shell | do not let Nginx treat route names as directories or leak port 8080 redirects | verify slash and non-slash routes plus real asset MIME types
 Coolify Linux build | macOS lock can omit the Linux Rollup binary and Docker hosts differ between arm64 and x64 | install the build container's matching native Rollup GNU package | do not hardcode one CPU or infer deployability from the macOS Vite build | verify local container plus Coolify build the pushed commit and live routes
 public portfolio | stock imagery and invented social proof replaced source evidence | use dated metrics, real screenshots and public links | do not publish placeholders, arbitrary percentages or unsupported impact | verify exact live route, image load, text and responsive layout
+
+## 2026-08-09 — Publish objective CV copy through an incremental v6 release
+
+- **Status:** CURRENT
+- **Project/root:** `2025-FINAL-AISTUDIO-samihalawa-final`; `/cv/en`, `/cv/es`, stable CV aliases and active profile downloads.
+- **Mistake corrected:** the six-profile architecture was already correct, but the complete masters still used `85` while the rendered public portfolio exposed 84 verified rows, the master merged AutoMedical with two separate collaborations, and the Spanish source still said `Madrid / Londres`.
+- **Superior approach:** preserve every historical URL, publish v6 for the two masters and six reusable profiles, sync stable/current-day master aliases, and point the live CV page only to v6.
+- **Evidence:** source release `PROJECTS_MEDIA/SAMIHALAWA_CV_FINAL/archive/releases/2026-08-09-v6`; `pages/CVPage.tsx`; local build chunk `CVPage-D8p-bd22.js`.
+- **Triggers / verification:** all CVs, objective copy, too many variants, AutoMedical, Madrid/London or upload newest; require two ten-page masters, six two-page profiles, 114/114 master credential IDs, exact source-to-public hashes, rendered routes and production MIME/body hashes.
+- **Do / don't:** do keep v4/v5 immutable and v6 cache-safe; don't reactivate company-specific legacy CVs, delete historical submissions or trust `file`'s PDF-page summary over `pdfinfo` and rendered pages.
 
 ## 2026-08-09 — Keep six reusable application profiles beside the complete masters
 

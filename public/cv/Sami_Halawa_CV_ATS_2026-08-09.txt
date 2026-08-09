@@ -9,7 +9,7 @@ PROFILE
 Founder-engineer who turns ambiguous business and product ideas into operating AI systems. Full-cycle ownership across product definition, LLM and agent workflows, data and APIs, web and mobile implementation, cloud deployment, observability, growth and customer operations. Strongest at zero-to-one product architecture, multilingual delivery, automation and the complete production system around AI.
 
 PUBLIC PORTFOLIO | 19 JULY 2026
-- 85 products, client engagements, open-source tools, applied-research initiatives and teaching programmes from 2023 to today.
+- 84 products, client collaborations, open-source tools, applied-research initiatives and teaching programmes from 2023 to today.
 - GitHub: 700 public repositories, including 249 non-forks and 451 forks; 3 archived repositories.
 - VUDA open-source project: 80 GitHub stars and 7 forks.
 - Hugging Face: 12 public articles, 17 Spaces, 6 collections and 1 public model covering browser automation, agent systems, prompting and multimodal AI.
@@ -24,17 +24,18 @@ Leadership and communication: product strategy, architecture decisions, customer
 
 PROFESSIONAL EXPERIENCE
 
-Founder and AI Product Engineer | Agents AI Ltd | Madrid / London | July 2025-Present
+Founder and AI Product Engineer | Agents AI Ltd | Madrid, Spain | UK-registered company | July 2025-Present
 - Own product discovery, architecture, implementation, deployment, analytics, monetisation and operational handover across founder-led and B2B systems.
 - Built OULANG (欧浪AI), a multilingual marketplace and local-life platform for Chinese communities in Spain, across web, iOS and Android delivery.
 - Extended the product ecosystem into Huatong for Chinese communities across Europe, OUPIN for AI-assisted discovery and PIME.ai for productised AI services.
-- Built AutoClient and OULANG voice-agent workflows for multilingual outbound conversations, using live CRM and database context, automated post-call notes and follow-up updates; integrated Telnyx, email, WhatsApp and reusable MCP tooling.
+- Built AutoClient and OULANG voice-agent workflows for multilingual outbound conversations, using live CRM and database context, automated post-call notes and follow-up updates; AutoClient was selected by Lanzadera in 2025.
 - Delivered pricing-intelligence and decision-reporting workflows combining marketplace data, product matching, price history and inventory or ERP inputs.
-- Prototyped multimodal medical-image review, longitudinal tracking and structured reporting workflows with human review built into the process.
+- Founded AutoMedical as a medical-learning and multimodal workflow product for image review, structured reporting and professional education with human oversight.
+- Separately collaborated with Fernando Ly / EyeUnit on ophthalmology and OCT workflow prototypes, and with Valerio Trigos / Umbramed on Ionic/Capacitor/PWA product delivery, data ingestion and human-review workflows.
 
 AI Instructor and Independent Technical Consultant | Madrid / Remote | 2022-Present
 - Teach implementation-first AI, agents, MCP, automation, Python and AI product engineering through working applications, live builds and technical curricula.
-- Translate business needs into systems for professionals and teams in Spanish, English and Mandarin.
+- Use teaching as technical leadership: translate architecture, governance and delivery trade-offs into systems and decisions for professionals and teams in Spanish, English and Mandarin.
 - Delivered more than 125 recorded hours of AI instruction, product workshops and technical implementation sessions.
 
 Senior Full-Stack Engineer | Damehosting | 2019-2023
@@ -104,7 +105,7 @@ CHRONOLOGICAL PROJECT INDEX | 2023-2026
 2023: RealSintra; Mi ChatGPT React Español; OpenAI/GPT file experiments; DameSender continuity.
 2024: Aprende IA; MenuEditorElectron; AI Absolut; email crawler/lead tools; macOS Optimizer; CloudflaredMe; AutoCrypto; audio/transcription tools; KittyTasks/FocusOnTask; AutoClient seed and worker expansion; Pollinations/storage experiments; AutoVideo; MedSAM; AutoTraining; AutoIOL; SpeakingAI; EyeUnit/Fernando Ly; Light Funnels; Hugging Face writing; Colab research.
 2025 January-March: SORT/SortBot; AutoHSK; blog/content systems; SMTP MCP; shell/browser/diff tools; ophthalmology workflows.
-2025 April-June: APOLO; VUDA; AutoTutorial/MentorIA/PerfectPrompter; Scope; Fernando Ly medical-AI work; AutoClient expansion; MCP wave; Agents AI Ltd; Lanzadera ecosystem participation.
+2025 April-June: APOLO; VUDA; AutoTutorial/MentorIA/PerfectPrompter; Scope; Fernando Ly medical-AI work; AutoClient expansion; MCP wave; Agents AI Ltd; AutoClient selected by Lanzadera.
 2025 July-December: AutoMedical product development; agent operating utilities; AutoRad workflow concept; personal/company sites; WhatsApp MCP; IWAKY/AutoPricing; INTLAW; San Martín; Umbramed; AutoDate/AutoTinder design; cross-sector prototype portfolio; poetry site; Lemon AI customization/deployment; 15-hour AI-agent course.
 2026 January-June: OULANG; GOWA; Notion-Drive Sync; Huatong; InfoHuaxin; OUPIN; Crawlab/Apify actors; AI development context tools; Telnyx tools; Desktop Commander utilities; VibraCode; AutoMedical; company/publishing sites; Tasky; AI tutoring/ITE/TusClases operations; OULANG World Cup module; SONMADE.
 2026 July: AutoDate TestFlight; recipe intelligence; Tekçe/OULANG-AutoClient property lead generation; OULANG native parity; EA Housing/Radio Inter product design; Chinese soundscapes/tutoring/poetry audio; PIME AI Act pack; additional local products.
@@ -115,6 +116,7 @@ OPEN SOURCE, WRITING AND TEACHING
 - Public youtube.com/@autoclient-ai catalogue: 373 videos / approximately 159.65 hours across AI courses, After Effects, portfolio work and AutoPricing.
 - Author: ChinoTotal: Aprende Chino Mandarín desde 0, 296 pages, independently published in 2024, ISBN 9798873249237.
 - Youth Prize, II Nogarejas Poetry Competition, 2012: “Olvidaste una llave en mi costado”, submitted as “El arte de la fuga”, selected from an international field of more than 200 works.
+- AutoClient selected by Lanzadera, 2025: product milestone for the agentic research, enrichment, CRM and multichannel follow-up platform.
 
 EDUCATION
 Li Po Chun United World College of Hong Kong | International Baccalaureate, Science and Mathematics | 2010-2012 | Rafael del Pino Foundation scholarship
