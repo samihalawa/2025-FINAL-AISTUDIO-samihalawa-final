@@ -1,7 +1,8 @@
 # INDEX
 
+GenAI application CV completeness | a high-scoring two-page resume can omit most of the authenticated career chronology | build the active GenAI edition from the complete 14-role LinkedIn profile and add a public authority page | do not publish the reduced scorer PDF as the current website edition or keep fixed two-page copy | verify all 14 roles, public-only language, ATS text, exact live hash and score
 objective CV public copy | the website can expose a correct six-profile architecture while masters still merge separate collaborations or retain audit-style wording | publish the incremental v6 assets with 84 public projects/collaborations and separate AutoMedical, Fernando/EyeUnit and Valerio/Umbramed framing | do not overwrite historical v4/v5 URLs or expose internal inventory state | verify exact source/public hashes, PDF pages, rendered EN/ES routes and all twelve profile downloads
-active CV choices | the site can expose comprehensive clones and expired company-specific editions as permanent choices | keep complete EN/ES masters and list exactly six two-page reusable application profiles | do not delete historical URLs or keep Atos/Archer/Zooplus/standalone Voice in the active list | verify rendered six-entry list plus exact PDF/ATS hashes and downloads
+active CV choices | the site can expose comprehensive clones and expired company-specific editions as permanent choices | keep complete EN/ES masters and list exactly six reusable application profiles | do not delete historical URLs or keep Atos/Archer/Zooplus/standalone Voice in the active list | verify rendered six-entry list plus exact PDF/ATS hashes and downloads
 replaced public media | a reused asset URL can keep serving an older sensitive image after the application deploy succeeds | publish the reviewed replacement under a new cache-safe filename and update the rendered reference | do not rely on a successful deploy, cache-busting query or eventual CDN expiry | verify the plain production asset hash and the image actually rendered by the page
 stable CV asset aliases | current dated downloads can coexist with stale stable PDF/ATS names and previews | sync every current Comprehensive PDF/ATS alias and both first-page previews from the canonical release | do not overwrite distinct legacy non-Comprehensive editions or trust route links alone | verify canonical=dated=stable hashes, 114/114 IDs, 1/10 previews and live MIME/body hashes
 current credential inventory | the website can preserve a stale count after the source archive grows | publish 17 programmes and 114 unique credential IDs, while preserving two no-ID historical certifications | do not retain the prior 13/87 snapshot, overclaim a short programme list as the entire credential ledger, or misstate overlapping programme courses as extra unique credentials | compare current archive IDs, all CV/ATS outputs, rendered programme/media counts and credential links
@@ -30,6 +31,16 @@ SPA production routes | public asset directories collide with client routes | se
 Coolify Linux build | macOS lock can omit the Linux Rollup binary and Docker hosts differ between arm64 and x64 | install the build container's matching native Rollup GNU package | do not hardcode one CPU or infer deployability from the macOS Vite build | verify local container plus Coolify build the pushed commit and live routes
 public portfolio | stock imagery and invented social proof replaced source evidence | use dated metrics, real screenshots and public links | do not publish placeholders, arbitrary percentages or unsupported impact | verify exact live route, image load, text and responsive layout
 
+## 2026-08-10 — Build the active GenAI CV from the complete LinkedIn chronology
+
+- **Status:** CURRENT
+- **Project/root:** `2025-FINAL-AISTUDIO-samihalawa-final`; active GenAI application PDF/ATS on `/cv/en` and `/cv/es`.
+- **Mistake corrected:** the first 10 August Jobgether PDF reached a strong score but compressed the record to a small subset of roles and omitted Fernando Ly/EyeUnit, Umbramed, MelindaAI, Megawebs/Megacursos, technical teaching and China media experience.
+- **Superior approach:** preserve the authenticated seven-page LinkedIn export with all 14 current roles, append one recruiter-facing impact/projects/recommendations/education page, and publish that exact eight-page PDF as the cache-safe GenAI v7 asset while retaining the other five v6 profiles and both complete masters.
+- **Evidence:** authenticated LinkedIn `/details/experience/` full lazy-load, `Sami_Halawa_LinkedIn.md` section 29 and local PDF render check.
+- **Triggers / verification:** optimized CV, Jobgether, missing experience, LinkedIn export or GenAI v7; require 14-role text coverage, zero internal proof/read-back language, exact PDF/website hash equality, ATS parity, rendered EN/ES links and production MIME/body hash.
+- **Do / don't:** do remove the fixed two-page constraint from website copy; don't publish a scorer-only snapshot as the active career document.
+
 ## 2026-08-09 — Publish objective CV copy through an incremental v6 release
 
 - **Status:** CURRENT
@@ -37,15 +48,15 @@ public portfolio | stock imagery and invented social proof replaced source evide
 - **Mistake corrected:** the six-profile architecture was already correct, but the complete masters still used `85` while the rendered public portfolio exposed 84 verified rows, the master merged AutoMedical with two separate collaborations, and the Spanish source still said `Madrid / Londres`.
 - **Superior approach:** preserve every historical URL, publish v6 for the two masters and six reusable profiles, sync stable/current-day master aliases, and point the live CV page only to v6.
 - **Evidence:** source release `PROJECTS_MEDIA/SAMIHALAWA_CV_FINAL/archive/releases/2026-08-09-v6`; `pages/CVPage.tsx`; local build chunk `CVPage-D8p-bd22.js`.
-- **Triggers / verification:** all CVs, objective copy, too many variants, AutoMedical, Madrid/London or upload newest; require two ten-page masters, six two-page profiles, 114/114 master credential IDs, exact source-to-public hashes, rendered routes and production MIME/body hashes.
+- **Triggers / verification:** all CVs, objective copy, too many variants, AutoMedical, Madrid/London or upload newest; require two ten-page masters, six reusable profiles, 114/114 master credential IDs, exact source-to-public hashes, rendered routes and production MIME/body hashes.
 - **Do / don't:** do keep v4/v5 immutable and v6 cache-safe; don't reactivate company-specific legacy CVs, delete historical submissions or trust `file`'s PDF-page summary over `pdfinfo` and rendered pages.
 
 ## 2026-08-09 — Keep six reusable application profiles beside the complete masters
 
-- **Status:** CURRENT
+- **Status:** SUPERSEDED
 - **Project/root:** `2025-FINAL-AISTUDIO-samihalawa-final`; `/cv/en`, `/cv/es` and public application-resume downloads.
 - **Mistake corrected:** the site exposed eight comprehensive role editions, including expired Atos, Archer and Zooplus application files plus a standalone Voice family that duplicated GenAI/automation evidence.
-- **Superior approach:** retain the complete EN/ES ten-page masters and their historical URLs, but list exactly six current two-page application profiles: EN/ES Founding AI/Product, GenAI/Agents/Voice/Automation, Platform/Product Engineering/MLOps, Clinical AI and Teaching/Governance.
+- **Superior approach:** retain the complete EN/ES ten-page masters and their historical URLs, and list exactly six current application profiles: EN/ES Founding AI/Product, GenAI/Agents/Voice/Automation, Platform/Product Engineering/MLOps, Clinical AI and Teaching/Governance. The 10 August GenAI entry supersedes the fixed two-page limit while preserving this six-profile architecture.
 - **Evidence:** `pages/CVPage.tsx` and the twelve v4 PDF/ATS assets copied from the canonical CV release.
 - **Triggers / verification:** too many CVs, role profile, application resume, company-specific, Atos, Archer, Zooplus or Voice; render `/cv/en` and `/cv/es`, count six entries and compare every live download hash/MIME with the canonical v4 source.
 - **Do / don't:** do keep historical application URLs available for prior links; don't present one-off company documents as current reusable choices or describe application resumes as the complete evidence record.

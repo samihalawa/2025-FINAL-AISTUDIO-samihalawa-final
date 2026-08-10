@@ -21,6 +21,7 @@ const roleEditions = [
   },
   {
     key: 'GenAI_Agents_Automation',
+    fileVersion: '2026-08-10-v7',
     en: 'GenAI / Agents / Voice / Automation',
     es: 'GenAI / Agentes / Voz / Automatización',
     detailEn: 'Python and TypeScript systems across RAG, LangGraph, MCP, structured outputs, voice, deployment, observability and human review.',
@@ -288,7 +289,7 @@ const legacyCertifications = [
   ['Adobe Certified Expert', 'After Effects']
 ] as const;
 
-const roleEditionFile = (key: string) => `${key}_2026-08-09-v6`;
+const roleEditionFile = (item: (typeof roleEditions)[number]) => `${item.key}_${item.fileVersion ?? '2026-08-09-v6'}`;
 
 const CVPage: React.FC<CVPageProps> = ({ edition }) => {
   const { language } = useTranslation();
@@ -505,7 +506,7 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'CV de candidatura' : 'Application resumes'}</p>
               <h2 className="cv-serif mt-4 text-4xl font-normal leading-tight tracking-[-0.025em] text-slate-950">{spanish ? 'Elige el perfil que mejor encaja con la oportunidad.' : 'Choose the profile that best matches the opportunity.'}</h2>
-              <p className="mt-5 max-w-md leading-relaxed text-slate-700">{spanish ? 'Cada edición presenta en dos páginas la experiencia, los proyectos y las credenciales más relevantes. El CV maestro ofrece la trayectoria y el portfolio completos.' : 'Each two-page edition presents the most relevant experience, projects and credentials. The master CV provides the complete career and portfolio record.'}</p>
+              <p className="mt-5 max-w-md leading-relaxed text-slate-700">{spanish ? 'Cada edición presenta la experiencia, los proyectos y las credenciales más relevantes para su especialidad. El CV maestro ofrece la trayectoria y el portfolio completos.' : 'Each edition presents the experience, projects and credentials most relevant to its specialty. The master CV provides the complete career and portfolio record.'}</p>
             </div>
             <ol className="border-t border-slate-400">
               {roleEditions.map((item, index) => (
@@ -516,8 +517,8 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
                     <p className="mt-1 text-sm leading-relaxed text-slate-600">{spanish ? item.detailEs : item.detailEn}</p>
                   </div>
                   <div className="flex items-center gap-4 text-xs font-bold uppercase tracking-[0.12em]">
-                    <a href={`/cv/variants/Sami_Halawa_CV_${roleEditionFile(item.key)}.pdf`} download data-analytics-event="cv_download" className="inline-flex min-h-11 items-center border-b border-slate-500 text-slate-800 hover:border-slate-950 hover:text-slate-950">PDF ↓</a>
-                    <a href={`/cv/variants/Sami_Halawa_CV_${roleEditionFile(item.key)}_ATS.txt`} download data-analytics-event="cv_download" className="inline-flex min-h-11 items-center border-b border-slate-500 text-slate-800 hover:border-slate-950 hover:text-slate-950">ATS ↓</a>
+                    <a href={`/cv/variants/Sami_Halawa_CV_${roleEditionFile(item)}.pdf`} download data-analytics-event="cv_download" className="inline-flex min-h-11 items-center border-b border-slate-500 text-slate-800 hover:border-slate-950 hover:text-slate-950">PDF ↓</a>
+                    <a href={`/cv/variants/Sami_Halawa_CV_${roleEditionFile(item)}_ATS.txt`} download data-analytics-event="cv_download" className="inline-flex min-h-11 items-center border-b border-slate-500 text-slate-800 hover:border-slate-950 hover:text-slate-950">ATS ↓</a>
                   </div>
                 </li>
               ))}

@@ -1,0 +1,369 @@
+Contact
+Madrid
+                                       Sami Halawa
++34679794037 (Mobile)                  Founding AI Engineer | Production Agentic AI, RAG & MCP Systems
+sami@oulang.ai                         | Python, TypeScript, APIs, SQL, MLOps
+                                       Spain
+www.linkedin.com/in/samihalawa
+(LinkedIn)
+samihalawa.com (Personal)              Summary
+agentsai.ltd (Company)
+oulang.ai (Portfolio)                  I build production AI systems that move from prototype to
+automedical.ai (Portfolio)
+                                       deployment. I specialize in agentic workflows, RAG, MCP,
+                                       evaluation, observability and automation across Python, TypeScript,
+Top Skills
+                                       APIs, SQL and cloud environments.My production standard is
+Artificial Intelligence (AI)
+                                       explicit state, tool and function calling, structured outputs, evaluation
+SQL
+                                       checkpoints, observability and human review—not demo-only
+Python (Programming Language)
+                                       automation.Recent proof includes OULANG reaching 17,262 users
+                                       and 89,913 contact reveals; AutoClient being selected by Lanzadera
+Languages
+                                       in 2025; and VUDA reaching 80 GitHub stars and 7 forks.I publish
+Spanish (Native or Bilingual)
+                                       technical articles and the Applied AI Systems newsletter on
+Chinese (Native or Bilingual)
+                                       production AI, automation and EU AI Act transparency.Based in
+English (Native or Bilingual)
+                                       Madrid and open to Founding AI Engineer, AI Systems Architect and
+                                       Senior AI Engineer roles. Portfolio: samihalawa.com
+Certifications
+Approaches to Establish Trust in AI
+Systems
+Data Privacy, Ethics, and              Experience
+Responsible AI
+Advanced AI Security, Automation,      Agents AI Ltd
+Governance, and Compliance             Founding AI Engineer
+Generative AI: Introduction and        July 2025 - Present (1 year 2 months)
+Applications                           Madrid, Spain
+Fundamental Rights Impact              • Built and operated OULANG across web, iOS and Android, reaching 17,262
+Assessment for GenAI Projects
+                                       users, 38,857 listings and 89,913 contact reveals by 3 July 2026.
+                                       • Engineered production agent workflows with explicit state, tool and function
+Honors-Awards
+                                       calling, structured outputs, evaluation checkpoints, observability and human
+Two-year IB scholarship — Li Po
+                                       review across Python, TypeScript, APIs, SQL and cloud environments.
+Chun UWC Hong Kong
+Adobe Certified Expert - Adobe After   • Shipped research, enrichment, CRM and follow-up workflows across email,
+Effects                                LinkedIn, WhatsApp and voice.
+Published author — ChinoTotal          • Defined KPI views in PostHog and SQL to track registrations, listings,
+Mandarin course
+                                       subscriptions, referrals and feature adoption.
+Oulang.ai reached 45K clicks from
+                                       • Published reusable open-source systems including VUDA, with 80 GitHub
+Google Search in the past 28 days
+Apr 12. 2026                           stars and 7 forks, within a portfolio of 249 public non-fork repositories.
+AutoClient.ai selected by Lanzadera    • Took products from architecture and implementation through deployment,
+                                       analytics and operational handover.
+                                                                           Page 1 of 7
+Publications                         AutoClient AI
+ChinoTotal — Aprende Chino           Agentic AI Systems Engineer — AutoClient
+Mandarín desde 0 (HSK2 / A2)         March 2024 - Present (2 years 6 months)
+The Complete Gemini 3.1 Pro          Madrid, Spain
+Developer Guide for Autonomous
+Coding Agents                        • Selected by Lanzadera in 2025 after I founded and architected AutoClient, an
+Apolo: Privacy-Preserving Medical    agentic revenue-operations system.
+Image Analysis Framework             • Designed one shared account-context pipeline spanning research,
+EU AI Act Transparency Engineering   enrichment, qualification, CRM execution and next-action planning.
+Checklist — Article 50
+                                     • Implemented tool-calling agents and modular workflows with Python,
+Introducing VUDA — Visual UI
+Debug Agent                          APIs and MCP, using structured outputs, checkpoints, CRM write-back and
+                                     traceable execution.
+                                     • Orchestrated email, LinkedIn, WhatsApp and voice around the same CRM
+                                     and database context instead of isolated channel automations.
+                                     • Automated post-call notes, follow-up and account-context continuity while
+                                     keeping review points before external action.
+                                     • Published two owned technical walkthroughs demonstrating the workflows.
+
+
+                                     AutoMedical
+                                     Medical AI Product Engineer — AutoMedical
+                                     February 2025 - Present (1 year 7 months)
+                                     Madrid, Spain
+
+                                     • Built AutoMedical as an applied medical AI research and learning product
+                                     spanning multimodal review, structured reporting and professional education.
+                                     • Architected APOLO as a two-stage workflow that separates visual evidence
+                                     extraction from downstream reasoning: a vision-language model produces
+                                     structured, non-diagnostic descriptions before a second model processes them
+                                     for classification and explicit reasoning.
+                                     • Prototyped AutoIOL and MedSAM-based workflows for ophthalmology and
+                                     medical-image review.
+                                     • Defined inspectable outputs, evaluation checkpoints and human review
+                                     before interpretation or downstream use.
+                                     • Applied privacy-oriented data handling and reviewable workflow design
+                                     across research and learning prototypes.
+
+
+                                     Independent
+                                     AI Systems Consultant
+                                     July 2022 - Present (4 years 2 months)
+                                     Madrid, Spain
+
+
+
+
+                                                                          Page 2 of 7
+• Designed and delivered production AI architectures for agentic workflows,
+RAG, MCP, APIs, SQL and cloud environments, taking requirements through
+prototypes, deployment and operational handover.
+• Defined evaluation checkpoints, observability, human-review boundaries and
+EU AI Act transparency for applied AI implementations.
+• Delivered 111 recorded lessons, workshops and implementation sessions
+totalling 125.83 hours in Spanish, English and Mandarin, translating system
+architecture into decisions for technical and non-technical teams.
+• Published technical guides and articles on autonomous coding agents,
+multimodal medical AI, UI debugging and Article 50 transparency.
+• Advised professionals and teams on architecture, product operations,
+automation and implementation planning.
+
+
+Fernando Ly / EyeUnit
+AI Product & Medical Workflow Consultant
+August 2024 - August 2026 (2 years 1 month)
+Madrid, Spain
+
+Collaborated with Fernando Ly / EyeUnit on medical AI, OCT/ophthalmology
+workflows and account-intelligence prototypes.
+• Designed account-list merging, cross-sell discovery and clinical-market
+scoring workflows.
+• Prototyped multimodal image review, longitudinal tracking and structured
+reporting with human review built into the workflow.
+• Translated domain requirements into product concepts, data flows, interfaces
+and reviewable outputs.
+• Combined medical-workflow research with B2B account intelligence and
+product-feasibility work.
+• Worked remotely across product research, workflow design and technical
+implementation.
+
+
+Umbramed / Valerio Trigos
+Medical AI Product Engineer & Technical Mentor
+July 2025 - June 2026 (1 year)
+Madrid, Spain
+
+Worked with Valerio Trigos on Umbramed medical-education and clinical-tool
+products, combining technical leadership, AI mentoring and hands-on delivery.
+• Led Ionic/Capacitor and PWA architecture, product-roadmap work, mobile
+installability and Netlify delivery and recovery.
+• Designed exam-data workflows covering PDF-to-JSON/Airtable ingestion,
+bulk uploads, medical-question databases and reusable extraction tooling.
+
+                                     Page 3 of 7
+• Supported connectors, analytics, Stripe and payment preparation, app
+packaging, workflow troubleshooting and technical prioritisation.
+• Developed interactive demos, proposal videos and application material for
+the EIC / EC Accelerator process.
+• Mentored Valerio through AI-assisted development, prompt systems,
+interface design and iterative product implementation.
+
+
+MelindaAI
+AI Product & Prototype Lead
+July 2023 - December 2024 (1 year 6 months)
+Built and tested consumer AI product concepts including MelindaAI, KittyAI,
+Sharedetect and ZebraMenu.
+• Prototyped user journeys, interfaces and AI-assisted interactions across
+consumer and social use cases.
+• Published selected web prototypes and iterated product positioning,
+interaction design and delivery.
+• Applied the product and engineering lessons from these early builds to later
+agentic and cross-platform systems.
+
+
+Damehosting
+Senior Full-Stack Engineer
+July 2019 - July 2023 (4 years 1 month)
+Developed and maintained production web platforms, backend services and
+operational integrations.
+• Built and supported APIs, database-backed features, automation workflows
+and customer-facing web systems.
+• Improved delivery through code review, CI/CD practices, Linux and server
+operations, monitoring and incident troubleshooting.
+• Worked across frontend, backend, infrastructure and deployment boundaries
+to keep releases reliable.
+• Collaborated with stakeholders and mentored developers through
+implementation and production support.
+
+
+Megawebs
+Technical SEO & Web Platform Engineer
+July 2010 - July 2023 (13 years 1 month)
+Led technical SEO, web architecture, content and acquisition work across the
+Megawebs portfolio.
+• Improved site structure, crawlability, on-page relevance and search-oriented
+content for web products and client projects.
+
+                                    Page 4 of 7
+• Connected SEO strategy with web development, analytics, content
+production and conversion-focused user journeys.
+• Built and maintained sites within a wider portfolio of more than 70 digital
+projects.
+• Developed the search, publishing and product-discovery foundation later
+applied to AI products and multilingual marketplaces.
+
+
+Megacursos.com
+14 years 1 month
+
+Full-Stack Product Engineer & Technical Educator
+July 2009 - July 2023 (14 years 1 month)
+Built web and mobile products, produced technical courses and led SEO,
+content and acquisition work.
+• Delivered websites, mobile experiences and digital products from concept
+through launch and maintenance.
+• Produced reusable course material and practical projects covering After
+Effects, Photoshop, Cinema 4D, web production and product skills.
+• Led SEO, content and acquisition work alongside technical implementation.
+• Combined customer delivery, teaching and hands-on production across a
+long-running portfolio of more than 70 digital projects.
+
+Technical Course Instructor & Producer
+August 2013 - August 2019 (6 years 1 month)
+Madrid
+
+Produced and taught practical technical courses for professionals and
+independent learners.
+• Designed structured lessons, demonstrations and project-based exercises in
+After Effects, Cinema 4D, Photoshop and digital production.
+• Converted complex software workflows into clear, reusable training material.
+• Delivered instruction in classroom, hybrid and recorded formats.
+• Combined teaching with course production, learner support and continuous
+curriculum improvement.
+
+Digital Design Instructor
+July 2009 - July 2016 (7 years 1 month)
+Madrid, Spain
+
+Designed and delivered project-based training in digital design, motion
+graphics and web production.
+• Taught After Effects, Photoshop, Cinema 4D and related creative workflows
+through practical exercises.
+
+
+                                    Page 5 of 7
+• Created reusable lesson plans, demonstrations and course assets for hybrid
+learning.
+• Helped learners translate tool knowledge into finished visual and web
+projects.
+• Built the instructional foundation later extended into AI, automation and
+product-engineering education.
+
+
+China Media & Live Production
+Presenter & Live Host
+July 2015 - July 2017 (2 years 1 month)
+China
+
+Delivered multilingual on-camera presentations, live content and audience-
+facing productions in China.
+• Adapted delivery across cultures, formats and production teams.
+• Built strong camera presence, live communication and rapid-response
+presentation skills.
+• Worked in Mandarin, English and Spanish environments.
+• Applied this experience later to technical teaching, product demonstrations,
+sales conversations and executive-facing communication.
+
+
+China Media & Commercial Production
+Commercial Model & Actor
+July 2013 - July 2017 (4 years 1 month)
+China
+
+Worked on international commercial, advertising and media productions in
+China.
+• Collaborated with creative teams, directors, photographers and production
+crews in fast-paced on-set environments.
+• Adapted performance and communication across languages, cultures and
+brand contexts.
+• Developed discipline in preparation, direction-following and professional
+delivery.
+• Brought the resulting visual communication and audience awareness into
+later teaching, demos and product storytelling.
+
+
+
+
+Education
+Google
+Google AI Professional Certificate, Applied AI, Data Analysis, Research,
+Communication and App Building · (August 2026 - August 2026)
+                                   Page 6 of 7
+Stanford University
+AI in Healthcare Specialization, Clinical Data, Machine Learning for Healthcare
+and AI Evaluation · (August 2026 - August 2026)
+
+
+Microsoft
+Microsoft Generative AI Engineering Professional Certificate, Azure
+Generative AI, Large Language Models, Multimodal AI and MLOps · (August
+2026 - August 2026)
+
+
+Microsoft
+Microsoft AI & ML Engineering Professional Certificate, AI and Machine
+Learning Engineering, Azure and Intelligent Agents · (August 2026 - August
+2026)
+
+
+IBM
+IBM Machine Learning Professional Certificate, Machine Learning, Deep
+Learning and Reinforcement Learning · (August 2026 - August 2026)
+
+
+
+
+                                  Page 7 of 7
+SAMI HALAWA RIBAS
+
+
+  Selected Impact, Projects & Professional Authority
+Production outcomes, public engineering work, recommendations and current professional education.
+
+MEASURED IMPACT                                                               RECOMMENDATIONS
+- Agents AI / OULANG: 17,262 users, 38,857 listings and 89,913                - Hugo Morales, Lukkap Ventures: public recommendation highlights
+  contact reveals by 3 July 2026 across web, iOS and Android.                    strong technical capacity, analytical thinking and execution in
+                                                                                 development and data.
+- AutoClient: selected by Lanzadera in 2025. A public
+  recommendation reports more than 200 qualified contacts in two              - Haoyung Zu, Chinese-market adviser: public recommendation
+  weeks and a 30% sales-conversion improvement for one business                  describes the AutoClient MVP-validation outcomes above.
+  owner during MVP validation.
+                                                                              PROFESSIONAL EDUCATION
+- Open source: VUDA reached 80 GitHub stars and 7 forks within a
+  portfolio of 249 public non-fork repositories.                              - 114 unique credential IDs across 17 completed programmes,
+                                                                                 plus Microsoft Certified: Azure AI Fundamentals and Adobe Certified
+- Technical education: 111 recorded lessons, workshops and                       Expert.
+  implementation sessions totalling 125.83 hours in Spanish, English
+  and Mandarin.                                                               - IBM Generative AI Engineering Professional Certificate: official
+                                                                                 16-course programme covering Python, machine learning, deep
+- Digital delivery: more than 70 projects across Megawebs and                    learning, transformers, fine-tuning, RAG and LangChain.
+  Megacursos, including long-form After Effects, Illustrator and Nuke
+  course series.                                                              - IBM Machine Learning Professional Certificate: six-course
+                                                                                 programme including supervised and unsupervised learning, deep
+SELECTED PUBLIC WORK                                                             learning, reinforcement learning and a capstone.
+
+- AutoClient: agentic revenue operations across research,                     - Additional flagship programmes: Google Data Analytics
+  enrichment, CRM, email, LinkedIn, WhatsApp and voice -                         Professional Certificate and AI Foundations for Business
+  samihalawa.com/case-studies/autoclient                                         Professionals from Saïd Business School, University of Oxford.
+
+- VUDA: visual UI debugging agent built around Model Context                  PUBLISHING & COMMUNICATION
+  Protocol - github.com/samihalawa/visual-ui-debug-agent-mcp
+                                                                              - Applied AI Systems: technical writing on production AI, automation
+- OULANG: multilingual marketplace and local-life platform for Chinese           and EU AI Act transparency.
+  communities in Spain - samihalawa.com/case-studies/oulang
+                                                                              - EU AI Act Transparency Engineering Checklist - Article 50:
+- RapidAct: practical EU AI Act Article 50 diagnostics and                       published LinkedIn article on disclosure timing, system touchpoints,
+  implementation guidance - rapidact.eu                                          evidence and operational ownership.
+
+                                                                              - Languages: Spanish, English and Mandarin Chinese, with
+                                                                                 professional experience across Spain, China and remote international
+                                                                                 teams.
+
+
+    Sami Halawa Ribas | Senior AI Engineer | samihalawa.com | linkedin.com/in/samihalawa
+
