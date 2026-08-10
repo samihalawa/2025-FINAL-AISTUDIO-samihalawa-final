@@ -1,6 +1,6 @@
-# Sami Halawa — AI Product and Engineering Portfolio
+# Sami Halawa — Founding AI Engineering Portfolio
 
-Sami Halawa is a founder-engineer in Madrid building multilingual AI products, agent systems, applied AI workflows and technical education.
+Sami Halawa is a founding AI engineer in Madrid building production systems across agentic AI, RAG, MCP, voice and automation with Python and TypeScript.
 
 ## Main pages
 

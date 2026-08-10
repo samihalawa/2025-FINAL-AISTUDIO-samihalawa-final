@@ -9,12 +9,12 @@ const content: Record<LanguageCode, {
   achievements: { meta: string; title: string; body: string; links: { label: string; href: string }[] }[];
 }> = {
   en: {
-    eyebrow: 'Why the work connects', title: 'Product, systems, distribution and communication.',
-    intro: 'My career did not begin with LLMs. Full-stack engineering, mobile apps, growth, teaching and China-based media work became the operating layer beneath the AI products I build now.', evidence: 'Hands-on by default: I can move from product framing to code, infrastructure, launch and iteration without splitting the work into disconnected handoffs.',
+    eyebrow: 'How I work', title: 'Senior AI engineering with founder-level product ownership.',
+    intro: 'I combine agentic AI, RAG and automation with the full-stack engineering needed to put them into real products. Earlier work across web, mobile, growth, teaching and multilingual media forms the operating layer beneath that delivery.', evidence: 'Hands-on by default: I move from product framing through Python and TypeScript implementation, APIs, data, deployment, observability and iteration without splitting the system into disconnected handoffs.',
     principles: [
-      { title: 'Build the whole system', body: 'Agents, APIs, data, interface, deployment, analytics, payments and operations belong to one product.' },
-      { title: 'Close the loop', body: 'A product is only finished when the interface, workflow and operating reality work together.' },
-      { title: 'Explain across boundaries', body: 'Spanish, English and Mandarin delivery helps bridge engineering, users, clients and executives.' }
+      { title: 'Engineer the full AI workflow', body: 'Retrieval, tools, structured outputs, APIs, data, interfaces, deployment and observability belong to one system.' },
+      { title: 'Build for operation', body: 'Reliable AI work includes monitoring, human review and the real workflow around the model—not only a successful response.' },
+      { title: 'Bridge product and engineering', body: 'Spanish, English and Mandarin delivery helps connect technical decisions with users, clients and executives.' }
     ],
     timeline: [
       { years: '2009–2023', title: 'Web, mobile, growth & education', body: 'More than 70 projects spanning products, course creation, digital-design instruction and acquisition.' },
@@ -49,12 +49,12 @@ const content: Record<LanguageCode, {
     ]
   },
   es: {
-    eyebrow: 'Por qué todo conecta', title: 'Producto, sistemas, distribución y comunicación.',
-    intro: 'Mi carrera no empezó con los LLM. Full-stack, apps móviles, growth, docencia y medios en China forman la capa operativa de los productos de IA que construyo hoy.', evidence: 'Trabajo con las manos en el producto: puedo pasar de definición a código, infraestructura, lanzamiento e iteración sin dividirlo en entregas desconectadas.',
+    eyebrow: 'Cómo trabajo', title: 'Ingeniería sénior de IA con responsabilidad de producto a nivel fundador.',
+    intro: 'Combino IA agéntica, RAG y automatización con la ingeniería full-stack necesaria para integrarlas en productos reales. La experiencia previa en web, móvil, growth, docencia y medios multilingües forma la capa operativa de esa entrega.', evidence: 'Trabajo directamente de la definición a la implementación con Python y TypeScript, APIs, datos, despliegue, observabilidad e iteración, sin dividir el sistema en entregas desconectadas.',
     principles: [
-      { title: 'Construir el sistema completo', body: 'Agentes, APIs, datos, interfaz, despliegue, analítica, pagos y operaciones son un único producto.' },
-      { title: 'Cerrar el ciclo', body: 'Un producto termina cuando interfaz, flujo y realidad operativa funcionan juntos.' },
-      { title: 'Explicar entre mundos', body: 'La entrega en español, inglés y mandarín une ingeniería, usuarios, clientes y dirección.' }
+      { title: 'Diseñar el flujo completo de IA', body: 'Recuperación, herramientas, salidas estructuradas, APIs, datos, interfaces, despliegue y observabilidad forman un único sistema.' },
+      { title: 'Construir para operar', body: 'La IA fiable incluye monitorización, revisión humana y el flujo real alrededor del modelo, no solo una respuesta correcta.' },
+      { title: 'Unir producto e ingeniería', body: 'La entrega en español, inglés y mandarín conecta decisiones técnicas con usuarios, clientes y dirección.' }
     ],
     timeline: [
       { years: '2009–2023', title: 'Web, móvil, growth y educación', body: 'Más de 70 proyectos entre producto, cursos, docencia de diseño digital y adquisición.' },
@@ -89,9 +89,9 @@ const content: Record<LanguageCode, {
     ]
   },
   fr: {
-    eyebrow: 'Pourquoi tout se relie', title: 'Produit, systèmes, distribution et communication.',
-    intro: 'Ma carrière n’a pas commencé avec les LLM. Full-stack, mobile, croissance, formation et médias en Chine forment la base de mes produits IA actuels.', evidence: 'J’interviens directement du cadrage produit au code, à l’infrastructure, au lancement et à l’itération, sans multiplier les relais.',
-    principles: [{ title: 'Construire le système complet', body: 'Agents, APIs, données, interface, déploiement, analyse et opérations forment un seul produit.' }, { title: 'Fermer la boucle', body: 'Un produit est abouti lorsque l’interface, le parcours et la réalité opérationnelle fonctionnent ensemble.' }, { title: 'Expliquer entre les mondes', body: 'Espagnol, anglais et mandarin relient ingénierie, utilisateurs et décideurs.' }],
+    eyebrow: 'Ma façon de travailler', title: 'Ingénierie IA senior avec une responsabilité produit de fondateur.',
+    intro: 'Je combine IA agentique, RAG et automatisation avec l’ingénierie full-stack nécessaire pour les intégrer à de vrais produits. Mon expérience du web, du mobile, de la croissance, de la formation et des médias multilingues soutient cette mise en œuvre.', evidence: 'J’interviens directement du cadrage à Python et TypeScript, aux APIs, aux données, au déploiement, à l’observabilité et à l’itération, sans multiplier les relais.',
+    principles: [{ title: 'Concevoir tout le flux IA', body: 'Retrieval, outils, sorties structurées, APIs, données, interfaces, déploiement et observabilité forment un seul système.' }, { title: 'Construire pour l’exploitation', body: 'Une IA fiable inclut le suivi, la validation humaine et le parcours réel autour du modèle, pas seulement une réponse correcte.' }, { title: 'Relier produit et ingénierie', body: 'Espagnol, anglais et mandarin relient les décisions techniques aux utilisateurs, clients et dirigeants.' }],
     timeline: [{ years: '2009–2023', title: 'Web, mobile, croissance & éducation', body: 'Plus de 70 projets couvrant produits, cours, design numérique et acquisition.' }, { years: '2013–2017', title: 'Médias en Chine', body: 'Production commerciale et présentation multilingue.' }, { years: '2019–2023', title: 'Ingénierie full-stack', body: 'Web, Linux, CI/CD, revues et mentoring.' }, { years: '2022–présent', title: 'Formation IA & conseil', body: 'Agents, automatisation, Python et produit.' }, { years: '2025–présent', title: 'Agents AI Ltd', body: 'Plateformes IA et opérations agentiques.' }],
     achievementsTitle: 'Distinctions et publications sélectionnées',
     achievements: [
@@ -101,9 +101,9 @@ const content: Record<LanguageCode, {
     ]
   },
   zh: {
-    eyebrow: '这些经历为何相连', title: '产品、系统、增长与沟通。',
-    intro: '我的职业并非始于 LLM。全栈、移动应用、增长、教学以及在中国的媒体经历，构成了今天 AI 产品的运营基础。', evidence: '默认亲自推进：从产品定义到代码、基础设施、发布与迭代，避免把工作拆成彼此断开的交接。',
-    principles: [{ title: '构建完整系统', body: '智能体、API、数据、界面、部署、分析、支付和运营属于同一个产品。' }, { title: '闭合产品循环', body: '只有界面、用户流程与真实运营共同顺畅，产品才算完成。' }, { title: '跨边界解释', body: '西班牙语、英语和中文帮助连接工程、用户、客户与管理层。' }],
+    eyebrow: '我的工作方式', title: '兼具创始人级产品责任的高级 AI 工程。',
+    intro: '我把智能体 AI、RAG 和自动化，与将其落地到真实产品所需的全栈工程结合起来。Web、移动端、增长、教学和多语言媒体经验构成了交付的运营基础。', evidence: '默认亲自推进：从产品定义到 Python 与 TypeScript、API、数据、部署、可观测性和迭代，避免把系统拆成彼此断开的交接。',
+    principles: [{ title: '设计完整 AI 工作流', body: '检索、工具、结构化输出、API、数据、界面、部署与可观测性属于同一个系统。' }, { title: '面向真实运营构建', body: '可靠的 AI 包含监控、人工审核和模型周边的真实流程，而不只是一次正确响应。' }, { title: '连接产品与工程', body: '西班牙语、英语和中文帮助把技术决策连接到用户、客户与管理层。' }],
     timeline: [{ years: '2009–2023', title: 'Web、移动、增长与教育', body: '完成 70 多个产品、课程、数字设计教学与增长项目。' }, { years: '2013–2017', title: '中国媒体工作', body: '商业制作、主持与多语言镜头沟通。' }, { years: '2019–2023', title: '生产级全栈工程', body: 'Web、Linux、CI/CD、评审和指导。' }, { years: '2022–至今', title: 'AI 教学与技术咨询', body: '面向实现的智能体、自动化、Python 与产品工程。' }, { years: '2025–至今', title: 'Agents AI Ltd', body: 'AI 平台、智能体运营与专业产品交付。' }],
     achievementsTitle: '精选荣誉与出版物',
     achievements: [
