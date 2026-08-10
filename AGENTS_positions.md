@@ -1,5 +1,6 @@
 # INDEX
 
+appended CV page numbering and ATS extraction | appending a page to a provider PDF can preserve stale total-page footers and column-ordered extraction | publish a cache-safe corrected asset with all pages renumbered and build ATS as linear semantic text | do not expose raw layout extraction or overwrite the historical URL | verify every PDF footer, zero stale page totals, ATS reading order, exact live hashes and both rendered routes
 GenAI application CV completeness | a high-scoring two-page resume can omit most of the authenticated career chronology | build the active GenAI edition from the complete 14-role LinkedIn profile and add a public authority page | do not publish the reduced scorer PDF as the current website edition or keep fixed two-page copy | verify all 14 roles, public-only language, ATS text, exact live hash and score
 objective CV public copy | the website can expose a correct six-profile architecture while masters still merge separate collaborations or retain audit-style wording | publish the incremental v6 assets with 84 public projects/collaborations and separate AutoMedical, Fernando/EyeUnit and Valerio/Umbramed framing | do not overwrite historical v4/v5 URLs or expose internal inventory state | verify exact source/public hashes, PDF pages, rendered EN/ES routes and all twelve profile downloads
 active CV choices | the site can expose comprehensive clones and expired company-specific editions as permanent choices | keep complete EN/ES masters and list exactly six reusable application profiles | do not delete historical URLs or keep Atos/Archer/Zooplus/standalone Voice in the active list | verify rendered six-entry list plus exact PDF/ATS hashes and downloads
@@ -30,6 +31,16 @@ blog content pipeline | hard-coded slug list + modal did not scale to daily hub-
 SPA production routes | public asset directories collide with client routes | serve file-shaped URLs as static files and everything else as the SPA shell | do not let Nginx treat route names as directories or leak port 8080 redirects | verify slash and non-slash routes plus real asset MIME types
 Coolify Linux build | macOS lock can omit the Linux Rollup binary and Docker hosts differ between arm64 and x64 | install the build container's matching native Rollup GNU package | do not hardcode one CPU or infer deployability from the macOS Vite build | verify local container plus Coolify build the pushed commit and live routes
 public portfolio | stock imagery and invented social proof replaced source evidence | use dated metrics, real screenshots and public links | do not publish placeholders, arbitrary percentages or unsupported impact | verify exact live route, image load, text and responsive layout
+
+## 2026-08-10 — Renumber appended CV pages and generate semantic ATS text
+
+- **Status:** CURRENT
+- **Project/root:** `2025-FINAL-AISTUDIO-samihalawa-final`; active GenAI PDF/ATS on `/cv/en` and `/cv/es`.
+- **Mistake corrected:** v7 appended an eighth authority page to LinkedIn's seven-page export while retaining `Page n of 7`; its ATS file was a raw fixed-layout extraction with interleaved columns, page labels and joined sentences.
+- **Superior approach:** preserve v7 historically, publish v8 under a cache-safe filename, redact and replace every footer as `Page n of 8`, and generate a linear ATS document from the same eight-page content without layout artifacts.
+- **Evidence:** `public/cv/variants/Sami_Halawa_CV_GenAI_Agents_Automation_2026-08-10-v8.pdf`, matching `_ATS.txt`, `pages/CVPage.tsx` and production hash read-back.
+- **Triggers / verification:** appended PDF, page total, ATS, joined sentence or column order; require eight unique `Page n of 8` footers, zero `of 7`, zero form-feed/page labels in ATS, all 14 roles and rendered EN/ES download links.
+- **Do / don't:** do keep the professional content unchanged; don't overwrite v7, regenerate ATS with `pdftotext -layout`, or treat a valid PDF header as reader-layer proof.
 
 ## 2026-08-10 — Build the active GenAI CV from the complete LinkedIn chronology
 
