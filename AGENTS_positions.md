@@ -1,5 +1,6 @@
 # INDEX
 
+designed technical GenAI CV | a complete LinkedIn-derived PDF can still look like a provider export and bury technical evidence | publish the canonical three-page A4 role-CV design with architecture, stack, impact, all 14 roles, systems and credentials | do not use the LinkedIn export as the active application document | verify every rendered page, ATS parity, exact live hashes and both language routes
 appended CV page numbering and ATS extraction | appending a page to a provider PDF can preserve stale total-page footers and column-ordered extraction | publish a cache-safe corrected asset with all pages renumbered and build ATS as linear semantic text | do not expose raw layout extraction or overwrite the historical URL | verify every PDF footer, zero stale page totals, ATS reading order, exact live hashes and both rendered routes
 GenAI application CV completeness | a high-scoring two-page resume can omit most of the authenticated career chronology | build the active GenAI edition from the complete 14-role LinkedIn profile and add a public authority page | do not publish the reduced scorer PDF as the current website edition or keep fixed two-page copy | verify all 14 roles, public-only language, ATS text, exact live hash and score
 objective CV public copy | the website can expose a correct six-profile architecture while masters still merge separate collaborations or retain audit-style wording | publish the incremental v6 assets with 84 public projects/collaborations and separate AutoMedical, Fernando/EyeUnit and Valerio/Umbramed framing | do not overwrite historical v4/v5 URLs or expose internal inventory state | verify exact source/public hashes, PDF pages, rendered EN/ES routes and all twelve profile downloads
@@ -32,9 +33,19 @@ SPA production routes | public asset directories collide with client routes | se
 Coolify Linux build | macOS lock can omit the Linux Rollup binary and Docker hosts differ between arm64 and x64 | install the build container's matching native Rollup GNU package | do not hardcode one CPU or infer deployability from the macOS Vite build | verify local container plus Coolify build the pushed commit and live routes
 public portfolio | stock imagery and invented social proof replaced source evidence | use dated metrics, real screenshots and public links | do not publish placeholders, arbitrary percentages or unsupported impact | verify exact live route, image load, text and responsive layout
 
-## 2026-08-10 — Renumber appended CV pages and generate semantic ATS text
+## 2026-08-10 — Publish the designed complete GenAI application CV
 
 - **Status:** CURRENT
+- **Project/root:** `2025-FINAL-AISTUDIO-samihalawa-final`; active GenAI PDF/ATS on `/cv/en` and `/cv/es`.
+- **Mistake corrected:** v8 fixed the LinkedIn-derived document's pagination and ATS extraction but remained visibly a LinkedIn export, with provider-style typography and chronology instead of a technical-recruiter hierarchy.
+- **Superior approach:** publish the canonical v9 role-CV output: three A4 pages covering production architecture, engineering stack, measured impact, all 14 roles, selected technical systems, education, languages, professional credentials, publishing and recommendations, with a semantic ATS twin.
+- **Evidence:** canonical release `PROJECTS_MEDIA/SAMIHALAWA_CV_FINAL/archive/releases/2026-08-10-v9`, `pages/CVPage.tsx`, exact public hashes and rendered EN/ES download cards.
+- **Triggers / verification:** LinkedIn-looking, technical CV, final GenAI resume, complete experience or v9; inspect every PDF page, require all 14 roles in PDF/ATS, three correct footers, exact source/public/live hashes and desktop/mobile rendering.
+- **Do / don't:** do keep v7/v8 immutable as historical evidence and retain the other five active editions; don't append to a provider export, overwrite old URLs or create a seventh role category.
+
+## 2026-08-10 — Renumber appended CV pages and generate semantic ATS text
+
+- **Status:** SUPERSEDED
 - **Project/root:** `2025-FINAL-AISTUDIO-samihalawa-final`; active GenAI PDF/ATS on `/cv/en` and `/cv/es`.
 - **Mistake corrected:** v7 appended an eighth authority page to LinkedIn's seven-page export while retaining `Page n of 7`; its ATS file was a raw fixed-layout extraction with interleaved columns, page labels and joined sentences.
 - **Superior approach:** preserve v7 historically, publish v8 under a cache-safe filename, redact and replace every footer as `Page n of 8`, and generate a linear ATS document from the same eight-page content without layout artifacts.
@@ -44,7 +55,7 @@ public portfolio | stock imagery and invented social proof replaced source evide
 
 ## 2026-08-10 — Build the active GenAI CV from the complete LinkedIn chronology
 
-- **Status:** CURRENT
+- **Status:** SUPERSEDED
 - **Project/root:** `2025-FINAL-AISTUDIO-samihalawa-final`; active GenAI application PDF/ATS on `/cv/en` and `/cv/es`.
 - **Mistake corrected:** the first 10 August Jobgether PDF reached a strong score but compressed the record to a small subset of roles and omitted Fernando Ly/EyeUnit, Umbramed, MelindaAI, Megawebs/Megacursos, technical teaching and China media experience.
 - **Superior approach:** preserve the authenticated seven-page LinkedIn export with all 14 current roles, append one recruiter-facing impact/projects/recommendations/education page, and publish that exact eight-page PDF as the cache-safe GenAI v7 asset while retaining the other five v6 profiles and both complete masters.

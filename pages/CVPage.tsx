@@ -21,7 +21,7 @@ const roleEditions = [
   },
   {
     key: 'GenAI_Agents_Automation',
-    fileVersion: '2026-08-10-v8',
+    fileVersion: '2026-08-10-v9',
     en: 'GenAI / Agents / Voice / Automation',
     es: 'GenAI / Agentes / Voz / Automatización',
     detailEn: 'Python and TypeScript systems across RAG, LangGraph, MCP, structured outputs, voice, deployment, observability and human review.',

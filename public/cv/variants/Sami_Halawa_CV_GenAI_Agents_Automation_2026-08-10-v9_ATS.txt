@@ -1,0 +1,118 @@
+SAMI HALAWA RIBAS
+Senior GenAI Engineer · RAG, Agents, Voice & Automation
+
+Madrid, Spain · EU work authorisation · +34 679 794 037 · sami@oulang.ai · samihalawa.com · linkedin.com/in/samihalawa · github.com/samihalawa
+
+PROFILE
+Hands-on AI engineer building agentic products from retrieval and orchestration through APIs, interfaces, voice and messaging integrations, deployment, evaluation and observability. I take systems from architecture and implementation through deployment, evaluation, analytics and operational handover.
+
+MEASURED IMPACT
+- OULANG: 17,262 users, 38,857 listings and 89,913 contact reveals by 3 July 2026 across production web, iOS and Android.
+- VUDA: 80 GitHub stars and 7 forks within a portfolio of 249 public non-fork repositories.
+- Technical education: 111 recorded lessons, workshops and implementation sessions totalling 125.83 hours in Spanish, English and Mandarin.
+- AutoClient: selected by Lanzadera in 2025.
+
+CORE TECHNICAL EXPERTISE
+Agents & RAG: LangChain, LangGraph, MCP, multi-agent workflows, memory, retrieval and structured outputs
+Models & evaluation: OpenAI, Anthropic, Gemini, open models, prompt design, tool schemas and evaluation loops
+Voice & automation: Telnyx, voice APIs, CRM context, email, WhatsApp, webhooks, n8n and post-call workflows
+Production delivery: Python, FastAPI, TypeScript, SQL, Docker, CI/CD, logs and human-review checkpoints
+
+PRODUCTION ARCHITECTURE
+Context and retrieval; explicit agent state; tool and function calls; structured outputs; evaluation checkpoints; observability; human review; operational action.
+
+ENGINEERING STACK
+Python; TypeScript; SQL; FastAPI; Node.js; REST APIs; webhooks; LangGraph; LangChain; MCP; RAG; OpenAI; Anthropic; Gemini; React; Next.js; Ionic; Capacitor; Expo; SwiftUI; Docker; Linux; CI/CD; Coolify; Cloudflare; PostHog; cloud platforms.
+
+PROFESSIONAL EXPERIENCE
+Founding AI Engineer · Agents AI Ltd | Jul 2025–Present · Madrid, Spain
+- Built and operated OULANG across web, iOS and Android, reaching 17,262 users, 38,857 listings and 89,913 contact reveals by 3 July 2026.
+- Engineered production agent workflows with explicit state, tool and function calling, structured outputs, evaluation checkpoints, observability and human review across Python, TypeScript, APIs and SQL.
+
+Agentic AI Systems Engineer · AutoClient AI | Mar 2024–Present · Madrid, Spain
+- Founded and architected an agentic revenue-operations system selected by Lanzadera in 2025, spanning research, enrichment, qualification, CRM execution and next-action planning.
+- Orchestrated email, LinkedIn, WhatsApp and voice around shared account context, traceable execution, structured outputs and review points before external action.
+
+Medical AI Product Engineer · AutoMedical | Feb 2025–Present · Madrid, Spain
+- Built multimodal research and learning workflows for image review, structured reporting and professional education with inspectable outputs and human oversight.
+- Architected APOLO as a two-stage vision-language and reasoning workflow and prototyped AutoIOL and MedSAM-based ophthalmology workflows.
+
+Independent AI Systems Consultant | Jul 2022–Present · Madrid / Remote
+- Designed production architectures for agents, RAG, MCP, APIs, SQL and cloud environments from requirements through deployment and operational handover.
+- Delivered 111 recorded lessons, workshops and implementation sessions totalling 125.83 hours in Spanish, English and Mandarin.
+
+AI Product & Medical Workflow Consultant · Fernando Ly / EyeUnit | Aug 2024–Aug 2026 · Madrid / Remote
+- Designed ophthalmology and OCT prototypes for account intelligence, cross-sell discovery, multimodal review, longitudinal tracking and structured reporting.
+- Translated specialist requirements into product concepts, data flows, interfaces and reviewable human-in-the-loop outputs.
+
+Medical AI Product Engineer & Technical Mentor · Umbramed / Valerio Trigos | Jul 2025–Jun 2026 · Madrid / Remote
+- Led Ionic, Capacitor and PWA architecture, mobile installability, delivery recovery and exam-data workflows from PDF ingestion to reusable structured data.
+- Supported integrations, analytics, payment preparation, app packaging, accelerator material and AI-assisted product implementation.
+
+AI Product & Prototype Lead · MelindaAI | Jul 2023–Dec 2024
+- Built and tested consumer AI concepts including MelindaAI, KittyAI, Sharedetect and ZebraMenu, covering user journeys, interfaces and AI-assisted interactions.
+
+Senior Full-Stack Engineer · Damehosting | Jul 2019–Jul 2023
+- Built and maintained production web platforms, backend services, APIs, database features and automation while supporting CI/CD, Linux operations, monitoring and incident recovery.
+
+Technical SEO & Web Platform Engineer · Megawebs | Jul 2010–Jul 2023
+- Led technical SEO, web architecture, analytics, content and acquisition across a portfolio of more than 70 digital projects.
+
+Full-Stack Product Engineer & Technical Educator · Megacursos.com | Jul 2009–Jul 2023
+- Delivered web and mobile products from concept through maintenance while producing reusable technical curricula, practical projects and customer-facing learning systems.
+
+Technical Course Instructor & Producer | Aug 2013–Aug 2019 · Madrid
+- Designed project-based courses and demonstrations in After Effects, Cinema 4D, Photoshop and digital production for classroom, hybrid and recorded delivery.
+
+Digital Design Instructor | Jul 2009–Jul 2016 · Madrid
+- Taught motion graphics, design and web-production workflows and created reusable lesson plans, demonstrations and course assets.
+
+Presenter & Live Host · China Media & Live Production | Jul 2015–Jul 2017 · China
+- Delivered multilingual on-camera and live productions in Mandarin, English and Spanish, adapting rapidly across audiences, formats and production teams.
+
+Commercial Model & Actor · China Media & Commercial Production | Jul 2013–Jul 2017 · China
+- Worked across international advertising and media productions, building the visual communication and audience awareness later applied to teaching, demos and product storytelling.
+
+SELECTED TECHNICAL SYSTEMS
+- OULANG: Multilingual marketplace and local-life platform shipped across production web, iOS and Android with product analytics, payments and operational workflows.
+- AutoClient: Agentic revenue operations connecting account research, enrichment, qualification, CRM write-back and coordinated email, LinkedIn, WhatsApp and voice follow-up.
+- VUDA & MCP toolchain: Open-source visual UI debugging, SMTP, WhatsApp, browser and developer-operation tools; VUDA reached 80 GitHub stars and 7 forks.
+- APOLO & multimodal AI: Two-stage medical-image workflow separating structured visual evidence extraction from downstream reasoning, with explicit evaluation and human review.
+- RapidAct: Practical EU AI Act Article 50 diagnostics, implementation guidance and operational transparency engineering.
+- Technical publishing: Applied AI Systems writing on production agents, automation, multimodal AI, UI debugging and EU AI Act transparency.
+
+EDUCATION
+Li Po Chun United World College of Hong Kong · International Baccalaureate, Science & Mathematics · 2010–2012 · Rafael del Pino Foundation scholarship
+Shenzhen Institute of Information Technology · Computing and information-technology studies · 2016–2018
+
+LANGUAGES
+Spanish native; English C2; Mandarin Chinese C2; Cantonese conversational.
+
+SELECTED PROFESSIONAL CREDENTIALS
+- Microsoft Certified: Azure AI Fundamentals (AI-900)
+- IBM Generative AI Engineering Professional Certificate · H21CWM4OU7XQ
+- IBM Machine Learning Professional Certificate · TRO88CF6Y826
+- Microsoft Generative AI Engineering · 4F55T94ZR1DH
+- Microsoft AI & ML Engineering · G39IMP9491N8
+- Google AI Professional Certificate · RFQT2RK02F2E
+- AI in Healthcare · Stanford University · 7XCTV3Q16K04
+- Databricks Mosaic AI · RRXO8HSACR29
+- Agentic AI Engineering · GZ2Q50QNLE6N
+- Multi-Agent Systems with LangGraph · C8KPTX6U5B6C
+- Developing MCP-Powered Agentic AI Systems · PEGPNFWLRNHG
+- AI Automation Engineer with n8n · YUNCHF6IXQJQ
+- AI Governance & ISO 42001 Readiness · BSI · UXUS7TQ36GF4
+- AI Foundations for Business Professionals · Oxford Saïd · LWTECCK71WBO
+
+PROFESSIONAL EDUCATION
+114 unique credential IDs across 17 completed programmes, plus Microsoft Certified: Azure AI Fundamentals and Adobe Certified Expert.
+
+PUBLISHING AND RECOMMENDATIONS
+- Applied AI Systems: technical writing on production agents, automation, multimodal AI, UI debugging and EU AI Act transparency.
+- Published author: ChinoTotal, a 296-page Mandarin course.
+- Public recommendations highlight technical execution, analytical thinking and AutoClient MVP-validation results including 200+ qualified contacts in two weeks and a reported 30% conversion improvement.
+
+PORTFOLIO
+samihalawa.com/projects
+github.com/samihalawa
+huggingface.co/samihalawa
