@@ -2,9 +2,6 @@
 
 import type { PostHog } from 'posthog-js';
 
-export const GTM_CONTAINER_ID = 'GTM-W2Z8DSVK';
-export const GA4_MEASUREMENT_ID = 'G-5V49KMK7K4';
-export const GOOGLE_ADS_CONVERSION_ID = 'AW-18196170782';
 export const POSTHOG_HOST = 'https://posthog.megawebs.com';
 export const ANALYTICS_CONSENT_KEY = 'samihalawa.analytics-consent';
 
@@ -54,12 +51,20 @@ const initializePostHog = async (): Promise<PostHog | null> => {
     client.init(posthogKey, {
       api_host: POSTHOG_HOST,
       ui_host: POSTHOG_HOST,
+      defaults: '2026-06-25',
       autocapture: true,
       capture_pageview: false,
       capture_pageleave: true,
+      capture_performance: true,
+      capture_exceptions: true,
+      enable_recording_console_log: true,
+      disable_session_recording: false,
+      rageclick: true,
+      capture_dead_clicks: true,
       person_profiles: 'identified_only',
       session_recording: {
         maskAllInputs: true,
+        blockSelector: '[data-private], [data-sensitive]',
       },
     });
     posthog = client;
