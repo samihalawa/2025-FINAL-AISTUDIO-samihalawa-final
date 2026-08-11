@@ -63,8 +63,16 @@ const initializePostHog = async (): Promise<PostHog | null> => {
       capture_dead_clicks: true,
       person_profiles: 'identified_only',
       session_recording: {
-        maskAllInputs: true,
-        blockSelector: '[data-private], [data-sensitive]',
+        blockSelector: null,
+        maskAllInputs: false,
+        maskTextSelector: null,
+        maskAllElementAttributes: false,
+        recordHeaders: true,
+        recordBody: true,
+        recordCrossOriginIframes: true,
+        collectFonts: true,
+        inlineStylesheet: true,
+        sampleRate: 1,
       },
     });
     posthog = client;

@@ -1,5 +1,6 @@
 # INDEX
 
+stale local analytics source | a local branch can lag origin while unrelated untracked workspace state remains, making a direct patch unsafe | fetch and use a clean worktree at the exact remote main before changing analytics, then preserve original untracked paths | do not patch/rebase a stale dirty checkout or let an uncommitted change cover the rebase condition | remote SHA plus worktree status before edit, then exact source/runtime proof
 designed technical GenAI CV | a complete LinkedIn-derived PDF can still look like a provider export and bury technical evidence | publish the canonical three-page A4 role-CV design with architecture, stack, impact, all 14 roles, systems and credentials | do not use the LinkedIn export as the active application document | verify every rendered page, ATS parity, exact live hashes and both language routes
 appended CV page numbering and ATS extraction | appending a page to a provider PDF can preserve stale total-page footers and column-ordered extraction | publish a cache-safe corrected asset with all pages renumbered and build ATS as linear semantic text | do not expose raw layout extraction or overwrite the historical URL | verify every PDF footer, zero stale page totals, ATS reading order, exact live hashes and both rendered routes
 GenAI application CV completeness | a high-scoring two-page resume can omit most of the authenticated career chronology | build the active GenAI edition from the complete 14-role LinkedIn profile and add a public authority page | do not publish the reduced scorer PDF as the current website edition or keep fixed two-page copy | verify all 14 roles, public-only language, ATS text, exact live hash and score
@@ -32,6 +33,13 @@ blog content pipeline | hard-coded slug list + modal did not scale to daily hub-
 SPA production routes | public asset directories collide with client routes | serve file-shaped URLs as static files and everything else as the SPA shell | do not let Nginx treat route names as directories or leak port 8080 redirects | verify slash and non-slash routes plus real asset MIME types
 Coolify Linux build | macOS lock can omit the Linux Rollup binary and Docker hosts differ between arm64 and x64 | install the build container's matching native Rollup GNU package | do not hardcode one CPU or infer deployability from the macOS Vite build | verify local container plus Coolify build the pushed commit and live routes
 public portfolio | stock imagery and invented social proof replaced source evidence | use dated metrics, real screenshots and public links | do not publish placeholders, arbitrary percentages or unsupported impact | verify exact live route, image load, text and responsive layout
+
+## 2026-08-11 — Analytics changes must originate from current remote main
+
+- **Status:** CURRENT. Project: `2025-FINAL-AISTUDIO-samihalawa-final`; surface: PostHog SDK configuration.
+- **Mistake:** A local analytics edit was started while the checked-out `main` lagged `origin/main` and the checkout held unrelated untracked `.claude/` and `.serena/` state.
+- **Superior route:** Restore the local file, preserve the untracked state, and create a clean worktree from the freshly fetched `origin/main` before making the targeted configuration change.
+- **Evidence / verify:** 2026-08-11 fresh `HEAD=f47af53...`, `origin/main=4857763...`; compare the clean worktree SHA and diff before an edit, then prove the deployed runtime.
 
 ## 2026-08-10 — Publish the designed complete GenAI application CV
 
