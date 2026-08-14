@@ -1,0 +1,65 @@
+SAMI HALAWA RIBAS
+GCP AI ENGINEER | ENTERPRISE DATA, ML & AGENTIC PLATFORMS
+Madrid, Spain | Spanish citizen | Native Spanish | C2 English | C2 Mandarin Chinese | Conversational Cantonese | Available immediately
+linkedin.com/in/samihalawa | github.com/samihalawa | samihalawa.com | sami@oulang.ai | +34 679 794 037
+
+GOOGLE CLOUD PLATFORM OWNERSHIP
+Google Cloud AI engineer and platform architect with 12+ years of software delivery and 5+ years designing data-intensive and AI-enabled systems. Managed the GCP service estate across agentic revenue operations, multilingual marketplaces, pricing intelligence, medical AI and regulated-document workflows. Takes customer work from discovery and architecture through Python implementation, infrastructure provisioning, deployment, observability and operational handover. Common platform: IAM and VPC foundations; Compute Engine, GKE and Cloud Run runtimes; GCS, AlloyDB AI and BigQuery data; Vertex AI and Gemini Enterprise Agent Platform; production CI/CD, security and cost control.
+
+CORE GCP SERVICES
+Runtime: Compute Engine, Cloud Run services/jobs/worker pools, GKE Autopilot/Standard, Load Balancing, Cloud CDN.
+Data and events: Cloud Storage (GCS), AlloyDB AI, BigQuery, Pub/Sub, Dataflow, Cloud Tasks, Cloud Scheduler.
+AI and agents: Vertex AI Gemini, Pipelines, Model Registry, Endpoints, RAG Engine, Vector Search; Gemini Enterprise Agent Platform / Vertex AI Agent Platform; Agent Runtime, Sessions, Memory Bank, Agent Gateway; Document AI.
+Delivery and operations: IAM, service accounts, VPC, Secret Manager, Cloud KMS, Cloud Build, Artifact Registry, Cloud Deploy, Logging, Monitoring, Trace, Audit Logs and Error Reporting.
+
+PROFESSIONAL EXPERIENCE
+Founder & GCP AI Systems Architect | AutoClient.ai | Mar 2024-Present
+- Ran Python/FastAPI APIs and event-driven workers on Cloud Run, persistent workloads on Compute Engine and GKE-managed worker fleets where Kubernetes orchestration was required.
+- Built agentic revenue operations with Vertex AI Gemini and Gemini Enterprise Agent Platform: ADK-based agents, Agent Runtime, Sessions, Memory Bank, Agent Gateway, tool calling and human approval gates.
+- Used AlloyDB AI for account state, vector retrieval and agent context; GCS for artifacts; Pub/Sub, Cloud Tasks and Cloud Scheduler for asynchronous handoffs.
+- Owned Cloud Build, Artifact Registry, Cloud Deploy, IAM, Secret Manager, Logging, Monitoring and Trace.
+- Participated in Lanzadera's 2025 startup ecosystem and secured Google Cloud for Startups infrastructure credits.
+
+Founding GCP AI Engineer & Platform Lead | Agents AI Ltd / OULANG | Jul 2025-Present
+- Built and operate web, iOS and Android surfaces serving 17,262 registered users, 38,857 listings and 89,913 contact reveals as of 3 July 2026.
+- Operated Python/FastAPI services and jobs on Cloud Run, persistent workloads on Compute Engine and containerized data-processing fleets on GKE behind Cloud Load Balancing and Cloud CDN; managed GCS media, AlloyDB state, Pub/Sub events and BigQuery analytics.
+- Shipped Vertex AI / Gemini multilingual semantic search at approximately 720 AI queries per day, AI-assisted listing creation and moderation.
+- Owned IAM, Secret Manager, Artifact Registry, deployment automation, Logging, Monitoring and cost-aware runtime decisions.
+
+GCP Data & AI Platform Consultant | IWAKY S.L. / AutoPricing | 2025-2026
+- Architected marketplace, WhatsApp and ERP inputs into GCS; Pub/Sub and Python/Apache Beam on Dataflow for normalization; AlloyDB for operational state and BigQuery for analytics; Vertex AI for matching and pricing signals; Cloud Run for APIs and scheduled jobs.
+- Delivered architecture, milestones, dashboards and stakeholder outputs for a signed EUR 35,000 scope; EUR 17,500 milestone received and 69 delivery-proof captures produced.
+- Automated builds and releases, managed service identities and secrets, and instrumented the ingestion-to-dashboard path.
+
+GCP ML Engineer & Technical Consultant | Independent / AutoMedical / APOLO | 2022-Present
+- Managed image datasets and model artifacts in GCS; used GPU compute and Vertex AI Workbench/Pipelines for experimentation and evaluation; registered model versions and deployed endpoints; integrated inference through Python/FastAPI.
+- Published APOLO-medical-multimodal-instruct as a two-stage system separating visual evidence extraction from downstream reasoning and structured reporting.
+- Owned discovery, architecture, rapid prototyping, controlled serving and stakeholder demonstrations in English and Spanish.
+
+GCP Legal AI & Governance Systems | INTLAW / RapidAct / PIME.ai | 2025-Present
+- Document AI and GCS for intake; Vertex AI Gemini with RAG for cited analysis; AlloyDB AI for durable state; Cloud Run for review workflows; IAM and KMS for controlled access.
+- Built omnichannel legal intake, cited case-file analysis and EU AI Act transparency workflows.
+
+GCP Specialist Workflow & Data Engineer | Umbramed | Jul 2025-Jul 2026
+- Built a GCS and Document AI ingestion path for medical PDFs, Vertex AI Gemini schema extraction, AlloyDB state, Cloud Run delivery and BigQuery quality reporting.
+
+ENGINEERING FOUNDATION
+Senior Full-Stack Engineer | Damehosting | 2019-2023: APIs, database-backed platforms, Linux, CI/CD, code review, incident response and mentoring.
+AI Instructor & Technical Consultant | Independent | 2022-Present: 125+ recorded hours across Python, agents, RAG, MCP, cloud deployment and observability.
+Founder, Full-Stack Builder & Technical Educator | Megawebs / Megacursos | 2009-2023: 70+ web, mobile, automation, analytics and education projects.
+
+ADVANCED PYTHON AND MLOPS
+Python, FastAPI, Pydantic, AsyncIO, workers, algorithms, REST/gRPC, SQL/PostgreSQL, testing and typed contracts. Docker, Kubernetes/GKE, Terraform, Cloud Build, Artifact Registry, Cloud Deploy and Vertex AI Pipelines; model evaluation, promotion, rollback, observability and incident response. Enterprise discovery, architecture decisions, delivery plans, workshops, demos, documentation and handover with software engineers and data scientists.
+
+PUBLIC ENGINEERING AUTHORITY
+249 public non-fork repositories. VUDA visual UI debugging MCP: 80 stars and 7 forks. 12 Hugging Face technical articles. 111 recorded implementation sessions totalling 125.83 hours across Python, Gemini, agents and deployment.
+
+SELECTED CREDENTIALS
+Machine Learning Operations (MLOps) Specialization - Board Infinity, 2026.
+Google AI Professional Certificate - Google, 2026.
+Google Data Analytics Professional Certificate - Google, 2026.
+End-to-end ML engineering scope: designs low-code and coded AI solutions, manages data and models, scales prototypes, serves models, automates ML pipelines and monitors production AI across Vertex AI, BigQuery, GKE, Cloud Run, AlloyDB and Cloud Build.
+Agentic AI Engineering; MLOps/LLMOps; Databricks Mosaic AI; LangGraph/LangChain; MCP-powered systems; Microsoft Azure AI Fundamentals (AI-900).
+
+LANGUAGES AND AVAILABILITY
+Spanish native; English C2 / full professional; Mandarin Chinese C2 / full professional; Cantonese conversational. Madrid, Spain. Available immediately for remote delivery and periodic European travel.
