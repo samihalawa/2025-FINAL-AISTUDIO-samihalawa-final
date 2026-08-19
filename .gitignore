@@ -29,3 +29,6 @@ midscene_run
 # Local Netlify folder (keep site linkage tracked)
 .netlify
 !.netlify/state.json
+.claude/
+.serena/
+tmp/

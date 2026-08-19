@@ -58,7 +58,7 @@ SELECTED CREDENTIALS
 Machine Learning Operations (MLOps) Specialization - Board Infinity, 2026.
 Google AI Professional Certificate - Google, 2026.
 Google Data Analytics Professional Certificate - Google, 2026.
-End-to-end ML engineering scope: designs low-code and coded AI solutions, manages data and models, scales prototypes, serves models, automates ML pipelines and monitors production AI across Vertex AI, BigQuery, GKE, Cloud Run, AlloyDB and Cloud Build.
+Google Cloud Professional Machine Learning Engineer exam-blueprint alignment (certification not claimed): hands-on architecture maps to all six exam domains: architecting low-code AI solutions; managing data and models across teams; scaling prototypes; serving and scaling models; automating ML pipelines; and monitoring AI solutions across Vertex AI, BigQuery, GKE, Cloud Run, AlloyDB and Cloud Build.
 Agentic AI Engineering; MLOps/LLMOps; Databricks Mosaic AI; LangGraph/LangChain; MCP-powered systems; Microsoft Azure AI Fundamentals (AI-900).
 
 LANGUAGES AND AVAILABILITY

@@ -4,52 +4,6 @@ import { useTranslation } from '../i18n/LanguageContext';
 
 interface CVPageProps { edition?: 'en' | 'es' }
 
-const roleEditions = [
-  {
-    key: 'Founding_AI_Product',
-    en: 'Founding AI / Product — English',
-    es: 'Fundador técnico / Producto IA — inglés',
-    detailEn: 'Technical founder, AI product engineering and end-to-end product ownership.',
-    detailEs: 'Fundador técnico, ingeniería de producto IA y responsabilidad integral.'
-  },
-  {
-    key: 'Founding_AI_Product_ES',
-    en: 'Founding AI / Product — Spanish',
-    es: 'Fundador técnico / Producto IA — español',
-    detailEn: 'Spanish application edition for product, engineering and technical-leadership roles.',
-    detailEs: 'Edición en español para producto, ingeniería y liderazgo técnico.'
-  },
-  {
-    key: 'GenAI_Agents_Automation',
-    fileVersion: '2026-08-10-v9',
-    en: 'GenAI / Agents / Voice / Automation',
-    es: 'GenAI / Agentes / Voz / Automatización',
-    detailEn: 'Python and TypeScript systems across RAG, LangGraph, MCP, structured outputs, voice, deployment, observability and human review.',
-    detailEs: 'Sistemas Python y TypeScript con RAG, LangGraph, MCP, salidas estructuradas, voz, despliegue, observabilidad y revisión humana.'
-  },
-  {
-    key: 'AI_Platform_Product_Engineering',
-    en: 'AI Platform / Product Engineering / MLOps',
-    es: 'Plataforma IA / Ingeniería de producto / MLOps',
-    detailEn: 'APIs, data, infrastructure, full-stack product delivery, CI/CD and observability.',
-    detailEs: 'APIs, datos, infraestructura, entrega full-stack, CI/CD y observabilidad.'
-  },
-  {
-    key: 'Clinical_AI_Healthcare',
-    en: 'Clinical AI / Healthcare',
-    es: 'IA clínica / Salud',
-    detailEn: 'Medical-learning products, ophthalmology workflows, multimodal review and human oversight.',
-    detailEs: 'Productos de aprendizaje médico, flujos oftalmológicos, revisión multimodal y supervisión humana.'
-  },
-  {
-    key: 'AI_Teaching_Governance',
-    en: 'AI Teaching / Technical Communication / Governance',
-    es: 'Docencia IA / Comunicación técnica / Gobernanza',
-    detailEn: 'Implementation-first education, stakeholder communication, responsible AI and governance.',
-    detailEs: 'Formación práctica, comunicación con stakeholders, IA responsable y gobernanza.'
-  }
-];
-
 const googleDataAnalyticsCourses = [
   { title: 'Foundations: Data, Data, Everywhere', id: 'V4FNLT216Q8B', file: 'foundations-data-data-everywhere-V4FNLT216Q8B.pdf' },
   { title: 'Ask Questions to Make Data-Driven Decisions', id: 'CLX6U7RJXKDZ', file: 'ask-questions-to-make-data-driven-decisions-CLX6U7RJXKDZ.pdf' },
@@ -289,19 +243,17 @@ const legacyCertifications = [
   ['Adobe Certified Expert', 'After Effects']
 ] as const;
 
-const roleEditionFile = (item: (typeof roleEditions)[number]) => `${item.key}_${item.fileVersion ?? '2026-08-09-v6'}`;
-
 const CVPage: React.FC<CVPageProps> = ({ edition }) => {
   const { language } = useTranslation();
   const selected = edition || (language === 'es' ? 'es' : 'en');
   const spanish = selected === 'es';
-  const pdf = spanish ? '/cv/Sami_Halawa_CV_ES_2026-08-09-v6.pdf' : '/cv/Sami_Halawa_CV_2026-08-09-v6.pdf';
-  const ats = spanish ? '/cv/Sami_Halawa_CV_ES_ATS_2026-08-09-v6.txt' : '/cv/Sami_Halawa_CV_ATS_2026-08-09-v6.txt';
-  const preview = spanish ? '/cv/Sami_Halawa_CV_ES_preview_2026-08-09-v6.png' : '/cv/Sami_Halawa_CV_preview_2026-08-09-v6.png';
+  const pdf = spanish ? '/cv/Sami_Halawa_CV_ES.pdf' : '/cv/Sami_Halawa_CV.pdf';
+  const ats = spanish ? '/cv/Sami_Halawa_CV_ES_ATS.txt' : '/cv/Sami_Halawa_CV_ATS.txt';
+  const preview = spanish ? '/cv/Sami_Halawa_CV_ES_preview.png' : '/cv/Sami_Halawa_CV_preview.png';
   const primaryCredential = featuredCredentials[0];
   const description = spanish
-    ? 'Un registro completo de productos de IA, ingeniería en producción, sistemas agénticos, open source, investigación y docencia, con PDF, versión ATS y perfiles de candidatura.'
-    : 'A complete record of AI products, production engineering, agent systems, open source, research and teaching, with PDF, ATS and focused application profiles.';
+    ? 'Un registro completo de productos de IA, ingeniería en producción, sistemas agénticos, open source, investigación y docencia, con PDF y versión ATS.'
+    : 'A complete record of AI products, production engineering, agent systems, open source, research and teaching, with PDF and ATS editions.';
   const downloadLink = 'inline-flex min-h-11 items-center justify-between gap-6 border border-slate-950 px-4 py-3 text-sm font-bold text-slate-950 transition-colors hover:bg-slate-950 hover:text-white';
   return (
     <section className="border-b border-slate-300 bg-[#f8f6f1]">
@@ -440,10 +392,10 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
             <div className="grid gap-4 py-6 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Registro de programas completados' : 'Completed programme register'}</p>
-                <h3 className="cv-serif mt-3 text-3xl font-normal text-slate-950">{spanish ? '17 programas completados · 114 credenciales.' : '17 completed programmes · 114 credentials.'}</h3>
-                <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-600">{spanish ? 'Los 17 títulos principales se muestran aquí con su diploma. El PDF completo y la versión ATS conservan el registro íntegro de 114 IDs de credencial.' : 'All 17 programme awards are shown here with their diploma. The complete PDF and ATS edition retain the full ledger of 114 credential IDs.'}</p>
+                <h3 className="cv-serif mt-3 text-3xl font-normal text-slate-950">{spanish ? '17 programas completados · 116 credenciales.' : '17 completed programmes · 116 credentials.'}</h3>
+                <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-600">{spanish ? 'Los 17 títulos principales se muestran aquí con su diploma. El PDF completo y la versión ATS conservan el registro íntegro de 116 IDs de credencial.' : 'All 17 programme awards are shown here with their diploma. The complete PDF and ATS edition retain the full ledger of 116 credential IDs.'}</p>
               </div>
-              <span className="font-mono text-sm font-bold text-slate-500">17 / 114</span>
+              <span className="font-mono text-sm font-bold text-slate-500">17 / 116</span>
             </div>
             <ol className="grid border-t border-slate-300 md:grid-cols-2 md:gap-x-10">
               {featuredCredentials.map((credential) => (
@@ -501,44 +453,19 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
           </div>
         </section>
 
-        <section className="border-t border-slate-400 py-12 sm:py-16">
-          <div className="grid gap-8 lg:grid-cols-[minmax(15rem,.55fr)_minmax(0,1.45fr)] lg:gap-16">
-            <div>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'CV de candidatura' : 'Application resumes'}</p>
-              <h2 className="cv-serif mt-4 text-4xl font-normal leading-tight tracking-[-0.025em] text-slate-950">{spanish ? 'Elige el perfil que mejor encaja con la oportunidad.' : 'Choose the profile that best matches the opportunity.'}</h2>
-              <p className="mt-5 max-w-md leading-relaxed text-slate-700">{spanish ? 'Cada edición presenta la experiencia, los proyectos y las credenciales más relevantes para su especialidad. El CV maestro ofrece la trayectoria y el portfolio completos.' : 'Each edition presents the experience, projects and credentials most relevant to its specialty. The master CV provides the complete career and portfolio record.'}</p>
-            </div>
-            <ol className="border-t border-slate-400">
-              {roleEditions.map((item, index) => (
-                <li key={item.key} className="grid gap-4 border-b border-slate-300 py-6 sm:grid-cols-[3rem_minmax(0,1fr)_auto] sm:items-center sm:gap-6">
-                  <span className="font-mono text-xs font-bold text-slate-500">{String(index + 1).padStart(2, '0')}</span>
-                  <div>
-                    <h3 className="cv-serif text-2xl font-semibold text-slate-950">{spanish ? item.es : item.en}</h3>
-                    <p className="mt-1 text-sm leading-relaxed text-slate-600">{spanish ? item.detailEs : item.detailEn}</p>
-                  </div>
-                  <div className="flex items-center gap-4 text-xs font-bold uppercase tracking-[0.12em]">
-                    <a href={`/cv/variants/Sami_Halawa_CV_${roleEditionFile(item)}.pdf`} download data-analytics-event="cv_download" className="inline-flex min-h-11 items-center border-b border-slate-500 text-slate-800 hover:border-slate-950 hover:text-slate-950">PDF ↓</a>
-                    <a href={`/cv/variants/Sami_Halawa_CV_${roleEditionFile(item)}_ATS.txt`} download data-analytics-event="cv_download" className="inline-flex min-h-11 items-center border-b border-slate-500 text-slate-800 hover:border-slate-950 hover:text-slate-950">ATS ↓</a>
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
-
         <section className="grid gap-10 border-t border-slate-400 py-12 sm:py-16 lg:grid-cols-[minmax(16rem,.5fr)_minmax(0,1.5fr)] lg:gap-16">
           <aside className="lg:sticky lg:top-24 lg:self-start">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Formación profesional actual' : 'Current professional development'}</p>
             <h2 className="cv-serif mt-4 text-3xl font-normal leading-tight text-slate-950">{spanish ? 'IA agéntica, plataformas y gobernanza.' : 'Agentic AI, platforms and governance.'}</h2>
-            <p className="mt-5 leading-relaxed text-slate-700">{spanish ? 'Mis 114 credenciales profesionales abarcan ingeniería de IA generativa y machine learning de IBM y Microsoft; IA aplicada de Google; IA sanitaria de Stanford University; estrategia y gobernanza de IA de Saïd Business School, University of Oxford; ingeniería de IA agéntica; MLOps; Databricks Mosaic AI; automatización con n8n; ISO 42001; métodos cuantitativos y chino comercial.' : 'My 114 professional credentials span IBM and Microsoft generative-AI engineering and machine learning; applied AI from Google; healthcare AI from Stanford University; AI strategy and governance from Saïd Business School, University of Oxford; agentic AI engineering; MLOps; Databricks Mosaic AI; n8n automation; ISO 42001; quantitative methods and business Chinese.'}</p>
+            <p className="mt-5 leading-relaxed text-slate-700">{spanish ? 'Mis 116 credenciales profesionales abarcan ingeniería de IA generativa y machine learning de IBM y Microsoft; IA aplicada de Google; IA sanitaria de Stanford University; estrategia y gobernanza de IA de Saïd Business School, University of Oxford; ingeniería de IA agéntica; MLOps; Databricks Mosaic AI; automatización con n8n; ISO 42001; métodos cuantitativos y chino comercial.' : 'My 116 professional credentials span IBM and Microsoft generative-AI engineering and machine learning; applied AI from Google; healthcare AI from Stanford University; AI strategy and governance from Saïd Business School, University of Oxford; agentic AI engineering; MLOps; Databricks Mosaic AI; n8n automation; ISO 42001; quantitative methods and business Chinese.'}</p>
           </aside>
           <figure>
             <div className="border border-slate-400 bg-white p-2 shadow-[0_28px_70px_-42px_rgba(15,23,42,.55)] sm:p-4">
               <img src={preview} alt={spanish ? 'Primera página del CV completo' : 'First page of the complete CV'} className="block w-full bg-white" />
             </div>
             <figcaption className="mt-4 flex flex-col items-start justify-between gap-3 border-t border-slate-400 pt-4 text-sm text-slate-600 sm:flex-row sm:items-center">
-              <span>{spanish ? 'Vista previa de la página 1 de 10.' : 'Preview of page 1 of 10.'}</span>
-              <a href={pdf} target="_blank" rel="noopener noreferrer" data-analytics-event="cv_download" className="inline-flex min-h-11 items-center gap-2 border-b border-slate-500 font-bold text-slate-800 hover:border-slate-950 hover:text-slate-950">{spanish ? 'Abrir las diez páginas' : 'Open all ten pages'}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>
+              <span>{spanish ? 'Vista previa de la primera página.' : 'Preview of the first page.'}</span>
+              <a href={pdf} target="_blank" rel="noopener noreferrer" data-analytics-event="cv_download" className="inline-flex min-h-11 items-center gap-2 border-b border-slate-500 font-bold text-slate-800 hover:border-slate-950 hover:text-slate-950">{spanish ? 'Abrir el PDF completo' : 'Open the complete PDF'}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>
             </figcaption>
           </figure>
         </section>
