@@ -36,6 +36,11 @@
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
 
+[[headers]]
+  for = "/cv/*"
+  [headers.values]
+    Cache-Control = "public, max-age=600, must-revalidate"
+
 [dev]
   command = "npm run dev"
   port = 5173
