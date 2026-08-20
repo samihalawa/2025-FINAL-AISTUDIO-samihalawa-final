@@ -247,7 +247,7 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
   const { language } = useTranslation();
   const selected = edition || (language === 'es' ? 'es' : 'en');
   const spanish = selected === 'es';
-  const cvVersion = '2026-08-20.1';
+  const cvVersion = '2026-08-20';
   const pdf = `${spanish ? '/cv/Sami_Halawa_CV_ES.pdf' : '/cv/Sami_Halawa_CV.pdf'}?v=${cvVersion}`;
   const ats = `${spanish ? '/cv/Sami_Halawa_CV_ES_ATS.txt' : '/cv/Sami_Halawa_CV_ATS.txt'}?v=${cvVersion}`;
   const preview = `${spanish ? '/cv/Sami_Halawa_CV_ES_preview.png' : '/cv/Sami_Halawa_CV_preview.png'}?v=${cvVersion}`;
