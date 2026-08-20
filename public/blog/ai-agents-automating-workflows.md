@@ -1,5 +1,5 @@
 ---
-title: "AI Agents for Business Workflows: 2025 Patterns"
+title: "AI Agents for Business Workflows: Practical Patterns"
 date: "2025-01-15"
 author: "Sami Halawa"
 summary: "Autonomous AI agents can reduce repetitive work across sales, research, and development when they are tied to clear tools, logs, human review, and measurable workflows. Includes AutoClient-style CRM automation patterns and a LangChain implementation guide."
