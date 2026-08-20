@@ -82,7 +82,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     tags: ['Multilingual', 'Marketplace', 'Mobile'], href: 'https://huatong.eu', image: '/portfolio/huatong-home.png', imagePosition: 'center 14%'
   },
   {
-    id: 'autoclient', name: 'AutoClient', period: '2024–present', category: 'platforms',
+    id: 'autoclient', name: 'AutoClient', period: 'Mar 2024–Jul 2025', category: 'platforms',
     description: copy('Agentic research, enrichment, scoring, personalised outreach and CRM follow-up across email, WhatsApp and voice.', 'Investigación agéntica, enriquecimiento, scoring, contacto personalizado y CRM por email, WhatsApp y voz.'),
     tags: ['Agents', 'CRM', 'Outreach', 'Voice'], href: 'https://www.youtube.com/@autoclient-ai', image: '/portfolio/autoclient-operations-cover.webp', imagePosition: 'center 42%'
   },
@@ -334,7 +334,7 @@ export const PORTFOLIO_STORIES: PortfolioStory[] = [
     includes: ['Market signals', 'ERP context', 'Human review'], image: '/portfolio/autopricing-dashboard.png', imagePosition: 'center 18%', caseStudy: '/case-studies/autopricing'
   },
   {
-    id: 'autoclient', name: 'AutoClient revenue operations', period: '2024–present', category: 'platforms', featured: true,
+    id: 'autoclient', name: 'AutoClient revenue operations', period: 'Mar 2024–Jul 2025', category: 'platforms', featured: true,
     description: copy('An agentic operating system for account research, enrichment, CRM work and multi-channel follow-up.', 'Sistema operativo agéntico para investigación de cuentas, enriquecimiento, CRM y seguimiento multicanal.'),
     challenge: copy('Keep research, qualification and follow-up connected while preserving a clear operator checkpoint before external action.', 'Mantener conectados investigación, cualificación y seguimiento con un punto claro de revisión antes de actuar.'),
     build: copy('Research and scoring workers, CRM synchronization, reporting, and email, WhatsApp and voice integrations.', 'Workers de investigación y scoring, sincronización CRM, reporting e integraciones de email, WhatsApp y voz.'),
