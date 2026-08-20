@@ -243,6 +243,110 @@ const legacyCertifications = [
   ['Adobe Certified Expert', 'After Effects']
 ] as const;
 
+const professionalSummary = {
+  en: 'Founding AI engineer and systems architect shipping production agentic AI — multi-agent workflows, retrieval-augmented generation and Model Context Protocol tooling — across web, iOS and Android. OULANG, the marketplace and local-life platform I lead, is live on all three platforms with 17,262 registered users, 38,857 listings and 89,913 contact reveals recorded as of 3 July 2026. My open-source MCP servers are in daily developer use: visual-ui-debug-agent-mcp has 80 GitHub stars and 900+ npm installs, and email-smtp-imap-mcp has passed 1,700+ npm installs. I design, deliver and teach in Spanish, English and Mandarin (中文), with 125+ recorded hours of instruction behind the practice.',
+  es: 'Ingeniero fundador de IA y arquitecto de sistemas que lleva IA agéntica a producción —flujos multiagente, generación aumentada por recuperación y herramientas Model Context Protocol— en web, iOS y Android. OULANG, el marketplace y plataforma de vida local que dirijo, está en producción en las tres plataformas con 17.262 usuarios registrados, 38.857 anuncios y 89.913 revelaciones de contacto registradas a 3 de julio de 2026. Mis servidores MCP open source se usan a diario: visual-ui-debug-agent-mcp acumula 80 estrellas en GitHub y más de 900 instalaciones en npm, y email-smtp-imap-mcp supera las 1.700 instalaciones en npm. Diseño, entrego y enseño en español, inglés y mandarín (中文), con más de 125 horas grabadas de formación detrás.'
+} as const;
+
+const selectedOutcomes = [
+  {
+    id: 'oulang',
+    metric: '17,262',
+    metricEs: '17.262',
+    labelEn: 'registered users',
+    labelEs: 'usuarios registrados',
+    titleEn: 'OULANG · marketplace and local-life platform',
+    titleEs: 'OULANG · marketplace y plataforma de vida local',
+    bodyEn: 'Live in production on web, iOS and Android. 38,857 listings and 89,913 contact reveals recorded as of 3 July 2026.',
+    bodyEs: 'En producción en web, iOS y Android. 38.857 anuncios y 89.913 revelaciones de contacto registradas a 3 de julio de 2026.'
+  },
+  {
+    id: 'autoclient',
+    metric: '+30%',
+    metricEs: '+30%',
+    labelEn: 'sales conversion lift',
+    labelEs: 'aumento de conversión de ventas',
+    titleEn: 'AutoClient · agentic revenue operations',
+    titleEs: 'AutoClient · operaciones comerciales agénticas',
+    bodyEn: 'Selected by Lanzadera in 2025. A public LinkedIn recommendation credits the system with 200+ qualified contacts in two weeks and a 30% lift in sales conversion.',
+    bodyEs: 'Seleccionado por Lanzadera en 2025. Una recomendación pública en LinkedIn atribuye al sistema más de 200 contactos cualificados en dos semanas y un aumento del 30% en la conversión de ventas.'
+  },
+  {
+    id: 'autopricing',
+    metric: '€35,000',
+    metricEs: '35.000 €',
+    labelEn: 'signed B2B scope',
+    labelEs: 'alcance B2B firmado',
+    titleEn: 'AutoPricing / IWAKY · pricing intelligence and ERP',
+    titleEs: 'AutoPricing / IWAKY · inteligencia de precios y ERP',
+    bodyEn: 'Marketplace data collection, product matching, quote analysis, ERP commerce and operator decision dashboards delivered under a signed €35,000 business scope.',
+    bodyEs: 'Captación de datos de marketplace, matching de producto, análisis de presupuestos, comercio ERP y dashboards de decisión entregados bajo un alcance de negocio firmado de 35.000 €.'
+  },
+  {
+    id: 'infrastructure',
+    metric: '€18K → €200',
+    metricEs: '18.000 € → 200 €',
+    labelEn: 'monthly infrastructure cost',
+    labelEs: 'coste mensual de infraestructura',
+    titleEn: 'Infrastructure migration and APOLO research',
+    titleEs: 'Migración de infraestructura e investigación APOLO',
+    bodyEn: 'Migration cut running cost from roughly €18,000 per month (peaks of €40–50K) to roughly €200 per month. APOLO — a DeepSeek-VL2-tiny multimodal model for OCT and fundus imaging — was published on Hugging Face inside a €32,000+ paid clinical collaboration.',
+    bodyEs: 'La migración redujo el coste operativo de unos 18.000 € al mes (picos de 40–50.000 €) a unos 200 € al mes. APOLO —modelo multimodal DeepSeek-VL2-tiny para OCT y retinografía— se publicó en Hugging Face dentro de una colaboración clínica remunerada de más de 32.000 €.'
+  }
+] as const;
+
+const cvExperience = [
+  {
+    yearsEn: 'Jul 2025–present', yearsEs: 'Jul 2025–actualidad',
+    titleEn: 'Founding AI Engineer & Systems Architect', titleEs: 'Ingeniero Fundador de IA y Arquitecto de Sistemas',
+    companyEn: 'Agents AI Ltd', companyEs: 'Agents AI Ltd',
+    bodyEn: 'OULANG across web, iOS and Android; agentic and multi-agent systems with durable state, tool calling, structured outputs, evaluation and human review.',
+    bodyEs: 'OULANG en web, iOS y Android; sistemas agénticos y multiagente con estado, tool calling, salidas estructuradas, evaluación y revisión humana.'
+  },
+  {
+    yearsEn: '2024–present', yearsEs: '2024–actualidad',
+    titleEn: 'ML / LLMOps Engineer', titleEs: 'Ingeniero ML / LLMOps',
+    companyEn: 'Agents AI Ltd', companyEs: 'Agents AI Ltd',
+    bodyEn: 'Multilingual semantic search, embedding retrieval, FastAPI inference services, model routing, evaluation stacks and self-hosted ML infrastructure.',
+    bodyEs: 'Búsqueda semántica multilingüe, recuperación con embeddings, servicios de inferencia FastAPI, enrutado de modelos e infraestructura ML autogestionada.'
+  },
+  {
+    yearsEn: '2024–2025', yearsEs: '2024–2025',
+    titleEn: 'Founder & Agentic AI Systems Architect', titleEs: 'Fundador y Arquitecto de Sistemas de IA Agéntica',
+    companyEn: 'AutoClient AI', companyEs: 'AutoClient AI',
+    bodyEn: 'Multilingual outbound voice and outreach agents with live CRM context; selected by Lanzadera in 2025, with a public recommendation citing 200+ qualified contacts in two weeks.',
+    bodyEs: 'Agentes multilingües de voz y outreach con contexto CRM en vivo; seleccionado por Lanzadera en 2025, con una recomendación pública que cita más de 200 contactos cualificados en dos semanas.'
+  },
+  {
+    yearsEn: '2022–2025', yearsEs: '2022–2025',
+    titleEn: 'AI Systems Architect & Independent Technical Advisor', titleEs: 'Arquitecto de Sistemas de IA y Asesor Técnico Independiente',
+    companyEn: 'Independent', companyEs: 'Independiente',
+    bodyEn: 'Implementation-first AI, agents, MCP, automation, Python and product engineering for professionals and teams.',
+    bodyEs: 'IA, agentes, MCP, automatización, Python y producto orientados a implementación para profesionales y equipos.'
+  },
+  {
+    yearsEn: '2019–2023', yearsEs: '2019–2023',
+    titleEn: 'Senior Full-Stack Engineer', titleEs: 'Ingeniero Full-Stack Sénior',
+    companyEn: 'Damehosting', companyEs: 'Damehosting',
+    bodyEn: 'Production web systems, Linux/server operations, CI/CD practices, reviews and mentoring.',
+    bodyEs: 'Web en producción, Linux/servidores, CI/CD, revisiones y mentoring.'
+  },
+  {
+    yearsEn: '2009–2023', yearsEs: '2009–2023',
+    titleEn: 'Web, Mobile, Growth & Education', titleEs: 'Web, Móvil, Growth y Educación',
+    companyEn: 'Megawebs / Megacursos', companyEs: 'Megawebs / Megacursos',
+    bodyEn: 'Products, technical courses, digital-design instruction and acquisition work, with 125+ recorded hours of instruction.',
+    bodyEs: 'Productos, cursos técnicos, docencia de diseño digital y adquisición, con más de 125 horas grabadas de formación.'
+  },
+  {
+    yearsEn: '2013–2017', yearsEs: '2013–2017',
+    titleEn: 'Presenter, Model & Actor', titleEs: 'Presentador, Modelo y Actor',
+    companyEn: 'China', companyEs: 'China',
+    bodyEn: 'Multilingual on-camera presentation, commercial production and cross-cultural communication in Mandarin.',
+    bodyEs: 'Presentación multilingüe ante cámara, producción comercial y comunicación intercultural en mandarín.'
+  }
+] as const;
+
 const CVPage: React.FC<CVPageProps> = ({ edition }) => {
   const { language } = useTranslation();
   const selected = edition || (language === 'es' ? 'es' : 'en');
@@ -291,6 +395,61 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
             </div>
           </div>
         </header>
+
+        <section className="border-t border-slate-400 py-12 sm:py-16">
+          <div className="grid gap-8 lg:grid-cols-[minmax(16rem,.5fr)_minmax(0,1.5fr)] lg:gap-16">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Perfil profesional' : 'Professional summary'}</p>
+              <h2 className="cv-serif mt-4 text-3xl font-normal leading-tight text-slate-950">{spanish ? 'Qué construyo y qué está en producción.' : 'What I build, and what is running in production.'}</h2>
+            </div>
+            <p className="text-lg leading-relaxed text-slate-700">{spanish ? professionalSummary.es : professionalSummary.en}</p>
+          </div>
+        </section>
+
+        <section className="border-t border-slate-400 py-12 sm:py-16">
+          <div className="grid gap-4 pb-8 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Resultados seleccionados' : 'Selected outcomes'}</p>
+              <h2 className="cv-serif mt-3 text-3xl font-normal leading-tight text-slate-950">{spanish ? 'Sistemas en producción, con cifras verificables.' : 'Production systems, with verifiable figures.'}</h2>
+            </div>
+            <span className="font-mono text-sm font-bold text-slate-500">04</span>
+          </div>
+          <div className="grid border-t border-slate-400 sm:grid-cols-2 sm:gap-x-10">
+            {selectedOutcomes.map((outcome) => (
+              <article key={outcome.id} className="border-b border-slate-300 py-6">
+                <p className="cv-serif text-4xl font-semibold leading-none tracking-tight text-slate-950">{spanish ? outcome.metricEs : outcome.metric}</p>
+                <p className="mt-2 text-xs font-bold uppercase tracking-[0.12em] text-slate-500">{spanish ? outcome.labelEs : outcome.labelEn}</p>
+                <h3 className="mt-4 text-base font-bold leading-snug text-slate-950">{spanish ? outcome.titleEs : outcome.titleEn}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-700">{spanish ? outcome.bodyEs : outcome.bodyEn}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="border-t border-slate-400 py-12 sm:py-16">
+          <div className="grid gap-4 pb-8 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Experiencia' : 'Experience'}</p>
+              <h2 className="cv-serif mt-3 text-3xl font-normal leading-tight text-slate-950">{spanish ? 'Cronología profesional.' : 'Professional chronology.'}</h2>
+            </div>
+            <span className="font-mono text-sm font-bold text-slate-500">{String(cvExperience.length).padStart(2, '0')}</span>
+          </div>
+          <ol className="border-t border-slate-400">
+            {cvExperience.map((role) => (
+              <li key={role.titleEn} className="grid gap-2 border-b border-slate-300 py-5 md:grid-cols-[11rem_minmax(0,1fr)] md:gap-6">
+                <span className="font-mono text-xs font-bold uppercase tracking-[0.1em] text-brand-800">{spanish ? role.yearsEs : role.yearsEn}</span>
+                <div>
+                  <h3 className="text-base font-bold leading-snug text-slate-950">
+                    {spanish ? role.titleEs : role.titleEn}
+                    <span className="font-normal text-slate-400"> · </span>
+                    <span className="font-semibold text-brand-800">{spanish ? role.companyEs : role.companyEn}</span>
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-700">{spanish ? role.bodyEs : role.bodyEn}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </section>
 
         <section className="border-t border-slate-400 py-12 sm:py-16">
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(20rem,.9fr)] lg:gap-14">

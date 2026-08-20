@@ -73,7 +73,7 @@ export const inventoryLaneCopy: Record<InventoryLane, LocalizedCopy> = {
 export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   {
     id: 'oulang', name: 'OULANG (欧浪AI)', period: '2024–present', category: 'platforms', featured: true,
-    description: copy('Mandarin-first marketplace and local-life platform for Spain, developed across web, iOS and Android surfaces.', 'Marketplace y plataforma de vida local para la comunidad china en España, desarrollada en web, iOS y Android.', 'Marketplace et plateforme locale pour la communauté chinoise en Espagne, développée sur web, iOS et Android.', '面向西班牙华人社区的中文市场与本地生活平台，覆盖 Web、iOS 和 Android 开发。'),
+    description: copy('Mandarin-first marketplace and local-life platform for Spain, live in production on web, iOS and Android with 17,262 registered users, 38,857 listings and 89,913 contact reveals recorded as of 3 July 2026.', 'Marketplace y plataforma de vida local para la comunidad china en España, en producción en web, iOS y Android con 17.262 usuarios registrados, 38.857 anuncios y 89.913 revelaciones de contacto registradas a 3 de julio de 2026.', 'Marketplace et plateforme locale pour la communauté chinoise en Espagne, en production sur web, iOS et Android avec 17 262 utilisateurs inscrits, 38 857 annonces et 89 913 révélations de contact enregistrées au 3 juillet 2026.', '面向西班牙华人社区的中文市场与本地生活平台，已在 Web、iOS 与 Android 三端正式上线，截至 2026 年 7 月 3 日拥有 17,262 名注册用户、38,857 条信息与 89,913 次联系方式查看。'),
     tags: ['Next.js', 'Expo', 'Gemini', 'RevenueCat', 'PostHog'], href: 'https://oulang.ai', image: '/portfolio/oulang-home.png', imagePosition: 'center 18%'
   },
   {
@@ -83,12 +83,12 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   },
   {
     id: 'autoclient', name: 'AutoClient', period: 'Mar 2024–Jul 2025', category: 'platforms',
-    description: copy('Agentic research, enrichment, scoring, personalised outreach and CRM follow-up across email, WhatsApp and voice.', 'Investigación agéntica, enriquecimiento, scoring, contacto personalizado y CRM por email, WhatsApp y voz.'),
+    description: copy('Agentic research, enrichment, scoring, personalised outreach and CRM follow-up across email, WhatsApp and voice. Selected by Lanzadera in 2025; a public LinkedIn recommendation credits the system with 200+ qualified contacts in two weeks and a 30% lift in sales conversion.', 'Investigación agéntica, enriquecimiento, scoring, contacto personalizado y CRM por email, WhatsApp y voz. Seleccionado por Lanzadera en 2025; una recomendación pública en LinkedIn atribuye al sistema más de 200 contactos cualificados en dos semanas y un aumento del 30% en la conversión de ventas.', 'Recherche agentique, enrichissement, scoring, prospection personnalisée et suivi CRM par email, WhatsApp et voix. Sélectionné par Lanzadera en 2025 ; une recommandation publique sur LinkedIn attribue au système plus de 200 contacts qualifiés en deux semaines et une hausse de 30 % de la conversion commerciale.', '覆盖邮件、WhatsApp 与语音的智能体式调研、数据增强、评分、个性化触达与 CRM 跟进。2025 年入选 Lanzadera；LinkedIn 公开推荐信显示该系统在两周内带来 200 多个合格联系人，并使销售转化率提升 30%。'),
     tags: ['Agents', 'CRM', 'Outreach', 'Voice'], href: 'https://www.youtube.com/@autoclient-ai', image: '/portfolio/autoclient-operations-cover.webp', imagePosition: 'center 42%'
   },
   {
     id: 'autopricing', name: 'AutoPricing / IWAKY delivery', period: '2025–2026', category: 'platforms',
-    description: copy('Pricing-intelligence and decision-reporting workflow combining marketplace data, product matching and inventory or ERP inputs.', 'Inteligencia de precios e informes de decisión con datos de marketplaces, matching e inventario o ERP.'),
+    description: copy('Pricing-intelligence and decision-reporting workflow combining marketplace data, product matching and inventory or ERP inputs, delivered under a signed €35,000 B2B scope covering pricing intelligence and ERP integration.', 'Inteligencia de precios e informes de decisión con datos de marketplaces, matching e inventario o ERP, entregado bajo un alcance B2B firmado de 35.000 € que cubre inteligencia de precios e integración ERP.', 'Flux d’intelligence tarifaire et de rapports de décision combinant données marketplace, appariement produit et entrées stock ou ERP, livré dans le cadre d’un périmètre B2B signé de 35 000 € couvrant l’intelligence tarifaire et l’intégration ERP.', '结合市场数据、商品匹配与库存或 ERP 输入的定价情报与决策报告流程，在已签署的 35,000 欧元 B2B 项目范围内交付，涵盖定价情报与 ERP 集成。'),
     tags: ['Data pipelines', 'ERP', 'Reports', 'Automation'], image: '/portfolio/autopricing-dashboard.png', caseStudy: '/case-studies/autopricing'
   },
   {
@@ -98,7 +98,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   },
   {
     id: 'vuda', name: 'VUDA — Visual UI Debug Agent MCP', period: '2025–present', category: 'agents', featured: true,
-    description: copy('Open-source agent that captures, annotates and reasons over live interfaces for visual debugging.', 'Agente abierto que captura, anota y razona sobre interfaces reales para depuración visual.', 'Agent open source qui capture, annote et analyse des interfaces réelles pour le débogage visuel.', '用于可视化调试的开源智能体：捕获、标注并分析真实界面。'),
+    description: copy('Open-source agent that captures, annotates and reasons over live interfaces for visual debugging, published as visual-ui-debug-agent-mcp with 80 GitHub stars, 7 forks and 900+ npm installs.', 'Agente abierto que captura, anota y razona sobre interfaces reales para depuración visual, publicado como visual-ui-debug-agent-mcp con 80 estrellas en GitHub, 7 forks y más de 900 instalaciones en npm.', 'Agent open source qui capture, annote et analyse des interfaces réelles pour le débogage visuel, publié sous le nom visual-ui-debug-agent-mcp avec 80 étoiles GitHub, 7 forks et plus de 900 installations npm.', '用于可视化调试的开源智能体：捕获、标注并分析真实界面。以 visual-ui-debug-agent-mcp 发布，获得 80 个 GitHub star、7 次 fork 及 900+ 次 npm 安装。'),
     tags: ['MCP', 'Computer vision', 'Debugging'], href: 'https://github.com/samihalawa/visual-ui-debug-agent-mcp', image: '/portfolio/vuda-annotated.png', imagePosition: 'center 15%'
   },
   {
@@ -108,7 +108,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   },
   {
     id: 'smtp', name: 'MCP Server SMTP / IMAP', period: '2025', category: 'agents',
-    description: copy('Email transport and mailbox integration for agentic workflows.', 'Transporte de email e integración de buzones para flujos agénticos.'),
+    description: copy('Email transport and mailbox integration for agentic workflows, published as email-smtp-imap-mcp with 1,700+ npm installs.', 'Transporte de email e integración de buzones para flujos agénticos, publicado como email-smtp-imap-mcp con más de 1.700 instalaciones en npm.', 'Transport email et intégration de boîtes aux lettres pour flux agentiques, publié sous le nom email-smtp-imap-mcp avec plus de 1 700 installations npm.', '面向智能体工作流的邮件传输与邮箱集成，以 email-smtp-imap-mcp 发布，npm 安装量超过 1,700 次。'),
     tags: ['MCP', 'SMTP', 'IMAP', 'Email'], href: 'https://github.com/samihalawa/mcp-server-smtp'
   },
   {
@@ -128,7 +128,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   },
   {
     id: 'apolo', name: 'APOLO multimodal exploration', period: '2025', category: 'applied',
-    description: copy('Public image-text model and architecture exploration based on DeepSeek-VL2-tiny for medical-image workflows.', 'Modelo público de imagen y texto y exploración de arquitectura basada en DeepSeek-VL2-tiny para flujos de imagen médica.'),
+    description: copy('Public image-text model and architecture exploration based on DeepSeek-VL2-tiny for OCT and fundus medical-image workflows, published on Hugging Face within a €32,000+ paid clinical collaboration.', 'Modelo público de imagen y texto y exploración de arquitectura basada en DeepSeek-VL2-tiny para flujos de OCT y retinografía, publicado en Hugging Face dentro de una colaboración clínica remunerada de más de 32.000 €.', 'Modèle image-texte public et exploration d’architecture basée sur DeepSeek-VL2-tiny pour les flux OCT et rétinographie, publié sur Hugging Face dans le cadre d’une collaboration clinique rémunérée de plus de 32 000 €.', '基于 DeepSeek-VL2-tiny 的公开图文模型与架构探索，面向 OCT 与眼底影像流程，在超过 32,000 欧元的付费临床合作中发布于 Hugging Face。'),
     tags: ['Multimodal', 'Vision-language', 'Human review'], href: 'https://huggingface.co/samihalawa/APOLO-medical-multimodal-instruct', image: '/portfolio/apolo-architecture.png'
   },
   {
@@ -138,7 +138,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   },
   {
     id: 'automedical', name: 'AutoMedical Academy', period: '2025–2026', category: 'applied',
-    description: copy('AI-assisted medical learning and multimodal-workflow product experimentation.', 'Aprendizaje médico y experimentación de flujos multimodales asistidos por IA.'),
+    description: copy('AI-assisted medical learning and multimodal-workflow product experimentation, grown out of the same €32,000+ paid clinical collaboration that produced APOLO on Hugging Face.', 'Aprendizaje médico y experimentación de flujos multimodales asistidos por IA, surgidos de la misma colaboración clínica remunerada de más de 32.000 € que produjo APOLO en Hugging Face.', 'Apprentissage médical assisté par IA et expérimentation de flux multimodaux, issus de la même collaboration clinique rémunérée de plus de 32 000 € ayant produit APOLO sur Hugging Face.', 'AI 辅助医学学习与多模态工作流产品实验，源自同一项超过 32,000 欧元的付费临床合作——该合作在 Hugging Face 上产出了 APOLO。'),
     tags: ['Education', 'AI workflows'], href: 'https://automedical.ai'
   },
   {
@@ -311,7 +311,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
 export const PORTFOLIO_STORIES: PortfolioStory[] = [
   {
     id: 'oulang', name: 'OULANG (欧浪AI)', period: '2024–present', category: 'platforms', featured: true,
-    description: copy('A Mandarin-first marketplace and local-life product built for the Chinese community in Spain.', 'Marketplace y producto de vida local en mandarín para la comunidad china en España.'),
+    description: copy('A Mandarin-first marketplace and local-life product built for the Chinese community in Spain, live on web, iOS and Android with 17,262 registered users, 38,857 listings and 89,913 contact reveals as of 3 July 2026.', 'Marketplace y producto de vida local en mandarín para la comunidad china en España, en producción en web, iOS y Android con 17.262 usuarios registrados, 38.857 anuncios y 89.913 revelaciones de contacto a 3 de julio de 2026.', 'Marketplace et produit de vie locale en mandarin pour la communauté chinoise en Espagne, en production sur web, iOS et Android avec 17 262 utilisateurs inscrits, 38 857 annonces et 89 913 révélations de contact au 3 juillet 2026.', '面向西班牙华人社区的中文市场与本地生活产品，已在 Web、iOS 与 Android 上线，截至 2026 年 7 月 3 日拥有 17,262 名注册用户、38,857 条信息与 89,913 次联系方式查看。'),
     challenge: copy('Bring housing, jobs, services and community discovery into one coherent experience across languages and devices.', 'Unir vivienda, empleo, servicios y comunidad en una experiencia coherente entre idiomas y dispositivos.'),
     build: copy('Web, iOS and Android surfaces with shared marketplace infrastructure, publishing, subscriptions and product analytics.', 'Superficies web, iOS y Android con infraestructura compartida de marketplace, publicación, suscripciones y analítica.'),
     role: copy('Founder · product, engineering and operations', 'Fundador · producto, ingeniería y operaciones'),
@@ -327,7 +327,7 @@ export const PORTFOLIO_STORIES: PortfolioStory[] = [
   },
   {
     id: 'autopricing', name: 'AutoPricing / IWAKY', period: '2025–2026', category: 'platforms', featured: true,
-    description: copy('A reviewable pricing and sourcing workflow for a refurbished-device operation.', 'Flujo revisable de pricing y sourcing para una operación de dispositivos reacondicionados.'),
+    description: copy('A reviewable pricing and sourcing workflow for a refurbished-device operation, delivered under a signed €35,000 B2B scope covering pricing intelligence and ERP integration.', 'Flujo revisable de pricing y sourcing para una operación de dispositivos reacondicionados, entregado bajo un alcance B2B firmado de 35.000 € que cubre inteligencia de precios e integración ERP.', 'Flux de tarification et de sourcing vérifiable pour une activité d’appareils reconditionnés, livré dans le cadre d’un périmètre B2B signé de 35 000 € couvrant l’intelligence tarifaire et l’intégration ERP.', '面向翻新设备业务的可审阅定价与采购流程，在已签署的 35,000 欧元 B2B 项目范围内交付，涵盖定价情报与 ERP 集成。'),
     challenge: copy('Compare changing marketplace prices, stock and incoming purchase opportunities without losing the evidence behind each recommendation.', 'Comparar precios cambiantes, stock y oportunidades de compra sin perder la evidencia de cada recomendación.'),
     build: copy('Marketplace collection, product matching, WhatsApp quote inputs, ERP context, decision reports and an operator dashboard.', 'Captación de marketplaces, matching, presupuestos de WhatsApp, contexto ERP, informes de decisión y dashboard operativo.'),
     role: copy('Product discovery, architecture and hands-on implementation', 'Discovery de producto, arquitectura e implementación práctica'),
@@ -335,7 +335,7 @@ export const PORTFOLIO_STORIES: PortfolioStory[] = [
   },
   {
     id: 'autoclient', name: 'AutoClient revenue operations', period: 'Mar 2024–Jul 2025', category: 'platforms', featured: true,
-    description: copy('An agentic operating system for account research, enrichment, CRM work and multi-channel follow-up.', 'Sistema operativo agéntico para investigación de cuentas, enriquecimiento, CRM y seguimiento multicanal.'),
+    description: copy('An agentic operating system for account research, enrichment, CRM work and multi-channel follow-up. Selected by Lanzadera in 2025, with a public LinkedIn recommendation citing 200+ qualified contacts in two weeks and a 30% lift in sales conversion.', 'Sistema operativo agéntico para investigación de cuentas, enriquecimiento, CRM y seguimiento multicanal. Seleccionado por Lanzadera en 2025, con una recomendación pública en LinkedIn que cita más de 200 contactos cualificados en dos semanas y un aumento del 30% en la conversión de ventas.', 'Système d’exploitation agentique pour la recherche de comptes, l’enrichissement, le CRM et le suivi multicanal. Sélectionné par Lanzadera en 2025, avec une recommandation publique LinkedIn citant plus de 200 contacts qualifiés en deux semaines et une hausse de 30 % de la conversion commerciale.', '面向客户调研、数据增强、CRM 与多渠道跟进的智能体操作系统。2025 年入选 Lanzadera，LinkedIn 公开推荐信提到两周内获得 200 多个合格联系人，销售转化率提升 30%。'),
     challenge: copy('Keep research, qualification and follow-up connected while preserving a clear operator checkpoint before external action.', 'Mantener conectados investigación, cualificación y seguimiento con un punto claro de revisión antes de actuar.'),
     build: copy('Research and scoring workers, CRM synchronization, reporting, and email, WhatsApp and voice integrations.', 'Workers de investigación y scoring, sincronización CRM, reporting e integraciones de email, WhatsApp y voz.'),
     role: copy('Founder · product and engineering', 'Fundador · producto e ingeniería'),
@@ -351,7 +351,7 @@ export const PORTFOLIO_STORIES: PortfolioStory[] = [
   },
   {
     id: 'vuda', name: 'VUDA & agent developer tools', period: '2025–present', category: 'agents', featured: true,
-    description: copy('Open-source tools that give coding agents better visibility into interfaces, context and operating state.', 'Herramientas open source para que los agentes de programación entiendan mejor interfaces, contexto y estado operativo.'),
+    description: copy('Open-source tools that give coding agents better visibility into interfaces, context and operating state — VUDA carries 80 GitHub stars and 900+ npm installs, and the email-smtp-imap-mcp server has passed 1,700+ npm installs.', 'Herramientas open source para que los agentes de programación entiendan mejor interfaces, contexto y estado operativo: VUDA acumula 80 estrellas en GitHub y más de 900 instalaciones en npm, y el servidor email-smtp-imap-mcp supera las 1.700 instalaciones en npm.', 'Outils open source qui donnent aux agents de code une meilleure visibilité sur les interfaces, le contexte et l’état opérationnel : VUDA compte 80 étoiles GitHub et plus de 900 installations npm, et le serveur email-smtp-imap-mcp dépasse 1 700 installations npm.', '让编码智能体更好理解界面、上下文与运行状态的开源工具：VUDA 拥有 80 个 GitHub star 与 900+ 次 npm 安装，email-smtp-imap-mcp 服务器的 npm 安装量已超过 1,700 次。'),
     challenge: copy('A text-only agent can miss the visual defect, the focused element or the state that is obvious on screen.', 'Un agente de solo texto puede perder el defecto visual, el elemento enfocado o el estado evidente en pantalla.'),
     build: copy('Screenshot capture, annotation and visual reasoning through MCP, alongside browser, shell, diff and context utilities.', 'Captura, anotación y razonamiento visual mediante MCP, junto con utilidades de navegador, shell, diff y contexto.'),
     role: copy('Open-source creator and maintainer', 'Creador y mantenedor open source'),
@@ -359,7 +359,7 @@ export const PORTFOLIO_STORIES: PortfolioStory[] = [
   },
   {
     id: 'medical-systems', name: 'APOLO & medical workflow systems', period: '2024–2026', category: 'applied', featured: true,
-    description: copy('A family of medical-image, structured-reporting and clinical-learning prototypes with explicit human review.', 'Familia de prototipos de imagen médica, reporting estructurado y aprendizaje clínico con revisión humana.'),
+    description: copy('A family of medical-image, structured-reporting and clinical-learning prototypes with explicit human review, anchored by APOLO (DeepSeek-VL2-tiny for OCT and fundus imaging) published on Hugging Face within a €32,000+ paid clinical collaboration.', 'Familia de prototipos de imagen médica, reporting estructurado y aprendizaje clínico con revisión humana, con APOLO (DeepSeek-VL2-tiny para OCT y retinografía) publicado en Hugging Face dentro de una colaboración clínica remunerada de más de 32.000 €.', 'Une famille de prototypes d’imagerie médicale, de rapports structurés et d’apprentissage clinique avec revue humaine explicite, ancrée par APOLO (DeepSeek-VL2-tiny pour OCT et rétinographie) publié sur Hugging Face dans une collaboration clinique rémunérée de plus de 32 000 €.', '一组具备明确人工审核的医学影像、结构化报告与临床学习原型，核心是在超过 32,000 欧元付费临床合作中发布于 Hugging Face 的 APOLO（面向 OCT 与眼底影像的 DeepSeek-VL2-tiny）。'),
     challenge: copy('Explore useful multimodal support without collapsing image interpretation, reasoning and professional review into one opaque step.', 'Explorar apoyo multimodal sin mezclar interpretación de imagen, razonamiento y revisión profesional en un paso opaco.'),
     build: copy('APOLO architecture and model artifacts, ophthalmology and radiology workflow experiments, reports and Umbramed learning tools.', 'Arquitectura y artefactos APOLO, experimentos de oftalmología y radiología, informes y herramientas de aprendizaje Umbramed.'),
     role: copy('Technical lead · research and prototyping', 'Responsable técnico · investigación y prototipado'),
