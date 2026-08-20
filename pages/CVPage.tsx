@@ -247,14 +247,14 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
   const { language } = useTranslation();
   const selected = edition || (language === 'es' ? 'es' : 'en');
   const spanish = selected === 'es';
-  const cvVersion = '2026-08-19.3';
+  const cvVersion = '2026-08-20.1';
   const pdf = `${spanish ? '/cv/Sami_Halawa_CV_ES.pdf' : '/cv/Sami_Halawa_CV.pdf'}?v=${cvVersion}`;
   const ats = `${spanish ? '/cv/Sami_Halawa_CV_ES_ATS.txt' : '/cv/Sami_Halawa_CV_ATS.txt'}?v=${cvVersion}`;
   const preview = `${spanish ? '/cv/Sami_Halawa_CV_ES_preview.png' : '/cv/Sami_Halawa_CV_preview.png'}?v=${cvVersion}`;
   const primaryCredential = featuredCredentials[0];
   const description = spanish
-    ? 'Un registro completo de productos de IA, ingeniería en producción, sistemas agénticos, open source, investigación y docencia, con PDF y versión ATS.'
-    : 'A complete record of AI products, production engineering, agent systems, open source, research and teaching, with PDF and ATS editions.';
+    ? 'Un CV conciso y preparado para selección: experiencia agrupada por etapa, seis programas principales con fechas, liderazgo de equipos y disponibilidad inmediata.'
+    : 'A concise recruiter-ready CV: experience grouped by career phase, six dated flagship programmes, team leadership and immediate availability.';
   const downloadLink = 'inline-flex min-h-11 items-center justify-between gap-6 border border-slate-950 px-4 py-3 text-sm font-bold text-slate-950 transition-colors hover:bg-slate-950 hover:text-white';
   return (
     <section className="border-b border-slate-300 bg-[#f8f6f1]">
@@ -273,14 +273,14 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
           <div>
             <p className="mb-5 text-sm font-bold uppercase tracking-[0.18em] text-brand-800">Sami Halawa Ribas</p>
             <h1 className="cv-serif max-w-5xl text-[clamp(2.8rem,6vw,5.8rem)] font-normal leading-[0.94] tracking-[-0.045em] text-slate-950">
-              {spanish ? 'Ingeniero fundador de IA que construye sistemas agénticos, RAG y productos en producción.' : 'Founding AI engineer building agentic AI, RAG and production systems.'}
+              {spanish ? 'Ingeniero sénior de ML / LLMOps que lidera sistemas de IA desde la arquitectura hasta producción.' : 'Senior ML / LLMOps engineer leading AI systems from architecture to production.'}
             </h1>
           </div>
           <div className="flex flex-col justify-end border-t border-slate-400 pt-6 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
             <p className="text-lg leading-relaxed text-slate-700">{description}</p>
             <div className="mt-8 grid gap-2">
               <a href={pdf} download data-analytics-event="cv_download" className={`${downloadLink} bg-slate-950 text-white`}>
-                <span>{spanish ? 'CV completo · PDF' : 'Complete CV · PDF'}</span><i className="fas fa-arrow-down text-xs" />
+                <span>{spanish ? 'CV conciso · PDF' : 'Concise CV · PDF'}</span><i className="fas fa-arrow-down text-xs" />
               </a>
               <a href={ats} download data-analytics-event="cv_download" className={downloadLink}>
                 <span>{spanish ? 'Versión ATS · TXT' : 'ATS edition · TXT'}</span><i className="fas fa-arrow-down text-xs" />
@@ -394,7 +394,7 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Registro de programas completados' : 'Completed programme register'}</p>
                 <h3 className="cv-serif mt-3 text-3xl font-normal text-slate-950">{spanish ? '17 programas completados · 116 credenciales.' : '17 completed programmes · 116 credentials.'}</h3>
-                <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-600">{spanish ? 'Los 17 títulos principales se muestran aquí con su diploma. El PDF completo y la versión ATS conservan el registro íntegro de 116 IDs de credencial.' : 'All 17 programme awards are shown here with their diploma. The complete PDF and ATS edition retain the full ledger of 116 credential IDs.'}</p>
+                <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-600">{spanish ? 'Los 17 títulos principales se muestran aquí con su diploma. El PDF y la versión ATS se centran en experiencia, programas principales y credenciales relevantes.' : 'All 17 programme awards are shown here with their diploma. The PDF and ATS edition stay focused on experience, flagship programmes and relevant credentials.'}</p>
               </div>
               <span className="font-mono text-sm font-bold text-slate-500">17 / 116</span>
             </div>
@@ -446,7 +446,7 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
                   ))}
                 </ol>
                 <div className="mt-5 flex flex-wrap gap-5 text-sm font-bold">
-                  <a href={pdf} target="_blank" rel="noopener noreferrer" data-analytics-event="cv_download" className="inline-flex min-h-11 items-center gap-2 border-b border-slate-500 text-slate-800 hover:border-slate-950 hover:text-slate-950">{spanish ? 'Abrir CV completo' : 'Open complete CV'}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>
+                  <a href={pdf} target="_blank" rel="noopener noreferrer" data-analytics-event="cv_download" className="inline-flex min-h-11 items-center gap-2 border-b border-slate-500 text-slate-800 hover:border-slate-950 hover:text-slate-950">{spanish ? 'Abrir CV conciso' : 'Open concise CV'}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>
                   <a href={ats} target="_blank" rel="noopener noreferrer" data-analytics-event="cv_download" className="inline-flex min-h-11 items-center gap-2 border-b border-slate-500 text-slate-800 hover:border-slate-950 hover:text-slate-950">{spanish ? 'Abrir versión ATS' : 'Open ATS edition'}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>
                 </div>
               </div>
@@ -462,11 +462,11 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
           </aside>
           <figure>
             <div className="border border-slate-400 bg-white p-2 shadow-[0_28px_70px_-42px_rgba(15,23,42,.55)] sm:p-4">
-              <img src={preview} alt={spanish ? 'Primera página del CV completo' : 'First page of the complete CV'} className="block w-full bg-white" />
+              <img src={preview} alt={spanish ? 'Primera página del CV conciso' : 'First page of the concise CV'} className="block w-full bg-white" />
             </div>
             <figcaption className="mt-4 flex flex-col items-start justify-between gap-3 border-t border-slate-400 pt-4 text-sm text-slate-600 sm:flex-row sm:items-center">
               <span>{spanish ? 'Vista previa de la primera página.' : 'Preview of the first page.'}</span>
-              <a href={pdf} target="_blank" rel="noopener noreferrer" data-analytics-event="cv_download" className="inline-flex min-h-11 items-center gap-2 border-b border-slate-500 font-bold text-slate-800 hover:border-slate-950 hover:text-slate-950">{spanish ? 'Abrir el PDF completo' : 'Open the complete PDF'}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>
+              <a href={pdf} target="_blank" rel="noopener noreferrer" data-analytics-event="cv_download" className="inline-flex min-h-11 items-center gap-2 border-b border-slate-500 font-bold text-slate-800 hover:border-slate-950 hover:text-slate-950">{spanish ? 'Abrir el PDF conciso' : 'Open the concise PDF'}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>
             </figcaption>
           </figure>
         </section>

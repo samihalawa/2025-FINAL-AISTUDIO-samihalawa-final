@@ -9,38 +9,38 @@ const content: Record<LanguageCode, {
   en: {
     eyebrow: 'Founding AI Engineer · Madrid · Europe',
     title: 'I build production AI systems across agents, RAG, voice and automation.',
-    intro: 'Hands-on across Python, TypeScript, APIs, SQL, web and mobile, deployment and observability. I connect model workflows to real product context, interfaces, operations and human review.',
-    work: 'Explore the portfolio', cv: 'Open complete CV', available: 'Open to senior AI engineering, founding and platform roles',
-    proofTitle: 'At a glance', proofBody: 'Founder of Agents AI Ltd; builder of OULANG, AutoClient and open-source MCP tools, with 84 projects and collaborations across products, client systems, research and education.',
-    now: 'Core strengths', building: ['Agentic AI, RAG and MCP', 'Python and TypeScript production systems', 'Voice, automation and operational AI'],
-    stats: [{ value: '84', label: 'projects & collaborations' }, { value: '249', label: 'original public repositories' }, { value: '80★', label: 'VUDA · 7 forks' }, { value: '125+', label: 'recorded training hours' }]
+    intro: 'Hands-on across Python, TypeScript, APIs, SQL, web and mobile, deployment and observability. I lead cross-functional delivery and connect model workflows to real product context, operations and human review.',
+    work: 'Explore the portfolio', cv: 'Open concise CV', available: 'Open to work · available immediately for full-time, contract, hybrid or remote roles',
+    proofTitle: 'At a glance', proofBody: 'Founding AI engineer behind OULANG, AutoClient and open-source MCP tools; coordinated teams of up to 50 people and delivered with engineers, specialists, clients and operators.',
+    now: 'Core strengths', building: ['Agentic AI, RAG and MCP', 'Python and TypeScript production systems', 'Cross-functional leadership and mentoring'],
+    stats: [{ value: '7', label: 'flagship programmes' }, { value: '249', label: 'original public repositories' }, { value: '80★', label: 'VUDA · 7 forks' }, { value: '125+', label: 'recorded training hours' }]
   },
   es: {
     eyebrow: 'Ingeniero fundador de IA · Madrid · Europa',
     title: 'Construyo sistemas de IA en producción con agentes, RAG, voz y automatización.',
-    intro: 'Trabajo directamente con Python, TypeScript, APIs, SQL, web y móvil, despliegue y observabilidad. Conecto flujos de modelos con contexto real de producto, interfaces, operaciones y revisión humana.',
-    work: 'Explorar el portfolio', cv: 'Abrir CV completo', available: 'Disponible para roles sénior de ingeniería IA, founding y plataforma',
-    proofTitle: 'En pocas palabras', proofBody: 'Fundador de Agents AI Ltd; creador de OULANG, AutoClient y herramientas MCP open source, con 84 proyectos y colaboraciones entre producto, sistemas para clientes, investigación y educación.',
-    now: 'Fortalezas', building: ['IA agéntica, RAG y MCP', 'Sistemas en producción con Python y TypeScript', 'Voz, automatización e IA operativa'],
-    stats: [{ value: '84', label: 'proyectos y colaboraciones' }, { value: '249', label: 'repositorios públicos propios' }, { value: '80★', label: 'VUDA · 7 forks' }, { value: '125+', label: 'horas grabadas de formación' }]
+    intro: 'Trabajo directamente con Python, TypeScript, APIs, SQL, web y móvil, despliegue y observabilidad. Lidero entregas multidisciplinares y conecto los modelos con el contexto real de producto, las operaciones y la revisión humana.',
+    work: 'Explorar el portfolio', cv: 'Abrir CV conciso', available: 'Open to work · disponibilidad inmediata · jornada completa, contrato, híbrido o remoto',
+    proofTitle: 'En pocas palabras', proofBody: 'Ingeniero fundador detrás de OULANG, AutoClient y herramientas MCP open source; he coordinado equipos de hasta 50 personas y trabajado con ingenieros, especialistas, clientes y operaciones.',
+    now: 'Fortalezas', building: ['IA agéntica, RAG y MCP', 'Sistemas en producción con Python y TypeScript', 'Liderazgo multidisciplinar y mentoring'],
+    stats: [{ value: '7', label: 'programas principales' }, { value: '249', label: 'repositorios públicos propios' }, { value: '80★', label: 'VUDA · 7 forks' }, { value: '125+', label: 'horas grabadas de formación' }]
   },
   fr: {
     eyebrow: 'Ingénieur IA fondateur · Madrid · Europe',
     title: 'Je construis des systèmes IA en production avec agents, RAG, voix et automatisation.',
-    intro: 'J’interviens directement sur Python, TypeScript, APIs, SQL, web et mobile, déploiement et observabilité. Je relie les modèles au contexte produit, aux interfaces, aux opérations et à la validation humaine.',
-    work: 'Explorer le portfolio', cv: 'Ouvrir le CV complet', available: 'Ouvert aux rôles senior en ingénierie IA, founding et plateforme',
-    proofTitle: 'En bref', proofBody: 'Fondateur d’Agents AI Ltd ; créateur d’OULANG, AutoClient et d’outils MCP open source, avec 84 projets et collaborations en produit, systèmes clients, recherche et formation.',
-    now: 'Points forts', building: ['IA agentique, RAG et MCP', 'Systèmes Python et TypeScript en production', 'Voix, automatisation et IA opérationnelle'],
-    stats: [{ value: '84', label: 'projets et collaborations' }, { value: '249', label: 'dépôts publics originaux' }, { value: '80★', label: 'VUDA · 7 forks' }, { value: '125+', label: 'heures de formation enregistrées' }]
+    intro: 'J’interviens directement sur Python, TypeScript, APIs, SQL, web et mobile, déploiement et observabilité. Je pilote des livraisons pluridisciplinaires et relie les modèles au contexte produit, aux opérations et à la validation humaine.',
+    work: 'Explorer le portfolio', cv: 'Ouvrir le CV concis', available: 'Ouvert au travail · disponible immédiatement · temps plein, contrat, hybride ou distant',
+    proofTitle: 'En bref', proofBody: 'Ingénieur fondateur derrière OULANG, AutoClient et des outils MCP open source ; coordination d’équipes jusqu’à 50 personnes et collaboration avec ingénieurs, spécialistes, clients et opérations.',
+    now: 'Points forts', building: ['IA agentique, RAG et MCP', 'Systèmes Python et TypeScript en production', 'Leadership pluridisciplinaire et mentorat'],
+    stats: [{ value: '7', label: 'programmes phares' }, { value: '249', label: 'dépôts publics originaux' }, { value: '80★', label: 'VUDA · 7 forks' }, { value: '125+', label: 'heures de formation enregistrées' }]
   },
   zh: {
     eyebrow: '创始 AI 工程师 · 马德里 · 欧洲',
     title: '我构建涵盖智能体、RAG、语音与自动化的生产级 AI 系统。',
-    intro: '亲自负责 Python、TypeScript、API、SQL、Web 与移动端、部署和可观测性，把模型工作流连接到真实产品场景、界面、运营与人工审核。',
-    work: '浏览作品集', cv: '打开完整简历', available: '开放高级 AI 工程、创始工程师与平台岗位',
-    proofTitle: '快速了解', proofBody: 'Agents AI Ltd 创始人；OULANG、AutoClient 与开源 MCP 工具的构建者，拥有覆盖产品、客户系统、研究和教育的 84 个项目与合作。',
-    now: '核心能力', building: ['智能体 AI、RAG 与 MCP', '生产级 Python 与 TypeScript 系统', '语音、自动化与运营 AI'],
-    stats: [{ value: '84', label: '项目与合作' }, { value: '249', label: '原创公开仓库' }, { value: '80★', label: 'VUDA · 7 个 fork' }, { value: '125+', label: '已录制培训小时' }]
+    intro: '亲自负责 Python、TypeScript、API、SQL、Web 与移动端、部署和可观测性，领导跨职能交付，并把模型工作流连接到真实产品、运营与人工审核。',
+    work: '浏览作品集', cv: '打开精简简历', available: '正在求职 · 可立即到岗 · 全职、合同、混合或远程',
+    proofTitle: '快速了解', proofBody: 'OULANG、AutoClient 与开源 MCP 工具背后的创始 AI 工程师；协调过最多 50 人的团队，并与工程师、专家、客户和运营人员协作交付。',
+    now: '核心能力', building: ['智能体 AI、RAG 与 MCP', '生产级 Python 与 TypeScript 系统', '跨职能领导与指导'],
+    stats: [{ value: '7', label: '旗舰项目集' }, { value: '249', label: '原创公开仓库' }, { value: '80★', label: 'VUDA · 7 个 fork' }, { value: '125+', label: '已录制培训小时' }]
   }
 };
 

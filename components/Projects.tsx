@@ -1,25 +1,12 @@
-import React, { useMemo, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation, type LanguageCode } from '../i18n/LanguageContext';
 import {
-  PORTFOLIO_INVENTORY,
   PORTFOLIO_STORIES,
   categoryCopy,
-  getInventoryCopy,
   getProjectStoryCopy,
-  inventoryLaneCopy,
-  type InventoryLane,
   type PortfolioCategory,
 } from '../portfolio';
-
-type InventoryFilter = 'all' | InventoryLane;
-
-const workstreamHeadings: Record<LanguageCode, { eyebrow: string; title: string; body: string; open: string }> = {
-  en: { eyebrow: 'Areas of work', title: 'Seven connected areas of product and engineering.', body: 'Browse products, client systems, open source, infrastructure, research, education and earlier work.', open: 'Explore area' },
-  es: { eyebrow: 'Áreas de trabajo', title: 'Siete áreas conectadas de producto e ingeniería.', body: 'Explora productos, sistemas para clientes, open source, infraestructura, investigación, educación y trabajos anteriores.', open: 'Explorar área' },
-  fr: { eyebrow: 'Domaines de travail', title: 'Sept domaines reliés de produit et d’ingénierie.', body: 'Découvrez produits, systèmes clients, open source, infrastructure, recherche, éducation et travaux antérieurs.', open: 'Explorer le domaine' },
-  zh: { eyebrow: '工作方向', title: '七个相互关联的产品与工程方向。', body: '浏览产品、客户系统、开源、基础设施、研究、教育与早期作品。', open: '探索方向' },
-};
 
 const storyLabels: Record<LanguageCode, { challenge: string; build: string; role: string }> = {
   en: { challenge: 'The problem', build: 'What I built', role: 'Role' },
@@ -57,19 +44,19 @@ const headings: Record<LanguageCode, {
   en: {
     eyebrow: 'Selected work · 2023–today',
     title: 'AI products built from first decision to live operation.',
-    body: 'A portfolio of multilingual platforms, agent systems, applied AI and technical education—designed, engineered and operated end to end.',
-    stats: ['projects & collaborations', 'original public repositories', 'public videos', 'technical articles'],
-    approachEyebrow: 'End-to-end ownership',
-    approachTitle: 'One builder across product, engineering and launch.',
-    approachBody: 'The strongest work happens when product decisions, technical architecture and the operating reality stay connected.',
+    body: 'Seven sustained programmes spanning multilingual platforms, agent systems, applied AI and technical education—delivered with clients, specialists, engineers and operators.',
+    stats: ['flagship programmes', 'original public repositories', 'public videos', 'technical articles'],
+    approachEyebrow: 'End-to-end leadership',
+    approachTitle: 'Product, engineering and cross-functional delivery.',
+    approachBody: 'I lead from product framing through architecture and operation, working with teams and specialists so technical decisions stay connected to real use.',
     approach: [
       { number: '01', title: 'Frame the product', body: 'Turn an ambiguous opportunity into a clear user journey, scope and release path.' },
       { number: '02', title: 'Build the system', body: 'Connect agents, data, APIs, web and mobile interfaces, infrastructure and analytics.' },
       { number: '03', title: 'Operate and improve', body: 'Launch, observe real use, solve the rough edges and keep the product moving.' },
     ],
     selectedEyebrow: 'Portfolio',
-    selectedTitle: 'Products and systems worth opening.',
-    selectedBody: 'Current platforms, open-source tools, client systems and focused prototypes across four areas of work.',
+    selectedTitle: 'Seven flagship programmes, grouped by outcome.',
+    selectedBody: 'Sustained platforms, open-source systems and client collaborations. Focused teaching builds remain grouped inside the education experience rather than appearing as parallel commercial work.',
     visit: 'Visit project',
     archiveEyebrow: 'Earlier work',
     archiveTitle: 'More products, collaborations and research.',
@@ -87,19 +74,19 @@ const headings: Record<LanguageCode, {
   es: {
     eyebrow: 'Trabajo seleccionado · 2023–hoy',
     title: 'Productos de IA, desde la primera decisión hasta la operación real.',
-    body: 'Un portfolio de plataformas multilingües, sistemas de agentes, IA aplicada y formación técnica, diseñado y construido de principio a fin.',
-    stats: ['proyectos y colaboraciones', 'repositorios públicos propios', 'vídeos públicos', 'artículos técnicos'],
-    approachEyebrow: 'Responsabilidad integral',
-    approachTitle: 'Producto, ingeniería y lanzamiento en una sola visión.',
-    approachBody: 'El mejor trabajo ocurre cuando las decisiones de producto, la arquitectura y la realidad operativa siguen conectadas.',
+    body: 'Siete programas sostenidos de plataformas multilingües, sistemas de agentes, IA aplicada y formación técnica, entregados con clientes, especialistas, ingenieros y operaciones.',
+    stats: ['programas principales', 'repositorios públicos propios', 'vídeos públicos', 'artículos técnicos'],
+    approachEyebrow: 'Liderazgo integral',
+    approachTitle: 'Producto, ingeniería y entrega multidisciplinar.',
+    approachBody: 'Lidero desde la definición del producto hasta la arquitectura y la operación, trabajando con equipos y especialistas para conectar las decisiones técnicas con el uso real.',
     approach: [
       { number: '01', title: 'Definir el producto', body: 'Convertir una oportunidad ambigua en un recorrido claro, un alcance y una ruta de lanzamiento.' },
       { number: '02', title: 'Construir el sistema', body: 'Conectar agentes, datos, APIs, interfaces web y móvil, infraestructura y analítica.' },
       { number: '03', title: 'Operar y mejorar', body: 'Lanzar, observar el uso real, resolver fricciones y mantener el producto avanzando.' },
     ],
     selectedEyebrow: 'Portfolio',
-    selectedTitle: 'Productos y sistemas que merece la pena abrir.',
-    selectedBody: 'Plataformas actuales, herramientas open source, sistemas para clientes y prototipos específicos en cuatro áreas.',
+    selectedTitle: 'Siete programas principales, agrupados por resultado.',
+    selectedBody: 'Plataformas sostenidas, sistemas open source y colaboraciones con clientes. Los ejercicios de formación se agrupan dentro de la experiencia docente, no como trabajos comerciales paralelos.',
     visit: 'Visitar proyecto',
     archiveEyebrow: 'Trabajos anteriores',
     archiveTitle: 'Más productos, colaboraciones e investigación.',
@@ -117,19 +104,19 @@ const headings: Record<LanguageCode, {
   fr: {
     eyebrow: 'Travaux sélectionnés · 2023–aujourd’hui',
     title: 'Des produits IA, de la première décision à l’exploitation réelle.',
-    body: 'Un portfolio de plateformes multilingues, de systèmes d’agents, d’IA appliquée et de formation technique, conçu et construit de bout en bout.',
-    stats: ['projets et collaborations', 'dépôts publics originaux', 'vidéos publiques', 'articles techniques'],
-    approachEyebrow: 'Responsabilité de bout en bout',
-    approachTitle: 'Produit, ingénierie et lancement dans une même vision.',
-    approachBody: 'Les meilleurs produits gardent les décisions produit, l’architecture technique et la réalité opérationnelle connectées.',
+    body: 'Sept programmes durables couvrant plateformes multilingues, systèmes d’agents, IA appliquée et formation technique, livrés avec clients, spécialistes, ingénieurs et opérations.',
+    stats: ['programmes phares', 'dépôts publics originaux', 'vidéos publiques', 'articles techniques'],
+    approachEyebrow: 'Leadership de bout en bout',
+    approachTitle: 'Produit, ingénierie et livraison pluridisciplinaire.',
+    approachBody: 'Je pilote du cadrage produit à l’architecture et à l’exploitation, avec équipes et spécialistes, afin de relier les choix techniques à l’usage réel.',
     approach: [
       { number: '01', title: 'Cadrer le produit', body: 'Transformer une opportunité ambiguë en parcours utilisateur, périmètre et trajectoire de lancement.' },
       { number: '02', title: 'Construire le système', body: 'Relier agents, données, APIs, interfaces web et mobiles, infrastructure et analyse.' },
       { number: '03', title: 'Exploiter et améliorer', body: 'Lancer, observer l’usage réel, corriger les frictions et poursuivre l’évolution.' },
     ],
     selectedEyebrow: 'Portfolio',
-    selectedTitle: 'Des produits et systèmes à découvrir.',
-    selectedBody: 'Plateformes actuelles, outils open source, systèmes clients et prototypes ciblés dans quatre domaines.',
+    selectedTitle: 'Sept programmes phares, regroupés par résultat.',
+    selectedBody: 'Plateformes durables, systèmes open source et collaborations clients. Les réalisations pédagogiques restent regroupées dans l’expérience de formation plutôt que présentées comme des missions commerciales parallèles.',
     visit: 'Visiter le projet',
     archiveEyebrow: 'Travaux antérieurs',
     archiveTitle: 'Plus de produits, collaborations et recherche.',
@@ -147,19 +134,19 @@ const headings: Record<LanguageCode, {
   zh: {
     eyebrow: '精选作品 · 2023 至今',
     title: '从第一项决策到真实运营的 AI 产品。',
-    body: '涵盖多语言平台、智能体系统、应用型 AI 与技术教育，贯穿设计、开发与运营全过程。',
-    stats: ['项目与合作', '原创公开仓库', '公开视频', '技术文章'],
-    approachEyebrow: '端到端负责',
-    approachTitle: '让产品、工程与发布保持同一视角。',
-    approachBody: '当产品决策、技术架构和真实运营持续连接时，才能做出更强的产品。',
+    body: '七个持续交付的旗舰项目集，涵盖多语言平台、智能体系统、应用型 AI 与技术教育，并与客户、专家、工程师和运营团队共同完成。',
+    stats: ['旗舰项目集', '原创公开仓库', '公开视频', '技术文章'],
+    approachEyebrow: '端到端领导',
+    approachTitle: '产品、工程与跨职能交付。',
+    approachBody: '我从产品定义一直领导到架构与运营，并与团队和专家协作，让技术决策始终连接真实使用。',
     approach: [
       { number: '01', title: '定义产品', body: '把模糊机会转化为清晰的用户路径、范围与发布计划。' },
       { number: '02', title: '构建系统', body: '连接智能体、数据、API、Web 与移动界面、基础设施和分析。' },
       { number: '03', title: '运营与改进', body: '发布、观察真实使用、解决摩擦并持续推动产品。' },
     ],
     selectedEyebrow: '作品集',
-    selectedTitle: '值得打开体验的产品与系统。',
-    selectedBody: '涵盖四个方向的当前平台、开源工具、客户系统与重点原型。',
+    selectedTitle: '按成果归类的七个旗舰项目集。',
+    selectedBody: '持续运营的平台、开源系统和客户合作。教学练习统一归入教育经历，不再呈现为并行商业项目。',
     visit: '访问项目',
     archiveEyebrow: '早期作品',
     archiveTitle: '更多产品、合作与研究。',
@@ -177,32 +164,13 @@ const headings: Record<LanguageCode, {
 };
 
 const categoryOrder: PortfolioCategory[] = ['platforms', 'agents', 'applied', 'education'];
-const laneOrder: InventoryLane[] = ['products', 'clients', 'open-source', 'research', 'education', 'infrastructure', 'archive'];
-const publicInventory = PORTFOLIO_INVENTORY.filter(item => item.status === 'verified');
+const flagshipStoryIds = new Set(['oulang', 'huatong', 'autopricing', 'autoclient', 'vuda', 'medical-systems', 'chinototal']);
 
 const Projects: React.FC = () => {
   const { language } = useTranslation();
   const h = headings[language];
-  const [query, setQuery] = useState('');
-  const [lane, setLane] = useState<InventoryFilter>('all');
-
-  const filteredInventory = useMemo(() => {
-    const normalizedQuery = query.trim().toLocaleLowerCase(language);
-    return publicInventory.filter(item => {
-      const c = getInventoryCopy(item, language);
-      const matchesQuery = !normalizedQuery || [item.title, item.period, item.era, c.summary]
-        .some(value => value.toLocaleLowerCase(language).includes(normalizedQuery));
-      return matchesQuery && (lane === 'all' || item.lane === lane);
-    });
-  }, [language, lane, query]);
-
-  const eras = useMemo(() => Array.from(new Set(filteredInventory.map(item => item.era))), [filteredInventory]);
-  const workstreams = useMemo(() => laneOrder.map(option => {
-    const items = publicInventory.filter(item => item.lane === option);
-    return { lane: option, count: items.length, examples: items.slice(-3).reverse().map(item => item.title) };
-  }), []);
   const stats = [
-    { value: publicInventory.length, label: h.stats[0] },
+    { value: flagshipStoryIds.size, label: h.stats[0] },
     { value: '249', label: h.stats[1] },
     { value: '373', label: h.stats[2] },
     { value: '12', label: h.stats[3] },
@@ -233,23 +201,9 @@ const Projects: React.FC = () => {
           </div>
         </section>
 
-        <section className="border-y border-slate-200 py-20 sm:py-24" aria-labelledby="portfolio-workstreams-heading">
-          <div className="grid gap-8 lg:grid-cols-[.78fr_1.22fr] lg:gap-14">
-            <div className="lg:sticky lg:top-28 lg:self-start"><span className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">{workstreamHeadings[language].eyebrow}</span><h2 id="portfolio-workstreams-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">{workstreamHeadings[language].title}</h2><p className="mt-5 text-lg leading-relaxed text-slate-600">{workstreamHeadings[language].body}</p></div>
-            <div className="grid border-t border-slate-400 sm:grid-cols-2">
-              {workstreams.map((stream, index) => <button key={stream.lane} type="button" onClick={() => { setQuery(''); setLane(stream.lane); document.getElementById('inventory')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }} className={`group min-h-48 border-b border-slate-300 bg-transparent p-5 text-left transition hover:bg-white sm:p-6 ${index % 2 === 0 ? 'sm:border-r' : ''}`}>
-                <div className="flex items-start justify-between gap-4"><span className="font-mono text-xs font-bold text-brand-800">{String(index + 1).padStart(2, '0')}</span><span className="font-mono text-xs font-bold text-slate-600">{String(stream.count).padStart(2, '0')}</span></div>
-                <h3 className="cv-serif mt-5 text-2xl font-semibold text-slate-950">{inventoryLaneCopy[stream.lane][language]}</h3>
-                <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-slate-500">{stream.examples.join(' · ')}</p>
-                <span className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-bold text-brand-700">{workstreamHeadings[language].open}<i className="fas fa-arrow-down text-xs transition group-hover:translate-y-0.5" /></span>
-              </button>)}
-            </div>
-          </div>
-        </section>
-
         <div className="max-w-4xl pt-20 sm:pt-24"><span className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">{h.selectedEyebrow}</span><h2 className="cv-serif mt-5 text-4xl font-normal tracking-[-.035em] text-slate-950 sm:text-5xl">{h.selectedTitle}</h2><p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-600">{h.selectedBody}</p></div>
         {categoryOrder.map(category => {
-          const items = PORTFOLIO_STORIES.filter(story => story.category === category);
+          const items = PORTFOLIO_STORIES.filter(story => story.category === category && flagshipStoryIds.has(story.id));
           if (!items.length) return null;
           return <section key={category} className="mt-14" aria-labelledby={`category-${category}`}><div className="mb-6 flex items-center gap-4"><h3 id={`category-${category}`} className="text-xl font-bold text-slate-950 sm:text-2xl">{categoryCopy[category][language]}</h3><span className="h-px flex-1 bg-slate-300" /><span className="text-sm font-bold tabular-nums text-slate-500">{String(items.length).padStart(2, '0')}</span></div>
             <div className="grid border-l border-t border-slate-400 lg:grid-cols-2">{items.map(story => { const copy = getProjectStoryCopy(story, language); return <article id={story.id} key={story.id} className="group scroll-mt-24 flex min-h-full flex-col border-b border-r border-slate-400 bg-white">
@@ -261,30 +215,6 @@ const Projects: React.FC = () => {
             </article>; })}</div>
           </section>;
         })}
-
-        <section id="inventory" className="scroll-mt-28 mt-28 border-t border-slate-200 pt-20" aria-labelledby="archive-heading">
-          <div className="max-w-4xl"><span className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">{h.archiveEyebrow}</span><h2 id="archive-heading" className="cv-serif mt-5 text-4xl font-normal tracking-[-.035em] text-slate-950 sm:text-5xl">{h.archiveTitle}</h2><p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-600">{h.archiveBody}</p></div>
-
-          <div className="sticky top-20 z-20 -mx-4 mt-10 border-y border-slate-400 bg-[#f8f6f1]/95 px-4 py-4 backdrop-blur sm:mx-0 sm:px-5">
-            <label className="relative block"><span className="sr-only">{h.search}</span><i className="fas fa-magnifying-glass pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" /><input value={query} onChange={event => setQuery(event.target.value)} placeholder={h.search} className="min-h-12 w-full border border-slate-400 bg-white py-3 pl-11 pr-4 text-base text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-slate-950 focus:ring-2 focus:ring-brand-500/20" /></label>
-            <div className="mt-3 flex gap-2 overflow-x-auto pb-1" aria-label={h.allLanes}>
-              <button type="button" onClick={() => setLane('all')} aria-pressed={lane === 'all'} className={`min-h-11 shrink-0 border-b-2 px-2 text-sm font-bold transition ${lane === 'all' ? 'border-slate-950 text-slate-950' : 'border-transparent text-slate-500 hover:border-slate-400'}`}>{h.allLanes}</button>
-              {laneOrder.map(option => <button type="button" key={option} onClick={() => setLane(option)} aria-pressed={lane === option} className={`min-h-11 shrink-0 border-b-2 px-2 text-sm font-bold transition ${lane === option ? 'border-slate-950 text-slate-950' : 'border-transparent text-slate-500 hover:border-slate-400'}`}>{inventoryLaneCopy[option][language]}</button>)}
-            </div>
-            <div className="mt-3 text-sm font-semibold tabular-nums text-slate-500">{filteredInventory.length} {h.results}</div>
-          </div>
-
-          <div className="mt-12 space-y-16">
-            {eras.map(era => <section key={era} aria-labelledby={`era-${era.replace(/\W+/g, '-')}`}>
-              <div className="grid gap-6 lg:grid-cols-[12rem_1fr]"><div><h3 id={`era-${era.replace(/\W+/g, '-')}`} className="cv-serif text-3xl font-semibold tracking-[-.025em] text-slate-950 lg:sticky lg:top-[16rem]">{era}</h3><div className="mt-3 h-px w-12 bg-slate-500" /></div><div className="grid border-t border-slate-400 md:grid-cols-2">{filteredInventory.filter(item => item.era === era).map((item, index) => { const c = getInventoryCopy(item, language); return <article key={item.id} id={item.id} className={`scroll-mt-72 border-b border-slate-300 bg-white p-5 sm:p-6 ${index % 2 === 0 ? 'md:border-r' : ''}`}>
-                <div className="flex flex-wrap items-center gap-2"><span className="text-xs font-bold uppercase tracking-[.12em] text-brand-800">{inventoryLaneCopy[item.lane][language]}</span><span className="ml-auto text-xs font-bold uppercase tracking-[.12em] text-slate-600">{item.period}</span></div>
-                {item.image && <img src={item.image} alt={`${item.title} interface`} className="mt-4 h-32 w-full border border-slate-300 object-cover" loading="lazy" />}
-                <h4 className="cv-serif mt-4 text-2xl font-semibold text-slate-950">{item.title}</h4><p className="mt-2 text-sm leading-relaxed text-slate-600">{c.summary}</p>{item.href && <a href={item.href} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex min-h-11 items-center gap-2 border-b border-slate-500 font-bold text-slate-800">{h.open}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>}
-              </article>; })}</div></div>
-            </section>)}
-            {!filteredInventory.length && <div className="border border-dashed border-slate-400 bg-white p-10 text-center text-slate-600">{h.noResults}</div>}
-          </div>
-        </section>
 
         <section className="mt-24 border-y border-slate-950 bg-slate-950 px-6 py-10 text-white sm:px-10 sm:py-12 lg:flex lg:items-end lg:justify-between lg:gap-12">
           <div className="max-w-3xl"><span className="text-xs font-bold uppercase tracking-[.18em] text-brand-200">{h.ctaEyebrow}</span><h2 className="mt-4 font-display text-3xl font-bold tracking-[-.04em] text-white sm:text-5xl">{h.ctaTitle}</h2><p className="mt-4 text-lg leading-relaxed text-slate-300">{h.ctaBody}</p></div>

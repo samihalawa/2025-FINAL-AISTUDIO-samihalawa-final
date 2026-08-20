@@ -17,11 +17,11 @@ const content: Record<LanguageCode, {
       { title: 'Bridge product and engineering', body: 'Spanish, English and Mandarin delivery helps connect technical decisions with users, clients and executives.' }
     ],
     timeline: [
-      { years: '2009–2023', title: 'Web, mobile, growth & education', body: 'More than 70 projects spanning products, course creation, digital-design instruction and acquisition.' },
+      { years: '2009–2023', title: 'Web, mobile, growth & education', body: 'Long-running product delivery and technical education; focused builds served as practical student labs within structured training.' },
       { years: '2013–2017', title: 'Media work in China', body: 'Commercial production, presenting and multilingual on-camera communication.' },
       { years: '2019–2023', title: 'Production full-stack engineering', body: 'Web systems, Linux/server operations, CI/CD practices, reviews and mentoring.' },
       { years: '2022–2025', title: 'AI teaching & technical consulting', body: 'Implementation-first agents, automation, Python and AI product engineering.' },
-      { years: '2025–present', title: 'Agents AI Ltd', body: 'Founder-led AI platforms, agentic operations and specialist product delivery.' }
+      { years: '2025–present', title: 'Agents AI Ltd', body: 'Founder-led AI platforms and cross-functional delivery with engineers, specialists, clients and operators.' }
     ],
     achievementsTitle: 'Selected distinctions & publications',
     achievements: [
@@ -57,11 +57,11 @@ const content: Record<LanguageCode, {
       { title: 'Unir producto e ingeniería', body: 'La entrega en español, inglés y mandarín conecta decisiones técnicas con usuarios, clientes y dirección.' }
     ],
     timeline: [
-      { years: '2009–2023', title: 'Web, móvil, growth y educación', body: 'Más de 70 proyectos entre producto, cursos, docencia de diseño digital y adquisición.' },
+      { years: '2009–2023', title: 'Web, móvil, growth y educación', body: 'Entrega de producto y formación técnica a largo plazo; los desarrollos específicos funcionaban como prácticas dentro de programas estructurados.' },
       { years: '2013–2017', title: 'Medios en China', body: 'Producción comercial, presentación y comunicación multilingüe en cámara.' },
       { years: '2019–2023', title: 'Ingeniería full-stack en producción', body: 'Web, Linux/servidores, CI/CD, revisiones y mentoring.' },
       { years: '2022–2025', title: 'Docencia de IA y consultoría', body: 'Agentes, automatización, Python e ingeniería de producto orientados a implementación.' },
-      { years: '2025–actualidad', title: 'Agents AI Ltd', body: 'Plataformas de IA, operaciones agénticas y entrega especializada de producto.' }
+      { years: '2025–actualidad', title: 'Agents AI Ltd', body: 'Plataformas de IA y entrega multidisciplinar con ingenieros, especialistas, clientes y operaciones.' }
     ],
     achievementsTitle: 'Premios y publicaciones seleccionados',
     achievements: [
@@ -92,7 +92,7 @@ const content: Record<LanguageCode, {
     eyebrow: 'Ma façon de travailler', title: 'Ingénierie IA senior avec une responsabilité produit de fondateur.',
     intro: 'Je combine IA agentique, RAG et automatisation avec l’ingénierie full-stack nécessaire pour les intégrer à de vrais produits. Mon expérience du web, du mobile, de la croissance, de la formation et des médias multilingues soutient cette mise en œuvre.', evidence: 'J’interviens directement du cadrage à Python et TypeScript, aux APIs, aux données, au déploiement, à l’observabilité et à l’itération, sans multiplier les relais.',
     principles: [{ title: 'Concevoir tout le flux IA', body: 'Retrieval, outils, sorties structurées, APIs, données, interfaces, déploiement et observabilité forment un seul système.' }, { title: 'Construire pour l’exploitation', body: 'Une IA fiable inclut le suivi, la validation humaine et le parcours réel autour du modèle, pas seulement une réponse correcte.' }, { title: 'Relier produit et ingénierie', body: 'Espagnol, anglais et mandarin relient les décisions techniques aux utilisateurs, clients et dirigeants.' }],
-    timeline: [{ years: '2009–2023', title: 'Web, mobile, croissance & éducation', body: 'Plus de 70 projets couvrant produits, cours, design numérique et acquisition.' }, { years: '2013–2017', title: 'Médias en Chine', body: 'Production commerciale et présentation multilingue.' }, { years: '2019–2023', title: 'Ingénierie full-stack', body: 'Web, Linux, CI/CD, revues et mentoring.' }, { years: '2022–2025', title: 'Formation IA & conseil', body: 'Agents, automatisation, Python et produit.' }, { years: '2025–présent', title: 'Agents AI Ltd', body: 'Plateformes IA et opérations agentiques.' }],
+    timeline: [{ years: '2009–2023', title: 'Web, mobile, croissance & éducation', body: 'Livraison produit et formation technique au long cours ; les réalisations ciblées servaient de laboratoires pratiques dans des programmes structurés.' }, { years: '2013–2017', title: 'Médias en Chine', body: 'Production commerciale et présentation multilingue.' }, { years: '2019–2023', title: 'Ingénierie full-stack', body: 'Web, Linux, CI/CD, revues et mentoring.' }, { years: '2022–2025', title: 'Formation IA & conseil', body: 'Agents, automatisation, Python et produit.' }, { years: '2025–présent', title: 'Agents AI Ltd', body: 'Plateformes IA et livraison pluridisciplinaire avec ingénieurs, spécialistes, clients et opérations.' }],
     achievementsTitle: 'Distinctions et publications sélectionnées',
     achievements: [
       { meta: 'Nogarejas · 2012', title: 'Prix jeunesse — IIe Concours de poésie de Nogarejas', body: '« Olvidaste una llave en mi costado », soumis sous le pseudonyme « El arte de la fuga », a reçu le prix jeunesse de 200 € parmi plus de 200 œuvres d’un concours international.', links: [{ label: 'Diario de León', href: 'https://www.diariodeleon.es/leon/provincia/120904/102485/premio-poesia-nogarejas-viaja-argentina_amp.html' }, { label: 'Volume archivé', href: 'https://archive.org/details/MemoriaGrfica19532013' }] },
@@ -104,7 +104,7 @@ const content: Record<LanguageCode, {
     eyebrow: '我的工作方式', title: '兼具创始人级产品责任的高级 AI 工程。',
     intro: '我把智能体 AI、RAG 和自动化，与将其落地到真实产品所需的全栈工程结合起来。Web、移动端、增长、教学和多语言媒体经验构成了交付的运营基础。', evidence: '默认亲自推进：从产品定义到 Python 与 TypeScript、API、数据、部署、可观测性和迭代，避免把系统拆成彼此断开的交接。',
     principles: [{ title: '设计完整 AI 工作流', body: '检索、工具、结构化输出、API、数据、界面、部署与可观测性属于同一个系统。' }, { title: '面向真实运营构建', body: '可靠的 AI 包含监控、人工审核和模型周边的真实流程，而不只是一次正确响应。' }, { title: '连接产品与工程', body: '西班牙语、英语和中文帮助把技术决策连接到用户、客户与管理层。' }],
-    timeline: [{ years: '2009–2023', title: 'Web、移动、增长与教育', body: '完成 70 多个产品、课程、数字设计教学与增长项目。' }, { years: '2013–2017', title: '中国媒体工作', body: '商业制作、主持与多语言镜头沟通。' }, { years: '2019–2023', title: '生产级全栈工程', body: 'Web、Linux、CI/CD、评审和指导。' }, { years: '2022–2025', title: 'AI 教学与技术咨询', body: '面向实现的智能体、自动化、Python 与产品工程。' }, { years: '2025–至今', title: 'Agents AI Ltd', body: 'AI 平台、智能体运营与专业产品交付。' }],
+    timeline: [{ years: '2009–2023', title: 'Web、移动、增长与教育', body: '长期产品交付与技术教育；聚焦型构建作为结构化课程中的实践训练项目。' }, { years: '2013–2017', title: '中国媒体工作', body: '商业制作、主持与多语言镜头沟通。' }, { years: '2019–2023', title: '生产级全栈工程', body: 'Web、Linux、CI/CD、评审和指导。' }, { years: '2022–2025', title: 'AI 教学与技术咨询', body: '面向实现的智能体、自动化、Python 与产品工程。' }, { years: '2025–至今', title: 'Agents AI Ltd', body: '与工程师、专家、客户和运营人员协作的 AI 平台与跨职能交付。' }],
     achievementsTitle: '精选荣誉与出版物',
     achievements: [
       { meta: 'Nogarejas · 2012', title: '第二届 Nogarejas 诗歌大赛青年奖', body: '诗作《Olvidaste una llave en mi costado》以笔名“El arte de la fuga”参赛，在收到 200 多篇作品的国际赛事中获得 200 欧元青年奖。', links: [{ label: 'Diario de León', href: 'https://www.diariodeleon.es/leon/provincia/120904/102485/premio-poesia-nogarejas-viaja-argentina_amp.html' }, { label: '档案文集', href: 'https://archive.org/details/MemoriaGrfica19532013' }] },
