@@ -72,7 +72,7 @@ export const inventoryLaneCopy: Record<InventoryLane, LocalizedCopy> = {
 
 export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   {
-    id: 'oulang', name: 'OULANG (欧浪AI)', period: '2026–present', category: 'platforms', featured: true,
+    id: 'oulang', name: 'OULANG (欧浪AI)', period: '2024–present', category: 'platforms', featured: true,
     description: copy('Mandarin-first marketplace and local-life platform for Spain, developed across web, iOS and Android surfaces.', 'Marketplace y plataforma de vida local para la comunidad china en España, desarrollada en web, iOS y Android.', 'Marketplace et plateforme locale pour la communauté chinoise en Espagne, développée sur web, iOS et Android.', '面向西班牙华人社区的中文市场与本地生活平台，覆盖 Web、iOS 和 Android 开发。'),
     tags: ['Next.js', 'Expo', 'Gemini', 'RevenueCat', 'PostHog'], href: 'https://oulang.ai', image: '/portfolio/oulang-home.png', imagePosition: 'center 18%'
   },
@@ -310,7 +310,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
 
 export const PORTFOLIO_STORIES: PortfolioStory[] = [
   {
-    id: 'oulang', name: 'OULANG (欧浪AI)', period: '2026–present', category: 'platforms', featured: true,
+    id: 'oulang', name: 'OULANG (欧浪AI)', period: '2024–present', category: 'platforms', featured: true,
     description: copy('A Mandarin-first marketplace and local-life product built for the Chinese community in Spain.', 'Marketplace y producto de vida local en mandarín para la comunidad china en España.'),
     challenge: copy('Bring housing, jobs, services and community discovery into one coherent experience across languages and devices.', 'Unir vivienda, empleo, servicios y comunidad en una experiencia coherente entre idiomas y dispositivos.'),
     build: copy('Web, iOS and Android surfaces with shared marketplace infrastructure, publishing, subscriptions and product analytics.', 'Superficies web, iOS y Android con infraestructura compartida de marketplace, publicación, suscripciones y analítica.'),
@@ -466,7 +466,7 @@ export const PORTFOLIO_INVENTORY: InventoryItem[] = [
   inventoryItem(55, 'timeline-lemon-ai', 'Lemon AI customization', 'Nov 2025', '2025 Q4', 'infrastructure', 'verified', 'Deployment, landing page, identity and infrastructure work on the upstream Lemon AI platform.', 'Despliegue, landing, identidad e infraestructura sobre Lemon AI upstream.'),
   inventoryItem(56, 'timeline-agents-course', '15-hour AI agents course', '2025', '2025 Q4', 'education', 'verified', 'Foundations, tools, memory, multi-agent systems, RAG, deployment and observability.', 'Fundamentos, herramientas, memoria, multiagentes, RAG, despliegue y observabilidad.'),
 
-  inventoryItem(57, 'timeline-oulang-central', 'OULANG central production platform', '2026–present', '2026 Q1', 'products', 'verified', 'Chinese-diaspora housing, jobs, second-hand, services and community platform in Spain.', 'Plataforma para la diáspora china en España: vivienda, empleo, segunda mano, servicios y comunidad.', 'https://oulang.ai', '/portfolio/oulang-home.png'),
+  inventoryItem(57, 'timeline-oulang-central', 'OULANG central production platform', '2024–present', '2026 Q1', 'products', 'verified', 'Chinese-diaspora housing, jobs, second-hand, services and community platform in Spain.', 'Plataforma para la diáspora china en España: vivienda, empleo, segunda mano, servicios y comunidad.', 'https://oulang.ai', '/portfolio/oulang-home.png'),
   inventoryItem(59, 'timeline-umbramed-continuation', 'Umbramed product development', '2026', '2026 Q1', 'clients', 'verified', 'Continued exam-ingestion, connector, PWA, app packaging, payment, brand and medical-product development.', 'Desarrollo continuado de ingesta de exámenes, conectores, PWA, packaging de app, pagos, marca y producto médico.', 'https://github.com/samihalawa/umbramed-eic-2026'),
   inventoryItem(60, 'timeline-skills', 'Agent tooling & automation', '2026', '2026 Q1', 'open-source', 'verified', 'Reusable browser, desktop and MCP tools for AI-assisted work.', 'Herramientas reutilizables de navegador, escritorio y MCP para trabajo asistido por IA.'),
   inventoryItem(61, 'timeline-gowa', 'GOWA', '2026', '2026 Q1', 'open-source', 'verified', 'WhatsApp API and automation work with history and media support.', 'API y automatización de WhatsApp con historial y medios.', 'https://github.com/samihalawa/gowa-whatsapp-api'),
