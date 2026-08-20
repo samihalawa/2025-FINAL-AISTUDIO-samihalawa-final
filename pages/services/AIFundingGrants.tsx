@@ -16,7 +16,7 @@ const AIFundingGrants: React.FC = () => {
     <section className="py-16 bg-white">
 <div className="container mx-auto px-6 max-w-5xl">
         <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">{title}</h1>
-        <p className="text-lg text-slate-700 mb-8">We turn funding opportunities into wins: research, narrative drafting, budget modeling, and submission support. Specialized in AI and health tech.</p>
+        <p className="text-lg text-slate-700 mb-8">We prepare rigorous, evidence-backed funding applications: opportunity research, narrative drafting, budget modeling, and submission support. Specialized in AI and health tech.</p>
         <div className="grid md:grid-cols-2 gap-6">
           <Section title="Scope" points={[
             'Opportunity scouting and eligibility check',

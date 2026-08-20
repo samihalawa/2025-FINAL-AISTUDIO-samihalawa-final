@@ -16,11 +16,17 @@ const appSurfaces = [
   { src: '/portfolio/oulang-local-content.webp', title: 'Local content', body: 'News, offers, media and local-life discovery broaden the product beyond listings.' },
 ];
 
+const metricDefinitions = [
+  ['Registered users', '17,262', 'Accounts created on the platform, as of 3 July 2026.'],
+  ['Listings', '38,857', 'Published listings across housing, jobs, services and second-hand categories, as of 3 July 2026.'],
+  ['Contact reveals', '89,913', 'Cumulative contact-unlock events, counted every time a user reveals a listing’s contact details. Same measurement date.'],
+];
+
 const OulangCase: React.FC = () => (
   <article className="bg-[#f8f6f1] text-slate-800">
     <header className="border-b border-slate-300 py-16 sm:py-24">
       <div className="container">
-        <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Founder-built platform · marketplace and local life · 2026–present</p>
+        <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Founder-built platform · marketplace and local life · platform work from 2024 · current product operating since 2026</p>
         <div className="mt-7 grid gap-8 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
           <h1 className="cv-serif max-w-5xl text-5xl font-normal leading-[.98] tracking-[-.045em] text-slate-950 sm:text-7xl">A Mandarin-first operating surface for life in Spain.</h1>
           <p className="border-l border-slate-400 pl-6 text-lg leading-relaxed text-slate-600">OULANG brings housing, jobs, services, community publishing and practical AI assistance into one product for the Chinese community in Spain.</p>
@@ -82,9 +88,30 @@ const OulangCase: React.FC = () => (
         <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-200">Platform delivery</p><h2 id="oulang-platform-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-white">The interface sits on shared marketplace infrastructure.</h2></div>
         <div className="border-t border-slate-600">{[
           ['Product layer', 'Responsive React interfaces and shared patterns across marketplace, publishing, account and community surfaces.'],
-          ['Application layer', 'Web delivery plus Capacitor-based iOS and Android applications from the same product system.'],
+          ['Application layer', 'Web delivery plus React Native and Expo iOS and Android applications from the same product system, migrated from the earlier Capacitor iteration.'],
           ['Operating layer', 'Structured marketplace data, authentication, subscriptions, payments, analytics and media storage behind the visible flows.'],
         ].map(([title, body]) => <div key={title} className="grid gap-2 border-b border-slate-700 py-6 sm:grid-cols-[12rem_1fr]"><h3 className="cv-serif text-xl font-semibold text-white">{title}</h3><p className="leading-7 text-slate-300">{body}</p></div>)}</div>
+      </div>
+    </section>
+
+    <section className="border-b border-slate-300 bg-white py-16 sm:py-24" aria-labelledby="oulang-metrics-heading">
+      <div className="container grid gap-12 lg:grid-cols-[.7fr_1.3fr] lg:gap-16">
+        <div>
+          <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Metric definitions</p>
+          <h2 id="oulang-metrics-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">What the numbers count, and when they were measured.</h2>
+          <p className="mt-5 leading-7 text-slate-600">Platform figures are only useful if the definition is explicit. These are the three measures quoted for OULANG, stated exactly as the product records them.</p>
+        </div>
+        <dl className="border-t border-slate-400">
+          {metricDefinitions.map(([term, value, definition]) => (
+            <div key={term} className="grid gap-2 border-b border-slate-300 py-6 sm:grid-cols-[14rem_1fr] sm:gap-6">
+              <dt>
+                <span className="cv-serif block text-3xl font-semibold text-slate-950">{value}</span>
+                <span className="mt-1 block text-xs font-bold uppercase tracking-[.14em] text-slate-500">{term}</span>
+              </dt>
+              <dd className="leading-7 text-slate-600">{definition}</dd>
+            </div>
+          ))}
+        </dl>
       </div>
     </section>
 

@@ -10,7 +10,7 @@ const content: Record<LanguageCode, {
 }> = {
   en: {
     eyebrow: 'How I work', title: 'Senior AI engineering with founder-level product ownership.',
-    intro: 'I combine agentic AI, RAG and automation with the full-stack engineering needed to put them into real products. Earlier work across web, mobile, growth, teaching and multilingual media forms the operating layer beneath that delivery.', evidence: 'Hands-on by default: I move from product framing through Python and TypeScript implementation, APIs, data, deployment, observability and iteration without splitting the system into disconnected handoffs.',
+    intro: 'Builder of OULANG, AutoClient, VUDA and APOLO, with 84 shipped projects and collaborations behind them. I combine agentic AI, RAG and automation with the full-stack engineering needed to put them into real products. Earlier work across web, mobile, growth, teaching and multilingual media forms the operating layer beneath that delivery.', evidence: 'Hands-on by default: I move from product framing through Python and TypeScript implementation, APIs, data, deployment, observability and iteration without splitting the system into disconnected handoffs.',
     principles: [
       { title: 'Engineer the full AI workflow', body: 'Retrieval, tools, structured outputs, APIs, data, interfaces, deployment and observability belong to one system.' },
       { title: 'Build for operation', body: 'Reliable AI work includes monitoring, human review and the real workflow around the model—not only a successful response.' },
@@ -50,7 +50,7 @@ const content: Record<LanguageCode, {
   },
   es: {
     eyebrow: 'Cómo trabajo', title: 'Ingeniería sénior de IA con responsabilidad de producto a nivel fundador.',
-    intro: 'Combino IA agéntica, RAG y automatización con la ingeniería full-stack necesaria para integrarlas en productos reales. La experiencia previa en web, móvil, growth, docencia y medios multilingües forma la capa operativa de esa entrega.', evidence: 'Trabajo directamente de la definición a la implementación con Python y TypeScript, APIs, datos, despliegue, observabilidad e iteración, sin dividir el sistema en entregas desconectadas.',
+    intro: 'Constructor de OULANG, AutoClient, VUDA y APOLO, con 84 proyectos y colaboraciones entregados detrás. Combino IA agéntica, RAG y automatización con la ingeniería full-stack necesaria para integrarlas en productos reales. La experiencia previa en web, móvil, growth, docencia y medios multilingües forma la capa operativa de esa entrega.', evidence: 'Trabajo directamente de la definición a la implementación con Python y TypeScript, APIs, datos, despliegue, observabilidad e iteración, sin dividir el sistema en entregas desconectadas.',
     principles: [
       { title: 'Diseñar el flujo completo de IA', body: 'Recuperación, herramientas, salidas estructuradas, APIs, datos, interfaces, despliegue y observabilidad forman un único sistema.' },
       { title: 'Construir para operar', body: 'La IA fiable incluye monitorización, revisión humana y el flujo real alrededor del modelo, no solo una respuesta correcta.' },
@@ -90,7 +90,7 @@ const content: Record<LanguageCode, {
   },
   fr: {
     eyebrow: 'Ma façon de travailler', title: 'Ingénierie IA senior avec une responsabilité produit de fondateur.',
-    intro: 'Je combine IA agentique, RAG et automatisation avec l’ingénierie full-stack nécessaire pour les intégrer à de vrais produits. Mon expérience du web, du mobile, de la croissance, de la formation et des médias multilingues soutient cette mise en œuvre.', evidence: 'J’interviens directement du cadrage à Python et TypeScript, aux APIs, aux données, au déploiement, à l’observabilité et à l’itération, sans multiplier les relais.',
+    intro: 'Créateur d’OULANG, AutoClient, VUDA et APOLO, avec 84 projets et collaborations livrés derrière eux. Je combine IA agentique, RAG et automatisation avec l’ingénierie full-stack nécessaire pour les intégrer à de vrais produits. Mon expérience du web, du mobile, de la croissance, de la formation et des médias multilingues soutient cette mise en œuvre.', evidence: 'J’interviens directement du cadrage à Python et TypeScript, aux APIs, aux données, au déploiement, à l’observabilité et à l’itération, sans multiplier les relais.',
     principles: [{ title: 'Concevoir tout le flux IA', body: 'Retrieval, outils, sorties structurées, APIs, données, interfaces, déploiement et observabilité forment un seul système.' }, { title: 'Construire pour l’exploitation', body: 'Une IA fiable inclut le suivi, la validation humaine et le parcours réel autour du modèle, pas seulement une réponse correcte.' }, { title: 'Relier produit et ingénierie', body: 'Espagnol, anglais et mandarin relient les décisions techniques aux utilisateurs, clients et dirigeants.' }],
     timeline: [{ years: '2009–2023', title: 'Web, mobile, croissance & éducation', body: 'Livraison produit et formation technique au long cours ; les réalisations ciblées servaient de laboratoires pratiques dans des programmes structurés.' }, { years: '2013–2017', title: 'Médias en Chine', body: 'Production commerciale et présentation multilingue.' }, { years: '2019–2023', title: 'Ingénierie full-stack', body: 'Web, Linux, CI/CD, revues et mentoring.' }, { years: '2022–2025', title: 'Formation IA & conseil', body: 'Agents, automatisation, Python et produit.' }, { years: '2025–présent', title: 'Agents AI Ltd', body: 'Plateformes IA et livraison pluridisciplinaire avec ingénieurs, spécialistes, clients et opérations.' }],
     achievementsTitle: 'Distinctions et publications sélectionnées',
@@ -102,7 +102,7 @@ const content: Record<LanguageCode, {
   },
   zh: {
     eyebrow: '我的工作方式', title: '兼具创始人级产品责任的高级 AI 工程。',
-    intro: '我把智能体 AI、RAG 和自动化，与将其落地到真实产品所需的全栈工程结合起来。Web、移动端、增长、教学和多语言媒体经验构成了交付的运营基础。', evidence: '默认亲自推进：从产品定义到 Python 与 TypeScript、API、数据、部署、可观测性和迭代，避免把系统拆成彼此断开的交接。',
+    intro: 'OULANG、AutoClient、VUDA 与 APOLO 的构建者，背后是 84 个已交付的项目与合作。我把智能体 AI、RAG 和自动化，与将其落地到真实产品所需的全栈工程结合起来。Web、移动端、增长、教学和多语言媒体经验构成了交付的运营基础。', evidence: '默认亲自推进：从产品定义到 Python 与 TypeScript、API、数据、部署、可观测性和迭代，避免把系统拆成彼此断开的交接。',
     principles: [{ title: '设计完整 AI 工作流', body: '检索、工具、结构化输出、API、数据、界面、部署与可观测性属于同一个系统。' }, { title: '面向真实运营构建', body: '可靠的 AI 包含监控、人工审核和模型周边的真实流程，而不只是一次正确响应。' }, { title: '连接产品与工程', body: '西班牙语、英语和中文帮助把技术决策连接到用户、客户与管理层。' }],
     timeline: [{ years: '2009–2023', title: 'Web、移动、增长与教育', body: '长期产品交付与技术教育；聚焦型构建作为结构化课程中的实践训练项目。' }, { years: '2013–2017', title: '中国媒体工作', body: '商业制作、主持与多语言镜头沟通。' }, { years: '2019–2023', title: '生产级全栈工程', body: 'Web、Linux、CI/CD、评审和指导。' }, { years: '2022–2025', title: 'AI 教学与技术咨询', body: '面向实现的智能体、自动化、Python 与产品工程。' }, { years: '2025–至今', title: 'Agents AI Ltd', body: '与工程师、专家、客户和运营人员协作的 AI 平台与跨职能交付。' }],
     achievementsTitle: '精选荣誉与出版物',

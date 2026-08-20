@@ -31,7 +31,7 @@ const AdvancedAI: React.FC = () => {
             'Agentes autónomos con MCP que usan múltiples herramientas',
             'Sistemas RAG con bases vectoriales (Pinecone, Weaviate, Qdrant)',
             'Chains y tools con LangChain y LlamaIndex',
-            'AutoGPT y arquitecturas recursivas de mejora continua'
+            'Sistemas multiagente autónomos con bucles de evaluación'
           ]} />
           <Section title="Stack y entrega" points={[
             'Python/TypeScript, FastAPI/Node, Docker/Kubernetes',

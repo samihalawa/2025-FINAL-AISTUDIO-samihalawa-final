@@ -16,7 +16,7 @@ const AICompetitiveResearch: React.FC = () => {
     <section className="py-16 bg-white">
 <div className="container mx-auto px-6 max-w-5xl">
         <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">{title}</h1>
-        <p className="text-lg text-slate-700 mb-8">We unpack successful products so you can ship alternatives: sequence mechanics, event models, APIs, nudges, and metrics.</p>
+        <p className="text-lg text-slate-700 mb-8">Competitive teardowns and build-vs-buy roadmaps: we unpack how successful products work — sequence mechanics, event models, APIs, nudges, and metrics — so you can decide what to build, what to buy and what to skip.</p>
         <div className="grid md:grid-cols-2 gap-6">
           <Section title="What’s inside" points={[ 'UX and system behavior maps', 'Events, triggers and data models', 'API specs and examples', 'Risks, cost and timeline' ]} />
           <Section title="Deliverables" points={[ 'Blueprint doc and diagrams', 'MVP scope and milestones', 'Competitive matrix and GTM notes', 'Engineering checklist' ]} />
