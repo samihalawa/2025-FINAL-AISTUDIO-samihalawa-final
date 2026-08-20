@@ -14,6 +14,9 @@ qualityVersion: "semantic-alignment-v1"
 sourceSemanticScore: 95
 crossLocaleConsistencyScore: 100
 ---
+
+*Last reviewed August 2026. Model names, prices and ecosystem figures change quickly — verify against current vendor documentation.*
+
 Building agentic workflows is easy; scaling them without burning through your entire seed round is the real engineering challenge. When you move from simple chat interfaces to autonomous agents that loop, call tools, and manage long-running contexts, your cost structure shifts from linear to exponential. If you are measuring success by token count, you are measuring the wrong metric. You need to measure cost per successful task. This guide breaks down where the money actually goes and how to engineer your way out of a massive API bill.
 
 ## The Hidden Leaks: Where the Money Actually Goes

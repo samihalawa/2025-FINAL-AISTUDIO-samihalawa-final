@@ -1,5 +1,5 @@
 ---
-title: "Characterization Testing: How to Refactor Crucial Legacy Code Without Flying Blind"
+title: "Characterization Testing: Refactor Legacy Code Safely"
 excerpt: "A hands-on, engineering-first guide to using characterization tests, golden files, and boundary seams to safely refactor undocumented legacy subsystems."
 publishedAt: "2026-07-29T12:55:46.430Z"
 tags: ["characterization-tests", "legacy-code", "refactoring", "testing"]
@@ -124,7 +124,7 @@ import { modernTransform as transform } from './modernTransform';
 
 Run your test suite. Your modern transformer will almost certainly fail on the first run. The test failures will point out exactly where your modern parser deviates from the old parser's behavior. 
 
-Iterate on your modern implementation until the entire test suite passes. When it passes, you have mathematically proven that your new engine is a drop-in replacement for the legacy code across all captured edge cases.
+Iterate on your modern implementation until the entire test suite passes. When it passes, you have strong empirical evidence that your new engine is a drop-in replacement for the legacy code across every edge case you captured. That is a demonstration over your recorded inputs, not a proof over all possible inputs — the strength of the guarantee is exactly the coverage of your golden file, which is why it is worth investing in capturing production traffic rather than hand-written samples.
 
 ## 4. When to Deliberately Update the Golden File
 

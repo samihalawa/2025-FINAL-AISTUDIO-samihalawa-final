@@ -1,5 +1,5 @@
 ---
-title: "Designing a Bulletproof Self-Hosted GitOps Deployment Pipeline"
+title: "A Bulletproof Self-Hosted GitOps Deployment Pipeline"
 excerpt: "A deep dive into building a reliable self-hosted deployment flow from push to production, using immutable commit proof chains, proper env boundaries, and robust reverse-proxy handoffs."
 publishedAt: "2026-07-29T12:54:27.263Z"
 tags: ["coolify", "deployment", "gitops", "self-hosting"]
@@ -16,7 +16,7 @@ crossLocaleConsistencyScore: 100
 ---
 Self-hosting your application delivery pipeline using platforms like Coolify, Dokku, or custom VPS setups offers immense cost savings and data sovereignty. However, the naive path—setting up a basic webhook that runs `git pull && docker-compose up --build`—is a production liability. It introduces silent build failures, environmental drift, race conditions, and deployment downtime. 
 
-To build a highly resilient, automated deployment flow triggered by a push to your `main` branch, you must treat your self-hosted runner with the same architectural rigor as a managed enterprise platform. Here is how to design a reliable self-hosted GitOps pipeline that guarantees deterministic builds, zero-downtime rollbacks, and a verifiable proof chain from commit to live traffic.
+To build a highly resilient, automated deployment flow triggered by a push to your `main` branch, you must treat your self-hosted runner with the same architectural rigor as a managed enterprise platform. Here is how to design a robust self-hosted GitOps pipeline that is built to deliver deterministic builds, zero-downtime rollbacks, and a verifiable proof chain from commit to live traffic.
 
 ## 1. Secure Repository Integration & Webhook Ownership
 
