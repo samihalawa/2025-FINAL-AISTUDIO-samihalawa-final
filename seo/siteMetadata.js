@@ -4,8 +4,11 @@ export const DEFAULT_OG_IMAGE = '/og/sami-halawa-ai-engineer.png';
 export const DEFAULT_OG_ALT = 'Sami Halawa founding AI engineering portfolio';
 
 const DEFAULT_ROBOTS = 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1';
+// /cv and /cv/en render the same English CV. /cv is the indexable original, so
+// hreflang points at it and /cv/en declares /cv as its canonical instead of
+// competing with it. The page stays reachable; only the indexing signal moves.
 const CV_ALTERNATES = [
-  { lang: 'en', path: '/cv/en' },
+  { lang: 'en', path: '/cv' },
   { lang: 'es', path: '/cv/es' },
   { lang: 'x-default', path: '/cv' },
 ];
@@ -32,7 +35,7 @@ export const ROUTE_METADATA = [
   route('/blog', 'AI Engineering & Agent Systems Blog | Sami Halawa', 'Technical articles on AI agents, context engineering, RAG, evaluation, automation and shipping reliable AI products.', { schemaType: 'Blog' }),
   route('/contact', 'Contact Sami Halawa | AI Product & Engineering', 'Discuss an AI product, automation, training program, technical role or collaboration with Sami Halawa.', { schemaType: 'ContactPage' }),
   route('/cv', 'Sami Halawa CV | Senior ML / LLMOps Engineer', 'Concise recruiter-ready CV covering agentic AI, RAG, MCP, Python, TypeScript, production engineering, team leadership and immediate availability.', { schemaType: 'ProfilePage', alternates: CV_ALTERNATES }),
-  route('/cv/en', 'Sami Halawa CV | Senior GenAI & Founding AI Engineer', 'English CV covering agentic AI, RAG, MCP, Python, TypeScript, production engineering, voice, automation and technical leadership.', { schemaType: 'ProfilePage', alternates: CV_ALTERNATES }),
+  route('/cv/en', 'Sami Halawa CV | Senior GenAI & Founding AI Engineer', 'English CV covering agentic AI, RAG, MCP, Python, TypeScript, production engineering, voice, automation and technical leadership.', { schemaType: 'ProfilePage', alternates: CV_ALTERNATES, canonical: '/cv', sitemap: false }),
   route('/cv/es', 'CV de Sami Halawa | Ingeniero Fundador de IA', 'Currículum en español con la experiencia de Sami Halawa en productos de IA, ingeniería, automatización y formación técnica.', { schemaType: 'ProfilePage', lang: 'es', locale: 'es_ES', alternates: CV_ALTERNATES }),
   route('/search', 'Search the Sami Halawa Portfolio', 'Search projects, services, case studies and technical articles across the Sami Halawa portfolio.', { schemaType: 'SearchResultsPage', robots: 'noindex,follow' }),
 
@@ -93,6 +96,21 @@ export function getRouteMetadata(pathname) {
   return ROUTE_METADATA.find((item) => item.path === normalized) || null;
 }
 
+// The path a page declares as its canonical. Pages without an explicit
+// `canonical` are their own canonical; consolidated duplicates point elsewhere.
+export function canonicalPath(meta) {
+  return normalizePath(meta.canonical || meta.path);
+}
+
+// Titles must never carry a literal ellipsis: a clipped title reads as broken in
+// SERPs and social cards. Clip at a word boundary and stop there instead.
+function clampTitle(value, maxLength) {
+  if (value.length <= maxLength) return value;
+  const clipped = value.slice(0, maxLength);
+  const boundary = clipped.lastIndexOf(' ');
+  return (boundary > maxLength * 0.6 ? clipped.slice(0, boundary) : clipped).trim().replace(/[\s,:;.\-–—]+$/, '');
+}
+
 function truncateAtWord(value, maxLength) {
   if (value.length <= maxLength) return value;
   const clipped = value.slice(0, maxLength - 1);
@@ -103,7 +121,7 @@ function truncateAtWord(value, maxLength) {
 export function buildBlogPostMetadata(entry) {
   const path = `/blog/${entry.slug}`;
   const suffix = ' | Sami Halawa';
-  const title = `${truncateAtWord(entry.title, 70 - suffix.length)}${suffix}`;
+  const title = `${clampTitle(entry.title, 70 - suffix.length)}${suffix}`;
   return route(path, title, truncateAtWord(entry.summary, 160), {
     schemaType: 'BlogPosting',
     ogType: 'article',
@@ -120,7 +138,8 @@ function breadcrumbName(path) {
 }
 
 export function buildStructuredData(meta) {
-  const canonical = absoluteUrl(meta.path);
+  const selfPath = canonicalPath(meta);
+  const canonical = absoluteUrl(selfPath);
   const personId = `${SITE_URL}/#person`;
   const websiteId = `${SITE_URL}/#website`;
   const pageId = `${canonical}#webpage`;
@@ -156,7 +175,7 @@ export function buildStructuredData(meta) {
       'query-input': 'required name=search_term_string',
     },
   };
-  const segments = meta.path.split('/').filter(Boolean);
+  const segments = selfPath.split('/').filter(Boolean);
   const breadcrumbs = segments.length ? {
     '@type': 'BreadcrumbList',
     '@id': `${canonical}#breadcrumb`,
@@ -167,7 +186,7 @@ export function buildStructuredData(meta) {
         return {
           '@type': 'ListItem',
           position: index + 2,
-          name: itemPath === meta.path
+          name: itemPath === selfPath
             ? meta.title.split(' | ')[0].split(' — ')[0]
             : breadcrumbName(itemPath),
           item: absoluteUrl(itemPath),
@@ -246,7 +265,7 @@ function escapeHtml(value) {
 }
 
 export function buildHeadMarkup(meta) {
-  const canonical = absoluteUrl(meta.path);
+  const canonical = absoluteUrl(canonicalPath(meta));
   const image = absoluteUrl(meta.image);
   const imageAlt = meta.imageAlt || DEFAULT_OG_ALT;
   const ogType = meta.ogType || (meta.schemaType === 'TechArticle' || meta.schemaType === 'BlogPosting' ? 'article' : 'website');

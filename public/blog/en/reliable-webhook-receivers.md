@@ -1,5 +1,5 @@
 ---
-title: "Designing Bulletproof Webhook Receivers: The Fast-Ack, Idempotent Engine"
+title: "Reliable Webhook Receivers: Fast-Ack and Idempotent"
 excerpt: "A technical blueprint for building zero-loss webhook receivers. Learn signature verification, fast-ack architecture, idempotency strategies, and automated state reconciliation."
 publishedAt: "2026-07-29T12:54:50.687Z"
 tags: ["backend", "idempotency", "integration", "webhooks"]

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ServiceDetail from './ServiceDetail';
 
 const Section: React.FC<{ title: string, points: string[] }>=({ title, points })=> (
   <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
@@ -21,6 +22,7 @@ const AILanguageLearning: React.FC = () => {
           <Section title="System" points={[ 'Spaced repetition pipeline', 'Pronunciation and tone drills', 'AI conversation partners', 'Reading/listening loops' ]} />
           <Section title="Deliverables" points={[ 'Personalized plan and tools', 'Daily/weekly routines', 'Prompt and safety guidelines', 'Progress tracking templates' ]} />
         </div>
+        <ServiceDetail slug="ai-language-learning" />
         <div className="mt-10 flex gap-4">
           <Link to="/contact" className="inline-block bg-slate-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-slate-800">Build your plan</Link>
           <Link to="/services/family-ai" className="inline-block bg-white text-slate-700 px-6 py-3 rounded-md border border-slate-300 font-semibold hover:bg-slate-100">See family programs</Link>

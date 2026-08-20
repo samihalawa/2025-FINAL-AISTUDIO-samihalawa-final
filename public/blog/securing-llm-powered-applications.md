@@ -1,5 +1,5 @@
 ---
-title: "Securing Your AI: Best Practices for Protecting LLM-Powered Applications"
+title: "Securing LLM-Powered Applications: Best Practices"
 date: "2024-08-12"
 author: "Sami Halawa"
 summary: "Large Language Models introduce new and unique security vulnerabilities. Learn how to defend against prompt injection, data leakage, and other emerging threats to build secure and trustworthy AI applications."

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ServiceDetail from './ServiceDetail';
 
 const Section: React.FC<{ title: string, points: string[] }>=({ title, points })=> (
   <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
@@ -21,6 +22,7 @@ const DataScienceTraining: React.FC = () => {
           <Section title="Modules" points={[ 'Logistic regression and metrics', 'Dimensionality reduction', 'Discriminant analysis', 'Clustering and validation' ]} />
           <Section title="Outcomes" points={[ 'Notebooks and datasets', 'Cheatsheets and templates', 'Capstone mini‑project', 'Certificate of completion' ]} />
         </div>
+        <ServiceDetail slug="data-science-training" />
         <div className="mt-10 flex gap-4">
           <Link to="/contact" className="inline-block bg-slate-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-slate-800">Get syllabus</Link>
           <Link to="/services/university-ml" className="inline-block bg-white text-slate-700 px-6 py-3 rounded-md border border-slate-300 font-semibold hover:bg-slate-100">See university ML</Link>

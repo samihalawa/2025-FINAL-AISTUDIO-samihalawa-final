@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ServiceDetail from './ServiceDetail';
 
 const Section: React.FC<{ title: string, points: string[] }>=({ title, points })=> (
   <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
@@ -21,6 +22,7 @@ const AIPatentsIP: React.FC = () => {
           <Section title="Scope" points={[ 'Prior-art research and source trail', 'Problem and differentiation framing', 'System diagrams and flows', 'Evidence and evaluation notes' ]} />
           <Section title="Outcomes" points={[ 'Technical dossier for specialist review', 'Review and iteration cycles', 'Claim-to-source map', 'Open questions and recommended next steps' ]} />
         </div>
+        <ServiceDetail slug="ai-ip-patents" />
         <div className="mt-10 flex gap-4">
           <Link to="/contact" className="inline-block bg-slate-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-slate-800">Discuss your research</Link>
           <Link to="/case-studies/apolo-medical-framework" className="inline-block bg-white text-slate-700 px-6 py-3 rounded-md border border-slate-300 font-semibold hover:bg-slate-100">See APOLO research</Link>

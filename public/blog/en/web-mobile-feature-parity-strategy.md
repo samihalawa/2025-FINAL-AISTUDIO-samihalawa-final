@@ -1,5 +1,5 @@
 ---
-title: "A Pragmatic Engineer's Guide to Cross-Platform Feature Parity"
+title: "A Pragmatic Guide to Cross-Platform Feature Parity"
 excerpt: "A highly technical, no-nonsense architectural strategy for maintaining workflow parity across web, iOS, and Android without duplicating business logic."
 publishedAt: "2026-07-29T13:02:45.059Z"
 tags: ["cross-platform", "mobile", "product-engineering", "web"]

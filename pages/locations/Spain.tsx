@@ -7,6 +7,7 @@ const Spain: React.FC = () => (
     titleKey="locations.spain.title"
     descriptionKey="locations.spain.description"
     canonical="/locations/spain"
+    angleKey="spain"
   />
 );
 

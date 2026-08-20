@@ -115,8 +115,12 @@ fs.writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
 console.log(`[blog-manifest] wrote ${manifest.length} post(s) to public/blog/index.json`);
 
 // --- Sitemap: one source of truth for static routes and generated articles ---
+// A sitemap must only list canonical URLs. Routes that are noindex, or that
+// declare a different canonical (e.g. /cv/en -> /cv), stay reachable but are
+// not advertised here.
 const staticUrls = ROUTE_METADATA
   .filter((item) => !item.robots.startsWith('noindex'))
+  .filter((item) => item.sitemap !== false && !item.canonical)
   .map((item) => `  <url><loc>${SITE}${item.path === '/' ? '/' : item.path}</loc></url>`);
 const articleUrls = manifest.map((post) => {
   const lastmod = /^\d{4}-\d{2}-\d{2}/.exec(post.date)?.[0];

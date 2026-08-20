@@ -1,5 +1,5 @@
 ---
-title: "An Engineering-First EU AI Act Checklist: Building Compliant Agent Systems"
+title: "Engineering-First EU AI Act Checklist for Agent Systems"
 excerpt: "A practical guide for AI product engineers to translate the EU AI Act into concrete code, system architecture, logging pipelines, and operational guardrails."
 publishedAt: "2026-07-29T13:03:05.723Z"
 tags: ["ai-governance", "compliance", "eu-ai-act", "product-engineering"]

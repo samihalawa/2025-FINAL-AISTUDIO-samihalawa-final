@@ -7,6 +7,7 @@ const Online: React.FC = () => (
     titleKey="locations.online.title"
     descriptionKey="locations.online.description"
     canonical="/locations/online"
+    angleKey="online"
   />
 );
 

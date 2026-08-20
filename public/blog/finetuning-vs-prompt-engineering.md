@@ -1,5 +1,5 @@
 ---
-title: "Fine-Tuning vs. Prompt Engineering: Which is Right for Your AI Project?"
+title: "Fine-Tuning vs. Prompt Engineering: Which is Right?"
 date: "2024-07-22"
 author: "Sami Halawa"
 summary: "A comparative analysis of two key techniques for customizing Large Language Models. Understand the trade-offs between prompt engineering and fine-tuning to choose the best approach for your needs."

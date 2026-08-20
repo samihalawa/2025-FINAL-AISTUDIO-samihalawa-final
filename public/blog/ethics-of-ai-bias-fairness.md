@@ -1,5 +1,5 @@
 ---
-title: "The Ethics of AI: Navigating Bias and Fairness in Machine Learning"
+title: "The Ethics of AI: Bias and Fairness in Machine Learning"
 date: "2024-07-25"
 author: "Sami Halawa"
 summary: "As AI systems become more integrated into our lives, addressing ethical challenges like bias and fairness is not just a technical problem—it's a societal imperative. An exploration of the sources of bias and strategies for building more equitable AI."

@@ -1,5 +1,5 @@
 ---
-title: "Designing AI Agent Tools: A Practical Guide for Developers"
+title: "Designing AI Agent Tools: A Practical Guide"
 excerpt: "Building effective AI agents hinges on well-designed tools. This guide dives into the specifics of crafting tool interfaces that models can actually use, covering naming, descriptions, argument schemas, error handling, and output formatting. Learn to avoid common pitfalls and build robust, agent-friendly tools."
 publishedAt: "2026-07-15T20:37:22.542Z"
 tags: ["ai-agents", "developer-tooling", "mcp", "tool-design"]

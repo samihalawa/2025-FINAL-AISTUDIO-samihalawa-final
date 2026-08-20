@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../../i18n/LanguageContext';
 import type { TranslationKey } from '../../i18n/translations';
+import ServiceDetail from './ServiceDetail';
 
 const Section: React.FC<{ title: string; points: string[] }> = ({ title, points }) => (
   <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
@@ -42,6 +43,7 @@ const AIForMarketing: React.FC = () => {
           <Section title={t('services.aiForMarketing.section.modules')} points={modules} />
           <Section title={t('services.aiForMarketing.section.deliverables')} points={deliverables} />
         </div>
+        <ServiceDetail slug="ai-for-marketing" />
         <div className="mt-10 flex flex-col sm:flex-row gap-4">
           <Link to="/contact" className="inline-block bg-slate-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-slate-800">{t('cta.requestTrainingPlan')}</Link>
           <Link to="/services/no-code-ai" className="inline-block bg-white text-slate-700 px-6 py-3 rounded-md border border-slate-300 font-semibold hover:bg-slate-100">{t('services.noCodeAI.name')}</Link>

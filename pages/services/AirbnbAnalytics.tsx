@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ServiceDetail from './ServiceDetail';
 
 const Section: React.FC<{ title: string, points: string[] }>=({ title, points })=> (
   <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
@@ -21,6 +22,7 @@ const AirbnbAnalytics: React.FC = () => {
           <Section title="Scope" points={[ 'Data collection and cleaning', 'Pricing and occupancy models', 'Competitor benchmarking', 'Dashboards and monitoring' ]} />
           <Section title="Deliverables" points={[ 'Datasets and notebooks', 'Pricing playbooks', 'KPI dashboards', 'Weekly report template' ]} />
         </div>
+        <ServiceDetail slug="airbnb-analytics" />
         <div className="mt-10 flex gap-4">
           <Link to="/contact" className="inline-block bg-slate-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-slate-800">Start a pilot</Link>
           <Link to="/services/proptech-analytics" className="inline-block bg-white text-slate-700 px-6 py-3 rounded-md border border-slate-300 font-semibold hover:bg-slate-100">See PropTech</Link>

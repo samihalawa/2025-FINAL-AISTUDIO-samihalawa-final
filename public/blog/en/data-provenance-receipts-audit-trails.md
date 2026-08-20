@@ -1,5 +1,5 @@
 ---
-title: "Architecting Data Provenance: Delivery Receipts and Audit Trails for AI Agent Systems"
+title: "Data Provenance: Delivery Receipts and Audit Trails"
 excerpt: "A technical blueprint for building immutable, verifiable audit trails for automated systems and AI agents. Learn why logs fail and how to construct a robust provenance model."
 publishedAt: "2026-07-29T13:03:48.217Z"
 tags: ["audit-trail", "automation", "data-provenance", "receipts"]

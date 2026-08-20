@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../../i18n/LanguageContext';
+import ServiceDetail from './ServiceDetail';
 
 const Section: React.FC<{ title: string, points: string[] }>=({ title, points })=> (
   <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
@@ -23,6 +24,7 @@ const AIReadinessAudit: React.FC = () => {
           <Section title="Assessment" points={[ 'Prompt and tool design review', 'Evals and datasets inspection', 'Safety and privacy guardrails', 'Observability and budgets' ]} />
           <Section title="Plan" points={[ 'Scorecard and risk matrix', 'Quick wins and phased roadmap', 'Hardening and regression plan', 'Handoff docs and training' ]} />
         </div>
+        <ServiceDetail slug="ai-readiness-audit" />
         <div className="mt-10 flex gap-4">
           <Link to="/contact" className="inline-block bg-slate-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-slate-800">Book an audit</Link>
           <Link to="/services/troubleshooting" className="inline-block bg-white text-slate-700 px-6 py-3 rounded-md border border-slate-300 font-semibold hover:bg-slate-100">See troubleshooting</Link>

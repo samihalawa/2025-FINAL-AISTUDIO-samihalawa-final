@@ -1,5 +1,5 @@
 ---
-title: "A Bulletproof Self-Hosted GitOps Deployment Pipeline"
+title: "A Robust Self-Hosted GitOps Deployment Pipeline"
 excerpt: "A deep dive into building a reliable self-hosted deployment flow from push to production, using immutable commit proof chains, proper env boundaries, and robust reverse-proxy handoffs."
 publishedAt: "2026-07-29T12:54:27.263Z"
 tags: ["coolify", "deployment", "gitops", "self-hosting"]

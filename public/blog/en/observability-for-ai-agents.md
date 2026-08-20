@@ -1,5 +1,5 @@
 ---
-title: "Observability for AI Agents: Tracing, Debugging, and Evaluating LLM Workflows"
+title: "Observability for AI Agents: Tracing and Evaluating LLMs"
 excerpt: "Debugging AI agents is fundamentally different from traditional software. You can't just set a breakpoint. This guide dives deep into practical observability strategies for LLM-powered systems, covering everything from granular tracing to turning logs into actionable evaluations. Learn how to see inside your agents, identify failure modes, and build robust, reliable AI applications."
 publishedAt: "2026-07-15T22:02:23.772Z"
 tags: ["ai-agents", "debugging", "observability", "tracing"]

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation, type LanguageCode } from '../../i18n/LanguageContext';
+import ServiceDetail from './ServiceDetail';
 
 const Section: React.FC<{ title: string, points: string[] }>=({ title, points })=> (
   <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
@@ -131,6 +132,7 @@ const UniversityML: React.FC = () => {
           <h3 className="text-lg font-bold text-slate-900">{c.integrityTitle}</h3>
           <p className="mt-2 text-slate-700 leading-relaxed">{c.integrity}</p>
         </div>
+        <ServiceDetail slug="university-ml" />
         <div className="mt-10 flex flex-col sm:flex-row gap-4">
           <Link to="/contact" className="inline-block bg-slate-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-slate-800">{c.primaryCta}</Link>
           <a href="/blog" className="inline-block bg-white text-slate-700 px-6 py-3 rounded-md border border-slate-300 font-semibold hover:bg-slate-100">{c.secondaryCta}</a>

@@ -7,6 +7,7 @@ const Madrid: React.FC = () => (
     titleKey="locations.madrid.title"
     descriptionKey="locations.madrid.description"
     canonical="/locations/madrid"
+    angleKey="madrid"
   />
 );
 

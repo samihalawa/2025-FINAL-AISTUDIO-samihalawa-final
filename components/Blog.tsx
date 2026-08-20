@@ -13,6 +13,31 @@ interface BlogEntry {
     tags: string[];
 }
 
+// The prerenderer puts the build-time blog manifest on `globalThis` before it
+// renders /blog, and repeats it as `window.__INITIAL_BLOG_INDEX__` in the
+// emitted HTML. Reading the same global on both sides means the static page
+// ships every article link in its initial markup and hydrates without a
+// mismatch, instead of showing crawlers an empty skeleton.
+declare global {
+    // eslint-disable-next-line no-var
+    var __INITIAL_BLOG_INDEX__: BlogEntry[] | undefined;
+}
+
+function seededArticles(): BlogEntry[] {
+    const seeded = typeof globalThis === 'undefined' ? undefined : globalThis.__INITIAL_BLOG_INDEX__;
+    if (!Array.isArray(seeded)) return [];
+    return seeded
+        .filter((entry) => entry && typeof entry.slug === 'string')
+        .map((entry) => ({
+            slug: String(entry.slug),
+            title: entry.title || entry.slug,
+            date: entry.date || '1970-01-01',
+            summary: entry.summary || '',
+            author: entry.author || 'Sami Halawa',
+            tags: Array.isArray(entry.tags) ? entry.tags : [],
+        }));
+}
+
 // Lightweight front-matter parser (fallback path only — no YAML dep at runtime).
 function parseFrontMatter(content: string): { data: Record<string, string> } {
     const match = content.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
@@ -33,8 +58,8 @@ function parseFrontMatter(content: string): { data: Record<string, string> } {
 
 const Blog: React.FC = () => {
     const { t, language } = useTranslation();
-    const [articles, setArticles] = useState<BlogEntry[]>([]);
-    const [loading, setLoading] = useState<boolean>(true);
+    const [articles, setArticles] = useState<BlogEntry[]>(seededArticles);
+    const [loading, setLoading] = useState<boolean>(() => seededArticles().length === 0);
     const [errored, setErrored] = useState<boolean>(false);
     const [errorMessage, setErrorMessage] = useState<string>('');
     const [activeCategory, setActiveCategory] = useState<'all' | ReturnType<typeof getCategoryKey>>('all');
@@ -42,8 +67,12 @@ const Blog: React.FC = () => {
 
     useEffect(() => {
         let cancelled = false;
+        // When the prerendered list is already on screen the client refresh is
+        // silent: no skeleton flash, and a failed refresh never blanks content
+        // that is already correct.
+        const silent = seededArticles().length > 0;
         const fetchArticles = async () => {
-            setLoading(true);
+            if (!silent) setLoading(true);
             setErrored(false);
             setErrorMessage('');
             try {
@@ -93,15 +122,17 @@ const Blog: React.FC = () => {
                 }
                 if (cancelled) return;
                 if (!fetched.length) {
-                    setErrored(true);
-                    setErrorMessage('No articles could be loaded. Please try again later.');
+                    if (!silent) {
+                        setErrored(true);
+                        setErrorMessage('No articles could be loaded. Please try again later.');
+                    }
                     setLoading(false);
                     return;
                 }
                 fetched.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
                 setArticles(fetched);
             } catch (error) {
-                if (!cancelled) {
+                if (!cancelled && !silent) {
                     setErrored(true);
                     setErrorMessage('An unexpected error occurred while loading articles.');
                 }

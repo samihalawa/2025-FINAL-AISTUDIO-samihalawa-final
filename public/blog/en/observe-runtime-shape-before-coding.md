@@ -1,5 +1,5 @@
 ---
-title: "Probe the Runtime: Why Static Types Lie and How to Verify Shapes Before You Integrate"
+title: "Probe the Runtime: Verify Shapes Before You Integrate"
 excerpt: "Learn why static schemas lie and how to implement read-only runtime probes across databases, APIs, CLI tools, and DOM elements before writing integration code."
 publishedAt: "2026-07-29T12:55:27.796Z"
 tags: ["debugging", "developer-workflow", "integration", "runtime"]

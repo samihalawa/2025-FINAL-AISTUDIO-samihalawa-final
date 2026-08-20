@@ -1,5 +1,5 @@
 ---
-title: "A Scheduler is Not a CMS: Separating Crawlab Workers from the Editorial Truth"
+title: "A Scheduler is Not a CMS: Separating Crawlab Workers"
 excerpt: "Stop pointing your frontend directly at your crawler's MongoDB database. Learn why worker control planes must remain structurally separated from your editorial content pipelines."
 publishedAt: "2026-07-29T13:03:28.291Z"
 tags: ["cms", "content-pipeline", "scheduler", "workers"]

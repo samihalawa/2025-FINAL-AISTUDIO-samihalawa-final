@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ServiceDetail from './ServiceDetail';
 
 const Section: React.FC<{ title: string, points: string[] }>=({ title, points })=> (
   <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
@@ -21,6 +22,7 @@ const AICompetitiveResearch: React.FC = () => {
           <Section title="What’s inside" points={[ 'UX and system behavior maps', 'Events, triggers and data models', 'API specs and examples', 'Risks, cost and timeline' ]} />
           <Section title="Deliverables" points={[ 'Blueprint doc and diagrams', 'MVP scope and milestones', 'Competitive matrix and GTM notes', 'Engineering checklist' ]} />
         </div>
+        <ServiceDetail slug="ai-competitive-research" />
         <div className="mt-10 flex gap-4">
           <Link to="/contact" className="inline-block bg-slate-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-slate-800">Request research</Link>
           <Link to="/projects#autopricing" className="inline-block bg-white text-slate-700 px-6 py-3 rounded-md border border-slate-300 font-semibold hover:bg-slate-100">See AutoPricing evidence</Link>

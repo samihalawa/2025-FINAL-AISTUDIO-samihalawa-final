@@ -1,5 +1,5 @@
 ---
-title: "Beyond Autocomplete: Engineering Agentic Coding Workflows that Actually Ship"
+title: "Beyond Autocomplete: Agentic Coding Workflows That Ship"
 excerpt: "Stop using LLMs as glorified autocomplete. Learn how to architect agentic loops using planning, tight task contracts, and verification layers to build production-grade software."
 publishedAt: "2026-07-15T20:34:06.769Z"
 tags: ["agentic-coding", "ai-agents", "developer-workflow", "productivity"]

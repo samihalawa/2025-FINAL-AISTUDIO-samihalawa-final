@@ -2,12 +2,15 @@ import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../../i18n/LanguageContext';
 import type { TranslationKey } from '../../i18n/translations';
+import { CITY_ANGLES, pick } from './locationContent';
 
 type CityPageProps = {
   cityKey: TranslationKey;
   titleKey: TranslationKey;
   descriptionKey: TranslationKey;
   canonical: string;
+  /** Key into CITY_ANGLES: what makes delivery here different from the others. */
+  angleKey: 'madrid' | 'barcelona' | 'valencia' | 'spain' | 'online';
 };
 
 const highlightServices: Array<{ href: string; labelKey: TranslationKey }> = [
@@ -19,17 +22,16 @@ const highlightServices: Array<{ href: string; labelKey: TranslationKey }> = [
   { href: '/services/medical-ai', labelKey: 'services.medicalAI.name' },
 ];
 
-const CityPage: React.FC<CityPageProps> = ({ cityKey, titleKey, descriptionKey }) => {
-  const { t } = useTranslation();
+const CityPage: React.FC<CityPageProps> = ({ cityKey, titleKey, descriptionKey, angleKey }) => {
+  const { t, language } = useTranslation();
   const city = t(cityKey);
   const title = t(titleKey);
   const description = t(descriptionKey);
+  const angle = useMemo(() => pick(CITY_ANGLES[angleKey], language), [angleKey, language]);
 
-  const faqItems = useMemo(() => ([
-    { question: t('locations.city.faq.delivery.question'), answer: t('locations.city.faq.delivery.answer') },
-    { question: t('locations.city.faq.languages.question'), answer: t('locations.city.faq.languages.answer') },
-    { question: t('locations.city.faq.availability.question'), answer: t('locations.city.faq.availability.answer') },
-  ]), [t]);
+  // The delivery FAQ is per location: an identical three-question block on five
+  // pages is what made these read as one page with the city name swapped.
+  const faqItems = angle.faqs;
 
   const highlightTitle = t('locations.city.highlightsTitle').replace('{city}', city);
   const highlightSubtitle = t('locations.city.highlightsSubtitle').replace('{city}', city);
@@ -40,6 +42,13 @@ const CityPage: React.FC<CityPageProps> = ({ cityKey, titleKey, descriptionKey }
       <div className="container mx-auto px-6 max-w-5xl">
         <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">{title}</h1>
         <p className="text-lg text-slate-700 mb-8">{description}</p>
+
+        <div className="mb-8 border-l-2 border-brand-200 pl-6">
+          <h2 className="text-2xl font-semibold text-slate-900">{angle.heading}</h2>
+          {angle.paragraphs.map((paragraph) => (
+            <p key={paragraph.slice(0, 40)} className="mt-3 text-slate-700 leading-relaxed">{paragraph}</p>
+          ))}
+        </div>
 
         <div className="rounded-3xl border border-slate-200 bg-slate-50/60 p-6 md:p-8 shadow-soft-xl">
           <h2 className="text-2xl font-semibold text-slate-900">{highlightTitle}</h2>

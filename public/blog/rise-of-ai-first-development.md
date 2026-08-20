@@ -1,5 +1,5 @@
 ---
-title: "The Rise of AI-First Development: A New Way to Build Software"
+title: "The Rise of AI-First Development"
 date: "2024-08-15"
 author: "Sami Halawa"
 summary: "The development landscape is undergoing a paradigm shift. AI is no longer just a feature to be added but the core engine of the development process itself. Exploring the principles and impact of the AI-first approach."

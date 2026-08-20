@@ -1,5 +1,5 @@
 ---
-title: "Subagents and Parallel Agents: Dividing Work Without Creating Chaos"
+title: "Subagents and Parallel Agents: Dividing Work Cleanly"
 excerpt: "Spawning subagents can accelerate complex tasks, but only if done thoughtfully. Learn when to leverage independent investigations, parallel implementations, and review sidecars, and when to avoid the pitfalls of context burning and overlapping edits."
 publishedAt: "2026-07-15T22:02:41.512Z"
 tags: ["agentic-coding", "orchestration", "parallel-agents", "subagents"]

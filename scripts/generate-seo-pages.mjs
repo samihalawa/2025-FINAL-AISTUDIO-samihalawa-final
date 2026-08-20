@@ -65,12 +65,35 @@ function initialArticle(entry) {
   };
 }
 
+// The blog index is otherwise a client-only list: the crawler that fetches
+// /blog would see a loading skeleton and no article links at all. Seeding the
+// manifest on globalThis before the SSR pass, and repeating it in the emitted
+// HTML, puts every article title and href in the initial markup.
+const BLOG_INDEX_ROUTE = '/blog';
+const blogIndexPayload = blogEntries.map((entry) => ({
+  slug: entry.slug,
+  title: entry.title,
+  date: entry.date,
+  summary: entry.summary,
+  author: entry.author,
+  tags: entry.tags || [],
+}));
+
 async function renderPage(meta, article = null) {
   const head = `${START}\n    ${buildHeadMarkup(meta)}\n    ${END}`;
-  const appHtml = await render(meta.path, article);
+  const isBlogIndex = meta.path === BLOG_INDEX_ROUTE;
+  if (isBlogIndex) globalThis.__INITIAL_BLOG_INDEX__ = blogIndexPayload;
+  let appHtml;
+  try {
+    appHtml = await render(meta.path, article);
+  } finally {
+    if (isBlogIndex) delete globalThis.__INITIAL_BLOG_INDEX__;
+  }
   const initialState = article
     ? `<script>window.__INITIAL_BLOG_ARTICLE__=${safeInlineJson(article)}</script>`
-    : '';
+    : isBlogIndex
+      ? `<script>window.__INITIAL_BLOG_INDEX__=${safeInlineJson(blogIndexPayload)}</script>`
+      : '';
   return shell
     .replace(new RegExp(`${START}[\\s\\S]*?${END}`), head)
     .replace(/<html\s+lang="[^"]*"/, `<html lang="${meta.lang || 'en'}"`)

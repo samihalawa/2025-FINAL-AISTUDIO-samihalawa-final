@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../../i18n/LanguageContext';
 import type { TranslationKey } from '../../i18n/translations';
+import ServiceDetail from './ServiceDetail';
 
 const Section: React.FC<{ title: string; points: string[] }> = ({ title, points }) => (
   <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
@@ -47,6 +48,7 @@ const MedicalAI: React.FC = () => {
           <Section title={t('services.medicalAI.section.learn')} points={learnPoints} />
           <Section title={t('services.medicalAI.section.cases')} points={casePoints} />
         </div>
+        <ServiceDetail slug="medical-ai" />
         <CTA primaryLabel={t('cta.requestDemo')} secondaryLabel={t('cta.chatWhatsapp')} />
         <div className="mt-8 text-sm text-slate-700">
           <span className="font-semibold">{t('services.relatedCaseStudies')}</span>

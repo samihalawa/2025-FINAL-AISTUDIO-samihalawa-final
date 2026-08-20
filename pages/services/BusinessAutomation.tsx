@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../../i18n/LanguageContext';
 import type { TranslationKey } from '../../i18n/translations';
+import ServiceDetail from './ServiceDetail';
 
 const Section: React.FC<{ title: string; points: string[] }> = ({ title, points }) => (
   <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
@@ -48,6 +49,7 @@ const BusinessAutomation: React.FC = () => {
           <Section title={t('services.businessAutomation.section.scope')} points={scopePoints} />
           <Section title={t('services.businessAutomation.section.stack')} points={stackPoints} />
         </div>
+        <ServiceDetail slug="business-automation" />
         <CTA primaryLabel={t('cta.freeAudit')} secondaryLabel={t('cta.viewCases')} />
         <div className="mt-8 text-sm text-slate-700">
           <span className="font-semibold">{t('services.relatedCaseStudies')}</span>

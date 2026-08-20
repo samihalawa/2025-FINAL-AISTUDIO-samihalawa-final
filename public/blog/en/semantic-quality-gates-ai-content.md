@@ -1,5 +1,5 @@
 ---
-title: "Semantic Quality Gates: Architectural Patterns for AI Content Validation"
+title: "Semantic Quality Gates for AI Content Validation"
 excerpt: "A deep dive into building production-grade semantic quality gates that validate accuracy, grounding, and locale correctness in AI pipelines."
 publishedAt: "2026-07-29T12:53:51.595Z"
 tags: ["ai-content", "publishing", "quality-gates", "semantic-evaluation"]

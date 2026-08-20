@@ -1,5 +1,5 @@
 ---
-title: "Architecting Backpressure and Rate-Limit Resilience in AI Pipelines"
+title: "Backpressure and Rate-Limit Resilience in AI Pipelines"
 excerpt: "Learn how to build resilient AI pipelines that handle heavy token volume without crashing into provider rate limits or wasting API budget."
 publishedAt: "2026-07-29T12:52:05.441Z"
 tags: ["ai-pipelines", "backpressure", "rate-limits", "reliability"]

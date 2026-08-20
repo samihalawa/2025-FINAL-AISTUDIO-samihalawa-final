@@ -1,5 +1,5 @@
 ---
-title: "From Python to Production: Deploying ML Models with Docker and Kubernetes"
+title: "Deploying ML Models with Docker and Kubernetes"
 date: "2024-07-28"
 author: "Sami Halawa"
 summary: "A practical guide on taking a trained machine learning model from a Jupyter Notebook to a scalable, production-ready microservice using FastAPI, Docker, and Kubernetes."

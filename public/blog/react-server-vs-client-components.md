@@ -1,5 +1,5 @@
 ---
-title: "React Server Components vs. Client Components: A Modern Web Development Paradigm"
+title: "React Server Components vs. Client Components"
 date: "2024-08-08"
 author: "Sami Halawa"
 summary: "React Server Components (RSCs) are changing how we build web applications. Understand the key differences between server and client components and how to leverage both to build faster, more efficient apps."

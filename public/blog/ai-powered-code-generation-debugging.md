@@ -1,5 +1,5 @@
 ---
-title: "A Practical Guide to AI-Powered Code Generation and Debugging"
+title: "AI-Powered Code Generation and Debugging: A Guide"
 date: "2024-08-18"
 author: "Sami Halawa"
 summary: "Leverage the power of AI to supercharge your development workflow. This guide covers practical tips and techniques for using tools like Gemini and GitHub Copilot to write better code faster and debug more efficiently."

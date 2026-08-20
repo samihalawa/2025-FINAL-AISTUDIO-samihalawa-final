@@ -1,5 +1,5 @@
 ---
-title: "Designing Human Approval Boundaries in AI Agent Architectures"
+title: "Human Approval Boundaries in AI Agent Architectures"
 excerpt: "A highly technical, concrete framework for implementing human-in-the-loop (HITL) boundaries in production AI agent systems."
 publishedAt: "2026-07-29T12:56:06.401Z"
 tags: ["ai-automation", "human-in-the-loop", "product-design", "safety"]

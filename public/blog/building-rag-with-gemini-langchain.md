@@ -2,7 +2,7 @@
 title: "Production-Ready RAG with Gemini Pro and LangChain"
 date: "2025-01-15"
 author: "Sami Halawa"
-summary: "Master Retrieval-Augmented Generation from prototype to production. Learn to build RAG systems that handle 10K+ documents, cost $0.02/query, and achieve 95%+ accuracy with real-world enterprise examples."
+summary: "Master Retrieval-Augmented Generation from prototype to production. Learn to build RAG systems that handle 10K+ documents, with worked illustrative scenarios for cost and accuracy trade-offs."
 slug: "building-rag-with-gemini-langchain"
 keywords: "RAG system tutorial, LangChain Gemini Pro, retrieval augmented generation, enterprise AI chatbot, vector database FAISS, document QA system, LLM production deployment"
 ---
