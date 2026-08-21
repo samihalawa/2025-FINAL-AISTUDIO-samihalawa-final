@@ -1,5 +1,5 @@
 ---
-title: "Git-Based Content Delivery: Schemas and Reconciliation"
+title: "Git-Based Content Delivery: Architecture, Schemas, and Build-Time Reconciliation"
 excerpt: "Ditch the headless CMS overhead. Learn how to design a high-throughput Git-and-Markdown pipeline with type-safe frontmatter, stable internationalized slugs, and content-hashed build manifests."
 publishedAt: "2026-07-29T12:52:25.762Z"
 tags: ["content-pipeline", "gitops", "markdown", "static-site"]

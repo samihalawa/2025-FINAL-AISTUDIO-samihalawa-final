@@ -1,5 +1,5 @@
 ---
-title: "Programmatic SEO: Build Pipelines, Not Spam Engines"
+title: "Engineering Programmatic SEO: Build Pipelines, Not Spam Engines"
 excerpt: "A technical blueprint for programmatic SEO. Build high-quality, context-seeded dynamic pages with strict quality gates, collision routing, and automated linting."
 publishedAt: "2026-07-29T12:53:31.986Z"
 tags: ["automation", "content-quality", "programmatic-seo", "seo"]

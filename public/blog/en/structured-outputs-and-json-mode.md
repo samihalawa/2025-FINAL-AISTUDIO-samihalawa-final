@@ -1,5 +1,5 @@
 ---
-title: "Structured Outputs: The Guide to Reliable LLM Data"
+title: "Structured Outputs: The Engineering Guide to Reliable LLM Data"
 excerpt: "Stop parsing free-text. Learn how to enforce schema-constrained decoding, tool calling, and validation loops to build production-ready AI pipelines."
 publishedAt: "2026-07-15T22:01:35.940Z"
 tags: ["integration", "json", "llm", "structured-output"]

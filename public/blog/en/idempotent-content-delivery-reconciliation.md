@@ -1,6 +1,6 @@
 ---
-title: "Idempotent Multi-Platform Publishing and Reconciliation"
-excerpt: "A deep dive into building reliable multi-destination publishing engines using deterministic IDs, content hashes, and manifest-based reconciliation."
+title: "Idempotent Multi-Platform Content Publishing and Reconciliation"
+excerpt: "A deep dive into building bulletproof multi-destination publishing engines using deterministic IDs, content hashes, and manifest-based reconciliation."
 publishedAt: "2026-07-29T12:51:43.401Z"
 tags: ["content-delivery", "distributed-systems", "idempotency", "reconciliation"]
 sourceName: "content-hub-pages"

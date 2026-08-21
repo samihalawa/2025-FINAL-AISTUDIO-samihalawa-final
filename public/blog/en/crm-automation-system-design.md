@@ -1,5 +1,5 @@
 ---
-title: "CRM Automation is a State Machine, Not Templates"
+title: "CRM Automation is a State Machine, Not a Sequence of Templates"
 excerpt: "Stop building brittle CRM outreach scripts. Learn how to architect robust CRM automation using strict state machines, canonical schemas, and deterministic state transitions."
 publishedAt: "2026-07-29T13:01:59.297Z"
 tags: ["ai-agents", "automation", "crm", "system-design"]

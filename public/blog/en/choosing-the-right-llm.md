@@ -14,9 +14,6 @@ qualityVersion: "semantic-alignment-v1"
 sourceSemanticScore: 100
 crossLocaleConsistencyScore: 100
 ---
-
-*Last reviewed August 2026. Model names, prices and ecosystem figures change quickly — verify against current vendor documentation.*
-
 As an AI engineer building products, I've learned the hard way that blindly trusting LLM benchmarks is a fool's errand. They're often gamed, narrow, and rarely reflect the nuanced demands of a real-world product. Your goal isn't to pick the 'best' LLM; it's to pick the *right* LLM for your specific task, within your specific constraints. This guide outlines my framework for doing just that, focusing on practical considerations over synthetic scores.
 
 ## The Core Trade-offs: Reasoning, Latency, and Cost

@@ -14,9 +14,6 @@ qualityVersion: "semantic-alignment-v1"
 sourceSemanticScore: 100
 crossLocaleConsistencyScore: 100
 ---
-
-*Last reviewed August 2026. Model names, prices and ecosystem figures change quickly — verify against current vendor documentation.*
-
 The landscape of Large Language Models (LLMs) has evolved rapidly, with context windows expanding from a few thousand tokens to hundreds of thousands, and even millions. This dramatic increase in context length forces a re-evaluation of fundamental architectural decisions, particularly the choice between Retrieval Augmented Generation (RAG) and simply stuffing all relevant information into the LLM's prompt.
 
 As an AI engineer building production systems, I've seen firsthand how these choices impact cost, latency, reliability, and user experience. There's no silver bullet; the optimal approach depends heavily on your specific use case, data characteristics, and performance requirements.

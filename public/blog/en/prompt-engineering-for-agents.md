@@ -1,5 +1,5 @@
 ---
-title: "Prompt Engineering for Autonomous Agents"
+title: "Prompt Engineering for Autonomous Agents: Beyond Chatbots"
 excerpt: "Prompting autonomous agents isn't about clever phrasing; it's about encoding the operational loop, tool contracts, stop conditions, and verification expectations. This guide dives into the unique challenges and strategies for building robust agentic systems, focusing on practical, hard-won lessons for engineers and AI builders."
 publishedAt: "2026-07-15T20:34:46.029Z"
 tags: ["ai-agents", "llm", "prompt-engineering", "system-prompts"]

@@ -14,9 +14,6 @@ qualityVersion: "semantic-alignment-v1"
 sourceSemanticScore: 95
 crossLocaleConsistencyScore: 100
 ---
-
-*Last reviewed August 2026. Model names, prices and ecosystem figures change quickly — verify against current vendor documentation.*
-
 As an AI engineer and founder, I've seen firsthand the allure and the pitfalls of self-hosting large language models. The promise of complete control, enhanced privacy, and potentially lower costs at scale is compelling. But the reality is often far more complex than marketing materials suggest. This guide is for engineers, technical founders, and AI builders who need to make an informed decision, grounded in technical realities and hard-won lessons.
 
 ## Why Self-Host? The Real Motivations

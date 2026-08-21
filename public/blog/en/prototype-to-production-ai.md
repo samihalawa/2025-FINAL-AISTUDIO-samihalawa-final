@@ -18,7 +18,7 @@ You've got a killer AI model in a notebook. It crushes benchmarks, generates imp
 
 ## The Chasm Between Lab and Production
 
-The gap between a model's performance on a curated test set and its behavior in the wild is often a canyon. In the lab, you control the data, the environment, and the expectations. In production, users throw everything at it – malformed inputs, adversarial prompts, edge cases you never imagined, and legitimate queries that just don't fit your training distribution. As an illustrative example: a model scoring 95% on a curated benchmark can easily land near 60% user satisfaction once it meets the long tail of real-world inputs. The exact gap varies by domain, but the direction is consistent enough to plan around.
+The gap between a model's performance on a curated test set and its behavior in the wild is often a canyon. In the lab, you control the data, the environment, and the expectations. In production, users throw everything at it – malformed inputs, adversarial prompts, edge cases you never imagined, and legitimate queries that just don't fit your training distribution. Your model's 95% accuracy on a benchmark might translate to 60% user satisfaction when it encounters the long tail of real-world inputs.
 
 ### What 'Production-Ready' Actually Means for AI
 
