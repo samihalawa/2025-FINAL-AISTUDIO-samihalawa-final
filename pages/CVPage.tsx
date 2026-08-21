@@ -351,9 +351,10 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
   const { language } = useTranslation();
   const selected = edition || (language === 'es' ? 'es' : 'en');
   const spanish = selected === 'es';
-  const cvVersion = '2026-08-20.2';
+  const cvVersion = '2026-08-21.1';
   const pdf = `${spanish ? '/cv/Sami_Halawa_CV_ES.pdf' : '/cv/Sami_Halawa_CV.pdf'}?v=${cvVersion}`;
   const ats = `${spanish ? '/cv/Sami_Halawa_CV_ES_ATS.txt' : '/cv/Sami_Halawa_CV_ATS.txt'}?v=${cvVersion}`;
+  const complete = `/cv/Sami_Halawa_Complete_CV.pdf?v=${cvVersion}`;
   const preview = `${spanish ? '/cv/Sami_Halawa_CV_ES_preview.png' : '/cv/Sami_Halawa_CV_preview.png'}?v=${cvVersion}`;
   const primaryCredential = featuredCredentials[0];
   const description = spanish
@@ -385,6 +386,9 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
             <div className="mt-8 grid gap-2">
               <a href={pdf} download data-analytics-event="cv_download" className={`${downloadLink} bg-slate-950 text-white`}>
                 <span>{spanish ? 'CV conciso · PDF' : 'Concise CV · PDF'}</span><i className="fas fa-arrow-down text-xs" />
+              </a>
+              <a href={complete} download data-analytics-event="cv_download" className={downloadLink}>
+                <span>{spanish ? 'CV completo · Registro íntegro · PDF' : 'Complete CV · Full record · PDF'}</span><i className="fas fa-arrow-down text-xs" />
               </a>
               <a href={ats} download data-analytics-event="cv_download" className={downloadLink}>
                 <span>{spanish ? 'Versión ATS · TXT' : 'ATS edition · TXT'}</span><i className="fas fa-arrow-down text-xs" />
