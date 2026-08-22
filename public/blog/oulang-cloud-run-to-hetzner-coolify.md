@@ -7,7 +7,7 @@ slug: "oulang-cloud-run-to-hetzner-coolify"
 tags: ["Cloud Migration", "Coolify", "Hetzner", "React", "Node.js"]
 ---
 
-Cloud migrations are often described as a diagram change: move a box from one provider to another and declare the work finished. OULANG's migration was more exacting. The application combined a React client, Node and tRPC services, MySQL, static media, WeChat integration, and optional cloud AI capabilities. The objective was to retire the expensive and operationally fragmented web-hosting path while preserving the provider capabilities that still had a reason to exist.
+Deleting a Cloud Run service does not migrate a product. Static files, proxy routes, database configuration, preview builds, and provider SDKs keep their own assumptions. OULANG combined a React client, Node and tRPC services, MySQL, static media, WeChat integration, and optional cloud AI capabilities. I moved the primary web-hosting path without flattening the provider boundaries that still mattered.
 
 The result is a simpler production route: GitHub `main` builds through a Dockerfile, Coolify deploys it on Hetzner, Cloudflare remains at the edge, MySQL runs on Hetzner, and static media is served from Hetzner Object Storage through `static.oulang.ai`.
 
@@ -34,9 +34,9 @@ This reduced operational ambiguity. The source branch, build recipe, target serv
 
 ![OULANG live product on 22 August 2026](/case-study-media/oulang-live-product-2026-08-22.png)
 
-## Avoiding the false claim that all cloud dependencies disappeared
+## The remaining provider boundary
 
-The migration intentionally did not erase every Google-related integration. OULANG can still use optional Vertex AI capabilities behind feature and configuration boundaries, and a small isolated Vercel route remains for `/tv`. Those are product-provider decisions, not accidental remnants of the retired Cloud Run web path.
+OULANG still has optional Vertex AI capabilities behind feature and configuration boundaries, and a small isolated Vercel route remains for `/tv`. These are product-provider decisions. The primary Cloud Run web path is retired.
 
 That distinction matters both technically and financially. The defensible claim is that the primary web, deployment, database, storage, and WeChat proxy paths moved to Hetzner and Coolify. It would be inaccurate to say that the codebase has no optional external AI provider, or that every workload runs on one machine.
 
@@ -54,10 +54,10 @@ A migration is not proved by deleting `cloudbuild.yaml` or by receiving a succes
 
 The screenshot above is a live product capture, not a generated dashboard. The architecture image is deliberately a diagram: it explains the provider boundary without pretending to be production telemetry.
 
-## The durable lesson
+## What changed operationally
 
-The hardest cloud migrations are not compute moves. They are boundary corrections. Deployment scripts, media URLs, proxy routes, database connections, preview environments, and provider-specific SDKs all encode assumptions about where a product lives.
+The migration changed the operating questions. The deploy path is now clear. Stateful services have named owners. Optional providers are named instead of being hidden inside the hosting story.
 
-OULANG became easier to operate because those assumptions are now explicit. The main application has one deploy path, stateful services have named owners, optional providers remain optional, and the public health route gives an immediate production check. That is a more valuable outcome than simply replacing one cloud logo with another.
+The public health route gives an immediate production check. That is the result I wanted: a system whose hosting and dependency boundaries can be inspected without reading a pile of old deployment scripts.
 
 **Live product:** [oulang.ai](https://oulang.ai)

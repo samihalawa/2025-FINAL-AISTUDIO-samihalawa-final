@@ -7,9 +7,9 @@ slug: "real-time-ai-verification-magicinterview"
 tags: ["Voice AI", "AI Engineering", "TypeScript", "Gemini", "Production Systems"]
 ---
 
-Real-time voice AI is easy to demo and difficult to trust. A microphone can appear active while the transcript arrives late. A model can answer the wrong speaker. A fallback can hide a provider failure. A polished interface can conceal cross-session state. The engineering problem in MagicInterview was therefore not simply to generate a useful answer. It was to make every important step observable and testable.
+Real-time voice AI is easy to demo and hard to trust. A microphone can look active while the transcript arrives late. A model can answer the wrong speaker. A fallback can hide a provider failure. A polished interface can conceal cross-session state. MagicInterview had to make each step observable and testable.
 
-MagicInterview is a practice and mock-interview coach. It listens to an interview simulation, separates interviewer prompts from the candidate's own speech, and generates concise coaching support. The product is deliberately scoped to preparation and rehearsal—not covert assistance in a live assessment.
+MagicInterview is a mock-interview coach. It listens to an interview simulation, separates interviewer prompts from the candidate's own speech, and generates concise coaching support. It is for preparation and rehearsal. It is not covert assistance in a live assessment.
 
 ![MagicInterview verification architecture](/case-study-media/magicinterview-verification-architecture.png)
 
@@ -25,7 +25,7 @@ The core path is:
 2. Preserve their order and revision history.
 3. Route the conversation semantically into candidate speech, interviewer prompts, clarifications, and duplicate revisions.
 4. Call a bounded provider chain only when the state warrants a new answer.
-5. persist the session and coach output under the authenticated account.
+5. Persist the session and coach output under the authenticated account.
 
 That ordering matters. A good model cannot repair a bad event model after the wrong text has already been classified as a new question.
 
@@ -60,9 +60,9 @@ Several failures during verification were useful. A Chromium shim was initially 
 
 ![MagicInterview live replay with transcript and coach answer](/case-study-media/magicinterview-live-replay-2026-08-21.webp)
 
-## What changed in my approach
+## What I changed
 
-The most important result was not a single model choice. It was the decision to make the system evidence-carrying:
+I made the system carry its evidence with it:
 
 - Conversation meaning is derived from ordered state rather than isolated strings.
 - Provider fallbacks terminate and surface their outcome.
@@ -71,6 +71,6 @@ The most important result was not a single model choice. It was the decision to 
 - Account isolation is tested with two real users, not inferred from a schema.
 - The production release identifies itself through a live endpoint.
 
-This is the standard I now use for real-time AI: the interface should not merely look alive. The system should be able to prove what it heard, why it acted, where the answer came from, and which user owns the result.
+For real-time AI, I want the interface to answer four questions: what it heard, why it acted, where the answer came from, and which user owns the result.
 
 **Live product:** [magicinterview.megawebs.com](https://magicinterview.megawebs.com)
