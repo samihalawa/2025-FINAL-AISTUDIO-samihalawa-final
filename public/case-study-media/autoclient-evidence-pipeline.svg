@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">AutoClient evidence-carrying prospect workflow</title>
+  <desc id="desc">A search specification becomes an Exa Webset, passes ownership checks, is normalized and enriched, then reviewed before a sequence is prepared and CRM state is updated.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#080b20"/><stop offset="1" stop-color="#21104a"/></linearGradient><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0l10 5-10 5z" fill="#d58cff"/></marker><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-opacity=".32"/></filter></defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="96" y="102" fill="#d58cff" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="700" letter-spacing="4">AGENTIC REVENUE OPERATIONS</text>
+  <text x="96" y="165" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="44" font-weight="760">Evidence carries the workflow—not the generated email</text>
+  <text x="96" y="210" fill="#b9afd3" font-family="Inter,Arial,sans-serif" font-size="24">AutoClient · research → ownership → enrichment → review → action → write-back</text>
+  <g font-family="Inter,Arial,sans-serif" filter="url(#s)">
+    <g transform="translate(76 322)"><rect width="220" height="160" rx="20" fill="#171333" stroke="#5d4288"/><text x="26" y="46" fill="#d58cff" font-size="16" font-weight="700">01 · SPECIFY</text><text x="26" y="88" fill="#fff" font-size="24" font-weight="700">ICP criteria</text><text x="26" y="122" fill="#b9afd3" font-size="16">people + company facts</text></g>
+    <g transform="translate(330 322)"><rect width="220" height="160" rx="20" fill="#171333" stroke="#5d4288"/><text x="26" y="46" fill="#d58cff" font-size="16" font-weight="700">02 · DISCOVER</text><text x="26" y="88" fill="#fff" font-size="24" font-weight="700">Exa Webset</text><text x="26" y="122" fill="#b9afd3" font-size="16">source-linked candidates</text></g>
+    <g transform="translate(584 322)"><rect width="220" height="160" rx="20" fill="#171333" stroke="#5d4288"/><text x="26" y="46" fill="#d58cff" font-size="16" font-weight="700">03 · CONTROL</text><text x="26" y="88" fill="#fff" font-size="24" font-weight="700">Ownership gate</text><text x="26" y="122" fill="#b9afd3" font-size="16">tenant-scoped webset</text></g>
+    <g transform="translate(838 322)"><rect width="220" height="160" rx="20" fill="#171333" stroke="#5d4288"/><text x="26" y="46" fill="#d58cff" font-size="16" font-weight="700">04 · ENRICH</text><text x="26" y="88" fill="#fff" font-size="24" font-weight="700">Normalize facts</text><text x="26" y="122" fill="#b9afd3" font-size="16">identity + contact + reason</text></g>
+    <g transform="translate(1092 322)"><rect width="220" height="160" rx="20" fill="#251742" stroke="#d58cff"/><text x="26" y="46" fill="#f0c6ff" font-size="16" font-weight="700">05 · REVIEW</text><text x="26" y="88" fill="#fff" font-size="24" font-weight="700">Operator check</text><text x="26" y="122" fill="#dbc8e6" font-size="16">evidence before action</text></g>
+    <g transform="translate(1346 322)"><rect width="180" height="160" rx="20" fill="#351b51" stroke="#d58cff"/><text x="22" y="46" fill="#f0c6ff" font-size="16" font-weight="700">06 · ACT</text><text x="22" y="88" fill="#fff" font-size="23" font-weight="700">Sequence</text><text x="22" y="122" fill="#dbc8e6" font-size="15">then CRM write-back</text></g>
+  </g>
+  <g stroke="#d58cff" stroke-width="4" marker-end="url(#a)"><path d="M296 402h30"/><path d="M550 402h30"/><path d="M804 402h30"/><path d="M1058 402h30"/><path d="M1312 402h30"/></g>
+  <g font-family="Inter,Arial,sans-serif">
+    <rect x="96" y="590" width="1408" height="190" rx="22" fill="#0e0c25" stroke="#5d4288"/>
+    <text x="132" y="641" fill="#d58cff" font-size="18" font-weight="700" letter-spacing="2">CONTROL INVARIANTS</text>
+    <g fill="#fff" font-size="23" font-weight="700"><text x="132" y="697">Source survives</text><text x="472" y="697">Ownership first</text><text x="802" y="697">No silent send</text><text x="1125" y="697">State comes back</text></g>
+    <g fill="#b9afd3" font-size="16"><text x="132" y="731">why this account fits</text><text x="472" y="731">before contact sync</text><text x="802" y="731">reviewable next action</text><text x="1125" y="731">outcome attached to account</text></g>
+  </g>
+</svg>
