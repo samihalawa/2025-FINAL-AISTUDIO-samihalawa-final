@@ -1,5 +1,20 @@
 [
   {
+    "slug": "apolo-multimodal-human-review",
+    "path": "apolo-multimodal-human-review",
+    "title": "Building a Multimodal Research Workflow With Human Review at the Center",
+    "date": "2026-08-22",
+    "summary": "A research-engineering case study on structuring image-text exploration for reviewable medical and professional workflows.",
+    "author": "Sami Halawa",
+    "tags": [
+      "Multimodal AI",
+      "Vision Language Models",
+      "Human Review",
+      "Research Engineering",
+      "APOLO"
+    ]
+  },
+  {
     "slug": "autoclient-evidence-carrying-agent-workflows",
     "path": "autoclient-evidence-carrying-agent-workflows",
     "title": "Building Agentic Outreach Around Evidence, Not Autonomy",
@@ -12,6 +27,21 @@
       "Exa",
       "CRM",
       "Workflow Engineering"
+    ]
+  },
+  {
+    "slug": "autopricing-market-intelligence",
+    "path": "autopricing-market-intelligence",
+    "title": "Building Multi-Market Pricing Intelligence Without Mixing the Evidence",
+    "date": "2026-08-22",
+    "summary": "A case study in turning fragmented marketplace observations into comparable product, price, and operator decisions.",
+    "author": "Sami Halawa",
+    "tags": [
+      "Marketplace Intelligence",
+      "Data Engineering",
+      "Product Matching",
+      "Pricing",
+      "AI Systems"
     ]
   },
   {
@@ -30,6 +60,21 @@
     ]
   },
   {
+    "slug": "oulang-location-aware-recommendations",
+    "path": "oulang-location-aware-recommendations",
+    "title": "Designing Location-Aware Recommendations for an International Marketplace",
+    "date": "2026-08-22",
+    "summary": "How I approached multilingual discovery, local intent, and recommendation workflow design for OULANG.",
+    "author": "Sami Halawa",
+    "tags": [
+      "Recommendations",
+      "Multilingual AI",
+      "Marketplace",
+      "Product Engineering",
+      "OULANG"
+    ]
+  },
+  {
     "slug": "real-time-ai-verification-magicinterview",
     "path": "real-time-ai-verification-magicinterview",
     "title": "How I Made a Real-Time Voice AI Prove What It Heard",
@@ -42,6 +87,21 @@
       "TypeScript",
       "Gemini",
       "Production Systems"
+    ]
+  },
+  {
+    "slug": "umbramed-pwa-human-review-workflows",
+    "path": "umbramed-pwa-human-review-workflows",
+    "title": "Shipping a Mobile-First Professional Workflow Without Losing Human Review",
+    "date": "2026-08-22",
+    "summary": "How I approached PWA delivery, data ingestion, document review, and product boundaries for Umbramed.",
+    "author": "Sami Halawa",
+    "tags": [
+      "PWA",
+      "Ionic",
+      "Capacitor",
+      "Product Engineering",
+      "Human Review"
     ]
   },
   {
