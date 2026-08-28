@@ -1,5 +1,20 @@
 [
   {
+    "slug": "twenty-native-career-opportunity-system",
+    "path": "twenty-native-career-opportunity-system",
+    "title": "Building a Career Opportunity System Inside Twenty CRM",
+    "date": "2026-08-28",
+    "summary": "A production case study on turning fragmented recruiter email, meetings, recordings, CV evidence, and follow-up ownership into one stateful Twenty CRM operating system.",
+    "author": "Sami Halawa",
+    "tags": [
+      "AI Agents",
+      "Twenty CRM",
+      "Career Operations",
+      "Workflow Engineering",
+      "Human-in-the-Loop"
+    ]
+  },
+  {
     "slug": "apolo-multimodal-human-review",
     "path": "apolo-multimodal-human-review",
     "title": "Building a Multimodal Research Workflow With Human Review at the Center",
