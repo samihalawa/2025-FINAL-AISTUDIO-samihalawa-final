@@ -52,7 +52,11 @@ During a production check, the inbound email workflow was failing because its co
 
 I preserved the external-sender filter, the intake instructions, the output contract, the retry behavior, and the deterministic code step. Before activation, I validated the graph with zero workflow errors or warnings. After activation, I read back the published version and confirmed the exact trigger-to-agent-to-validator chain.
 
-This is the same standard I use for application and messaging systems: a successful edit is not proof of a working runtime. The right proof layers are the published workflow graph, a valid execution, and the resulting CRM records. The first two structural layers are now active; the next qualifying real inbound message supplies the non-synthetic execution proof.
+The relationship-reconciliation workflow later exposed the same deleted-agent failure after a sequence of healthy runs. I published a third native workflow version that preserved the complete webhook schema, its 3,468-character bounded-reconciliation contract, the zero-retry behavior, and the single trigger-to-agent edge. Validation again returned no errors or warnings.
+
+For runtime proof, I invoked the published webhook against one existing recording with `mode=dry_run`, `scope=anchor`, and `maxChanges=0`. Run #72 completed in approximately 1.3 seconds with the AI step successful. The anchored activity retained the same source ID, transcript, empty relationship fields, and `updatedAt` timestamp, proving that the test repaired execution without modifying CRM data or sending anything externally.
+
+This is the same standard I use for application and messaging systems: a successful edit is not proof of a working runtime. The right proof layers are the published workflow graph, a valid execution, and the resulting CRM records. Reconciliation now has all three layers, including a zero-change execution read-back. The email path has published graph proof and awaits the next genuine inbound message for its non-synthetic execution proof.
 
 ## State distinctions are product features
 
