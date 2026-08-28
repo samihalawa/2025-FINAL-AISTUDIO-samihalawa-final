@@ -58,6 +58,10 @@ For runtime proof, I invoked the published webhook against one existing recordin
 
 This is the same standard I use for application and messaging systems: a successful edit is not proof of a working runtime. The right proof layers are the published workflow graph, a valid execution, and the resulting CRM records. Reconciliation now has all three layers, including a zero-change execution read-back. The email path has published graph proof and awaits the next genuine inbound message for its non-synthetic execution proof.
 
+The candidate-generation path now has the same production proof. I repaired its source lookup so the selected CV generation resolves the exact linked opportunity instead of searching an unrelated activity record. After validation returned zero errors, I activated the review-only workflow and launched it from an existing Client Server CV. Run #2 completed every native step successfully: canonical career evidence, opportunity-linked calendar and message context, AI generation, opportunity update, contact lookup, PDF rendering, and artifact storage.
+
+The read-back showed two new generation-history records—CV #5 and Profile #5—both linked to the same opportunity, career-evidence version, source CV, workflow version, and model. Twenty stored readable Markdown plus one PDF per artifact, refreshed the opportunity's CV and profile drafts, and left the package `READY_FOR_REVIEW`. The workflow contains no email, calendar, application, or other outbound action, so generation remains a reviewable state rather than being mistaken for submission.
+
 ## State distinctions are product features
 
 The most valuable engineering in this system is not the prose generation. It is the refusal to blur operational states.
