@@ -62,6 +62,10 @@ The candidate-generation path now has the same production proof. I repaired its 
 
 The read-back showed two new generation-history records—CV #5 and Profile #5—both linked to the same opportunity, career-evidence version, source CV, workflow version, and model. Twenty stored readable Markdown plus one PDF per artifact, refreshed the opportunity's CV and profile drafts, and left the package `READY_FOR_REVIEW`. The workflow contains no email, calendar, application, or other outbound action, so generation remains a reviewable state rather than being mistaken for submission.
 
+I also closed the historical WhatsApp evidence gap without restoring the old product-side CRM bridge. The provider database exposed 646 chats, which I reconciled against Twenty using normalized phone numbers rather than display names. Nineteen chats had one exact Person match; 16 contained message history. Those 16 conversations represented 389 messages.
+
+Fifteen canonical `WHATSAPP` External Activities were already present. I created the one missing conversation, linked it to the exact Person and Company, and stored its chronological history under the stable source key `gowa:<device>:<chat-jid>`. A complete replay then found all 16 source keys exactly once, created zero records, and reported zero duplicates. This separates historical ingestion proof from live connection status while keeping the CRM idempotent.
+
 ## State distinctions are product features
 
 The most valuable engineering in this system is not the prose generation. It is the refusal to blur operational states.
@@ -72,9 +76,9 @@ Generated files follow the same discipline. A candidate package is not complete 
 
 ## Channel boundaries stay explicit
 
-Email and Twenty-native records are within the currently verified boundary. WhatsApp is designed as another evidence source, but I do not count it as connected until the authenticated QR-paired account remains online and a real message can be read back in the CRM with the correct contact and opportunity.
+Email, Twenty-native records, and the matched historical WhatsApp backlog are within the currently verified boundary. The WhatsApp account was offline during the final check, although its persisted history remained readable, so I do not claim continuous ingestion of new traffic. That requires a newly received message to appear in Twenty under the same canonical source convention and the correct contact relation.
 
-That boundary matters. “The QR code was scanned,” “the provider reports connected,” and “the message is visible in the opportunity timeline” are three different facts. The architecture is ready to preserve that distinction rather than claiming channel coverage from a setup screen.
+That boundary matters. “Historical messages are readable,” “the provider reports connected,” and “a newly received message is visible in the CRM” are three different facts. The architecture preserves that distinction rather than claiming continuous channel coverage from a setup screen or a successful API response.
 
 ## What this demonstrates
 
