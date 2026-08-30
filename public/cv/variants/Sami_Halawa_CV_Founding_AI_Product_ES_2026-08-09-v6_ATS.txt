@@ -13,15 +13,15 @@ Ingeniería de producto: Python, FastAPI, TypeScript, React/Next.js, SQL, APIs y
 Operaciones: Docker, Linux, CI/CD, Cloudflare, Coolify, analítica, pagos y observabilidad
 
 EXPERIENCIA SELECCIONADA
-Fundador e ingeniero de producto IA · Agents AI Ltd | Jul 2025–Present · Madrid, Spain · UK-registered company
+Fundador e ingeniero de producto IA · Agents AI Ltd | Jul 2025–Jun 2026 · Madrid, España · empresa registrada en Reino Unido
 - Responsable de descubrimiento, arquitectura, implementación, despliegue, analítica, monetización y transferencia operativa en productos propios y sistemas B2B.
 - Construí OULANG para web, iOS y Android y extendí capacidades compartidas hacia Huatong, OUPIN, AutoClient y servicios de IA aplicada.
 
-Fundador y líder de producto de operaciones comerciales agénticas · AutoClient | 2024–Present · Madrid / Remote
+Fundador y líder de producto de operaciones comerciales agénticas · AutoClient | Mar 2024–Jul 2025 · Madrid / remoto · programa Lanzadera, sep–nov 2025
 - Diseñé un sistema agéntico para investigación, enriquecimiento, cualificación, trabajo en CRM y seguimiento coordinado por email, LinkedIn, WhatsApp y voz.
 - Conecté contexto empresarial, salidas estructuradas y revisión humana desde la primera búsqueda hasta la siguiente acción comercial; seleccionado por Lanzadera en 2025.
 
-Instructor de IA y consultor técnico independiente | 2022–Present · Madrid / Remote
+Instructor de IA y consultor técnico independiente | 2022–Jul 2025 · Madrid / remoto
 - Enseño IA práctica, agentes, MCP, automatización, Python e ingeniería de producto mediante aplicaciones reales, construcción en directo y programas orientados a implementación.
 - Impartí más de 125 horas grabadas de formación en IA, talleres de producto y sesiones de implementación técnica en español, inglés y mandarín.
 
@@ -33,7 +33,7 @@ Web, móvil, crecimiento y formación · Megawebs / Megacursos | 2009–2023
 - Construí más de 70 proyectos web y móviles y lideré SEO, adquisición y entrega a clientes.
 - Produje un catálogo técnico público de 373 vídeos sobre tecnología creativa, software e IA aplicada.
 
-PRUEBAS DE ENTREGA
+SISTEMAS Y RESULTADOS SELECCIONADOS
 - Ecosistema OULANG: Construí un marketplace multilingüe para comunidades chinas en web, iOS y Android y extendí capacidades compartidas hacia Huatong y OUPIN.
 - AutoClient: Construí un sistema agéntico de operaciones comerciales que conecta investigación, enriquecimiento, CRM y seguimiento multicanal; seleccionado por Lanzadera en 2025.
 - Ingeniería open source: Publiqué VUDA (80 estrellas / 7 forks) y SMTP MCP Server (17 estrellas / 15 forks), además de herramientas reutilizables para navegador, mensajería y agentes.

@@ -25,23 +25,23 @@ ENGINEERING STACK
 Python; TypeScript; SQL; FastAPI; Node.js; REST APIs; webhooks; LangGraph; LangChain; MCP; RAG; OpenAI; Anthropic; Gemini; React; Next.js; Ionic; Capacitor; Expo; SwiftUI; Docker; Linux; CI/CD; Coolify; Cloudflare; PostHog; cloud platforms.
 
 PROFESSIONAL EXPERIENCE
-Founding AI Engineer · Agents AI Ltd | Jul 2025–Present · Madrid, Spain
+Founding AI Engineer · Agents AI Ltd | Jul 2025–Jun 2026 · Madrid, Spain
 - Built and operated OULANG across web, iOS and Android, reaching 17,262 users, 38,857 listings and 89,913 contact reveals by 3 July 2026.
 - Engineered production agent workflows with explicit state, tool and function calling, structured outputs, evaluation checkpoints, observability and human review across Python, TypeScript, APIs and SQL.
 
-Agentic AI Systems Engineer · AutoClient AI | Mar 2024–Present · Madrid, Spain
+Agentic AI Systems Engineer · AutoClient AI | Mar 2024–Jul 2025 · Madrid, Spain
 - Founded and architected an agentic revenue-operations system selected by Lanzadera in 2025, spanning research, enrichment, qualification, CRM execution and next-action planning.
 - Orchestrated email, LinkedIn, WhatsApp and voice around shared account context, traceable execution, structured outputs and review points before external action.
 
-Medical AI Product Engineer · AutoMedical | Feb 2025–Present · Madrid, Spain
+Medical AI Product Engineer · AutoMedical | Feb–Jul 2025 · Madrid, Spain
 - Built multimodal research and learning workflows for image review, structured reporting and professional education with inspectable outputs and human oversight.
 - Architected APOLO as a two-stage vision-language and reasoning workflow and prototyped AutoIOL and MedSAM-based ophthalmology workflows.
 
-Independent AI Systems Consultant | Jul 2022–Present · Madrid / Remote
+Independent AI Systems Consultant | Jul 2022–Jul 2025 · Madrid / Remote
 - Designed production architectures for agents, RAG, MCP, APIs, SQL and cloud environments from requirements through deployment and operational handover.
 - Delivered 111 recorded lessons, workshops and implementation sessions totalling 125.83 hours in Spanish, English and Mandarin.
 
-AI Product & Medical Workflow Consultant · Fernando Ly / EyeUnit | Aug 2024–Aug 2026 · Madrid / Remote
+AI Product & Medical Workflow Consultant · Fernando Ly / EyeUnit | Aug 2024–Jun 2026 · Madrid / Remote
 - Designed ophthalmology and OCT prototypes for account intelligence, cross-sell discovery, multimodal review, longitudinal tracking and structured reporting.
 - Translated specialist requirements into product concepts, data flows, interfaces and reviewable human-in-the-loop outputs.
 

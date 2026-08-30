@@ -28,7 +28,7 @@ Founding GCP AI Engineer & Platform Lead | Agents AI Ltd / OULANG | Jul 2025-Pre
 
 GCP Data & AI Platform Consultant | IWAKY S.L. / AutoPricing | 2025-2026
 - Architected marketplace, WhatsApp and ERP inputs into GCS; Pub/Sub and Python/Apache Beam on Dataflow for normalization; AlloyDB for operational state and BigQuery for analytics; Vertex AI for matching and pricing signals; Cloud Run for APIs and scheduled jobs.
-- Delivered architecture, milestones, dashboards and stakeholder outputs for a signed EUR 35,000 scope; EUR 17,500 milestone received and 69 delivery-proof captures produced.
+- Delivered architecture, milestones, dashboards and stakeholder outputs for a signed EUR 35,000 scope, with a EUR 17,500 milestone received.
 - Automated builds and releases, managed service identities and secrets, and instrumented the ingestion-to-dashboard path.
 
 GCP ML Engineer & Technical Consultant | Independent / AutoMedical / APOLO | 2022-Present
@@ -58,7 +58,7 @@ SELECTED CREDENTIALS
 Machine Learning Operations (MLOps) Specialization - Board Infinity, 2026.
 Google AI Professional Certificate - Google, 2026.
 Google Data Analytics Professional Certificate - Google, 2026.
-Google Cloud Professional Machine Learning Engineer exam-blueprint alignment (certification not claimed): hands-on architecture maps to all six exam domains: architecting low-code AI solutions; managing data and models across teams; scaling prototypes; serving and scaling models; automating ML pipelines; and monitoring AI solutions across Vertex AI, BigQuery, GKE, Cloud Run, AlloyDB and Cloud Build.
+Google Cloud Professional Machine Learning Engineer exam-domain experience: hands-on architecture maps to all six exam domains: architecting low-code AI solutions; managing data and models across teams; scaling prototypes; serving and scaling models; automating ML pipelines; and monitoring AI solutions across Vertex AI, BigQuery, GKE, Cloud Run, AlloyDB and Cloud Build.
 Agentic AI Engineering; MLOps/LLMOps; Databricks Mosaic AI; LangGraph/LangChain; MCP-powered systems; Microsoft Azure AI Fundamentals (AI-900).
 
 LANGUAGES AND AVAILABILITY

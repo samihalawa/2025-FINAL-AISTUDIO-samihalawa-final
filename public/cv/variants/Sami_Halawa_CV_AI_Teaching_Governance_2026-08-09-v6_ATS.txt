@@ -13,15 +13,15 @@ Agent systems: MCP, RAG, multi-agent workflows, memory, tool use, deployment and
 Product leadership: Python, FastAPI, TypeScript, automation, stakeholder translation and operational handover
 
 SELECTED EXPERIENCE
-AI Instructor & Independent Technical Consultant | 2022–Present · Madrid / Remote
+AI Instructor & Independent Technical Consultant | 2022–Jul 2025 · Madrid / Remote
 - Teach practical AI, agents, MCP, automation, Python and product engineering through working applications, live builds and implementation-focused curricula.
 - Delivered more than 125 recorded hours of AI instruction, product workshops and technical implementation sessions in Spanish, English and Mandarin.
 
-Founder & AI Product Engineer · Agents AI Ltd | Jul 2025–Present · Madrid, Spain · UK-registered company
+Founder & AI Product Engineer · Agents AI Ltd | Jul 2025–Jun 2026 · Madrid, Spain · UK-registered company
 - Own product discovery, architecture, implementation, deployment, analytics, monetisation and operational handover across founder-led and B2B systems.
 - Built OULANG across web, iOS and Android and extended shared product capabilities into Huatong, OUPIN, AutoClient and applied AI services.
 
-Founder & Agentic Revenue Operations Product Lead · AutoClient | 2024–Present · Madrid / Remote
+Founder & Agentic Revenue Operations Product Lead · AutoClient | Mar 2024–Jul 2025 · Madrid / Remote · Lanzadera accelerator, Sep–Nov 2025
 - Designed an agentic system for account research, enrichment, qualification, CRM work and coordinated follow-up across email, LinkedIn, WhatsApp and voice.
 - Connected live business context, structured outputs and human checkpoints from the first search to the next commercial action; selected by Lanzadera in 2025.
 
@@ -33,7 +33,7 @@ Web, Mobile, Growth & Education · Megawebs / Megacursos | 2009–2023
 - Built more than 70 web and mobile projects and led SEO, acquisition and customer delivery.
 - Produced a 373-video public technical catalogue spanning creative technology, software and applied AI.
 
-DELIVERY EVIDENCE
+SELECTED SYSTEMS AND OUTCOMES
 - Implementation-first teaching: Delivered more than 125 recorded hours of AI instruction, product workshops and technical implementation sessions.
 - Applied governance: Translate governance and EU AI Act requirements into product decisions, reviewable workflows and practical implementation guidance.
 - Published learning systems: Authored ChinoTotal, a 296-page Mandarin course, and produced a 373-video public technical catalogue.

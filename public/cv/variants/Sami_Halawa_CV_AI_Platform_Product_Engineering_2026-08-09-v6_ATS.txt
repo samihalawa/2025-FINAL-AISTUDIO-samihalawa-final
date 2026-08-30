@@ -13,7 +13,7 @@ Product surfaces: React, Next.js, Ionic, Capacitor, Expo/React Native, SwiftUI a
 Infrastructure: Docker, Linux, Cloudflare, Coolify, Hetzner and working delivery familiarity with AWS, Azure and GCP
 
 SELECTED EXPERIENCE
-Founder & AI Product Engineer · Agents AI Ltd | Jul 2025–Present · Madrid, Spain · UK-registered company
+Founder & AI Product Engineer · Agents AI Ltd | Jul 2025–Jun 2026 · Madrid, Spain · UK-registered company
 - Own product discovery, architecture, implementation, deployment, analytics, monetisation and operational handover across founder-led and B2B systems.
 - Built OULANG across web, iOS and Android and extended shared product capabilities into Huatong, OUPIN, AutoClient and applied AI services.
 
@@ -21,11 +21,11 @@ Senior Full-Stack Engineer · Damehosting | 2019–2023
 - Developed and maintained production web systems across frontend, backend, integrations and delivery.
 - Supported code review, CI/CD, Linux/server operations and developer mentoring.
 
-Founder & Agentic Revenue Operations Product Lead · AutoClient | 2024–Present · Madrid / Remote
+Founder & Agentic Revenue Operations Product Lead · AutoClient | Mar 2024–Jul 2025 · Madrid / Remote · Lanzadera accelerator, Sep–Nov 2025
 - Designed an agentic system for account research, enrichment, qualification, CRM work and coordinated follow-up across email, LinkedIn, WhatsApp and voice.
 - Connected live business context, structured outputs and human checkpoints from the first search to the next commercial action; selected by Lanzadera in 2025.
 
-Technical Product Lead & AI Mentor · Valerio Trigos / Umbramed | 2025–2026 · Remote
+Technical Product Lead & AI Mentor · Valerio Trigos / Umbramed | Jul 2025–Jun 2026 · Remote
 - Led Ionic/Capacitor/PWA architecture, exam-data workflows, delivery recovery, integrations, payment preparation and AI-assisted product mentoring.
 - Supported product roadmap, deployment preparation and accelerator-application materials.
 
@@ -33,7 +33,7 @@ Web, Mobile, Growth & Education · Megawebs / Megacursos | 2009–2023
 - Built more than 70 web and mobile projects and led SEO, acquisition and customer delivery.
 - Produced a 373-video public technical catalogue spanning creative technology, software and applied AI.
 
-DELIVERY EVIDENCE
+SELECTED SYSTEMS AND OUTCOMES
 - Shared marketplace platform: Operated identity, listings, search, payments, analytics and multilingual delivery across OULANG, Huatong and OUPIN.
 - Actor and data infrastructure: Built collection and downstream-consumer workflows around Crawlab/Apify-style actors, shared storage and product reporting.
 - Cross-platform products: Delivered web, PWA, iOS and Android work across marketplaces, productivity, medical education and consumer products.

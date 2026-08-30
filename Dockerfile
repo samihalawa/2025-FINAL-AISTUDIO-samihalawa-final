@@ -1,6 +1,7 @@
 # Multi-stage: build Vite SPA, serve via nginx on 8080 (Coolify)
 FROM node:20-slim AS build
 WORKDIR /app
+RUN apt-get update && apt-get install -y --no-install-recommends poppler-utils
 COPY package*.json ./
 RUN (npm ci || npm install) \
     && ROLLUP_VERSION="$(node -p "require('./node_modules/rollup/package.json').version")" \
