@@ -1,32 +1,36 @@
 import { execFileSync } from 'node:child_process';
-import { existsSync, readFileSync } from 'node:fs';
-import { extname, resolve } from 'node:path';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
+import { extname, join, relative, resolve } from 'node:path';
 
-const activeArtifacts = [
-  'public/cv/Sami_Halawa_CV.pdf',
-  'public/cv/Sami_Halawa_CV_ATS.txt',
-  'public/cv/Sami_Halawa_CV_ES.pdf',
-  'public/cv/Sami_Halawa_CV_ES_ATS.txt',
-  'public/cv/Sami_Halawa_Complete_CV.pdf',
-  'public/cv/variants/Sami_Halawa_CV_AI_Platform_Product_Engineering_2026-08-09-v6.pdf',
-  'public/cv/variants/Sami_Halawa_CV_AI_Platform_Product_Engineering_2026-08-09-v6_ATS.txt',
-  'public/cv/variants/Sami_Halawa_CV_AI_Teaching_Governance_2026-08-09-v6.pdf',
-  'public/cv/variants/Sami_Halawa_CV_AI_Teaching_Governance_2026-08-09-v6_ATS.txt',
-  'public/cv/variants/Sami_Halawa_CV_Clinical_AI_Healthcare_2026-08-09-v6.pdf',
-  'public/cv/variants/Sami_Halawa_CV_Clinical_AI_Healthcare_2026-08-09-v6_ATS.txt',
-  'public/cv/variants/Sami_Halawa_CV_Founding_AI_Product_2026-08-09-v6.pdf',
-  'public/cv/variants/Sami_Halawa_CV_Founding_AI_Product_2026-08-09-v6_ATS.txt',
-  'public/cv/variants/Sami_Halawa_CV_Founding_AI_Product_ES_2026-08-09-v6.pdf',
-  'public/cv/variants/Sami_Halawa_CV_Founding_AI_Product_ES_2026-08-09-v6_ATS.txt',
-  'public/cv/variants/Sami_Halawa_CV_GenAI_Agents_Automation_2026-08-10-v9.pdf',
-  'public/cv/variants/Sami_Halawa_CV_GenAI_Agents_Automation_2026-08-10-v9_ATS.txt',
-];
+function collectTextArtifacts(directory) {
+  return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
+    const path = join(directory, entry.name);
+    if (entry.isDirectory()) return collectTextArtifacts(path);
+    return ['.pdf', '.txt'].includes(extname(entry.name).toLowerCase())
+      ? [relative(process.cwd(), path)]
+      : [];
+  });
+}
+
+const activeArtifacts = collectTextArtifacts(resolve('public/cv')).sort();
 
 const sourceFiles = [
+  'components/About.tsx',
+  'components/Contact.tsx',
+  'components/Experience.tsx',
+  'components/Footer.tsx',
+  'components/Hero.tsx',
+  'components/HireCTA.tsx',
+  'components/Projects.tsx',
+  'i18n/translations.ts',
   'pages/CVPage.tsx',
+  'pages/case-studies/AutoClient.tsx',
+  'pages/case-studies/Oulang.tsx',
   'portfolio.ts',
   'constants.ts',
   'index.html',
+  'public/llms.txt',
+  'seo/siteMetadata.js',
 ];
 
 const forbidden = [
@@ -53,6 +57,29 @@ const forbidden = [
   /internal_context/i,
 ];
 
+const contradictions = [
+  /Agents AI Ltd[\s\S]{0,220}(?:January 2024|Jan(?:uary)? 2024|2 years 6 months)/i,
+  /(?:January 2024|Jan(?:uary)? 2024|2 years 6 months)[\s\S]{0,220}Agents AI Ltd/i,
+  /AutoClient[\s\S]{0,160}2024\s*[–-]\s*(?:present|actualidad|présent|至今)/i,
+  /2024\s*[–-]\s*(?:present|actualidad|présent|至今)[\s\S]{0,160}AutoClient/i,
+  /OULANG[\s\S]{0,160}2024\s*[–-]\s*(?:present|actualidad|présent|至今)/i,
+  /2024\s*[–-]\s*(?:present|actualidad|présent|至今)[\s\S]{0,160}OULANG/i,
+  /London company/i,
+  /Empresa y portfolio de producto en Londres/i,
+  /Contact Agents AI Ltd/i,
+  /Contacta con Agents AI Ltd/i,
+  /Contactez Agents AI Ltd/i,
+  /联系 Agents AI Ltd/i,
+];
+
+const requiredPositioning = [
+  ['components/Hero.tsx', /Senior \/ Lead AI Engineer/],
+  ['seo/siteMetadata.js', /jobTitle: 'Senior \/ Lead AI Engineer'/],
+  ['i18n/translations.ts', /'layout\.jobTitle': 'Senior \/ Lead AI Engineer'/],
+  ['public/llms.txt', /Senior \/ Lead AI Engineer/],
+  ['pages/CVPage.tsx', /Senior \/ Lead AI Engineer taking agentic systems from architecture to production/],
+];
+
 function readPublicText(relativePath) {
   const absolutePath = resolve(relativePath);
   if (!existsSync(absolutePath)) throw new Error(`Missing active public artifact: ${relativePath}`);
@@ -65,10 +92,15 @@ function readPublicText(relativePath) {
 const failures = [];
 for (const relativePath of [...sourceFiles, ...activeArtifacts]) {
   const text = readPublicText(relativePath);
-  for (const pattern of forbidden) {
+  for (const pattern of [...forbidden, ...contradictions]) {
     const match = text.match(pattern);
     if (match) failures.push(`${relativePath}: ${JSON.stringify(match[0])}`);
   }
+}
+
+for (const [relativePath, pattern] of requiredPositioning) {
+  const text = readPublicText(relativePath);
+  if (!pattern.test(text)) failures.push(`${relativePath}: missing canonical Senior / Lead AI Engineer positioning`);
 }
 
 if (failures.length) {

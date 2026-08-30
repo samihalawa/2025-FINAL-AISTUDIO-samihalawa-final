@@ -7,7 +7,7 @@ const content: Record<LanguageCode, {
   proofTitle: string; proofBody: string; now: string; building: string[]; stats: { value: string; label: string }[];
 }> = {
   en: {
-    eyebrow: 'Founding AI Engineer · Madrid · Europe · ES / EN / 中文',
+    eyebrow: 'Senior / Lead AI Engineer · Madrid · Europe · ES / EN / 中文',
     title: 'I build production AI systems across agents, RAG, voice and automation.',
     intro: 'Hands-on across Python, TypeScript, APIs, SQL, web and mobile, deployment and observability. I lead cross-functional delivery and connect model workflows to real product context, operations and human review.',
     work: 'Explore the portfolio', cv: 'Open concise CV', available: 'Open to work · available immediately for full-time, contract, hybrid or remote roles',
@@ -16,7 +16,7 @@ const content: Record<LanguageCode, {
     stats: [{ value: '7', label: 'flagship programmes' }, { value: '249', label: 'original public repositories' }, { value: '80★', label: 'VUDA · 7 forks' }, { value: '125+', label: 'recorded training hours' }]
   },
   es: {
-    eyebrow: 'Ingeniero fundador de IA · Madrid · Europa · ES / EN / 中文',
+    eyebrow: 'Ingeniero sénior / lead de IA · Madrid · Europa · ES / EN / 中文',
     title: 'Construyo sistemas de IA en producción con agentes, RAG, voz y automatización.',
     intro: 'Trabajo directamente con Python, TypeScript, APIs, SQL, web y móvil, despliegue y observabilidad. Lidero entregas multidisciplinares y conecto los modelos con el contexto real de producto, las operaciones y la revisión humana.',
     work: 'Explorar el portfolio', cv: 'Abrir CV conciso', available: 'Open to work · disponibilidad inmediata · jornada completa, contrato, híbrido o remoto',
@@ -25,7 +25,7 @@ const content: Record<LanguageCode, {
     stats: [{ value: '7', label: 'programas principales' }, { value: '249', label: 'repositorios públicos propios' }, { value: '80★', label: 'VUDA · 7 forks' }, { value: '125+', label: 'horas grabadas de formación' }]
   },
   fr: {
-    eyebrow: 'Ingénieur IA fondateur · Madrid · Europe · ES / EN / 中文',
+    eyebrow: 'Ingénieur IA senior / lead · Madrid · Europe · ES / EN / 中文',
     title: 'Je construis des systèmes IA en production avec agents, RAG, voix et automatisation.',
     intro: 'J’interviens directement sur Python, TypeScript, APIs, SQL, web et mobile, déploiement et observabilité. Je pilote des livraisons pluridisciplinaires et relie les modèles au contexte produit, aux opérations et à la validation humaine.',
     work: 'Explorer le portfolio', cv: 'Ouvrir le CV concis', available: 'Ouvert au travail · disponible immédiatement · temps plein, contrat, hybride ou distant',
@@ -34,7 +34,7 @@ const content: Record<LanguageCode, {
     stats: [{ value: '7', label: 'programmes phares' }, { value: '249', label: 'dépôts publics originaux' }, { value: '80★', label: 'VUDA · 7 forks' }, { value: '125+', label: 'heures de formation enregistrées' }]
   },
   zh: {
-    eyebrow: '创始 AI 工程师 · 马德里 · 欧洲 · 西班牙语 / 英语 / 中文',
+    eyebrow: '高级 / 主管 AI 工程师 · 马德里 · 欧洲 · 西班牙语 / 英语 / 中文',
     title: '我构建涵盖智能体、RAG、语音与自动化的生产级 AI 系统。',
     intro: '亲自负责 Python、TypeScript、API、SQL、Web 与移动端、部署和可观测性，领导跨职能交付，并把模型工作流连接到真实产品、运营与人工审核。',
     work: '浏览作品集', cv: '打开精简简历', available: '正在求职 · 可立即到岗 · 全职、合同、混合或远程',

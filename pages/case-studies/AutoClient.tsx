@@ -26,7 +26,7 @@ const AutoClientCase: React.FC = () => (
   <article className="bg-[#f8f6f1] text-slate-800">
     <header className="border-b border-slate-300 py-16 sm:py-24">
       <div className="container">
-        <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Product system · revenue operations · 2024–present</p>
+        <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Product system · revenue operations · Mar 2024–Jul 2025</p>
         <div className="mt-7 grid gap-8 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
           <h1 className="cv-serif max-w-5xl text-5xl font-normal leading-[.98] tracking-[-.045em] text-slate-950 sm:text-7xl">One account context from first research to the next follow-up.</h1>
           <p className="border-l border-slate-400 pl-6 text-lg leading-relaxed text-slate-600">AutoClient connects account research, enrichment, qualification, CRM work and multi-channel follow-up in one operator-led system.</p>
@@ -97,7 +97,7 @@ const AutoClientCase: React.FC = () => (
 
     <section className="py-16 sm:py-24" aria-labelledby="autoclient-lineage-heading">
       <div className="container grid gap-10 lg:grid-cols-[.85fr_1.15fr] lg:gap-16">
-        <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Product lineage</p><h2 id="autoclient-lineage-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">A product line, not a one-off automation.</h2><p className="mt-5 text-lg leading-relaxed text-slate-600">AutoClient continues earlier outreach product work and now connects to reusable messaging, mailbox and voice tooling.</p></div>
+        <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Product lineage</p><h2 id="autoclient-lineage-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">A product line, not a one-off automation.</h2><p className="mt-5 text-lg leading-relaxed text-slate-600">AutoClient extended earlier outreach product work and connected it to reusable messaging, mailbox and voice tooling.</p></div>
         <div className="border-t border-slate-400">{[
           ['DameSender', 'The earlier email and acquisition product that established the product lineage.'],
           ['GOWA and mailbox tools', 'Reusable WhatsApp, chat-history, media, SMTP and IMAP integration work.'],

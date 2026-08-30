@@ -72,7 +72,7 @@ export const inventoryLaneCopy: Record<InventoryLane, LocalizedCopy> = {
 
 export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   {
-    id: 'oulang', name: 'OULANG (欧浪AI)', period: '2024–present', category: 'platforms', featured: true,
+    id: 'oulang', name: 'OULANG (欧浪AI)', period: 'Build 2024–Jun 2026 · live product', category: 'platforms', featured: true,
     description: copy('Mandarin-first marketplace and local-life platform for Spain, live in production on web, iOS and Android with 17,262 registered users, 38,857 listings and 89,913 contact reveals recorded as of 3 July 2026.', 'Marketplace y plataforma de vida local para la comunidad china en España, en producción en web, iOS y Android con 17.262 usuarios registrados, 38.857 anuncios y 89.913 revelaciones de contacto registradas a 3 de julio de 2026.', 'Marketplace et plateforme locale pour la communauté chinoise en Espagne, en production sur web, iOS et Android avec 17 262 utilisateurs inscrits, 38 857 annonces et 89 913 révélations de contact enregistrées au 3 juillet 2026.', '面向西班牙华人社区的中文市场与本地生活平台，已在 Web、iOS 与 Android 三端正式上线，截至 2026 年 7 月 3 日拥有 17,262 名注册用户、38,857 条信息与 89,913 次联系方式查看。'),
     tags: ['Next.js', 'Expo', 'Gemini', 'RevenueCat', 'PostHog'], href: 'https://oulang.ai', image: '/portfolio/oulang-home.png', imagePosition: 'center 18%'
   },
@@ -167,8 +167,8 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     tags: ['AI services', 'Compliance', 'Multilingual'], href: 'https://pime.ai', image: '/portfolio/pime-studio-cover.webp', imagePosition: 'center 52%'
   },
   {
-    id: 'agents-ai', name: 'Agents AI Ltd', period: '2025–present', category: 'platforms',
-    description: copy('London company and product portfolio spanning healthcare, revenue operations and applied AI systems.', 'Empresa y portfolio de producto en Londres para salud, operaciones comerciales y sistemas de IA aplicada.'),
+    id: 'agents-ai', name: 'Agents AI Ltd', period: 'Jul 2025–Jun 2026 delivery programmes', category: 'platforms',
+    description: copy('UK-registered company through which founder-led healthcare, revenue-operations and applied-AI programmes were delivered.', 'Empresa registrada en el Reino Unido a través de la que se entregaron programas de salud, operaciones comerciales e IA aplicada liderados por su fundador.'),
     tags: ['Company', 'Products', 'Applied AI'], href: 'https://agentsai.ltd', image: '/portfolio/agentsai-home.png', imagePosition: 'center 20%'
   },
   {
@@ -310,7 +310,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
 
 export const PORTFOLIO_STORIES: PortfolioStory[] = [
   {
-    id: 'oulang', name: 'OULANG (欧浪AI)', period: '2024–present', category: 'platforms', featured: true,
+    id: 'oulang', name: 'OULANG (欧浪AI)', period: 'Build 2024–Jun 2026 · live product', category: 'platforms', featured: true,
     description: copy('A Mandarin-first marketplace and local-life product built for the Chinese community in Spain, live on web, iOS and Android with 17,262 registered users, 38,857 listings and 89,913 contact reveals as of 3 July 2026.', 'Marketplace y producto de vida local en mandarín para la comunidad china en España, en producción en web, iOS y Android con 17.262 usuarios registrados, 38.857 anuncios y 89.913 revelaciones de contacto a 3 de julio de 2026.', 'Marketplace et produit de vie locale en mandarin pour la communauté chinoise en Espagne, en production sur web, iOS et Android avec 17 262 utilisateurs inscrits, 38 857 annonces et 89 913 révélations de contact au 3 juillet 2026.', '面向西班牙华人社区的中文市场与本地生活产品，已在 Web、iOS 与 Android 上线，截至 2026 年 7 月 3 日拥有 17,262 名注册用户、38,857 条信息与 89,913 次联系方式查看。'),
     challenge: copy('Bring housing, jobs, services and community discovery into one coherent experience across languages and devices.', 'Unir vivienda, empleo, servicios y comunidad en una experiencia coherente entre idiomas y dispositivos.'),
     build: copy('Web, iOS and Android surfaces with shared marketplace infrastructure, publishing, subscriptions and product analytics.', 'Superficies web, iOS y Android con infraestructura compartida de marketplace, publicación, suscripciones y analítica.'),
@@ -342,8 +342,8 @@ export const PORTFOLIO_STORIES: PortfolioStory[] = [
     includes: ['Research & enrichment', 'CRM', 'Email · WhatsApp · voice'], image: '/portfolio/autoclient-operations-cover.webp', imagePosition: 'center 42%', caseStudy: '/case-studies/autoclient', imageKind: 'illustration'
   },
   {
-    id: 'pime', name: 'PIME.ai & Agents AI', period: '2025–present', category: 'platforms', featured: true,
-    description: copy('A product studio and company portfolio for practical agent systems, training and AI-readiness work.', 'Estudio de producto y portfolio empresarial para agentes prácticos, formación y preparación en IA.'),
+    id: 'pime', name: 'PIME.ai · Agents AI delivery', period: 'PIME.ai 2025–present · Agents AI Jul 2025–Jun 2026', category: 'platforms', featured: true,
+    description: copy('PIME.ai is the ongoing product studio for practical agent systems, training and AI-readiness work; the related Agents AI delivery programmes ran from July 2025 through June 2026.', 'PIME.ai es el estudio de producto activo para agentes prácticos, formación y preparación en IA; los programas relacionados de Agents AI se entregaron entre julio de 2025 y junio de 2026.'),
     challenge: copy('Turn broad AI capability into clearly scoped products and programmes that a team can understand, buy and operate.', 'Convertir capacidades amplias de IA en productos y programas claros que un equipo pueda entender, contratar y operar.'),
     build: copy('Studio and company sites, product packaging, multilingual service journeys and an EU AI Act readiness pack.', 'Sitios de estudio y empresa, empaquetado de producto, recorridos multilingües y pack de preparación para la Ley de IA.'),
     role: copy('Founder · product strategy and engineering', 'Fundador · estrategia de producto e ingeniería'),
@@ -448,7 +448,7 @@ export const PORTFOLIO_INVENTORY: InventoryItem[] = [
   inventoryItem(38, 'timeline-fernando', 'Fernando Ly medical AI research', '2025–2026', '2025 Q2', 'clients', 'verified', 'Applied medical, OCT and market-intelligence collaboration.', 'Colaboración aplicada en medicina, OCT e inteligencia de mercado.'),
   inventoryItem(39, 'timeline-autoclient-expand', 'AutoClient expands', '2025', '2025 Q2', 'products', 'verified', 'Agentic acquisition platform with research, scoring and multichannel follow-up.', 'Plataforma agéntica de captación con investigación, scoring y seguimiento multicanal.'),
   inventoryItem(40, 'timeline-mcp-wave', 'Open-source MCP integrations', '2025', '2025 Q2', 'open-source', 'verified', 'Browser, shell, email and developer-tool integrations for AI agents.', 'Integraciones de navegador, shell, email y herramientas para agentes de IA.', 'https://github.com/samihalawa?tab=repositories'),
-  inventoryItem(41, 'timeline-agents-ai', 'Agents AI Ltd', '2025–present', '2025 Q2', 'products', 'verified', 'Company and delivery vehicle for AI product and client work.', 'Empresa y vehículo de entrega para producto y clientes de IA.', 'https://agentsai.ltd', '/portfolio/agentsai-home.png'),
+  inventoryItem(41, 'timeline-agents-ai', 'Agents AI Ltd', 'Jul 2025–Jun 2026', '2025 Q2', 'products', 'verified', 'UK-registered company used for founder-led AI product and client delivery.', 'Empresa registrada en el Reino Unido utilizada para producto y entrega a clientes de IA liderados por su fundador.', 'https://agentsai.ltd', '/portfolio/agentsai-home.png'),
   inventoryItem(42, 'timeline-lanzadera', 'Lanzadera ecosystem participation', '2025', '2025 Q2', 'clients', 'verified', 'AutoClient participation in Lanzadera startup and partner benefits.', 'Participación de AutoClient en el ecosistema y beneficios de Lanzadera.'),
 
   inventoryItem(43, 'timeline-automedical-packaging', 'APOLO / AutoMedical packaging', '2025', '2025 Q3', 'products', 'verified', 'Packaging of medical AI research into a public product surface.', 'Empaquetado de investigación médica en una superficie pública.', 'https://automedical.ai'),
@@ -466,7 +466,7 @@ export const PORTFOLIO_INVENTORY: InventoryItem[] = [
   inventoryItem(55, 'timeline-lemon-ai', 'Lemon AI customization', 'Nov 2025', '2025 Q4', 'infrastructure', 'verified', 'Deployment, landing page, identity and infrastructure work on the upstream Lemon AI platform.', 'Despliegue, landing, identidad e infraestructura sobre Lemon AI upstream.'),
   inventoryItem(56, 'timeline-agents-course', '15-hour AI agents course', '2025', '2025 Q4', 'education', 'verified', 'Foundations, tools, memory, multi-agent systems, RAG, deployment and observability.', 'Fundamentos, herramientas, memoria, multiagentes, RAG, despliegue y observabilidad.'),
 
-  inventoryItem(57, 'timeline-oulang-central', 'OULANG central production platform', '2024–present', '2026 Q1', 'products', 'verified', 'Chinese-diaspora housing, jobs, second-hand, services and community platform in Spain.', 'Plataforma para la diáspora china en España: vivienda, empleo, segunda mano, servicios y comunidad.', 'https://oulang.ai', '/portfolio/oulang-home.png'),
+  inventoryItem(57, 'timeline-oulang-central', 'OULANG central production platform', 'Build 2024–Jun 2026 · live product', '2026 Q1', 'products', 'verified', 'Chinese-diaspora housing, jobs, second-hand, services and community platform in Spain; built and led through June 2026 and still live.', 'Plataforma para la diáspora china en España: vivienda, empleo, segunda mano, servicios y comunidad; construida y liderada hasta junio de 2026 y todavía activa.', 'https://oulang.ai', '/portfolio/oulang-home.png'),
   inventoryItem(59, 'timeline-umbramed-continuation', 'Umbramed product development', '2026', '2026 Q1', 'clients', 'verified', 'Continued exam-ingestion, connector, PWA, app packaging, payment, brand and medical-product development.', 'Desarrollo continuado de ingesta de exámenes, conectores, PWA, packaging de app, pagos, marca y producto médico.', 'https://github.com/samihalawa/umbramed-eic-2026'),
   inventoryItem(60, 'timeline-skills', 'Agent tooling & automation', '2026', '2026 Q1', 'open-source', 'verified', 'Reusable browser, desktop and MCP tools for AI-assisted work.', 'Herramientas reutilizables de navegador, escritorio y MCP para trabajo asistido por IA.'),
   inventoryItem(61, 'timeline-gowa', 'GOWA', '2026', '2026 Q1', 'open-source', 'verified', 'WhatsApp API and automation work with history and media support.', 'API y automatización de WhatsApp con historial y medios.', 'https://github.com/samihalawa/gowa-whatsapp-api'),

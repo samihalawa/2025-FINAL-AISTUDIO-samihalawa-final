@@ -26,7 +26,7 @@ const OulangCase: React.FC = () => (
   <article className="bg-[#f8f6f1] text-slate-800">
     <header className="border-b border-slate-300 py-16 sm:py-24">
       <div className="container">
-        <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Founder-built platform · marketplace and local life · platform work from 2024 · current product operating since 2026</p>
+        <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Founder-built platform · marketplace and local life · built and led 2024–Jun 2026 · product remains live</p>
         <div className="mt-7 grid gap-8 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
           <h1 className="cv-serif max-w-5xl text-5xl font-normal leading-[.98] tracking-[-.045em] text-slate-950 sm:text-7xl">A Mandarin-first operating surface for life in Spain.</h1>
           <p className="border-l border-slate-400 pl-6 text-lg leading-relaxed text-slate-600">OULANG brings housing, jobs, services, community publishing and practical AI assistance into one product for the Chinese community in Spain.</p>

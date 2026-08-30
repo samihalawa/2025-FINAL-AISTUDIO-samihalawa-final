@@ -244,8 +244,8 @@ const legacyCertifications = [
 ] as const;
 
 const professionalSummary = {
-  en: 'Founding AI engineer and systems architect shipping production agentic AI — multi-agent workflows, retrieval-augmented generation and Model Context Protocol tooling — across web, iOS and Android. OULANG, the marketplace and local-life platform I lead, is live on all three platforms with 17,262 registered users, 38,857 listings and 89,913 contact reveals recorded as of 3 July 2026. My open-source MCP servers are in daily developer use: visual-ui-debug-agent-mcp has 80 GitHub stars and 900+ npm installs, and email-smtp-imap-mcp has passed 1,700+ npm installs. I design, deliver and teach in Spanish, English and Mandarin (中文), with 125+ recorded hours of instruction behind the practice.',
-  es: 'Ingeniero fundador de IA y arquitecto de sistemas que lleva IA agéntica a producción —flujos multiagente, generación aumentada por recuperación y herramientas Model Context Protocol— en web, iOS y Android. OULANG, el marketplace y plataforma de vida local que dirijo, está en producción en las tres plataformas con 17.262 usuarios registrados, 38.857 anuncios y 89.913 revelaciones de contacto registradas a 3 de julio de 2026. Mis servidores MCP open source se usan a diario: visual-ui-debug-agent-mcp acumula 80 estrellas en GitHub y más de 900 instalaciones en npm, y email-smtp-imap-mcp supera las 1.700 instalaciones en npm. Diseño, entrego y enseño en español, inglés y mandarín (中文), con más de 125 horas grabadas de formación detrás.'
+  en: 'Senior / Lead AI engineer and systems architect shipping production agentic AI — multi-agent workflows, retrieval-augmented generation and Model Context Protocol tooling — across web, iOS and Android. I built and led OULANG through June 2026; the marketplace and local-life product remains live on all three platforms with 17,262 registered users, 38,857 listings and 89,913 contact reveals recorded as of 3 July 2026. My open-source MCP servers are in daily developer use: visual-ui-debug-agent-mcp has 80 GitHub stars and 900+ npm installs, and email-smtp-imap-mcp has passed 1,700+ npm installs. I work in Spanish, English and Mandarin (中文); technical teaching supports the same engineering practice, with 125+ recorded hours.',
+  es: 'Ingeniero sénior / lead de IA y arquitecto de sistemas que lleva IA agéntica a producción —flujos multiagente, generación aumentada por recuperación y herramientas Model Context Protocol— en web, iOS y Android. Construí y lideré OULANG hasta junio de 2026; el marketplace y plataforma de vida local sigue en producción en las tres plataformas con 17.262 usuarios registrados, 38.857 anuncios y 89.913 revelaciones de contacto registradas a 3 de julio de 2026. Mis servidores MCP open source se usan a diario: visual-ui-debug-agent-mcp acumula 80 estrellas en GitHub y más de 900 instalaciones en npm, y email-smtp-imap-mcp supera las 1.700 instalaciones en npm. Trabajo en español, inglés y mandarín (中文); la formación técnica refuerza la misma práctica de ingeniería, con más de 125 horas grabadas.'
 } as const;
 
 const selectedOutcomes = [
@@ -297,21 +297,14 @@ const selectedOutcomes = [
 
 const cvExperience = [
   {
-    yearsEn: 'Jul 2025–present', yearsEs: 'Jul 2025–actualidad',
+    yearsEn: 'Jul 2025–Jun 2026', yearsEs: 'Jul 2025–Jun 2026',
     titleEn: 'Founding AI Engineer & Systems Architect', titleEs: 'Ingeniero Fundador de IA y Arquitecto de Sistemas',
     companyEn: 'Agents AI Ltd', companyEs: 'Agents AI Ltd',
-    bodyEn: 'OULANG across web, iOS and Android; agentic and multi-agent systems with durable state, tool calling, structured outputs, evaluation and human review.',
-    bodyEs: 'OULANG en web, iOS y Android; sistemas agénticos y multiagente con estado, tool calling, salidas estructuradas, evaluación y revisión humana.'
+    bodyEn: 'OULANG across web, iOS and Android; agentic and multi-agent systems with durable state, tool calling, structured outputs and human review; multilingual retrieval, FastAPI inference, model routing, evaluation and self-hosted ML infrastructure.',
+    bodyEs: 'OULANG en web, iOS y Android; sistemas agénticos y multiagente con estado, tool calling, salidas estructuradas y revisión humana; búsqueda multilingüe, inferencia FastAPI, enrutado de modelos, evaluación e infraestructura ML autogestionada.'
   },
   {
-    yearsEn: '2024–present', yearsEs: '2024–actualidad',
-    titleEn: 'ML / LLMOps Engineer', titleEs: 'Ingeniero ML / LLMOps',
-    companyEn: 'Agents AI Ltd', companyEs: 'Agents AI Ltd',
-    bodyEn: 'Multilingual semantic search, embedding retrieval, FastAPI inference services, model routing, evaluation stacks and self-hosted ML infrastructure.',
-    bodyEs: 'Búsqueda semántica multilingüe, recuperación con embeddings, servicios de inferencia FastAPI, enrutado de modelos e infraestructura ML autogestionada.'
-  },
-  {
-    yearsEn: '2024–2025', yearsEs: '2024–2025',
+    yearsEn: 'Mar 2024–Jul 2025', yearsEs: 'Mar 2024–Jul 2025',
     titleEn: 'Founder & Agentic AI Systems Architect', titleEs: 'Fundador y Arquitecto de Sistemas de IA Agéntica',
     companyEn: 'AutoClient AI', companyEs: 'AutoClient AI',
     bodyEn: 'Multilingual outbound voice and outreach agents with live CRM context; selected by Lanzadera in 2025, with a public recommendation citing 200+ qualified contacts in two weeks.',
@@ -351,7 +344,7 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
   const { language } = useTranslation();
   const selected = edition || (language === 'es' ? 'es' : 'en');
   const spanish = selected === 'es';
-  const cvVersion = '2026-08-30-public-copy-v1';
+  const cvVersion = '2026-08-30-positioning-v2';
   const pdf = `${spanish ? '/cv/Sami_Halawa_CV_ES.pdf' : '/cv/Sami_Halawa_CV.pdf'}?v=${cvVersion}`;
   const ats = `${spanish ? '/cv/Sami_Halawa_CV_ES_ATS.txt' : '/cv/Sami_Halawa_CV_ATS.txt'}?v=${cvVersion}`;
   const complete = `/cv/Sami_Halawa_Complete_CV.pdf?v=${cvVersion}`;
@@ -378,7 +371,7 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
           <div>
             <p className="mb-5 text-sm font-bold uppercase tracking-[0.18em] text-brand-800">Sami Halawa Ribas</p>
             <h1 className="cv-serif max-w-5xl text-[clamp(2.8rem,6vw,5.8rem)] font-normal leading-[0.94] tracking-[-0.045em] text-slate-950">
-              {spanish ? 'Ingeniero sénior de ML / LLMOps que lidera sistemas de IA desde la arquitectura hasta producción.' : 'Senior ML / LLMOps engineer leading AI systems from architecture to production.'}
+              {spanish ? 'Ingeniero sénior / lead de IA que lleva sistemas agénticos desde la arquitectura hasta producción.' : 'Senior / Lead AI Engineer taking agentic systems from architecture to production.'}
             </h1>
           </div>
           <div className="flex flex-col justify-end border-t border-slate-400 pt-6 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">

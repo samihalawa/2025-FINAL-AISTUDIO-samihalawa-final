@@ -1,7 +1,7 @@
 export const SITE_URL = 'https://samihalawa.com';
 export const SITE_NAME = 'Sami Halawa';
 export const DEFAULT_OG_IMAGE = '/og/sami-halawa-ai-engineer.png';
-export const DEFAULT_OG_ALT = 'Sami Halawa founding AI engineering portfolio';
+export const DEFAULT_OG_ALT = 'Sami Halawa senior and lead AI engineering portfolio';
 
 const DEFAULT_ROBOTS = 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1';
 // /cv and /cv/en render the same English CV. /cv is the indexable original, so
@@ -28,15 +28,15 @@ const route = (path, title, description, options = {}) => ({
 });
 
 export const ROUTE_METADATA = [
-  route('/', 'Sami Halawa — Founding AI Engineer | RAG & Agents', 'Founding AI engineer building production systems across agents, RAG, voice and automation with Python and TypeScript from Madrid.', { schemaType: 'ProfilePage', keywords: ['founding AI engineer', 'senior AI engineer', 'RAG', 'AI agents', 'MCP', 'Madrid'] }),
+  route('/', 'Sami Halawa — Senior / Lead AI Engineer | RAG & Agents', 'Senior and lead AI engineer building production systems across agents, RAG, voice and automation with Python and TypeScript from Madrid.', { schemaType: 'ProfilePage', keywords: ['senior AI engineer', 'lead AI engineer', 'RAG', 'AI agents', 'MCP', 'Madrid'] }),
   route('/corporate', 'Corporate AI Training & Solutions | Sami Halawa', 'Practical AI training, workflow automation and product delivery for teams that need measurable, production-ready outcomes.', { schemaType: 'Service', serviceType: 'Corporate AI training and consulting' }),
   route('/ai-training', 'AI Training for Teams: Workshops & Bootcamps | Sami Halawa', 'Hands-on AI programs covering prompting, RAG, agents, automation and applied AI, delivered onsite in Madrid or remotely.', { schemaType: 'CollectionPage' }),
   route('/projects', 'AI Products & Engineering Projects | Sami Halawa', 'Explore detailed project stories across multilingual platforms, agent systems, automation, medical workflows and technical education.', { schemaType: 'CollectionPage', image: '/portfolio/pime-studio-cover.webp', imageAlt: 'AI product studio workspace with a readiness roadmap', imageWidth: 1600, imageHeight: 900, imageMime: 'image/webp', keywords: ['AI products', 'agent systems', 'product engineering', 'multilingual platforms'] }),
   route('/blog', 'AI Engineering & Agent Systems Blog | Sami Halawa', 'Technical articles on AI agents, context engineering, RAG, evaluation, automation and shipping reliable AI products.', { schemaType: 'Blog' }),
   route('/contact', 'Contact Sami Halawa | AI Product & Engineering', 'Discuss an AI product, automation, training program, technical role or collaboration with Sami Halawa.', { schemaType: 'ContactPage' }),
-  route('/cv', 'Sami Halawa CV | Senior ML / LLMOps Engineer', 'Concise recruiter-ready CV covering agentic AI, RAG, MCP, Python, TypeScript, production engineering, team leadership and immediate availability.', { schemaType: 'ProfilePage', alternates: CV_ALTERNATES }),
-  route('/cv/en', 'Sami Halawa CV | Senior GenAI & Founding AI Engineer', 'English CV covering agentic AI, RAG, MCP, Python, TypeScript, production engineering, voice, automation and technical leadership.', { schemaType: 'ProfilePage', alternates: CV_ALTERNATES, canonical: '/cv', sitemap: false }),
-  route('/cv/es', 'CV de Sami Halawa | Ingeniero Fundador de IA', 'Currículum en español con la experiencia de Sami Halawa en productos de IA, ingeniería, automatización y formación técnica.', { schemaType: 'ProfilePage', lang: 'es', locale: 'es_ES', alternates: CV_ALTERNATES }),
+  route('/cv', 'Sami Halawa CV | Senior / Lead AI Engineer', 'Concise recruiter-ready CV covering agentic AI, RAG, MCP, Python, TypeScript, production engineering, team leadership and immediate availability.', { schemaType: 'ProfilePage', alternates: CV_ALTERNATES }),
+  route('/cv/en', 'Sami Halawa CV | Senior / Lead AI Engineer', 'English CV covering agentic AI, RAG, MCP, Python, TypeScript, production engineering, voice, automation and technical leadership.', { schemaType: 'ProfilePage', alternates: CV_ALTERNATES, canonical: '/cv', sitemap: false }),
+  route('/cv/es', 'CV de Sami Halawa | Ingeniero Sénior / Lead de IA', 'Currículum en español con la experiencia de Sami Halawa en productos de IA, ingeniería, automatización y formación técnica.', { schemaType: 'ProfilePage', lang: 'es', locale: 'es_ES', alternates: CV_ALTERNATES }),
   route('/search', 'Search the Sami Halawa Portfolio', 'Search projects, services, case studies and technical articles across the Sami Halawa portfolio.', { schemaType: 'SearchResultsPage', robots: 'noindex,follow' }),
 
   route('/services', 'AI Engineering, Automation & Training Services | Sami Halawa', 'AI product engineering, agent systems, workflow automation, technical training and applied research services.', { schemaType: 'CollectionPage' }),
@@ -149,8 +149,8 @@ export function buildStructuredData(meta) {
     name: 'Sami Halawa',
     url: SITE_URL,
     image: absoluteUrl('/portfolio/sami-photo.webp'),
-    jobTitle: 'Founding AI Engineer',
-    description: 'Founding AI engineer building production systems across agents, RAG, voice and automation with Python and TypeScript.',
+    jobTitle: 'Senior / Lead AI Engineer',
+    description: 'Senior and lead AI engineer building production systems across agents, RAG, voice and automation with Python and TypeScript.',
     knowsLanguage: ['English', 'Spanish', 'Mandarin Chinese'],
     knowsAbout: ['agentic AI', 'retrieval-augmented generation', 'Model Context Protocol', 'Python', 'TypeScript', 'workflow automation', 'production AI systems'],
     sameAs: [
