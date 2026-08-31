@@ -167,9 +167,9 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     tags: ['AI services', 'Compliance', 'Multilingual'], href: 'https://pime.ai', image: '/portfolio/pime-studio-cover.webp', imagePosition: 'center 52%'
   },
   {
-    id: 'agents-ai', name: 'Agents AI Ltd', period: 'Jul 2025–Jun 2026 delivery programmes', category: 'platforms',
-    description: copy('UK-registered company through which founder-led healthcare, revenue-operations and applied-AI programmes were delivered.', 'Empresa registrada en el Reino Unido a través de la que se entregaron programas de salud, operaciones comerciales e IA aplicada liderados por su fundador.'),
-    tags: ['Company', 'Products', 'Applied AI'], href: 'https://agentsai.ltd', image: '/portfolio/agentsai-home.png', imagePosition: 'center 20%'
+    id: 'agents-ai', name: 'AI delivery programmes', period: 'Jul 2025–Jun 2026', category: 'platforms',
+    description: copy('Healthcare, revenue-operations and applied-AI programmes delivered end to end for teams and clients.', 'Programas de salud, operaciones comerciales e IA aplicada entregados de principio a fin para equipos y clientes.'),
+    tags: ['Products', 'Applied AI'], image: '/portfolio/agentsai-home.png', imagePosition: 'center 20%'
   },
   {
     id: 'autodate', name: 'AutoDate.ai', period: '2025–present', category: 'platforms', featured: true,
@@ -314,7 +314,7 @@ export const PORTFOLIO_STORIES: PortfolioStory[] = [
     description: copy('A Mandarin-first marketplace and local-life product built for the Chinese community in Spain, live on web, iOS and Android with 17,262 registered users, 38,857 listings and 89,913 contact reveals as of 3 July 2026.', 'Marketplace y producto de vida local en mandarín para la comunidad china en España, en producción en web, iOS y Android con 17.262 usuarios registrados, 38.857 anuncios y 89.913 revelaciones de contacto a 3 de julio de 2026.', 'Marketplace et produit de vie locale en mandarin pour la communauté chinoise en Espagne, en production sur web, iOS et Android avec 17 262 utilisateurs inscrits, 38 857 annonces et 89 913 révélations de contact au 3 juillet 2026.', '面向西班牙华人社区的中文市场与本地生活产品，已在 Web、iOS 与 Android 上线，截至 2026 年 7 月 3 日拥有 17,262 名注册用户、38,857 条信息与 89,913 次联系方式查看。'),
     challenge: copy('Bring housing, jobs, services and community discovery into one coherent experience across languages and devices.', 'Unir vivienda, empleo, servicios y comunidad en una experiencia coherente entre idiomas y dispositivos.'),
     build: copy('Web, iOS and Android surfaces with shared marketplace infrastructure, publishing, subscriptions and product analytics.', 'Superficies web, iOS y Android con infraestructura compartida de marketplace, publicación, suscripciones y analítica.'),
-    role: copy('Founder · product, engineering and operations', 'Fundador · producto, ingeniería y operaciones'),
+    role: copy('Product, engineering and operations lead', 'Responsable de producto, ingeniería y operaciones'),
     includes: ['Marketplace', 'Local life', 'Mobile apps'], image: '/portfolio/oulang-case-study-cover.webp', imagePosition: 'center', href: 'https://oulang.ai', caseStudy: '/case-studies/oulang', imageKind: 'illustration'
   },
   {
@@ -338,16 +338,16 @@ export const PORTFOLIO_STORIES: PortfolioStory[] = [
     description: copy('An agentic operating system for account research, enrichment, CRM work and multi-channel follow-up. Selected by Lanzadera in 2025, with a public LinkedIn recommendation citing 200+ qualified contacts in two weeks and a 30% lift in sales conversion.', 'Sistema operativo agéntico para investigación de cuentas, enriquecimiento, CRM y seguimiento multicanal. Seleccionado por Lanzadera en 2025, con una recomendación pública en LinkedIn que cita más de 200 contactos cualificados en dos semanas y un aumento del 30% en la conversión de ventas.', 'Système d’exploitation agentique pour la recherche de comptes, l’enrichissement, le CRM et le suivi multicanal. Sélectionné par Lanzadera en 2025, avec une recommandation publique LinkedIn citant plus de 200 contacts qualifiés en deux semaines et une hausse de 30 % de la conversion commerciale.', '面向客户调研、数据增强、CRM 与多渠道跟进的智能体操作系统。2025 年入选 Lanzadera，LinkedIn 公开推荐信提到两周内获得 200 多个合格联系人，销售转化率提升 30%。'),
     challenge: copy('Keep research, qualification and follow-up connected while preserving a clear operator checkpoint before external action.', 'Mantener conectados investigación, cualificación y seguimiento con un punto claro de revisión antes de actuar.'),
     build: copy('Research and scoring workers, CRM synchronization, reporting, and email, WhatsApp and voice integrations.', 'Workers de investigación y scoring, sincronización CRM, reporting e integraciones de email, WhatsApp y voz.'),
-    role: copy('Founder · product and engineering', 'Fundador · producto e ingeniería'),
+    role: copy('Product and engineering lead', 'Responsable de producto e ingeniería'),
     includes: ['Research & enrichment', 'CRM', 'Email · WhatsApp · voice'], image: '/portfolio/autoclient-operations-cover.webp', imagePosition: 'center 42%', caseStudy: '/case-studies/autoclient', imageKind: 'illustration'
   },
   {
-    id: 'pime', name: 'PIME.ai · Agents AI delivery', period: 'PIME.ai 2025–present · Agents AI Jul 2025–Jun 2026', category: 'platforms', featured: true,
-    description: copy('PIME.ai is the ongoing product studio for practical agent systems, training and AI-readiness work; the related Agents AI delivery programmes ran from July 2025 through June 2026.', 'PIME.ai es el estudio de producto activo para agentes prácticos, formación y preparación en IA; los programas relacionados de Agents AI se entregaron entre julio de 2025 y junio de 2026.'),
+    id: 'pime', name: 'PIME.ai product studio', period: '2025–2026', category: 'platforms', featured: true,
+    description: copy('A practical product studio for agent systems, technical training and AI-readiness work, with delivery programmes running from 2025 through 2026.', 'Un estudio de producto para sistemas de agentes, formación técnica y preparación en IA, con programas de entrega desarrollados entre 2025 y 2026.'),
     challenge: copy('Turn broad AI capability into clearly scoped products and programmes that a team can understand, buy and operate.', 'Convertir capacidades amplias de IA en productos y programas claros que un equipo pueda entender, contratar y operar.'),
-    build: copy('Studio and company sites, product packaging, multilingual service journeys and an EU AI Act readiness pack.', 'Sitios de estudio y empresa, empaquetado de producto, recorridos multilingües y pack de preparación para la Ley de IA.'),
-    role: copy('Founder · product strategy and engineering', 'Fundador · estrategia de producto e ingeniería'),
-    includes: ['PIME.ai', 'Agents AI Ltd', 'AI Act readiness'], image: '/portfolio/pime-studio-cover.webp', imagePosition: 'center 52%', href: 'https://pime.ai', imageKind: 'illustration'
+    build: copy('Studio and product sites, product packaging, multilingual service journeys and an EU AI Act readiness pack.', 'Sitios de estudio y producto, empaquetado de producto, recorridos multilingües y pack de preparación para la Ley de IA.'),
+    role: copy('Product strategy and engineering lead', 'Responsable de estrategia de producto e ingeniería'),
+    includes: ['PIME.ai', 'Applied AI', 'AI Act readiness'], image: '/portfolio/pime-studio-cover.webp', imagePosition: 'center 52%', href: 'https://pime.ai', imageKind: 'illustration'
   },
   {
     id: 'vuda', name: 'VUDA & agent developer tools', period: '2025–present', category: 'agents', featured: true,
@@ -448,7 +448,7 @@ export const PORTFOLIO_INVENTORY: InventoryItem[] = [
   inventoryItem(38, 'timeline-fernando', 'Fernando Ly medical AI research', '2025–2026', '2025 Q2', 'clients', 'verified', 'Applied medical, OCT and market-intelligence collaboration.', 'Colaboración aplicada en medicina, OCT e inteligencia de mercado.'),
   inventoryItem(39, 'timeline-autoclient-expand', 'AutoClient expands', '2025', '2025 Q2', 'products', 'verified', 'Agentic acquisition platform with research, scoring and multichannel follow-up.', 'Plataforma agéntica de captación con investigación, scoring y seguimiento multicanal.'),
   inventoryItem(40, 'timeline-mcp-wave', 'Open-source MCP integrations', '2025', '2025 Q2', 'open-source', 'verified', 'Browser, shell, email and developer-tool integrations for AI agents.', 'Integraciones de navegador, shell, email y herramientas para agentes de IA.', 'https://github.com/samihalawa?tab=repositories'),
-  inventoryItem(41, 'timeline-agents-ai', 'Agents AI Ltd', 'Jul 2025–Jun 2026', '2025 Q2', 'products', 'verified', 'UK-registered company used for founder-led AI product and client delivery.', 'Empresa registrada en el Reino Unido utilizada para producto y entrega a clientes de IA liderados por su fundador.', 'https://agentsai.ltd', '/portfolio/agentsai-home.png'),
+  inventoryItem(41, 'timeline-agents-ai', 'AI delivery programmes', 'Jul 2025–Jun 2026', '2025 Q2', 'products', 'verified', 'AI product and client delivery programmes, mid-2025 through mid-2026.', 'Programas de producto y entrega a clientes de IA, de mediados de 2025 a mediados de 2026.', undefined, '/portfolio/agentsai-home.png'),
   inventoryItem(42, 'timeline-lanzadera', 'Lanzadera ecosystem participation', '2025', '2025 Q2', 'clients', 'verified', 'AutoClient participation in Lanzadera startup and partner benefits.', 'Participación de AutoClient en el ecosistema y beneficios de Lanzadera.'),
 
   inventoryItem(43, 'timeline-automedical-packaging', 'APOLO / AutoMedical packaging', '2025', '2025 Q3', 'products', 'verified', 'Packaging of medical AI research into a public product surface.', 'Empaquetado de investigación médica en una superficie pública.', 'https://automedical.ai'),
@@ -483,7 +483,7 @@ export const PORTFOLIO_INVENTORY: InventoryItem[] = [
   inventoryItem(71, 'timeline-madridresorts', 'MadridResorts', '2026', '2026 Q2', 'archive', 'verified', 'Hospitality-focused digital product and repository work.', 'Trabajo de producto digital orientado al sector hospitality.'),
   inventoryItem(72, 'timeline-vibracode', 'VibraCode', '2026', '2026 Q2', 'products', 'verified', 'Live product that turns an idea into a structured, buildable application concept.', 'Producto activo que convierte una idea en un concepto de aplicación estructurado y construible.', 'https://vibracode.megawebs.com'),
   inventoryItem(73, 'timeline-automedical-live', 'AutoMedical live surface', '2026', '2026 Q2', 'products', 'verified', 'Public medical-AI product and education surface.', 'Superficie pública de producto y educación médica con IA.', 'https://automedical.ai'),
-  inventoryItem(74, 'timeline-public-surfaces', 'Portfolio, company & publishing websites', '2026', '2026 Q2', 'infrastructure', 'verified', 'Websites for samihalawa.com, PIME.ai, Agents AI and ChinoTotal.', 'Sitios web para samihalawa.com, PIME.ai, Agents AI y ChinoTotal.', 'https://samihalawa.com'),
+  inventoryItem(74, 'timeline-public-surfaces', 'Portfolio & publishing websites', '2026', '2026 Q2', 'infrastructure', 'verified', 'Websites for samihalawa.com, PIME.ai and ChinoTotal.', 'Sitios web para samihalawa.com, PIME.ai y ChinoTotal.', 'https://samihalawa.com'),
   inventoryItem(75, 'timeline-tasky', 'Tasky', '2026', '2026 Q2', 'products', 'verified', 'SwiftUI Google Tasks client for macOS, iOS and iPadOS.', 'Cliente SwiftUI de Google Tasks para macOS, iOS y iPadOS.'),
   inventoryItem(76, 'timeline-tutoring', 'AI tutoring / ITE / TusClases', '2026', '2026 Q2', 'education', 'verified', 'Course design and teaching tools for generative AI, automation, agents, n8n and multimodal content.', 'Diseño de cursos y herramientas docentes para IA generativa, automatización, agentes, n8n y contenido multimodal.'),
   inventoryItem(77, 'timeline-world-cup', 'OULANG World Cup / sports-live module', '2026', '2026 Q2', 'products', 'verified', 'Predictions, leaderboard, standings, results and live-room/source flows.', 'Predicciones, clasificación, resultados y flujos de sala/fuente en vivo.'),

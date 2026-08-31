@@ -64,7 +64,7 @@ const Contact: React.FC = () => {
             icon: 'fas fa-headset',
             title: t('contact.support.support.title'),
             description: t('contact.support.support.copy'),
-            href: 'mailto:info@AgentsAI.ltd',
+            href: 'mailto:sami@oulang.ai',
             external: false,
         },
     ];

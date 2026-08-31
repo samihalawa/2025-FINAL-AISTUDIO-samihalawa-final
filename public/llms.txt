@@ -1,6 +1,6 @@
 # Sami Halawa — Senior / Lead AI Engineering Portfolio
 
-Sami Halawa is a Senior / Lead AI Engineer in Madrid building production systems across agentic AI, RAG, MCP, voice and automation with Python and TypeScript. Founder-level product ownership, consulting and technical teaching support that core engineering identity.
+Sami Halawa is a Senior / Lead AI Engineer in Madrid building production systems across agentic AI, RAG, MCP, voice and automation with Python and TypeScript. End-to-end product ownership and technical leadership support that core engineering identity.
 
 ## Main pages
 

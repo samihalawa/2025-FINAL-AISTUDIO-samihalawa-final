@@ -46,7 +46,7 @@ const AutoClientCase: React.FC = () => (
           {[
             ['The product', 'An agentic operating system for researching accounts, preparing actions and keeping CRM state current across communication channels.'],
             ['The problem', 'Research, contact data, CRM history and channel conversations often live apart, forcing operators to rebuild context before every decision.'],
-            ['My role', 'Founder responsible for product direction, system architecture, integrations, implementation and the operating workflows around the product.'],
+            ['My role', 'Led product direction, system architecture, integrations, implementation and the operating workflows around the product.'],
           ].map(([title, body]) => <div key={title} className="grid gap-2 border-b border-slate-300 py-6 sm:grid-cols-[11rem_1fr]"><h3 className="font-display text-base font-bold text-slate-950">{title}</h3><p className="leading-7 text-slate-600">{body}</p></div>)}
         </div>
       </div>

@@ -72,6 +72,5 @@ export const PARTNERS: Partner[] = [
 export const CONTACT_INFO: ContactInfo[] = [
   { icon: 'fas fa-envelope text-slate-500', labelKey: 'contact.emailLabel', value: 'sami@oulang.ai', href: 'mailto:sami@oulang.ai' },
   { icon: 'fas fa-phone text-slate-500', labelKey: 'contact.phoneLabel', value: '+34 679 794 037', href: 'tel:+34679794037' },
-  { icon: 'fas fa-map-marker-alt text-slate-500', labelKey: 'contact.locationLabel', value: 'Madrid, Spain', valueKey: 'contact.locationValue', href: 'https://maps.google.com/?q=Madrid%2C%20Spain' },
-  { icon: 'fas fa-file-contract text-slate-500', labelKey: 'contact.registrationLabel', value: 'UK-registered company · 16570822', valueKey: 'contact.registrationValue', href: 'https://find-and-update.company-information.service.gov.uk/company/16570822' }
+  { icon: 'fas fa-map-marker-alt text-slate-500', labelKey: 'contact.locationLabel', value: 'Madrid, Spain', valueKey: 'contact.locationValue', href: 'https://maps.google.com/?q=Madrid%2C%20Spain' }
 ];

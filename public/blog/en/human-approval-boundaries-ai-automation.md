@@ -18,7 +18,7 @@ In the rush to build "autonomous agents," many teams make a catastrophic archite
 
 In production systems, autonomy is a spectrum controlled by deterministic, hard-coded guardrails. The goal of a robust agent architecture is not to eliminate human oversight, but to design a high-throughput, low-friction **Human-in-the-Loop (HITL)** framework. By defining clear boundaries for what an agent can do on its own, what requires a simple confirmation, and what demands deep payload verification, you protect your system from hallucinated disasters without paralyzing its utility.
 
-Here is how we design and build these boundaries at Agents AI Ltd.
+Here is how I design and build these boundaries in production.
 
 ---
 
@@ -111,7 +111,7 @@ To make this architecture concrete, here is the data contract we use for managin
     "template_id": "tmpl_outbound_v4",
     "variables": {
       "discount_code": "AI_ENTERPRISE_20",
-      "sender_signature": "Sami Halawa, Agents AI"
+      "sender_signature": "Sami Halawa"
     }
   },
   "dry_run_results": {

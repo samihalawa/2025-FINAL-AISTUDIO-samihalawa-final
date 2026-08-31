@@ -60,8 +60,8 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
             </p>
             <p className="mt-4 text-sm font-semibold text-slate-600">
               {spanish
-                ? 'Disponible de inmediato · jornada completa, contrato o B2B · remoto en Europa o híbrido en España.'
-                : 'Available immediately · full-time, contract or B2B · remote across Europe or hybrid in Spain.'}
+                ? 'Disponibilidad inmediata · abierto a puestos de jornada completa · Madrid o remoto en Europa.'
+                : 'Available immediately · open to full-time roles · Madrid or remote in Europe.'}
             </p>
           </div>
         </header>
