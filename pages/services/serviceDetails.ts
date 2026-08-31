@@ -371,7 +371,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
       'A rehearsal session with direct feedback',
     ],
     duration: 'Two to four weeks ahead of the deadline.',
-    related: [{ href: '/case-studies/autopricing', label: 'AutoPricing — a delivered B2B system, scoped and shipped' }],
+    related: [{ href: '/case-studies/autopricing', label: 'AutoPricing — a delivered pricing & ERP system'}],
   },
 
   'ai-readiness-audit': {

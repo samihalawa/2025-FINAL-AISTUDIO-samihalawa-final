@@ -52,7 +52,7 @@ export const CITY_SERVICE_CONTENT: Record<string, Localised<LocationBlock>> = {
         },
         {
           heading: 'Where the method comes from',
-          body: 'The checklist is not a framework deck. It comes from shipping and maintaining production systems: a pricing-intelligence and ERP-reporting delivery scoped at €35K for a B2B distributor, revenue-operations agents that write into a live CRM and hand off to humans, and a multimodal medical workflow where every generated report passes a named reviewer before it counts as anything.',
+          body: 'The checklist is not a framework deck. It comes from shipping and maintaining production systems: a pricing-intelligence and ERP-reporting delivery for a distributor, revenue-operations agents that write into a live CRM and hand off to humans, and a multimodal medical workflow where every generated report passes a named reviewer before it counts as anything.',
         },
       ],
       faqs: [
@@ -83,7 +83,7 @@ export const CITY_SERVICE_CONTENT: Record<string, Localised<LocationBlock>> = {
         },
         {
           heading: 'De dónde sale el método',
-          body: 'No es un checklist de consultora. Sale de construir y mantener sistemas en producción: una entrega de inteligencia de precios e informes conectados a ERP con alcance de 35.000 € para un distribuidor B2B, agentes de revenue operations que escriben en un CRM real y ceden el control a personas, y un flujo médico multimodal donde cada informe generado pasa por un revisor con nombre y apellidos.',
+          body: 'No es un checklist de consultora. Sale de construir y mantener sistemas en producción: una entrega de inteligencia de precios e informes conectados a ERP para un distribuidor, agentes de revenue operations que escriben en un CRM real y ceden el control a personas, y un flujo médico multimodal donde cada informe generado pasa por un revisor con nombre y apellidos.',
         },
       ],
       faqs: [
@@ -247,7 +247,7 @@ export const CITY_SERVICE_CONTENT: Record<string, Localised<LocationBlock>> = {
         },
         {
           heading: 'What informs the approach',
-          body: 'Automations that carry consequences: revenue-operations agents that research accounts, enrich records, and hand off to a person before anything is sent; a pricing and ERP-reporting delivery scoped at €35K for a B2B distributor where a wrong number becomes a wrong invoice; and a medical workflow built so that no generated text reaches anyone without a named human reviewing it first. Every automation gets an explicit approval boundary rather than an assumption of correctness.',
+          body: 'Automations that carry consequences: revenue-operations agents that research accounts, enrich records, and hand off to a person before anything is sent; a pricing and ERP-reporting delivery for a distributor where a wrong number becomes a wrong invoice; and a medical workflow built so that no generated text reaches anyone without a named human reviewing it first. Every automation gets an explicit approval boundary rather than an assumption of correctness.',
         },
       ],
       faqs: [
@@ -278,7 +278,7 @@ export const CITY_SERVICE_CONTENT: Record<string, Localised<LocationBlock>> = {
         },
         {
           heading: 'Qué informa el enfoque',
-          body: 'Automatizaciones con consecuencias: agentes de revenue operations que investigan cuentas, enriquecen registros y ceden a una persona antes de enviar nada; una entrega de precios e informes conectados a ERP con alcance de 35.000 € para un distribuidor B2B, donde un número equivocado se convierte en una factura equivocada; y un flujo médico construido para que ningún texto generado llegue a nadie sin un revisor humano con nombre. Cada automatización recibe un límite de aprobación explícito.',
+          body: 'Automatizaciones con consecuencias: agentes de revenue operations que investigan cuentas, enriquecen registros y ceden a una persona antes de enviar nada; una entrega de precios e informes conectados a ERP para un distribuidor, donde un número equivocado se convierte en una factura equivocada; y un flujo médico construido para que ningún texto generado llegue a nadie sin un revisor humano con nombre. Cada automatización recibe un límite de aprobación explícito.',
         },
       ],
       faqs: [
