@@ -11,36 +11,36 @@ const content: Record<LanguageCode, {
     title: 'I build production AI systems across agents, RAG, voice and automation.',
     intro: 'Hands-on across Python, TypeScript, APIs, SQL, web and mobile, deployment and observability. I lead cross-functional delivery and connect model workflows to real product context, operations and human review.',
     work: 'Explore the portfolio', cv: 'Open concise CV', available: 'Available immediately · open to full-time roles · Madrid or remote in Europe',
-    proofTitle: 'At a glance', proofBody: 'Senior AI and software engineer, and technical lead. I design and deliver production AI and software end to end — from architecture through deployment and operation — across AI systems and integration. Delivery and client work run trilingually in Spanish, English and Mandarin (中文).',
+    proofTitle: 'At a glance', proofBody: 'Senior AI and software engineer, and technical lead. I design and deliver production AI and software end to end — from architecture through deployment and operation — across AI systems and integration. I work trilingually in Spanish, English and Mandarin (中文).',
     now: 'Core strengths', building: ['Agentic AI, RAG and MCP', 'Python and TypeScript production systems', 'Cross-functional leadership and mentoring'],
-    stats: [{ value: '7', label: 'flagship programmes' }, { value: '249', label: 'original public repositories' }, { value: '80★', label: 'VUDA · 7 forks' }, { value: '125+', label: 'recorded training hours' }]
+    stats: [{ value: 'AI', label: 'agents · RAG · MCP' }, { value: 'Full stack', label: 'Python · TypeScript · SQL' }, { value: 'ES · EN · 中文', label: 'working languages' }, { value: '80★', label: 'VUDA open-source adoption' }]
   },
   es: {
     eyebrow: 'Ingeniero sénior / lead de IA · Madrid · Europa · ES / EN / 中文',
     title: 'Construyo sistemas de IA en producción con agentes, RAG, voz y automatización.',
     intro: 'Trabajo directamente con Python, TypeScript, APIs, SQL, web y móvil, despliegue y observabilidad. Lidero entregas multidisciplinares y conecto los modelos con el contexto real de producto, las operaciones y la revisión humana.',
     work: 'Explorar el portfolio', cv: 'Abrir CV conciso', available: 'Disponibilidad inmediata · abierto a puestos de jornada completa · Madrid o remoto en Europa',
-    proofTitle: 'En pocas palabras', proofBody: 'Ingeniero sénior de IA y software, y technical lead. Diseño y entrego IA y software en producción de principio a fin — de la arquitectura al despliegue y la operación — en sistemas de IA e integración. Entrega y trabajo con clientes en español, inglés y mandarín (中文).',
+    proofTitle: 'En pocas palabras', proofBody: 'Ingeniero sénior de IA y software, y technical lead. Diseño y entrego IA y software en producción de principio a fin — de la arquitectura al despliegue y la operación — en sistemas de IA e integración. Trabajo en español, inglés y mandarín (中文).',
     now: 'Fortalezas', building: ['IA agéntica, RAG y MCP', 'Sistemas en producción con Python y TypeScript', 'Liderazgo multidisciplinar y mentoring'],
-    stats: [{ value: '7', label: 'programas principales' }, { value: '249', label: 'repositorios públicos propios' }, { value: '80★', label: 'VUDA · 7 forks' }, { value: '125+', label: 'horas grabadas de formación' }]
+    stats: [{ value: 'IA', label: 'agentes · RAG · MCP' }, { value: 'Full stack', label: 'Python · TypeScript · SQL' }, { value: 'ES · EN · 中文', label: 'idiomas de trabajo' }, { value: '80★', label: 'adopción open source de VUDA' }]
   },
   fr: {
     eyebrow: 'Ingénieur IA senior / lead · Madrid · Europe · ES / EN / 中文',
     title: 'Je construis des systèmes IA en production avec agents, RAG, voix et automatisation.',
     intro: 'J’interviens directement sur Python, TypeScript, APIs, SQL, web et mobile, déploiement et observabilité. Je pilote des livraisons pluridisciplinaires et relie les modèles au contexte produit, aux opérations et à la validation humaine.',
     work: 'Explorer le portfolio', cv: 'Ouvrir le CV concis', available: 'Disponible immédiatement · ouvert aux postes à temps plein · Madrid ou télétravail en Europe',
-    proofTitle: 'En bref', proofBody: 'Ingénieur IA et logiciel senior, et technical lead. Je conçois et livre de l’IA et du logiciel en production de bout en bout — de l’architecture au déploiement et à l’exploitation — sur les systèmes d’IA et l’intégration. Livraison et relation client en espagnol, anglais et mandarin (中文).',
+    proofTitle: 'En bref', proofBody: 'Ingénieur IA et logiciel senior, et technical lead. Je conçois et livre de l’IA et du logiciel en production de bout en bout — de l’architecture au déploiement et à l’exploitation — sur les systèmes d’IA et l’intégration. Je travaille en espagnol, anglais et mandarin (中文).',
     now: 'Points forts', building: ['IA agentique, RAG et MCP', 'Systèmes Python et TypeScript en production', 'Leadership pluridisciplinaire et mentorat'],
-    stats: [{ value: '7', label: 'programmes phares' }, { value: '249', label: 'dépôts publics originaux' }, { value: '80★', label: 'VUDA · 7 forks' }, { value: '125+', label: 'heures de formation enregistrées' }]
+    stats: [{ value: 'IA', label: 'agents · RAG · MCP' }, { value: 'Full stack', label: 'Python · TypeScript · SQL' }, { value: 'ES · EN · 中文', label: 'langues de travail' }, { value: '80★', label: 'adoption open source de VUDA' }]
   },
   zh: {
     eyebrow: '高级 / 主管 AI 工程师 · 马德里 · 欧洲 · 西班牙语 / 英语 / 中文',
     title: '我构建涵盖智能体、RAG、语音与自动化的生产级 AI 系统。',
     intro: '亲自负责 Python、TypeScript、API、SQL、Web 与移动端、部署和可观测性，领导跨职能交付，并把模型工作流连接到真实产品、运营与人工审核。',
     work: '浏览作品集', cv: '打开精简简历', available: '可立即到岗 · 寻找全职职位 · 马德里或欧洲远程',
-    proofTitle: '快速了解', proofBody: '高级 AI 与软件工程师、技术负责人。我端到端设计并交付生产级 AI 与软件——从架构到部署与运营——覆盖 AI 系统与集成。交付与客户沟通均可用西班牙语、英语和中文进行。',
+    proofTitle: '快速了解', proofBody: '高级 AI 与软件工程师、技术负责人。我端到端设计并交付生产级 AI 与软件——从架构到部署与运营——覆盖 AI 系统与集成。工作语言为西班牙语、英语和中文。',
     now: '核心能力', building: ['智能体 AI、RAG 与 MCP', '生产级 Python 与 TypeScript 系统', '跨职能领导与指导'],
-    stats: [{ value: '7', label: '旗舰项目集' }, { value: '249', label: '原创公开仓库' }, { value: '80★', label: 'VUDA · 7 个 fork' }, { value: '125+', label: '已录制培训小时' }]
+    stats: [{ value: 'AI', label: '智能体 · RAG · MCP' }, { value: '全栈', label: 'Python · TypeScript · SQL' }, { value: 'ES · EN · 中文', label: '工作语言' }, { value: '80★', label: 'VUDA 开源采用度' }]
   }
 };
 

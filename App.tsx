@@ -1,55 +1,19 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Navigate, Routes, Route } from 'react-router-dom';
 import { LanguageProvider } from './i18n/LanguageContext';
 import type { LoadedArticle } from './pages/BlogArticlePage';
 import Layout from './components/Layout';
 const HomePage = lazy(() => import('./pages/HomePage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
-const ServicesPage = lazy(() => import('./pages/ServicesPage'));
 const ProjectsPage = lazy(() => import('./pages/ProjectsPage'));
-const BlogPage = lazy(() => import('./pages/BlogPage'));
-const BlogArticlePage = lazy(() => import('./pages/BlogArticlePage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const CVPage = lazy(() => import('./pages/CVPage'));
-const TrainingOverview = lazy(() => import('./pages/TrainingOverview'));
 const SearchPage = lazy(() => import('./pages/SearchPage'));
-const MedicalAI = lazy(() => import('./pages/services/MedicalAI'));
-const BusinessAutomation = lazy(() => import('./pages/services/BusinessAutomation'));
-const UniversityML = lazy(() => import('./pages/services/UniversityML'));
-const FamilyAI = lazy(() => import('./pages/services/FamilyAI'));
-const AdvancedAI = lazy(() => import('./pages/services/AdvancedAI'));
-const NoCodeAI = lazy(() => import('./pages/services/NoCodeAI'));
-const PromptEngineering = lazy(() => import('./pages/services/PromptEngineering'));
-const RagLangChain = lazy(() => import('./pages/services/RagLangChain'));
-const AgentsAutomation = lazy(() => import('./pages/services/AgentsAutomation'));
-const AIForMarketing = lazy(() => import('./pages/services/AIForMarketing'));
-const AIFundingGrants = lazy(() => import('./pages/services/AIFundingGrants'));
-const AIPatentsIP = lazy(() => import('./pages/services/AIPatentsIP'));
-const AcceleratorReadiness = lazy(() => import('./pages/services/AcceleratorReadiness'));
-const AIReadinessAudit = lazy(() => import('./pages/services/AIReadinessAudit'));
-const AICompetitiveResearch = lazy(() => import('./pages/services/AICompetitiveResearch'));
-const DataScienceTraining = lazy(() => import('./pages/services/DataScienceTraining'));
-const ProptechAnalytics = lazy(() => import('./pages/services/ProptechAnalytics'));
-const AirbnbAnalytics = lazy(() => import('./pages/services/AirbnbAnalytics'));
-const AILanguageLearning = lazy(() => import('./pages/services/AILanguageLearning'));
-const ServicesIndex = lazy(() => import('./pages/services/Index'));
-const ServicesLayout = lazy(() => import('./pages/services/ServicesLayout'));
-const Troubleshooting = lazy(() => import('./pages/services/Troubleshooting'));
-const LocationsIndex = lazy(() => import('./pages/locations/Index'));
-const Madrid = lazy(() => import('./pages/locations/Madrid'));
-const Barcelona = lazy(() => import('./pages/locations/Barcelona'));
-const Valencia = lazy(() => import('./pages/locations/Valencia'));
-const Spain = lazy(() => import('./pages/locations/Spain'));
-const Online = lazy(() => import('./pages/locations/Online'));
 const CaseStudiesIndex = lazy(() => import('./pages/case-studies/Index'));
 const OulangCase = lazy(() => import('./pages/case-studies/Oulang'));
 const ApoloMedicalFramework = lazy(() => import('./pages/case-studies/ApoloMedicalFramework'));
 const AutoClientCase = lazy(() => import('./pages/case-studies/AutoClient'));
 const AutoPricingCase = lazy(() => import('./pages/case-studies/AutoPricing'));
-const MadridAIReadiness = lazy(() => import('./pages/locations/services/MadridAIReadiness'));
-const BarcelonaPromptEngineering = lazy(() => import('./pages/locations/services/BarcelonaPromptEngineering'));
-const ValenciaRagLangChain = lazy(() => import('./pages/locations/services/ValenciaRagLangChain'));
-const MadridBusinessAutomation = lazy(() => import('./pages/locations/services/MadridBusinessAutomation'));
 
 type AppRoutesProps = {
     initialBlogArticle?: LoadedArticle | null;
@@ -60,54 +24,22 @@ export const AppRoutes: React.FC<AppRoutesProps> = ({ initialBlogArticle = null 
         <Routes>
                         <Route path="/" element={<Layout />}>
                             <Route index element={<HomePage />} />
-                            <Route path="corporate" element={<ServicesPage />} />
-                            <Route path="ai-training" element={<TrainingOverview />} />
+                            <Route path="corporate" element={<Navigate to="/projects" replace />} />
+                            <Route path="ai-training" element={<Navigate to="/projects" replace />} />
                             <Route path="search" element={<SearchPage />} />
                             <Route path="projects" element={<ProjectsPage />} />
-                            <Route path="blog" element={<BlogPage />} />
-                            <Route path="blog/:slug" element={<BlogArticlePage initialArticle={initialBlogArticle} />} />
+                            <Route path="blog/*" element={<Navigate to="/projects" replace />} />
                             <Route path="contact" element={<ContactPage />} />
                             <Route path="cv" element={<CVPage />} />
                             <Route path="cv/en" element={<CVPage edition="en" />} />
                             <Route path="cv/es" element={<CVPage edition="es" />} />
-                            <Route path="locations" element={<LocationsIndex />} />
-                            <Route path="locations/madrid" element={<Madrid />} />
-                            <Route path="locations/barcelona" element={<Barcelona />} />
-                            <Route path="locations/valencia" element={<Valencia />} />
-                            <Route path="locations/spain" element={<Spain />} />
-                            <Route path="locations/online" element={<Online />} />
-                            <Route path="locations/madrid/ai-readiness-audit" element={<MadridAIReadiness />} />
-                            <Route path="locations/barcelona/prompt-engineering" element={<BarcelonaPromptEngineering />} />
-                            <Route path="locations/valencia/rag-langchain" element={<ValenciaRagLangChain />} />
-                            <Route path="locations/madrid/business-automation" element={<MadridBusinessAutomation />} />
+                            <Route path="locations/*" element={<Navigate to="/projects" replace />} />
                             <Route path="case-studies" element={<CaseStudiesIndex />} />
                             <Route path="case-studies/oulang" element={<OulangCase />} />
                             <Route path="case-studies/apolo-medical-framework" element={<ApoloMedicalFramework />} />
                             <Route path="case-studies/autoclient" element={<AutoClientCase />} />
                             <Route path="case-studies/autopricing" element={<AutoPricingCase />} />
-                            <Route path="services" element={<ServicesLayout />}>
-                                <Route index element={<ServicesIndex />} />
-                                <Route path="medical-ai" element={<MedicalAI />} />
-                                <Route path="business-automation" element={<BusinessAutomation />} />
-                                <Route path="university-ml" element={<UniversityML />} />
-                                <Route path="family-ai" element={<FamilyAI />} />
-                                <Route path="advanced-ai" element={<AdvancedAI />} />
-                                <Route path="no-code-ai" element={<NoCodeAI />} />
-                                <Route path="prompt-engineering" element={<PromptEngineering />} />
-                                <Route path="rag-langchain" element={<RagLangChain />} />
-                                <Route path="agents-automation" element={<AgentsAutomation />} />
-                                <Route path="ai-for-marketing" element={<AIForMarketing />} />
-                                <Route path="ai-funding-grants" element={<AIFundingGrants />} />
-                                <Route path="ai-ip-patents" element={<AIPatentsIP />} />
-                                <Route path="accelerator-readiness" element={<AcceleratorReadiness />} />
-                                <Route path="ai-readiness-audit" element={<AIReadinessAudit />} />
-                                <Route path="ai-competitive-research" element={<AICompetitiveResearch />} />
-                                <Route path="data-science-training" element={<DataScienceTraining />} />
-                                <Route path="proptech-analytics" element={<ProptechAnalytics />} />
-                                <Route path="airbnb-analytics" element={<AirbnbAnalytics />} />
-                                <Route path="ai-language-learning" element={<AILanguageLearning />} />
-                                <Route path="troubleshooting" element={<Troubleshooting />} />
-                            </Route>
+                            <Route path="services/*" element={<Navigate to="/projects" replace />} />
                             <Route path="*" element={<NotFoundPage />} />
                         </Route>
         </Routes>

@@ -14,16 +14,18 @@ const headings: Record<LanguageCode, {
   open: string;
   visit: string;
 }> = {
-  en: { eyebrow: 'Selected work', title: 'Real products, with the useful details left in.', body: 'Each project shows the operating problem, what I built and the interface or project-specific cover behind the work.', all: 'Explore every project story', challenge: 'The problem', build: 'What I built', role: 'Role', open: 'Read the case study', visit: 'Visit the project' },
-  es: { eyebrow: 'Trabajo seleccionado', title: 'Productos reales, con los detalles que importan.', body: 'Cada proyecto muestra el problema operativo, lo que construí y la interfaz o portada específica detrás del trabajo.', all: 'Explorar todos los proyectos', challenge: 'El problema', build: 'Qué construí', role: 'Rol', open: 'Leer el caso', visit: 'Visitar el proyecto' },
-  fr: { eyebrow: 'Travaux sélectionnés', title: 'Des produits réels, avec les détails qui comptent.', body: 'Chaque projet présente le problème opérationnel, ce que j’ai construit et son interface ou visuel dédié.', all: 'Explorer tous les projets', challenge: 'Le problème', build: 'Ce que j’ai construit', role: 'Rôle', open: 'Lire l’étude de cas', visit: 'Visiter le projet' },
-  zh: { eyebrow: '精选作品', title: '真实产品，也保留真正重要的细节。', body: '每个项目都展示实际问题、我的构建内容，以及对应界面或专属封面。', all: '查看全部项目故事', challenge: '问题', build: '构建内容', role: '角色', open: '阅读案例', visit: '访问项目' },
+  en: { eyebrow: 'Selected work', title: 'Three engineering stories, with the useful details left in.', body: 'A focused view of the operating problem, the system I built and the production evidence behind each story.', all: 'Explore the engineering portfolio', challenge: 'The problem', build: 'What I built', role: 'Role', open: 'Read the case study', visit: 'Visit the project' },
+  es: { eyebrow: 'Trabajo seleccionado', title: 'Tres historias de ingeniería, con los detalles que importan.', body: 'Una vista enfocada del problema operativo, el sistema construido y la evidencia de producción de cada historia.', all: 'Explorar el portfolio de ingeniería', challenge: 'El problema', build: 'Qué construí', role: 'Rol', open: 'Leer el caso', visit: 'Visitar el proyecto' },
+  fr: { eyebrow: 'Travaux sélectionnés', title: 'Trois récits d’ingénierie, avec les détails qui comptent.', body: 'Une vue ciblée du problème opérationnel, du système construit et des preuves de production de chaque récit.', all: 'Explorer le portfolio d’ingénierie', challenge: 'Le problème', build: 'Ce que j’ai construit', role: 'Rôle', open: 'Lire l’étude de cas', visit: 'Visiter le projet' },
+  zh: { eyebrow: '精选作品', title: '三个工程案例，保留真正重要的细节。', body: '聚焦每个案例的运营问题、构建系统与生产证据。', all: '查看工程作品集', challenge: '问题', build: '构建内容', role: '角色', open: '阅读案例', visit: '访问项目' },
 };
+
+const selectedStoryIds = new Set(['oulang', 'autopricing', 'vuda']);
 
 const FeaturedCaseStudies: React.FC = () => {
   const { language } = useTranslation();
   const h = headings[language];
-  const featured = PORTFOLIO_STORIES.filter(story => story.featured);
+  const featured = PORTFOLIO_STORIES.filter(story => selectedStoryIds.has(story.id));
 
   return (
     <section className="border-y border-slate-300 bg-white py-20 sm:py-24" id="case-studies" aria-labelledby="home-case-studies-heading">

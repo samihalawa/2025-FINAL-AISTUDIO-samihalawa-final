@@ -10,18 +10,16 @@ const content: Record<LanguageCode, {
 }> = {
   en: {
     eyebrow: 'How I work', title: 'Senior AI engineering with end-to-end product ownership.',
-    intro: 'I combine agentic AI, RAG and automation with the full-stack engineering needed to put them into real products. Earlier work across web, mobile, growth, teaching and multilingual media forms the operating layer beneath that delivery.', evidence: 'Hands-on by default: I move from product framing through Python and TypeScript implementation, APIs, data, deployment, observability and iteration without splitting the system into disconnected handoffs.',
+    intro: 'I combine agentic AI, RAG and automation with the full-stack engineering needed to put them into real products. My background in web platforms, operations and technical education supports that delivery without competing with its focus.', evidence: 'Hands-on by default: I move from product framing through Python and TypeScript implementation, APIs, data, deployment, observability and iteration without splitting the system into disconnected handoffs.',
     principles: [
       { title: 'Engineer the full AI workflow', body: 'Retrieval, tools, structured outputs, APIs, data, interfaces, deployment and observability belong to one system.' },
       { title: 'Build for operation', body: 'Reliable AI work includes monitoring, human review and the real workflow around the model—not only a successful response.' },
-      { title: 'Bridge product and engineering', body: 'Spanish, English and Mandarin delivery helps connect technical decisions with users, clients and executives.' }
+      { title: 'Bridge product and engineering', body: 'Spanish, English and Mandarin delivery helps connect technical decisions with users, teams and executives.' }
     ],
     timeline: [
-      { years: '2009–2023', title: 'Web, mobile, growth & education', body: 'Long-running product delivery and technical education; focused builds served as practical student labs within structured training.' },
-      { years: '2013–2017', title: 'Media work in China', body: 'Commercial production, presenting and multilingual on-camera communication.' },
-      { years: '2019–2023', title: 'Production full-stack engineering', body: 'Web systems, Linux/server operations, CI/CD practices, reviews and mentoring.' },
-      { years: '2022–2025', title: 'AI teaching & technical consulting', body: 'Implementation-first agents, automation, Python and AI product engineering.' },
-      { years: 'Jul 2025–Jun 2026', title: 'AI platform & agentic delivery programmes', body: 'Led AI platforms and cross-functional delivery with engineers, specialists, clients and operators.' }
+      { years: '2009–2016', title: 'Digital design instruction · Megacursos.com', body: 'Digital-design education supported by practical web systems and learning materials.' },
+      { years: '2016–2023', title: 'Web platform engineering · Megawebs', body: 'Full-stack web platforms, technical SEO, Linux operations and delivery.' },
+      { years: '2024–2026', title: 'ML / LLMOps engineering · Agents AI Ltd', body: 'Production AI workflows across agents, RAG, automation, deployment and observability.' }
     ],
     achievementsTitle: 'Selected distinctions & publications',
     achievements: [
@@ -50,18 +48,16 @@ const content: Record<LanguageCode, {
   },
   es: {
     eyebrow: 'Cómo trabajo', title: 'Ingeniería sénior de IA con responsabilidad de producto de principio a fin.',
-    intro: 'Combino IA agéntica, RAG y automatización con la ingeniería full-stack necesaria para integrarlas en productos reales. La experiencia previa en web, móvil, growth, docencia y medios multilingües forma la capa operativa de esa entrega.', evidence: 'Trabajo directamente de la definición a la implementación con Python y TypeScript, APIs, datos, despliegue, observabilidad e iteración, sin dividir el sistema en entregas desconectadas.',
+    intro: 'Combino IA agéntica, RAG y automatización con la ingeniería full-stack necesaria para integrarlas en productos reales. Mi experiencia en plataformas web, operaciones y formación técnica apoya esa entrega sin competir con su foco.', evidence: 'Trabajo directamente de la definición a la implementación con Python y TypeScript, APIs, datos, despliegue, observabilidad e iteración, sin dividir el sistema en entregas desconectadas.',
     principles: [
       { title: 'Diseñar el flujo completo de IA', body: 'Recuperación, herramientas, salidas estructuradas, APIs, datos, interfaces, despliegue y observabilidad forman un único sistema.' },
       { title: 'Construir para operar', body: 'La IA fiable incluye monitorización, revisión humana y el flujo real alrededor del modelo, no solo una respuesta correcta.' },
-      { title: 'Unir producto e ingeniería', body: 'La entrega en español, inglés y mandarín conecta decisiones técnicas con usuarios, clientes y dirección.' }
+      { title: 'Unir producto e ingeniería', body: 'La entrega en español, inglés y mandarín conecta decisiones técnicas con usuarios, equipos y dirección.' }
     ],
     timeline: [
-      { years: '2009–2023', title: 'Web, móvil, growth y educación', body: 'Entrega de producto y formación técnica a largo plazo; los desarrollos específicos funcionaban como prácticas dentro de programas estructurados.' },
-      { years: '2013–2017', title: 'Medios en China', body: 'Producción comercial, presentación y comunicación multilingüe en cámara.' },
-      { years: '2019–2023', title: 'Ingeniería full-stack en producción', body: 'Web, Linux/servidores, CI/CD, revisiones y mentoring.' },
-      { years: '2022–2025', title: 'Docencia de IA y consultoría', body: 'Agentes, automatización, Python e ingeniería de producto orientados a implementación.' },
-      { years: 'Jul 2025–Jun 2026', title: 'Programas de plataformas de IA y entrega agéntica', body: 'Plataformas de IA y entrega multidisciplinar con ingenieros, especialistas, clientes y operaciones.' }
+      { years: '2009–2016', title: 'Docencia de diseño digital · Megacursos.com', body: 'Formación en diseño digital apoyada por sistemas web y materiales de aprendizaje.' },
+      { years: '2016–2023', title: 'Ingeniería de plataformas web · Megawebs', body: 'Plataformas full-stack, SEO técnico, operaciones Linux y entrega.' },
+      { years: '2024–2026', title: 'Ingeniería ML / LLMOps · Agents AI Ltd', body: 'Flujos de IA en producción con agentes, RAG, automatización, despliegue y observabilidad.' }
     ],
     achievementsTitle: 'Premios y publicaciones seleccionados',
     achievements: [
@@ -90,9 +86,9 @@ const content: Record<LanguageCode, {
   },
   fr: {
     eyebrow: 'Ma façon de travailler', title: 'Ingénierie IA senior avec une responsabilité produit de bout en bout.',
-    intro: 'Je combine IA agentique, RAG et automatisation avec l’ingénierie full-stack nécessaire pour les intégrer à de vrais produits. Mon expérience du web, du mobile, de la croissance, de la formation et des médias multilingues soutient cette mise en œuvre.', evidence: 'J’interviens directement du cadrage à Python et TypeScript, aux APIs, aux données, au déploiement, à l’observabilité et à l’itération, sans multiplier les relais.',
-    principles: [{ title: 'Concevoir tout le flux IA', body: 'Retrieval, outils, sorties structurées, APIs, données, interfaces, déploiement et observabilité forment un seul système.' }, { title: 'Construire pour l’exploitation', body: 'Une IA fiable inclut le suivi, la validation humaine et le parcours réel autour du modèle, pas seulement une réponse correcte.' }, { title: 'Relier produit et ingénierie', body: 'Espagnol, anglais et mandarin relient les décisions techniques aux utilisateurs, clients et dirigeants.' }],
-    timeline: [{ years: '2009–2023', title: 'Web, mobile, croissance & éducation', body: 'Livraison produit et formation technique au long cours ; les réalisations ciblées servaient de laboratoires pratiques dans des programmes structurés.' }, { years: '2013–2017', title: 'Médias en Chine', body: 'Production commerciale et présentation multilingue.' }, { years: '2019–2023', title: 'Ingénierie full-stack', body: 'Web, Linux, CI/CD, revues et mentoring.' }, { years: '2022–2025', title: 'Formation IA & conseil', body: 'Agents, automatisation, Python et produit.' }, { years: 'Juil. 2025–juin 2026', title: 'Programmes de plateformes IA et livraison agentique', body: 'Plateformes IA et livraison pluridisciplinaire avec ingénieurs, spécialistes, clients et opérations.' }],
+    intro: 'Je combine IA agentique, RAG et automatisation avec l’ingénierie full-stack nécessaire pour les intégrer à de vrais produits. Mon expérience des plateformes web, des opérations et de la formation technique soutient cette mise en œuvre sans en brouiller le focus.', evidence: 'J’interviens directement du cadrage à Python et TypeScript, aux APIs, aux données, au déploiement, à l’observabilité et à l’itération, sans multiplier les relais.',
+    principles: [{ title: 'Concevoir tout le flux IA', body: 'Retrieval, outils, sorties structurées, APIs, données, interfaces, déploiement et observabilité forment un seul système.' }, { title: 'Construire pour l’exploitation', body: 'Une IA fiable inclut le suivi, la validation humaine et le parcours réel autour du modèle, pas seulement une réponse correcte.' }, { title: 'Relier produit et ingénierie', body: 'Espagnol, anglais et mandarin relient les décisions techniques aux utilisateurs, équipes et dirigeants.' }],
+    timeline: [{ years: '2009–2016', title: 'Formation au design numérique · Megacursos.com', body: 'Formation au design numérique soutenue par des systèmes web et des supports pédagogiques.' }, { years: '2016–2023', title: 'Ingénierie de plateformes web · Megawebs', body: 'Plateformes full-stack, SEO technique, opérations Linux et livraison.' }, { years: '2024–2026', title: 'Ingénierie ML / LLMOps · Agents AI Ltd', body: 'Workflows IA en production : agents, RAG, automatisation, déploiement et observabilité.' }],
     achievementsTitle: 'Distinctions et publications sélectionnées',
     achievements: [
       { meta: 'Nogarejas · 2012', title: 'Prix jeunesse — IIe Concours de poésie de Nogarejas', body: '« Olvidaste una llave en mi costado », soumis sous le pseudonyme « El arte de la fuga », a reçu le prix jeunesse de 200 € parmi plus de 200 œuvres d’un concours international.', links: [{ label: 'Diario de León', href: 'https://www.diariodeleon.es/leon/provincia/120904/102485/premio-poesia-nogarejas-viaja-argentina_amp.html' }, { label: 'Volume archivé', href: 'https://archive.org/details/MemoriaGrfica19532013' }] },
@@ -102,9 +98,9 @@ const content: Record<LanguageCode, {
   },
   zh: {
     eyebrow: '我的工作方式', title: '具备端到端产品责任的高级 AI 工程。',
-    intro: '我把智能体 AI、RAG 和自动化，与将其落地到真实产品所需的全栈工程结合起来。Web、移动端、增长、教学和多语言媒体经验构成了交付的运营基础。', evidence: '默认亲自推进：从产品定义到 Python 与 TypeScript、API、数据、部署、可观测性和迭代，避免把系统拆成彼此断开的交接。',
-    principles: [{ title: '设计完整 AI 工作流', body: '检索、工具、结构化输出、API、数据、界面、部署与可观测性属于同一个系统。' }, { title: '面向真实运营构建', body: '可靠的 AI 包含监控、人工审核和模型周边的真实流程，而不只是一次正确响应。' }, { title: '连接产品与工程', body: '西班牙语、英语和中文帮助把技术决策连接到用户、客户与管理层。' }],
-    timeline: [{ years: '2009–2023', title: 'Web、移动、增长与教育', body: '长期产品交付与技术教育；聚焦型构建作为结构化课程中的实践训练项目。' }, { years: '2013–2017', title: '中国媒体工作', body: '商业制作、主持与多语言镜头沟通。' }, { years: '2019–2023', title: '生产级全栈工程', body: 'Web、Linux、CI/CD、评审和指导。' }, { years: '2022–2025', title: 'AI 教学与技术咨询', body: '面向实现的智能体、自动化、Python 与产品工程。' }, { years: '2025-07–2026-06', title: 'AI 平台与智能体交付项目', body: '与工程师、专家、客户和运营人员协作的 AI 平台与跨职能交付。' }],
+    intro: '我把智能体 AI、RAG 和自动化，与将其落地到真实产品所需的全栈工程结合起来。Web 平台、运营与技术教育经验为交付提供支撑，同时保持清晰的工程主线。', evidence: '默认亲自推进：从产品定义到 Python 与 TypeScript、API、数据、部署、可观测性和迭代，避免把系统拆成彼此断开的交接。',
+    principles: [{ title: '设计完整 AI 工作流', body: '检索、工具、结构化输出、API、数据、界面、部署与可观测性属于同一个系统。' }, { title: '面向真实运营构建', body: '可靠的 AI 包含监控、人工审核和模型周边的真实流程，而不只是一次正确响应。' }, { title: '连接产品与工程', body: '西班牙语、英语和中文帮助把技术决策连接到用户、团队与管理层。' }],
+    timeline: [{ years: '2009–2016', title: '数字设计教学 · Megacursos.com', body: '通过配套 Web 系统与学习材料开展数字设计教育。' }, { years: '2016–2023', title: 'Web 平台工程 · Megawebs', body: '全栈 Web 平台、技术 SEO、Linux 运维与交付。' }, { years: '2024–2026', title: 'ML / LLMOps 工程 · Agents AI Ltd', body: '涵盖智能体、RAG、自动化、部署与可观测性的生产级 AI 工作流。' }],
     achievementsTitle: '精选荣誉与出版物',
     achievements: [
       { meta: 'Nogarejas · 2012', title: '第二届 Nogarejas 诗歌大赛青年奖', body: '诗作《Olvidaste una llave en mi costado》以笔名“El arte de la fuga”参赛，在收到 200 多篇作品的国际赛事中获得 200 欧元青年奖。', links: [{ label: 'Diario de León', href: 'https://www.diariodeleon.es/leon/provincia/120904/102485/premio-poesia-nogarejas-viaja-argentina_amp.html' }, { label: '档案文集', href: 'https://archive.org/details/MemoriaGrfica19532013' }] },

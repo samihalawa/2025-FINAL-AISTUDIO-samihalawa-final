@@ -7,7 +7,6 @@ export const NAV_LINKS: NavLink[] = [
   { href: '/projects', key: 'nav.projects' },
   { href: '/case-studies', key: 'nav.caseStudies' },
   { href: '/cv', key: 'nav.cv' },
-  { href: '/blog', key: 'nav.blog' },
   { href: '/contact', key: 'nav.contact' },
 ];
 

@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Popover, Transition, Listbox } from '@headlessui/react';
 import { useTranslation } from '../i18n/LanguageContext';
-import { NAV_LINKS, LANGUAGES, SERVICE_MENU_SECTIONS, STRATEGY_CALL_URL } from '../constants';
+import { NAV_LINKS, LANGUAGES } from '../constants';
 
 const Header: React.FC = () => {
     const { t, language, setLanguage } = useTranslation();
@@ -70,53 +70,14 @@ const Header: React.FC = () => {
 
                     <nav aria-label={t('header.primaryNavAria')} className="hidden xl:flex items-center gap-1 flex-1 justify-center">
                         {NAV_LINKS.filter(link => link.href !== '/contact').map(link => (
-                            link.href === '/services' ? (
-                                <Popover key={link.key} className="relative">
-                                    <Popover.Button className="group inline-flex items-center gap-1 border-b border-transparent px-3 py-2 text-sm font-semibold text-slate-600 transition-colors hover:border-slate-400 hover:text-slate-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white">
-                                        {t(link.key)}
-                                        <i className="fas fa-chevron-down text-xs transition-transform group-data-[headlessui-state=open]:rotate-180" />
-                                    </Popover.Button>
-                                    <Transition
-                                        as={Fragment}
-                                        enter="transition ease-out duration-150"
-                                        enterFrom="opacity-0 translate-y-2"
-                                        enterTo="opacity-100 translate-y-0"
-                                        leave="transition ease-in duration-100"
-                                        leaveFrom="opacity-100 translate-y-0"
-                                        leaveTo="opacity-0 translate-y-2"
-                                    >
-                                        <Popover.Panel className="absolute left-1/2 z-50 mt-6 w-[720px] max-w-[95vw] -translate-x-1/2 rounded-sm border border-slate-200 bg-white p-6 shadow-soft-xl">
-                                            <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-                                                {SERVICE_MENU_SECTIONS.map(section => (
-                                                    <div key={section.titleKey}>
-                                                        <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 mb-3">{t(section.titleKey)}</p>
-                                                        <div className="space-y-1">
-                                                            {section.items.map(item => (
-                                                                <Link
-                                                                    key={item.href}
-                                                                    to={item.href}
-                                                                    className="block border-l-2 border-transparent px-3 py-2 text-sm font-medium text-slate-700 transition hover:border-brand-700 hover:bg-brand-50 hover:text-brand-800"
-                                                                >
-                                                                    {t(item.labelKey)}
-                                                                </Link>
-                                                            ))}
-                                                        </div>
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        </Popover.Panel>
-                                    </Transition>
-                                </Popover>
-                            ) : (
-                                <NavLink
-                                    key={link.key}
-                                    to={link.href}
-                                    className={({ isActive }) => `inline-flex items-center border-b px-3 py-2 text-sm font-semibold transition-colors ${isActive ? 'border-brand-700 text-brand-800' : 'border-transparent text-slate-600 hover:border-slate-400 hover:text-slate-950'}`}
-                                    end
-                                >
-                                    {t(link.key)}
-                                </NavLink>
-                            )
+                            <NavLink
+                                key={link.key}
+                                to={link.href}
+                                className={({ isActive }) => `inline-flex items-center border-b px-3 py-2 text-sm font-semibold transition-colors ${isActive ? 'border-brand-700 text-brand-800' : 'border-transparent text-slate-600 hover:border-slate-400 hover:text-slate-950'}`}
+                                end
+                            >
+                                {t(link.key)}
+                            </NavLink>
                         ))}
                     </nav>
 
@@ -127,17 +88,15 @@ const Header: React.FC = () => {
                         </div>
 
                         {/* Primary contact action */}
-                        <a
-                            href={STRATEGY_CALL_URL}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                        <Link
+                            to="/contact"
                             className="hidden min-h-11 items-center justify-center gap-2 rounded-sm bg-slate-950 px-4 text-sm font-semibold text-white transition-colors hover:bg-brand-800 hover:text-white xl:inline-flex"
                             title={t('header.cta')}
                             aria-label={t('header.cta')}
                         >
                             <span>{t('header.cta')}</span>
-                            <i className="fas fa-arrow-up-right-from-square text-xs"></i>
-                        </a>
+                            <i className="fas fa-arrow-right text-xs"></i>
+                        </Link>
 
                         {/* Mobile Menu */}
                         <div className="xl:hidden">
@@ -169,19 +128,14 @@ const Header: React.FC = () => {
                                                         </Link>
                                                     ))}
                                                     <div className="pt-4 mt-4 border-t border-slate-200 space-y-2">
-                                                        <Link to="/ai-training" onClick={() => close()} className="block border-b border-slate-200 px-1 py-3 text-sm font-semibold text-slate-700">
-                                                            {t('nav.training')}
-                                                        </Link>
-                                                        <a
-                                                            href={STRATEGY_CALL_URL}
-                                                            target="_blank"
-                                                            rel="noopener noreferrer"
+                                                        <Link
+                                                            to="/contact"
                                                             onClick={() => close()}
                                                             className="block rounded-sm bg-slate-950 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-800"
                                                         >
                                                             {t('header.cta')}
-                                                            <i className="fas fa-arrow-up-right-from-square ml-2 text-sm"></i>
-                                                        </a>
+                                                            <i className="fas fa-arrow-right ml-2 text-sm"></i>
+                                                        </Link>
                                                         <LanguageSelector mobile={true} />
                                                     </div>
                                                 </div>

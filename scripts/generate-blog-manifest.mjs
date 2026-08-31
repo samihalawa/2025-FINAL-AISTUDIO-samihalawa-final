@@ -122,10 +122,6 @@ const staticUrls = ROUTE_METADATA
   .filter((item) => !item.robots.startsWith('noindex'))
   .filter((item) => item.sitemap !== false && !item.canonical)
   .map((item) => `  <url><loc>${SITE}${item.path === '/' ? '/' : item.path}</loc></url>`);
-const articleUrls = manifest.map((post) => {
-  const lastmod = /^\d{4}-\d{2}-\d{2}/.exec(post.date)?.[0];
-  return `  <url><loc>${SITE}/blog/${post.slug}</loc>${lastmod ? `<lastmod>${lastmod}</lastmod>` : ''}</url>`;
-});
-const out = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[...staticUrls, ...articleUrls].join('\n')}\n</urlset>\n`;
+const out = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${staticUrls.join('\n')}\n</urlset>\n`;
 fs.writeFileSync(sitemapPath, out);
-console.log(`[blog-manifest] sitemap: ${staticUrls.length} static URL(s) + ${articleUrls.length} blog article URL(s)`);
+console.log(`[blog-manifest] sitemap: ${staticUrls.length} static URL(s); public blog routes retired`);

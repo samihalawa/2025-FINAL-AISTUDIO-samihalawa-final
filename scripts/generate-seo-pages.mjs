@@ -7,7 +7,6 @@ import matter from 'gray-matter';
 import {
   NOT_FOUND_METADATA,
   ROUTE_METADATA,
-  buildBlogPostMetadata,
   buildHeadMarkup,
 } from '../seo/siteMetadata.js';
 
@@ -32,7 +31,6 @@ const blogEntries = fs.existsSync(manifestPath)
   : [];
 const pages = [
   ...ROUTE_METADATA,
-  ...blogEntries.map((entry) => buildBlogPostMetadata(entry)),
 ];
 
 const seen = new Set();
@@ -116,4 +114,4 @@ for (const meta of pages) {
 }
 
 fs.writeFileSync(path.join(dist, '404.html'), await renderPage(NOT_FOUND_METADATA));
-console.log(`[seo-pages] wrote ${ROUTE_METADATA.length} static route(s), ${blogEntries.length} article route(s), and 404.html`);
+console.log(`[seo-pages] wrote ${ROUTE_METADATA.length} static route(s) and 404.html; public blog routes retired`);
