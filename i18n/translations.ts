@@ -20,7 +20,7 @@ const en = {
     'header.tagline': 'Senior / Lead AI Engineer',
     'header.primaryNavAria': 'Primary navigation',
     'header.searchPlaceholder': 'Search the site…',
-    'header.cta': 'Discuss a role or project',
+    'header.cta': 'Discuss a role',
     'hero.title': "Sami Halawa",
     'hero.subtitle': 'AI Training & Solutions for Businesses',
     'hero.description': "We empower your teams with cutting-edge AI skills and develop custom solutions to drive innovation, efficiency, and growth in your organization.",
@@ -625,7 +625,7 @@ const en = {
     'hireCta.badge': 'Work together',
     'hireCta.title': 'Need an AI engineer who can take a system from architecture to production?',
     'hireCta.description': 'Discuss a senior or lead role, a delivery programme or a focused technical collaboration.',
-    'hireCta.primary': 'Discuss a role or project',
+    'hireCta.primary': 'Discuss a role',
     'hireCta.secondary': 'Message on WhatsApp',
     'footer.tagline': 'Sami Halawa — Senior / Lead AI Engineer'
 };
@@ -654,7 +654,7 @@ const es: Partial<Record<TranslationKey, string>> = {
     'header.tagline': 'Ingeniero sénior / lead de IA',
     'header.primaryNavAria': 'Navegación principal',
     'header.searchPlaceholder': 'Buscar en el sitio…',
-    'header.cta': 'Hablar de un rol o proyecto',
+    'header.cta': 'Hablar de un rol',
     'hero.title': "Sami Halawa",
     'hero.subtitle': 'Formación y Soluciones de IA para Empresas',
     'hero.description': "Capacitamos a sus equipos con habilidades de IA de vanguardia y desarrollamos soluciones personalizadas para impulsar la innovación, la eficiencia y el crecimiento en su organización.",
@@ -1258,7 +1258,7 @@ const es: Partial<Record<TranslationKey, string>> = {
     'hireCta.badge': 'Colaboremos',
     'hireCta.title': '¿Necesitas un ingeniero de IA que lleve el sistema desde la arquitectura hasta producción?',
     'hireCta.description': 'Hablemos de un rol sénior o lead, un programa de entrega o una colaboración técnica concreta.',
-    'hireCta.primary': 'Hablar de un rol o proyecto',
+    'hireCta.primary': 'Hablar de un rol',
     'hireCta.secondary': 'Escríbeme por WhatsApp',
     'footer.tagline': 'Sami Halawa — Ingeniero sénior / lead de IA'
 };
@@ -1285,7 +1285,7 @@ const fr: Partial<Record<TranslationKey, string>> = {
     'header.tagline': 'Ingénieur IA senior / lead',
     'header.primaryNavAria': 'Navigation principale',
     'header.searchPlaceholder': 'Rechercher sur le site…',
-    'header.cta': 'Parler d’un rôle ou projet',
+    'header.cta': 'Parler d’un rôle',
     'hero.title': "Sami Halawa",
     'hero.subtitle': 'Formation et Solutions IA pour Entreprises',
     'hero.description': "Nous donnons à vos équipes les compétences de pointe en IA et développons des solutions sur mesure pour stimuler l'innovation, l'efficacité et la croissance de votre organisation.",
@@ -1889,7 +1889,7 @@ const fr: Partial<Record<TranslationKey, string>> = {
     'hireCta.badge': 'Travaillons ensemble',
     'hireCta.title': 'Besoin d’un ingénieur IA capable de mener un système de l’architecture à la production ?',
     'hireCta.description': 'Échangeons sur un rôle senior ou lead, un programme de livraison ou une collaboration technique ciblée.',
-    'hireCta.primary': 'Parler d’un rôle ou projet',
+    'hireCta.primary': 'Parler d’un rôle',
     'hireCta.secondary': 'M’écrire sur WhatsApp',
     'footer.tagline': 'Sami Halawa — Ingénieur IA senior / lead'
 };
@@ -1916,7 +1916,7 @@ const zh: Partial<Record<TranslationKey, string>> = {
     'header.tagline': '高级 / 主管 AI 工程师',
     'header.primaryNavAria': '主导航',
     'header.searchPlaceholder': '站内搜索…',
-    'header.cta': '沟通岗位或项目',
+    'header.cta': '沟通岗位',
     'hero.title': "Sami Halawa",
     'hero.subtitle': '企业人工智能培训与解决方案',
     'hero.description': "我们为您的团队提供前沿的人工智能技能，并开发定制解决方案，以推动您组织的创新、效率和增长。",
@@ -2487,7 +2487,7 @@ const zh: Partial<Record<TranslationKey, string>> = {
     'hireCta.badge': '合作',
     'hireCta.title': '需要一位能把系统从架构推进到生产的 AI 工程师吗？',
     'hireCta.description': '可沟通高级或主管岗位、交付项目，或目标明确的技术合作。',
-    'hireCta.primary': '沟通岗位或项目',
+    'hireCta.primary': '沟通岗位',
     'hireCta.secondary': '通过 WhatsApp 联系我',
     'footer.tagline': 'Sami Halawa — 高级 / 主管 AI 工程师'
 };

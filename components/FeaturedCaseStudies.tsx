@@ -47,7 +47,7 @@ const FeaturedCaseStudies: React.FC = () => {
                   <img src={story.image} alt={`${story.name} ${story.imageKind === 'illustration' ? 'project cover' : 'product interface'}`} className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.015]" style={{ objectPosition: story.imagePosition || 'center' }} loading="lazy" />
                 </div>
                 <div className="flex flex-1 flex-col p-6 sm:p-7">
-                  <div className="flex items-center justify-between gap-4 text-xs font-bold uppercase tracking-[.14em]"><span className="text-brand-800">{story.period}</span><span className="text-slate-500">{copy.role}</span></div>
+                  <div className="flex items-center gap-4 text-xs font-bold uppercase tracking-[.14em]"><span className="text-slate-500">{copy.role}</span></div>
                   <h3 className="cv-serif mt-4 text-3xl font-semibold leading-tight text-slate-950">{story.name}</h3>
                   <p className="mt-3 text-sm leading-6 text-slate-600">{copy.description}</p>
                   <dl className="mt-6 border-t border-slate-300">
