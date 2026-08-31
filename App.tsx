@@ -1,7 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Navigate, Routes, Route } from 'react-router-dom';
 import { LanguageProvider } from './i18n/LanguageContext';
-import type { LoadedArticle } from './pages/BlogArticlePage';
 import Layout from './components/Layout';
 const HomePage = lazy(() => import('./pages/HomePage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
@@ -15,11 +14,7 @@ const ApoloMedicalFramework = lazy(() => import('./pages/case-studies/ApoloMedic
 const AutoClientCase = lazy(() => import('./pages/case-studies/AutoClient'));
 const AutoPricingCase = lazy(() => import('./pages/case-studies/AutoPricing'));
 
-type AppRoutesProps = {
-    initialBlogArticle?: LoadedArticle | null;
-};
-
-export const AppRoutes: React.FC<AppRoutesProps> = ({ initialBlogArticle = null }) => (
+export const AppRoutes: React.FC = () => (
     <Suspense fallback={<div className="flex min-h-[60vh] items-center justify-center" role="status"><span className="h-10 w-10 animate-spin rounded-full border-2 border-brand-200 border-t-brand-700" /><span className="sr-only">Loading</span></div>}>
         <Routes>
                         <Route path="/" element={<Layout />}>
@@ -47,14 +42,10 @@ export const AppRoutes: React.FC<AppRoutesProps> = ({ initialBlogArticle = null 
 );
 
 const App: React.FC = () => {
-    const initialBlogArticle = typeof window !== 'undefined'
-        ? window.__INITIAL_BLOG_ARTICLE__ || null
-        : null;
-
     return (
         <LanguageProvider>
             <BrowserRouter>
-                <AppRoutes initialBlogArticle={initialBlogArticle} />
+                <AppRoutes />
             </BrowserRouter>
         </LanguageProvider>
     );

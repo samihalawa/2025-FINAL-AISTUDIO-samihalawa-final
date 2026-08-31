@@ -5,12 +5,10 @@ Sami Halawa is a Senior / Lead AI Engineer in Madrid building production systems
 ## Main pages
 
 - [Home](https://samihalawa.com/): Profile, current focus and selected work
-- [Projects](https://samihalawa.com/projects): Products, collaborations, open-source tools and research
-- [Case studies](https://samihalawa.com/case-studies): Detailed product and engineering case studies
-- [Services](https://samihalawa.com/services): AI product, automation, training and advisory services
-- [CV](https://samihalawa.com/cv): Complete professional profile
-- [Blog](https://samihalawa.com/blog): Technical articles on AI agents, product engineering and deployment
-- [Contact](https://samihalawa.com/contact): Project and role enquiries
+- [Projects](https://samihalawa.com/projects): Selected production AI and software engineering work
+- [Case studies](https://samihalawa.com/case-studies): Detailed engineering outcomes and implementation decisions
+- [CV](https://samihalawa.com/cv): Concise professional profile
+- [Contact](https://samihalawa.com/contact): Role and collaboration conversations
 
 ## Public profiles
 

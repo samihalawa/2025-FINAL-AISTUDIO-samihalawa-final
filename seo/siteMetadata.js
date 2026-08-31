@@ -34,7 +34,7 @@ export const ROUTE_METADATA = [
   route('/cv', 'Sami Halawa CV | Senior / Lead AI Engineer', 'Concise recruiter-ready CV covering agentic AI, RAG, MCP, Python, TypeScript, production engineering, team leadership and immediate availability.', { schemaType: 'ProfilePage', alternates: CV_ALTERNATES }),
   route('/cv/en', 'Sami Halawa CV | Senior / Lead AI Engineer', 'English CV covering agentic AI, RAG, MCP, Python, TypeScript, production engineering, voice, automation and technical leadership.', { schemaType: 'ProfilePage', alternates: CV_ALTERNATES, canonical: '/cv', sitemap: false }),
   route('/cv/es', 'CV de Sami Halawa | Ingeniero Sénior / Lead de IA', 'Currículum en español con la experiencia de Sami Halawa en productos de IA, ingeniería, automatización y liderazgo técnico.', { schemaType: 'ProfilePage', lang: 'es', locale: 'es_ES', alternates: CV_ALTERNATES }),
-  route('/search', 'Search the Sami Halawa Portfolio', 'Search engineering projects, case studies and technical articles across the Sami Halawa portfolio.', { schemaType: 'SearchResultsPage', robots: 'noindex,follow' }),
+  route('/search', 'Search the Sami Halawa Portfolio', 'Search engineering projects and case studies across the Sami Halawa portfolio.', { schemaType: 'SearchResultsPage', robots: 'noindex,follow' }),
 
   route('/case-studies', 'AI Product & Engineering Case Studies | Sami Halawa', 'Three role-relevant engineering stories covering a multilingual production platform, pricing and ERP integration, and open-source agent tooling.', { schemaType: 'CollectionPage', image: '/portfolio/oulang-case-study-cover.webp', imageAlt: 'Selected AI and platform engineering case studies', imageWidth: 1600, imageHeight: 901, imageMime: 'image/webp', keywords: ['AI case studies', 'multilingual platform', 'pricing intelligence', 'ERP integration', 'agent tooling'] }),
   route('/case-studies/oulang', 'OULANG Multilingual Marketplace Case Study | Sami Halawa', 'How OULANG connects housing, jobs, local services, community publishing and AI assistance across web, iOS and Android.', { schemaType: 'TechArticle', image: '/portfolio/oulang-case-study-cover.webp', imageAlt: 'OULANG rent search, AI assistant and local-content mobile interfaces', imageWidth: 1600, imageHeight: 901, imageMime: 'image/webp', keywords: ['multilingual marketplace', 'Chinese community Spain', 'React marketplace', 'Capacitor mobile apps'] }),
@@ -43,7 +43,7 @@ export const ROUTE_METADATA = [
   route('/case-studies/autopricing', 'AutoPricing Delivery Case Study | Sami Halawa', 'A pricing-intelligence workflow connecting marketplace evidence, product matching, inventory, ERP context and operator review.', { schemaType: 'TechArticle', image: '/portfolio/autopricing-dashboard.png', imageAlt: 'AutoPricing pricing-intelligence and operations interface', imageWidth: 2756, imageHeight: 1994, keywords: ['pricing intelligence', 'marketplace data', 'ERP integration', 'sourcing workflow'] }),
 ];
 
-export const NOT_FOUND_METADATA = route('/404', 'Page Not Found | Sami Halawa', 'The requested page could not be found. Explore the engineering portfolio, case studies, CV or technical blog.', { schemaType: 'WebPage', robots: 'noindex,follow' });
+export const NOT_FOUND_METADATA = route('/404', 'Page Not Found | Sami Halawa', 'The requested page could not be found. Explore the engineering portfolio, selected case studies or concise CV.', { schemaType: 'WebPage', robots: 'noindex,follow' });
 
 export function normalizePath(pathname) {
   if (!pathname || pathname === '/') return '/';

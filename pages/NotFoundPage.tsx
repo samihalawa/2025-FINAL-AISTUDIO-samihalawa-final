@@ -5,11 +5,11 @@ const NotFoundPage = () => (
     <div className="max-w-2xl">
       <p className="text-sm font-bold uppercase tracking-[.18em] text-brand-700">404</p>
       <h1 className="mt-4 font-display text-5xl font-bold tracking-[-.05em] text-slate-950 sm:text-6xl">Page not found.</h1>
-      <p className="mt-6 text-lg leading-relaxed text-slate-600">The address may be outdated. Continue to the portfolio, explore case studies or read the technical blog.</p>
+      <p className="mt-6 text-lg leading-relaxed text-slate-600">The address may be outdated. Continue to the engineering portfolio or explore the selected case studies.</p>
       <div className="mt-8 flex flex-wrap gap-3">
         <Link to="/" className="btn-primary">Back to home</Link>
         <Link to="/projects" className="btn-secondary">Explore projects</Link>
-        <Link to="/blog" className="btn-secondary">Read the blog</Link>
+        <Link to="/case-studies" className="btn-secondary">View case studies</Link>
       </div>
     </div>
   </section>
