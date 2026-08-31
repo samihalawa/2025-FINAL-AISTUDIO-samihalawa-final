@@ -4,362 +4,40 @@ import { useTranslation } from '../i18n/LanguageContext';
 
 interface CVPageProps { edition?: 'en' | 'es' }
 
-const googleDataAnalyticsCourses = [
-  { title: 'Foundations: Data, Data, Everywhere', id: 'V4FNLT216Q8B', file: 'foundations-data-data-everywhere-V4FNLT216Q8B.pdf' },
-  { title: 'Ask Questions to Make Data-Driven Decisions', id: 'CLX6U7RJXKDZ', file: 'ask-questions-to-make-data-driven-decisions-CLX6U7RJXKDZ.pdf' },
-  { title: 'Prepare Data for Exploration', id: '137FKE9U9IKK', file: 'prepare-data-for-exploration-137FKE9U9IKK.pdf' },
-  { title: 'Process Data from Dirty to Clean', id: 'KC57MXBQZ1SX', file: 'process-data-from-dirty-to-clean-KC57MXBQZ1SX.pdf' },
-  { title: 'Analyze Data to Answer Questions', id: 'YFQT024FPUVM', file: 'analyze-data-to-answer-questions-YFQT024FPUVM.pdf' },
-  { title: 'Share Data Through the Art of Visualization', id: 'SJ76VZSHXMWV', file: 'share-data-through-visualization-SJ76VZSHXMWV.pdf' },
-  { title: 'Introduction to Data Analysis Using Python', id: 'UBFYCZ59VCOI', file: 'introduction-to-data-analysis-using-python-UBFYCZ59VCOI.pdf' },
-  { title: 'Google Data Analytics Capstone: Complete a Case Study', id: 'ZCQUM67FGISV', file: 'google-data-analytics-capstone-ZCQUM67FGISV.pdf' },
-  { title: 'Accelerate Your Job Search with AI', id: 'HP5JK2INXV6R', file: 'accelerate-your-job-search-with-ai-HP5JK2INXV6R.pdf' }
+const strengths: { en: { title: string; body: string }; es: { title: string; body: string } }[] = [
+  {
+    en: { title: 'AI product engineering', body: 'LLM/RAG and agentic systems, model and provider integration, context engineering, evaluation, observability, latency and cost.' },
+    es: { title: 'Ingeniería de producto de IA', body: 'Sistemas LLM/RAG y agénticos, integración de modelos y proveedores, ingeniería de contexto, evaluación, observabilidad, latencia y coste.' },
+  },
+  {
+    en: { title: 'Full-stack & backend', body: 'Python, TypeScript and Node.js, React, REST/APIs, SQL and databases, authentication and application architecture.' },
+    es: { title: 'Full-stack y backend', body: 'Python, TypeScript y Node.js, React, REST/APIs, SQL y bases de datos, autenticación y arquitectura de aplicaciones.' },
+  },
+  {
+    en: { title: 'Integration & ERP', body: 'System and ERP/Odoo integration, data flows and migrations, automation and tool integration across services.' },
+    es: { title: 'Integración y ERP', body: 'Integración de sistemas y ERP/Odoo, flujos de datos y migraciones, automatización e integración de herramientas entre servicios.' },
+  },
+  {
+    en: { title: 'Delivery & operations', body: 'End-to-end delivery: deployment, CI/CD, monitoring, reliability, diagnostics and production operation.' },
+    es: { title: 'Entrega y operaciones', body: 'Entrega de principio a fin: despliegue, CI/CD, monitorización, fiabilidad, diagnóstico y operación en producción.' },
+  },
+  {
+    en: { title: 'Leadership & communication', body: 'Technical leadership and mentoring, clear trade-off communication, trilingual work in Spanish, English and Mandarin (中文).' },
+    es: { title: 'Liderazgo y comunicación', body: 'Liderazgo técnico y mentoring, comunicación clara de compromisos, trabajo trilingüe en español, inglés y mandarín (中文).' },
+  },
 ];
-
-const credentialBase = '/credentials/google-data-analytics';
-const featuredCredentialBase = '/credentials/featured';
-
-const featuredCredentials = [
-  {
-    rank: '01',
-    title: 'Google AI Professional Certificate',
-    issuer: 'Google',
-    id: 'RFQT2RK02F2E',
-    image: 'google-ai-professional-RFQT2RK02F2E.webp',
-    pdf: 'google-ai-professional-RFQT2RK02F2E.pdf',
-    url: 'https://www.coursera.org/account/accomplishments/specialization/RFQT2RK02F2E',
-    detailEn: 'Seven-course Professional Certificate covering practical AI for research, planning, communication, content, data analysis and application building.',
-    detailEs: 'Certificado Profesional de siete cursos sobre IA aplicada a investigación, planificación, comunicación, contenido, análisis de datos y creación de aplicaciones.'
-  },
-  {
-    rank: '02',
-    title: 'AI in Healthcare Specialization',
-    issuer: 'Stanford University',
-    id: '7XCTV3Q16K04',
-    image: 'stanford-ai-healthcare-7XCTV3Q16K04.webp',
-    pdf: 'stanford-ai-healthcare-7XCTV3Q16K04.pdf',
-    url: 'https://www.coursera.org/account/accomplishments/specialization/7XCTV3Q16K04',
-    detailEn: 'Five-course Stanford specialization covering clinical data, machine learning for healthcare and evaluation of AI applications, completed with a capstone.',
-    detailEs: 'Especialización de Stanford de cinco cursos sobre datos clínicos, machine learning sanitario y evaluación de aplicaciones de IA, con proyecto final.'
-  },
-  {
-    rank: '03',
-    title: 'Microsoft Generative AI Engineering Professional Certificate',
-    issuer: 'Microsoft',
-    id: '4F55T94ZR1DH',
-    image: 'microsoft-generative-ai-engineering-4F55T94ZR1DH.webp',
-    pdf: 'microsoft-generative-ai-engineering-4F55T94ZR1DH.pdf',
-    url: 'https://www.coursera.org/account/accomplishments/specialization/4F55T94ZR1DH',
-    detailEn: 'Five-course Professional Certificate in Azure generative AI, foundation models, large language models, multimodal systems, MLOps and responsible AI.',
-    detailEs: 'Certificado Profesional de cinco cursos sobre IA generativa en Azure, modelos fundacionales, LLM, sistemas multimodales, MLOps e IA responsable.'
-  },
-  {
-    rank: '04',
-    title: 'Microsoft AI & ML Engineering Professional Certificate',
-    issuer: 'Microsoft',
-    id: 'G39IMP9491N8',
-    image: 'microsoft-ai-ml-engineering-G39IMP9491N8.webp',
-    pdf: 'microsoft-ai-ml-engineering-G39IMP9491N8.pdf',
-    url: 'https://www.coursera.org/account/accomplishments/specialization/G39IMP9491N8',
-    detailEn: 'Professional Certificate covering machine-learning engineering, Azure AI services, production data workflows and responsible deployment.',
-    detailEs: 'Certificado Profesional sobre ingeniería de machine learning, servicios de Azure AI, flujos de datos en producción y despliegue responsable.'
-  },
-  {
-    rank: '05',
-    title: 'IBM Machine Learning Professional Certificate',
-    issuer: 'IBM',
-    id: 'TRO88CF6Y826',
-    image: 'ibm-machine-learning-TRO88CF6Y826.webp',
-    pdf: 'ibm-machine-learning-TRO88CF6Y826.pdf',
-    url: 'https://www.coursera.org/account/accomplishments/specialization/TRO88CF6Y826',
-    detailEn: 'Six-course Professional Certificate spanning exploratory analysis, supervised and unsupervised learning, deep learning and a machine-learning capstone.',
-    detailEs: 'Certificado Profesional de seis cursos sobre análisis exploratorio, aprendizaje supervisado y no supervisado, deep learning y proyecto final de machine learning.'
-  },
-  {
-    rank: '06',
-    title: 'IBM Generative AI Engineering Professional Certificate',
-    issuer: 'IBM',
-    id: 'H21CWM4OU7XQ',
-    image: 'ibm-generative-ai-engineering-H21CWM4OU7XQ.webp',
-    pdf: 'ibm-generative-ai-engineering-H21CWM4OU7XQ.pdf',
-    url: 'https://www.coursera.org/account/accomplishments/specialization/H21CWM4OU7XQ',
-    detailEn: 'Official 16-course Professional Certificate spanning Python, machine learning, deep learning, transformers, fine-tuning, RAG, LangChain and production generative-AI applications, supported by 20 archived IBM course credentials.',
-    detailEs: 'Certificado Profesional oficial de 16 cursos sobre Python, machine learning, deep learning, transformers, fine-tuning, RAG, LangChain y aplicaciones de IA generativa en producción, respaldado por 20 credenciales IBM de cursos archivadas.'
-  },
-  {
-    rank: '07',
-    title: 'Google Data Analytics Professional Certificate',
-    issuer: 'Google',
-    id: 'WMUDGIG7OY8D',
-    image: 'google-data-analytics-WMUDGIG7OY8D.webp',
-    pdf: 'google-data-analytics-WMUDGIG7OY8D.pdf',
-    url: 'https://www.coursera.org/account/accomplishments/specialization/WMUDGIG7OY8D',
-    detailEn: 'Nine-course Professional Certificate covering spreadsheets, SQL, Python, Tableau, data preparation, analysis, visualisation and a complete case study.',
-    detailEs: 'Certificado Profesional de nueve cursos sobre hojas de cálculo, SQL, Python, Tableau, preparación, análisis y visualización de datos, con un caso práctico completo.'
-  },
-  {
-    rank: '08',
-    title: 'AI Foundations for Business Professionals',
-    issuer: 'Saïd Business School, University of Oxford',
-    id: 'LWTECCK71WBO',
-    image: 'oxford-ai-foundations-LWTECCK71WBO.webp',
-    pdf: 'oxford-ai-foundations-LWTECCK71WBO.pdf',
-    url: 'https://www.coursera.org/account/accomplishments/specialization/LWTECCK71WBO',
-    detailEn: 'Oxford programme in AI essentials, generative and agentic AI, governance, leadership and business application.',
-    detailEs: 'Programa de Oxford sobre fundamentos de IA, IA generativa y agéntica, gobernanza, liderazgo y aplicación empresarial.'
-  },
-  {
-    rank: '09',
-    title: 'Agentic AI Engineering Specialization',
-    issuer: 'Edureka',
-    id: 'GZ2Q50QNLE6N',
-    image: 'agentic-ai-engineering-GZ2Q50QNLE6N.webp',
-    pdf: 'agentic-ai-engineering-GZ2Q50QNLE6N.pdf',
-    url: 'https://www.coursera.org/account/accomplishments/specialization/GZ2Q50QNLE6N',
-    detailEn: 'Four-course specialization in LangChain, LangGraph and MCP, covering reasoning, tools, memory, stateful workflows, validation and observability.',
-    detailEs: 'Especialización de cuatro cursos en LangChain, LangGraph y MCP sobre razonamiento, herramientas, memoria, flujos con estado, validación y observabilidad.'
-  },
-  {
-    rank: '10',
-    title: 'Machine Learning Operations (MLOps) Specialization',
-    issuer: 'Board Infinity',
-    id: '3HZCX9EHMFMO',
-    image: 'mlops-3HZCX9EHMFMO.webp',
-    pdf: 'mlops-3HZCX9EHMFMO.pdf',
-    url: 'https://www.coursera.org/account/accomplishments/specialization/3HZCX9EHMFMO',
-    detailEn: 'Three-course specialization in ML CI/CD, cloud deployment, containerised model serving, production APIs, scalability and operating trade-offs.',
-    detailEs: 'Especialización de tres cursos en CI/CD para ML, despliegue cloud, serving de modelos en contenedores, APIs de producción, escalabilidad y decisiones operativas.'
-  },
-  {
-    rank: '11',
-    title: 'Managing AI Systems: Development, Deployment, and Governance',
-    issuer: 'Board Infinity',
-    id: 'HZ7XDA9WCE2I',
-    image: 'managing-ai-systems-HZ7XDA9WCE2I.webp',
-    pdf: 'managing-ai-systems-HZ7XDA9WCE2I.pdf',
-    url: 'https://www.coursera.org/account/accomplishments/specialization/HZ7XDA9WCE2I',
-    detailEn: 'Three-course specialization connecting RAG and LLM architecture with MLOps, LLMOps, production scaling, audit and AI-governance foundations.',
-    detailEs: 'Especialización de tres cursos que conecta arquitectura RAG y LLM con MLOps, LLMOps, escalado en producción, auditoría y fundamentos de gobernanza de IA.'
-  },
-  {
-    rank: '12',
-    title: 'AI Governance & ISO 42001 Readiness for GRC, Audit, & Legal',
-    issuer: 'British Standards Institution',
-    id: 'UXUS7TQ36GF4',
-    image: 'bsi-ai-governance-UXUS7TQ36GF4.webp',
-    pdf: 'bsi-ai-governance-UXUS7TQ36GF4.pdf',
-    url: 'https://www.coursera.org/account/accomplishments/specialization/UXUS7TQ36GF4',
-    detailEn: 'Five-course BSI specialization in AI concepts, impact assessment, ISO 42001 and ISO 23894, the EU AI Act, trust and responsible governance.',
-    detailEs: 'Especialización de BSI de cinco cursos sobre conceptos de IA, evaluación de impacto, ISO 42001 e ISO 23894, Reglamento de IA de la UE, confianza y gobernanza responsable.'
-  },
-  {
-    rank: '13',
-    title: 'AI Automation Engineer with n8n Specialization',
-    issuer: 'LearnKartS',
-    id: 'YUNCHF6IXQJQ',
-    image: 'n8n-ai-automation-YUNCHF6IXQJQ.webp',
-    pdf: 'n8n-ai-automation-YUNCHF6IXQJQ.pdf',
-    url: 'https://www.coursera.org/account/accomplishments/specialization/YUNCHF6IXQJQ',
-    detailEn: 'Seven-course specialization in n8n workflow logic, AI-model integration, secure APIs, RAG memory, MCP, multi-agent systems, testing and deployment.',
-    detailEs: 'Especialización de siete cursos sobre lógica de flujos n8n, integración de modelos, APIs seguras, memoria RAG, MCP, sistemas multiagente, pruebas y despliegue.'
-  },
-  {
-    rank: '14',
-    title: 'Data Privacy, Ethics, and Responsible AI Specialization',
-    issuer: 'Professionals in the Industry',
-    id: 'W4PPDYPHJKUR',
-    image: 'data-privacy-responsible-ai-W4PPDYPHJKUR.webp',
-    pdf: 'data-privacy-responsible-ai-W4PPDYPHJKUR.pdf',
-    url: 'https://www.coursera.org/account/accomplishments/specialization/W4PPDYPHJKUR',
-    detailEn: 'Six-course specialization in trustworthy chatbots, impact assessment, AI literacy, prompt-injection risks, privacy standards and European AI law.',
-    detailEs: 'Especialización de seis cursos sobre chatbots fiables, evaluación de impacto, alfabetización en IA, riesgos de prompt injection, estándares de privacidad y derecho europeo de IA.'
-  },
-  {
-    rank: '15',
-    title: 'CompTIA SecAI+ (CY0-001) Certification Exam Prep',
-    issuer: 'Packt',
-    id: 'Q4IYZTSRNUTN',
-    image: 'comptia-secai-prep-Q4IYZTSRNUTN.webp',
-    pdf: 'comptia-secai-prep-Q4IYZTSRNUTN.pdf',
-    url: 'https://www.coursera.org/account/accomplishments/specialization/Q4IYZTSRNUTN',
-    detailEn: 'Three-course preparation specialization in secure AI foundations, security architecture and controls, defensive operations, automation, governance and compliance.',
-    detailEs: 'Especialización preparatoria de tres cursos sobre fundamentos de IA segura, arquitectura y controles de seguridad, defensa, automatización, gobernanza y cumplimiento.'
-  },
-  {
-    rank: '16',
-    title: 'Building and Deploying AI Agents with LLMs and LangChain',
-    issuer: 'Board Infinity',
-    id: 'V7QS07EJVS93',
-    image: 'building-deploying-ai-agents-V7QS07EJVS93.webp',
-    pdf: 'building-deploying-ai-agents-V7QS07EJVS93.pdf',
-    url: 'https://www.coursera.org/account/accomplishments/specialization/V7QS07EJVS93',
-    detailEn: 'Three-course specialization in agent architecture, persistent memory, LangGraph, PydanticAI, multi-agent collaboration and production API deployment.',
-    detailEs: 'Especialización de tres cursos sobre arquitectura de agentes, memoria persistente, LangGraph, PydanticAI, colaboración multiagente y despliegue mediante APIs de producción.'
-  },
-  {
-    rank: '17',
-    title: 'Investment Management with Python and Machine Learning',
-    issuer: 'EDHEC Business School',
-    id: 'EGOPNC45Z7X4',
-    image: 'investment-management-python-ml-EGOPNC45Z7X4.webp',
-    pdf: 'investment-management-python-ml-EGOPNC45Z7X4.pdf',
-    url: 'https://www.coursera.org/account/accomplishments/specialization/EGOPNC45Z7X4',
-    detailEn: 'Four-course specialization in portfolio construction, quantitative analysis, Python, machine learning for asset management and alternative data.',
-    detailEs: 'Especialización de cuatro cursos sobre construcción de carteras, análisis cuantitativo, Python, machine learning para gestión de activos y datos alternativos.'
-  }
-];
-
-const ibmGenerativeCourses = [
-  ['Introduction to Artificial Intelligence (AI)', 'QDZP4952G529'],
-  ['Generative AI: Introduction and Applications', 'Z7OYZQ8R6JC1'],
-  ['Generative AI: Prompt Engineering Basics', '1CQ1ZFB8WTJ7'],
-  ['Python for Data Science, AI & Development', 'T9UGJSEZXDO6'],
-  ['Developing AI Applications with Python and Flask', 'QJDTTTMUQ0LE'],
-  ['Building Generative AI-Powered Applications with Python', 'OET9Y99RPDEB'],
-  ['Generative AI and LLMs: Architecture and Data Preparation', 'N0OS7ZV1ZTQ1'],
-  ['Gen AI Foundational Models for NLP & Language Understanding', '1V0QE5VLIUWU'],
-  ['Generative AI Language Modeling with Transformers', '76HQW3YWTQTC'],
-  ['Generative AI Engineering and Fine-Tuning Transformers', 'MLODQEU2VSJP'],
-  ['Generative AI Advanced Fine-Tuning for LLMs', '0MTB497LTU5X'],
-  ['Fundamentals of AI Agents Using RAG and LangChain', 'JF0OW4KZ2G96'],
-  ['Project: Generative AI Applications with RAG and LangChain', 'AOX3WDKI145D'],
-  ['Introduction to Deep Learning & Neural Networks with Keras', '7MUT0S0WTGV2'],
-  ['Machine Learning with Python', 'MA12RUEA95L1'],
-  ['Supervised Machine Learning: Regression', 'PYCV7XOO4LLK'],
-  ['Supervised Machine Learning: Classification', 'UKPCHR2RICZS'],
-  ['Unsupervised Machine Learning', 'G1VSALTXHPRU'],
-  ['Exploratory Data Analysis for Machine Learning', 'QVXE8FP3W0XI'],
-  ['Data Analysis with Python', 'WOD7TDCBN50J']
-] as const;
-
-const standaloneCredentials = [
-  ['中级商务汉语——商务活动篇', 'Peking University', 'OG02CJKE43H4'],
-  ['Databricks Mosaic AI', 'Databricks', 'RRXO8HSACR29'],
-  ['Foundations of AI Governance and Responsible Development', 'LearnQuest', '8STVBR62T6CY']
-] as const;
-
-const legacyCertifications = [
-  ['Microsoft Certified: Azure AI Fundamentals', 'AI-900'],
-  ['Adobe Certified Expert', 'After Effects']
-] as const;
-
-const professionalSummary = {
-  en: 'Senior / Lead AI engineer and systems architect shipping production agentic AI — multi-agent workflows, retrieval-augmented generation and Model Context Protocol tooling — across web, iOS and Android. I built and led OULANG through June 2026; the marketplace and local-life product remains live on all three platforms with 17,262 registered users, 38,857 listings and 89,913 contact reveals recorded as of 3 July 2026. My open-source MCP servers are in daily developer use: visual-ui-debug-agent-mcp has 80 GitHub stars and 900+ npm installs, and email-smtp-imap-mcp has passed 1,700+ npm installs. I work in Spanish, English and Mandarin (中文); technical teaching supports the same engineering practice, with 125+ recorded hours.',
-  es: 'Ingeniero sénior / lead de IA y arquitecto de sistemas que lleva IA agéntica a producción —flujos multiagente, generación aumentada por recuperación y herramientas Model Context Protocol— en web, iOS y Android. Construí y lideré OULANG hasta junio de 2026; el marketplace y plataforma de vida local sigue en producción en las tres plataformas con 17.262 usuarios registrados, 38.857 anuncios y 89.913 revelaciones de contacto registradas a 3 de julio de 2026. Mis servidores MCP open source se usan a diario: visual-ui-debug-agent-mcp acumula 80 estrellas en GitHub y más de 900 instalaciones en npm, y email-smtp-imap-mcp supera las 1.700 instalaciones en npm. Trabajo en español, inglés y mandarín (中文); la formación técnica refuerza la misma práctica de ingeniería, con más de 125 horas grabadas.'
-} as const;
-
-const selectedOutcomes = [
-  {
-    id: 'oulang',
-    metric: '17,262',
-    metricEs: '17.262',
-    labelEn: 'registered users',
-    labelEs: 'usuarios registrados',
-    titleEn: 'OULANG · marketplace and local-life platform',
-    titleEs: 'OULANG · marketplace y plataforma de vida local',
-    bodyEn: 'Live in production on web, iOS and Android. 38,857 listings and 89,913 contact reveals recorded as of 3 July 2026.',
-    bodyEs: 'En producción en web, iOS y Android. 38.857 anuncios y 89.913 revelaciones de contacto registradas a 3 de julio de 2026.'
-  },
-  {
-    id: 'autoclient',
-    metric: '+30%',
-    metricEs: '+30%',
-    labelEn: 'sales conversion lift',
-    labelEs: 'aumento de conversión de ventas',
-    titleEn: 'AutoClient · agentic revenue operations',
-    titleEs: 'AutoClient · operaciones comerciales agénticas',
-    bodyEn: 'Selected by Lanzadera in 2025. A public LinkedIn recommendation credits the system with 200+ qualified contacts in two weeks and a 30% lift in sales conversion.',
-    bodyEs: 'Seleccionado por Lanzadera en 2025. Una recomendación pública en LinkedIn atribuye al sistema más de 200 contactos cualificados en dos semanas y un aumento del 30% en la conversión de ventas.'
-  },
-  {
-    id: 'autopricing',
-    metric: '€35,000',
-    metricEs: '35.000 €',
-    labelEn: 'signed B2B scope',
-    labelEs: 'alcance B2B firmado',
-    titleEn: 'AutoPricing / IWAKY · pricing intelligence and ERP',
-    titleEs: 'AutoPricing / IWAKY · inteligencia de precios y ERP',
-    bodyEn: 'Marketplace data collection, product matching, quote analysis, ERP commerce and operator decision dashboards delivered under a signed €35,000 business scope.',
-    bodyEs: 'Captación de datos de marketplace, matching de producto, análisis de presupuestos, comercio ERP y dashboards de decisión entregados bajo un alcance de negocio firmado de 35.000 €.'
-  },
-  {
-    id: 'infrastructure',
-    metric: '€18K → €200',
-    metricEs: '18.000 € → 200 €',
-    labelEn: 'monthly infrastructure cost',
-    labelEs: 'coste mensual de infraestructura',
-    titleEn: 'Infrastructure migration and APOLO research',
-    titleEs: 'Migración de infraestructura e investigación APOLO',
-    bodyEn: 'Migration cut running cost from roughly €18,000 per month (peaks of €40–50K) to roughly €200 per month. APOLO — a DeepSeek-VL2-tiny multimodal model for OCT and fundus imaging — was published on Hugging Face inside a €32,000+ paid clinical collaboration.',
-    bodyEs: 'La migración redujo el coste operativo de unos 18.000 € al mes (picos de 40–50.000 €) a unos 200 € al mes. APOLO —modelo multimodal DeepSeek-VL2-tiny para OCT y retinografía— se publicó en Hugging Face dentro de una colaboración clínica remunerada de más de 32.000 €.'
-  }
-] as const;
-
-const cvExperience = [
-  {
-    yearsEn: 'Jul 2025–Jun 2026', yearsEs: 'Jul 2025–Jun 2026',
-    titleEn: 'Founding AI Engineer & Systems Architect', titleEs: 'Ingeniero Fundador de IA y Arquitecto de Sistemas',
-    companyEn: 'Agents AI Ltd', companyEs: 'Agents AI Ltd',
-    bodyEn: 'OULANG across web, iOS and Android; agentic and multi-agent systems with durable state, tool calling, structured outputs and human review; multilingual retrieval, FastAPI inference, model routing, evaluation and self-hosted ML infrastructure.',
-    bodyEs: 'OULANG en web, iOS y Android; sistemas agénticos y multiagente con estado, tool calling, salidas estructuradas y revisión humana; búsqueda multilingüe, inferencia FastAPI, enrutado de modelos, evaluación e infraestructura ML autogestionada.'
-  },
-  {
-    yearsEn: 'Mar 2024–Jul 2025', yearsEs: 'Mar 2024–Jul 2025',
-    titleEn: 'Founder & Agentic AI Systems Architect', titleEs: 'Fundador y Arquitecto de Sistemas de IA Agéntica',
-    companyEn: 'AutoClient AI', companyEs: 'AutoClient AI',
-    bodyEn: 'Multilingual outbound voice and outreach agents with live CRM context; selected by Lanzadera in 2025, with a public recommendation citing 200+ qualified contacts in two weeks.',
-    bodyEs: 'Agentes multilingües de voz y outreach con contexto CRM en vivo; seleccionado por Lanzadera en 2025, con una recomendación pública que cita más de 200 contactos cualificados en dos semanas.'
-  },
-  {
-    yearsEn: '2022–2025', yearsEs: '2022–2025',
-    titleEn: 'AI Systems Architect & Independent Technical Advisor', titleEs: 'Arquitecto de Sistemas de IA y Asesor Técnico Independiente',
-    companyEn: 'Independent', companyEs: 'Independiente',
-    bodyEn: 'Implementation-first AI, agents, MCP, automation, Python and product engineering for professionals and teams.',
-    bodyEs: 'IA, agentes, MCP, automatización, Python y producto orientados a implementación para profesionales y equipos.'
-  },
-  {
-    yearsEn: '2019–2023', yearsEs: '2019–2023',
-    titleEn: 'Senior Full-Stack Engineer', titleEs: 'Ingeniero Full-Stack Sénior',
-    companyEn: 'Damehosting', companyEs: 'Damehosting',
-    bodyEn: 'Production web systems, Linux/server operations, CI/CD practices, reviews and mentoring.',
-    bodyEs: 'Web en producción, Linux/servidores, CI/CD, revisiones y mentoring.'
-  },
-  {
-    yearsEn: '2009–2023', yearsEs: '2009–2023',
-    titleEn: 'Web, Mobile, Growth & Education', titleEs: 'Web, Móvil, Growth y Educación',
-    companyEn: 'Megawebs / Megacursos', companyEs: 'Megawebs / Megacursos',
-    bodyEn: 'Products, technical courses, digital-design instruction and acquisition work, with 125+ recorded hours of instruction.',
-    bodyEs: 'Productos, cursos técnicos, docencia de diseño digital y adquisición, con más de 125 horas grabadas de formación.'
-  },
-  {
-    yearsEn: '2013–2017', yearsEs: '2013–2017',
-    titleEn: 'Presenter, Model & Actor', titleEs: 'Presentador, Modelo y Actor',
-    companyEn: 'China', companyEs: 'China',
-    bodyEn: 'Multilingual on-camera presentation, commercial production and cross-cultural communication in Mandarin.',
-    bodyEs: 'Presentación multilingüe ante cámara, producción comercial y comunicación intercultural en mandarín.'
-  }
-] as const;
 
 const CVPage: React.FC<CVPageProps> = ({ edition }) => {
   const { language } = useTranslation();
   const selected = edition || (language === 'es' ? 'es' : 'en');
   const spanish = selected === 'es';
-  const cvVersion = '2026-08-30-positioning-v2';
-  const pdf = `${spanish ? '/cv/Sami_Halawa_CV_ES.pdf' : '/cv/Sami_Halawa_CV.pdf'}?v=${cvVersion}`;
-  const ats = `${spanish ? '/cv/Sami_Halawa_CV_ES_ATS.txt' : '/cv/Sami_Halawa_CV_ATS.txt'}?v=${cvVersion}`;
-  const complete = `/cv/Sami_Halawa_Complete_CV.pdf?v=${cvVersion}`;
-  const preview = `${spanish ? '/cv/Sami_Halawa_CV_ES_preview.png' : '/cv/Sami_Halawa_CV_preview.png'}?v=${cvVersion}`;
-  const primaryCredential = featuredCredentials[0];
-  const description = spanish
-    ? 'Un CV conciso y preparado para selección: experiencia agrupada por etapa, seis programas principales con fechas, liderazgo de equipos y disponibilidad inmediata.'
-    : 'A concise recruiter-ready CV: experience grouped by career phase, six dated flagship programmes, team leadership and immediate availability.';
-  const downloadLink = 'inline-flex min-h-11 items-center justify-between gap-6 border border-slate-950 px-4 py-3 text-sm font-bold text-slate-950 transition-colors hover:bg-slate-950 hover:text-white';
+
   return (
     <section className="border-b border-slate-300 bg-[#f8f6f1]">
-      <div className="container py-10 sm:py-14 lg:py-16">
+      <div className="container py-12 sm:py-16 lg:py-20">
         <div className="flex items-center justify-between gap-6 border-b border-slate-400 pb-4">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-700">
-            {spanish ? 'Currículum · versión española' : 'Curriculum vitae · English edition'}
+            {spanish ? 'Perfil profesional' : 'Professional profile'}
           </span>
           <div className="flex items-center gap-4 text-xs font-bold uppercase tracking-[0.14em]">
             <Link to="/cv/en" aria-current={!spanish ? 'page' : undefined} className={`min-h-11 content-center border-b-2 px-1 ${!spanish ? 'border-slate-950 text-slate-950' : 'border-transparent text-slate-500 hover:border-slate-400'}`}>EN</Link>
@@ -370,262 +48,50 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
         <header className="grid gap-10 py-12 lg:grid-cols-[minmax(0,1.35fr)_minmax(19rem,.65fr)] lg:gap-16 lg:py-16">
           <div>
             <p className="mb-5 text-sm font-bold uppercase tracking-[0.18em] text-brand-800">Sami Halawa Ribas</p>
-            <h1 className="cv-serif max-w-5xl text-[clamp(2.8rem,6vw,5.8rem)] font-normal leading-[0.94] tracking-[-0.045em] text-slate-950">
+            <h1 className="cv-serif max-w-5xl text-[clamp(2.6rem,5.5vw,5.2rem)] font-normal leading-[0.95] tracking-[-0.045em] text-slate-950">
               {spanish ? 'Ingeniero sénior / lead de IA que lleva sistemas agénticos desde la arquitectura hasta producción.' : 'Senior / Lead AI Engineer taking agentic systems from architecture to production.'}
             </h1>
           </div>
           <div className="flex flex-col justify-end border-t border-slate-400 pt-6 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
-            <p className="text-lg leading-relaxed text-slate-700">{description}</p>
-            <div className="mt-8 grid gap-2">
-              <a href={pdf} download data-analytics-event="cv_download" className={`${downloadLink} bg-slate-950 text-white`}>
-                <span>{spanish ? 'CV conciso · PDF' : 'Concise CV · PDF'}</span><i className="fas fa-arrow-down text-xs" />
-              </a>
-              <a href={complete} download data-analytics-event="cv_download" className={downloadLink}>
-                <span>{spanish ? 'CV completo · Registro íntegro · PDF' : 'Complete CV · Full record · PDF'}</span><i className="fas fa-arrow-down text-xs" />
-              </a>
-              <a href={ats} download data-analytics-event="cv_download" className={downloadLink}>
-                <span>{spanish ? 'Versión ATS · TXT' : 'ATS edition · TXT'}</span><i className="fas fa-arrow-down text-xs" />
-              </a>
-              <a href="https://www.linkedin.com/in/samihalawa" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center justify-between gap-6 border-b border-slate-400 px-1 py-3 text-sm font-bold text-slate-800 hover:border-slate-950 hover:text-slate-950">
-                <span>LinkedIn</span><i className="fas fa-arrow-up-right-from-square text-xs" />
-              </a>
-            </div>
+            <p className="text-lg leading-relaxed text-slate-700">
+              {spanish
+                ? 'Ingeniero sénior de IA y software y technical lead en Madrid. Diseño y entrego IA y software en producción de principio a fin — arquitectura, implementación, despliegue y operación — combinando ingeniería de IA, desarrollo full-stack e integración de sistemas.'
+                : 'Senior AI and software engineer and technical lead in Madrid. I design and deliver production AI and software end to end — architecture, implementation, deployment and operation — combining AI engineering, full-stack development and systems integration.'}
+            </p>
+            <p className="mt-4 text-sm font-semibold text-slate-600">
+              {spanish
+                ? 'Disponible de inmediato · jornada completa, contrato o B2B · remoto en Europa o híbrido en España.'
+                : 'Available immediately · full-time, contract or B2B · remote across Europe or hybrid in Spain.'}
+            </p>
           </div>
         </header>
 
-        <section className="border-t border-slate-400 py-12 sm:py-16">
-          <div className="grid gap-8 lg:grid-cols-[minmax(16rem,.5fr)_minmax(0,1.5fr)] lg:gap-16">
-            <div>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Perfil profesional' : 'Professional summary'}</p>
-              <h2 className="cv-serif mt-4 text-3xl font-normal leading-tight text-slate-950">{spanish ? 'Qué construyo y qué está en producción.' : 'What I build, and what is running in production.'}</h2>
-            </div>
-            <p className="text-lg leading-relaxed text-slate-700">{spanish ? professionalSummary.es : professionalSummary.en}</p>
-          </div>
-        </section>
-
-        <section className="border-t border-slate-400 py-12 sm:py-16">
-          <div className="grid gap-4 pb-8 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
-            <div>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Resultados seleccionados' : 'Selected outcomes'}</p>
-              <h2 className="cv-serif mt-3 text-3xl font-normal leading-tight text-slate-950">{spanish ? 'Sistemas en producción, con cifras verificables.' : 'Production systems, with verifiable figures.'}</h2>
-            </div>
-            <span className="font-mono text-sm font-bold text-slate-500">04</span>
-          </div>
-          <div className="grid border-t border-slate-400 sm:grid-cols-2 sm:gap-x-10">
-            {selectedOutcomes.map((outcome) => (
-              <article key={outcome.id} className="border-b border-slate-300 py-6">
-                <p className="cv-serif text-4xl font-semibold leading-none tracking-tight text-slate-950">{spanish ? outcome.metricEs : outcome.metric}</p>
-                <p className="mt-2 text-xs font-bold uppercase tracking-[0.12em] text-slate-500">{spanish ? outcome.labelEs : outcome.labelEn}</p>
-                <h3 className="mt-4 text-base font-bold leading-snug text-slate-950">{spanish ? outcome.titleEs : outcome.titleEn}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-700">{spanish ? outcome.bodyEs : outcome.bodyEn}</p>
-              </article>
+        <div className="border-t border-slate-400 py-12 sm:py-16">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Fortalezas principales' : 'Core strengths'}</p>
+          <div className="mt-8 grid gap-x-12 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+            {strengths.map((item, index) => (
+              <div key={item.en.title} className="border-t border-slate-300 pt-4">
+                <div className="flex items-baseline gap-3">
+                  <span className="font-mono text-xs font-bold text-brand-800">0{index + 1}</span>
+                  <h2 className="font-bold text-slate-950">{spanish ? item.es.title : item.en.title}</h2>
+                </div>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600">{spanish ? item.es.body : item.en.body}</p>
+              </div>
             ))}
           </div>
-        </section>
+        </div>
 
-        <section className="border-t border-slate-400 py-12 sm:py-16">
-          <div className="grid gap-4 pb-8 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
-            <div>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Experiencia' : 'Experience'}</p>
-              <h2 className="cv-serif mt-3 text-3xl font-normal leading-tight text-slate-950">{spanish ? 'Cronología profesional.' : 'Professional chronology.'}</h2>
-            </div>
-            <span className="font-mono text-sm font-bold text-slate-500">{String(cvExperience.length).padStart(2, '0')}</span>
+        <div className="border-t border-slate-400 py-12 sm:py-16">
+          <p className="max-w-3xl text-lg leading-relaxed text-slate-700">
+            {spanish
+              ? 'Para una vacante concreta preparo un CV enfocado a lo que busca el equipo, con las referencias o evidencias que necesites. Escríbeme y te envío la versión relevante.'
+              : 'For a specific opening I prepare a CV focused on what the team is looking for, with any references or evidence you need. Get in touch and I will send the relevant version.'}
+          </p>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Link to="/contact" className="btn-primary">{spanish ? 'Contactar' : 'Get in touch'}<i className="fas fa-arrow-right text-sm" /></Link>
+            <a href="https://www.linkedin.com/in/samihalawa" target="_blank" rel="noopener noreferrer" className="btn-secondary">LinkedIn<i className="fas fa-arrow-up-right-from-square text-sm" /></a>
           </div>
-          <ol className="border-t border-slate-400">
-            {cvExperience.map((role) => (
-              <li key={role.titleEn} className="grid gap-2 border-b border-slate-300 py-5 md:grid-cols-[11rem_minmax(0,1fr)] md:gap-6">
-                <span className="font-mono text-xs font-bold uppercase tracking-[0.1em] text-brand-800">{spanish ? role.yearsEs : role.yearsEn}</span>
-                <div>
-                  <h3 className="text-base font-bold leading-snug text-slate-950">
-                    {spanish ? role.titleEs : role.titleEn}
-                    <span className="font-normal text-slate-400"> · </span>
-                    <span className="font-semibold text-brand-800">{spanish ? role.companyEs : role.companyEn}</span>
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-700">{spanish ? role.bodyEs : role.bodyEn}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-        </section>
-
-        <section className="border-t border-slate-400 py-12 sm:py-16">
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(20rem,.9fr)] lg:gap-14">
-            <div className="overflow-hidden border border-slate-400 bg-white p-2 shadow-[0_28px_70px_-42px_rgba(15,23,42,.55)] sm:p-4">
-              <img
-                src={`${featuredCredentialBase}/${primaryCredential.image}`}
-                alt={spanish ? `Diploma de ${primaryCredential.title}` : `${primaryCredential.title} diploma`}
-                className="block h-full w-full object-contain"
-              />
-            </div>
-            <div className="flex flex-col justify-between">
-              <div>
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Credencial principal · agosto de 2026' : 'Lead credential · August 2026'}</p>
-                <h2 className="cv-serif mt-4 text-[clamp(2.3rem,5vw,4.5rem)] font-normal leading-[0.96] tracking-[-0.04em] text-slate-950">{primaryCredential.title}</h2>
-                <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate-700">{spanish ? primaryCredential.detailEs : primaryCredential.detailEn}</p>
-                <dl className="mt-7 grid grid-cols-2 border-y border-slate-300 py-5 text-sm">
-                  <div><dt className="font-bold uppercase tracking-[0.12em] text-slate-500">{spanish ? 'Emisor' : 'Issuer'}</dt><dd className="mt-1 text-lg font-semibold text-slate-950">{primaryCredential.issuer}</dd></div>
-                  <div><dt className="font-bold uppercase tracking-[0.12em] text-slate-500">{spanish ? 'Credencial' : 'Credential'}</dt><dd className="mt-1 font-mono text-base font-semibold text-slate-950">{primaryCredential.id}</dd></div>
-                </dl>
-              </div>
-              <div className="mt-8 grid gap-2 sm:grid-cols-2">
-                <a href={`${featuredCredentialBase}/${primaryCredential.pdf}`} target="_blank" rel="noopener noreferrer" className={`${downloadLink} bg-slate-950 text-white`}>
-                  <span>{spanish ? 'Abrir diploma' : 'Open diploma'}</span><i className="fas fa-arrow-up-right-from-square text-xs" />
-                </a>
-                <a href={primaryCredential.url} target="_blank" rel="noopener noreferrer" className={downloadLink}>
-                  <span>{spanish ? 'Ver credencial' : 'View credential'}</span><i className="fas fa-arrow-up-right-from-square text-xs" />
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-12 grid gap-8 border-t border-slate-400 pt-8 lg:grid-cols-2">
-            {featuredCredentials.slice(1).map((credential) => (
-              <article key={credential.id} className="grid gap-6 border-b border-slate-300 pb-8 sm:grid-cols-[minmax(11rem,.8fr)_minmax(0,1.2fr)] lg:border-b-0 lg:pb-0">
-                <a href={`${featuredCredentialBase}/${credential.pdf}`} target="_blank" rel="noopener noreferrer" className="overflow-hidden border border-slate-400 bg-white p-2">
-                  <img src={`${featuredCredentialBase}/${credential.image}`} alt={`${credential.title} diploma`} className="block h-full w-full object-contain" />
-                </a>
-                <div>
-                  <p className="font-mono text-xs font-bold text-brand-800">{credential.rank} · {credential.issuer}</p>
-                  <h3 className="cv-serif mt-3 text-3xl font-semibold leading-tight text-slate-950">{credential.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-700">{spanish ? credential.detailEs : credential.detailEn}</p>
-                  <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-xs font-bold uppercase tracking-[0.1em]">
-                    <a href={`${featuredCredentialBase}/${credential.pdf}`} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center border-b border-slate-500 text-slate-800 hover:border-slate-950">{spanish ? 'Abrir diploma' : 'Open diploma'}</a>
-                    <a href={credential.url} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center border-b border-slate-500 text-slate-800 hover:border-slate-950">{spanish ? 'Ver credencial' : 'View credential'}</a>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          <div className="mt-12 border-t border-slate-400">
-            <div className="grid gap-4 py-6 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
-              <div>
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'IBM Generative AI Engineering' : 'IBM Generative AI Engineering'}</p>
-                <h3 className="cv-serif mt-3 text-3xl font-normal text-slate-950">{spanish ? 'Programa oficial de 16 cursos · 20 credenciales IBM archivadas.' : 'Official 16-course programme · 20 archived IBM course credentials.'}</h3>
-              </div>
-              <span className="font-mono text-sm font-bold text-slate-500">20 + 01</span>
-            </div>
-            <ol className="grid border-t border-slate-300 md:grid-cols-2 md:gap-x-10">
-              {ibmGenerativeCourses.map(([title, id], index) => (
-                <li key={id} className="grid grid-cols-[2.25rem_minmax(0,1fr)_auto] items-center gap-3 border-b border-slate-300 py-4">
-                  <span className="font-mono text-xs font-bold text-slate-500">{String(index + 1).padStart(2, '0')}</span>
-                  <div className="min-w-0">
-                    <h4 className="text-sm font-semibold leading-snug text-slate-950">{title}</h4>
-                    <p className="mt-1 font-mono text-xs text-slate-500">{id}</p>
-                  </div>
-                  <a href={`https://www.coursera.org/account/accomplishments/records/${id}`} target="_blank" rel="noopener noreferrer" aria-label={`${spanish ? 'Ver credencial' : 'View credential'}: ${title}`} className="inline-flex min-h-11 min-w-11 items-center justify-center border border-slate-400 text-slate-800 transition-colors hover:border-slate-950 hover:bg-slate-950 hover:text-white">
-                    <i className="fas fa-arrow-up-right-from-square text-xs" />
-                  </a>
-                </li>
-              ))}
-            </ol>
-          </div>
-
-          <div className="mt-12 border-t border-slate-400">
-            <div className="grid gap-4 py-6 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
-              <div>
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Diplomas de los nueve cursos' : 'Nine course diplomas'}</p>
-                <h3 className="cv-serif mt-3 text-3xl font-normal text-slate-950">{spanish ? 'Cada curso, con su credencial oficial.' : 'Every course, with its official credential.'}</h3>
-              </div>
-              <span className="font-mono text-sm font-bold text-slate-500">09 + 01</span>
-            </div>
-            <ol className="grid border-t border-slate-300 md:grid-cols-2 md:gap-x-10">
-              {googleDataAnalyticsCourses.map((course, index) => (
-                <li key={course.id} className="grid grid-cols-[2.25rem_minmax(0,1fr)_auto] items-center gap-3 border-b border-slate-300 py-4">
-                  <span className="font-mono text-xs font-bold text-slate-500">{String(index + 1).padStart(2, '0')}</span>
-                  <div className="min-w-0">
-                    <h4 className="text-sm font-semibold leading-snug text-slate-950">{course.title}</h4>
-                    <p className="mt-1 font-mono text-xs text-slate-500">{course.id}</p>
-                  </div>
-                  <a href={`${credentialBase}/${course.file}`} target="_blank" rel="noopener noreferrer" aria-label={`${spanish ? 'Abrir diploma' : 'Open diploma'}: ${course.title}`} className="inline-flex min-h-11 min-w-11 items-center justify-center border border-slate-400 text-slate-800 transition-colors hover:border-slate-950 hover:bg-slate-950 hover:text-white">
-                    <i className="fas fa-arrow-up-right-from-square text-xs" />
-                  </a>
-                </li>
-              ))}
-            </ol>
-          </div>
-
-          <div className="mt-12 border-t border-slate-400">
-            <div className="grid gap-4 py-6 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
-              <div>
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Registro de programas completados' : 'Completed programme register'}</p>
-                <h3 className="cv-serif mt-3 text-3xl font-normal text-slate-950">{spanish ? '17 programas completados · 116 credenciales.' : '17 completed programmes · 116 credentials.'}</h3>
-                <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-600">{spanish ? 'Los 17 títulos principales se muestran aquí con su diploma. El PDF y la versión ATS se centran en experiencia, programas principales y credenciales relevantes.' : 'All 17 programme awards are shown here with their diploma. The PDF and ATS edition stay focused on experience, flagship programmes and relevant credentials.'}</p>
-              </div>
-              <span className="font-mono text-sm font-bold text-slate-500">17 / 116</span>
-            </div>
-            <ol className="grid border-t border-slate-300 md:grid-cols-2 md:gap-x-10">
-              {featuredCredentials.map((credential) => (
-                <li key={credential.id} className="grid grid-cols-[2.25rem_minmax(0,1fr)_auto] items-center gap-3 border-b border-slate-300 py-4">
-                  <span className="font-mono text-xs font-bold text-slate-500">{credential.rank}</span>
-                  <div className="min-w-0">
-                    <h4 className="text-sm font-semibold leading-snug text-slate-950">{credential.title}</h4>
-                    <p className="mt-1 text-xs text-slate-500">{credential.issuer} · <span className="font-mono">{credential.id}</span></p>
-                  </div>
-                  <a href={credential.url} target="_blank" rel="noopener noreferrer" aria-label={`${spanish ? 'Ver credencial' : 'View credential'}: ${credential.title}`} className="inline-flex min-h-11 min-w-11 items-center justify-center border border-slate-400 text-slate-800 transition-colors hover:border-slate-950 hover:bg-slate-950 hover:text-white">
-                    <i className="fas fa-arrow-up-right-from-square text-xs" />
-                  </a>
-                </li>
-              ))}
-            </ol>
-            <div className="grid gap-4 py-6 sm:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
-              <div>
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Credenciales independientes' : 'Standalone credentials'}</p>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">{spanish ? 'Formación adicional verificada fuera de los 17 programas.' : 'Additional verified learning outside the 17 programmes.'}</p>
-              </div>
-              <ol className="border-t border-slate-300">
-                {standaloneCredentials.map(([title, issuer, id]) => (
-                  <li key={id} className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 border-b border-slate-300 py-4">
-                    <div className="min-w-0">
-                      <h4 className="text-sm font-semibold leading-snug text-slate-950">{title}</h4>
-                      <p className="mt-1 text-xs text-slate-500">{issuer} · <span className="font-mono">{id}</span></p>
-                    </div>
-                    <a href={`https://www.coursera.org/account/accomplishments/records/${id}`} target="_blank" rel="noopener noreferrer" aria-label={`${spanish ? 'Ver credencial' : 'View credential'}: ${title}`} className="inline-flex min-h-11 min-w-11 items-center justify-center border border-slate-400 text-slate-800 transition-colors hover:border-slate-950 hover:bg-slate-950 hover:text-white">
-                      <i className="fas fa-arrow-up-right-from-square text-xs" />
-                    </a>
-                  </li>
-                ))}
-              </ol>
-            </div>
-            <div className="grid gap-4 border-t border-slate-300 py-6 sm:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
-              <div>
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Certificaciones anteriores' : 'Earlier certifications'}</p>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">{spanish ? 'Dos certificaciones históricas de LinkedIn sin ID público de credencial.' : 'Two historical LinkedIn certifications without a public credential ID.'}</p>
-              </div>
-              <div>
-                <ol className="border-t border-slate-300">
-                  {legacyCertifications.map(([title, detail]) => (
-                    <li key={`${title}-${detail}`} className="border-b border-slate-300 py-4">
-                      <h4 className="text-sm font-semibold leading-snug text-slate-950">{title}</h4>
-                      <p className="mt-1 text-xs text-slate-500">{detail}</p>
-                    </li>
-                  ))}
-                </ol>
-                <div className="mt-5 flex flex-wrap gap-5 text-sm font-bold">
-                  <a href={pdf} target="_blank" rel="noopener noreferrer" data-analytics-event="cv_download" className="inline-flex min-h-11 items-center gap-2 border-b border-slate-500 text-slate-800 hover:border-slate-950 hover:text-slate-950">{spanish ? 'Abrir CV conciso' : 'Open concise CV'}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>
-                  <a href={ats} target="_blank" rel="noopener noreferrer" data-analytics-event="cv_download" className="inline-flex min-h-11 items-center gap-2 border-b border-slate-500 text-slate-800 hover:border-slate-950 hover:text-slate-950">{spanish ? 'Abrir versión ATS' : 'Open ATS edition'}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="grid gap-10 border-t border-slate-400 py-12 sm:py-16 lg:grid-cols-[minmax(16rem,.5fr)_minmax(0,1.5fr)] lg:gap-16">
-          <aside className="lg:sticky lg:top-24 lg:self-start">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-800">{spanish ? 'Formación profesional actual' : 'Current professional development'}</p>
-            <h2 className="cv-serif mt-4 text-3xl font-normal leading-tight text-slate-950">{spanish ? 'IA agéntica, plataformas y gobernanza.' : 'Agentic AI, platforms and governance.'}</h2>
-            <p className="mt-5 leading-relaxed text-slate-700">{spanish ? 'Mis 116 credenciales profesionales abarcan ingeniería de IA generativa y machine learning de IBM y Microsoft; IA aplicada de Google; IA sanitaria de Stanford University; estrategia y gobernanza de IA de Saïd Business School, University of Oxford; ingeniería de IA agéntica; MLOps; Databricks Mosaic AI; automatización con n8n; ISO 42001; métodos cuantitativos y chino comercial.' : 'My 116 professional credentials span IBM and Microsoft generative-AI engineering and machine learning; applied AI from Google; healthcare AI from Stanford University; AI strategy and governance from Saïd Business School, University of Oxford; agentic AI engineering; MLOps; Databricks Mosaic AI; n8n automation; ISO 42001; quantitative methods and business Chinese.'}</p>
-          </aside>
-          <figure>
-            <div className="border border-slate-400 bg-white p-2 shadow-[0_28px_70px_-42px_rgba(15,23,42,.55)] sm:p-4">
-              <img src={preview} alt={spanish ? 'Primera página del CV conciso' : 'First page of the concise CV'} className="block w-full bg-white" />
-            </div>
-            <figcaption className="mt-4 flex flex-col items-start justify-between gap-3 border-t border-slate-400 pt-4 text-sm text-slate-600 sm:flex-row sm:items-center">
-              <span>{spanish ? 'Vista previa de la primera página.' : 'Preview of the first page.'}</span>
-              <a href={pdf} target="_blank" rel="noopener noreferrer" data-analytics-event="cv_download" className="inline-flex min-h-11 items-center gap-2 border-b border-slate-500 font-bold text-slate-800 hover:border-slate-950 hover:text-slate-950">{spanish ? 'Abrir el PDF conciso' : 'Open the concise PDF'}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>
-            </figcaption>
-          </figure>
-        </section>
+        </div>
       </div>
     </section>
   );

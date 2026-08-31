@@ -11,7 +11,7 @@ const content: Record<LanguageCode, {
     title: 'I build production AI systems across agents, RAG, voice and automation.',
     intro: 'Hands-on across Python, TypeScript, APIs, SQL, web and mobile, deployment and observability. I lead cross-functional delivery and connect model workflows to real product context, operations and human review.',
     work: 'Explore the portfolio', cv: 'Open concise CV', available: 'Open to work · available immediately for full-time, contract, hybrid or remote roles',
-    proofTitle: 'At a glance', proofBody: 'Builder of OULANG, AutoClient, VUDA and APOLO — with 84 shipped projects and collaborations behind them, plus open-source MCP tools. Coordinated teams of up to 50 people, delivering with engineers, specialists, clients and operators. Delivery, documentation and client work run trilingually in Spanish, English and Mandarin (中文).',
+    proofTitle: 'At a glance', proofBody: 'Senior AI and software engineer, and technical lead. I design and deliver production AI and software end to end — from architecture through deployment and operation — across AI systems and integration. Delivery and client work run trilingually in Spanish, English and Mandarin (中文).',
     now: 'Core strengths', building: ['Agentic AI, RAG and MCP', 'Python and TypeScript production systems', 'Cross-functional leadership and mentoring'],
     stats: [{ value: '7', label: 'flagship programmes' }, { value: '249', label: 'original public repositories' }, { value: '80★', label: 'VUDA · 7 forks' }, { value: '125+', label: 'recorded training hours' }]
   },
@@ -20,7 +20,7 @@ const content: Record<LanguageCode, {
     title: 'Construyo sistemas de IA en producción con agentes, RAG, voz y automatización.',
     intro: 'Trabajo directamente con Python, TypeScript, APIs, SQL, web y móvil, despliegue y observabilidad. Lidero entregas multidisciplinares y conecto los modelos con el contexto real de producto, las operaciones y la revisión humana.',
     work: 'Explorar el portfolio', cv: 'Abrir CV conciso', available: 'Open to work · disponibilidad inmediata · jornada completa, contrato, híbrido o remoto',
-    proofTitle: 'En pocas palabras', proofBody: 'Constructor de OULANG, AutoClient, VUDA y APOLO, con 84 proyectos y colaboraciones entregados detrás, además de herramientas MCP open source. He coordinado equipos de hasta 50 personas, trabajando con ingenieros, especialistas, clientes y operaciones. Entrego, documento y trabajo con clientes de forma trilingüe en español, inglés y mandarín (中文).',
+    proofTitle: 'En pocas palabras', proofBody: 'Ingeniero sénior de IA y software, y technical lead. Diseño y entrego IA y software en producción de principio a fin — de la arquitectura al despliegue y la operación — en sistemas de IA e integración. Entrega y trabajo con clientes en español, inglés y mandarín (中文).',
     now: 'Fortalezas', building: ['IA agéntica, RAG y MCP', 'Sistemas en producción con Python y TypeScript', 'Liderazgo multidisciplinar y mentoring'],
     stats: [{ value: '7', label: 'programas principales' }, { value: '249', label: 'repositorios públicos propios' }, { value: '80★', label: 'VUDA · 7 forks' }, { value: '125+', label: 'horas grabadas de formación' }]
   },
@@ -29,7 +29,7 @@ const content: Record<LanguageCode, {
     title: 'Je construis des systèmes IA en production avec agents, RAG, voix et automatisation.',
     intro: 'J’interviens directement sur Python, TypeScript, APIs, SQL, web et mobile, déploiement et observabilité. Je pilote des livraisons pluridisciplinaires et relie les modèles au contexte produit, aux opérations et à la validation humaine.',
     work: 'Explorer le portfolio', cv: 'Ouvrir le CV concis', available: 'Ouvert au travail · disponible immédiatement · temps plein, contrat, hybride ou distant',
-    proofTitle: 'En bref', proofBody: 'Créateur d’OULANG, AutoClient, VUDA et APOLO, avec 84 projets et collaborations livrés derrière eux, ainsi que des outils MCP open source. Coordination d’équipes jusqu’à 50 personnes, avec ingénieurs, spécialistes, clients et opérations. Livraison, documentation et relation client en espagnol, anglais et mandarin (中文).',
+    proofTitle: 'En bref', proofBody: 'Ingénieur IA et logiciel senior, et technical lead. Je conçois et livre de l’IA et du logiciel en production de bout en bout — de l’architecture au déploiement et à l’exploitation — sur les systèmes d’IA et l’intégration. Livraison et relation client en espagnol, anglais et mandarin (中文).',
     now: 'Points forts', building: ['IA agentique, RAG et MCP', 'Systèmes Python et TypeScript en production', 'Leadership pluridisciplinaire et mentorat'],
     stats: [{ value: '7', label: 'programmes phares' }, { value: '249', label: 'dépôts publics originaux' }, { value: '80★', label: 'VUDA · 7 forks' }, { value: '125+', label: 'heures de formation enregistrées' }]
   },
@@ -38,7 +38,7 @@ const content: Record<LanguageCode, {
     title: '我构建涵盖智能体、RAG、语音与自动化的生产级 AI 系统。',
     intro: '亲自负责 Python、TypeScript、API、SQL、Web 与移动端、部署和可观测性，领导跨职能交付，并把模型工作流连接到真实产品、运营与人工审核。',
     work: '浏览作品集', cv: '打开精简简历', available: '正在求职 · 可立即到岗 · 全职、合同、混合或远程',
-    proofTitle: '快速了解', proofBody: 'OULANG、AutoClient、VUDA 与 APOLO 的构建者，背后是 84 个已交付的项目与合作，以及开源 MCP 工具。协调过最多 50 人的团队，并与工程师、专家、客户和运营人员协作交付。交付、文档与客户沟通均可用西班牙语、英语和中文三语进行。',
+    proofTitle: '快速了解', proofBody: '高级 AI 与软件工程师、技术负责人。我端到端设计并交付生产级 AI 与软件——从架构到部署与运营——覆盖 AI 系统与集成。交付与客户沟通均可用西班牙语、英语和中文进行。',
     now: '核心能力', building: ['智能体 AI、RAG 与 MCP', '生产级 Python 与 TypeScript 系统', '跨职能领导与指导'],
     stats: [{ value: '7', label: '旗舰项目集' }, { value: '249', label: '原创公开仓库' }, { value: '80★', label: 'VUDA · 7 个 fork' }, { value: '125+', label: '已录制培训小时' }]
   }
@@ -62,7 +62,7 @@ const Hero: React.FC = () => {
             <p className="mt-8 max-w-3xl text-xl leading-relaxed text-slate-700">{c.intro}</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link to="/projects" className="btn-primary">{c.work}<i className="fas fa-arrow-right text-sm"></i></Link>
-              <Link to="/cv" className="btn-secondary">{c.cv}<i className="fas fa-file-lines text-sm"></i></Link>
+              <Link to="/contact" className="btn-secondary">{c.available.includes('inmediata') ? 'Hablemos' : c.available.includes('immédiat') ? 'Discutons' : c.available.includes('可立即') ? '联系我' : 'Get in touch'}<i className="fas fa-arrow-right text-sm"></i></Link>
             </div>
           </div>
 
@@ -79,10 +79,6 @@ const Hero: React.FC = () => {
             </div>
           </aside>
         </div>
-
-        <dl className="grid grid-cols-2 border-y border-slate-400 sm:grid-cols-4">
-          {c.stats.map((stat, index) => <div key={stat.label} className={`py-5 pr-4 sm:px-5 ${index % 2 === 1 ? 'border-l border-slate-300' : ''} ${index > 1 ? 'border-t border-slate-300 sm:border-t-0' : ''} ${index > 0 ? 'sm:border-l' : ''}`}><dd className="cv-serif text-3xl font-semibold tracking-tight text-slate-950">{stat.value}</dd><dt className="mt-1 text-xs font-bold uppercase leading-tight tracking-[0.1em] text-slate-500">{stat.label}</dt></div>)}
-        </dl>
       </div>
     </section>
   );

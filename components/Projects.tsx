@@ -44,7 +44,7 @@ const headings: Record<LanguageCode, {
   en: {
     eyebrow: 'Selected work · 2023–today',
     title: 'AI products built from first decision to live operation.',
-    body: 'Seven sustained programmes spanning multilingual platforms, agent systems, applied AI and technical education—delivered with clients, specialists, engineers and operators.',
+    body: 'Sustained programmes spanning multilingual platforms, agent systems, applied AI and technical education—delivered with clients, specialists, engineers and operators.',
     stats: ['flagship programmes', 'original public repositories', 'public videos', 'technical articles'],
     approachEyebrow: 'End-to-end technical ownership',
     approachTitle: 'End-to-end technical ownership across product, architecture, engineering and production.',
@@ -55,7 +55,7 @@ const headings: Record<LanguageCode, {
       { number: '03', title: 'Operate and improve', body: 'Launch, observe real use, solve the rough edges and keep the product moving.' },
     ],
     selectedEyebrow: 'Portfolio',
-    selectedTitle: 'Seven flagship programmes, grouped by outcome.',
+    selectedTitle: 'Flagship programmes, grouped by outcome.',
     selectedBody: 'Sustained platforms, open-source systems and client collaborations. Focused teaching builds remain grouped inside the education experience rather than appearing as parallel commercial work.',
     visit: 'Visit project',
     archiveEyebrow: 'Earlier work',
@@ -74,7 +74,7 @@ const headings: Record<LanguageCode, {
   es: {
     eyebrow: 'Trabajo seleccionado · 2023–hoy',
     title: 'Productos de IA, desde la primera decisión hasta la operación real.',
-    body: 'Siete programas sostenidos de plataformas multilingües, sistemas de agentes, IA aplicada y formación técnica, entregados con clientes, especialistas, ingenieros y operaciones.',
+    body: 'Programas sostenidos de plataformas multilingües, sistemas de agentes, IA aplicada y formación técnica, entregados con clientes, especialistas, ingenieros y operaciones.',
     stats: ['programas principales', 'repositorios públicos propios', 'vídeos públicos', 'artículos técnicos'],
     approachEyebrow: 'Responsabilidad técnica integral',
     approachTitle: 'Responsabilidad técnica integral en producto, arquitectura, ingeniería y producción.',
@@ -85,7 +85,7 @@ const headings: Record<LanguageCode, {
       { number: '03', title: 'Operar y mejorar', body: 'Lanzar, observar el uso real, resolver fricciones y mantener el producto avanzando.' },
     ],
     selectedEyebrow: 'Portfolio',
-    selectedTitle: 'Siete programas principales, agrupados por resultado.',
+    selectedTitle: 'Programas principales, agrupados por resultado.',
     selectedBody: 'Plataformas sostenidas, sistemas open source y colaboraciones con clientes. Los ejercicios de formación se agrupan dentro de la experiencia docente, no como trabajos comerciales paralelos.',
     visit: 'Visitar proyecto',
     archiveEyebrow: 'Trabajos anteriores',
@@ -104,7 +104,7 @@ const headings: Record<LanguageCode, {
   fr: {
     eyebrow: 'Travaux sélectionnés · 2023–aujourd’hui',
     title: 'Des produits IA, de la première décision à l’exploitation réelle.',
-    body: 'Sept programmes durables couvrant plateformes multilingues, systèmes d’agents, IA appliquée et formation technique, livrés avec clients, spécialistes, ingénieurs et opérations.',
+    body: 'Programmes durables couvrant plateformes multilingues, systèmes d’agents, IA appliquée et formation technique, livrés avec clients, spécialistes, ingénieurs et opérations.',
     stats: ['programmes phares', 'dépôts publics originaux', 'vidéos publiques', 'articles techniques'],
     approachEyebrow: 'Responsabilité technique de bout en bout',
     approachTitle: 'Responsabilité technique de bout en bout : produit, architecture, ingénierie et production.',
@@ -115,7 +115,7 @@ const headings: Record<LanguageCode, {
       { number: '03', title: 'Exploiter et améliorer', body: 'Lancer, observer l’usage réel, corriger les frictions et poursuivre l’évolution.' },
     ],
     selectedEyebrow: 'Portfolio',
-    selectedTitle: 'Sept programmes phares, regroupés par résultat.',
+    selectedTitle: 'Programmes phares, regroupés par résultat.',
     selectedBody: 'Plateformes durables, systèmes open source et collaborations clients. Les réalisations pédagogiques restent regroupées dans l’expérience de formation plutôt que présentées comme des missions commerciales parallèles.',
     visit: 'Visiter le projet',
     archiveEyebrow: 'Travaux antérieurs',
@@ -134,7 +134,7 @@ const headings: Record<LanguageCode, {
   zh: {
     eyebrow: '精选作品 · 2023 至今',
     title: '从第一项决策到真实运营的 AI 产品。',
-    body: '七个持续交付的旗舰项目集，涵盖多语言平台、智能体系统、应用型 AI 与技术教育，并与客户、专家、工程师和运营团队共同完成。',
+    body: '持续交付的旗舰项目集，涵盖多语言平台、智能体系统、应用型 AI 与技术教育，并与客户、专家、工程师和运营团队共同完成。',
     stats: ['旗舰项目集', '原创公开仓库', '公开视频', '技术文章'],
     approachEyebrow: '端到端技术负责',
     approachTitle: '在产品、架构、工程与生产环节承担端到端技术责任。',
@@ -145,7 +145,7 @@ const headings: Record<LanguageCode, {
       { number: '03', title: '运营与改进', body: '发布、观察真实使用、解决摩擦并持续推动产品。' },
     ],
     selectedEyebrow: '作品集',
-    selectedTitle: '按成果归类的七个旗舰项目集。',
+    selectedTitle: '按成果归类的旗舰项目集。',
     selectedBody: '持续运营的平台、开源系统和客户合作。教学练习统一归入教育经历，不再呈现为并行商业项目。',
     visit: '访问项目',
     archiveEyebrow: '早期作品',
@@ -169,12 +169,6 @@ const flagshipStoryIds = new Set(['oulang', 'huatong', 'autopricing', 'autoclien
 const Projects: React.FC = () => {
   const { language } = useTranslation();
   const h = headings[language];
-  const stats = [
-    { value: flagshipStoryIds.size, label: h.stats[0] },
-    { value: '249', label: h.stats[1] },
-    { value: '373', label: h.stats[2] },
-    { value: '12', label: h.stats[3] },
-  ];
 
   return (
     <section id="projects" className="overflow-hidden border-b border-slate-300 bg-[#f8f6f1] pb-24 pt-12 sm:pt-16" aria-labelledby="projects-heading">
@@ -187,9 +181,6 @@ const Projects: React.FC = () => {
             </div>
             <p className="border-t border-slate-400 pt-5 text-lg leading-relaxed text-slate-700 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">{h.body}</p>
           </div>
-          <dl className="mt-10 grid grid-cols-2 border-t border-slate-400 lg:grid-cols-4">
-            {stats.map((stat, index) => <div key={stat.label} className={`border-b border-slate-300 py-5 sm:px-5 ${index % 2 === 0 ? 'border-r' : ''} lg:border-r lg:last:border-r-0`}><dd className="cv-serif text-4xl font-semibold text-slate-950">{stat.value}</dd><dt className="mt-2 text-xs font-bold uppercase leading-relaxed tracking-[.12em] text-slate-500">{stat.label}</dt></div>)}
-          </dl>
         </header>
 
         <section className="py-20 sm:py-24" aria-labelledby="portfolio-approach-heading">

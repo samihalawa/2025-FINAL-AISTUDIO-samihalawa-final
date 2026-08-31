@@ -9,7 +9,7 @@ import ServicesShowcase from '../components/ServicesShowcase';
 const HomePage: React.FC = () => {
   return (
     <>
-<Hero />
+      <Hero />
       <About />
       <FeaturedCaseStudies />
       <Testimonials />
