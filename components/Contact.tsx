@@ -53,7 +53,7 @@ const Contact: React.FC = () => {
                         <p className="mt-4 text-sm font-semibold leading-relaxed text-slate-600">{c.availability}</p>
                         <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                             <a href={STRATEGY_CALL_URL} target="_blank" rel="noopener noreferrer" className="btn-primary">{c.schedule}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>
-                            <a href="mailto:sami@oulang.ai?subject=Engineering%20role" className="btn-secondary">{c.email}<i className="fas fa-envelope text-xs" /></a>
+                            <a href="mailto:sami@samihalawa.com?subject=Engineering%20role" className="btn-secondary">{c.email}<i className="fas fa-envelope text-xs" /></a>
                         </div>
                     </div>
                 </header>
