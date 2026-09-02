@@ -64,7 +64,7 @@ Do not translate your visible page content while leaving your Schema.org structu
   "inLanguage": "fr-FR",
   "publisher": {
     "@type": "Organization",
-    "name": "Sami Halawa"
+    "name": "Agents AI Ltd"
   }
 }
 ```
