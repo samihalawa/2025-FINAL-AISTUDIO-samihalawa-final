@@ -49,19 +49,19 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
           <div>
             <p className="mb-5 text-sm font-bold uppercase tracking-[0.18em] text-brand-800">Sami Halawa Ribas</p>
             <h1 className="cv-serif max-w-5xl text-[clamp(2.6rem,5.5vw,5.2rem)] font-normal leading-[0.95] tracking-[-0.045em] text-slate-950">
-              {spanish ? 'Ingeniero sénior / lead de IA que lleva sistemas agénticos desde la arquitectura hasta producción.' : 'Senior / Lead AI Engineer taking agentic systems from architecture to production.'}
+              {spanish ? 'Staff AI Engineer y arquitecto de IA en producción que lleva sistemas agénticos de la arquitectura a producción.' : 'Staff AI Engineer & Production AI Architect taking agentic systems from architecture to production.'}
             </h1>
           </div>
           <div className="flex flex-col justify-end border-t border-slate-400 pt-6 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
             <p className="text-lg leading-relaxed text-slate-700">
               {spanish
-                ? 'Ingeniero sénior de IA y software y technical lead en Madrid. Diseño y entrego IA y software en producción de principio a fin — arquitectura, implementación, despliegue y operación — combinando ingeniería de IA, desarrollo full-stack e integración de sistemas.'
-                : 'Senior AI and software engineer and technical lead in Madrid. I design and deliver production AI and software end to end — architecture, implementation, deployment and operation — combining AI engineering, full-stack development and systems integration.'}
+                ? 'Staff AI Engineer y arquitecto de IA en producción en Madrid. Diseño y entrego sistemas de IA en producción de principio a fin — orquestación multiagente, RAG, backends FastAPI y TypeScript, despliegue y operación — combinando ingeniería de IA, desarrollo full-stack e integración de sistemas.'
+                : 'Staff AI Engineer and Production AI Architect in Madrid. I design and deliver production AI systems end to end — multi-agent orchestration, RAG, FastAPI and TypeScript backends, deployment and operation — combining AI engineering, full-stack development and systems integration.'}
             </p>
             <p className="mt-4 text-sm font-semibold text-slate-600">
               {spanish
-                ? 'Disponibilidad inmediata · abierto a puestos de jornada completa · Madrid o remoto en Europa.'
-                : 'Available immediately · open to full-time roles · Madrid or remote in Europe.'}
+                ? 'Disponible ahora · contratación B2B directa, liderazgo de IA fraccional y asesoría, o puestos de nivel staff · Madrid · Europa · remoto.'
+                : 'Available now · direct B2B contracting, fractional AI leadership & advisory, or staff-level roles · Madrid · Europe · remote.'}
             </p>
           </div>
         </header>

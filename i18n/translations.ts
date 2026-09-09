@@ -17,10 +17,10 @@ const en = {
     'header.services.spotlight': 'Spotlight',
     'header.services.ctaTitle': 'Need a bespoke AI rollout?',
     'header.services.ctaSubtitle': 'White-glove programs combining strategy, builds, and team enablement.',
-    'header.tagline': 'Senior / Lead AI Engineer',
+    'header.tagline': 'Staff AI Engineer · Production AI Architect',
     'header.primaryNavAria': 'Primary navigation',
     'header.searchPlaceholder': 'Search the site…',
-    'header.cta': 'Discuss a role',
+    'header.cta': 'Book a consultation',
     'hero.title': "Sami Halawa",
     'hero.subtitle': 'AI Training & Solutions for Businesses',
     'hero.description': "We empower your teams with cutting-edge AI skills and develop custom solutions to drive innovation, efficiency, and growth in your organization.",
@@ -592,7 +592,7 @@ const en = {
     'cta.readPosts': 'Read related posts',
     'services.relatedCaseStudy': 'Related case study:',
     'footer.copyright': '© 2026 Sami Halawa. All rights reserved.',
-    'footer.disclaimer': 'Senior / Lead AI engineering and end-to-end product delivery from Madrid. Open to full-time roles across Spain and Europe.',
+    'footer.disclaimer': 'Staff-level AI engineering and production AI architecture from Madrid. Available for direct B2B contracting, fractional AI leadership and advisory across Europe and remote.',
     'footer.contactTitle': 'Contact Sami Halawa',
     'social.linkedin': 'LinkedIn',
     'social.github': 'GitHub',
@@ -627,7 +627,7 @@ const en = {
     'hireCta.description': 'Discuss a senior or lead role, a delivery programme or a focused technical collaboration.',
     'hireCta.primary': 'Discuss a role',
     'hireCta.secondary': 'Message on WhatsApp',
-    'footer.tagline': 'Sami Halawa — Senior / Lead AI Engineer'
+    'footer.tagline': 'Sami Halawa — Staff AI Engineer & Production AI Architect'
 };
 
 export type TranslationKey = keyof typeof en;
@@ -651,10 +651,10 @@ const es: Partial<Record<TranslationKey, string>> = {
     'header.services.spotlight': 'Destacado',
     'header.services.ctaTitle': '¿Necesitas un despliegue de IA a medida?',
     'header.services.ctaSubtitle': 'Programas llave en mano con estrategia, desarrollo y capacitación.',
-    'header.tagline': 'Ingeniero sénior / lead de IA',
+    'header.tagline': 'Staff AI Engineer · Arquitecto de IA en producción',
     'header.primaryNavAria': 'Navegación principal',
     'header.searchPlaceholder': 'Buscar en el sitio…',
-    'header.cta': 'Hablar de un rol',
+    'header.cta': 'Reservar consulta',
     'hero.title': "Sami Halawa",
     'hero.subtitle': 'Formación y Soluciones de IA para Empresas',
     'hero.description': "Capacitamos a sus equipos con habilidades de IA de vanguardia y desarrollamos soluciones personalizadas para impulsar la innovación, la eficiencia y el crecimiento en su organización.",
@@ -1225,7 +1225,7 @@ const es: Partial<Record<TranslationKey, string>> = {
     'cta.readPosts': 'Leer artículos relacionados',
     'services.relatedCaseStudy': 'Caso relacionado:',
     'footer.copyright': '© 2026 Sami Halawa. Todos los derechos reservados.',
-    'footer.disclaimer': 'Ingeniería de IA sénior / lead y entrega de producto de principio a fin desde Madrid. Abierto a puestos a jornada completa en España y Europa.',
+    'footer.disclaimer': 'Ingeniería de IA de nivel staff y arquitectura de IA en producción desde Madrid. Disponible para contratación B2B directa, liderazgo de IA fraccional y asesoría en Europa y en remoto.',
     'footer.contactTitle': 'Contacto Sami Halawa',
     'social.linkedin': 'LinkedIn',
     'social.github': 'GitHub',
@@ -1260,7 +1260,7 @@ const es: Partial<Record<TranslationKey, string>> = {
     'hireCta.description': 'Hablemos de un rol sénior o lead, un programa de entrega o una colaboración técnica concreta.',
     'hireCta.primary': 'Hablar de un rol',
     'hireCta.secondary': 'Escríbeme por WhatsApp',
-    'footer.tagline': 'Sami Halawa — Ingeniero sénior / lead de IA'
+    'footer.tagline': 'Sami Halawa — Staff AI Engineer y arquitecto de IA en producción'
 };
 
 const fr: Partial<Record<TranslationKey, string>> = {
@@ -1282,10 +1282,10 @@ const fr: Partial<Record<TranslationKey, string>> = {
     'header.services.spotlight': 'À la une',
     'header.services.ctaTitle': 'Besoin d’un déploiement IA sur mesure ?',
     'header.services.ctaSubtitle': 'Programmes clé en main mêlant stratégie, delivery et montée en compétences.',
-    'header.tagline': 'Ingénieur IA senior / lead',
+    'header.tagline': 'Staff AI Engineer · Architecte IA de production',
     'header.primaryNavAria': 'Navigation principale',
     'header.searchPlaceholder': 'Rechercher sur le site…',
-    'header.cta': 'Parler d’un rôle',
+    'header.cta': 'Réserver une consultation',
     'hero.title': "Sami Halawa",
     'hero.subtitle': 'Formation et Solutions IA pour Entreprises',
     'hero.description': "Nous donnons à vos équipes les compétences de pointe en IA et développons des solutions sur mesure pour stimuler l'innovation, l'efficacité et la croissance de votre organisation.",
@@ -1856,7 +1856,7 @@ const fr: Partial<Record<TranslationKey, string>> = {
     'cta.readPosts': 'Lire les articles associés',
     'services.relatedCaseStudy': 'Étude de cas associée :',
     'footer.copyright': '© 2026 Sami Halawa. Tous droits réservés.',
-    'footer.disclaimer': 'Ingénierie IA senior / lead et livraison produit de bout en bout depuis Madrid. Ouvert aux postes à temps plein en Espagne et en Europe.',
+    'footer.disclaimer': 'Ingénierie IA de niveau staff et architecture IA de production depuis Madrid. Disponible pour contrats B2B directs, leadership IA fractionné et conseil en Europe et à distance.',
     'footer.contactTitle': 'Contact Sami Halawa',
     'social.linkedin': 'LinkedIn',
     'social.github': 'GitHub',
@@ -1891,7 +1891,7 @@ const fr: Partial<Record<TranslationKey, string>> = {
     'hireCta.description': 'Échangeons sur un rôle senior ou lead, un programme de livraison ou une collaboration technique ciblée.',
     'hireCta.primary': 'Parler d’un rôle',
     'hireCta.secondary': 'M’écrire sur WhatsApp',
-    'footer.tagline': 'Sami Halawa — Ingénieur IA senior / lead'
+    'footer.tagline': 'Sami Halawa — Staff AI Engineer et architecte IA de production'
 };
 
 const zh: Partial<Record<TranslationKey, string>> = {
@@ -1913,10 +1913,10 @@ const zh: Partial<Record<TranslationKey, string>> = {
     'header.services.spotlight': '重点推荐',
     'header.services.ctaTitle': '需要定制的 AI 落地方案？',
     'header.services.ctaSubtitle': '一站式服务，涵盖战略设计、交付与团队赋能。',
-    'header.tagline': '高级 / 主管 AI 工程师',
+    'header.tagline': 'Staff AI 工程师 · 生产级 AI 架构师',
     'header.primaryNavAria': '主导航',
     'header.searchPlaceholder': '站内搜索…',
-    'header.cta': '沟通岗位',
+    'header.cta': '预约咨询',
     'hero.title': "Sami Halawa",
     'hero.subtitle': '企业人工智能培训与解决方案',
     'hero.description': "我们为您的团队提供前沿的人工智能技能，并开发定制解决方案，以推动您组织的创新、效率和增长。",
@@ -2454,7 +2454,7 @@ const zh: Partial<Record<TranslationKey, string>> = {
     'cta.readPosts': '阅读相关文章',
     'services.relatedCaseStudy': '相关案例：',
     'footer.copyright': '© 2026 Sami Halawa. 版权所有。',
-    'footer.disclaimer': '常驻马德里的高级 / 主管 AI 工程与端到端产品交付。寻找西班牙及欧洲全职职位。',
+    'footer.disclaimer': '常驻马德里的 Staff 级 AI 工程与生产级 AI 架构。可承接直接 B2B 合同、兼职 AI 领导与顾问服务，覆盖欧洲与远程。',
     'footer.contactTitle': '联系 Sami Halawa',
     'social.linkedin': 'LinkedIn',
     'social.github': 'GitHub',
@@ -2489,7 +2489,7 @@ const zh: Partial<Record<TranslationKey, string>> = {
     'hireCta.description': '可沟通高级或主管岗位、交付项目，或目标明确的技术合作。',
     'hireCta.primary': '沟通岗位',
     'hireCta.secondary': '通过 WhatsApp 联系我',
-    'footer.tagline': 'Sami Halawa — 高级 / 主管 AI 工程师'
+    'footer.tagline': 'Sami Halawa — Staff AI 工程师与生产级 AI 架构师'
 };
 
 export const translations: Record<'en' | 'es' | 'fr' | 'zh', Partial<Record<TranslationKey, string>>> = { en, es, fr, zh };

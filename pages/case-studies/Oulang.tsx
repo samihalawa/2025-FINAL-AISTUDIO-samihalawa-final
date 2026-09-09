@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SystemDiagram from '../../components/SystemDiagram';
 
 const productAreas = [
   ['Housing', 'Rental discovery with city, budget and property filters designed around the questions people actually ask.'],
@@ -20,6 +21,21 @@ const metricDefinitions = [
   ['Registered users', '17,262', 'Accounts created on the platform, as of 3 July 2026.'],
   ['Listings', '38,857', 'Published listings across housing, jobs, services and second-hand categories, as of 3 July 2026.'],
   ['Contact reveals', '89,913', 'Cumulative contact-unlock events, counted every time a user reveals a listing’s contact details. Same measurement date.'],
+];
+
+const architecture = [
+  { label: 'Client surfaces', detail: 'React web plus Expo iOS and Android apps built from one product system.', tag: 'product' },
+  { label: 'Edge', detail: 'Cloudflare terminates TLS, routes traffic and bridges legacy static paths.', tag: 'cloudflare' },
+  { label: 'Application', detail: 'Node/tRPC API and React delivery deployed by Coolify on Hetzner from GitHub main.', tag: 'coolify · hetzner' },
+  { label: 'State & media', detail: 'MySQL on Hetzner for marketplace data; Hetzner Object Storage for listing media.', tag: 'mysql · s3' },
+  { label: 'Intelligence', detail: 'Search, recommendations and the AI assistant, with cloud AI providers kept explicit and gated.', tag: 'search · ai' },
+  { label: 'Operations', detail: 'PostHog analytics and workflows, RevenueCat subscriptions and payment flows.', tag: 'posthog · revenuecat' },
+];
+
+const outcomes = [
+  ['3 platforms live', 'Web, iOS and Android shipped from one codebase and still in production after the June 2026 handover.'],
+  ['Cloud Run → Hetzner', 'Hosting, database, media and the WeChat proxy migrated to Coolify on Hetzner with Cloudflare at the edge, reducing the managed-cloud footprint to explicit, optional AI calls.'],
+  ['Inspectable automation', 'Behavioral recommendation workflows run in PostHog with execution logs beside the graph, so product behavior can be audited rather than trusted.'],
 ];
 
 const OulangCase: React.FC = () => (
@@ -94,6 +110,20 @@ const OulangCase: React.FC = () => (
       </div>
     </section>
 
+    <section className="border-b border-slate-300 py-16 sm:py-24" aria-labelledby="oulang-architecture-heading">
+      <div className="container">
+        <div className="grid gap-8 lg:grid-cols-[.72fr_1.28fr] lg:gap-16">
+          <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Architecture</p><h2 id="oulang-architecture-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">From a tap on the app to a row in the database.</h2></div>
+          <p className="border-t border-slate-400 pt-5 text-lg leading-relaxed text-slate-600">Six layers carry every marketplace action. The diagram below is the current production topology after the Cloud Run retirement; the figure beneath it is the migration plan as it was executed.</p>
+        </div>
+        <div className="mt-12"><SystemDiagram title="Client, edge, application, state, intelligence, operations." nodes={architecture} caption="OULANG production topology: GitHub main → Dockerfile → Coolify on Hetzner, Cloudflare at the edge, MySQL and object storage on Hetzner." /></div>
+        <figure className="mt-10">
+          <img src="/case-study-media/oulang-hetzner-coolify-architecture.png" alt="OULANG platform migration diagram: GitHub main, Coolify on Hetzner, React and Node/tRPC application, Cloudflare edge, MySQL, Hetzner Object Storage and an explicit optional cloud AI boundary" loading="lazy" className="w-full border border-slate-300 bg-slate-950" />
+          <figcaption className="mt-4 text-sm leading-6 text-slate-500">Platform migration plan: retiring Cloud Run without flattening the provider boundary. Optional cloud AI stays explicit and gated rather than silently purged.</figcaption>
+        </figure>
+      </div>
+    </section>
+
     <section className="border-b border-slate-300 bg-white py-16 sm:py-24" aria-labelledby="oulang-metrics-heading">
       <div className="container grid gap-12 lg:grid-cols-[.7fr_1.3fr] lg:gap-16">
         <div>
@@ -111,6 +141,15 @@ const OulangCase: React.FC = () => (
               <dd className="leading-7 text-slate-600">{definition}</dd>
             </div>
           ))}
+        </dl>
+      </div>
+    </section>
+
+    <section className="border-b border-slate-300 bg-slate-950 py-16 text-white sm:py-24" aria-labelledby="oulang-outcomes-heading">
+      <div className="container grid gap-12 lg:grid-cols-[.7fr_1.3fr] lg:gap-16">
+        <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-200">Production outcomes</p><h2 id="oulang-outcomes-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-white">What the platform proved in operation.</h2></div>
+        <dl className="border-t border-slate-600">
+          {outcomes.map(([term, body]) => <div key={term} className="grid gap-2 border-b border-slate-700 py-6 sm:grid-cols-[13rem_1fr]"><dt className="cv-serif text-2xl font-semibold text-white">{term}</dt><dd className="leading-7 text-slate-300">{body}</dd></div>)}
         </dl>
       </div>
     </section>

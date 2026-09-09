@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SystemDiagram from '../../components/SystemDiagram';
 
 const workflow = [
   { number: '01', title: 'Collect', body: 'Bring marketplace listings, quote inputs and inventory context into one operating view.' },
@@ -21,6 +22,15 @@ const marketSurfaces = [
   { src: '/portfolio/autopricing-market-backmarket.webp', name: 'Back Market', body: 'Condition, warranty and specialist-refurbisher pricing in a structured product page.' },
   { src: '/portfolio/autopricing-market-cex.webp', name: 'CeX', body: 'A second-hand retail reference with device grade, configuration and store pricing.' },
   { src: '/portfolio/autopricing-market-swappie.webp', name: 'Swappie', body: 'Refurbished-device configuration, condition and battery options as commercial variables.' },
+];
+
+const architecture = [
+  { label: 'Sources', detail: 'Amazon, Back Market, CeX, Swappie and Wallapop listings, WhatsApp quote messages, catalogue and ERP records.', tag: 'inputs' },
+  { label: 'Ingestion', detail: 'Collectors and structured extraction normalise each source into one product-offer schema with provenance.', tag: 'pipelines' },
+  { label: 'Product identity', detail: 'Matching by model, storage, condition and channel so unlike devices are never compared as equals.', tag: 'matching' },
+  { label: 'Pricing engine', detail: 'Margin, stock age, target price and market position computed per SKU with the evidence retained.', tag: 'evaluation' },
+  { label: 'Operator review', detail: 'Exceptions, price changes, purchases and outbound contact queue for a human decision.', tag: 'checkpoint' },
+  { label: 'Outputs', detail: 'Decision reports, sourcing actions, ERP commerce updates and the executive dashboard.', tag: 'actions' },
 ];
 
 const AutoPricingCase: React.FC = () => (
@@ -122,9 +132,19 @@ const AutoPricingCase: React.FC = () => (
       </div>
     </section>
 
+    <section className="py-16 sm:py-24" aria-labelledby="case-architecture-heading">
+      <div className="container">
+        <div className="grid gap-8 lg:grid-cols-[.72fr_1.28fr] lg:gap-16">
+          <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Architecture</p><h2 id="case-architecture-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">Six stages from a public listing to a reviewed action.</h2></div>
+          <p className="border-t border-slate-400 pt-5 text-lg leading-relaxed text-slate-600">Evidence flows left to right. Authority does not: nothing changes a price, buys stock or contacts a seller until it has passed the operator checkpoint.</p>
+        </div>
+        <div className="mt-12"><SystemDiagram title="Sources, ingestion, identity, pricing, review, outputs." nodes={architecture} feedback="Reviewed outcomes are written back to the ERP and catalogue, so the next pricing pass starts from the latest commercial state." caption="AutoPricing / IWAKY system architecture as delivered across the three workstreams." /></div>
+      </div>
+    </section>
+
     <section className="bg-slate-950 py-16 text-white sm:py-24" aria-labelledby="case-delivery-heading">
       <div className="container grid gap-12 lg:grid-cols-[.7fr_1.3fr] lg:gap-16">
-        <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-200">Connected workflow</p><h2 id="case-delivery-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-white">What the system brought into one operating model.</h2></div>
+        <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-200">Production outcomes</p><h2 id="case-delivery-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-white">What the system brought into one operating model.</h2></div>
         <div className="grid border-t border-slate-600 sm:grid-cols-2">
           {[
             ['Pricing and commerce', 'A database-backed commerce and dynamic quotation flow with stock and pricing controls.'],

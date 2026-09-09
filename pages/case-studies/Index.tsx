@@ -4,10 +4,10 @@ import { useTranslation, type LanguageCode } from '../../i18n/LanguageContext';
 import { PORTFOLIO_STORIES, getProjectStoryCopy } from '../../portfolio';
 
 const headings: Record<LanguageCode, { eyebrow: string; title: string; body: string; challenge: string; build: string; open: string }> = {
-  en: { eyebrow: 'Case studies', title: 'Three engineering systems, examined in depth.', body: 'Follow the product decisions, system architecture and operating constraints behind three role-relevant engineering stories.', challenge: 'Operating problem', build: 'System delivered', open: 'Open case study' },
-  es: { eyebrow: 'Casos de estudio', title: 'Tres sistemas de ingeniería, explicados en profundidad.', body: 'Descubre las decisiones de producto, la arquitectura y las restricciones operativas de tres historias de ingeniería relevantes para el rol.', challenge: 'Problema operativo', build: 'Sistema construido', open: 'Abrir caso' },
-  fr: { eyebrow: 'Études de cas', title: 'Trois systèmes d’ingénierie étudiés en profondeur.', body: 'Découvrez les décisions produit, l’architecture et les contraintes d’exploitation de trois récits d’ingénierie pertinents pour un rôle senior.', challenge: 'Problème opérationnel', build: 'Système construit', open: 'Ouvrir l’étude' },
-  zh: { eyebrow: '案例研究', title: '深入拆解三个工程系统。', body: '了解三个与高级岗位相关的工程案例背后的产品决策、系统架构与运营约束。', challenge: '运营问题', build: '构建系统', open: '打开案例' },
+  en: { eyebrow: 'Case studies', title: 'Three anchor systems, examined in depth.', body: 'Follow the product decisions, system architecture, diagrams and production outcomes behind the three engineering systems that anchor the four production pillars.', challenge: 'Operating problem', build: 'System delivered', open: 'Open case study' },
+  es: { eyebrow: 'Casos de estudio', title: 'Tres sistemas de referencia, explicados en profundidad.', body: 'Descubre las decisiones de producto, la arquitectura, los diagramas y los resultados en producción de los tres sistemas que sustentan los cuatro pilares.', challenge: 'Problema operativo', build: 'Sistema construido', open: 'Abrir caso' },
+  fr: { eyebrow: 'Études de cas', title: 'Trois systèmes de référence étudiés en profondeur.', body: 'Découvrez les décisions produit, l’architecture, les schémas et les résultats en production des trois systèmes qui ancrent les quatre piliers.', challenge: 'Problème opérationnel', build: 'Système construit', open: 'Ouvrir l’étude' },
+  zh: { eyebrow: '案例研究', title: '深入拆解三个核心系统。', body: '了解支撑四大生产支柱的三个工程系统背后的产品决策、系统架构、图示与生产成果。', challenge: '运营问题', build: '构建系统', open: '打开案例' },
 };
 
 const ids = ['oulang', 'autopricing', 'vuda'];

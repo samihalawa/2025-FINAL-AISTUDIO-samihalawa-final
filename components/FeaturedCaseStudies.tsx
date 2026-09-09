@@ -14,10 +14,10 @@ const headings: Record<LanguageCode, {
   open: string;
   visit: string;
 }> = {
-  en: { eyebrow: 'Selected work', title: 'Three engineering stories, with the useful details left in.', body: 'A focused view of the operating problem, the system I built and the production evidence behind each story.', all: 'Explore the engineering portfolio', challenge: 'The problem', build: 'What I built', role: 'Role', open: 'Read the case study', visit: 'Visit the project' },
-  es: { eyebrow: 'Trabajo seleccionado', title: 'Tres historias de ingeniería, con los detalles que importan.', body: 'Una vista enfocada del problema operativo, el sistema construido y la evidencia de producción de cada historia.', all: 'Explorar el portfolio de ingeniería', challenge: 'El problema', build: 'Qué construí', role: 'Rol', open: 'Leer el caso', visit: 'Visitar el proyecto' },
-  fr: { eyebrow: 'Travaux sélectionnés', title: 'Trois récits d’ingénierie, avec les détails qui comptent.', body: 'Une vue ciblée du problème opérationnel, du système construit et des preuves de production de chaque récit.', all: 'Explorer le portfolio d’ingénierie', challenge: 'Le problème', build: 'Ce que j’ai construit', role: 'Rôle', open: 'Lire l’étude de cas', visit: 'Visiter le projet' },
-  zh: { eyebrow: '精选作品', title: '三个工程案例，保留真正重要的细节。', body: '聚焦每个案例的运营问题、构建系统与生产证据。', all: '查看工程作品集', challenge: '问题', build: '构建内容', role: '角色', open: '阅读案例', visit: '访问项目' },
+  en: { eyebrow: 'Anchor case studies', title: 'Three deep dives, with the architecture left in.', body: 'Each case study covers the operating problem, the system architecture and diagram, and the production outcome behind it.', all: 'All case studies', challenge: 'The problem', build: 'What I built', role: 'Role', open: 'Read the case study', visit: 'Visit the project' },
+  es: { eyebrow: 'Casos de estudio principales', title: 'Tres análisis en profundidad, con la arquitectura incluida.', body: 'Cada caso cubre el problema operativo, la arquitectura del sistema con su diagrama y el resultado en producción.', all: 'Todos los casos', challenge: 'El problema', build: 'Qué construí', role: 'Rol', open: 'Leer el caso', visit: 'Visitar el proyecto' },
+  fr: { eyebrow: 'Études de cas de référence', title: 'Trois analyses approfondies, architecture comprise.', body: 'Chaque étude couvre le problème opérationnel, l’architecture du système avec son schéma et le résultat en production.', all: 'Toutes les études de cas', challenge: 'Le problème', build: 'Ce que j’ai construit', role: 'Rôle', open: 'Lire l’étude de cas', visit: 'Visiter le projet' },
+  zh: { eyebrow: '核心案例研究', title: '三个深度案例，保留完整架构。', body: '每个案例都涵盖运营问题、系统架构与图示，以及最终的生产成果。', all: '全部案例', challenge: '问题', build: '构建内容', role: '角色', open: '阅读案例', visit: '访问项目' },
 };
 
 const selectedStoryIds = new Set(['oulang', 'autopricing', 'vuda']);
@@ -36,7 +36,7 @@ const FeaturedCaseStudies: React.FC = () => {
             <h2 id="home-case-studies-heading" className="cv-serif mt-5 max-w-4xl text-4xl font-normal leading-[1.02] tracking-[-.04em] text-slate-950 sm:text-6xl">{h.title}</h2>
             <p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-600">{h.body}</p>
           </div>
-          <Link to="/projects" className="btn-secondary">{h.all}<i className="fas fa-arrow-right text-sm" /></Link>
+          <Link to="/case-studies" className="btn-secondary">{h.all}<i className="fas fa-arrow-right text-sm" /></Link>
         </div>
 
         <div className="grid border-l border-slate-300 md:grid-cols-2 xl:grid-cols-3">

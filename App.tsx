@@ -13,6 +13,7 @@ const OulangCase = lazy(() => import('./pages/case-studies/Oulang'));
 const ApoloMedicalFramework = lazy(() => import('./pages/case-studies/ApoloMedicalFramework'));
 const AutoClientCase = lazy(() => import('./pages/case-studies/AutoClient'));
 const AutoPricingCase = lazy(() => import('./pages/case-studies/AutoPricing'));
+const VudaCase = lazy(() => import('./pages/case-studies/Vuda'));
 
 export const AppRoutes: React.FC = () => (
     <Suspense fallback={<div className="flex min-h-[60vh] items-center justify-center" role="status"><span className="h-10 w-10 animate-spin rounded-full border-2 border-brand-200 border-t-brand-700" /><span className="sr-only">Loading</span></div>}>
@@ -34,6 +35,7 @@ export const AppRoutes: React.FC = () => (
                             <Route path="case-studies/apolo-medical-framework" element={<ApoloMedicalFramework />} />
                             <Route path="case-studies/autoclient" element={<AutoClientCase />} />
                             <Route path="case-studies/autopricing" element={<AutoPricingCase />} />
+                            <Route path="case-studies/vuda" element={<VudaCase />} />
                             <Route path="services/*" element={<Navigate to="/projects" replace />} />
                             <Route path="*" element={<NotFoundPage />} />
                         </Route>

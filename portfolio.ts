@@ -355,7 +355,7 @@ export const PORTFOLIO_STORIES: PortfolioStory[] = [
     challenge: copy('A text-only agent can miss the visual defect, the focused element or the state that is obvious on screen.', 'Un agente de solo texto puede perder el defecto visual, el elemento enfocado o el estado evidente en pantalla.'),
     build: copy('Screenshot capture, annotation and visual reasoning through MCP, alongside browser, shell, diff and context utilities.', 'Captura, anotación y razonamiento visual mediante MCP, junto con utilidades de navegador, shell, diff y contexto.'),
     role: copy('Open-source creator and maintainer', 'Creador y mantenedor open source'),
-    includes: ['Visual debugging', 'MCP tools', 'Context systems'], image: '/portfolio/vuda-annotated.png', imagePosition: 'center 15%', href: 'https://github.com/samihalawa/visual-ui-debug-agent-mcp'
+    includes: ['Visual debugging', 'MCP tools', 'Context systems'], image: '/portfolio/vuda-annotated.png', imagePosition: 'center 15%', href: 'https://github.com/samihalawa/visual-ui-debug-agent-mcp', caseStudy: '/case-studies/vuda'
   },
   {
     id: 'medical-systems', name: 'APOLO & medical workflow systems', period: '2024–2026', category: 'applied', featured: true,

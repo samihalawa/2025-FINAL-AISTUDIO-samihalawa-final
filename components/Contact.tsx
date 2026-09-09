@@ -7,32 +7,32 @@ const content: Record<LanguageCode, {
     schedule: string; email: string; details: string; formTitle: string; formBody: string;
 }> = {
     en: {
-        badge: 'Role conversations', title: 'Let’s discuss where I can contribute.',
-        intro: 'I am available for senior and lead software or AI engineering roles spanning production AI, platform engineering and technical leadership.',
-        availability: 'Based in Madrid · available immediately · open to full-time roles across Spain and Europe',
-        schedule: 'Schedule a role conversation', email: 'Email me directly', details: 'Direct contact',
-        formTitle: 'Share the role', formBody: 'Send the role, team context and next step. I will reply directly.',
+        badge: 'Engagements & advisory', title: 'Let’s scope the system you need built.',
+        intro: 'I take direct B2B systems engineering, fractional AI leadership and technical due diligence engagements, alongside staff-level AI engineering roles.',
+        availability: 'Based in Madrid · available now · Europe and remote · ES / EN / 中文',
+        schedule: 'Book a consultation', email: 'Email me directly', details: 'Direct contact',
+        formTitle: 'Share the engagement', formBody: 'Send the system, team context, timeline and budget range. I reply directly.',
     },
     es: {
-        badge: 'Conversaciones sobre roles', title: 'Hablemos de dónde puedo aportar.',
-        intro: 'Estoy disponible para puestos sénior y lead de ingeniería de software o IA, con foco en IA en producción, plataformas y liderazgo técnico.',
-        availability: 'En Madrid · disponibilidad inmediata · abierto a puestos a jornada completa en España y Europa',
-        schedule: 'Programar una conversación sobre el rol', email: 'Escribirme directamente', details: 'Contacto directo',
-        formTitle: 'Comparte el rol', formBody: 'Envía el rol, el contexto del equipo y el siguiente paso. Responderé directamente.',
+        badge: 'Colaboraciones y asesoría', title: 'Definamos el sistema que necesitas construir.',
+        intro: 'Acepto colaboraciones de ingeniería de sistemas B2B directa, liderazgo de IA fraccional y due diligence técnica, además de puestos de ingeniería de IA de nivel staff.',
+        availability: 'En Madrid · disponible ahora · Europa y remoto · ES / EN / 中文',
+        schedule: 'Reservar una consulta', email: 'Escribirme directamente', details: 'Contacto directo',
+        formTitle: 'Comparte la colaboración', formBody: 'Envía el sistema, el contexto del equipo, los plazos y el rango de presupuesto. Respondo directamente.',
     },
     fr: {
-        badge: 'Échanges sur les postes', title: 'Échangeons sur ma contribution possible.',
-        intro: 'Je suis disponible pour des postes senior et lead en ingénierie logicielle ou IA, couvrant l’IA en production, les plateformes et le leadership technique.',
-        availability: 'Basé à Madrid · disponible immédiatement · ouvert aux postes à temps plein en Espagne et en Europe',
-        schedule: 'Planifier un échange sur le poste', email: 'M’écrire directement', details: 'Contact direct',
-        formTitle: 'Partager le poste', formBody: 'Envoyez le poste, le contexte de l’équipe et la prochaine étape. Je vous répondrai directement.',
+        badge: 'Missions et conseil', title: 'Cadrons le système dont vous avez besoin.',
+        intro: 'J’accepte des missions d’ingénierie de systèmes B2B directes, de leadership IA fractionné et de due diligence technique, ainsi que des postes d’ingénierie IA de niveau staff.',
+        availability: 'Basé à Madrid · disponible maintenant · Europe et télétravail · ES / EN / 中文',
+        schedule: 'Réserver une consultation', email: 'M’écrire directement', details: 'Contact direct',
+        formTitle: 'Partager la mission', formBody: 'Envoyez le système, le contexte de l’équipe, le calendrier et la fourchette budgétaire. Je réponds directement.',
     },
     zh: {
-        badge: '岗位沟通', title: '欢迎沟通我可以创造的价值。',
-        intro: '我可担任高级或主管级软件与 AI 工程岗位，专注生产级 AI、平台工程与技术领导。',
-        availability: '常驻马德里 · 可立即到岗 · 寻找西班牙及欧洲全职职位',
-        schedule: '预约岗位沟通', email: '直接发送邮件', details: '直接联系',
-        formTitle: '分享岗位信息', formBody: '请发送岗位、团队背景和下一步安排，我会直接回复。',
+        badge: '合作与顾问', title: '一起确定你需要构建的系统。',
+        intro: '我承接直接 B2B 系统工程、兼职 AI 领导与技术尽调合作，也接受 Staff 级 AI 工程岗位。',
+        availability: '常驻马德里 · 现可开始 · 欧洲与远程 · ES / EN / 中文',
+        schedule: '预约咨询', email: '直接发送邮件', details: '直接联系',
+        formTitle: '分享合作信息', formBody: '请发送系统需求、团队背景、时间安排与预算范围，我会直接回复。',
     },
 };
 
@@ -53,7 +53,7 @@ const Contact: React.FC = () => {
                         <p className="mt-4 text-sm font-semibold leading-relaxed text-slate-600">{c.availability}</p>
                         <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                             <a href={STRATEGY_CALL_URL} target="_blank" rel="noopener noreferrer" className="btn-primary">{c.schedule}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>
-                            <a href="mailto:sami@samihalawa.com?subject=Engineering%20role" className="btn-secondary">{c.email}<i className="fas fa-envelope text-xs" /></a>
+                            <a href="mailto:sami@samihalawa.com?subject=Engagement%20inquiry" className="btn-secondary">{c.email}<i className="fas fa-envelope text-xs" /></a>
                         </div>
                     </div>
                 </header>

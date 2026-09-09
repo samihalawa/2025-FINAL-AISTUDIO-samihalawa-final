@@ -1,14 +1,28 @@
-# Sami Halawa — Senior / Lead AI Engineering Portfolio
+# Sami Halawa — Staff AI Engineer & Production AI Architect
 
-Sami Halawa is a Senior / Lead AI Engineer in Madrid building production systems across agentic AI, RAG, MCP, voice and automation with Python and TypeScript. End-to-end product ownership and technical leadership support that core engineering identity.
+Sami Halawa is a Staff AI Engineer and Production AI Architect in Madrid specialising in multi-agent orchestration, high-throughput RAG systems and production FastAPI/TypeScript backends. Available for direct B2B contracting, fractional AI leadership and advisory across Madrid, Europe and remote, working in Spanish, English and Mandarin (中文).
+
+## Production system pillars
+
+1. Multi-Agent Orchestration & Autonomous Tooling — Python, FastAPI, LangGraph, custom MCP tooling, async execution, human-in-the-loop. Proof: AutoClient AI lead engines, VUDA visual debugging agent (80★, 900+ npm installs), email-smtp-imap-mcp (1,700+ npm installs).
+2. High-Throughput RAG & Search Platforms — vector databases, BM25 hybrid search, query DSL, reranking, LLM-as-judge evaluation. Proof: OULANG (欧浪AI) Mandarin-first marketplace with 17,000+ registered users and 89,000+ contact operations across web, iOS and Android.
+3. Cloud Architecture, Cost Optimization & MLOps — AWS, GCP, Hetzner/Docker control planes, Redis/PostgreSQL, LangSmith/Langfuse observability. Proof: cloud AI compute spend reduced from ~€18k/month to ~€200/month via hybrid model routing and self-hosted inference; AutoPricing/IWAKY ERP workflows.
+4. Regulated-Domain & Medical AI Systems — GDPR-compliant document intelligence, EU AI Act Article 50 transparency, fine-tuned VLMs (DeepSeek-VL2). Proof: AutoMedical clinical AI engines, APOLO on Hugging Face, PIME.ai compliance frameworks, AI Act Express advisory.
+
+## Engagement options
+
+- Direct B2B systems engineering (production agentic, RAG and FastAPI infrastructure)
+- Fractional CTO & AI architecture governance ($15K–$25K/month retainers)
+- Technical due diligence & AI code audits (5-day pre-acquisition reviews for investors and PE)
 
 ## Main pages
 
-- [Home](https://samihalawa.com/): Profile, current focus and selected work
-- [Projects](https://samihalawa.com/projects): Selected production AI and software engineering work
-- [Case studies](https://samihalawa.com/case-studies): Detailed engineering outcomes and implementation decisions
+- [Home](https://samihalawa.com/): Positioning, production proof metrics, the four pillars and engagement options
+- [Projects](https://samihalawa.com/projects): Production AI and software engineering work
+- [Case studies](https://samihalawa.com/case-studies): OULANG, AutoPricing / IWAKY and VUDA deep dives with architecture diagrams
+- [VUDA & agent developer tools](https://samihalawa.com/case-studies/vuda)
 - [CV](https://samihalawa.com/cv): Concise professional profile
-- [Contact](https://samihalawa.com/contact): Role and collaboration conversations
+- [Contact](https://samihalawa.com/contact): Book a consultation
 
 ## Public profiles
 

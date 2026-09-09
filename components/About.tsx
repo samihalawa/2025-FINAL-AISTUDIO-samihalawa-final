@@ -9,7 +9,7 @@ const content: Record<LanguageCode, {
   achievements: { meta: string; title: string; body: string; links: { label: string; href: string }[] }[];
 }> = {
   en: {
-    eyebrow: 'How I work', title: 'Senior AI engineering with end-to-end product ownership.',
+    eyebrow: 'How I work', title: 'Staff-level AI engineering with end-to-end production ownership.',
     intro: 'I combine agentic AI, RAG and automation with the full-stack engineering needed to put them into real products. My background in web platforms, operations and technical education supports that delivery without competing with its focus.', evidence: 'Hands-on by default: I move from product framing through Python and TypeScript implementation, APIs, data, deployment, observability and iteration without splitting the system into disconnected handoffs.',
     principles: [
       { title: 'Engineer the full AI workflow', body: 'Retrieval, tools, structured outputs, APIs, data, interfaces, deployment and observability belong to one system.' },
@@ -47,7 +47,7 @@ const content: Record<LanguageCode, {
     ]
   },
   es: {
-    eyebrow: 'Cómo trabajo', title: 'Ingeniería sénior de IA con responsabilidad de producto de principio a fin.',
+    eyebrow: 'Cómo trabajo', title: 'Ingeniería de IA de nivel staff con responsabilidad de producción de principio a fin.',
     intro: 'Combino IA agéntica, RAG y automatización con la ingeniería full-stack necesaria para integrarlas en productos reales. Mi experiencia en plataformas web, operaciones y formación técnica apoya esa entrega sin competir con su foco.', evidence: 'Trabajo directamente de la definición a la implementación con Python y TypeScript, APIs, datos, despliegue, observabilidad e iteración, sin dividir el sistema en entregas desconectadas.',
     principles: [
       { title: 'Diseñar el flujo completo de IA', body: 'Recuperación, herramientas, salidas estructuradas, APIs, datos, interfaces, despliegue y observabilidad forman un único sistema.' },
@@ -85,7 +85,7 @@ const content: Record<LanguageCode, {
     ]
   },
   fr: {
-    eyebrow: 'Ma façon de travailler', title: 'Ingénierie IA senior avec une responsabilité produit de bout en bout.',
+    eyebrow: 'Ma façon de travailler', title: 'Ingénierie IA de niveau staff avec une responsabilité de production de bout en bout.',
     intro: 'Je combine IA agentique, RAG et automatisation avec l’ingénierie full-stack nécessaire pour les intégrer à de vrais produits. Mon expérience des plateformes web, des opérations et de la formation technique soutient cette mise en œuvre sans en brouiller le focus.', evidence: 'J’interviens directement du cadrage à Python et TypeScript, aux APIs, aux données, au déploiement, à l’observabilité et à l’itération, sans multiplier les relais.',
     principles: [{ title: 'Concevoir tout le flux IA', body: 'Retrieval, outils, sorties structurées, APIs, données, interfaces, déploiement et observabilité forment un seul système.' }, { title: 'Construire pour l’exploitation', body: 'Une IA fiable inclut le suivi, la validation humaine et le parcours réel autour du modèle, pas seulement une réponse correcte.' }, { title: 'Relier produit et ingénierie', body: 'Espagnol, anglais et mandarin relient les décisions techniques aux utilisateurs, équipes et dirigeants.' }],
     timeline: [{ years: '2009–2016', title: 'Formation au design numérique · Megacursos.com', body: 'Formation au design numérique soutenue par des systèmes web et des supports pédagogiques.' }, { years: '2016–2023', title: 'Ingénierie de plateformes web · Megawebs', body: 'Plateformes full-stack, SEO technique, opérations Linux et livraison.' }, { years: '2024–2026', title: 'Ingénierie ML / LLMOps · Agents AI Ltd', body: 'Workflows IA en production : agents, RAG, automatisation, déploiement et observabilité.' }],
@@ -97,7 +97,7 @@ const content: Record<LanguageCode, {
     ]
   },
   zh: {
-    eyebrow: '我的工作方式', title: '具备端到端产品责任的高级 AI 工程。',
+    eyebrow: '我的工作方式', title: '承担端到端生产责任的 Staff 级 AI 工程。',
     intro: '我把智能体 AI、RAG 和自动化，与将其落地到真实产品所需的全栈工程结合起来。Web 平台、运营与技术教育经验为交付提供支撑，同时保持清晰的工程主线。', evidence: '默认亲自推进：从产品定义到 Python 与 TypeScript、API、数据、部署、可观测性和迭代，避免把系统拆成彼此断开的交接。',
     principles: [{ title: '设计完整 AI 工作流', body: '检索、工具、结构化输出、API、数据、界面、部署与可观测性属于同一个系统。' }, { title: '面向真实运营构建', body: '可靠的 AI 包含监控、人工审核和模型周边的真实流程，而不只是一次正确响应。' }, { title: '连接产品与工程', body: '西班牙语、英语和中文帮助把技术决策连接到用户、团队与管理层。' }],
     timeline: [{ years: '2009–2016', title: '数字设计教学 · Megacursos.com', body: '通过配套 Web 系统与学习材料开展数字设计教育。' }, { years: '2016–2023', title: 'Web 平台工程 · Megawebs', body: '全栈 Web 平台、技术 SEO、Linux 运维与交付。' }, { years: '2024–2026', title: 'ML / LLMOps 工程 · Agents AI Ltd', body: '涵盖智能体、RAG、自动化、部署与可观测性的生产级 AI 工作流。' }],
