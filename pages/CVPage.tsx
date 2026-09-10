@@ -32,8 +32,15 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
   const selected = edition || (language === 'es' ? 'es' : 'en');
   const spanish = selected === 'es';
 
+  const notice = !spanish && language === 'fr'
+    ? 'Ce CV détaillé est actuellement disponible en anglais. Une version en espagnol est également disponible.'
+    : !spanish && language === 'zh'
+      ? '这份详细简历目前仅提供英文版本，另有西班牙语版本可选。'
+      : null;
+
   return (
     <section className="border-b border-slate-300 bg-[#f8f6f1]">
+      {notice && <p className="border-b border-slate-300 bg-white px-6 py-3 text-center text-sm text-slate-600" role="note">{notice} <Link to="/cv/es" className="border-b border-slate-500 text-slate-800 no-underline hover:border-slate-950">{language === 'fr' ? 'CV en espagnol' : '西班牙语简历'}</Link></p>}
       <div className="container py-12 sm:py-16 lg:py-20">
         <div className="flex items-center justify-between gap-6 border-b border-slate-400 pb-4">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-700">
