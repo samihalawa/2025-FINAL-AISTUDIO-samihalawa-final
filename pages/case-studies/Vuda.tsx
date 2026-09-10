@@ -28,7 +28,7 @@ const companions = [
 
 const outcomes = [
   ['80+★ · 7 forks', 'GitHub adoption of visual-ui-debug-agent-mcp, the VUDA repository, as recorded in September 2026.'],
-  ['900+', 'npm installs of the VUDA package in coding-agent workflows.'],
+  ['900+', 'npm installs of the VUDA package.'],
   ['1,700+', 'npm installs of email-smtp-imap-mcp, the companion mail server.'],
   ['2,500+', 'Combined open-source MCP tool installs across the two packages.'],
 ];

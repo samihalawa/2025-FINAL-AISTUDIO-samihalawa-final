@@ -33,14 +33,20 @@ const CVPage: React.FC<CVPageProps> = ({ edition }) => {
   const spanish = selected === 'es';
 
   const notice = !spanish && language === 'fr'
-    ? 'Ce CV détaillé est actuellement disponible en anglais. Une version en espagnol est également disponible.'
+    ? { text: 'Ce CV détaillé est actuellement disponible en anglais. Une version en espagnol est également disponible.', to: '/cv/es', label: 'CV en espagnol' }
     : !spanish && language === 'zh'
-      ? '这份详细简历目前仅提供英文版本，另有西班牙语版本可选。'
-      : null;
+      ? { text: '这份详细简历目前仅提供英文版本，另有西班牙语版本可选。', to: '/cv/es', label: '西班牙语简历' }
+      : spanish && language === 'en'
+        ? { text: 'This CV is published in Spanish. The English CV is available here.', to: '/cv', label: 'English CV' }
+        : spanish && language === 'fr'
+          ? { text: 'Ce CV est publié en espagnol. Le CV en anglais est disponible ici.', to: '/cv', label: 'CV en anglais' }
+          : spanish && language === 'zh'
+            ? { text: '这份简历以西班牙语发布。英文简历可在此查看。', to: '/cv', label: '英文简历' }
+            : null;
 
   return (
     <section className="border-b border-slate-300 bg-[#f8f6f1]">
-      {notice && <p className="border-b border-slate-300 bg-white px-6 py-3 text-center text-sm text-slate-600" role="note">{notice} <Link to="/cv/es" className="border-b border-slate-500 text-slate-800 no-underline hover:border-slate-950">{language === 'fr' ? 'CV en espagnol' : '西班牙语简历'}</Link></p>}
+      {notice && <p className="border-b border-slate-300 bg-white px-6 py-3 text-center text-sm text-slate-600" role="note">{notice.text} <Link to={notice.to} className="border-b border-slate-500 text-slate-800 no-underline hover:border-slate-950">{notice.label}</Link></p>}
       <div className="container py-12 sm:py-16 lg:py-20">
         <div className="flex items-center justify-between gap-6 border-b border-slate-400 pb-4">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-700">
