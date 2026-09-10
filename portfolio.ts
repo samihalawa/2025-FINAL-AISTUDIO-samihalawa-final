@@ -129,7 +129,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   },
   {
     id: 'apolo', name: 'APOLO multimodal exploration', period: '2025', category: 'applied',
-    description: copy('Public image-text model and architecture exploration based on DeepSeek-VL2-tiny for OCT and fundus medical-image workflows, published on Hugging Face.', 'Modelo público de imagen y texto y exploración de arquitectura basada en DeepSeek-VL2-tiny para flujos de OCT y retinografía, publicado en Hugging Face dentro de una colaboración clínica.', 'Modèle image-texte public et exploration d’architecture basée sur DeepSeek-VL2-tiny pour les flux OCT et rétinographie, publié sur Hugging Face dans le cadre d’une collaboration clinique.', '基于 DeepSeek-VL2-tiny 的公开图文模型与架构探索，面向 OCT 与眼底影像流程，在临床合作中发布于 Hugging Face。'),
+    description: copy('Public image-text model based on DeepSeek-VL2-tiny for radiology and ophthalmology imaging workflows, published on Hugging Face.', 'Modelo público de imagen y texto basado en DeepSeek-VL2-tiny para flujos de imagen radiológica y oftalmológica, publicado en Hugging Face.', 'Modèle image-texte public basé sur DeepSeek-VL2-tiny pour les flux d’imagerie radiologique et ophtalmologique, publié sur Hugging Face.', '基于 DeepSeek-VL2-tiny 的公开图文模型，面向放射与眼科影像流程，发布于 Hugging Face。'),
     tags: ['Multimodal', 'Vision-language', 'Human review'], href: 'https://huggingface.co/samihalawa/APOLO-medical-multimodal-instruct', image: '/portfolio/apolo-architecture.png'
   },
   {
@@ -360,7 +360,7 @@ export const PORTFOLIO_STORIES: PortfolioStory[] = [
   },
   {
     id: 'medical-systems', name: 'APOLO & medical workflow systems', period: '2024–2026', category: 'applied', featured: true,
-    description: copy('A family of medical-image, structured-reporting and clinical-learning prototypes with explicit human review, anchored by APOLO (DeepSeek-VL2-tiny for OCT and fundus imaging) published on Hugging Face.', 'Familia de prototipos de imagen médica, reporting estructurado y aprendizaje clínico con revisión humana, con APOLO (DeepSeek-VL2-tiny para OCT y retinografía) publicado en Hugging Face dentro de una colaboración clínica.', 'Une famille de prototypes d’imagerie médicale, de rapports structurés et d’apprentissage clinique avec revue humaine explicite, ancrée par APOLO (DeepSeek-VL2-tiny pour OCT et rétinographie) publié sur Hugging Face dans une collaboration clinique.', '一组具备明确人工审核的医学影像、结构化报告与临床学习原型，核心是在临床合作中发布于 Hugging Face 的 APOLO（面向 OCT 与眼底影像的 DeepSeek-VL2-tiny）。'),
+    description: copy('A family of medical-image, structured-reporting and clinical-learning prototypes with explicit human review, anchored by APOLO, a DeepSeek-VL2-tiny multimodal model for radiology and ophthalmology imaging published on Hugging Face.', 'Familia de prototipos de imagen médica, reporting estructurado y aprendizaje clínico con revisión humana explícita, con APOLO, un modelo multimodal DeepSeek-VL2-tiny para imagen radiológica y oftalmológica publicado en Hugging Face.', 'Une famille de prototypes d’imagerie médicale, de rapports structurés et d’apprentissage clinique avec revue humaine explicite, ancrée par APOLO, un modèle multimodal DeepSeek-VL2-tiny pour l’imagerie radiologique et ophtalmologique publié sur Hugging Face.', '一组具备明确人工审核的医学影像、结构化报告与临床学习原型，核心为发布于 Hugging Face 的 APOLO——面向放射与眼科影像的 DeepSeek-VL2-tiny 多模态模型。'),
     challenge: copy('Explore useful multimodal support without collapsing image interpretation, reasoning and professional review into one opaque step.', 'Explorar apoyo multimodal sin mezclar interpretación de imagen, razonamiento y revisión profesional en un paso opaco.'),
     build: copy('APOLO architecture and model artifacts, ophthalmology and radiology workflow experiments, reports and Umbramed learning tools.', 'Arquitectura y artefactos APOLO, experimentos de oftalmología y radiología, informes y herramientas de aprendizaje Umbramed.'),
     role: copy('Technical lead · research and prototyping', 'Responsable técnico · investigación y prototipado'),
@@ -509,6 +509,15 @@ export const getInventoryCopy = (item: InventoryItem, language: LanguageCode) =>
 export const getProjectCopy = (project: PortfolioProject, language: LanguageCode) => ({
   description: project.description[language] || project.description.en,
 });
+
+const PERIOD_TOKENS: Record<Exclude<LanguageCode, 'en'>, [RegExp, string][]> = {
+  es: [[/Build 2024–Jun 2026 · live product/, 'Construido entre 2024 y junio de 2026 · producto activo'], [/–present/g, '–actualidad'], [/Earlier work/, 'Trabajos anteriores'], [/\bJan\b/g, 'ene'], [/\bMar\b/g, 'mar'], [/\bJun\b/g, 'jun'], [/\bJul\b/g, 'jul'], [/\bNov\b/g, 'nov'], [/Published book/, 'Libro publicado']],
+  fr: [[/Build 2024–Jun 2026 · live product/, 'Construit de 2024 à juin 2026 · produit en ligne'], [/–present/g, '–aujourd’hui'], [/Earlier work/, 'Travaux antérieurs'], [/\bJan\b/g, 'janv.'], [/\bMar\b/g, 'mars'], [/\bJun\b/g, 'juin'], [/\bJul\b/g, 'juil.'], [/\bNov\b/g, 'nov.'], [/Published book/, 'Livre publié']],
+  zh: [[/Build 2024–Jun 2026 · live product/, '构建于 2024 年至 2026 年 6 月 · 在线产品'], [/–present/g, ' 至今'], [/Earlier work/, '早期作品'], [/\bJan (\d{4})/g, '$1 年 1 月'], [/\bMar (\d{4})/g, '$1 年 3 月'], [/\bJun (\d{4})/g, '$1 年 6 月'], [/\bJul (\d{4})/g, '$1 年 7 月'], [/\bNov (\d{4})/g, '$1 年 11 月'], [/Published book/, '已出版图书']],
+};
+
+export const getPeriodCopy = (period: string, language: LanguageCode): string =>
+  language === 'en' ? period : PERIOD_TOKENS[language].reduce((value, [pattern, replacement]) => value.replace(pattern, replacement), period);
 
 export const getStoryIncludes = (story: PortfolioStory, language: LanguageCode): string[] =>
   story.includes.map(label => (language === 'en' ? label : INCLUDES_TRANSLATIONS[label]?.[language] ?? label));

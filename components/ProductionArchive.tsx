@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { useTranslation, type LanguageCode } from '../i18n/LanguageContext';
-import { PORTFOLIO_INVENTORY, inventoryLaneCopy, getInventoryCopy, type InventoryLane } from '../portfolio';
+import { PORTFOLIO_INVENTORY, inventoryLaneCopy, getInventoryCopy, getPeriodCopy, type InventoryLane } from '../portfolio';
 
 const laneOrder: InventoryLane[] = ['products', 'clients', 'open-source', 'research', 'education', 'infrastructure', 'archive'];
 
@@ -72,7 +72,7 @@ const ProductionArchive: React.FC = () => {
                     <span className="text-brand-800">{inventoryLaneCopy[item.lane][language]}</span>
                   </div>
                   <h3 className="mt-3 font-display text-base font-bold leading-snug text-slate-950">{item.title}</h3>
-                  <p className="mt-1 text-xs font-semibold text-slate-500">{item.period}{item.status === 'approximate' ? ` · ${c.approximate}` : ''}</p>
+                  <p className="mt-1 text-xs font-semibold text-slate-500">{getPeriodCopy(item.period, language)}{item.status === 'approximate' ? ` · ${c.approximate}` : ''}</p>
                   <p className="mt-3 text-sm leading-6 text-slate-600">{summary}</p>
                   {item.href && <a href={item.href} target="_blank" rel="noopener noreferrer" className="mt-auto inline-flex min-h-9 w-fit items-center gap-2 border-b border-slate-500 pt-3 text-xs font-bold text-slate-900 no-underline hover:border-slate-950">{c.open}<i className="fas fa-arrow-up-right-from-square text-[0.6rem]" /></a>}
                 </li>

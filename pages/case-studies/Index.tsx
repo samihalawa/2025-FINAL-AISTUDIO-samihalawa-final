@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation, type LanguageCode } from '../../i18n/LanguageContext';
-import { PORTFOLIO_STORIES, getProjectStoryCopy } from '../../portfolio';
+import { PORTFOLIO_STORIES, getPeriodCopy, getProjectStoryCopy } from '../../portfolio';
 
 const headings: Record<LanguageCode, { eyebrow: string; title: string; body: string; challenge: string; build: string; open: string }> = {
   en: { eyebrow: 'Case studies', title: 'Three anchor systems, examined in depth.', body: 'Follow the product decisions, system architecture, diagrams and production outcomes behind the three engineering systems that anchor the four production pillars.', challenge: 'Operating problem', build: 'System delivered', open: 'Open case study' },
@@ -32,7 +32,7 @@ const CaseStudiesIndex: React.FC = () => {
               <article key={story.id} className="grid border-b border-r border-slate-400 bg-white lg:grid-cols-[1.05fr_.95fr]">
                 <div className={`aspect-[16/10] overflow-hidden bg-slate-100 lg:aspect-auto ${index % 2 ? 'lg:order-2' : ''}`}><img src={story.image} alt={`${story.name} ${story.imageKind === 'illustration' ? 'project cover' : 'interface'}`} className="h-full min-h-[22rem] w-full object-cover" style={{ objectPosition: story.imagePosition || 'center' }} /></div>
                 <div className={`flex flex-col border-t border-slate-300 p-7 sm:p-10 lg:border-t-0 ${index % 2 ? 'lg:order-1 lg:border-r' : 'lg:border-l'}`}>
-                  <div className="text-xs font-bold uppercase tracking-[.16em] text-brand-800">{story.period} · {copy.role}</div>
+                  <div className="text-xs font-bold uppercase tracking-[.16em] text-brand-800">{getPeriodCopy(story.period, language)} · {copy.role}</div>
                   <h2 className="cv-serif mt-5 text-4xl font-semibold leading-tight text-slate-950">{story.name}</h2>
                   <p className="mt-4 text-base leading-7 text-slate-600">{copy.description}</p>
                   <dl className="mt-7 border-t border-slate-300"><div className="border-b border-slate-300 py-5"><dt className="text-xs font-bold uppercase tracking-[.14em] text-slate-500">{h.challenge}</dt><dd className="mt-2 text-sm leading-6 text-slate-700">{copy.challenge}</dd></div><div className="border-b border-slate-300 py-5"><dt className="text-xs font-bold uppercase tracking-[.14em] text-slate-500">{h.build}</dt><dd className="mt-2 text-sm leading-6 text-slate-700">{copy.build}</dd></div></dl>

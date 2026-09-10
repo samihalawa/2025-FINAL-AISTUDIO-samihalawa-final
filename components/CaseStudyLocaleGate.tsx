@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation, type LanguageCode } from '../i18n/LanguageContext';
-import { PORTFOLIO_STORIES, getProjectStoryCopy, getStoryIncludes } from '../portfolio';
+import { PORTFOLIO_STORIES, getPeriodCopy, getProjectStoryCopy, getStoryIncludes } from '../portfolio';
 
 const copy: Record<Exclude<LanguageCode, 'en'>, { eyebrow: string; note: string; challenge: string; build: string; role: string; readEnglish: string; back: string }> = {
   es: { eyebrow: 'Resumen del caso', note: 'El caso de estudio completo, con diagramas y resultados, se publica en inglés.', challenge: 'El problema', build: 'Qué construí', role: 'Rol', readEnglish: 'Leer el caso completo en inglés', back: 'Todos los casos' },
@@ -21,7 +21,7 @@ const CaseStudyLocaleGate: React.FC<{ storyId: string; children: React.ReactNode
     <article className="bg-[#f8f6f1] text-slate-800">
       <header className="border-b border-slate-300 py-16 sm:py-24">
         <div className="container">
-          <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">{c.eyebrow} · {story.period}</p>
+          <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">{c.eyebrow} · {getPeriodCopy(story.period, language)}</p>
           <div className="mt-7 grid gap-8 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
             <h1 className="cv-serif max-w-5xl text-5xl font-normal leading-[.98] tracking-[-.045em] text-slate-950 sm:text-7xl">{story.name}</h1>
             <p className="border-l border-slate-400 pl-6 text-lg leading-relaxed text-slate-600">{text.description}</p>

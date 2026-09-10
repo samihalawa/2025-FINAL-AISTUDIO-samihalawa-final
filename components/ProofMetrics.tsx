@@ -41,7 +41,7 @@ const content: Record<LanguageCode, { eyebrow: string; metrics: Metric[] }> = {
     eyebrow: '生产证据',
     metrics: [
       { value: '85', label: '已归档的系统与工作线', detail: '产品、客户交付、开源工具、研究、教育与基础设施工作，每一项都在生产档案中分类记录。', href: '/projects#archive' },
-      { value: '2,500+', label: '开源 MCP 工具安装量', detail: 'VUDA 视觉调试智能体（900+ npm 安装，80★）与 email-smtp-imap-mcp（1,700+ npm 安装），数据取自 2026 年 9 月的 npm 与 GitHub。', href: '/case-studies/vuda' },
+      { value: '2,500+', label: '开源 MCP 工具安装量', detail: 'VUDA 视觉调试智能体（900+ npm 安装，80+★）与 email-smtp-imap-mcp（1,700+ npm 安装），数据取自 2026 年 9 月的 npm 与 GitHub。', href: '/case-studies/vuda' },
       { value: '17,000+', label: 'Web、iOS 与 Android 三端注册用户', detail: 'OULANG 市场平台：截至 2026 年 7 月，17,262 名注册用户、38,857 条信息与 89,913 次联系方式查看。', href: '/case-studies/oulang' },
       { value: 'ES · EN · 中文', label: '三语架构执行', detail: '以西班牙语、英语和中文完成需求发现、架构设计、交付与干系人沟通。' },
     ],
