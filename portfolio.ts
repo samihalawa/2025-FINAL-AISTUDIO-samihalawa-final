@@ -511,9 +511,9 @@ export const getProjectCopy = (project: PortfolioProject, language: LanguageCode
 });
 
 const MONTHS: Record<string, { es: string; fr: string; zh: number }> = {
-  Jan: { es: 'ene', fr: 'janv.', zh: 1 }, Feb: { es: 'feb', fr: 'févr.', zh: 2 }, Mar: { es: 'mar', fr: 'mars', zh: 3 }, Apr: { es: 'abr', fr: 'avr.', zh: 4 },
-  May: { es: 'may', fr: 'mai', zh: 5 }, Jun: { es: 'jun', fr: 'juin', zh: 6 }, Jul: { es: 'jul', fr: 'juil.', zh: 7 }, Aug: { es: 'ago', fr: 'août', zh: 8 },
-  Sep: { es: 'sep', fr: 'sept.', zh: 9 }, Oct: { es: 'oct', fr: 'oct.', zh: 10 }, Nov: { es: 'nov', fr: 'nov.', zh: 11 }, Dec: { es: 'dic', fr: 'déc.', zh: 12 },
+  Jan: { es: 'enero', fr: 'janvier', zh: 1 }, Feb: { es: 'febrero', fr: 'février', zh: 2 }, Mar: { es: 'marzo', fr: 'mars', zh: 3 }, Apr: { es: 'abril', fr: 'avril', zh: 4 },
+  May: { es: 'mayo', fr: 'mai', zh: 5 }, Jun: { es: 'junio', fr: 'juin', zh: 6 }, Jul: { es: 'julio', fr: 'juillet', zh: 7 }, Aug: { es: 'agosto', fr: 'août', zh: 8 },
+  Sep: { es: 'septiembre', fr: 'septembre', zh: 9 }, Oct: { es: 'octubre', fr: 'octobre', zh: 10 }, Nov: { es: 'noviembre', fr: 'novembre', zh: 11 }, Dec: { es: 'diciembre', fr: 'décembre', zh: 12 },
 };
 
 const PERIOD_PHRASES: Record<Exclude<LanguageCode, 'en'>, [RegExp, string][]> = {
