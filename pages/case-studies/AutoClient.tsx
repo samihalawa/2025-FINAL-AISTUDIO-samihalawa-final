@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import EnglishOnlyNotice from '../../components/EnglishOnlyNotice';
+import CaseStudyLocaleGate from '../../components/CaseStudyLocaleGate';
 
 const workflow = [
   { number: '01', title: 'Research', body: 'Collect company context, current signals, key people and the facts needed for a useful account brief.' },
@@ -24,8 +24,8 @@ const productSurfaces = [
 ];
 
 const AutoClientCase: React.FC = () => (
+  <CaseStudyLocaleGate storyId="autoclient">
   <article className="bg-[#f8f6f1] text-slate-800">
-    <EnglishOnlyNotice />
     <header className="border-b border-slate-300 py-16 sm:py-24">
       <div className="container">
         <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Product system · revenue operations · Mar 2024–Jul 2025</p>
@@ -109,6 +109,7 @@ const AutoClientCase: React.FC = () => (
       <div className="container mt-14 flex flex-wrap gap-4 border-t border-slate-300 pt-8"><Link to="/projects" className="btn-secondary">Explore project stories<i className="fas fa-arrow-right text-sm" /></Link><Link to="/contact" className="btn-primary">Discuss revenue operations<i className="fas fa-arrow-right text-sm" /></Link></div>
     </section>
   </article>
+  </CaseStudyLocaleGate>
 );
 
 export default AutoClientCase;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation, type LanguageCode } from '../i18n/LanguageContext';
-import { PORTFOLIO_STORIES, getProjectStoryCopy } from '../portfolio';
+import { PORTFOLIO_STORIES, getProjectStoryCopy, getStoryIncludes } from '../portfolio';
 
 const headings: Record<LanguageCode, {
   eyebrow: string;
@@ -58,7 +58,7 @@ const FeaturedCaseStudies: React.FC = () => {
                   </dl>
                   <div className="mt-auto flex flex-wrap items-center gap-x-2 gap-y-3 pt-6">
                     <span className="sr-only">{h.role}: {copy.role}</span>
-                    <span className="text-xs font-semibold text-slate-500">{story.includes.join(' · ')}</span>
+                    <span className="text-xs font-semibold text-slate-500">{getStoryIncludes(story, language).join(' · ')}</span>
                     {action && (story.caseStudy
                       ? <Link to={story.caseStudy} className="ml-auto inline-flex min-h-11 items-center gap-2 border-b border-slate-600 text-sm font-bold text-slate-900">{h.open}<i className="fas fa-arrow-right text-xs" /></Link>
                       : <a href={story.href} target="_blank" rel="noopener noreferrer" data-analytics-event="project_view" data-project-name={story.name} className="ml-auto inline-flex min-h-11 items-center gap-2 border-b border-slate-600 text-sm font-bold text-slate-900">{h.visit}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>)}

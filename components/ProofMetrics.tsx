@@ -14,7 +14,7 @@ const content: Record<LanguageCode, { eyebrow: string; metrics: Metric[] }> = {
     eyebrow: 'Production proof',
     metrics: [
       { value: '85', label: 'Catalogued systems & workstreams', detail: 'Products, client deliveries, open-source tools, research, education and infrastructure work, each classified in the production archive.', href: '/projects#archive' },
-      { value: '2,500+', label: 'Open-source MCP tool installs', detail: 'VUDA visual debugging agent (900+ npm installs, 80★) and email-smtp-imap-mcp (1,700+ npm installs), as recorded on npm and GitHub in September 2026.', href: '/case-studies/vuda' },
+      { value: '2,500+', label: 'Open-source MCP tool installs', detail: 'VUDA visual debugging agent (900+ npm installs, 80+★) and email-smtp-imap-mcp (1,700+ npm installs), as recorded on npm and GitHub in September 2026.', href: '/case-studies/vuda' },
       { value: '17,000+', label: 'Registered users across web, iOS & Android', detail: 'OULANG marketplace: 17,262 registered users, 38,857 listings and 89,913 contact reveals as of July 2026.', href: '/case-studies/oulang' },
       { value: 'ES · EN · 中文', label: 'Trilingual architecture execution', detail: 'Discovery, architecture, delivery and stakeholder communication in Spanish, English and Mandarin.' },
     ],
@@ -23,7 +23,7 @@ const content: Record<LanguageCode, { eyebrow: string; metrics: Metric[] }> = {
     eyebrow: 'Evidencia de producción',
     metrics: [
       { value: '85', label: 'Sistemas y líneas de trabajo catalogados', detail: 'Productos, entregas a clientes, herramientas open source, investigación, educación e infraestructura, cada uno clasificado en el archivo de producción.', href: '/projects#archive' },
-      { value: '2.500+', label: 'Instalaciones de herramientas MCP open source', detail: 'Agente de depuración visual VUDA (900+ instalaciones npm, 80★) y email-smtp-imap-mcp (1.700+ instalaciones npm), según npm y GitHub en septiembre de 2026.', href: '/case-studies/vuda' },
+      { value: '2.500+', label: 'Instalaciones de herramientas MCP open source', detail: 'Agente de depuración visual VUDA (900+ instalaciones npm, 80+★) y email-smtp-imap-mcp (1.700+ instalaciones npm), según npm y GitHub en septiembre de 2026.', href: '/case-studies/vuda' },
       { value: '17.000+', label: 'Usuarios registrados en web, iOS y Android', detail: 'Marketplace OULANG: 17.262 usuarios registrados, 38.857 anuncios y 89.913 contactos revelados a julio de 2026.', href: '/case-studies/oulang' },
       { value: 'ES · EN · 中文', label: 'Ejecución de arquitectura trilingüe', detail: 'Discovery, arquitectura, entrega y comunicación con stakeholders en español, inglés y mandarín.' },
     ],
@@ -32,7 +32,7 @@ const content: Record<LanguageCode, { eyebrow: string; metrics: Metric[] }> = {
     eyebrow: 'Preuves de production',
     metrics: [
       { value: '85', label: 'Systèmes et chantiers catalogués', detail: 'Produits, livraisons clients, outils open source, recherche, formation et infrastructure, chacun classé dans l’archive de production.', href: '/projects#archive' },
-      { value: '2 500+', label: 'Installations d’outils MCP open source', detail: 'Agent de débogage visuel VUDA (900+ installations npm, 80★) et email-smtp-imap-mcp (1 700+ installations npm), relevés sur npm et GitHub en septembre 2026.', href: '/case-studies/vuda' },
+      { value: '2 500+', label: 'Installations d’outils MCP open source', detail: 'Agent de débogage visuel VUDA (900+ installations npm, 80+★) et email-smtp-imap-mcp (1 700+ installations npm), relevés sur npm et GitHub en septembre 2026.', href: '/case-studies/vuda' },
       { value: '17 000+', label: 'Utilisateurs inscrits sur web, iOS et Android', detail: 'Marketplace OULANG : 17 262 utilisateurs inscrits, 38 857 annonces et 89 913 contacts révélés en juillet 2026.', href: '/case-studies/oulang' },
       { value: 'ES · EN · 中文', label: 'Exécution d’architecture trilingue', detail: 'Cadrage, architecture, livraison et communication avec les parties prenantes en espagnol, anglais et mandarin.' },
     ],

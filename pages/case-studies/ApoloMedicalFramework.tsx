@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import EnglishOnlyNotice from '../../components/EnglishOnlyNotice';
+import CaseStudyLocaleGate from '../../components/CaseStudyLocaleGate';
 
 const stages = [
   ['01', 'Ingest', 'Bring a medical image and its available context into a controlled review workflow.'],
@@ -16,8 +16,8 @@ const clinicalSurfaces = [
 ];
 
 const ApoloMedicalFramework: React.FC = () => (
+  <CaseStudyLocaleGate storyId="medical-systems">
   <article className="bg-[#f8f6f1] text-slate-800">
-    <EnglishOnlyNotice />
     <header className="border-b border-slate-300 py-16 sm:py-24">
       <div className="container">
         <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Research and prototyping · medical workflows · 2024–2026</p>
@@ -108,6 +108,7 @@ const ApoloMedicalFramework: React.FC = () => (
       </div>
     </section>
   </article>
+  </CaseStudyLocaleGate>
 );
 
 export default ApoloMedicalFramework;

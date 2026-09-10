@@ -6,6 +6,7 @@ import {
   PORTFOLIO_STORIES,
   categoryCopy,
   getProjectStoryCopy,
+  getStoryIncludes,
   type PortfolioCategory,
 } from '../portfolio';
 
@@ -202,7 +203,7 @@ const Projects: React.FC = () => {
               <div className="aspect-[16/9] overflow-hidden border-b border-slate-300 bg-slate-100"><img src={story.image} alt={`${story.name} ${story.imageKind === 'illustration' ? 'project cover' : 'interface'}`} className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.015]" style={{ objectPosition: story.imagePosition || 'center' }} loading="lazy" /></div>
               <div className="flex flex-1 flex-col p-6 sm:p-8"><div className="flex flex-wrap items-center gap-3 text-xs font-bold uppercase tracking-[.14em]"><span className="text-slate-500">{storyLabels[language].role}: {copy.role}</span></div><h4 className="cv-serif mt-4 text-3xl font-semibold leading-tight text-slate-950">{story.name}</h4><p className="mt-3 text-base leading-7 text-slate-600">{copy.description}</p>
                 <dl className="mt-7 grid border-t border-slate-300 sm:grid-cols-2"><div className="border-b border-slate-300 py-5 sm:border-r sm:pr-5"><dt className="text-xs font-bold uppercase tracking-[.14em] text-slate-500">{storyLabels[language].challenge}</dt><dd className="mt-2 text-sm leading-6 text-slate-700">{copy.challenge}</dd></div><div className="border-b border-slate-300 py-5 sm:pl-5"><dt className="text-xs font-bold uppercase tracking-[.14em] text-slate-500">{storyLabels[language].build}</dt><dd className="mt-2 text-sm leading-6 text-slate-700">{copy.build}</dd></div></dl>
-                <div className="mt-auto flex flex-wrap items-center gap-x-3 gap-y-3 pt-6"><span className="text-xs font-semibold text-slate-500">{story.includes.join(' · ')}</span>{story.caseStudy && <Link to={story.caseStudy} className="ml-auto inline-flex min-h-11 items-center gap-2 border-b border-slate-600 text-sm font-bold text-slate-900 hover:border-slate-950">{h.open}<i className="fas fa-arrow-right text-xs" /></Link>}{story.href && !story.caseStudy && <a href={story.href} target="_blank" rel="noopener noreferrer" className="ml-auto inline-flex min-h-11 items-center gap-2 border-b border-slate-600 text-sm font-bold text-slate-900 hover:border-slate-950">{h.visit}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>}</div>
+                <div className="mt-auto flex flex-wrap items-center gap-x-3 gap-y-3 pt-6"><span className="text-xs font-semibold text-slate-500">{getStoryIncludes(story, language).join(' · ')}</span>{story.caseStudy && <Link to={story.caseStudy} className="ml-auto inline-flex min-h-11 items-center gap-2 border-b border-slate-600 text-sm font-bold text-slate-900 hover:border-slate-950">{h.open}<i className="fas fa-arrow-right text-xs" /></Link>}{story.href && !story.caseStudy && <a href={story.href} target="_blank" rel="noopener noreferrer" className="ml-auto inline-flex min-h-11 items-center gap-2 border-b border-slate-600 text-sm font-bold text-slate-900 hover:border-slate-950">{h.visit}<i className="fas fa-arrow-up-right-from-square text-xs" /></a>}</div>
               </div>
             </article>; })}</div>
           </section>;

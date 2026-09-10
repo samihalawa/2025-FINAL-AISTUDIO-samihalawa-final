@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import EnglishOnlyNotice from '../../components/EnglishOnlyNotice';
+import CaseStudyLocaleGate from '../../components/CaseStudyLocaleGate';
 import SystemDiagram from '../../components/SystemDiagram';
 
 const workflow = [
@@ -35,8 +35,8 @@ const architecture = [
 ];
 
 const AutoPricingCase: React.FC = () => (
+  <CaseStudyLocaleGate storyId="autopricing">
   <article className="bg-[#f8f6f1] text-slate-800">
-    <EnglishOnlyNotice />
     <header className="border-b border-slate-300 py-16 sm:py-24">
       <div className="container">
         <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Client delivery · pricing intelligence · 2025–2026</p>
@@ -166,6 +166,7 @@ const AutoPricingCase: React.FC = () => (
       <div className="container mt-14 flex flex-wrap gap-4 border-t border-slate-300 pt-8"><Link to="/projects" className="btn-secondary">View more work<i className="fas fa-arrow-right text-sm" /></Link><Link to="/contact" className="btn-primary">Discuss a complex workflow<i className="fas fa-arrow-right text-sm" /></Link></div>
     </section>
   </article>
+  </CaseStudyLocaleGate>
 );
 
 export default AutoPricingCase;

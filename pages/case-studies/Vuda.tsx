@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import EnglishOnlyNotice from '../../components/EnglishOnlyNotice';
+import CaseStudyLocaleGate from '../../components/CaseStudyLocaleGate';
 import SystemDiagram from '../../components/SystemDiagram';
 
 const loop = [
@@ -34,8 +34,8 @@ const outcomes = [
 ];
 
 const VudaCase: React.FC = () => (
+  <CaseStudyLocaleGate storyId="vuda">
   <article className="bg-[#f8f6f1] text-slate-800">
-    <EnglishOnlyNotice />
     <header className="border-b border-slate-300 py-16 sm:py-24">
       <div className="container">
         <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Open source · agent developer tools · 2025–present</p>
@@ -49,7 +49,7 @@ const VudaCase: React.FC = () => (
     <section className="border-b border-slate-300 bg-slate-950 py-12 text-white sm:py-16" aria-label="VUDA annotated capture">
       <div className="container grid gap-10 lg:grid-cols-[.6fr_1.4fr] lg:items-center">
         <div className="mx-auto w-full max-w-[22rem] overflow-hidden border border-slate-700 bg-slate-900">
-          <img src="/portfolio/vuda-element-map.png" alt="VUDA interactive-element map over a live interface capture" className="h-auto w-full" />
+          <img src="/portfolio/vuda-element-map.png" alt="VUDA interactive-element map over an owner-built Spanish AutoMedical concept demo interface" className="h-auto w-full" />
         </div>
         <div>
           <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-200">The problem</p>
@@ -122,6 +122,7 @@ const VudaCase: React.FC = () => (
       <div className="container mt-14 flex flex-wrap gap-4 border-t border-slate-300 pt-8"><a href="https://github.com/samihalawa/visual-ui-debug-agent-mcp" target="_blank" rel="noopener noreferrer" className="btn-secondary">View VUDA on GitHub<i className="fas fa-arrow-up-right-from-square text-xs" /></a><Link to="/case-studies" className="btn-secondary">All case studies<i className="fas fa-arrow-right text-xs" /></Link><Link to="/contact" className="btn-primary">Discuss agent tooling<i className="fas fa-arrow-right text-xs" /></Link></div>
     </section>
   </article>
+  </CaseStudyLocaleGate>
 );
 
 export default VudaCase;
