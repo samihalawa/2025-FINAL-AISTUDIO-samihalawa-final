@@ -100,7 +100,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   {
     id: 'vuda', name: 'VUDA — Visual UI Debug Agent MCP', period: '2025–present', category: 'agents', featured: true,
     description: copy('Open-source agent that captures, annotates and reasons over live interfaces for visual debugging, published as visual-ui-debug-agent-mcp with 80 GitHub stars, 7 forks and 900+ npm installs.', 'Agente abierto que captura, anota y razona sobre interfaces reales para depuración visual, publicado como visual-ui-debug-agent-mcp con 80 estrellas en GitHub, 7 forks y más de 900 instalaciones en npm.', 'Agent open source qui capture, annote et analyse des interfaces réelles pour le débogage visuel, publié sous le nom visual-ui-debug-agent-mcp avec 80 étoiles GitHub, 7 forks et plus de 900 installations npm.', '用于可视化调试的开源智能体：捕获、标注并分析真实界面。以 visual-ui-debug-agent-mcp 发布，获得 80 个 GitHub star、7 次 fork 及 900+ 次 npm 安装。'),
-    tags: ['MCP', 'Computer vision', 'Debugging'], href: 'https://github.com/samihalawa/visual-ui-debug-agent-mcp', image: '/portfolio/vuda-annotated.png', imagePosition: 'center 15%'
+    tags: ['MCP', 'Computer vision', 'Debugging'], href: 'https://github.com/samihalawa/visual-ui-debug-agent-mcp', image: '/portfolio/vuda-element-map.png', imagePosition: 'center 12%'
   },
   {
     id: 'gowa', name: 'GOWA WhatsApp API / WhatsApp MCP', period: '2025–2026', category: 'agents',
@@ -356,7 +356,7 @@ export const PORTFOLIO_STORIES: PortfolioStory[] = [
     challenge: copy('A text-only agent can miss the visual defect, the focused element or the state that is obvious on screen.', 'Un agente de solo texto puede perder el defecto visual, el elemento enfocado o el estado evidente en pantalla.'),
     build: copy('Screenshots, interactive-element maps, DOM inspection, workflow runs and visual diffs through MCP, alongside mail, messaging and context utilities.', 'Capturas, mapas de elementos interactivos, inspección del DOM, ejecución de flujos y diffs visuales mediante MCP, junto con utilidades de correo, mensajería y contexto.'),
     role: copy('Open-source creator and maintainer', 'Creador y mantenedor open source'),
-    includes: ['Visual debugging', 'MCP tools', 'Context systems'], image: '/portfolio/vuda-annotated.png', imagePosition: 'center 15%', href: 'https://github.com/samihalawa/visual-ui-debug-agent-mcp', caseStudy: '/case-studies/vuda'
+    includes: ['Visual debugging', 'MCP tools', 'Context systems'], image: '/portfolio/vuda-element-map.png', imagePosition: 'center 12%', href: 'https://github.com/samihalawa/visual-ui-debug-agent-mcp', caseStudy: '/case-studies/vuda'
   },
   {
     id: 'medical-systems', name: 'APOLO & medical workflow systems', period: '2024–2026', category: 'applied', featured: true,

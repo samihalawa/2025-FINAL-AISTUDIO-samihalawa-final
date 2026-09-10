@@ -49,7 +49,7 @@ const VudaCase: React.FC = () => (
     <section className="border-b border-slate-300 bg-slate-950 py-12 text-white sm:py-16" aria-label="VUDA annotated capture">
       <div className="container grid gap-10 lg:grid-cols-[.6fr_1.4fr] lg:items-center">
         <div className="mx-auto w-full max-w-[22rem] overflow-hidden border border-slate-700 bg-slate-900">
-          <img src="/portfolio/vuda-annotated.png" alt="VUDA interactive-element map over a live interface capture" className="h-auto w-full" />
+          <img src="/portfolio/vuda-element-map.png" alt="VUDA interactive-element map over a live interface capture" className="h-auto w-full" />
         </div>
         <div>
           <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-200">The problem</p>
