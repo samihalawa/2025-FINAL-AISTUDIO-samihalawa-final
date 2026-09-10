@@ -103,7 +103,7 @@ const pillars: PillarDefinition[] = [
   },
   {
     id: 'regulated',
-    stack: ['GDPR-compliant document intelligence', 'EU AI Act Article 50 transparency', 'Fine-tuned VLMs (DeepSeek-VL2)', 'Human review by design'],
+    stack: ['Document intelligence designed for GDPR constraints', 'EU AI Act Article 50 transparency', 'Fine-tuned VLMs (DeepSeek-VL2)', 'Human review by design'],
     copy: {
       en: { title: 'Regulated-Domain & Medical AI Systems', summary: 'Clinical, legal and compliance workflows where image interpretation, reasoning, reporting and professional review stay separate and auditable.', proof: [
         { label: 'AutoMedical clinical AI engines and the APOLO multimodal model (DeepSeek-VL2-tiny) published on Hugging Face', href: '/case-studies/apolo-medical-framework', kind: 'research' },
