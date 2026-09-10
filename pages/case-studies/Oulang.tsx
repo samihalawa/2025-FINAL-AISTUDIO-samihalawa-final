@@ -34,7 +34,7 @@ const architecture = [
 ];
 
 const outcomes = [
-  ['3 platforms live', 'Web, iOS and Android shipped from one codebase and still in production after the June 2026 handover.'],
+  ['3 platforms live', 'Web, iOS and Android are live in production.'],
   ['Cloud Run → Hetzner', 'Hosting, database, media and the WeChat proxy migrated to Coolify on Hetzner with Cloudflare at the edge, reducing the managed-cloud footprint to explicit, optional AI calls.'],
   ['Inspectable automation', 'Behavioral recommendation workflows run in PostHog with execution logs beside the graph, so product behavior can be audited rather than trusted.'],
 ];
