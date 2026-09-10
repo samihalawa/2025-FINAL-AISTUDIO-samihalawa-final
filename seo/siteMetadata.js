@@ -1,7 +1,7 @@
 export const SITE_URL = 'https://samihalawa.com';
 export const SITE_NAME = 'Sami Halawa';
-export const DEFAULT_OG_IMAGE = '/og/sami-halawa-ai-engineer.png';
-export const DEFAULT_OG_ALT = 'Sami Halawa — Staff AI Engineer & Production AI Architect';
+export const DEFAULT_OG_IMAGE = '/og/sami-halawa-staff-ai-architect.png';
+export const DEFAULT_OG_ALT = 'Portrait card: Sami Halawa, Staff AI Engineer & Production AI Architect, Madrid · Europe · Remote';
 
 const DEFAULT_ROBOTS = 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1';
 // /cv and /cv/en render the same English CV. /cv is the indexable original, so
