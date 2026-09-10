@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import EnglishOnlyNotice from '../../components/EnglishOnlyNotice';
 
 const workflow = [
   { number: '01', title: 'Research', body: 'Collect company context, current signals, key people and the facts needed for a useful account brief.' },
@@ -24,6 +25,7 @@ const productSurfaces = [
 
 const AutoClientCase: React.FC = () => (
   <article className="bg-[#f8f6f1] text-slate-800">
+    <EnglishOnlyNotice />
     <header className="border-b border-slate-300 py-16 sm:py-24">
       <div className="container">
         <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Product system · revenue operations · Mar 2024–Jul 2025</p>

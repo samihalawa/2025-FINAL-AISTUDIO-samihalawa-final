@@ -1,4 +1,5 @@
 import type { LanguageCode } from './i18n/LanguageContext';
+import { INVENTORY_FR, INVENTORY_ZH, STORY_FR, STORY_ZH } from './i18n/portfolioTranslations';
 
 export type PortfolioCategory = 'platforms' | 'agents' | 'applied' | 'education';
 export type InventoryLane = 'products' | 'clients' | 'open-source' | 'research' | 'education' | 'infrastructure' | 'archive';
@@ -51,7 +52,7 @@ export interface InventoryItem {
   image?: string;
 }
 
-const copy = (en: string, es: string, fr = en, zh = en): LocalizedCopy => ({ en, es, fr, zh });
+const copy = (en: string, es: string, fr?: string, zh?: string): LocalizedCopy => ({ en, es, fr: fr ?? STORY_FR[en] ?? en, zh: zh ?? STORY_ZH[en] ?? en });
 
 export const categoryCopy: Record<PortfolioCategory, LocalizedCopy> = {
   platforms: copy('Products & platforms', 'Productos y plataformas', 'Produits et plateformes', '产品与平台'),
@@ -403,7 +404,7 @@ const inventoryItem = (
   es: string,
   href?: string,
   image?: string,
-): InventoryItem => ({ number, id, title, period, era, lane, status, summary: copy(en, es), href, image });
+): InventoryItem => ({ number, id, title, period, era, lane, status, summary: copy(en, es, INVENTORY_FR[id], INVENTORY_ZH[id]), href, image });
 
 export const PORTFOLIO_INVENTORY: InventoryItem[] = [
   inventoryItem(1, 'timeline-realsintra', 'RealSintra software product', '2023', '2023', 'archive', 'verified', 'Early web product combining interface development with AI-assisted functionality.', 'Producto web temprano que combina desarrollo de interfaces con funciones asistidas por IA.', 'https://github.com/samihalawa/realsintra'),

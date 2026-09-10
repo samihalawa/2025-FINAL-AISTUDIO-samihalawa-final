@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import EnglishOnlyNotice from '../../components/EnglishOnlyNotice';
 import SystemDiagram from '../../components/SystemDiagram';
 
 const loop = [
@@ -34,6 +35,7 @@ const outcomes = [
 
 const VudaCase: React.FC = () => (
   <article className="bg-[#f8f6f1] text-slate-800">
+    <EnglishOnlyNotice />
     <header className="border-b border-slate-300 py-16 sm:py-24">
       <div className="container">
         <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Open source · agent developer tools · 2025–present</p>
