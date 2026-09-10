@@ -12,7 +12,8 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-    const [language, setLanguage] = useState<LanguageCode>('en');
+    // Server-side renders may pin a language (used for multilingual pre-render checks); browsers start in English.
+    const [language, setLanguage] = useState<LanguageCode>(() => ((globalThis as { __SSR_LANGUAGE__?: LanguageCode }).__SSR_LANGUAGE__) || 'en');
 
     useEffect(() => {
         document.documentElement.lang = language;

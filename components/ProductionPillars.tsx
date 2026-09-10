@@ -58,19 +58,19 @@ const pillars: PillarDefinition[] = [
     stack: ['Vector DBs', 'BM25 hybrid search', 'Query DSL', 'Reranking', 'LLM-as-judge evals'],
     copy: {
       en: { title: 'High-Throughput RAG & Search Platforms', summary: 'Retrieval, ranking and assistant layers that serve real marketplace traffic in Mandarin, Spanish and English, evaluated against operator-defined quality checks.', proof: [
-        { label: 'OULANG (欧浪AI) Mandarin-first marketplace — 17k+ registered users, 89k+ contact operations across web, iOS and Android', href: '/case-studies/oulang', kind: 'product' },
+        { label: 'OULANG (欧浪AI) Mandarin-first marketplace — 17k+ registered users and 89k+ contact reveals across web, iOS and Android', href: '/case-studies/oulang', kind: 'product' },
         { label: 'Behavioral recommendation workflow with inspectable evaluation-and-dispatch logs', href: '/case-studies/oulang', kind: 'product' },
       ] },
       es: { title: 'Plataformas RAG y de búsqueda de alto rendimiento', summary: 'Capas de recuperación, ranking y asistente que sirven tráfico real de marketplace en mandarín, español e inglés, evaluadas con controles de calidad definidos por el operador.', proof: [
-        { label: 'Marketplace OULANG (欧浪AI) en mandarín — 17k+ usuarios registrados, 89k+ operaciones de contacto en web, iOS y Android', href: '/case-studies/oulang', kind: 'product' },
+        { label: 'Marketplace OULANG (欧浪AI) en mandarín — 17k+ usuarios registrados y 89k+ contactos revelados en web, iOS y Android', href: '/case-studies/oulang', kind: 'product' },
         { label: 'Flujo de recomendaciones por comportamiento con logs de evaluación y despacho inspeccionables', href: '/case-studies/oulang', kind: 'product' },
       ] },
       fr: { title: 'Plateformes RAG et recherche à haut débit', summary: 'Couches de retrieval, de classement et d’assistant servant un trafic marketplace réel en mandarin, espagnol et anglais, évaluées par des contrôles qualité définis par l’opérateur.', proof: [
-        { label: 'Marketplace OULANG (欧浪AI) en mandarin — 17k+ utilisateurs inscrits, 89k+ opérations de contact sur web, iOS et Android', href: '/case-studies/oulang', kind: 'product' },
+        { label: 'Marketplace OULANG (欧浪AI) en mandarin — 17k+ utilisateurs inscrits et 89k+ contacts révélés sur web, iOS et Android', href: '/case-studies/oulang', kind: 'product' },
         { label: 'Workflow de recommandations comportementales avec journaux d’évaluation et de dispatch inspectables', href: '/case-studies/oulang', kind: 'product' },
       ] },
       zh: { title: '高吞吐 RAG 与搜索平台', summary: '面向真实市场流量的检索、排序与助手层，支持中文、西班牙语和英语，并按运营方定义的质量标准持续评估。', proof: [
-        { label: 'OULANG（欧浪AI）中文优先市场平台 — 17k+ 注册用户，Web、iOS 与 Android 三端 89k+ 次联系操作', href: '/case-studies/oulang', kind: 'product' },
+        { label: 'OULANG（欧浪AI）中文优先市场平台 — 17k+ 注册用户，Web、iOS 与 Android 三端 89k+ 次联系方式查看', href: '/case-studies/oulang', kind: 'product' },
         { label: '行为推荐工作流，评估与派发日志可随时查看', href: '/case-studies/oulang', kind: 'product' },
       ] },
     },
