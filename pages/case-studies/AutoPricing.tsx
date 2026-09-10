@@ -63,13 +63,9 @@ const AutoPricingCase: React.FC = () => (
           <img src="/portfolio/autopricing-market-wallapop.webp" alt="Wallapop search results for iPhone 15 128 GB listings with price, condition and recency visible on each card" loading="lazy" className="w-full border border-slate-300 bg-white" />
           <figcaption className="mt-3 text-sm leading-6 text-slate-500">Discover: Wallapop results filtered to comparable iPhone 15 128 GB listings, with price, condition and recency on each card.</figcaption>
         </figure>
-        <figure className="mt-8">
-          <img src="/portfolio/autopricing-wallapop-operator.webp" alt="Wallapop inbox showing a sourcing conversation with an operator-prepared message ready for review" loading="lazy" className="w-full border border-slate-300 bg-white" />
-          <figcaption className="mt-3 text-sm leading-6 text-slate-500">Review: the Wallapop inbox with a prepared sourcing message, still under the operator's control before it is sent.</figcaption>
-        </figure>
 
         <h2 className="cv-serif mt-14 text-3xl font-semibold text-slate-950">Outcomes</h2>
-        <p className="mt-4 leading-8">The delivery brought four things into one operating model, and each is documented in the delivery archive rather than described from memory:</p>
+        <p className="mt-4 leading-8">The delivery brought four operating areas into one reviewable workflow:</p>
         <table className="mt-4 w-full border-t border-slate-400 text-left text-sm">
           <tbody>
             <tr className="border-b border-slate-300"><th className="py-3 pr-4 font-semibold text-slate-950">Pricing and commerce</th><td className="py-3 text-slate-600">A database-backed commerce and dynamic quotation flow with stock and pricing controls.</td></tr>

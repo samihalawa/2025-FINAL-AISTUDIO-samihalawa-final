@@ -510,14 +510,31 @@ export const getProjectCopy = (project: PortfolioProject, language: LanguageCode
   description: project.description[language] || project.description.en,
 });
 
-const PERIOD_TOKENS: Record<Exclude<LanguageCode, 'en'>, [RegExp, string][]> = {
-  es: [[/Build 2024–Jun 2026 · live product/, 'Construido entre 2024 y junio de 2026 · producto activo'], [/–present/g, '–actualidad'], [/Earlier work/, 'Trabajos anteriores'], [/\bJan\b/g, 'ene'], [/\bMar\b/g, 'mar'], [/\bJun\b/g, 'jun'], [/\bJul\b/g, 'jul'], [/\bNov\b/g, 'nov'], [/Published book/, 'Libro publicado']],
-  fr: [[/Build 2024–Jun 2026 · live product/, 'Construit de 2024 à juin 2026 · produit en ligne'], [/–present/g, '–aujourd’hui'], [/Earlier work/, 'Travaux antérieurs'], [/\bJan\b/g, 'janv.'], [/\bMar\b/g, 'mars'], [/\bJun\b/g, 'juin'], [/\bJul\b/g, 'juil.'], [/\bNov\b/g, 'nov.'], [/Published book/, 'Livre publié']],
-  zh: [[/Build 2024–Jun 2026 · live product/, '构建于 2024 年至 2026 年 6 月 · 在线产品'], [/–present/g, ' 至今'], [/Earlier work/, '早期作品'], [/\bJan (\d{4})/g, '$1 年 1 月'], [/\bMar (\d{4})/g, '$1 年 3 月'], [/\bJun (\d{4})/g, '$1 年 6 月'], [/\bJul (\d{4})/g, '$1 年 7 月'], [/\bNov (\d{4})/g, '$1 年 11 月'], [/Published book/, '已出版图书']],
+const MONTHS: Record<string, { es: string; fr: string; zh: number }> = {
+  Jan: { es: 'ene', fr: 'janv.', zh: 1 }, Feb: { es: 'feb', fr: 'févr.', zh: 2 }, Mar: { es: 'mar', fr: 'mars', zh: 3 }, Apr: { es: 'abr', fr: 'avr.', zh: 4 },
+  May: { es: 'may', fr: 'mai', zh: 5 }, Jun: { es: 'jun', fr: 'juin', zh: 6 }, Jul: { es: 'jul', fr: 'juil.', zh: 7 }, Aug: { es: 'ago', fr: 'août', zh: 8 },
+  Sep: { es: 'sep', fr: 'sept.', zh: 9 }, Oct: { es: 'oct', fr: 'oct.', zh: 10 }, Nov: { es: 'nov', fr: 'nov.', zh: 11 }, Dec: { es: 'dic', fr: 'déc.', zh: 12 },
 };
 
-export const getPeriodCopy = (period: string, language: LanguageCode): string =>
-  language === 'en' ? period : PERIOD_TOKENS[language].reduce((value, [pattern, replacement]) => value.replace(pattern, replacement), period);
+const PERIOD_PHRASES: Record<Exclude<LanguageCode, 'en'>, [RegExp, string][]> = {
+  es: [[/Build 2024–Jun 2026 · live product/, 'Construido entre 2024 y junio de 2026 · producto activo'], [/–present/g, '–actualidad'], [/Earlier work/, 'Trabajos anteriores'], [/Published book/, 'Libro publicado']],
+  fr: [[/Build 2024–Jun 2026 · live product/, 'Construit de 2024 à juin 2026 · produit en ligne'], [/–present/g, '–aujourd’hui'], [/Earlier work/, 'Travaux antérieurs'], [/Published book/, 'Livre publié']],
+  zh: [[/Build 2024–Jun 2026 · live product/, '构建于 2024 年至 2026 年 6 月 · 在线产品'], [/–present/g, ' 至今'], [/Earlier work/, '早期作品'], [/Published book/, '已出版图书']],
+};
+
+const MONTH_TOKEN = /\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\b/g;
+const ZH_MONTH_RANGE = /\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)(?:–(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec))? (\d{4})/g;
+
+/** Localized rendering of shared period/status labels ("Oct 2025", "Jan–Feb 2025", "2025–present"). */
+export const getPeriodCopy = (period: string, language: LanguageCode): string => {
+  if (language === 'en') return period;
+  let value = PERIOD_PHRASES[language].reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), period);
+  if (language === 'zh') {
+    value = value.replace(ZH_MONTH_RANGE, (_m, a: string, b: string | undefined, year: string) => (b ? `${year} 年 ${MONTHS[a].zh}–${MONTHS[b].zh} 月` : `${year} 年 ${MONTHS[a].zh} 月`));
+    return value;
+  }
+  return value.replace(MONTH_TOKEN, (m: string) => MONTHS[m][language]);
+};
 
 export const getStoryIncludes = (story: PortfolioStory, language: LanguageCode): string[] =>
   story.includes.map(label => (language === 'en' ? label : INCLUDES_TRANSLATIONS[label]?.[language] ?? label));
