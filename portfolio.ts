@@ -85,7 +85,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   {
     id: 'autoclient', name: 'AutoClient', period: 'Mar 2024–Jul 2025', category: 'platforms',
     description: copy('Agentic research, enrichment, scoring, personalised outreach and CRM follow-up across email, WhatsApp and voice. A public LinkedIn recommendation credits the system with 200+ qualified contacts in two weeks and a 30% lift in sales conversion.', 'Investigación agéntica, enriquecimiento, scoring, contacto personalizado y CRM por email, WhatsApp y voz. Una recomendación pública en LinkedIn atribuye al sistema más de 200 contactos cualificados en dos semanas y un aumento del 30% en la conversión de ventas.', 'Recherche agentique, enrichissement, scoring, prospection personnalisée et suivi CRM par email, WhatsApp et voix. Une recommandation publique sur LinkedIn attribue au système plus de 200 contacts qualifiés en deux semaines et une hausse de 30 % de la conversion commerciale.', '覆盖邮件、WhatsApp 与语音的智能体式调研、数据增强、评分、个性化触达与 CRM 跟进。LinkedIn 公开推荐信显示该系统在两周内带来 200 多个合格联系人，并使销售转化率提升 30%。'),
-    tags: ['Agents', 'CRM', 'Outreach', 'Voice'], href: 'https://www.youtube.com/@autoclient-ai', image: '/portfolio/autoclient-operations-cover.webp', imagePosition: 'center 42%'
+    tags: ['Agents', 'CRM', 'Outreach', 'Voice'], href: 'https://www.youtube.com/@autoclient-ai', image: '/portfolio/autoclient-lead-search.webp', imagePosition: 'center 20%'
   },
   {
     id: 'autopricing', name: 'AutoPricing / IWAKY delivery', period: '2025–2026', category: 'platforms',
@@ -130,7 +130,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   {
     id: 'apolo', name: 'APOLO multimodal exploration', period: '2025', category: 'applied',
     description: copy('Public image-text model based on DeepSeek-VL2-tiny for radiology and ophthalmology imaging workflows, published on Hugging Face.', 'Modelo público de imagen y texto basado en DeepSeek-VL2-tiny para flujos de imagen radiológica y oftalmológica, publicado en Hugging Face.', 'Modèle image-texte public basé sur DeepSeek-VL2-tiny pour les flux d’imagerie radiologique et ophtalmologique, publié sur Hugging Face.', '基于 DeepSeek-VL2-tiny 的公开图文模型，面向放射与眼科影像流程，发布于 Hugging Face。'),
-    tags: ['Multimodal', 'Vision-language', 'Human review'], href: 'https://huggingface.co/samihalawa/APOLO-medical-multimodal-instruct', image: '/portfolio/apolo-architecture.png'
+    tags: ['Multimodal', 'Vision-language', 'Human review'], href: 'https://huggingface.co/samihalawa/APOLO-medical-multimodal-instruct', image: '/portfolio/apolo-instruct-comparison.webp'
   },
   {
     id: 'ophthalmology', name: 'Ophthalmology review & reporting', period: '2025–2026', category: 'applied',
@@ -316,7 +316,7 @@ export const PORTFOLIO_STORIES: PortfolioStory[] = [
     challenge: copy('Bring housing, jobs, services and community discovery into one coherent experience across languages and devices.', 'Unir vivienda, empleo, servicios y comunidad en una experiencia coherente entre idiomas y dispositivos.'),
     build: copy('Web, iOS and Android surfaces with shared marketplace infrastructure, publishing, subscriptions and product analytics.', 'Superficies web, iOS y Android con infraestructura compartida de marketplace, publicación, suscripciones y analítica.'),
     role: copy('Product, engineering and operations lead', 'Responsable de producto, ingeniería y operaciones'),
-    includes: ['Marketplace', 'Local life', 'Mobile apps'], image: '/portfolio/oulang-case-study-cover.webp', imagePosition: 'center', href: 'https://oulang.ai', caseStudy: '/case-studies/oulang', imageKind: 'illustration'
+    includes: ['Marketplace', 'Local life', 'Mobile apps'], image: '/portfolio/oulang-home.png', imagePosition: 'center 8%', href: 'https://oulang.ai', caseStudy: '/case-studies/oulang'
   },
   {
     id: 'huatong', name: 'Huatong & InfoHuaxin', period: '2025–present', category: 'platforms',
@@ -340,7 +340,7 @@ export const PORTFOLIO_STORIES: PortfolioStory[] = [
     challenge: copy('Keep research, qualification and follow-up connected while preserving a clear operator checkpoint before external action.', 'Mantener conectados investigación, cualificación y seguimiento con un punto claro de revisión antes de actuar.'),
     build: copy('Research and scoring workers, CRM synchronization, reporting, and email, WhatsApp and voice integrations.', 'Workers de investigación y scoring, sincronización CRM, reporting e integraciones de email, WhatsApp y voz.'),
     role: copy('Product and engineering lead', 'Responsable de producto e ingeniería'),
-    includes: ['Research & enrichment', 'CRM', 'Email · WhatsApp · voice'], image: '/portfolio/autoclient-operations-cover.webp', imagePosition: 'center 42%', caseStudy: '/case-studies/autoclient', imageKind: 'illustration'
+    includes: ['Research & enrichment', 'CRM', 'Email · WhatsApp · voice'], image: '/portfolio/autoclient-lead-search.webp', imagePosition: 'center 20%', caseStudy: '/case-studies/autoclient'
   },
   {
     id: 'pime', name: 'PIME.ai product studio', period: '2025–2026', category: 'platforms', featured: true,
@@ -364,7 +364,7 @@ export const PORTFOLIO_STORIES: PortfolioStory[] = [
     challenge: copy('Explore useful multimodal support without collapsing image interpretation, reasoning and professional review into one opaque step.', 'Explorar apoyo multimodal sin mezclar interpretación de imagen, razonamiento y revisión profesional en un paso opaco.'),
     build: copy('APOLO architecture and model artifacts, ophthalmology and radiology workflow experiments, reports and Umbramed learning tools.', 'Arquitectura y artefactos APOLO, experimentos de oftalmología y radiología, informes y herramientas de aprendizaje Umbramed.'),
     role: copy('Technical lead · research and prototyping', 'Responsable técnico · investigación y prototipado'),
-    includes: ['APOLO', 'AutoIOL · AutoRad', 'Umbramed'], image: '/portfolio/apolo-architecture.png', imagePosition: 'center', caseStudy: '/case-studies/apolo-medical-framework'
+    includes: ['APOLO', 'AutoIOL · AutoRad', 'Umbramed'], image: '/portfolio/apolo-instruct-comparison.webp', imagePosition: 'center 12%', caseStudy: '/case-studies/apolo-medical-framework'
   },
   {
     id: 'oupin', name: 'OUPIN commerce discovery', period: '2026', category: 'platforms',

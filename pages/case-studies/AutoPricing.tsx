@@ -3,28 +3,6 @@ import { Link } from 'react-router-dom';
 import CaseStudyLocaleGate from '../../components/CaseStudyLocaleGate';
 import SystemDiagram from '../../components/SystemDiagram';
 
-const workflow = [
-  { number: '01', title: 'Collect', body: 'Bring marketplace listings, quote inputs and inventory context into one operating view.' },
-  { number: '02', title: 'Normalize', body: 'Match products and make source, condition and channel differences explicit.' },
-  { number: '03', title: 'Evaluate', body: 'Apply pricing, stock and margin logic while preserving the underlying evidence.' },
-  { number: '04', title: 'Review', body: 'Route exceptions and commercially sensitive actions through a human checkpoint.' },
-  { number: '05', title: 'Act', body: 'Turn reviewed decisions into reports, sourcing work and operational follow-up.' },
-];
-
-const systemAreas = [
-  ['Market inputs', 'Resale listings, sourcing opportunities and changing market prices across multiple public sources.'],
-  ['Product identity', 'Matching by model, storage, condition and channel so unlike devices are not compared as equivalents.'],
-  ['Commercial context', 'Inventory, quotations, stock age, target margin and ERP or catalogue data in the same decision view.'],
-  ['Operator output', 'A review queue, decision reports and sourcing actions that retain the source behind the recommendation.'],
-];
-
-const marketSurfaces = [
-  { src: '/portfolio/autopricing-market-amazon.webp', name: 'Amazon', body: 'New and refurbished catalogue context, seller position and current offer structure.' },
-  { src: '/portfolio/autopricing-market-backmarket.webp', name: 'Back Market', body: 'Condition, warranty and specialist-refurbisher pricing in a structured product page.' },
-  { src: '/portfolio/autopricing-market-cex.webp', name: 'CeX', body: 'A second-hand retail reference with device grade, configuration and store pricing.' },
-  { src: '/portfolio/autopricing-market-swappie.webp', name: 'Swappie', body: 'Refurbished-device configuration, condition and battery options as commercial variables.' },
-];
-
 const architecture = [
   { label: 'Sources', detail: 'Amazon, Back Market, CeX, Swappie and Wallapop listings, WhatsApp quote messages, catalogue and ERP records.', tag: 'inputs' },
   { label: 'Ingestion', detail: 'Collectors and structured extraction normalise each source into one product-offer schema with provenance.', tag: 'pipelines' },
@@ -37,134 +15,82 @@ const architecture = [
 const AutoPricingCase: React.FC = () => (
   <CaseStudyLocaleGate storyId="autopricing">
   <article className="bg-[#f8f6f1] text-slate-800">
-    <header className="border-b border-slate-300 py-16 sm:py-24">
-      <div className="container">
-        <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Client delivery · pricing intelligence · 2025–2026</p>
-        <div className="mt-7 grid gap-8 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
-          <div>
-            <h1 className="cv-serif max-w-5xl text-5xl font-normal leading-[.98] tracking-[-.045em] text-slate-950 sm:text-7xl">Turning fragmented resale signals into a reviewable pricing workflow.</h1>
-          </div>
-          <p className="border-l border-slate-400 pl-6 text-lg leading-relaxed text-slate-600">AutoPricing brought marketplace evidence, product matching, WhatsApp quote inputs and ERP context into a system designed for faster, more defensible commercial decisions.</p>
-        </div>
-      </div>
-    </header>
+    <div className="container">
+      <div className="mx-auto max-w-3xl py-14 sm:py-20">
+        <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Case study · Client delivery · Pricing intelligence · 2025–2026</p>
+        <h1 className="cv-serif mt-5 text-4xl font-normal leading-[1.02] tracking-[-.04em] text-slate-950 sm:text-6xl">AutoPricing: turning fragmented resale signals into a reviewable pricing workflow</h1>
+        <p className="mt-6 text-xl leading-relaxed text-slate-600">How marketplace evidence, product matching, WhatsApp quote inputs and ERP context were brought into one system for a refurbished-device operation, so that commercial decisions became faster and more defensible without removing the human who signs off on them.</p>
+        <p className="mt-6 border-y border-slate-300 py-3 text-sm text-slate-500">Sami Halawa · product discovery, system architecture and hands-on implementation · delivered as AutoPricing / IWAKY across three workstreams</p>
 
-    <section className="py-14 sm:py-20" aria-labelledby="case-context-heading">
-      <div className="container grid gap-10 lg:grid-cols-[.72fr_1.28fr] lg:gap-16">
-        <div>
-          <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">The assignment</p>
-          <h2 id="case-context-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">One decision flow across messy operating systems.</h2>
-        </div>
-        <div className="border-t border-slate-400">
-          {[
-            ['Business context', 'A refurbished-device operation needed to compare changing market prices, internal stock and incoming purchase opportunities without losing the evidence behind a recommendation.'],
-            ['Operating environment', 'The workflow crossed public marketplaces, private quote conversations, product catalogues, inventory or ERP data and reporting surfaces.'],
-            ['My role', 'My work covered product discovery and process mapping, system architecture, hands-on implementation and preparation of the demonstrated operating workflow.'],
-          ].map(([title, body]) => <div key={title} className="grid gap-2 border-b border-slate-300 py-6 sm:grid-cols-[11rem_1fr]"><h3 className="font-display text-base font-bold text-slate-950">{title}</h3><p className="leading-7 text-slate-600">{body}</p></div>)}
-        </div>
-      </div>
-    </section>
+        <figure className="mt-10">
+          <img src="/portfolio/autopricing-dashboard.png" alt="AutoPricing executive dashboard showing catalogue coverage, market signals and the pricing and sourcing cases that need operator attention" className="w-full border border-slate-300 bg-slate-50" />
+          <figcaption className="mt-3 text-sm leading-6 text-slate-500">The executive pricing and sourcing view: catalogue coverage, market signals and the cases that need operator attention, in one screen.</figcaption>
+        </figure>
 
-    <figure className="border-y border-slate-300 bg-white py-10 sm:py-14">
-      <div className="container">
-        <img src="/portfolio/autopricing-dashboard.png" alt="AutoPricing interface showing an executive pricing and sourcing dashboard" className="w-full border border-slate-300 bg-slate-50 object-cover object-top" />
-        <figcaption className="mt-4 max-w-4xl text-sm leading-6 text-slate-500">Executive pricing and sourcing view, combining catalogue coverage, market signals and the cases that need operator attention.</figcaption>
-      </div>
-    </figure>
+        <h2 className="cv-serif mt-14 text-3xl font-semibold text-slate-950">The problem</h2>
+        <p className="mt-4 leading-8">A refurbished-device operation needed to compare changing market prices, its own stock and incoming purchase opportunities without losing the evidence behind a recommendation. The information existed, but it was spread across public marketplaces, private quote conversations, product catalogues, inventory or ERP data and reporting surfaces. Each of those surfaces answered part of the question, and none of them carried the context of the others.</p>
+        <p className="mt-4 leading-8">The hard part is that the same phone is not the same commercial offer. Each marketplace expresses condition, seller, warranty, storage and configuration differently, and a comparison that flattens those differences produces a confident number with nothing underneath it. The assignment was one decision flow across messy operating systems: collect the signals, keep them honest, and put a reviewable recommendation in front of the person who owns the commercial outcome.</p>
+        <p className="mt-4 leading-8">My work covered product discovery and process mapping, system architecture, hands-on implementation and preparation of the demonstrated operating workflow.</p>
 
-    <section className="py-16 sm:py-24" aria-labelledby="market-evidence-heading">
-      <div className="container">
-        <div className="grid gap-8 lg:grid-cols-[.72fr_1.28fr] lg:gap-16">
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Source evidence</p>
-            <h2 id="market-evidence-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">The same phone is not the same commercial offer.</h2>
-          </div>
-          <p className="border-t border-slate-400 pt-5 text-lg leading-relaxed text-slate-600">Each marketplace expresses condition, seller, warranty, storage and configuration differently. The workflow keeps those differences visible before any comparison or recommendation is made.</p>
-        </div>
-        <div className="mt-12 grid gap-px border border-slate-300 bg-slate-300 md:grid-cols-2">
-          {marketSurfaces.map((surface) => (
-            <figure key={surface.name} className="bg-white p-4 sm:p-6">
-              <div className="aspect-[4/3] overflow-hidden border border-slate-200 bg-slate-50">
-                <img src={surface.src} alt={`${surface.name} product page used as a pricing reference`} loading="lazy" className="h-full w-full object-cover object-top" />
-              </div>
-              <figcaption className="mt-5 grid gap-2 sm:grid-cols-[7rem_1fr]">
-                <strong className="font-display text-sm text-slate-950">{surface.name}</strong>
-                <span className="text-sm leading-6 text-slate-600">{surface.body}</span>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-      </div>
-    </section>
+        <h2 className="cv-serif mt-14 text-3xl font-semibold text-slate-950">What was built</h2>
+        <p className="mt-4 leading-8">AutoPricing is a pricing-intelligence and decision-reporting workflow. The dashboard is the last layer; the difficult work is keeping market, product and operating context aligned underneath it. Four areas carry that context:</p>
+        <ul className="mt-4 list-disc space-y-2 pl-6 leading-7">
+          <li><strong>Market inputs</strong>: resale listings, sourcing opportunities and changing market prices across multiple public sources.</li>
+          <li><strong>Product identity</strong>: matching by model, storage, condition and channel so unlike devices are not compared as equivalents.</li>
+          <li><strong>Commercial context</strong>: inventory, quotations, stock age, target margin and ERP or catalogue data in the same decision view.</li>
+          <li><strong>Operator output</strong>: a review queue, decision reports and sourcing actions that retain the source behind the recommendation.</li>
+        </ul>
+        <p className="mt-4 leading-8">The market inputs are real product pages, not abstractions. Amazon contributes new and refurbished catalogue context, seller position and the current offer structure. Back Market contributes condition, warranty and specialist-refurbisher pricing in a structured product page. CeX is a second-hand retail reference with device grade, configuration and store pricing, and Swappie expresses refurbished-device configuration, condition and battery options as commercial variables. The workflow keeps those differences visible before any comparison or recommendation is made.</p>
+        <figure className="mt-8">
+          <img src="/portfolio/autopricing-market-amazon.webp" alt="Amazon.es product page for a refurbished iPhone 15 128 GB used as a pricing reference" loading="lazy" className="w-full border border-slate-300 bg-white" />
+          <figcaption className="mt-3 text-sm leading-6 text-slate-500">Amazon: the same iPhone 15 128 GB as a catalogue listing, with seller position and offer structure alongside the price.</figcaption>
+        </figure>
+        <figure className="mt-8">
+          <img src="/portfolio/autopricing-market-backmarket.webp" alt="Back Market product page for a refurbished iPhone 15 128 GB used as a pricing reference" loading="lazy" className="w-full border border-slate-300 bg-white" />
+          <figcaption className="mt-3 text-sm leading-6 text-slate-500">Back Market: condition grade and warranty are part of the offer, so they are captured as fields rather than lost in a single number.</figcaption>
+        </figure>
+        <p className="mt-6 leading-8">Around those signals sit the commercial pieces: a database-backed commerce and dynamic quotation flow with stock and pricing controls, collection and product matching with decision reporting across multiple resale sources, and the operational channels of Wallapop sourcing and contact plus structured extraction of WhatsApp quote inputs.</p>
 
-    <section className="border-y border-slate-300 bg-white py-16 sm:py-24" aria-labelledby="operator-loop-heading">
-      <div className="container">
-        <div className="max-w-4xl">
-          <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Operator loop</p>
-          <h2 id="operator-loop-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950 sm:text-5xl">From a live listing to a reviewed conversation.</h2>
-          <p className="mt-5 text-lg leading-relaxed text-slate-600">Wallapop is both a market signal and an operating channel. Discovery and contact sit beside each other, but the message remains visible before it leaves the operator's hands.</p>
-        </div>
-        <div className="mt-12 grid gap-6 lg:grid-cols-[1.12fr_.88fr]">
-          <figure className="border border-slate-300 bg-[#f8f6f1] p-4 sm:p-6">
-            <img src="/portfolio/autopricing-market-wallapop.webp" alt="Wallapop search results filtered for comparable iPhone listings" loading="lazy" className="aspect-[4/3] w-full object-cover object-top" />
-            <figcaption className="mt-4 text-sm leading-6 text-slate-600"><strong className="text-slate-950">Discover.</strong> Filtered listings retain price, model, condition and recency context.</figcaption>
-          </figure>
-          <figure className="border border-slate-300 bg-[#f8f6f1] p-4 sm:p-6">
-            <img src="/portfolio/autopricing-wallapop-operator.webp" alt="Wallapop inbox with an operator reviewing a prepared sourcing message" loading="lazy" className="aspect-[4/3] w-full object-cover object-top" />
-            <figcaption className="mt-4 text-sm leading-6 text-slate-600"><strong className="text-slate-950">Review.</strong> The sourcing conversation stays attached to the listing and the prepared action.</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
+        <h2 className="cv-serif mt-14 text-3xl font-semibold text-slate-950">Architecture</h2>
+        <p className="mt-4 leading-8">Six stages take a public listing to a reviewed action. Evidence flows left to right through the diagram. Authority does not: nothing changes a price, buys stock or contacts a seller until it has passed the operator checkpoint.</p>
+        <div className="mt-6"><SystemDiagram title="Sources, ingestion, identity, pricing, review, outputs." nodes={architecture} feedback="Reviewed outcomes are written back to the ERP and catalogue, so the next pricing pass starts from the latest commercial state." caption="AutoPricing / IWAKY system architecture as delivered across the three workstreams." /></div>
+        <p className="mt-6 leading-8">In operating terms the same flow reads as five steps. <strong>Collect</strong> brings marketplace listings, quote inputs and inventory context into one operating view. <strong>Normalize</strong> matches products and makes source, condition and channel differences explicit. <strong>Evaluate</strong> applies pricing, stock and margin logic while preserving the underlying evidence. <strong>Review</strong> routes exceptions and commercially sensitive actions through a human checkpoint. <strong>Act</strong> turns reviewed decisions into reports, sourcing work and operational follow-up.</p>
+        <p className="mt-4 leading-8">The system deliberately separated signal collection and analysis from the actions that affect price, purchases or external contact. Automation prepared and traced the evidence. Exceptions, price changes, purchase decisions and external contact remained reviewable rather than disappearing into an opaque autonomous flow.</p>
 
-    <section className="py-16 sm:py-24" aria-labelledby="case-system-heading">
-      <div className="container grid gap-12 lg:grid-cols-[.7fr_1.3fr] lg:gap-16">
-        <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">System anatomy</p><h2 id="case-system-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">Four layers behind one commercial decision.</h2><p className="mt-5 leading-7 text-slate-600">The dashboard is the last layer. The difficult work is keeping market, product and operating context aligned underneath it.</p></div>
-        <div className="grid border-t border-slate-400 sm:grid-cols-2">{systemAreas.map(([title, body], index) => <article key={title} className={`border-b border-slate-300 py-6 sm:px-6 ${index % 2 === 0 ? 'sm:border-r' : ''}`}><h3 className="cv-serif text-2xl font-semibold text-slate-950">{title}</h3><p className="mt-3 text-sm leading-6 text-slate-600">{body}</p></article>)}</div>
-      </div>
-    </section>
+        <h2 className="cv-serif mt-14 text-3xl font-semibold text-slate-950">The operator loop</h2>
+        <p className="mt-4 leading-8">Wallapop is both a market signal and an operating channel. Discovery and contact sit beside each other: filtered listings retain price, model, condition and recency context, and when a listing is worth pursuing the sourcing conversation stays attached to the listing and to the prepared action. The message remains visible before it leaves the operator's hands.</p>
+        <figure className="mt-6">
+          <img src="/portfolio/autopricing-market-wallapop.webp" alt="Wallapop search results for iPhone 15 128 GB listings with price, condition and recency visible on each card" loading="lazy" className="w-full border border-slate-300 bg-white" />
+          <figcaption className="mt-3 text-sm leading-6 text-slate-500">Discover: Wallapop results filtered to comparable iPhone 15 128 GB listings, with price, condition and recency on each card.</figcaption>
+        </figure>
+        <figure className="mt-8">
+          <img src="/portfolio/autopricing-wallapop-operator.webp" alt="Wallapop inbox showing a sourcing conversation with an operator-prepared message ready for review" loading="lazy" className="w-full border border-slate-300 bg-white" />
+          <figcaption className="mt-3 text-sm leading-6 text-slate-500">Review: the Wallapop inbox with a prepared sourcing message, still under the operator's control before it is sent.</figcaption>
+        </figure>
 
-    <section className="border-y border-slate-300 bg-white py-16 sm:py-24" aria-labelledby="case-workflow-heading">
-      <div className="container">
-        <div className="max-w-4xl"><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Process map</p><h2 id="case-workflow-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950 sm:text-5xl">Evidence moves forward. Authority stays visible.</h2><p className="mt-5 text-lg leading-relaxed text-slate-600">The system separated signal collection and analysis from the actions that affect price, purchases or external contact.</p></div>
-        <ol className="mt-12 grid border-t border-slate-500 sm:grid-cols-2 lg:grid-cols-5">
-          {workflow.map((step, index) => <li key={step.number} className={`border-b border-slate-300 py-6 sm:px-5 ${index < workflow.length - 1 ? 'lg:border-r' : ''}`}><span className="font-mono text-xs font-bold text-brand-800">{step.number}</span><h3 className="cv-serif mt-8 text-2xl font-semibold text-slate-950">{step.title}</h3><p className="mt-3 text-sm leading-6 text-slate-600">{step.body}</p></li>)}
-        </ol>
-        <div className="mt-8 grid gap-6 border border-slate-400 bg-white p-6 sm:grid-cols-[12rem_1fr] sm:p-8"><h3 className="font-display text-sm font-bold uppercase tracking-[.16em] text-slate-950">Approval boundary</h3><p className="leading-7 text-slate-600">Automation prepared and traced the evidence. Exceptions, price changes, purchase decisions and external contact remained reviewable rather than disappearing into an opaque autonomous flow.</p></div>
-      </div>
-    </section>
+        <h2 className="cv-serif mt-14 text-3xl font-semibold text-slate-950">Outcomes</h2>
+        <p className="mt-4 leading-8">The delivery brought four things into one operating model, and each is documented in the delivery archive rather than described from memory:</p>
+        <table className="mt-4 w-full border-t border-slate-400 text-left text-sm">
+          <tbody>
+            <tr className="border-b border-slate-300"><th className="py-3 pr-4 font-semibold text-slate-950">Pricing and commerce</th><td className="py-3 text-slate-600">A database-backed commerce and dynamic quotation flow with stock and pricing controls.</td></tr>
+            <tr className="border-b border-slate-300"><th className="py-3 pr-4 font-semibold text-slate-950">Market intelligence</th><td className="py-3 text-slate-600">Collection, product matching and decision reporting across multiple resale sources.</td></tr>
+            <tr className="border-b border-slate-300"><th className="py-3 pr-4 font-semibold text-slate-950">Operational channels</th><td className="py-3 text-slate-600">Wallapop sourcing and contact flows plus structured extraction of WhatsApp quote inputs.</td></tr>
+            <tr className="border-b border-slate-300"><th className="py-3 pr-4 font-semibold text-slate-950">Delivery archive</th><td className="py-3 text-slate-600">Sixty-nine screens across three workstreams, covering collection, database records, operator controls and rendered reports.</td></tr>
+          </tbody>
+        </table>
+        <p className="mt-6 leading-8">Reviewed outcomes are written back to the ERP and catalogue, so each pricing pass starts from the latest commercial state instead of from a stale export.</p>
 
-    <section className="py-16 sm:py-24" aria-labelledby="case-architecture-heading">
-      <div className="container">
-        <div className="grid gap-8 lg:grid-cols-[.72fr_1.28fr] lg:gap-16">
-          <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Architecture</p><h2 id="case-architecture-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">Six stages from a public listing to a reviewed action.</h2></div>
-          <p className="border-t border-slate-400 pt-5 text-lg leading-relaxed text-slate-600">Evidence flows left to right. Authority does not: nothing changes a price, buys stock or contacts a seller until it has passed the operator checkpoint.</p>
-        </div>
-        <div className="mt-12"><SystemDiagram title="Sources, ingestion, identity, pricing, review, outputs." nodes={architecture} feedback="Reviewed outcomes are written back to the ERP and catalogue, so the next pricing pass starts from the latest commercial state." caption="AutoPricing / IWAKY system architecture as delivered across the three workstreams." /></div>
-      </div>
-    </section>
+        <h2 className="cv-serif mt-14 text-3xl font-semibold text-slate-950">What this demonstrates</h2>
+        <p className="mt-4 leading-8">The core work was not a standalone model or a dashboard. It was forward-deployed engineering as operating translation: taking a commercial process that ran across incomplete data, existing tools and human decision points, mapping it, and turning that map into a system people could inspect and operate.</p>
+        <p className="mt-4 leading-8">Human review is there by design. Pricing, purchases and external contact stay visible to an operator. Automation assembles and explains the decision context; it does not erase commercial authority.</p>
 
-    <section className="bg-slate-950 py-16 text-white sm:py-24" aria-labelledby="case-delivery-heading">
-      <div className="container grid gap-12 lg:grid-cols-[.7fr_1.3fr] lg:gap-16">
-        <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-200">Production outcomes</p><h2 id="case-delivery-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-white">What the system brought into one operating model.</h2></div>
-        <div className="grid border-t border-slate-600 sm:grid-cols-2">
-          {[
-            ['Pricing and commerce', 'A database-backed commerce and dynamic quotation flow with stock and pricing controls.'],
-            ['Market intelligence', 'Collection, product matching and decision reporting across multiple resale sources.'],
-            ['Operational channels', 'Wallapop sourcing and contact flows plus structured extraction of WhatsApp quote inputs.'],
-            ['Delivery archive', 'Sixty-nine screens across three workstreams, covering collection, database records, operator controls and rendered reports.'],
-          ].map(([title, body], index) => <article key={title} className={`border-b border-slate-700 py-6 sm:px-6 ${index % 2 === 0 ? 'sm:border-r' : ''}`}><h3 className="cv-serif text-2xl font-semibold text-white">{title}</h3><p className="mt-3 text-sm leading-6 text-slate-300">{body}</p></article>)}
-        </div>
+        <p className="mt-12 flex flex-wrap gap-4 border-t border-slate-300 pt-8 text-sm">
+          <Link to="/projects" className="btn-secondary">View more work<i className="fas fa-arrow-right text-xs" /></Link>
+          <Link to="/case-studies" className="btn-secondary">All case studies<i className="fas fa-arrow-right text-xs" /></Link>
+          <Link to="/contact" className="btn-primary">Discuss a complex workflow<i className="fas fa-arrow-right text-xs" /></Link>
+        </p>
       </div>
-    </section>
-
-    <section className="py-16 sm:py-24" aria-labelledby="case-boundary-heading">
-      <div className="container grid gap-10 lg:grid-cols-[1fr_1fr] lg:gap-16">
-        <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">What this demonstrates</p><h2 className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">Forward-deployed engineering as operating translation.</h2><p className="mt-5 text-lg leading-relaxed text-slate-600">The core work was not a standalone model or dashboard. It was translating a commercial process across incomplete data, existing tools and human decision points—then turning that map into a system people could inspect and operate.</p></div>
-        <aside className="border-l-2 border-brand-700 bg-white p-7 sm:p-9"><h2 id="case-boundary-heading" className="font-display text-sm font-bold uppercase tracking-[.16em] text-slate-950">Human review by design</h2><p className="mt-4 leading-7 text-slate-600">Pricing, purchases and external contact stay visible to an operator. Automation assembles and explains the decision context; it does not erase commercial authority.</p></aside>
-      </div>
-      <div className="container mt-14 flex flex-wrap gap-4 border-t border-slate-300 pt-8"><Link to="/projects" className="btn-secondary">View more work<i className="fas fa-arrow-right text-sm" /></Link><Link to="/contact" className="btn-primary">Discuss a complex workflow<i className="fas fa-arrow-right text-sm" /></Link></div>
-    </section>
+    </div>
   </article>
   </CaseStudyLocaleGate>
 );

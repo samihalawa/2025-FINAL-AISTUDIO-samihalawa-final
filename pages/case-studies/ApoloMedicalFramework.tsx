@@ -2,111 +2,65 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CaseStudyLocaleGate from '../../components/CaseStudyLocaleGate';
 
-const stages = [
-  ['01', 'Ingest', 'Bring a medical image and its available context into a controlled review workflow.'],
-  ['02', 'Describe', 'Use the vision-language stage to produce a structured visual description instead of a hidden conclusion.'],
-  ['03', 'Reason', 'Pass structured findings into a separate reasoning or report-generation stage.'],
-  ['04', 'Review', 'Keep a professional checkpoint around interpretation, longitudinal comparison and final reporting.'],
-];
-
-const clinicalSurfaces = [
-  { src: '/portfolio/umbramed-portal.webp', title: 'Clinical tool portal', body: 'A single entry point for calculators, interpreters, academy work and recent activity.' },
-  { src: '/portfolio/umbramed-document-viewer.webp', title: 'Assisted document review', body: 'Source material, notes and assisted interpretation remain together in a reviewable reading surface.' },
-  { src: '/portfolio/umbramed-performance.webp', title: 'Learning analytics', body: 'Progress, time and topic-level performance turn repeated practice into visible feedback.' },
-];
-
 const ApoloMedicalFramework: React.FC = () => (
   <CaseStudyLocaleGate storyId="medical-systems">
   <article className="bg-[#f8f6f1] text-slate-800">
-    <header className="border-b border-slate-300 py-16 sm:py-24">
-      <div className="container">
-        <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Research and prototyping · medical workflows · 2024–2026</p>
-        <div className="mt-7 grid gap-8 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
-          <h1 className="cv-serif max-w-5xl text-5xl font-normal leading-[.98] tracking-[-.045em] text-slate-950 sm:text-7xl">Separating what the model sees from how the workflow reasons.</h1>
-          <p className="border-l border-slate-400 pl-6 text-lg leading-relaxed text-slate-600">APOLO and related medical prototypes explore structured image review, reporting and learning tools with the human checkpoint visible throughout.</p>
-        </div>
-      </div>
-    </header>
+    <div className="container">
+      <div className="mx-auto max-w-3xl py-14 sm:py-20">
+        <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Case study · Medical-image, reporting and clinical-learning prototypes · 2024–2026</p>
+        <h1 className="cv-serif mt-5 text-4xl font-normal leading-[1.02] tracking-[-.04em] text-slate-950 sm:text-6xl">APOLO: separating what the model sees from how the workflow reasons</h1>
+        <p className="mt-6 text-xl leading-relaxed text-slate-600">How a family of medical-image, structured-reporting and clinical-learning prototypes was built around explicit human review, anchored by APOLO, a DeepSeek-VL2-tiny multimodal model for radiology and ophthalmology imaging published on Hugging Face.</p>
+        <p className="mt-6 border-y border-slate-300 py-3 text-sm text-slate-500">Sami Halawa · technical lead · research and prototyping · 2024–2026</p>
 
-    <figure className="border-b border-slate-300 bg-white py-10 sm:py-14">
-      <div className="container"><img src="/portfolio/apolo-architecture.png" alt="APOLO two-stage multimodal medical-image workflow architecture" className="mx-auto block max-h-[52rem] w-full border border-slate-300 bg-white object-contain" /><figcaption className="mt-4 text-sm leading-6 text-slate-500">Two-stage architecture: structured visual description first, reviewable reasoning and reporting second.</figcaption></div>
-    </figure>
-
-    <section className="py-16 sm:py-24" aria-labelledby="apolo-context-heading">
-      <div className="container grid gap-10 lg:grid-cols-[.72fr_1.28fr] lg:gap-16">
-        <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Research question</p><h2 id="apolo-context-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">Can multimodal support stay inspectable?</h2></div>
-        <div className="border-t border-slate-400">{[
-          ['The problem', 'End-to-end image-to-answer systems can hide whether an error came from visual description, reasoning, context or report generation.'],
-          ['The approach', 'Separate visual description from downstream reasoning, use structured outputs and preserve an explicit review step.'],
-          ['My role', 'Architecture, model and workflow exploration, local-processing design, interface prototypes and technical leadership across related tools.'],
-        ].map(([title, body]) => <div key={title} className="grid gap-2 border-b border-slate-300 py-6 sm:grid-cols-[11rem_1fr]"><h3 className="font-display text-base font-bold text-slate-950">{title}</h3><p className="leading-7 text-slate-600">{body}</p></div>)}</div>
-      </div>
-    </section>
-
-    <section className="border-y border-slate-300 bg-white py-16 sm:py-24" aria-labelledby="apolo-flow-heading">
-      <div className="container"><div className="max-w-4xl"><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Workflow</p><h2 id="apolo-flow-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950 sm:text-5xl">A reviewable path from image to report.</h2></div>
-        <ol className="mt-12 grid border-t border-slate-500 sm:grid-cols-2 lg:grid-cols-4">{stages.map(([number, title, body], index) => <li key={number} className={`border-b border-slate-300 py-6 sm:px-6 ${index < stages.length - 1 ? 'lg:border-r' : ''}`}><span className="font-mono text-xs font-bold text-brand-800">{number}</span><h3 className="cv-serif mt-8 text-2xl font-semibold text-slate-950">{title}</h3><p className="mt-3 text-sm leading-6 text-slate-600">{body}</p></li>)}</ol>
-      </div>
-    </section>
-
-    <section className="py-16 sm:py-24" aria-labelledby="apolo-evidence-heading">
-      <div className="container">
-        <div className="grid gap-8 lg:grid-cols-[.72fr_1.28fr] lg:gap-16">
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Model evidence</p>
-            <h2 id="apolo-evidence-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">Architecture, instruction and output shown as separate artifacts.</h2>
-          </div>
-          <p className="border-t border-slate-400 pt-5 text-lg leading-relaxed text-slate-600">The project does not reduce the work to a single polished answer. It exposes the local-processing boundary, the instruction structure and the generated report so each stage can be examined on its own terms.</p>
-        </div>
-        <div className="mt-12 grid gap-6 lg:grid-cols-[.82fr_1.18fr]">
-          <figure className="border border-slate-300 bg-white p-4 sm:p-6">
-            <img src="/portfolio/apolo-local-workflow.webp" alt="APOLO local clinical workflow with a privacy barrier between image processing and reasoning" loading="lazy" className="aspect-square w-full object-contain" />
-            <figcaption className="mt-4 text-sm leading-6 text-slate-600"><strong className="text-slate-950">Local workflow.</strong> Image inputs, structured descriptions and doctor-facing reasoning are visibly separated.</figcaption>
-          </figure>
-          <figure className="border border-slate-300 bg-white p-4 sm:p-6">
-            <img src="/portfolio/apolo-report-example.webp" alt="Example medical image beside an APOLO-generated structured report" loading="lazy" className="aspect-[2/1] w-full object-contain" />
-            <figcaption className="mt-4 text-sm leading-6 text-slate-600"><strong className="text-slate-950">Report surface.</strong> The source image stays beside the generated narrative for comparison and review.</figcaption>
-          </figure>
-        </div>
-        <figure className="mt-6 border border-slate-300 bg-white p-4 sm:p-7">
-          <img src="/portfolio/apolo-instruct-comparison.webp" alt="APOLO instruction example comparing model responses to two chest radiographs" loading="lazy" className="mx-auto max-h-[48rem] w-full object-contain" />
-          <figcaption className="mt-5 grid gap-2 sm:grid-cols-[12rem_1fr]">
-            <strong className="font-display text-sm text-slate-950">Instruction artifact</strong>
-            <span className="text-sm leading-6 text-slate-600">A visible comparison format makes the prompt, image pair and response structure easier to inspect.</span>
-          </figcaption>
+        <figure className="mt-10">
+          <img src="/portfolio/apolo-instruct-comparison.webp" alt="APOLO Medical Multimodal Instruct model-card figure: two chest radiographs, each followed by a Stage 1 structured visual description, a Stage 2 reasoning trace inside think tags and the final text output" className="w-full border border-slate-300 bg-white" />
+          <figcaption className="mt-3 text-sm leading-6 text-slate-500">The public model-card figure for APOLO Medical Multimodal Instruct: two chest radiographs side by side, each with its Stage 1 visual description, its Stage 2 reasoning trace and the resulting text output.</figcaption>
         </figure>
-      </div>
-    </section>
 
-    <section className="bg-slate-950 py-16 text-white sm:py-24" aria-labelledby="medical-family-heading">
-      <div className="container grid gap-12 lg:grid-cols-[.7fr_1.3fr] lg:gap-16">
-        <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-200">Related product family</p><h2 id="medical-family-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-white">One research direction across several working surfaces.</h2></div>
-        <div className="grid border-t border-slate-600 sm:grid-cols-2">{[
-          ['APOLO', 'Public model and architecture artifacts based on the DeepSeek-VL2 family for structured medical-image exploration.'],
-          ['AutoIOL and ophthalmology', 'Image review, longitudinal tracking and structured-report experiments for ophthalmology workflows.'],
-          ['AutoRad', 'PACS/RIS-oriented workflow concepts for radiology review and report generation.'],
-          ['Umbramed', 'Installable learning and clinical-tool surfaces spanning exam ingestion, assisted documents and specialist utilities.'],
-        ].map(([title, body], index) => <article key={title} className={`border-b border-slate-700 py-6 sm:px-6 ${index % 2 === 0 ? 'sm:border-r' : ''}`}><h3 className="cv-serif text-2xl font-semibold text-white">{title}</h3><p className="mt-3 text-sm leading-6 text-slate-300">{body}</p></article>)}</div>
-      </div>
-    </section>
+        <h2 className="cv-serif mt-14 text-3xl font-semibold text-slate-950">The problem</h2>
+        <p className="mt-4 leading-8">End-to-end image-to-answer systems can hide whether an error came from visual description, reasoning, context or report generation. When a single opaque step goes from pixels to conclusion, a clinician reviewing the output has no way to tell which part of the chain went wrong, and no clean place to intervene.</p>
+        <p className="mt-4 leading-8">The research question behind this work was simple to state: can multimodal support stay inspectable? The goal was to explore useful multimodal assistance without collapsing image interpretation, reasoning and professional review into one opaque step. Everything in the project follows from that constraint.</p>
 
-    <section className="py-16 sm:py-24" aria-labelledby="clinical-surfaces-heading">
-      <div className="container">
-        <div className="grid gap-8 lg:grid-cols-[.72fr_1.28fr] lg:gap-16">
-          <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">From research to interface</p><h2 id="clinical-surfaces-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">The model work connects to tools people can actually navigate.</h2></div>
-          <p className="border-t border-slate-400 pt-5 text-lg leading-relaxed text-slate-600">Umbramed translates the broader direction into clinical utilities, assisted documents and learning surfaces. The interface keeps source material, progress and specialist tools visible instead of hiding them behind a chat box.</p>
-        </div>
-        <div className="mt-12 grid gap-px border border-slate-300 bg-slate-300 lg:grid-cols-3">
-          {clinicalSurfaces.map((surface) => (
-            <figure key={surface.title} className="bg-white p-4 sm:p-6">
-              <img src={surface.src} alt={`Umbramed ${surface.title.toLowerCase()} interface`} loading="lazy" className="aspect-[5/4] w-full border border-slate-200 bg-slate-50 object-cover object-top" />
-              <figcaption className="mt-5"><strong className="cv-serif text-xl font-semibold text-slate-950">{surface.title}</strong><p className="mt-2 text-sm leading-6 text-slate-600">{surface.body}</p></figcaption>
-            </figure>
-          ))}
-        </div>
-        <div className="mt-12 flex flex-wrap gap-4 border-t border-slate-300 pt-8"><a href="https://huggingface.co/samihalawa/APOLO-medical-multimodal-instruct" target="_blank" rel="noopener noreferrer" className="btn-secondary">View APOLO artifacts<i className="fas fa-arrow-up-right-from-square text-xs" /></a><Link to="/contact" className="btn-primary">Discuss a medical workflow<i className="fas fa-arrow-right text-xs" /></Link></div>
+        <h2 className="cv-serif mt-14 text-3xl font-semibold text-slate-950">The APOLO model</h2>
+        <p className="mt-4 leading-8">APOLO is a DeepSeek-VL2-tiny multimodal model for radiology and ophthalmology imaging, published on Hugging Face as APOLO Medical Multimodal Instruct under the Apache 2.0 licence. The approach is to separate visual description from downstream reasoning, use structured outputs, and preserve an explicit review step.</p>
+        <p className="mt-4 leading-8">The design has two stages. In Stage 1, the vision-language model reads the medical image and produces a structured visual description rather than a hidden conclusion: what is visible, where, and in what form. In Stage 2, a separate reasoning step works on those descriptions only and writes out an explainable reasoning trace before its final output. The reasoning stage has no access to the raw image. It can only argue from what Stage 1 described, which means the description and the reasoning can each be examined on their own terms.</p>
+        <p className="mt-4 leading-8">That boundary is the point of the architecture. If a conclusion is wrong, a reviewer can look at the Stage 1 description and ask whether the model saw the image correctly, then look at the Stage 2 trace and ask whether it reasoned correctly from what it saw. The figure above shows the format as published: the image, the structured description, the reasoning inside <code className="rounded bg-slate-200 px-1 text-sm">&lt;think&gt;</code> tags, and the text output, all visible together instead of a single polished answer.</p>
+        <p className="mt-4 leading-8">The workflow around the model follows the same shape:</p>
+        <ul className="mt-4 list-disc space-y-2 pl-6 leading-7">
+          <li><strong>Ingest</strong>: bring a medical image and its available context into a controlled review workflow.</li>
+          <li><strong>Describe</strong>: use the vision-language stage to produce a structured visual description instead of a hidden conclusion.</li>
+          <li><strong>Reason</strong>: pass structured findings into a separate reasoning or report-generation stage.</li>
+          <li><strong>Review</strong>: keep a professional checkpoint around interpretation, longitudinal comparison and final reporting.</li>
+        </ul>
+        <p className="mt-4 leading-8">My role covered the architecture, the model and workflow exploration, the local-processing design, the interface prototypes and technical leadership across the related tools. The project exposes the local-processing boundary, the instruction structure and the generated report so that each stage can be inspected rather than trusted.</p>
+
+        <h2 className="cv-serif mt-14 text-3xl font-semibold text-slate-950">Human review by design</h2>
+        <p className="mt-4 leading-8">These are prototypes with explicit human review. Nothing in this family replaces a professional judgement; the workflow is built so that the professional checkpoint stays visible throughout, around interpretation, longitudinal comparison and final reporting. A reviewable path from image to report is the deliverable, not an autonomous answer.</p>
+        <p className="mt-4 leading-8">The same research direction runs across several working surfaces. APOLO provides the public model and architecture artifacts for structured medical-image exploration. AutoIOL and the ophthalmology work cover image review, longitudinal tracking and structured-report experiments for ophthalmology workflows. AutoRad holds PACS/RIS-oriented workflow concepts for radiology review and report generation. In each case the source image stays beside the generated narrative so that comparison and review are part of the interface rather than an afterthought.</p>
+
+        <h2 className="cv-serif mt-14 text-3xl font-semibold text-slate-950">Umbramed and the clinical learning tools</h2>
+        <p className="mt-4 leading-8">Umbramed translates the broader direction into tools people can actually navigate: clinical utilities, assisted documents and learning surfaces, built in Ionic and Capacitor with installable PWA delivery and app packaging. I was the technical lead, with Dr. Valerio Trigos as clinical lead. The work spans OPE exam ingestion, assisted document workflows, payment integration, arrhythmia simulation and retinography ML exploration.</p>
+        <figure className="mt-6">
+          <img src="/portfolio/umbramed-portal.webp" alt="Umbramed Portal Principal showing featured clinical tools: Asistente de Diabetes, Calculadora Pediátrica and Intérprete de Serologías, with an Academia panel" loading="lazy" className="w-full border border-slate-300 bg-white" />
+          <figcaption className="mt-3 text-sm leading-6 text-slate-500">The Umbramed main portal: featured clinical tools (a diabetes assistant, a paediatric calculator and a serology interpreter) beside the Academia panel.</figcaption>
+        </figure>
+        <p className="mt-6 leading-8">The portal is a single entry point for calculators, interpreters, academy work and recent activity. The interface keeps source material, progress and specialist tools visible instead of hiding them behind a chat box. In the document viewer, a clinical guideline sits beside its highlights and session notes, so the source, the notes and any assisted interpretation remain together in one reviewable reading surface.</p>
+        <figure className="mt-6">
+          <img src="/portfolio/umbramed-document-viewer.webp" alt="Umbramed document viewer showing a clinical-guideline document with highlighted passages and a session-notes panel" loading="lazy" className="w-full border border-slate-300 bg-white" />
+          <figcaption className="mt-3 text-sm leading-6 text-slate-500">Assisted document review: a clinical guideline with highlights and session notes kept on the same screen.</figcaption>
+        </figure>
+        <p className="mt-6 leading-8">Learning analytics close the loop for exam preparation. Simulacro scores and subject-level mastery turn repeated practice into visible feedback on progress, time and topic performance, following the same principle as the model work: show the evidence, not just the verdict.</p>
+
+        <h2 className="cv-serif mt-14 text-3xl font-semibold text-slate-950">What this demonstrates</h2>
+        <p className="mt-4 leading-8">The family of prototypes shares one idea. Separate what the model sees from how the workflow reasons, make each stage produce an artifact a person can read, and keep the professional review step in the path rather than around it. APOLO shows it at the model level, with a published two-stage design whose reasoning never touches the raw image. The ophthalmology and radiology experiments show it at the workflow level. Umbramed shows it at the interface level, where clinicians and students can see their sources, their tools and their progress on the same screen.</p>
+
+        <p className="mt-12 flex flex-wrap gap-4 border-t border-slate-300 pt-8 text-sm">
+          <a href="https://huggingface.co/samihalawa/APOLO-medical-multimodal-instruct" target="_blank" rel="noopener noreferrer" className="btn-secondary">View APOLO on Hugging Face<i className="fas fa-arrow-up-right-from-square text-xs" /></a>
+          <Link to="/case-studies" className="btn-secondary">All case studies<i className="fas fa-arrow-right text-xs" /></Link>
+          <Link to="/contact" className="btn-primary">Discuss a medical workflow<i className="fas fa-arrow-right text-xs" /></Link>
+        </p>
       </div>
-    </section>
+    </div>
   </article>
   </CaseStudyLocaleGate>
 );

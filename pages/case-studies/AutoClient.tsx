@@ -2,112 +2,62 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CaseStudyLocaleGate from '../../components/CaseStudyLocaleGate';
 
-const workflow = [
-  { number: '01', title: 'Research', body: 'Collect company context, current signals, key people and the facts needed for a useful account brief.' },
-  { number: '02', title: 'Enrich', body: 'Normalize identities and add firmographic, contact and technology context without hiding the source.' },
-  { number: '03', title: 'Qualify', body: 'Score fit, priority and next-best action so an operator can review the reasoning before engagement.' },
-  { number: '04', title: 'Engage', body: 'Prepare email, WhatsApp or voice follow-up from the same account context rather than separate channel silos.' },
-  { number: '05', title: 'Learn', body: 'Write activity and outcomes back to the CRM so later work starts from the latest operating state.' },
-];
-
-const systemAreas = [
-  ['Research and enrichment', 'Account discovery, public-source context, contact normalization and structured briefs.'],
-  ['CRM operating layer', 'Records, qualification state, tasks, follow-up history and a reviewable next action.'],
-  ['Communication channels', 'Email, WhatsApp and voice integrations sharing the same account context.'],
-  ['Reporting and control', 'Pipeline visibility, activity summaries and checkpoints before external action.'],
-];
-
-const productSurfaces = [
-  { src: '/portfolio/autoclient-research-brief.webp', title: 'Find and qualify', body: 'ICP filters, daily lead volume, reply signals and a mobile handoff share one operating frame.' },
-  { src: '/portfolio/autoclient-sequence-orchestration.webp', title: 'Orchestrate follow-up', body: 'Email, LinkedIn and WhatsApp steps connect to CRM write-back instead of living as isolated campaigns.' },
-  { src: '/portfolio/autoclient-channel-rotation.webp', title: 'Coordinate channels', body: 'Marketing, sales and talent workflows can reuse a controlled inbox rotation and the same contact history.' },
-];
-
 const AutoClientCase: React.FC = () => (
   <CaseStudyLocaleGate storyId="autoclient">
   <article className="bg-[#f8f6f1] text-slate-800">
-    <header className="border-b border-slate-300 py-16 sm:py-24">
-      <div className="container">
-        <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Product system · revenue operations · Mar 2024–Jul 2025</p>
-        <div className="mt-7 grid gap-8 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
-          <h1 className="cv-serif max-w-5xl text-5xl font-normal leading-[.98] tracking-[-.045em] text-slate-950 sm:text-7xl">One account context from first research to the next follow-up.</h1>
-          <p className="border-l border-slate-400 pl-6 text-lg leading-relaxed text-slate-600">AutoClient connects account research, enrichment, qualification, CRM work and multi-channel follow-up in one operator-led system.</p>
-        </div>
-      </div>
-    </header>
+    <div className="container">
+      <div className="mx-auto max-w-3xl py-14 sm:py-20">
+        <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Case study · Product system · Revenue operations · Mar 2024–Jul 2025</p>
+        <h1 className="cv-serif mt-5 text-4xl font-normal leading-[1.02] tracking-[-.04em] text-slate-950 sm:text-6xl">AutoClient: one account context from first research to the next follow-up</h1>
+        <p className="mt-6 text-xl leading-relaxed text-slate-600">How account research, enrichment, qualification, CRM work and multi-channel follow-up were connected in one operator-led system, so that revenue operations no longer ran on five disconnected versions of the customer.</p>
+        <p className="mt-6 border-y border-slate-300 py-3 text-sm text-slate-500">Sami Halawa · product and engineering lead · Mar 2024–Jul 2025</p>
 
-    <figure className="border-b border-slate-300 bg-slate-950">
-      <img src="/portfolio/autoclient-operations-cover.webp" alt="Illustrated AutoClient revenue-operations workflow across research, CRM, email, WhatsApp and voice" className="mx-auto block aspect-[16/9] w-full max-w-[1600px] object-cover" />
-      <figcaption className="container py-4 text-sm leading-6 text-slate-400">Project cover showing the connected operating model: account research, CRM review and coordinated follow-up channels.</figcaption>
-    </figure>
+        <h2 className="cv-serif mt-14 text-3xl font-semibold text-slate-950">The problem</h2>
+        <p className="mt-4 leading-8">In most sales teams, research, contact data, CRM history and channel conversations live apart. An operator reads about a company in one place, finds the contact in another, checks what was said last time in a third, and then writes the next message in a fourth. Every decision starts by rebuilding context that already existed somewhere in the stack, and the result is five disconnected versions of the same customer.</p>
+        <p className="mt-4 leading-8">The challenge was to keep research, qualification and follow-up connected while preserving a clear operator checkpoint before any external action. Automation that skips that checkpoint is not an operating system; it is an outreach screen with a faster send button.</p>
 
-    <section className="py-14 sm:py-20" aria-labelledby="autoclient-context-heading">
-      <div className="container grid gap-10 lg:grid-cols-[.72fr_1.28fr] lg:gap-16">
-        <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Product context</p><h2 id="autoclient-context-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">Revenue operations without five disconnected versions of the customer.</h2></div>
-        <div className="border-t border-slate-400">
-          {[
-            ['The product', 'An agentic operating system for researching accounts, preparing actions and keeping CRM state current across communication channels.'],
-            ['The problem', 'Research, contact data, CRM history and channel conversations often live apart, forcing operators to rebuild context before every decision.'],
-            ['My role', 'Led product direction, system architecture, integrations, implementation and the operating workflows around the product.'],
-          ].map(([title, body]) => <div key={title} className="grid gap-2 border-b border-slate-300 py-6 sm:grid-cols-[11rem_1fr]"><h3 className="font-display text-base font-bold text-slate-950">{title}</h3><p className="leading-7 text-slate-600">{body}</p></div>)}
-        </div>
-      </div>
-    </section>
-
-    <section className="border-y border-slate-300 bg-white py-16 sm:py-24" aria-labelledby="autoclient-surfaces-heading">
-      <div className="container">
-        <div className="grid gap-8 lg:grid-cols-[.72fr_1.28fr] lg:gap-16">
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Product surfaces</p>
-            <h2 id="autoclient-surfaces-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">The workflow starts with a precise search, not a blank CRM record.</h2>
-          </div>
-          <p className="border-t border-slate-400 pt-5 text-lg leading-relaxed text-slate-600">A useful account brief combines who to find, why the company fits and which facts still need enrichment. The first action is grounded in that brief, and the later channel history remains attached to it.</p>
-        </div>
-        <figure className="mt-12 border border-slate-300 bg-[#f8f6f1] p-4 sm:p-7">
-          <img src="/portfolio/autoclient-lead-search.webp" alt="AutoClient lead search with people criteria, company criteria and selected enrichment fields" loading="lazy" className="w-full border border-slate-200 bg-white object-cover object-top" />
-          <figcaption className="mt-5 grid gap-2 sm:grid-cols-[12rem_1fr]">
-            <strong className="font-display text-sm text-slate-950">Search specification</strong>
-            <span className="text-sm leading-6 text-slate-600">People criteria, company evidence and requested enrichment fields are visible before the search runs.</span>
-          </figcaption>
+        <h2 className="cv-serif mt-14 text-3xl font-semibold text-slate-950">What was built</h2>
+        <p className="mt-4 leading-8">AutoClient is an agentic operating system for researching accounts, preparing actions and keeping CRM state current across communication channels. It combines agentic research, enrichment, scoring, personalised outreach and CRM follow-up across email, WhatsApp and voice. I led product direction, system architecture, integrations, implementation and the operating workflows around the product.</p>
+        <p className="mt-4 leading-8">The workflow starts with a precise search rather than a blank CRM record. A useful account brief combines who to find, why the company fits and which facts still need enrichment. The first action is grounded in that brief, and the later channel history remains attached to it.</p>
+        <figure className="mt-8">
+          <img src="/portfolio/autoclient-lead-search.webp" alt="AutoClient lead search screen titled Find Your Ideal Customers, with People Criteria (Holds a senior decision-making role), Company Criteria (Employed at a company headquartered in Spain; Company has publicly indicated an urgent need for AI training), Enrichments chips for Email, Phone Number, LinkedIn Profile, Company Size and Industry, and a Find Leads button" loading="lazy" className="w-full border border-slate-300 bg-white" />
+          <figcaption className="mt-3 text-sm leading-6 text-slate-500">The search specification screen, “Find Your Ideal Customers”: people criteria (a senior decision-making role), company criteria (headquartered in Spain, with a publicly stated urgent need for AI training) and the requested enrichments (email, phone number, LinkedIn profile, company size, industry) are visible before “Find Leads” runs.</figcaption>
         </figure>
-        <div className="mt-6 grid gap-px border border-slate-300 bg-slate-300 md:grid-cols-3">
-          {productSurfaces.map((surface) => (
-            <figure key={surface.title} className="bg-white p-4 sm:p-6">
-              <img src={surface.src} alt={`AutoClient interface view for ${surface.title.toLowerCase()}`} loading="lazy" className="aspect-square w-full border border-slate-200 bg-slate-50 object-cover" />
-              <figcaption className="mt-5">
-                <strong className="cv-serif text-xl font-semibold text-slate-950">{surface.title}</strong>
-                <p className="mt-2 text-sm leading-6 text-slate-600">{surface.body}</p>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-      </div>
-    </section>
+        <p className="mt-6 leading-8">Underneath that first screen, the product is organised into four connected operating areas. The value is in the connection between them, not in any one of them as an isolated tool:</p>
+        <ul className="mt-4 list-disc space-y-2 pl-6 leading-7">
+          <li><strong>Research and enrichment</strong>: account discovery, public-source context, contact normalization and structured briefs.</li>
+          <li><strong>CRM operating layer</strong>: records, qualification state, tasks, follow-up history and a reviewable next action.</li>
+          <li><strong>Communication channels</strong>: email, WhatsApp and voice integrations sharing the same account context.</li>
+          <li><strong>Reporting and control</strong>: pipeline visibility, activity summaries and checkpoints before external action.</li>
+        </ul>
+        <p className="mt-4 leading-8">In engineering terms this meant research and scoring workers, CRM synchronization, reporting, and the email, WhatsApp and voice integrations that read from and write back to the same record. Follow-up steps across email, LinkedIn and WhatsApp connect to CRM write-back instead of living as isolated campaigns, and marketing, sales and talent workflows can reuse a controlled inbox rotation and the same contact history.</p>
 
-    <section className="py-16 sm:py-24" aria-labelledby="autoclient-flow-heading">
-      <div className="container"><div className="max-w-4xl"><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Operating flow</p><h2 id="autoclient-flow-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950 sm:text-5xl">Research once. Carry the context forward.</h2><p className="mt-5 text-lg leading-relaxed text-slate-600">The workflow keeps evidence and operator judgment connected as an account moves from discovery to engagement.</p></div>
-        <ol className="mt-12 grid border-t border-slate-500 sm:grid-cols-2 lg:grid-cols-5">{workflow.map((step, index) => <li key={step.number} className={`border-b border-slate-300 py-6 sm:px-5 ${index < workflow.length - 1 ? 'lg:border-r' : ''}`}><span className="font-mono text-xs font-bold text-brand-800">{step.number}</span><h3 className="cv-serif mt-8 text-2xl font-semibold text-slate-950">{step.title}</h3><p className="mt-3 text-sm leading-6 text-slate-600">{step.body}</p></li>)}</ol>
-      </div>
-    </section>
+        <h2 className="cv-serif mt-14 text-3xl font-semibold text-slate-950">How the workflow runs</h2>
+        <p className="mt-4 leading-8">The operating flow is simple to state: research once, then carry the context forward. Evidence and operator judgment stay connected as an account moves from discovery to engagement, in five steps.</p>
+        <ol className="mt-4 list-decimal space-y-2 pl-6 leading-7">
+          <li><strong>Research.</strong> Collect company context, current signals, key people and the facts needed for a useful account brief.</li>
+          <li><strong>Enrich.</strong> Normalize identities and add firmographic, contact and technology context without hiding the source.</li>
+          <li><strong>Qualify.</strong> Score fit, priority and next-best action so an operator can review the reasoning before engagement.</li>
+          <li><strong>Engage.</strong> Prepare email, WhatsApp or voice follow-up from the same account context rather than separate channel silos.</li>
+          <li><strong>Learn.</strong> Write activity and outcomes back to the CRM so later work starts from the latest operating state.</li>
+        </ol>
+        <p className="mt-4 leading-8">The checkpoint sits between qualification and engagement. Scoring produces a recommended next action with its reasoning attached; a person reviews it before anything leaves the system. Once a message or call has happened, the outcome is written back, so the next pass through the loop begins from what actually occurred rather than from a stale record.</p>
+        <p className="mt-4 leading-8">AutoClient is a product line rather than a one-off automation. It extended earlier outreach product work and connected it to reusable messaging, mailbox and voice tooling: DameSender, the earlier email and acquisition product that established the lineage; GOWA and mailbox tools, the reusable WhatsApp, chat-history, media, SMTP and IMAP integration work; and telephony integrations that carry voice and conversation state so the same account context extends beyond text channels.</p>
 
-    <section className="bg-slate-950 py-16 text-white sm:py-24" aria-labelledby="autoclient-system-heading">
-      <div className="container grid gap-12 lg:grid-cols-[.7fr_1.3fr] lg:gap-16">
-        <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-200">System anatomy</p><h2 id="autoclient-system-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-white">One product, four connected operating areas.</h2><p className="mt-5 leading-7 text-slate-300">The value is in the connection between these areas—not another isolated outreach screen.</p></div>
-        <div className="grid border-t border-slate-600 sm:grid-cols-2">{systemAreas.map(([title, body], index) => <article key={title} className={`border-b border-slate-700 py-6 sm:px-6 ${index % 2 === 0 ? 'sm:border-r' : ''}`}><h3 className="cv-serif text-2xl font-semibold text-white">{title}</h3><p className="mt-3 text-sm leading-6 text-slate-300">{body}</p></article>)}</div>
-      </div>
-    </section>
+        <h2 className="cv-serif mt-14 text-3xl font-semibold text-slate-950">Outcomes</h2>
+        <p className="mt-4 leading-8">The product was built and led from March 2024 to July 2025. A public LinkedIn recommendation credits the system with 200+ qualified contacts in two weeks and a 30% lift in sales conversion. Those are the figures as the recommendation states them; they are attributed to that source rather than to an internal dashboard.</p>
+        <p className="mt-4 leading-8">The operational outcome is harder to put in a number but easier to feel: operators stop rebuilding context before every decision, because research, qualification state, channel history and the next action all live on the same record.</p>
 
-    <section className="py-16 sm:py-24" aria-labelledby="autoclient-lineage-heading">
-      <div className="container grid gap-10 lg:grid-cols-[.85fr_1.15fr] lg:gap-16">
-        <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Product lineage</p><h2 id="autoclient-lineage-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">A product line, not a one-off automation.</h2><p className="mt-5 text-lg leading-relaxed text-slate-600">AutoClient extended earlier outreach product work and connected it to reusable messaging, mailbox and voice tooling.</p></div>
-        <div className="border-t border-slate-400">{[
-          ['DameSender', 'The earlier email and acquisition product that established the product lineage.'],
-          ['GOWA and mailbox tools', 'Reusable WhatsApp, chat-history, media, SMTP and IMAP integration work.'],
-          ['Voice and conversation state', 'Telephony integrations that extend the same account context beyond text channels.'],
-        ].map(([title, body]) => <div key={title} className="grid gap-2 border-b border-slate-300 py-6 sm:grid-cols-[12rem_1fr]"><h3 className="cv-serif text-xl font-semibold text-slate-950">{title}</h3><p className="leading-7 text-slate-600">{body}</p></div>)}</div>
+        <h2 className="cv-serif mt-14 text-3xl font-semibold text-slate-950">What this demonstrates</h2>
+        <p className="mt-4 leading-8">AutoClient is not another isolated outreach screen. It is an operator-led system in which research, enrichment, qualification, CRM work and multi-channel follow-up share one account context, with a human checkpoint before external action and CRM write-back after it. The work spans product direction, system architecture, integrations across email, WhatsApp and voice, and the operating workflows that make those integrations useful to the people running the pipeline.</p>
+
+        <p className="mt-12 flex flex-wrap gap-4 border-t border-slate-300 pt-8 text-sm">
+          <Link to="/projects" className="btn-secondary">Explore project stories<i className="fas fa-arrow-right text-xs" /></Link>
+          <Link to="/case-studies" className="btn-secondary">All case studies<i className="fas fa-arrow-right text-xs" /></Link>
+          <Link to="/contact" className="btn-primary">Discuss revenue operations<i className="fas fa-arrow-right text-xs" /></Link>
+        </p>
       </div>
-      <div className="container mt-14 flex flex-wrap gap-4 border-t border-slate-300 pt-8"><Link to="/projects" className="btn-secondary">Explore project stories<i className="fas fa-arrow-right text-sm" /></Link><Link to="/contact" className="btn-primary">Discuss revenue operations<i className="fas fa-arrow-right text-sm" /></Link></div>
-    </section>
+    </div>
   </article>
   </CaseStudyLocaleGate>
 );
