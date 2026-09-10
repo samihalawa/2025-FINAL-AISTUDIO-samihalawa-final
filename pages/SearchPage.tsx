@@ -10,6 +10,7 @@ const ITEMS: Item[] = [
   { href: '/case-studies/autopricing', titleKey: 'search.item.caseAutopricing.title', descriptionKey: 'search.item.caseAutopricing.description', categoryKey: 'search.category.caseStudies' },
   { href: '/case-studies/apolo-medical-framework', titleKey: 'search.item.caseMedical.title', descriptionKey: 'search.item.caseMedical.description', categoryKey: 'search.category.caseStudies' },
   { href: '/case-studies/autoclient', titleKey: 'search.item.caseAutoclient.title', descriptionKey: 'search.item.caseAutoclient.description', categoryKey: 'search.category.caseStudies' },
+  { href: '/case-studies/vuda', titleKey: 'search.item.caseVuda.title', descriptionKey: 'search.item.caseVuda.description', categoryKey: 'search.category.caseStudies' },
 ];
 
 function useQuery() {

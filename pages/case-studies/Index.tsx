@@ -4,13 +4,13 @@ import { useTranslation, type LanguageCode } from '../../i18n/LanguageContext';
 import { PORTFOLIO_STORIES, getPeriodCopy, getProjectStoryCopy } from '../../portfolio';
 
 const headings: Record<LanguageCode, { eyebrow: string; title: string; body: string; challenge: string; build: string; open: string }> = {
-  en: { eyebrow: 'Case studies', title: 'Three anchor systems, examined in depth.', body: 'Follow the product decisions, system architecture, diagrams and production outcomes behind the three engineering systems that anchor the four production pillars.', challenge: 'Operating problem', build: 'System delivered', open: 'Open case study' },
-  es: { eyebrow: 'Casos de estudio', title: 'Tres sistemas de referencia, explicados en profundidad.', body: 'Descubre las decisiones de producto, la arquitectura, los diagramas y los resultados en producción de los tres sistemas que sustentan los cuatro pilares.', challenge: 'Problema operativo', build: 'Sistema construido', open: 'Abrir caso' },
-  fr: { eyebrow: 'Études de cas', title: 'Trois systèmes de référence étudiés en profondeur.', body: 'Découvrez les décisions produit, l’architecture, les schémas et les résultats en production des trois systèmes qui ancrent les quatre piliers.', challenge: 'Problème opérationnel', build: 'Système construit', open: 'Ouvrir l’étude' },
-  zh: { eyebrow: '案例研究', title: '深入拆解三个核心系统。', body: '了解支撑四大生产支柱的三个工程系统背后的产品决策、系统架构、图示与生产成果。', challenge: '运营问题', build: '构建系统', open: '打开案例' },
+  en: { eyebrow: 'Case studies', title: 'Five production and open-source systems, examined in depth.', body: 'Follow the product decisions, system architecture, diagrams and operating outcomes behind five representative systems across marketplace, pricing, revenue operations, medical AI and developer tooling.', challenge: 'Operating problem', build: 'System delivered', open: 'Open case study' },
+  es: { eyebrow: 'Casos de estudio', title: 'Cinco sistemas de producción y open source, explicados en profundidad.', body: 'Descubre las decisiones de producto, la arquitectura, los diagramas y los resultados operativos de cinco sistemas representativos: marketplace, pricing, operaciones comerciales, IA médica y herramientas para desarrolladores.', challenge: 'Problema operativo', build: 'Sistema construido', open: 'Abrir caso' },
+  fr: { eyebrow: 'Études de cas', title: 'Cinq systèmes de production et open source étudiés en profondeur.', body: 'Découvrez les décisions produit, l’architecture, les schémas et les résultats d’exploitation de cinq systèmes représentatifs : marketplace, pricing, opérations commerciales, IA médicale et outils pour développeurs.', challenge: 'Problème opérationnel', build: 'Système construit', open: 'Ouvrir l’étude' },
+  zh: { eyebrow: '案例研究', title: '深入拆解五个生产与开源系统。', body: '了解市场平台、定价、销售运营、医疗 AI 与开发者工具五个代表性系统背后的产品决策、系统架构、图示与运营成果。', challenge: '运营问题', build: '构建系统', open: '打开案例' },
 };
 
-const ids = ['oulang', 'autopricing', 'vuda'];
+const ids = ['oulang', 'autopricing', 'vuda', 'autoclient', 'medical-systems'];
 
 const CaseStudiesIndex: React.FC = () => {
   const { language } = useTranslation();

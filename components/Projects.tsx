@@ -57,7 +57,7 @@ const headings: Record<LanguageCode, {
       { number: '03', title: 'Operate and improve', body: 'Launch, observe real use, solve the rough edges and keep the product moving.' },
     ],
     selectedEyebrow: 'Portfolio',
-    selectedTitle: 'Three engineering case studies, selected for role relevance.',
+    selectedTitle: 'Three featured engineering case studies, selected for role relevance.',
     selectedBody: 'A multilingual production platform, a reviewable pricing and ERP workflow, and open-source tooling for agent visibility and context.',
     visit: 'Visit project',
     archiveEyebrow: 'Earlier work',
@@ -87,7 +87,7 @@ const headings: Record<LanguageCode, {
       { number: '03', title: 'Operar y mejorar', body: 'Lanzar, observar el uso real, resolver fricciones y mantener el producto avanzando.' },
     ],
     selectedEyebrow: 'Portfolio',
-    selectedTitle: 'Tres casos de ingeniería seleccionados por relevancia profesional.',
+    selectedTitle: 'Tres casos de ingeniería destacados, seleccionados por relevancia profesional.',
     selectedBody: 'Una plataforma multilingüe en producción, un flujo revisable de pricing y ERP, y tooling open source para visibilidad y contexto de agentes.',
     visit: 'Visitar proyecto',
     archiveEyebrow: 'Trabajos anteriores',
@@ -117,7 +117,7 @@ const headings: Record<LanguageCode, {
       { number: '03', title: 'Exploiter et améliorer', body: 'Lancer, observer l’usage réel, corriger les frictions et poursuivre l’évolution.' },
     ],
     selectedEyebrow: 'Portfolio',
-    selectedTitle: 'Trois études d’ingénierie choisies pour leur pertinence professionnelle.',
+    selectedTitle: 'Trois études d’ingénierie mises en avant, choisies pour leur pertinence professionnelle.',
     selectedBody: 'Une plateforme multilingue en production, un workflow de pricing et ERP vérifiable, et des outils open source pour la visibilité et le contexte des agents.',
     visit: 'Visiter le projet',
     archiveEyebrow: 'Travaux antérieurs',
@@ -147,7 +147,7 @@ const headings: Record<LanguageCode, {
       { number: '03', title: '运营与改进', body: '发布、观察真实使用、解决摩擦并持续推动产品。' },
     ],
     selectedEyebrow: '作品集',
-    selectedTitle: '三个与岗位高度相关的工程案例。',
+    selectedTitle: '三个精选的工程案例，按岗位相关性挑选。',
     selectedBody: '一个生产级多语言平台、一个可审阅的定价与 ERP 工作流，以及提升智能体可见性与上下文能力的开源工具。',
     visit: '访问项目',
     archiveEyebrow: '早期作品',
@@ -194,7 +194,7 @@ const Projects: React.FC = () => {
           </div>
         </section>
 
-        <div className="max-w-4xl pt-20 sm:pt-24"><span className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">{h.selectedEyebrow}</span><h2 className="cv-serif mt-5 text-4xl font-normal tracking-[-.035em] text-slate-950 sm:text-5xl">{h.selectedTitle}</h2><p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-600">{h.selectedBody}</p></div>
+        <div className="max-w-4xl pt-20 sm:pt-24"><span className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">{h.selectedEyebrow}</span><h2 className="cv-serif mt-5 text-4xl font-normal tracking-[-.035em] text-slate-950 sm:text-5xl">{h.selectedTitle}</h2><p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-600">{h.selectedBody}</p><Link to="/case-studies" className="mt-5 inline-flex min-h-11 items-center gap-2 border-b border-slate-600 text-sm font-bold text-slate-900 no-underline hover:border-slate-950">{language === 'es' ? 'Ver los cinco casos de estudio' : language === 'fr' ? 'Voir les cinq études de cas' : language === 'zh' ? '查看全部五个案例' : 'See all five case studies'}<i className="fas fa-arrow-right text-xs" /></Link></div>
         {categoryOrder.map(category => {
           const items = PORTFOLIO_STORIES.filter(story => story.category === category && flagshipStoryIds.has(story.id));
           if (!items.length) return null;

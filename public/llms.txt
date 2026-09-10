@@ -19,7 +19,7 @@ Sami Halawa is a Staff AI Engineer and Production AI Architect in Madrid special
 
 - [Home](https://samihalawa.com/): Positioning, production proof metrics, the four pillars and engagement options
 - [Projects](https://samihalawa.com/projects): Production AI and software engineering work
-- [Case studies](https://samihalawa.com/case-studies): OULANG, AutoPricing / IWAKY and VUDA deep dives with architecture diagrams
+- [Case studies](https://samihalawa.com/case-studies): five deep dives (OULANG, AutoPricing / IWAKY, AutoClient, APOLO medical framework, VUDA) written as articles with real screenshots and diagrams
 - [VUDA & agent developer tools](https://samihalawa.com/case-studies/vuda)
 - [CV](https://samihalawa.com/cv): Concise professional profile
 - [Contact](https://samihalawa.com/contact): Book a consultation
