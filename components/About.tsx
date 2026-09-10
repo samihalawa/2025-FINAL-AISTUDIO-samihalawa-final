@@ -6,6 +6,7 @@ const content: Record<LanguageCode, {
   principles: { title: string; body: string }[];
   timeline: { years: string; title: string; body: string }[];
   achievementsTitle: string;
+  timelineNote: string;
   achievements: { meta: string; title: string; body: string; links: { label: string; href: string }[] }[];
 }> = {
   en: {
@@ -21,6 +22,7 @@ const content: Record<LanguageCode, {
       { years: '2016–2023', title: 'Web platform engineering · Megawebs', body: 'Full-stack web platforms, technical SEO, Linux operations and delivery.' },
       { years: '2024–2026', title: 'ML / LLMOps engineering · Agents AI Ltd', body: 'Production AI workflows across agents, RAG, automation, deployment and observability.' }
     ],
+    timelineNote: 'Products, client deliveries and open-source tools shown in the pillars and archive ran alongside these roles as owned products, contracted work or public code, not as additional employment.',
     achievementsTitle: 'Selected distinctions & publications',
     achievements: [
       {
@@ -59,6 +61,7 @@ const content: Record<LanguageCode, {
       { years: '2016–2023', title: 'Ingeniería de plataformas web · Megawebs', body: 'Plataformas full-stack, SEO técnico, operaciones Linux y entrega.' },
       { years: '2024–2026', title: 'Ingeniería ML / LLMOps · Agents AI Ltd', body: 'Flujos de IA en producción con agentes, RAG, automatización, despliegue y observabilidad.' }
     ],
+    timelineNote: 'Los productos, entregas a clientes y herramientas open source de los pilares y del archivo se desarrollaron en paralelo a estos puestos como productos propios, trabajo contratado o código público, no como empleos adicionales.',
     achievementsTitle: 'Premios y publicaciones seleccionados',
     achievements: [
       {
@@ -89,6 +92,7 @@ const content: Record<LanguageCode, {
     intro: 'Je combine IA agentique, RAG et automatisation avec l’ingénierie full-stack nécessaire pour les intégrer à de vrais produits. Mon expérience des plateformes web, des opérations et de la formation technique soutient cette mise en œuvre sans en brouiller le focus.', evidence: 'J’interviens directement du cadrage à Python et TypeScript, aux APIs, aux données, au déploiement, à l’observabilité et à l’itération, sans multiplier les relais.',
     principles: [{ title: 'Concevoir tout le flux IA', body: 'Retrieval, outils, sorties structurées, APIs, données, interfaces, déploiement et observabilité forment un seul système.' }, { title: 'Construire pour l’exploitation', body: 'Une IA fiable inclut le suivi, la validation humaine et le parcours réel autour du modèle, pas seulement une réponse correcte.' }, { title: 'Relier produit et ingénierie', body: 'Espagnol, anglais et mandarin relient les décisions techniques aux utilisateurs, équipes et dirigeants.' }],
     timeline: [{ years: '2009–2016', title: 'Formation au design numérique · Megacursos.com', body: 'Formation au design numérique soutenue par des systèmes web et des supports pédagogiques.' }, { years: '2016–2023', title: 'Ingénierie de plateformes web · Megawebs', body: 'Plateformes full-stack, SEO technique, opérations Linux et livraison.' }, { years: '2024–2026', title: 'Ingénierie ML / LLMOps · Agents AI Ltd', body: 'Workflows IA en production : agents, RAG, automatisation, déploiement et observabilité.' }],
+    timelineNote: 'Les produits, livraisons clients et outils open source présentés dans les piliers et l’archive se sont déroulés en parallèle de ces postes, comme produits propres, travail contractuel ou code public, et non comme emplois supplémentaires.',
     achievementsTitle: 'Distinctions et publications sélectionnées',
     achievements: [
       { meta: 'Nogarejas · 2012', title: 'Prix jeunesse — IIe Concours de poésie de Nogarejas', body: '« Olvidaste una llave en mi costado », soumis sous le pseudonyme « El arte de la fuga », a reçu le prix jeunesse de 200 € parmi plus de 200 œuvres d’un concours international.', links: [{ label: 'Diario de León', href: 'https://www.diariodeleon.es/leon/provincia/120904/102485/premio-poesia-nogarejas-viaja-argentina_amp.html' }, { label: 'Volume archivé', href: 'https://archive.org/details/MemoriaGrfica19532013' }] },
@@ -101,6 +105,7 @@ const content: Record<LanguageCode, {
     intro: '我把智能体 AI、RAG 和自动化，与将其落地到真实产品所需的全栈工程结合起来。Web 平台、运营与技术教育经验为交付提供支撑，同时保持清晰的工程主线。', evidence: '默认亲自推进：从产品定义到 Python 与 TypeScript、API、数据、部署、可观测性和迭代，避免把系统拆成彼此断开的交接。',
     principles: [{ title: '设计完整 AI 工作流', body: '检索、工具、结构化输出、API、数据、界面、部署与可观测性属于同一个系统。' }, { title: '面向真实运营构建', body: '可靠的 AI 包含监控、人工审核和模型周边的真实流程，而不只是一次正确响应。' }, { title: '连接产品与工程', body: '西班牙语、英语和中文帮助把技术决策连接到用户、团队与管理层。' }],
     timeline: [{ years: '2009–2016', title: '数字设计教学 · Megacursos.com', body: '通过配套 Web 系统与学习材料开展数字设计教育。' }, { years: '2016–2023', title: 'Web 平台工程 · Megawebs', body: '全栈 Web 平台、技术 SEO、Linux 运维与交付。' }, { years: '2024–2026', title: 'ML / LLMOps 工程 · Agents AI Ltd', body: '涵盖智能体、RAG、自动化、部署与可观测性的生产级 AI 工作流。' }],
+    timelineNote: '支柱与档案中展示的产品、客户交付与开源工具，是在这些职位之外并行开展的自有产品、合同工作或公开代码，并非额外的雇佣关系。',
     achievementsTitle: '精选荣誉与出版物',
     achievements: [
       { meta: 'Nogarejas · 2012', title: '第二届 Nogarejas 诗歌大赛青年奖', body: '诗作《Olvidaste una llave en mi costado》以笔名“El arte de la fuga”参赛，在收到 200 多篇作品的国际赛事中获得 200 欧元青年奖。', links: [{ label: 'Diario de León', href: 'https://www.diariodeleon.es/leon/provincia/120904/102485/premio-poesia-nogarejas-viaja-argentina_amp.html' }, { label: '档案文集', href: 'https://archive.org/details/MemoriaGrfica19532013' }] },
@@ -126,6 +131,7 @@ const About: React.FC = () => {
           </div>
           <div className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
             <ol className="space-y-0">{c.timeline.map((item, index) => <li key={item.title} className="relative grid grid-cols-[40px_1fr] gap-5 pb-7 last:pb-0"><div className="font-mono text-sm font-bold text-brand-700">0{index + 1}</div><div className="relative border-l border-slate-200 pl-6"><span className="absolute -left-[5px] top-1 h-2.5 w-2.5 rounded-full bg-brand-600 ring-4 ring-brand-50"></span><h3 className="font-bold text-slate-950">{item.title}</h3><p className="mt-1 text-sm leading-relaxed text-slate-600">{item.body}</p>{index < c.timeline.length - 1 && <span className="sr-only">then</span>}</div></li>)}</ol>
+            <p className="mt-6 border-t border-slate-200 pt-4 text-xs leading-5 text-slate-500">{c.timelineNote}</p>
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ const content: Record<LanguageCode, { eyebrow: string; title: string; body: stri
     eyebrow: 'Engagement options',
     title: 'Three ways to engage.',
     body: 'Each engagement is scoped around a production outcome, not a headcount. Start with a consultation and I will recommend the format that fits.',
-    modality: 'Available for direct B2B contracting, fractional AI leadership & advisory · Madrid · Europe · Remote · ES / EN / 中文',
+    modality: 'Every option starts with one consultation. Engagements can run alongside an existing team, and staff-level permanent roles are considered on the same basis.',
     formatLabel: 'Format', bestForLabel: 'Best for',
     options: [
       { letter: 'A', title: 'Direct B2B Systems Engineering', body: 'Hands-on design and delivery of production agentic systems, RAG platforms and FastAPI / TypeScript infrastructure, from architecture through deployment and observability.', format: 'Project or monthly contract · fixed scope or retained capacity', bestFor: 'Teams that need a production AI system shipped and operated, not a prototype.', cta: 'Scope a build' },
@@ -21,7 +21,7 @@ const content: Record<LanguageCode, { eyebrow: string; title: string; body: stri
     eyebrow: 'Opciones de colaboración',
     title: 'Tres formas de trabajar juntos.',
     body: 'Cada colaboración se define en torno a un resultado en producción, no a un número de personas. Empieza con una consulta y te recomendaré el formato adecuado.',
-    modality: 'Disponible para contratación B2B directa, liderazgo de IA fraccional y asesoría · Madrid · Europa · Remoto · ES / EN / 中文',
+    modality: 'Todas las opciones empiezan con una consulta. Las colaboraciones pueden convivir con un equipo existente, y los puestos permanentes de nivel staff se consideran en las mismas condiciones.',
     formatLabel: 'Formato', bestForLabel: 'Ideal para',
     options: [
       { letter: 'A', title: 'Ingeniería de sistemas B2B directa', body: 'Diseño y entrega práctica de sistemas agénticos en producción, plataformas RAG e infraestructura FastAPI / TypeScript, desde la arquitectura hasta el despliegue y la observabilidad.', format: 'Proyecto o contrato mensual · alcance fijo o capacidad retenida', bestFor: 'Equipos que necesitan un sistema de IA en producción entregado y operado, no un prototipo.', cta: 'Definir un proyecto' },
@@ -33,7 +33,7 @@ const content: Record<LanguageCode, { eyebrow: string; title: string; body: stri
     eyebrow: 'Modes de collaboration',
     title: 'Trois façons de collaborer.',
     body: 'Chaque mission est cadrée autour d’un résultat en production, pas d’un effectif. Commencez par une consultation et je vous recommanderai le format adapté.',
-    modality: 'Disponible pour contrats B2B directs, leadership IA fractionné et conseil · Madrid · Europe · Télétravail · ES / EN / 中文',
+    modality: 'Chaque option commence par une consultation. Les missions peuvent s’intégrer à une équipe existante, et les postes permanents de niveau staff sont étudiés sur la même base.',
     formatLabel: 'Format', bestForLabel: 'Idéal pour',
     options: [
       { letter: 'A', title: 'Ingénierie de systèmes B2B directe', body: 'Conception et livraison opérationnelle de systèmes agentiques en production, de plateformes RAG et d’infrastructures FastAPI / TypeScript, de l’architecture au déploiement et à l’observabilité.', format: 'Projet ou contrat mensuel · périmètre fixe ou capacité réservée', bestFor: 'Équipes qui ont besoin d’un système IA livré et exploité en production, pas d’un prototype.', cta: 'Cadrer un projet' },
@@ -45,7 +45,7 @@ const content: Record<LanguageCode, { eyebrow: string; title: string; body: stri
     eyebrow: '合作方式',
     title: '三种合作方式。',
     body: '每项合作都围绕生产成果来界定范围，而非人头数。先预约一次咨询，我会推荐最合适的形式。',
-    modality: '可承接直接 B2B 合同、兼职 AI 领导与顾问服务 · 马德里 · 欧洲 · 远程 · ES / EN / 中文',
+    modality: '每种方式都从一次咨询开始。合作可与现有团队并行，Staff 级长期职位也按同样标准考虑。',
     formatLabel: '形式', bestForLabel: '适合',
     options: [
       { letter: 'A', title: '直接 B2B 系统工程', body: '亲自设计并交付生产级智能体系统、RAG 平台与 FastAPI / TypeScript 基础设施，覆盖架构、部署与可观测性。', format: '项目制或月度合同 · 固定范围或预留产能', bestFor: '需要把 AI 系统真正交付并运营起来、而非停留在原型阶段的团队。', cta: '确定项目范围' },

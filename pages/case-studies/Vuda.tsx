@@ -8,7 +8,7 @@ const loop = [
   { label: 'Capture', detail: 'A live screenshot of the rendered interface is taken at the requested viewport and scroll position.', tag: 'capture' },
   { label: 'Annotate', detail: 'Element boundaries, focus, overflow and layout state are drawn onto the frame so defects are visible.', tag: 'annotation' },
   { label: 'Visual reasoning', detail: 'A vision-language model reads the annotated frame and returns structured findings, not prose.', tag: 'reasoning' },
-  { label: 'Fix & re-verify', detail: 'The agent edits the code, re-captures and repeats until the visual assertion passes.', tag: 'loop' },
+  { label: 'Fix & re-verify', detail: 'The agent edits the code, re-captures and can repeat until the visual assertion is satisfied.', tag: 'loop' },
 ];
 
 const systemAreas = [
@@ -68,10 +68,10 @@ const VudaCase: React.FC = () => (
       <div className="container">
         <div className="grid gap-8 lg:grid-cols-[.72fr_1.28fr] lg:gap-16">
           <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Architecture</p><h2 id="vuda-diagram-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">One capture-to-verification loop, exposed as tools.</h2></div>
-          <p className="border-t border-slate-400 pt-5 text-lg leading-relaxed text-slate-600">The agent never leaves its own session. Every stage is a tool call whose result is structured enough to drive the next code edit.</p>
+          <p className="border-t border-slate-400 pt-5 text-lg leading-relaxed text-slate-600">Within a compatible MCP client, every stage is a tool call whose result is structured enough to drive the next code edit.</p>
         </div>
         <div className="mt-12">
-          <SystemDiagram title="Capture, annotate, reason, fix, re-verify." nodes={loop} feedback="The loop repeats until the visual assertion passes; every iteration leaves an annotated frame the human reviewer can inspect." caption="VUDA runtime loop as exercised from Claude Code and Codex sessions." />
+          <SystemDiagram title="Capture, annotate, reason, fix, re-verify." nodes={loop} feedback="Capture, review and verification can be repeated until the visual assertion is satisfied; every iteration leaves an annotated frame a human reviewer can inspect." caption="VUDA runtime loop as exposed to MCP-capable coding agents." />
         </div>
       </div>
     </section>
@@ -100,7 +100,7 @@ const VudaCase: React.FC = () => (
 
     <section className="border-y border-slate-300 bg-white py-16 sm:py-24" aria-labelledby="vuda-outcomes-heading">
       <div className="container grid gap-12 lg:grid-cols-[.7fr_1.3fr] lg:gap-16">
-        <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Production outcomes</p><h2 id="vuda-outcomes-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">Adoption measured where developers actually install tools.</h2><p className="mt-5 leading-7 text-slate-600">Public package registries and repository activity are the only honest signal for developer tooling. These are the figures as recorded on GitHub and npm.</p></div>
+        <div><p className="text-xs font-bold uppercase tracking-[.2em] text-brand-800">Production outcomes</p><h2 id="vuda-outcomes-heading" className="cv-serif mt-5 text-4xl font-normal leading-tight text-slate-950">Adoption measured where developers actually install tools.</h2><p className="mt-5 leading-7 text-slate-600">Public package registries and repository activity provide transparent adoption signals for developer tooling. These are the figures as recorded on GitHub and npm in September 2026.</p></div>
         <dl className="border-t border-slate-400">
           {outcomes.map(([value, definition]) => (
             <div key={value} className="grid gap-2 border-b border-slate-300 py-6 sm:grid-cols-[14rem_1fr] sm:gap-6">

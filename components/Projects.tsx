@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation, type LanguageCode } from '../i18n/LanguageContext';
+import ProductionArchive from './ProductionArchive';
 import {
   PORTFOLIO_STORIES,
   categoryCopy,
@@ -206,6 +207,8 @@ const Projects: React.FC = () => {
             </article>; })}</div>
           </section>;
         })}
+
+        <ProductionArchive />
 
         <section className="mt-24 border-y border-slate-950 bg-slate-950 px-6 py-10 text-white sm:px-10 sm:py-12 lg:flex lg:items-end lg:justify-between lg:gap-12">
           <div className="max-w-3xl"><span className="text-xs font-bold uppercase tracking-[.18em] text-brand-200">{h.ctaEyebrow}</span><h2 className="mt-4 font-display text-3xl font-bold tracking-[-.04em] text-white sm:text-5xl">{h.ctaTitle}</h2><p className="mt-4 text-lg leading-relaxed text-slate-300">{h.ctaBody}</p></div>
