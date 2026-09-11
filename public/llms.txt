@@ -4,7 +4,7 @@ Sami Halawa is a Staff AI Engineer and Production AI Architect in Madrid special
 
 ## Production system pillars
 
-1. Multi-Agent Orchestration & Autonomous Tooling — Python, FastAPI, LangGraph, custom MCP tooling, async execution, human-in-the-loop. Proof: AutoClient AI lead engines, VUDA visual debugging agent (80+ GitHub stars, 900+ npm installs), email-smtp-imap-mcp (1,700+ npm installs).
+1. Multi-Agent Orchestration & Autonomous Tooling — Python, FastAPI, LangGraph, custom MCP tooling, async execution, human-in-the-loop. Proof: AutoClient AI lead engines, VUDA visual debugging agent (80+ GitHub stars, 900+ npm downloads), email-smtp-imap-mcp (1,700+ npm downloads).
 2. High-Throughput RAG & Search Platforms — vector databases, BM25 hybrid search, query DSL, reranking, LLM-as-judge evaluation. Proof: OULANG (欧浪AI) Mandarin-first marketplace with 17,000+ registered users and 89,000+ contact operations across web, iOS and Android.
 3. Cloud Architecture, Cost Optimization & MLOps — AWS, GCP, Hetzner/Docker control planes, Redis/PostgreSQL, LangSmith/Langfuse observability. Proof: cloud AI compute spend reduced from ~€18k/month to ~€200/month via hybrid model routing and self-hosted inference; AutoPricing/IWAKY ERP workflows.
 4. Regulated-Domain & Medical AI Systems — document intelligence designed for GDPR constraints, EU AI Act Article 50 transparency, fine-tuned VLMs (DeepSeek-VL2). Proof: AutoMedical clinical AI engines, APOLO on Hugging Face, PIME.ai compliance frameworks, AI Act Express advisory.

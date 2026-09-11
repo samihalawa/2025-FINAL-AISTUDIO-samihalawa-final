@@ -49,7 +49,7 @@ const VudaCase: React.FC = () => (
         <h2 className="cv-serif mt-14 text-3xl font-semibold text-slate-950">Companion tools</h2>
         <p className="mt-4 leading-8">The same pattern applies to mail, messaging and context. Each companion tool gives an operational agent a capability it would otherwise fake: a real mailbox, a real chat history, a real shell, a real memory of the session.</p>
         <ul className="mt-4 list-disc space-y-2 pl-6 leading-7">
-          <li><strong><a href="https://github.com/samihalawa/mcp-server-smtp" target="_blank" rel="noopener noreferrer" className="text-slate-900">email-smtp-imap-mcp</a></strong>: SMTP and IMAP transport for agents that need to send, read and triage mail as part of an operational workflow. 1,700+ npm installs.</li>
+          <li><strong><a href="https://github.com/samihalawa/mcp-server-smtp" target="_blank" rel="noopener noreferrer" className="text-slate-900">email-smtp-imap-mcp</a></strong>: SMTP and IMAP transport for agents that need to send, read and triage mail as part of an operational workflow. 1,700+ npm downloads.</li>
           <li><strong><a href="https://github.com/samihalawa/gowa-whatsapp-api" target="_blank" rel="noopener noreferrer" className="text-slate-900">GOWA WhatsApp API / MCP</a></strong>: Go-based, multi-device messaging, chat-history and media access for operational agents and customer workflows.</li>
           <li><strong>Browser, shell and diff suite</strong>: companion MCP utilities for browser control, shell execution and change review inside the same agent session.</li>
           <li><strong>Codex Chronicle / Screenpipe tooling</strong>: macOS context management and activity analysis so long AI-assisted development sessions keep their operating state.</li>
@@ -60,9 +60,9 @@ const VudaCase: React.FC = () => (
         <table className="mt-4 w-full border-t border-slate-400 text-left text-sm">
           <tbody>
             <tr className="border-b border-slate-300"><th className="py-3 pr-4 font-semibold text-slate-950">80+★ · 7 forks</th><td className="py-3 text-slate-600">GitHub adoption of visual-ui-debug-agent-mcp, the VUDA repository, as recorded in September 2026.</td></tr>
-            <tr className="border-b border-slate-300"><th className="py-3 pr-4 font-semibold text-slate-950">900+</th><td className="py-3 text-slate-600">npm installs of the VUDA package.</td></tr>
-            <tr className="border-b border-slate-300"><th className="py-3 pr-4 font-semibold text-slate-950">1,700+</th><td className="py-3 text-slate-600">npm installs of email-smtp-imap-mcp, the companion mail server.</td></tr>
-            <tr className="border-b border-slate-300"><th className="py-3 pr-4 font-semibold text-slate-950">2,500+</th><td className="py-3 text-slate-600">Combined open-source MCP tool installs across the two packages.</td></tr>
+            <tr className="border-b border-slate-300"><th className="py-3 pr-4 font-semibold text-slate-950">900+</th><td className="py-3 text-slate-600">npm downloads of the VUDA package.</td></tr>
+            <tr className="border-b border-slate-300"><th className="py-3 pr-4 font-semibold text-slate-950">1,700+</th><td className="py-3 text-slate-600">npm downloads of email-smtp-imap-mcp, the companion mail server.</td></tr>
+            <tr className="border-b border-slate-300"><th className="py-3 pr-4 font-semibold text-slate-950">2,500+</th><td className="py-3 text-slate-600">Combined open-source MCP tool downloads across the two packages.</td></tr>
           </tbody>
         </table>
 

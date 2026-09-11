@@ -34,23 +34,23 @@ const pillars: PillarDefinition[] = [
     copy: {
       en: { title: 'Multi-Agent Orchestration & Autonomous Tooling', summary: 'Agent systems that research, decide and act across email, WhatsApp, voice and developer environments, with an explicit operator checkpoint before external action.', proof: [
         { label: 'AutoClient AI lead engines — 200+ qualified contacts in two weeks, 30% conversion lift', href: '/case-studies/autoclient', kind: 'product' },
-        { label: 'VUDA visual debugging agent — 80+★ on GitHub, 900+ npm installs', href: '/case-studies/vuda', kind: 'oss' },
-        { label: 'email-smtp-imap-mcp server — 1,700+ npm installs', href: 'https://github.com/samihalawa/mcp-server-smtp', external: true, kind: 'oss' },
+        { label: 'VUDA visual debugging agent — 80+★ on GitHub, 900+ npm downloads', href: '/case-studies/vuda', kind: 'oss' },
+        { label: 'email-smtp-imap-mcp server — 1,700+ npm downloads', href: 'https://github.com/samihalawa/mcp-server-smtp', external: true, kind: 'oss' },
       ] },
       es: { title: 'Orquestación multiagente y tooling autónomo', summary: 'Sistemas de agentes que investigan, deciden y actúan en email, WhatsApp, voz y entornos de desarrollo, con un punto de revisión explícito antes de cualquier acción externa.', proof: [
         { label: 'Motores de leads AutoClient — 200+ contactos cualificados en dos semanas, +30% de conversión', href: '/case-studies/autoclient', kind: 'product' },
-        { label: 'Agente de depuración visual VUDA — 80+★ en GitHub, 900+ instalaciones npm', href: '/case-studies/vuda', kind: 'oss' },
-        { label: 'Servidor email-smtp-imap-mcp — 1.700+ instalaciones npm', href: 'https://github.com/samihalawa/mcp-server-smtp', external: true, kind: 'oss' },
+        { label: 'Agente de depuración visual VUDA — 80+★ en GitHub, 900+ descargas npm', href: '/case-studies/vuda', kind: 'oss' },
+        { label: 'Servidor email-smtp-imap-mcp — 1.700+ descargas npm', href: 'https://github.com/samihalawa/mcp-server-smtp', external: true, kind: 'oss' },
       ] },
       fr: { title: 'Orchestration multi-agents et outillage autonome', summary: 'Systèmes d’agents qui recherchent, décident et agissent sur email, WhatsApp, voix et environnements de développement, avec un point de contrôle opérateur explicite avant toute action externe.', proof: [
         { label: 'Moteurs de leads AutoClient — 200+ contacts qualifiés en deux semaines, +30 % de conversion', href: '/case-studies/autoclient', kind: 'product' },
-        { label: 'Agent de débogage visuel VUDA — 80+★ sur GitHub, 900+ installations npm', href: '/case-studies/vuda', kind: 'oss' },
-        { label: 'Serveur email-smtp-imap-mcp — 1 700+ installations npm', href: 'https://github.com/samihalawa/mcp-server-smtp', external: true, kind: 'oss' },
+        { label: 'Agent de débogage visuel VUDA — 80+★ sur GitHub, 900+ téléchargements npm', href: '/case-studies/vuda', kind: 'oss' },
+        { label: 'Serveur email-smtp-imap-mcp — 1 700+ téléchargements npm', href: 'https://github.com/samihalawa/mcp-server-smtp', external: true, kind: 'oss' },
       ] },
       zh: { title: '多智能体编排与自主工具', summary: '在邮件、WhatsApp、语音与开发环境中进行调研、决策与执行的智能体系统，并在任何外部动作前设置明确的人工审核点。', proof: [
         { label: 'AutoClient AI 线索引擎 — 两周内 200+ 合格联系人，转化率提升 30%', href: '/case-studies/autoclient', kind: 'product' },
-        { label: 'VUDA 视觉调试智能体 — GitHub 80+★，900+ npm 安装', href: '/case-studies/vuda', kind: 'oss' },
-        { label: 'email-smtp-imap-mcp 服务器 — 1,700+ npm 安装', href: 'https://github.com/samihalawa/mcp-server-smtp', external: true, kind: 'oss' },
+        { label: 'VUDA 视觉调试智能体 — GitHub 80+★，900+ npm 下载', href: '/case-studies/vuda', kind: 'oss' },
+        { label: 'email-smtp-imap-mcp 服务器 — 1,700+ npm 下载', href: 'https://github.com/samihalawa/mcp-server-smtp', external: true, kind: 'oss' },
       ] },
     },
   },
