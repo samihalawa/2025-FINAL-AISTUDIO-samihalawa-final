@@ -44,7 +44,7 @@ const headings: Record<LanguageCode, {
   cta: string;
 }> = {
   en: {
-    eyebrow: 'Selected work · 2023–today',
+    eyebrow: 'Selected work · 2023–today, followed by a complete archive from 2020',
     title: 'AI products built from first decision to live operation.',
     body: 'Featured engineering stories spanning multilingual platforms, data and ERP integration and agent tooling, followed by the complete production archive.',
     stats: ['flagship programmes', 'original public repositories', 'public videos', 'technical articles'],
@@ -74,7 +74,7 @@ const headings: Record<LanguageCode, {
     cta: 'Book a consultation',
   },
   es: {
-    eyebrow: 'Trabajo seleccionado · 2023–hoy',
+    eyebrow: 'Trabajo seleccionado · 2023–hoy, seguido de un archivo completo desde 2020',
     title: 'Productos de IA, desde la primera decisión hasta la operación real.',
     body: 'Historias de ingeniería destacadas sobre plataformas multilingües, integración de datos y ERP y tooling de agentes, seguidas del archivo de producción completo.',
     stats: ['programas principales', 'repositorios públicos propios', 'vídeos públicos', 'artículos técnicos'],
@@ -104,7 +104,7 @@ const headings: Record<LanguageCode, {
     cta: 'Reservar consulta',
   },
   fr: {
-    eyebrow: 'Travaux sélectionnés · 2023–aujourd’hui',
+    eyebrow: 'Travaux sélectionnés · 2023–aujourd’hui, suivis d’une archive complète depuis 2020',
     title: 'Des produits IA, de la première décision à l’exploitation réelle.',
     body: 'Récits d’ingénierie mis en avant : plateformes multilingues, intégration data et ERP, outils pour agents, suivis de l’archive de production complète.',
     stats: ['programmes phares', 'dépôts publics originaux', 'vidéos publiques', 'articles techniques'],
@@ -134,7 +134,7 @@ const headings: Record<LanguageCode, {
     cta: 'Réserver une consultation',
   },
   zh: {
-    eyebrow: '精选作品 · 2023 至今',
+    eyebrow: '精选作品 · 2023 至今，其后是自 2020 年起的完整档案',
     title: '从第一项决策到真实运营的 AI 产品。',
     body: '精选工程案例，涵盖多语言平台、数据与 ERP 集成和智能体工具，其后是完整的生产档案。',
     stats: ['旗舰项目集', '原创公开仓库', '公开视频', '技术文章'],
