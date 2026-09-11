@@ -4,27 +4,27 @@ import { useTranslation, type LanguageCode } from '../i18n/LanguageContext';
 const copy: Record<LanguageCode, { eyebrow: string; title: string; body: string; items: { value: string; label: string; href: string }[] }> = {
   en: { eyebrow: 'Across the public work', title: 'Follow the work where it lives.', body: 'Explore the code, technical writing, open-source tools and videos.', items: [
     { value: 'GitHub', label: 'Open-source code and developer tools', href: 'https://github.com/samihalawa' },
-    { value: 'Hugging Face', label: 'Technical writing and model work', href: 'https://huggingface.co/samihalawa/posts' },
+    { value: 'Hugging Face', label: 'Technical writing and model work', href: 'https://huggingface.co/samihalawa' },
     { value: 'LinkedIn', label: 'Experience, recommendations and profile', href: 'https://www.linkedin.com/in/samihalawa/' },
-    { value: 'YouTube', label: 'Videos on AI, automation and product', href: 'https://www.youtube.com/@autoclient-ai' },
+    { value: 'YouTube', label: 'Videos on AI, automation and product', href: 'https://www.youtube.com/@autoclientai' },
   ]},
   es: { eyebrow: 'Trabajo público', title: 'Sigue el trabajo donde vive.', body: 'Explora el código, la escritura técnica, las herramientas open source y los vídeos.', items: [
     { value: 'GitHub', label: 'Código open source y herramientas de desarrollo', href: 'https://github.com/samihalawa' },
-    { value: 'Hugging Face', label: 'Escritura técnica y trabajo con modelos', href: 'https://huggingface.co/samihalawa/posts' },
+    { value: 'Hugging Face', label: 'Escritura técnica y trabajo con modelos', href: 'https://huggingface.co/samihalawa' },
     { value: 'LinkedIn', label: 'Experiencia, recomendaciones y perfil', href: 'https://www.linkedin.com/in/samihalawa/' },
-    { value: 'YouTube', label: 'Vídeos sobre IA, automatización y producto', href: 'https://www.youtube.com/@autoclient-ai' },
+    { value: 'YouTube', label: 'Vídeos sobre IA, automatización y producto', href: 'https://www.youtube.com/@autoclientai' },
   ]},
   fr: { eyebrow: 'Travail public', title: 'Suivez le travail là où il vit.', body: 'Explorez le code, les articles techniques, les outils open source et les vidéos.', items: [
     { value: 'GitHub', label: 'Code open source et outils de développement', href: 'https://github.com/samihalawa' },
-    { value: 'Hugging Face', label: 'Articles techniques et travail sur les modèles', href: 'https://huggingface.co/samihalawa/posts' },
+    { value: 'Hugging Face', label: 'Articles techniques et travail sur les modèles', href: 'https://huggingface.co/samihalawa' },
     { value: 'LinkedIn', label: 'Expérience, recommandations et profil', href: 'https://www.linkedin.com/in/samihalawa/' },
-    { value: 'YouTube', label: 'Vidéos sur l’IA, l’automatisation et le produit', href: 'https://www.youtube.com/@autoclient-ai' },
+    { value: 'YouTube', label: 'Vidéos sur l’IA, l’automatisation et le produit', href: 'https://www.youtube.com/@autoclientai' },
   ]},
   zh: { eyebrow: '公开作品', title: '在作品真实所在之处继续探索。', body: '查看代码、技术文章、开源工具与视频。', items: [
     { value: 'GitHub', label: '开源代码与开发者工具', href: 'https://github.com/samihalawa' },
-    { value: 'Hugging Face', label: '技术文章与模型工作', href: 'https://huggingface.co/samihalawa/posts' },
+    { value: 'Hugging Face', label: '技术文章与模型工作', href: 'https://huggingface.co/samihalawa' },
     { value: 'LinkedIn', label: '经历、推荐与个人资料', href: 'https://www.linkedin.com/in/samihalawa/' },
-    { value: 'YouTube', label: '关于 AI、自动化与产品的视频', href: 'https://www.youtube.com/@autoclient-ai' },
+    { value: 'YouTube', label: '关于 AI、自动化与产品的视频', href: 'https://www.youtube.com/@autoclientai' },
   ]},
 };
 

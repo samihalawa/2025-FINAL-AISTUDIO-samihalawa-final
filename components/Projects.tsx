@@ -46,9 +46,9 @@ const headings: Record<LanguageCode, {
   en: {
     eyebrow: 'Selected work · 2023–today',
     title: 'AI products built from first decision to live operation.',
-    body: 'Three engineering stories showing multilingual platforms, data and ERP integration, agent tooling, deployment and production operation.',
+    body: 'Featured engineering stories spanning multilingual platforms, data and ERP integration and agent tooling, followed by the complete production archive.',
     stats: ['flagship programmes', 'original public repositories', 'public videos', 'technical articles'],
-    approachEyebrow: 'End-to-end technical ownership',
+    approachEyebrow: 'How I deliver',
     approachTitle: 'End-to-end technical ownership across product, architecture, engineering and production.',
     approachBody: 'I keep product decisions, technical architecture and operating reality connected from the first decision to the live service.',
     approach: [
@@ -67,7 +67,7 @@ const headings: Record<LanguageCode, {
     allLanes: 'All workstreams',
     results: 'projects',
     noResults: 'No projects match this search.',
-    open: 'Open project',
+    open: 'Read the case study',
     ctaEyebrow: 'Engagement options',
     ctaTitle: 'Need this level of system built and operated for your team?',
     ctaBody: 'Direct B2B systems engineering, fractional AI leadership and technical due diligence from Madrid, across Europe and remote.',
@@ -76,9 +76,9 @@ const headings: Record<LanguageCode, {
   es: {
     eyebrow: 'Trabajo seleccionado · 2023–hoy',
     title: 'Productos de IA, desde la primera decisión hasta la operación real.',
-    body: 'Tres historias de ingeniería sobre plataformas multilingües, integración de datos y ERP, tooling de agentes, despliegue y operación en producción.',
+    body: 'Historias de ingeniería destacadas sobre plataformas multilingües, integración de datos y ERP y tooling de agentes, seguidas del archivo de producción completo.',
     stats: ['programas principales', 'repositorios públicos propios', 'vídeos públicos', 'artículos técnicos'],
-    approachEyebrow: 'Responsabilidad técnica integral',
+    approachEyebrow: 'Cómo entrego',
     approachTitle: 'Responsabilidad técnica integral en producto, arquitectura, ingeniería y producción.',
     approachBody: 'Mantengo conectadas las decisiones de producto, la arquitectura técnica y la realidad operativa desde la primera decisión hasta el servicio en marcha.',
     approach: [
@@ -97,7 +97,7 @@ const headings: Record<LanguageCode, {
     allLanes: 'Todos los tipos',
     results: 'proyectos',
     noResults: 'Ningún proyecto coincide con la búsqueda.',
-    open: 'Abrir proyecto',
+    open: 'Leer el caso',
     ctaEyebrow: 'Opciones de colaboración',
     ctaTitle: '¿Necesitas un sistema de este nivel construido y operado para tu equipo?',
     ctaBody: 'Ingeniería de sistemas B2B directa, liderazgo de IA fraccional y due diligence técnica desde Madrid, en Europa y en remoto.',
@@ -106,9 +106,9 @@ const headings: Record<LanguageCode, {
   fr: {
     eyebrow: 'Travaux sélectionnés · 2023–aujourd’hui',
     title: 'Des produits IA, de la première décision à l’exploitation réelle.',
-    body: 'Trois récits d’ingénierie couvrant plateformes multilingues, intégration data et ERP, outils pour agents, déploiement et exploitation.',
+    body: 'Récits d’ingénierie mis en avant : plateformes multilingues, intégration data et ERP, outils pour agents, suivis de l’archive de production complète.',
     stats: ['programmes phares', 'dépôts publics originaux', 'vidéos publiques', 'articles techniques'],
-    approachEyebrow: 'Responsabilité technique de bout en bout',
+    approachEyebrow: 'Ma façon de livrer',
     approachTitle: 'Responsabilité technique de bout en bout : produit, architecture, ingénierie et production.',
     approachBody: 'Je maintiens les décisions produit, l’architecture technique et la réalité d’exploitation reliées, de la première décision au service en production.',
     approach: [
@@ -127,7 +127,7 @@ const headings: Record<LanguageCode, {
     allLanes: 'Tous les domaines',
     results: 'projets',
     noResults: 'Aucun projet ne correspond à cette recherche.',
-    open: 'Ouvrir le projet',
+    open: 'Lire l’étude de cas',
     ctaEyebrow: 'Modes de collaboration',
     ctaTitle: 'Besoin d’un système de ce niveau, construit et exploité pour votre équipe ?',
     ctaBody: 'Ingénierie de systèmes B2B directe, leadership IA fractionné et due diligence technique depuis Madrid, en Europe et à distance.',
@@ -136,9 +136,9 @@ const headings: Record<LanguageCode, {
   zh: {
     eyebrow: '精选作品 · 2023 至今',
     title: '从第一项决策到真实运营的 AI 产品。',
-    body: '三个工程案例，涵盖多语言平台、数据与 ERP 集成、智能体工具、部署及生产运营。',
+    body: '精选工程案例，涵盖多语言平台、数据与 ERP 集成和智能体工具，其后是完整的生产档案。',
     stats: ['旗舰项目集', '原创公开仓库', '公开视频', '技术文章'],
-    approachEyebrow: '端到端技术负责',
+    approachEyebrow: '我的交付方式',
     approachTitle: '在产品、架构、工程与生产环节承担端到端技术责任。',
     approachBody: '我让产品决策、技术架构与真实运营情况从第一项决策一直连接到上线服务。',
     approach: [
@@ -157,7 +157,7 @@ const headings: Record<LanguageCode, {
     allLanes: '全部类型',
     results: '个项目',
     noResults: '没有符合搜索条件的项目。',
-    open: '打开项目',
+    open: '阅读案例',
     ctaEyebrow: '合作方式',
     ctaTitle: '需要为你的团队构建并运营这一水准的系统？',
     ctaBody: '直接 B2B 系统工程、兼职 AI 领导与技术尽调，常驻马德里，覆盖欧洲与远程。',

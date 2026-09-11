@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         { href: 'https://www.linkedin.com/in/samihalawa/', icon: 'fab fa-linkedin', labelKey: 'social.linkedin' },
         { href: 'https://github.com/samihalawa', icon: 'fab fa-github', labelKey: 'social.github' },
         { href: 'https://huggingface.co/samihalawa', icon: 'fas fa-face-smile', labelKey: 'social.huggingface' },
-        { href: 'https://www.youtube.com/@autoclient-ai', icon: 'fab fa-youtube', labelKey: 'social.youtube' },
+        { href: 'https://www.youtube.com/@autoclientai', icon: 'fab fa-youtube', labelKey: 'social.youtube' },
         { href: 'mailto:sami@samihalawa.com', icon: 'fas fa-envelope', labelKey: 'social.email' }
     ];
 

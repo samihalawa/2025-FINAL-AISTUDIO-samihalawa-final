@@ -21,10 +21,10 @@ const kindCopy: Record<LanguageCode, Record<ProofKind, string>> = {
 };
 
 const headings: Record<LanguageCode, { eyebrow: string; title: string; body: string; stack: string; proof: string }> = {
-  en: { eyebrow: 'Four production system pillars', title: 'Every shipped system maps to one of four architectures.', body: 'Four architectures demonstrated through live products, client deliveries, public tools and applied research. The full record behind them is classified in the archive.', stack: 'Stack', proof: 'Proof highlights' },
-  es: { eyebrow: 'Cuatro pilares de sistemas en producción', title: 'Cada sistema entregado encaja en una de cuatro arquitecturas.', body: 'Cuatro arquitecturas demostradas con productos en producción, entregas a clientes, herramientas públicas e investigación aplicada. El registro completo está clasificado en el archivo.', stack: 'Stack', proof: 'Evidencia destacada' },
-  fr: { eyebrow: 'Quatre piliers de systèmes en production', title: 'Chaque système livré correspond à l’une de quatre architectures.', body: 'Quatre architectures démontrées par des produits en production, des livraisons clients, des outils publics et de la recherche appliquée. Le dossier complet est classé dans l’archive.', stack: 'Stack', proof: 'Preuves clés' },
-  zh: { eyebrow: '四大生产系统支柱', title: '每个已交付的系统都对应四种架构之一。', body: '四种架构，由在线产品、客户交付、公开工具与应用研究共同印证。完整记录已在档案中分类。', stack: '技术栈', proof: '关键证据' },
+  en: { eyebrow: 'Four production system pillars', title: 'Every shipped system maps to one of four architectures.', body: 'Each one is demonstrated through live products, client deliveries, public tools and applied research. The full record behind them is classified in the archive.', stack: 'Stack', proof: 'Proof highlights' },
+  es: { eyebrow: 'Cuatro pilares de sistemas en producción', title: 'Cada sistema entregado encaja en una de cuatro arquitecturas.', body: 'Cada una se demuestra con productos en producción, entregas a clientes, herramientas públicas e investigación aplicada. El registro completo está clasificado en el archivo.', stack: 'Stack', proof: 'Evidencia destacada' },
+  fr: { eyebrow: 'Quatre piliers de systèmes en production', title: 'Chaque système livré correspond à l’une de quatre architectures.', body: 'Chacune est démontrée par des produits en production, des livraisons clients, des outils publics et de la recherche appliquée. Le dossier complet est classé dans l’archive.', stack: 'Stack', proof: 'Preuves clés' },
+  zh: { eyebrow: '四大生产系统支柱', title: '每个已交付的系统都对应四种架构之一。', body: '每一种都由在线产品、客户交付、公开工具与应用研究印证。完整记录已在档案中分类。', stack: '技术栈', proof: '关键证据' },
 };
 
 const pillars: PillarDefinition[] = [
@@ -108,22 +108,22 @@ const pillars: PillarDefinition[] = [
     copy: {
       en: { title: 'Regulated-Domain & Medical AI Systems', summary: 'Clinical, legal and compliance workflows where image interpretation, reasoning, reporting and professional review stay separate and auditable.', proof: [
         { label: 'AutoMedical clinical AI engines and the APOLO multimodal model (DeepSeek-VL2-tiny) published on Hugging Face', href: '/case-studies/apolo-medical-framework', kind: 'research' },
-        { label: 'PIME.ai compliance frameworks — multilingual EU AI Act readiness pack', href: 'https://pime.ai/ai-act', external: true, kind: 'product' },
+        { label: 'PIME.ai compliance frameworks — multilingual EU AI Act readiness pack', href: 'https://pime.ai/ai-act/', external: true, kind: 'product' },
         { label: 'AI Act Express advisory for Article 50 transparency obligations', kind: 'advisory' },
       ] },
       es: { title: 'Sistemas de IA médica y de dominios regulados', summary: 'Flujos clínicos, legales y de cumplimiento donde interpretación de imagen, razonamiento, informes y revisión profesional permanecen separados y auditables.', proof: [
         { label: 'Motores clínicos AutoMedical y el modelo multimodal APOLO (DeepSeek-VL2-tiny) publicado en Hugging Face', href: '/case-studies/apolo-medical-framework', kind: 'research' },
-        { label: 'Marcos de cumplimiento PIME.ai — pack multilingüe de preparación para la Ley de IA de la UE', href: 'https://pime.ai/ai-act', external: true, kind: 'product' },
+        { label: 'Marcos de cumplimiento PIME.ai — pack multilingüe de preparación para la Ley de IA de la UE', href: 'https://pime.ai/ai-act/', external: true, kind: 'product' },
         { label: 'Asesoría AI Act Express sobre las obligaciones de transparencia del artículo 50', kind: 'advisory' },
       ] },
       fr: { title: 'Systèmes IA médicaux et domaines réglementés', summary: 'Workflows cliniques, juridiques et de conformité où interprétation d’image, raisonnement, reporting et revue professionnelle restent séparés et auditables.', proof: [
         { label: 'Moteurs cliniques AutoMedical et modèle multimodal APOLO (DeepSeek-VL2-tiny) publié sur Hugging Face', href: '/case-studies/apolo-medical-framework', kind: 'research' },
-        { label: 'Cadres de conformité PIME.ai — pack multilingue de préparation à l’AI Act européen', href: 'https://pime.ai/ai-act', external: true, kind: 'product' },
+        { label: 'Cadres de conformité PIME.ai — pack multilingue de préparation à l’AI Act européen', href: 'https://pime.ai/ai-act/', external: true, kind: 'product' },
         { label: 'Conseil AI Act Express sur les obligations de transparence de l’article 50', kind: 'advisory' },
       ] },
       zh: { title: '受监管领域与医疗 AI 系统', summary: '临床、法律与合规工作流，让影像解读、推理、报告与专业审核保持分离且可审计。', proof: [
         { label: 'AutoMedical 临床 AI 引擎与发布于 Hugging Face 的 APOLO 多模态模型（DeepSeek-VL2-tiny）', href: '/case-studies/apolo-medical-framework', kind: 'research' },
-        { label: 'PIME.ai 合规框架 — 多语言欧盟 AI 法案就绪包', href: 'https://pime.ai/ai-act', external: true, kind: 'product' },
+        { label: 'PIME.ai 合规框架 — 多语言欧盟 AI 法案就绪包', href: 'https://pime.ai/ai-act/', external: true, kind: 'product' },
         { label: 'AI Act Express 咨询，覆盖第 50 条透明度义务', kind: 'advisory' },
       ] },
     },

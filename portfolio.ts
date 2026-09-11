@@ -85,7 +85,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   {
     id: 'autoclient', name: 'AutoClient', period: 'Mar 2024–Jul 2025', category: 'platforms',
     description: copy('Agentic research, enrichment, scoring, personalised outreach and CRM follow-up across email, WhatsApp and voice. A public LinkedIn recommendation credits the system with 200+ qualified contacts in two weeks and a 30% lift in sales conversion.', 'Investigación agéntica, enriquecimiento, scoring, contacto personalizado y CRM por email, WhatsApp y voz. Una recomendación pública en LinkedIn atribuye al sistema más de 200 contactos cualificados en dos semanas y un aumento del 30% en la conversión de ventas.', 'Recherche agentique, enrichissement, scoring, prospection personnalisée et suivi CRM par email, WhatsApp et voix. Une recommandation publique sur LinkedIn attribue au système plus de 200 contacts qualifiés en deux semaines et une hausse de 30 % de la conversion commerciale.', '覆盖邮件、WhatsApp 与语音的智能体式调研、数据增强、评分、个性化触达与 CRM 跟进。LinkedIn 公开推荐信显示该系统在两周内带来 200 多个合格联系人，并使销售转化率提升 30%。'),
-    tags: ['Agents', 'CRM', 'Outreach', 'Voice'], href: 'https://www.youtube.com/@autoclient-ai', image: '/portfolio/autoclient-lead-search.webp', imagePosition: 'center 20%'
+    tags: ['Agents', 'CRM', 'Outreach', 'Voice'], href: 'https://www.youtube.com/@autoclientai', image: '/portfolio/autoclient-lead-search.webp', imagePosition: 'center 20%'
   },
   {
     id: 'autopricing', name: 'AutoPricing / IWAKY delivery', period: '2025–2026', category: 'platforms',
@@ -235,7 +235,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   {
     id: 'huggingface-writing', name: 'Hugging Face technical writing', period: '2024–present', category: 'education',
     description: copy('Public writing on agents, prompting, web crawling, browser AI and practical deployment.', 'Escritura pública sobre agentes, prompting, crawling web, IA en navegador y despliegue práctico.'),
-    tags: ['Writing', 'AI agents', 'Hugging Face'], href: 'https://huggingface.co/samihalawa/posts'
+    tags: ['Writing', 'AI agents', 'Hugging Face'], href: 'https://huggingface.co/samihalawa'
   },
   {
     id: 'ai-course', name: 'AI Agent Architecture course', period: '2025–2026', category: 'education',
@@ -305,7 +305,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   {
     id: 'public-teaching', name: 'Public video & teaching catalogue', period: '2023–present', category: 'education',
     description: copy('A substantial public library spanning long-form AI lessons, automation, creative software, product walkthroughs and technical demonstrations.', 'Biblioteca pública de lecciones extensas de IA, automatización, software creativo, recorridos de producto y demostraciones técnicas.', 'Bibliothèque publique de cours IA, automatisation, logiciels créatifs, présentations produit et démonstrations techniques.', '涵盖 AI 长课程、自动化、创意软件、产品演示与技术展示的大型公开资料库。'),
-    tags: ['Video', 'Teaching', 'AI'], href: 'https://www.youtube.com/@autoclient-ai'
+    tags: ['Video', 'Teaching', 'AI'], href: 'https://www.youtube.com/@autoclientai'
   }
 ];
 
@@ -430,7 +430,7 @@ export const PORTFOLIO_INVENTORY: InventoryItem[] = [
   inventoryItem(20, 'timeline-autoclient-monorepo', 'AutoClient monorepo & workers', '2024–2025', '2024', 'products', 'verified', 'Expansion into a multi-service automation and worker platform.', 'Expansión a una plataforma de automatización y workers.'),
   inventoryItem(21, 'timeline-eyeunit', 'EyeUnit / Fernando Ly', '2024–2026', '2024', 'clients', 'verified', 'Medical AI, OCT and account-intelligence collaboration.', 'Colaboración en IA médica, OCT e inteligencia de cuentas.'),
   inventoryItem(22, 'timeline-daniel-parisi', 'Daniel Parisi engagement', '2024', '2024', 'clients', 'verified', 'Focused digital-product consulting engagement.', 'Colaboración específica de consultoría de producto digital.'),
-  inventoryItem(24, 'timeline-hf-writing-start', 'Hugging Face writing begins', '2024', '2024', 'education', 'verified', 'Public technical writing on agents, prompting and deployment.', 'Escritura técnica pública sobre agentes, prompting y despliegue.', 'https://huggingface.co/samihalawa/posts'),
+  inventoryItem(24, 'timeline-hf-writing-start', 'Hugging Face writing begins', '2024', '2024', 'education', 'verified', 'Public technical writing on agents, prompting and deployment.', 'Escritura técnica pública sobre agentes, prompting y despliegue.', 'https://huggingface.co/samihalawa'),
   inventoryItem(25, 'timeline-colab', 'Applied AI research', '2024–present', '2024', 'research', 'verified', 'Research notebooks spanning multimodal AI, automation, evaluation and agent systems.', 'Notebooks de investigación sobre IA multimodal, automatización, evaluación y sistemas agénticos.'),
 
   inventoryItem(26, 'timeline-sort', 'SORT / SortBot', 'Jan–Feb 2025', '2025 Q1', 'clients', 'verified', 'Course-PDF digitisation workflow with online lessons, chatbot support and web publishing.', 'Flujo para digitalizar PDFs en cursos online con chatbot y publicación web.', 'https://github.com/samihalawa/sortbot'),
@@ -439,7 +439,7 @@ export const PORTFOLIO_INVENTORY: InventoryItem[] = [
   inventoryItem(29, 'timeline-smtp', 'SMTP MCP Server', '2025', '2025 Q1', 'open-source', 'verified', 'SMTP and mailbox integration for agent workflows.', 'Integración SMTP y de buzones para flujos con agentes.', 'https://github.com/samihalawa/mcp-server-smtp'),
   inventoryItem(30, 'timeline-mcp-suite', 'Shell, browser & diff MCP tools', '2025', '2025 Q1', 'open-source', 'verified', 'Command, browser and editing integrations for AI agents.', 'Integraciones de comandos, navegador y edición para agentes.'),
   inventoryItem(31, 'timeline-ophthalmology', 'Ophthalmology workflows', '2025–2026', '2025 Q1', 'research', 'verified', 'Ophthalmic image review, reporting and intelligence workflows.', 'Flujos oftalmológicos de revisión, informes e inteligencia.'),
-  inventoryItem(32, 'timeline-hf-articles', 'Hugging Face technical articles', '2024–2025', '2025 Q1', 'education', 'verified', 'Twelve public articles on AI agents, automation and multimodal systems.', 'Doce artículos públicos sobre agentes de IA, automatización y sistemas multimodales.', 'https://huggingface.co/samihalawa/posts'),
+  inventoryItem(32, 'timeline-hf-articles', 'Hugging Face technical articles', '2024–2025', '2025 Q1', 'education', 'verified', 'Twelve public articles on AI agents, automation and multimodal systems.', 'Doce artículos públicos sobre agentes de IA, automatización y sistemas multimodales.', 'https://huggingface.co/samihalawa'),
 
   inventoryItem(33, 'timeline-apolo', 'APOLO multimodal medical AI', 'Apr 2025', '2025 Q2', 'research', 'verified', 'Medical image-text model based on a multimodal architecture.', 'Modelo médico de imagen y texto basado en una arquitectura multimodal.', 'https://huggingface.co/samihalawa/APOLO-medical-multimodal-instruct'),
   inventoryItem(34, 'timeline-vuda', 'VUDA — Visual UI Debug Agent', 'May 2025', '2025 Q2', 'open-source', 'verified', 'Visual capture, annotation and reasoning for interface debugging.', 'Captura, anotación y razonamiento visual para depurar interfaces.', 'https://github.com/samihalawa/visual-ui-debug-agent-mcp'),
@@ -496,7 +496,7 @@ export const PORTFOLIO_INVENTORY: InventoryItem[] = [
   inventoryItem(82, 'timeline-oulang-parity', 'OULANG native parity', 'Jul 2026', '2026 Q3', 'products', 'verified', 'Continued native parity, marketplace, payment and store work.', 'Continuación de paridad nativa, marketplace, pagos y tiendas.'),
   inventoryItem(83, 'timeline-ea-housing', 'EA Housing / Radio Inter', 'Jul 2026', '2026 Q3', 'clients', 'verified', 'Modular AI, automation and digital-product package designed for separate companies and a shared group rollout.', 'Paquete modular de IA, automatización y producto digital para empresas separadas y un despliegue conjunto de grupo.'),
   inventoryItem(84, 'timeline-language-artifacts', 'Chinese soundscapes & poetry audio', '2026', '2026 Q3', 'education', 'verified', 'Onomatopoeia deck, exercises, vocabulary cards, bilingual materials and poetry audio.', 'Deck de onomatopeyas, ejercicios, tarjetas, materiales bilingües y audio de poesía.'),
-  inventoryItem(85, 'timeline-ai-act', 'PIME.ai EU AI Act pack', 'Jul 2026', '2026 Q3', 'products', 'verified', 'Multilingual fixed-price readiness pack with training and roadmap.', 'Pack multilingüe de precio fijo con formación y hoja de ruta.', 'https://pime.ai/ai-act'),
+  inventoryItem(85, 'timeline-ai-act', 'PIME.ai EU AI Act pack', 'Jul 2026', '2026 Q3', 'products', 'verified', 'Multilingual fixed-price readiness pack with training and roadmap.', 'Pack multilingüe de precio fijo con formación y hoja de ruta.', 'https://pime.ai/ai-act/'),
   inventoryItem(87, 'timeline-eva-training-scope', 'EVA AI & admin automation training', 'Nov 2025', '2025 Q4', 'education', 'verified', 'A 20–30 hour practical programme covering Copilot, prompting, browser automation, local file and accounting organisation, Microsoft To Do and FUNDAE logistics.', 'Programa práctico de 20–30 horas sobre Copilot, prompting, automatización web, organización local de archivos y contabilidad, Microsoft To Do y logística FUNDAE.'),
   inventoryItem(88, 'timeline-mike-lepcsik-automation', 'Mike Lepcsik lead-generation automation', 'Nov 2025', '2025 Q4', 'clients', 'verified', 'Lead-generation architecture connecting n8n, Close CRM, Leadfeeder, Google Maps and Search enrichment, MCP agents and AutoClient-style scoring.', 'Arquitectura de generación de leads con n8n, Close CRM, Leadfeeder, enriquecimiento en Google Maps y Search, agentes MCP y scoring tipo AutoClient.'),
   inventoryItem(89, 'timeline-solmade-fashion-ai', 'SOLMADE fashion AI & marketing', 'Jan 2026', '2026 Q1', 'clients', 'verified', 'Fashion AI and marketing system design spanning brand, web/app, SEO, content automation, generated product imagery, social assets, ads, mockups and product videos.', 'Diseño de sistemas de IA y marketing para moda: marca, web/app, SEO, automatización de contenido, imagen de producto generada, social, anuncios, mockups y vídeos.'),

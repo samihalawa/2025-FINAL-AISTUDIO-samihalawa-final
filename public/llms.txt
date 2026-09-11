@@ -28,5 +28,5 @@ Sami Halawa is a Staff AI Engineer and Production AI Architect in Madrid special
 
 - [GitHub](https://github.com/samihalawa)
 - [Hugging Face](https://huggingface.co/samihalawa)
-- [YouTube](https://www.youtube.com/@autoclient-ai)
+- [YouTube](https://www.youtube.com/@autoclientai)
 - [LinkedIn](https://www.linkedin.com/in/samihalawa/)
